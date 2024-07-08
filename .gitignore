@@ -9,18 +9,20 @@
 *.ttf
 node_modules/
 .venv/
-*/org/apache/commons/codec/language/
 index.android.bundle
 *.xsd
-*/sources/com/facebook/
+*.tflite
+*.prof
+*.profm
+*.dex
 
+*/sources/com/facebook/
 */sources/com/apache/
 */sources/org/apache/
 */sources/org/bouncycastle/
 */sources/org/koin/
 */sources/org/chromium/
 */sources/org/qtproject/
-*/resources/org/apache/
 */sources/com/google/
 */sources/com/bumptech/
 */sources/com/horcrux/
@@ -45,3 +47,7 @@ index.android.bundle
 */sources/com/rnfs/
 */sources/com/rnmaps/
 */sources/cl/
+
+*/resources/org/apache/
+*/resources/javax/
+*/resources/org/bouncycastle/
