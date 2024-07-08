@@ -23,9 +23,10 @@ do
         column -t "$FILE.txt.tmp" > "$FILE.txt"
     done
     # decompile bundle
-    if [ -f $APP/ressources/assets/index.android.bundle ]; then
-        echo "Decompiling $APP/assets/index.android.bundle"
-        hbc-decompiler $APP/assets/index.android.bundle $APP/assets/index.android.bundle.decompiled.js
+    if [ -f $APP/resources/assets/index.android.bundle ]; then
+        echo "Decompiling $APP/resources/assets/index.android.bundle"
+        hbc-decompiler $APP/resources/assets/index.android.bundle $APP/resources/assets/index.android.bundle.decompiled.js
+        hbc-file-parser $APP/resources/assets/index.android.bundle >> $APP/resources/assets/index.android.bundle.header.txt
     fi
 done
 
