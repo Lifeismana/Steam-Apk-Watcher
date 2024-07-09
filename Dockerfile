@@ -9,3 +9,4 @@ RUN python -m venv /data/.venv && \
 pip install --upgrade git+https://github.com/P1sec/hermes-dec
 
 ENV PATH=/data/.venv/bin:$PATH
+CMD [ "cd $GITHUB_WORKSPACE && ./scripts.sh" ]

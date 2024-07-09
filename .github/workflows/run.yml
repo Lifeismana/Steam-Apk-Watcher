@@ -1,0 +1,48 @@
+name: Execute
+
+on:
+    workflow_dispatch:
+        inputs:
+            app_id:
+                description: 'app id to use'
+                required: false
+                default: ''
+            version:
+                description: 'Version to use with the app id'
+                required: false
+                default: ''
+    repository_dispatch:
+
+jobs:
+    
+    execute:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+        environment: Execution
+        concurrency:
+            group: ${{ github.workflow }}
+        steps:
+            # Keeping this here in case we need more than 45GB of space in the future
+            # - name: Maximize build space 
+            #   uses: easimon/maximize-build-space@master 
+            #   with: 
+            #     swap-size-mb: 1024 
+            #     remove-dotnet: 'true' 
+            #     remove-android: 'true' 
+            #     remove-haskell: 'true' 
+            #     remove-codeql: 'true' 
+            - name: More space
+              shell: bash
+              run: |
+                sudo rm -rf /usr/share/dotnet
+                sudo rm -rf /usr/local/lib/android
+                sudo rm -rf /opt/ghc
+                sudo rm -rf /opt/hostedtoolcache/CodeQL
+            - uses: actions/checkout@v4
+              with:
+                ref: main
+            - uses: docker://ghcr.io/lifeismana/steam-apk-watcher:latest
+              env:
+                APP_TO_PROCESS: ${{ inputs.app_id }}
+                APP_VERSION: ${{ inputs.version }}
