@@ -8,7 +8,8 @@ RUN pacman -Syu --noconfirm \
     git \
     python \
     python-pip \
-    jadx
+    jadx \
+    unzip
 RUN python -m venv /data/.venv && \
 . /data/.venv/bin/activate && \
 pip install --upgrade git+https://github.com/P1sec/hermes-dec
