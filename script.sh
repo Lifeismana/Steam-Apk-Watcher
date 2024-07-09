@@ -12,7 +12,7 @@ ProcessApp()
     mkdir -p $1
     if [ -n "$2" ]; then
         echo "Downloading $1 Version $2"
-        apkeep -a $1@$2 -d apk-pure $1 $2
+        apkeep -a $1@$2 -d apk-pure $1
         Commit_message="$1 Version $2"
     else
         echo "Downloading $1"
