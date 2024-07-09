@@ -4,6 +4,8 @@ set -e
 
 APPS="com.valvesoftware.android.steam.community com.valvesoftware.android.steam.friendsui com.valvesoftware.steamlink"
 
+Commit_message="Daily update"
+
 ProcessApp()
 {
     rm -rf $1
@@ -11,6 +13,7 @@ ProcessApp()
     if [ -n "$2" ]; then
         echo "Downloading $1 Version $2"
         apkeep -a $1@$2 -d apk-pure $1 $2
+        Commit_message="$1 Version $2"
     else
         echo "Downloading $1"
         apkeep -a $1 -d apk-pure $1
@@ -43,3 +46,7 @@ else
         ProcessApp $APP
     done
 fi
+
+git add -A
+git commit -a -m "$Commit_message | $(git status --porcelain | wc -l) files | $(git status --porcelain|awk '{print "basename " $2}'| sh | sed '{:q;N;s/\n/, /g;t q}')"
+git push
