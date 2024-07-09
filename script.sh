@@ -11,11 +11,16 @@ ProcessApp()
     rm -rf $1
     mkdir -p $1
     if [ -n "$2" ]; then
-        echo "Downloading $1 Version $2"
         apkeep -a $1@$2 -d apk-pure $1
+        for FILE in $1/*@*apk
+        do
+            echo "Renaming $FILE"
+            extension="${FILE##*.}"
+            filename="${FILE%@*}"
+            mv $FILE $filename.$extension
+        done
         Commit_message="$1 Version $2"
     else
-        echo "Downloading $1"
         apkeep -a $1 -d apk-pure $1
     fi
     if [ -f $1/$1.xapk ]; then
