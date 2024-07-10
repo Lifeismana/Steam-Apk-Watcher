@@ -79,14 +79,14 @@ public class HIDDeviceManager {
     native void HIDDeviceDisconnected(int i);
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public native void HIDDeviceFeatureReport(int i, byte[] bArr);
-
-    /* JADX INFO: Access modifiers changed from: package-private */
     public native void HIDDeviceInputReport(int i, byte[] bArr);
 
     native void HIDDeviceOpenPending(int i);
 
     native void HIDDeviceOpenResult(int i, boolean z);
+
+    /* JADX INFO: Access modifiers changed from: package-private */
+    public native void HIDDeviceReportResponse(int i, byte[] bArr);
 
     public static HIDDeviceManager acquire(Context context) {
         if (sManagerRefCount == 0) {
@@ -171,10 +171,10 @@ public class HIDDeviceManager {
     }
 
     private boolean isXbox360Controller(UsbDevice usbDevice, UsbInterface usbInterface) {
-        int[] iArr = {121, 1103, 1118, 1133, 1390, 1699, 1848, 2047, 3695, 3853, 4152, 4553, 4779, 5168, 5227, 5426, 5604, 5678, 5769, 6473, 7085, 8406, 9414, 11298};
+        int[] iArr = {121, 1103, 1118, 1133, 1390, 1699, 1848, 2047, 3695, 3853, 4152, 4553, 4779, 5168, 5227, 5426, 5604, 5678, 5769, 6473, 7085, 8406, 9414, 11298, 11720, 39046};
         if (usbInterface.getInterfaceClass() == 255 && usbInterface.getInterfaceSubclass() == 93 && (usbInterface.getInterfaceProtocol() == 1 || usbInterface.getInterfaceProtocol() == 129)) {
             int vendorId = usbDevice.getVendorId();
-            for (int i = 0; i < 24; i++) {
+            for (int i = 0; i < 26; i++) {
                 if (vendorId == iArr[i]) {
                     return true;
                 }
@@ -184,10 +184,10 @@ public class HIDDeviceManager {
     }
 
     private boolean isXboxOneController(UsbDevice usbDevice, UsbInterface usbInterface) {
-        int[] iArr = {1118, 1848, 3695, 3853, 5426, 8406, 9414, 11720, 11812};
+        int[] iArr = {1103, 1118, 1848, 3695, 3853, 4341, 5426, 8406, 9414, 11720, 11812, 13623};
         if (usbInterface.getId() == 0 && usbInterface.getInterfaceClass() == 255 && usbInterface.getInterfaceSubclass() == 71 && usbInterface.getInterfaceProtocol() == 208) {
             int vendorId = usbDevice.getVendorId();
-            for (int i = 0; i < 9; i++) {
+            for (int i = 0; i < 12; i++) {
                 if (vendorId == iArr[i]) {
                     return true;
                 }
@@ -255,7 +255,7 @@ public class HIDDeviceManager {
             Log.d(TAG, "Couldn't initialize Bluetooth, missing android.permission.BLUETOOTH");
             return;
         }
-        if (!this.mContext.getPackageManager().hasSystemFeature("android.hardware.bluetooth_le") || Build.VERSION.SDK_INT < 18) {
+        if (!this.mContext.getPackageManager().hasSystemFeature("android.hardware.bluetooth_le")) {
             Log.d(TAG, "Couldn't initialize Bluetooth, this version of Android does not support Bluetooth LE");
             return;
         }
@@ -427,42 +427,28 @@ public class HIDDeviceManager {
         }
     }
 
-    public int sendOutputReport(int i, byte[] bArr) {
+    public int writeReport(int i, byte[] bArr, boolean z) {
         try {
             HIDDevice device = getDevice(i);
             if (device == null) {
                 HIDDeviceDisconnected(i);
                 return -1;
             }
-            return device.sendOutputReport(bArr);
+            return device.writeReport(bArr, z);
         } catch (Exception e) {
             Log.e(TAG, "Got exception: " + Log.getStackTraceString(e));
             return -1;
         }
     }
 
-    public int sendFeatureReport(int i, byte[] bArr) {
-        try {
-            HIDDevice device = getDevice(i);
-            if (device == null) {
-                HIDDeviceDisconnected(i);
-                return -1;
-            }
-            return device.sendFeatureReport(bArr);
-        } catch (Exception e) {
-            Log.e(TAG, "Got exception: " + Log.getStackTraceString(e));
-            return -1;
-        }
-    }
-
-    public boolean getFeatureReport(int i, byte[] bArr) {
+    public boolean readReport(int i, byte[] bArr, boolean z) {
         try {
             HIDDevice device = getDevice(i);
             if (device == null) {
                 HIDDeviceDisconnected(i);
                 return false;
             }
-            return device.getFeatureReport(bArr);
+            return device.readReport(bArr, z);
         } catch (Exception e) {
             Log.e(TAG, "Got exception: " + Log.getStackTraceString(e));
             return false;

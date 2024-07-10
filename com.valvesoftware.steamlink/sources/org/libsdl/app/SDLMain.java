@@ -24,6 +24,7 @@ public class SDLMain implements Runnable {
             return;
         }
         SDLActivity.mSDLThread = null;
+        SDLActivity.mSDLMainFinished = true;
         SDLActivity.mSingleton.finish();
     }
 }

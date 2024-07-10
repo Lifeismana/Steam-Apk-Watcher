@@ -28,9 +28,12 @@ public final class SystemLibraryLoader implements ReLinker.LibraryLoader {
 
     @Override // com.getkeepsafe.relinker.ReLinker.LibraryLoader
     public String[] supportedAbis() {
-        if (Build.VERSION.SDK_INT < 21 || Build.SUPPORTED_ABIS.length <= 0) {
-            return !TextUtils.isEmpty(Build.CPU_ABI2) ? new String[]{Build.CPU_ABI, Build.CPU_ABI2} : new String[]{Build.CPU_ABI};
+        if (Build.SUPPORTED_ABIS.length > 0) {
+            return Build.SUPPORTED_ABIS;
         }
-        return Build.SUPPORTED_ABIS;
+        if (!TextUtils.isEmpty(Build.CPU_ABI2)) {
+            return new String[]{Build.CPU_ABI, Build.CPU_ABI2};
+        }
+        return new String[]{Build.CPU_ABI};
     }
 }

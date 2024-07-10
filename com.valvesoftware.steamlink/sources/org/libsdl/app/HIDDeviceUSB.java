@@ -4,13 +4,11 @@ import android.hardware.usb.UsbDevice;
 import android.hardware.usb.UsbDeviceConnection;
 import android.hardware.usb.UsbEndpoint;
 import android.hardware.usb.UsbInterface;
-import android.os.Build;
 import android.util.Log;
 import java.util.Arrays;
 
-/* JADX INFO: Access modifiers changed from: package-private */
 /* loaded from: classes.dex */
-public class HIDDeviceUSB implements HIDDevice {
+class HIDDeviceUSB implements HIDDevice {
     private static final String TAG = "hidapi";
     protected UsbDeviceConnection mConnection;
     protected UsbDevice mDevice;
@@ -56,35 +54,26 @@ public class HIDDeviceUSB implements HIDDevice {
         return this.mDevice.getProductId();
     }
 
-    /* JADX WARN: Removed duplicated region for block: B:5:0x0010 A[ORIG_RETURN, RETURN] */
-    /* JADX WARN: Removed duplicated region for block: B:7:? A[RETURN, SYNTHETIC] */
     @Override // org.libsdl.app.HIDDevice
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-    */
     public String getSerialNumber() {
-        String serialNumber;
-        if (Build.VERSION.SDK_INT >= 21) {
-            try {
-                serialNumber = this.mDevice.getSerialNumber();
-            } catch (SecurityException unused) {
-            }
-            return serialNumber != null ? "" : serialNumber;
+        String str;
+        try {
+            str = this.mDevice.getSerialNumber();
+        } catch (SecurityException unused) {
+            str = null;
         }
-        serialNumber = null;
-        if (serialNumber != null) {
-        }
+        return str == null ? "" : str;
     }
 
     @Override // org.libsdl.app.HIDDevice
     public String getManufacturerName() {
-        String manufacturerName = Build.VERSION.SDK_INT >= 21 ? this.mDevice.getManufacturerName() : null;
+        String manufacturerName = this.mDevice.getManufacturerName();
         return manufacturerName == null ? String.format("%x", Integer.valueOf(getVendorId())) : manufacturerName;
     }
 
     @Override // org.libsdl.app.HIDDevice
     public String getProductName() {
-        String productName = Build.VERSION.SDK_INT >= 21 ? this.mDevice.getProductName() : null;
+        String productName = this.mDevice.getProductName();
         return productName == null ? String.format("%x", Integer.valueOf(getProductId())) : productName;
     }
 
@@ -135,62 +124,59 @@ public class HIDDeviceUSB implements HIDDevice {
     }
 
     @Override // org.libsdl.app.HIDDevice
-    public int sendFeatureReport(byte[] bArr) {
+    public int writeReport(byte[] bArr, boolean z) {
         int i;
-        int length = bArr.length;
-        boolean z = false;
-        byte b = bArr[0];
-        if (b == 0) {
-            length--;
-            z = true;
-            i = 1;
-        } else {
-            i = 0;
+        if (z) {
+            int length = bArr.length;
+            boolean z2 = false;
+            byte b = bArr[0];
+            if (b == 0) {
+                length--;
+                z2 = true;
+                i = 1;
+            } else {
+                i = 0;
+            }
+            int controlTransfer = this.mConnection.controlTransfer(33, 9, b | 768, this.mInterface, bArr, i, length, 1000);
+            if (controlTransfer >= 0) {
+                return z2 ? length + 1 : length;
+            }
+            Log.w(TAG, "writeFeatureReport() returned " + controlTransfer + " on device " + getDeviceName());
+            return -1;
         }
-        int controlTransfer = this.mConnection.controlTransfer(33, 9, b | 768, this.mInterface, bArr, i, length, 1000);
-        if (controlTransfer >= 0) {
-            return z ? length + 1 : length;
-        }
-        Log.w(TAG, "sendFeatureReport() returned " + controlTransfer + " on device " + getDeviceName());
-        return -1;
-    }
-
-    @Override // org.libsdl.app.HIDDevice
-    public int sendOutputReport(byte[] bArr) {
         int bulkTransfer = this.mConnection.bulkTransfer(this.mOutputEndpoint, bArr, bArr.length, 1000);
         if (bulkTransfer != bArr.length) {
-            Log.w(TAG, "sendOutputReport() returned " + bulkTransfer + " on device " + getDeviceName());
+            Log.w(TAG, "writeOutputReport() returned " + bulkTransfer + " on device " + getDeviceName());
         }
         return bulkTransfer;
     }
 
     @Override // org.libsdl.app.HIDDevice
-    public boolean getFeatureReport(byte[] bArr) {
+    public boolean readReport(byte[] bArr, boolean z) {
         int i;
-        boolean z;
+        int i2;
+        boolean z2;
         int length = bArr.length;
         byte b = bArr[0];
         if (b == 0) {
-            length--;
-            i = 1;
-            z = true;
+            i = length - 1;
+            i2 = 1;
+            z2 = true;
         } else {
-            i = 0;
-            z = false;
+            i = length;
+            i2 = 0;
+            z2 = false;
         }
-        int controlTransfer = this.mConnection.controlTransfer(161, 1, b | 768, this.mInterface, bArr, i, length, 1000);
+        int controlTransfer = this.mConnection.controlTransfer(161, 1, ((z ? 3 : 1) << 8) | b, this.mInterface, bArr, i2, i, 1000);
         if (controlTransfer < 0) {
             Log.w(TAG, "getFeatureReport() returned " + controlTransfer + " on device " + getDeviceName());
             return false;
         }
-        if (z) {
+        if (z2) {
             controlTransfer++;
-            length++;
+            i++;
         }
-        if (controlTransfer != length) {
-            bArr = Arrays.copyOfRange(bArr, 0, controlTransfer);
-        }
-        this.mManager.HIDDeviceFeatureReport(this.mDeviceId, bArr);
+        this.mManager.HIDDeviceReportResponse(this.mDeviceId, controlTransfer == i ? bArr : Arrays.copyOfRange(bArr, 0, controlTransfer));
         return true;
     }
 

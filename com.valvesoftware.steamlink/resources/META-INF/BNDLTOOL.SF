@@ -1,10 +1,13 @@
 Signature-Version: 1.0
 Created-By: 1.0 (Android)
-SHA-256-Digest-Manifest: en5Y75+PcuBImgxOOe0Pou75lZfsEdsIQ1kxZOhmTC4=
+SHA-256-Digest-Manifest: Bl/eTOl+i32K7u1BBLyigFiAldhAI695twPrF2zyEsQ=
 X-Android-APK-Signed: 2, 3
 
 Name: AndroidManifest.xml
-SHA-256-Digest: Kh3sVPDV5uxtNsbz9vcfjWRWS5/BhkYMLg1CoHUFlBs=
+SHA-256-Digest: 5334hRkLH+Flb+FhzC4YWa5H465/fNyYoN5vZ5M1VGI=
+
+Name: META-INF/com/android/build/gradle/app-metadata.properties
+SHA-256-Digest: 9WhCSh+NlgqiawbSfB1oeeLzVEpJvJ8d3PwjXdL1QI0=
 
 Name: assets/--Added-by-androiddeployqt--/debugger.command
 SHA-256-Digest: bfkD8znUaCrCqTg+yt3xbnBZO21UY5qJiVP4YYJzXc8=
@@ -14,7 +17,7 @@ Name: assets/--Added-by-androiddeployqt--/qt_cache_pregenerated_file_l
 SHA-256-Digest: xwbzIalZJYr5+rfXa+MMRS+m/nj0/E8LeKNX+uFdK/U=
 
 Name: classes.dex
-SHA-256-Digest: OSQZgfekSlFsC94CZfWGJ34jIgUgm8cjnIIR8ds/QtI=
+SHA-256-Digest: DkyuYDQTfvpJsdAKO6Yx9TVKZJuQlKGgZ7EwfAb96hs=
 
 Name: org/kde/necessitas/ministro/IMinistro.aidl
 SHA-256-Digest: a2CFfzExb1qZyR03IKJOZB9hASZLSt2FFqf/yXSyGpk=
@@ -110,7 +113,7 @@ Name: res/xml/splits0.xml
 SHA-256-Digest: smKrrqDtvBwzctFRYDB+QRvWdalW9D5taEeBQeoVft0=
 
 Name: resources.arsc
-SHA-256-Digest: 50MoBk34o9iN1Z4mo1VGQoBBbI2GzThI4mSKfEWlDWg=
+SHA-256-Digest: 46RPkA+2Ib5K1Kn9sKWtBbsLfBKrtJaH7w9dfgSgYjc=
 
 Name: stamp-cert-sha256
 SHA-256-Digest: L0p4Bm/NGffFWX26fUKi8jlq3aKsfwyEBtSavY6F0c0=

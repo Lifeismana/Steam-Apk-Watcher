@@ -1,6 +1,8 @@
 package org.libsdl.app;
 
 import android.view.InputDevice;
+import java.util.Iterator;
+import java.util.List;
 
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: SDLControllerManager.java */
@@ -14,6 +16,29 @@ public class SDLJoystickHandler_API19 extends SDLJoystickHandler_API16 {
     @Override // org.libsdl.app.SDLJoystickHandler_API16
     public int getVendorId(InputDevice inputDevice) {
         return inputDevice.getVendorId();
+    }
+
+    @Override // org.libsdl.app.SDLJoystickHandler_API16
+    public int getAxisMask(List<InputDevice.MotionRange> list) {
+        boolean z = false;
+        int i = list.size() >= 2 ? 3 : 0;
+        if (list.size() >= 4) {
+            i |= 12;
+        }
+        if (list.size() >= 6) {
+            i |= 48;
+        }
+        Iterator<InputDevice.MotionRange> it = list.iterator();
+        boolean z2 = false;
+        while (it.hasNext()) {
+            int axis = it.next().getAxis();
+            if (axis == 11) {
+                z = true;
+            } else if (axis > 11 && axis < 14) {
+                z2 = true;
+            }
+        }
+        return (z && z2) ? i | 32768 : i;
     }
 
     @Override // org.libsdl.app.SDLJoystickHandler_API16

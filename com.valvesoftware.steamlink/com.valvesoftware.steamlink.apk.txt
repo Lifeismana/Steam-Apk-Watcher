@@ -1,10 +1,11 @@
-12912   745dcf54  AndroidManifest.xml
-1267    f8f28192  META-INF/BNDLTOOL.RSA
-4250    1326ccf6  META-INF/BNDLTOOL.SF
-4123    23f81627  META-INF/MANIFEST.MF
+13084   1e7a5dce  AndroidManifest.xml
+1267    02084e39  META-INF/BNDLTOOL.RSA
+4379    e9949398  META-INF/BNDLTOOL.SF
+4252    46dfd175  META-INF/MANIFEST.MF
+56      3c557a5b  META-INF/com/android/build/gradle/app-metadata.properties
 29      a48dbe93  assets/--Added-by-androiddeployqt--/debugger.command
 238     ad030feb  assets/--Added-by-androiddeployqt--/qt_cache_pregenerated_file_list
-282724  37a3d1d8  classes.dex
+287560  00a0d106  classes.dex
 3458    b5f4725c  org/kde/necessitas/ministro/IMinistro.aidl
 3370    d2031e01  org/kde/necessitas/ministro/IMinistroCallback.aidl
 544     2cf698ae  res/layout/main.xml
@@ -36,5 +37,5 @@
 6314    c20b80e9  res/mipmap-xxxhdpi-v4/ic_launcher_foreground.png
 15785   e83fe508  res/mipmap-xxxhdpi-v4/ic_launcher_round.png
 120     d24f9fe4  res/xml/splits0.xml
-7344    c716f364  resources.arsc
+7344    a6566023  resources.arsc
 32      62d68276  stamp-cert-sha256

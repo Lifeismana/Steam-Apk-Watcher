@@ -79,7 +79,7 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
         SDLActivity.onNativeSurfaceDestroyed();
     }
 
-    /* JADX WARN: Removed duplicated region for block: B:14:0x002e A[EXC_TOP_SPLITTER, SYNTHETIC] */
+    /* JADX WARN: Removed duplicated region for block: B:15:0x0037 A[EXC_TOP_SPLITTER, SYNTHETIC] */
     @Override // android.view.SurfaceHolder.Callback
     /*
         Code decompiled incorrectly, please refer to instructions dump.
@@ -87,54 +87,74 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
     public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i2, int i3) {
         int i4;
         int i5;
+        int i6;
+        int i7;
+        float f;
+        boolean isInMultiWindowMode;
         Log.v("SDL", "surfaceChanged()");
         if (SDLActivity.mSingleton == null) {
             return;
         }
         this.mWidth = i2;
         this.mHeight = i3;
-        if (Build.VERSION.SDK_INT >= 17) {
+        try {
             DisplayMetrics displayMetrics = new DisplayMetrics();
             this.mDisplay.getRealMetrics(displayMetrics);
             i4 = displayMetrics.widthPixels;
             try {
                 i5 = displayMetrics.heightPixels;
-            } catch (Exception unused) {
-            }
-            synchronized (SDLActivity.getContext()) {
-                SDLActivity.getContext().notifyAll();
-            }
-            Log.v("SDL", "Window size: " + i2 + "x" + i3);
-            Log.v("SDL", "Device size: " + i4 + "x" + i5);
-            SDLActivity.nativeSetScreenResolution(i2, i3, i4, i5, this.mDisplay.getRefreshRate());
-            SDLActivity.onNativeResize();
-            int requestedOrientation = SDLActivity.mSingleton.getRequestedOrientation();
-            boolean z = requestedOrientation == 1 || requestedOrientation == 7 ? this.mWidth > this.mHeight : !(!(requestedOrientation == 0 || requestedOrientation == 6) || this.mWidth >= this.mHeight);
-            if (z) {
-                if (Math.max(this.mWidth, this.mHeight) / Math.min(this.mWidth, this.mHeight) < 1.2d) {
-                    Log.v("SDL", "Don't skip on such aspect-ratio. Could be a square resolution.");
-                    z = false;
+                try {
+                    f = displayMetrics.densityDpi / 160.0f;
+                    i6 = i4;
+                    i7 = i5;
+                } catch (Exception unused) {
+                    i6 = i4;
+                    i7 = i5;
+                    f = 1.0f;
+                    synchronized (SDLActivity.getContext()) {
+                    }
+                }
+            } catch (Exception unused2) {
+                i5 = i3;
+                i6 = i4;
+                i7 = i5;
+                f = 1.0f;
+                synchronized (SDLActivity.getContext()) {
                 }
             }
-            if (z && Build.VERSION.SDK_INT >= 24 && SDLActivity.mSingleton.isInMultiWindowMode()) {
+        } catch (Exception unused3) {
+            i4 = i2;
+        }
+        synchronized (SDLActivity.getContext()) {
+            SDLActivity.getContext().notifyAll();
+        }
+        Log.v("SDL", "Window size: " + i2 + "x" + i3);
+        Log.v("SDL", "Device size: " + i6 + "x" + i7);
+        SDLActivity.nativeSetScreenResolution(i2, i3, i6, i7, f, this.mDisplay.getRefreshRate());
+        SDLActivity.onNativeResize();
+        int requestedOrientation = SDLActivity.mSingleton.getRequestedOrientation();
+        boolean z = requestedOrientation == 1 || requestedOrientation == 7 ? this.mWidth > this.mHeight : !(!(requestedOrientation == 0 || requestedOrientation == 6) || this.mWidth >= this.mHeight);
+        if (z) {
+            if (Math.max(this.mWidth, this.mHeight) / Math.min(this.mWidth, this.mHeight) < 1.2d) {
+                Log.v("SDL", "Don't skip on such aspect-ratio. Could be a square resolution.");
+                z = false;
+            }
+        }
+        if (z && Build.VERSION.SDK_INT >= 24) {
+            isInMultiWindowMode = SDLActivity.mSingleton.isInMultiWindowMode();
+            if (isInMultiWindowMode) {
                 Log.v("SDL", "Don't skip in Multi-Window");
                 z = false;
             }
-            if (z) {
-                Log.v("SDL", "Skip .. Surface is not ready.");
-                this.mIsSurfaceReady = false;
-                return;
-            } else {
-                SDLActivity.onNativeSurfaceChanged();
-                this.mIsSurfaceReady = true;
-                SDLActivity.mNextNativeState = SDLActivity.NativeState.RESUMED;
-                SDLActivity.handleNativeState();
-                return;
-            }
         }
-        i4 = i2;
-        i5 = i3;
-        synchronized (SDLActivity.getContext()) {
+        if (z) {
+            Log.v("SDL", "Skip .. Surface is not ready.");
+            this.mIsSurfaceReady = false;
+        } else {
+            SDLActivity.onNativeSurfaceChanged();
+            this.mIsSurfaceReady = true;
+            SDLActivity.mNextNativeState = SDLActivity.NativeState.RESUMED;
+            SDLActivity.handleNativeState();
         }
     }
 
@@ -215,28 +235,28 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
     public void onSensorChanged(SensorEvent sensorEvent) {
         float f;
         float f2;
-        int i = 1;
         if (sensorEvent.sensor.getType() == 1) {
             int rotation = this.mDisplay.getRotation();
+            int i = 0;
             if (rotation == 1) {
                 f = -sensorEvent.values[1];
                 f2 = sensorEvent.values[0];
+                i = 90;
             } else if (rotation == 2) {
                 f = -sensorEvent.values[0];
                 f2 = -sensorEvent.values[1];
-                i = 4;
-            } else if (rotation == 3) {
-                f = sensorEvent.values[1];
-                f2 = -sensorEvent.values[0];
-                i = 2;
-            } else {
+                i = 180;
+            } else if (rotation != 3) {
                 f = sensorEvent.values[0];
                 f2 = sensorEvent.values[1];
-                i = 3;
+            } else {
+                f = sensorEvent.values[1];
+                f2 = -sensorEvent.values[0];
+                i = 270;
             }
-            if (i != SDLActivity.mCurrentOrientation) {
-                SDLActivity.mCurrentOrientation = i;
-                SDLActivity.onNativeOrientationChanged(i);
+            if (i != SDLActivity.mCurrentRotation) {
+                SDLActivity.mCurrentRotation = i;
+                SDLActivity.onNativeRotationChanged(i);
             }
             SDLActivity.onNativeAccel((-f) / 9.80665f, f2 / 9.80665f, sensorEvent.values[2] / 9.80665f);
         }
