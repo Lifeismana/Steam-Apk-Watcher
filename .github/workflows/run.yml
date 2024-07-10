@@ -46,3 +46,5 @@ jobs:
               env:
                 APP_TO_PROCESS: ${{ inputs.app_id }}
                 APP_VERSION: ${{ inputs.version }}
+                GIT_NAME: ${{ secrets.GIT_NAME}}
+                GIT_EMAIL: ${{ secrets.GIT_EMAIL}}
