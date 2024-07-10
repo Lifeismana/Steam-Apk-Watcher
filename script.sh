@@ -2,6 +2,8 @@
 
 set -e
 
+shopt -s extglob
+
 APPS="com.valvesoftware.android.steam.community com.valvesoftware.android.steam.friendsui com.valvesoftware.steamlink"
 
 Commit_message="Daily update"
@@ -38,7 +40,26 @@ ProcessApp()
     if [ -f $1/resources/assets/index.android.bundle ]; then
         echo "Decompiling $1/resources/assets/index.android.bundle"
         hbc-decompiler $1/resources/assets/index.android.bundle $1/resources/assets/index.android.bundle.decompiled.js
-        hbc-file-parser $1/resources/assets/index.android.bundle >> $1/resources/assets/index.android.bundle.header.txt
+        hbc-file-parser $1/resources/assets/index.android.bundle > /tmp/index.android.bundle.header.txt
+        while read -r line; do
+            # each case to handle:
+            # => 1: '(keep what's inside here)'
+            # => 0: '(keep what's inside here)'
+            # => [Function #12891 (keep what's here if there's something) of 
+            case $line in
+                "=> 0:"*)
+                    string=${line#"=> 0: '"}
+                    echo ${string::-1} >> $1/resources/assets/index.android.bundle.0.txt
+                    ;;
+                "=> 1:"*)
+                    string=${line#"=> 1: '"}
+                    echo ${string::-1} >> $1/resources/assets/index.android.bundle.1.txt
+                    ;;
+                "=> [Function"*)
+                    echo ${line% of *} | sed -r 's/^=> \[Function #[0-9]+ ?//' >> $1/resources/assets/index.android.bundle.function.txt
+                    ;;
+            esac
+        done < /tmp/index.android.bundle.header.txt
     fi
 }
 
