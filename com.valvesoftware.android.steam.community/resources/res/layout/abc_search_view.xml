@@ -29,7 +29,8 @@
         android:layout_height="match_parent"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:layoutDirection="locale">
         <ImageView
             android:layout_gravity="center_vertical"
             android:id="@+id/search_mag_icon"
@@ -62,7 +63,7 @@
                 android:dropDownHeight="wrap_content"
                 android:dropDownHorizontalOffset="0dp"
                 android:dropDownVerticalOffset="0dp"
-                class="android.support.v7.widget.SearchView$SearchAutoComplete"/>
+                class="androidx.appcompat.widget.SearchView$SearchAutoComplete"/>
             <ImageView
                 android:layout_gravity="center_vertical"
                 android:id="@+id/search_close_btn"

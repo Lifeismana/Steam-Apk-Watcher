@@ -13,6 +13,7 @@
         android:layout_marginLeft="2dp"
         android:layout_marginRight="2dp"
         android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         layout="@layout/notification_media_cancel_action"/>
     <LinearLayout
         android:orientation="horizontal"
@@ -22,7 +23,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/notification_large_icon_height"
         android:minHeight="@dimen/notification_large_icon_height"
-        android:layout_toLeftOf="@+id/cancel_action">
+        android:layout_toLeftOf="@+id/cancel_action"
+        android:layout_marginStart="@dimen/notification_large_icon_height"
+        android:layout_toStartOf="@+id/cancel_action">
         <FrameLayout
             android:id="@+id/notification_main_column"
             android:layout_width="match_parent"
@@ -30,15 +33,18 @@
             android:layout_marginLeft="@dimen/notification_content_margin_start"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/notification_content_margin_start"
+            android:layout_marginEnd="8dp"/>
         <FrameLayout
             android:id="@+id/right_side"
             android:paddingTop="@dimen/notification_right_side_padding_top"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="8dp">
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp">
             <DateTimeView
-                android:textAppearance="@style/TextAppearance.AppCompat.Notification.Time.Media"
+                android:textAppearance="@style/TextAppearance.Compat.Notification.Time.Media"
                 android:layout_gravity="end|top"
                 android:id="@+id/time"
                 android:visibility="gone"
@@ -46,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:singleLine="true"/>
             <Chronometer
-                android:textAppearance="@style/TextAppearance.AppCompat.Notification.Time.Media"
+                android:textAppearance="@style/TextAppearance.Compat.Notification.Time.Media"
                 android:layout_gravity="end|top"
                 android:id="@+id/chronometer"
                 android:visibility="gone"
@@ -54,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:singleLine="true"/>
             <TextView
-                android:textAppearance="@style/TextAppearance.AppCompat.Notification.Info.Media"
+                android:textAppearance="@style/TextAppearance.Compat.Notification.Info.Media"
                 android:layout_gravity="end|bottom"
                 android:id="@+id/info"
                 android:layout_width="wrap_content"
@@ -70,7 +76,8 @@
         android:layout_height="48dp"
         android:layout_marginLeft="12dp"
         android:layout_marginRight="12dp"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        android:layoutDirection="ltr"/>
     <ImageView
         android:id="@+id/action_divider"
         android:background="?android:attr/dividerHorizontal"

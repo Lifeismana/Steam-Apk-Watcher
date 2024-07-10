@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="abc_action_bar_home_description">Gå til startsiden</string>
-    <string name="abc_action_bar_home_description_format">%1$s – %2$s</string>
-    <string name="abc_action_bar_home_subtitle_description_format">%1$s – %2$s – %3$s</string>
+    <string name="abc_action_bar_home_description">Naviger hjem</string>
     <string name="abc_action_bar_up_description">Gå opp</string>
     <string name="abc_action_menu_overflow_description">Flere alternativer</string>
     <string name="abc_action_mode_done">Ferdig</string>
@@ -10,7 +8,17 @@
     <string name="abc_activitychooserview_choose_application">Velg en app</string>
     <string name="abc_capital_off">AV</string>
     <string name="abc_capital_on">PÅ</string>
-    <string name="abc_search_hint">Søk …</string>
+    <string name="abc_menu_alt_shortcut_label">Alt+</string>
+    <string name="abc_menu_ctrl_shortcut_label">Ctrl+</string>
+    <string name="abc_menu_delete_shortcut_label">slett</string>
+    <string name="abc_menu_enter_shortcut_label">enter</string>
+    <string name="abc_menu_function_shortcut_label">Funksjon+</string>
+    <string name="abc_menu_meta_shortcut_label">Meta+</string>
+    <string name="abc_menu_shift_shortcut_label">Shift+</string>
+    <string name="abc_menu_space_shortcut_label">mellomrom</string>
+    <string name="abc_menu_sym_shortcut_label">Sym+</string>
+    <string name="abc_prepend_shortcut_label">Meny+</string>
+    <string name="abc_search_hint">Søk</string>
     <string name="abc_searchview_description_clear">Slett søket</string>
     <string name="abc_searchview_description_query">Søkeord</string>
     <string name="abc_searchview_description_search">Søk</string>
@@ -19,7 +27,9 @@
     <string name="abc_shareactionprovider_share_with">Del med</string>
     <string name="abc_shareactionprovider_share_with_application">Del med %s</string>
     <string name="abc_toolbar_collapse_description">Skjul</string>
-    <string name="common_google_play_services_enable_button">Slå på</string>
+    <string name="biometric_or_screen_lock_prompt_message">Bruk biometri eller skjermlåsen for å fortsette</string>
+    <string name="biometric_prompt_message">Bruk biometri for å fortsette</string>
+    <string name="common_google_play_services_enable_button">Aktivér</string>
     <string name="common_google_play_services_enable_text">%1$s fungerer ikke med mindre du slår på Google Play-tjenester.</string>
     <string name="common_google_play_services_enable_title">Slå på Google Play-tjenester</string>
     <string name="common_google_play_services_install_button">Installer</string>
@@ -37,7 +47,36 @@
     <string name="common_open_on_phone">Åpne på telefonen</string>
     <string name="common_signin_button_text">Logg på</string>
     <string name="common_signin_button_text_long">Logg på med Google</string>
-    <string name="gcm_fallback_notification_channel_label">Diverse</string>
+    <string name="confirm_device_credential_password">Bruk passord</string>
+    <string name="copy_toast_msg">Linken er kopiert til utklippstavlen</string>
+    <string name="default_error_msg">Ukjent feil</string>
+    <string name="face_or_screen_lock_prompt_message">Bruk ansiktet eller skjermlåsen for å fortsette</string>
+    <string name="face_prompt_message">Bruk ansiktet for å fortsette</string>
+    <string name="fallback_menu_item_copy_link">Kopiér linken</string>
+    <string name="fallback_menu_item_open_in_browser">Åpne i nettleseren</string>
+    <string name="fallback_menu_item_share_link">Del link</string>
+    <string name="fcm_fallback_notification_channel_label">Diverse</string>
+    <string name="fingerprint_dialog_icon_description">Ikon for fingeravtrykk</string>
+    <string name="fingerprint_dialog_touch_sensor">Trykk på fingeravtrykkssensoren</string>
+    <string name="fingerprint_error_hw_not_available">Maskinvare for fingeravtrykk er ikke tilgjengelig.</string>
+    <string name="fingerprint_error_hw_not_present">Denne enheten har ikke fingeravtrykkssensor</string>
+    <string name="fingerprint_error_lockout">Du har gjort for mange forsøk. Prøv på nytt senere.</string>
+    <string name="fingerprint_error_no_fingerprints">Ingen fingeravtrykk er registrert.</string>
+    <string name="fingerprint_error_user_canceled">Fingeravtrykk-operasjonen ble avbrutt av brukeren.</string>
+    <string name="fingerprint_not_recognized">Ikke gjenkjent</string>
+    <string name="fingerprint_or_screen_lock_prompt_message">Bruk fingeravtrykket eller skjermlåsen for å fortsette</string>
+    <string name="fingerprint_prompt_message">Bruk fingeravtrykket for å fortsette</string>
+    <string name="generic_error_no_device_credential">PIN-kode, mønster eller passord er ikke angitt.</string>
+    <string name="generic_error_no_keyguard">Denne enheten støtter ikke PIN-kode, mønster eller passord.</string>
+    <string name="generic_error_user_canceled">Autentiseringen ble avbrutt av brukeren.</string>
+    <string name="screen_lock_prompt_message">Skriv inn skjermlåsen for å fortsette</string>
     <string name="search_menu_title">Søk</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="use_biometric_label">Bruk biometri</string>
+    <string name="use_biometric_or_screen_lock_label">Bruk biometri eller skjermlåsen</string>
+    <string name="use_face_label">Bruk ansiktet</string>
+    <string name="use_face_or_screen_lock_label">Bruk ansiktet eller skjermlåsen</string>
+    <string name="use_fingerprint_label">Bruk fingeravtrykket</string>
+    <string name="use_fingerprint_or_screen_lock_label">Bruk fingeravtrykket eller skjermlåsen</string>
+    <string name="use_screen_lock_label">Bruk skjermlåsen</string>
 </resources>
