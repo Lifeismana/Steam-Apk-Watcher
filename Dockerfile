@@ -8,7 +8,9 @@ RUN pacman -Syu --noconfirm \
     git \
     python \
     python-pip \
+    jre-openjdk \
     jadx \
+    which \
     unzip
 RUN python -m venv /data/.venv && \
 . /data/.venv/bin/activate && \

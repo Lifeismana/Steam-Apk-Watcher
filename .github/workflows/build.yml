@@ -5,9 +5,8 @@ on:
     - cron: '0 5 * * 1'
   push:
     branches: [ "main" ]
-    # Publish semver tags as releases.
     paths:
-      - 'scripts.sh'
+      - 'setup.sh'
       - 'Dockerfile'
       - '.github/workflows/build.yml'
 

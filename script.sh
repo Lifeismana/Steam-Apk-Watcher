@@ -26,7 +26,6 @@ ProcessApp()
     if [ -f $1/$1.xapk ]; then
         unzip -o $1/$1.xapk -d $1
     fi
-    echo "Unzipping $1.apk"
     jadx --deobf --show-bad-code -d $1 $1/$1.apk
     find $1 -type f -exec md5sum {} >> $1/$1.apk.jadx.txt \;
     for FILE in $1/*.apk
