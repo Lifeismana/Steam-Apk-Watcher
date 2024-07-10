@@ -60,6 +60,9 @@ ProcessApp()
                     ;;
             esac
         done < /tmp/index.android.bundle.header.txt
+        sort -uo $1/resources/assets/index.android.bundle.0.txt $1/resources/assets/index.android.bundle.0.txt
+        sort -uo $1/resources/assets/index.android.bundle.1.txt $1/resources/assets/index.android.bundle.1.txt
+        sort -uo $1/resources/assets/index.android.bundle.function.txt $1/resources/assets/index.android.bundle.function.txt
     fi
 }
 
