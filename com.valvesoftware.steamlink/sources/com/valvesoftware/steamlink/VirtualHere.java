@@ -7,6 +7,7 @@ import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
+import android.os.Looper;
 import android.os.Message;
 import android.os.Messenger;
 import android.os.RemoteException;
@@ -95,6 +96,9 @@ public class VirtualHere {
     }
 
     public static VirtualHere acquire(Context context) {
+        if (Looper.myLooper() == null) {
+            Looper.prepare();
+        }
         if (sInstanceRefCount == 0) {
             sInstance = new VirtualHere(context);
         }
