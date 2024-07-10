@@ -4,7 +4,7 @@ import android.database.Cursor;
 import java.io.Closeable;
 import java.io.IOException;
 
-/* loaded from: classes3.dex */
+/* loaded from: classes5.dex */
 public class CloseHelper {
     public static void close(Cursor cursor) {
         if (cursor == null || cursor.isClosed()) {

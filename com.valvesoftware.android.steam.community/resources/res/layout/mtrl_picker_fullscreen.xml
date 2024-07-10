@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <include layout="@layout/mtrl_picker_header_fullscreen"/>
-    <FrameLayout
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/mtrl_calendar_frame"
         android:paddingLeft="@dimen/mtrl_calendar_content_padding"
         android:paddingRight="@dimen/mtrl_calendar_content_padding"

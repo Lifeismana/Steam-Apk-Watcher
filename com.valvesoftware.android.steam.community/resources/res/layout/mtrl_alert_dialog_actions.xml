@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:fillViewport="true"
+    android:scrollIndicators="bottom|top"
     style="?attr/buttonBarStyle">
     <androidx.appcompat.widget.ButtonBarLayout
         android:gravity="bottom"
@@ -16,7 +17,9 @@
         android:layout_height="wrap_content"
         android:layoutDirection="locale"
         android:paddingStart="8dp"
-        android:paddingEnd="8dp">
+        android:paddingEnd="8dp"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="2dp">
         <Button
             android:id="@android:id/button3"
             android:layout_width="wrap_content"
@@ -24,7 +27,7 @@
             style="?attr/buttonBarNeutralButtonStyle"/>
         <android.widget.Space
             android:id="@+id/spacer"
-            android:visibility="invisible"
+            android:visibility="?attr/materialAlertDialogButtonSpacerVisibility"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_weight="1"/>

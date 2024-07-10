@@ -39,9 +39,8 @@ public class Task<TResult> {
         void unobservedException(Task<?> task, UnobservedTaskException unobservedTaskException);
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    public <TOut> Task<TOut> cast() {
-        return this;
+    public static <TResult> Task<TResult> cancelled() {
+        return (Task<TResult>) TASK_CANCELLED;
     }
 
     public static UnobservedExceptionHandler getUnobservedExceptionHandler() {
@@ -50,6 +49,11 @@ public class Task<TResult> {
 
     public static void setUnobservedExceptionHandler(UnobservedExceptionHandler unobservedExceptionHandler2) {
         unobservedExceptionHandler = unobservedExceptionHandler2;
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    public <TOut> Task<TOut> cast() {
+        return this;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -156,10 +160,6 @@ public class Task<TResult> {
         bolts.TaskCompletionSource taskCompletionSource = new bolts.TaskCompletionSource();
         taskCompletionSource.setError(exc);
         return taskCompletionSource.getTask();
-    }
-
-    public static <TResult> Task<TResult> cancelled() {
-        return (Task<TResult>) TASK_CANCELLED;
     }
 
     public static Task<Void> delay(long j) {

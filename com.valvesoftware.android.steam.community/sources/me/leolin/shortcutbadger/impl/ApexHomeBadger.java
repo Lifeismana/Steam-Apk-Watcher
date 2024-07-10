@@ -9,7 +9,7 @@ import me.leolin.shortcutbadger.Badger;
 import me.leolin.shortcutbadger.ShortcutBadgeException;
 import me.leolin.shortcutbadger.util.BroadcastHelper;
 
-/* loaded from: classes3.dex */
+/* loaded from: classes5.dex */
 public class ApexHomeBadger implements Badger {
     private static final String CLASS = "class";
     private static final String COUNT = "count";

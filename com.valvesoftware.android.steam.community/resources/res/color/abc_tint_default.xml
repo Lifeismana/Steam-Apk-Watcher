@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:state_enabled="false"
         android:color="?attr/colorControlNormal"
-        app:alpha="?android:attr/disabledAlpha"/>
+        android:alpha="?android:attr/disabledAlpha"/>
     <item
         android:state_focused="true"
         android:color="?attr/colorControlActivated"/>

@@ -57,7 +57,9 @@
             android:paddingRight="16dp"
             android:paddingBottom="16dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp">
             <Button
                 android:textSize="14sp"
                 android:textStyle="bold"

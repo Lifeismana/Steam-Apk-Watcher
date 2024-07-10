@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    android:versionCode="8935586"
-    android:versionName="3.8.0"
-    android:compileSdkVersion="33"
-    android:compileSdkVersionCodename="13"
+    android:versionCode="8996305"
+    android:versionName="3.9.0"
+    android:compileSdkVersion="34"
+    android:compileSdkVersionCodename="14"
     package="com.valvesoftware.android.steam.community"
-    platformBuildVersionCode="33"
-    platformBuildVersionName="13">
+    platformBuildVersionCode="34"
+    platformBuildVersionName="14">
     <uses-sdk
-        android:minSdkVersion="21"
-        android:targetSdkVersion="33"/>
+        android:minSdkVersion="23"
+        android:targetSdkVersion="34"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
@@ -22,9 +22,17 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
     <queries>
         <intent>
             <action android:name="android.intent.action.OPEN_DOCUMENT_TREE"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SEND"/>
+            <data android:mimeType="*/*"/>
+        </intent>
+        <intent>
+            <action android:name="androidx.camera.extensions.action.VENDOR_ACTION"/>
         </intent>
         <package android:name="com.google.android.apps.maps"/>
     </queries>
@@ -36,12 +44,16 @@
     <uses-feature
         android:name="android.hardware.camera.autofocus"
         android:required="false"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
-    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
     <uses-feature
         android:glEsVersion="0x20000"
         android:required="true"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <permission
+        android:name="com.valvesoftware.android.steam.community.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.valvesoftware.android.steam.community.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
     <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
     <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
@@ -65,15 +77,10 @@
         android:icon="@mipmap/ic_launcher"
         android:name="com.valvesoftware.android.steam.community.MainApplication"
         android:allowBackup="false"
+        android:extractNativeLibs="false"
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory">
-        <meta-data
-            android:name="expo.modules.updates.EXPO_UPDATE_URL"
-            android:value="https://steammobile.akamaized.net/apps/mobile/steam/android-index.json"/>
-        <meta-data
-            android:name="expo.modules.updates.EXPO_SDK_VERSION"
-            android:value="40.0.0"/>
         <meta-data
             android:name="expo.modules.updates.ENABLED"
             android:value="true"/>
@@ -91,7 +98,6 @@
             android:resource="@mipmap/ic_notification"/>
         <activity
             android:theme="@style/Theme.App.SplashScreen"
-            android:label="@string/app_name"
             android:name="com.valvesoftware.android.steam.community.MainActivity"
             android:exported="true"
             android:launchMode="singleTask"
@@ -242,12 +248,64 @@
             android:excludeFromRecents="true"
             android:launchMode="standard"
             android:noHistory="true"/>
+        <provider
+            android:name="expo.modules.sharing.SharingFileProvider"
+            android:exported="false"
+            android:authorities="com.valvesoftware.android.steam.community.SharingFileProvider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/sharing_provider_paths"/>
+        </provider>
         <meta-data
             android:name="org.unimodules.core.AppLoader#react-native-headless"
             android:value="expo.modules.adapters.react.apploader.RNHeadlessAppLoader"/>
         <meta-data
             android:name="com.facebook.soloader.enabled"
             android:value="true"/>
+        <uses-library
+            android:name="androidx.camera.extensions.impl"
+            android:required="false"/>
+        <service
+            android:name="androidx.camera.core.impl.MetadataHolderService"
+            android:enabled="false"
+            android:exported="false">
+            <meta-data
+                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider"/>
+        </service>
+        <meta-data
+            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+            android:value="GlideModule"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false"/>
+        <service
+            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+            android:exported="false"
+            android:directBootAware="true">
+            <meta-data
+                android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <provider
+            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+            android:exported="false"
+            android:authorities="com.valvesoftware.android.steam.community.mlkitinitprovider"
+            android:initOrder="99"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"/>
         <receiver
             android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
             android:permission="com.google.android.c2dm.permission.SEND"
@@ -278,54 +336,12 @@
                 android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar"/>
         </service>
-        <service
-            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
-            android:exported="false"
-            android:directBootAware="true">
-            <meta-data
-                android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar"
-                android:value="com.google.firebase.components.ComponentRegistrar"/>
-            <meta-data
-                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
-                android:value="com.google.firebase.components.ComponentRegistrar"/>
-            <meta-data
-                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
-                android:value="com.google.firebase.components.ComponentRegistrar"/>
-        </service>
-        <provider
-            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
-            android:exported="false"
-            android:authorities="com.valvesoftware.android.steam.community.mlkitinitprovider"
-            android:initOrder="99"/>
-        <service
-            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-            android:exported="false">
-            <meta-data
-                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-                android:value="cct"/>
-        </service>
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
             android:exported="false"
             android:authorities="com.valvesoftware.android.steam.community.firebaseinitprovider"
             android:initOrder="100"
             android:directBootAware="true"/>
-        <meta-data
-            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
-            android:value="GlideModule"/>
-        <meta-data
-            android:name="com.bumptech.glide.integration.webp.WebpGlideModule"
-            android:value="GlideModule"/>
-        <uses-library
-            android:name="org.apache.http.legacy"
-            android:required="false"/>
-        <activity
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-            android:exported="false"/>
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version"/>
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:exported="false"
@@ -338,9 +354,6 @@
                 android:value="androidx.startup"/>
             <meta-data
                 android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-                android:value="androidx.startup"/>
-            <meta-data
-                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
                 android:value="androidx.startup"/>
         </provider>
         <service
@@ -433,25 +446,17 @@
                 <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
             </intent-filter>
         </receiver>
-        <receiver
-            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-            android:permission="android.permission.DUMP"
-            android:enabled="true"
-            android:exported="true"
-            android:directBootAware="false">
-            <intent-filter>
-                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
-            </intent-filter>
-        </receiver>
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:directBootAware="true"/>
+        <service
+            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+            android:exported="false">
+            <meta-data
+                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+                android:value="cct"/>
+        </service>
         <service
             android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
             android:permission="android.permission.BIND_JOB_SERVICE"
@@ -459,9 +464,5 @@
         <receiver
             android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
             android:exported="false"/>
-        <service
-            android:name="androidx.room.MultiInstanceInvalidationService"
-            android:exported="false"
-            android:directBootAware="true"/>
     </application>
 </manifest>

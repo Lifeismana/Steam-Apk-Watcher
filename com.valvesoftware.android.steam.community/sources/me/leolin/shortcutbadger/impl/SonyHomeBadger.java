@@ -12,7 +12,7 @@ import java.util.List;
 import me.leolin.shortcutbadger.Badger;
 import me.leolin.shortcutbadger.ShortcutBadgeException;
 
-/* loaded from: classes3.dex */
+/* loaded from: classes5.dex */
 public class SonyHomeBadger implements Badger {
     private static final String INTENT_ACTION = "com.sonyericsson.home.action.UPDATE_BADGE";
     private static final String INTENT_EXTRA_ACTIVITY_NAME = "com.sonyericsson.home.intent.extra.badge.ACTIVITY_NAME";

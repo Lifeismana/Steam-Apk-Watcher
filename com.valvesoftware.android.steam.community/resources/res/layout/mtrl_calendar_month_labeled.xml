@@ -9,6 +9,6 @@
         android:focusable="true"
         android:layout_width="match_parent"
         android:layout_height="@dimen/mtrl_calendar_day_height"
-        style="@style/TextAppearance.MaterialComponents.Subtitle2"/>
+        style="?attr/materialCalendarMonth"/>
     <include layout="@layout/mtrl_calendar_month"/>
 </LinearLayout>

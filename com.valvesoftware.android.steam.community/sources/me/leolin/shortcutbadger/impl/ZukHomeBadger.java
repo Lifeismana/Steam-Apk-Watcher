@@ -9,7 +9,7 @@ import java.util.List;
 import me.leolin.shortcutbadger.Badger;
 import me.leolin.shortcutbadger.ShortcutBadgeException;
 
-/* loaded from: classes3.dex */
+/* loaded from: classes5.dex */
 public class ZukHomeBadger implements Badger {
     private final Uri CONTENT_URI = Uri.parse("content://com.android.badge/badge");
 

@@ -16,7 +16,7 @@ import me.leolin.shortcutbadger.ShortcutBadgeException;
 import me.leolin.shortcutbadger.util.BroadcastHelper;
 
 @Deprecated
-/* loaded from: classes3.dex */
+/* loaded from: classes5.dex */
 public class XiaomiHomeBadger implements Badger {
     public static final String EXTRA_UPDATE_APP_COMPONENT_NAME = "android.intent.extra.update_application_component_name";
     public static final String EXTRA_UPDATE_APP_MSG_TEXT = "android.intent.extra.update_application_message_text";

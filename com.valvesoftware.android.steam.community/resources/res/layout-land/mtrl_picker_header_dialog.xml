@@ -17,6 +17,8 @@
         <FrameLayout
             android:id="@+id/mtrl_picker_header_title_and_selection"
             android:paddingLeft="@dimen/mtrl_calendar_header_text_padding"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:layout_width="@dimen/mtrl_calendar_landscape_header_width"
             android:layout_height="0dp"
             android:layout_weight="1"

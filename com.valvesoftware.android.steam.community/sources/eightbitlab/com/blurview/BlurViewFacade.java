@@ -2,7 +2,7 @@ package eightbitlab.com.blurview;
 
 import android.graphics.drawable.Drawable;
 
-/* loaded from: classes2.dex */
+/* loaded from: classes4.dex */
 public interface BlurViewFacade {
     BlurViewFacade setBlurAutoUpdate(boolean z);
 

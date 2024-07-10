@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:fillViewport="true"
+    android:scrollIndicators="bottom|top"
     style="?attr/buttonBarStyle">
     <androidx.appcompat.widget.ButtonBarLayout
         android:gravity="bottom"

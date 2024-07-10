@@ -7,6 +7,10 @@ import bolts.Task;
 public class UnobservedErrorNotifier {
     private Task<?> task;
 
+    public void setObserved() {
+        this.task = null;
+    }
+
     public UnobservedErrorNotifier(Task<?> task) {
         this.task = task;
     }
@@ -21,9 +25,5 @@ public class UnobservedErrorNotifier {
         } finally {
             super.finalize();
         }
-    }
-
-    public void setObserved() {
-        this.task = null;
     }
 }
