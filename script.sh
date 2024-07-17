@@ -32,9 +32,10 @@ ProcessApp()
     find $1 -type f -exec md5sum {} >> $1/$1.apk.jadx.txt \;
     for FILE in $1/*.apk
     do
-        unzip -lv "$FILE" | head -n -2 | tail -n+4 | awk '{print $1,$(NF-1),$NF}' >> "$FILE.txt.tmp"
-        sort -k 3 -o "$FILE.txt.tmp"{,}
-        column -t "$FILE.txt.tmp" > "$FILE.txt"
+        rm -f "/tmp/apkunzip.txt"
+        unzip -lv "$FILE" | head -n -2 | tail -n+4 | awk '{print $1,$(NF-1),$NF}' >> "/tmp/apkunzip.txt"
+        sort -k 3 -o "/tmp/apkunzip.txt"{,}
+        column -t "/tmp/apkunzip.txt" > "$FILE.txt"
     done
     # decompile bundle
     if [ -f $1/resources/assets/index.android.bundle ]; then
