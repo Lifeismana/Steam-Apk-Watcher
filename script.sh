@@ -8,6 +8,38 @@ APPS="com.valvesoftware.android.steam.community com.valvesoftware.android.steam.
 
 Commit_message="Daily update"
 
+MergeDPIPNG()
+{
+    echo "Merging DPI PNG"
+    while IFS= read -r FILE
+        do
+        echo "Checking $FILE"
+        if [[ ! $(dirname "$FILE") == *-@(ldpi|mdpi|hdpi|xhdpi|xxhdpi|xxxhdpi) ]]; then
+            continue
+        fi
+        if [ -f "$FILE" ]; then
+            echo "Merging $FILE"
+            filename=$(basename "$FILE")
+            folder=$(basename $(dirname "$FILE"))
+            # test if folder exists in the parent folder if not create it
+            foldernodpi=$(dirname $(dirname "$FILE"))/${folder%-*}
+            [ -d $foldernodpi ] || ( mkdir -p "$foldernodpi" && touch "$foldernodpi/.folderisnotreal" )
+            # if the file already exists in that folder compare pixel count and keep the bigger one
+            if [ -f "$foldernodpi/$filename"    ]; then
+                new=($(identify -format "%w %h" "$FILE"))
+                old=($(identify -format "%w %h" "$foldernodpi/$filename"))
+                if [ $(expr ${new[0]} \* ${new[1]}) -gt $(expr ${old[0]} \* ${old[1]}) ]; then
+                    mv -f "$FILE" "$foldernodpi/$filename"
+                else
+                    rm -f "$FILE"
+                fi
+            else
+                mv -f "$FILE" "$foldernodpi/$filename"
+            fi
+        fi
+    done < <(find . -type f -name "*.png")
+}
+
 ProcessApp()
 {
     rm -rf $1
@@ -76,6 +108,8 @@ else
         ProcessApp $APP
     done
 fi
+
+MergeDPIPNG
 
 git add -A
 git commit -a -m "$Commit_message | $(git status --porcelain | wc -l) files | $(git status --porcelain|awk '{print "basename " $2}'| sh | sed '{:q;N;s/\n/, /g;t q}')"
