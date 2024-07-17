@@ -30,6 +30,7 @@ ProcessApp()
     fi
     jadx --deobf --show-bad-code -d $1 $1/$1.apk
     find $1 -type f -exec md5sum {} >> $1/$1.apk.jadx.txt \;
+    sort -k 2 -o "$1/$1.apk.jadx.txt"{,}
     for FILE in $1/*.apk
     do
         rm -f "/tmp/apkunzip.txt"
