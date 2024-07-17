@@ -50,12 +50,12 @@ ProcessApp()
             # => [Function #12891 (keep what's here if there's something) of 
             case $line in
                 "=> 0:"*)
-                    string=${line#"=> 0: '"}
-                    echo ${string::-1} >> $1/resources/assets/index.android.bundle.0.txt
+                    string=${line#"=> 0: "}
+                    echo ${string:1:-1} >> $1/resources/assets/index.android.bundle.0.txt
                     ;;
                 "=> 1:"*)
-                    string=${line#"=> 1: '"}
-                    echo ${string::-1} >> $1/resources/assets/index.android.bundle.1.txt
+                    string=${line#"=> 1: "}
+                    echo ${string:1:-1} >> $1/resources/assets/index.android.bundle.1.txt
                     ;;
                 "=> [Function"*)
                     echo ${line% of *} | sed -r 's/^=> \[Function #[0-9]+ ?//' >> $1/resources/assets/index.android.bundle.function.txt
