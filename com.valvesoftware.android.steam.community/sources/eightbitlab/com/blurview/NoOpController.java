@@ -3,7 +3,7 @@ package eightbitlab.com.blurview;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 
-/* loaded from: classes2.dex */
+/* loaded from: classes4.dex */
 class NoOpController implements BlurController {
     @Override // eightbitlab.com.blurview.BlurController
     public void destroy() {

@@ -13,6 +13,10 @@ public class AggregateException extends Exception {
     private static final long serialVersionUID = 1;
     private List<Throwable> innerThrowables;
 
+    public List<Throwable> getInnerThrowables() {
+        return this.innerThrowables;
+    }
+
     public AggregateException(String str, Throwable[] thArr) {
         this(str, (List<? extends Throwable>) Arrays.asList(thArr));
     }
@@ -24,10 +28,6 @@ public class AggregateException extends Exception {
 
     public AggregateException(List<? extends Throwable> list) {
         this(DEFAULT_MESSAGE, list);
-    }
-
-    public List<Throwable> getInnerThrowables() {
-        return this.innerThrowables;
     }
 
     @Override // java.lang.Throwable

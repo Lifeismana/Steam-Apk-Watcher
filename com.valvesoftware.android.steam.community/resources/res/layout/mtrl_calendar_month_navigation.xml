@@ -20,7 +20,8 @@
             android:insetBottom="0dp"
             app:icon="@drawable/material_ic_menu_arrow_down_black_24dp"
             app:iconGravity="textEnd"
-            app:iconPadding="4dp"/>
+            app:iconPadding="4dp"
+            style="?attr/materialCalendarYearNavigationButton"/>
     </FrameLayout>
     <com.google.android.material.button.MaterialButton
         android:gravity="center"
@@ -30,7 +31,8 @@
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:contentDescription="@string/mtrl_picker_a11y_prev_month"
-        app:icon="@drawable/material_ic_keyboard_arrow_left_black_24dp"/>
+        app:icon="@drawable/material_ic_keyboard_arrow_previous_black_24dp"
+        style="?attr/materialCalendarMonthNavigationButton"/>
     <com.google.android.material.button.MaterialButton
         android:gravity="center"
         android:id="@+id/month_navigation_next"
@@ -39,5 +41,6 @@
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:contentDescription="@string/mtrl_picker_a11y_next_month"
-        app:icon="@drawable/material_ic_keyboard_arrow_right_black_24dp"/>
+        app:icon="@drawable/material_ic_keyboard_arrow_next_black_24dp"
+        style="?attr/materialCalendarMonthNavigationButton"/>
 </LinearLayout>

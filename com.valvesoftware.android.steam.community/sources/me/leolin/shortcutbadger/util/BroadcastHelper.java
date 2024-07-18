@@ -9,7 +9,7 @@ import java.util.List;
 import me.leolin.shortcutbadger.ShortcutBadgeException;
 import me.leolin.shortcutbadger.impl.IntentConstants;
 
-/* loaded from: classes3.dex */
+/* loaded from: classes5.dex */
 public class BroadcastHelper {
     public static List<ResolveInfo> resolveBroadcast(Context context, Intent intent) {
         List<ResolveInfo> queryBroadcastReceivers = context.getPackageManager().queryBroadcastReceivers(intent, 0);
@@ -31,18 +31,14 @@ public class BroadcastHelper {
     }
 
     public static void sendDefaultIntentExplicitly(Context context, Intent intent) throws ShortcutBadgeException {
-        boolean z = false;
         if (Build.VERSION.SDK_INT >= 26) {
             Intent intent2 = new Intent(intent);
             intent2.setAction(IntentConstants.DEFAULT_OREO_INTENT_ACTION);
             try {
                 sendIntentExplicitly(context, intent2);
-                z = true;
+                return;
             } catch (ShortcutBadgeException unused) {
             }
-        }
-        if (z) {
-            return;
         }
         sendIntentExplicitly(context, intent);
     }

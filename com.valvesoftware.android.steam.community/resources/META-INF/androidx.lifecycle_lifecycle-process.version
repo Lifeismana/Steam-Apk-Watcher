@@ -1,1 +1,1 @@
-task ':lifecycle:lifecycle-process:writeVersionFile' property 'version'
+2.4.1

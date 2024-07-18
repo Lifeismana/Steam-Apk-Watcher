@@ -9,7 +9,7 @@ import java.util.List;
 import me.leolin.shortcutbadger.Badger;
 import me.leolin.shortcutbadger.ShortcutBadgeException;
 
-/* loaded from: classes3.dex */
+/* loaded from: classes5.dex */
 public class ZTEHomeBadger implements Badger {
     @Override // me.leolin.shortcutbadger.Badger
     public void executeBadge(Context context, ComponentName componentName, int i) throws ShortcutBadgeException {

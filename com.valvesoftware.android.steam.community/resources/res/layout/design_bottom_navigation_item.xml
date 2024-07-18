@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView
+    <FrameLayout
         android:layout_gravity="center_horizontal"
-        android:id="@+id/icon"
+        android:id="@+id/navigation_bar_item_icon_container"
         android:duplicateParentState="true"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/design_bottom_navigation_margin"
-        android:layout_marginBottom="@dimen/design_bottom_navigation_margin"
-        android:contentDescription="@null"/>
+        android:layout_marginBottom="@dimen/design_bottom_navigation_margin">
+        <View
+            android:layout_gravity="center"
+            android:id="@+id/navigation_bar_item_active_indicator_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/navigation_bar_item_icon_view"
+            android:duplicateParentState="true"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="@null"/>
+    </FrameLayout>
     <com.google.android.material.internal.BaselineLayout
         android:layout_gravity="bottom|center_horizontal"
-        android:paddingBottom="10dp"
+        android:id="@+id/navigation_bar_item_labels_group"
+        android:paddingBottom="@dimen/design_bottom_navigation_label_padding"
         android:duplicateParentState="true"
         android:clipChildren="false"
         android:clipToPadding="false"
@@ -20,7 +33,7 @@
         <TextView
             android:textSize="@dimen/design_bottom_navigation_text_size"
             android:ellipsize="end"
-            android:id="@+id/smallLabel"
+            android:id="@+id/navigation_bar_item_small_label_view"
             android:duplicateParentState="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -28,7 +41,7 @@
         <TextView
             android:textSize="@dimen/design_bottom_navigation_active_text_size"
             android:ellipsize="end"
-            android:id="@+id/largeLabel"
+            android:id="@+id/navigation_bar_item_large_label_view"
             android:visibility="invisible"
             android:duplicateParentState="true"
             android:layout_width="wrap_content"

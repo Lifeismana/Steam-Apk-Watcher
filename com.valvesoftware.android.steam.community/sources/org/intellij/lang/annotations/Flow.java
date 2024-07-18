@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
 @Target({ElementType.PARAMETER, ElementType.METHOD})
 @Documented
 @Retention(RetentionPolicy.CLASS)
-/* loaded from: classes4.dex */
+/* loaded from: classes5.dex */
 public @interface Flow {
     public static final String DEFAULT_SOURCE = "The method argument (if parameter was annotated) or this container (if instance method was annotated)";
     public static final String DEFAULT_TARGET = "This container (if the parameter was annotated) or the return value (if instance method was annotated)";

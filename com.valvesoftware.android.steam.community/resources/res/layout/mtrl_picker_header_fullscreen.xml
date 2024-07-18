@@ -5,6 +5,7 @@
     <LinearLayout
         android:layout_gravity="top|center_horizontal"
         android:orientation="horizontal"
+        android:id="@+id/fullscreen_header"
         android:paddingLeft="@dimen/mtrl_calendar_header_content_padding_fullscreen"
         android:paddingTop="@dimen/mtrl_calendar_header_content_padding_fullscreen"
         android:paddingRight="@dimen/mtrl_calendar_header_content_padding_fullscreen"
@@ -24,12 +25,12 @@
             android:insetBottom="0dp"
             android:contentDescription="@string/mtrl_picker_cancel"
             app:icon="@drawable/material_ic_clear_black_24dp"
-            app:iconTint="?attr/colorOnPrimary"
-            app:rippleColor="@color/mtrl_btn_ripple_color"
-            style="@style/Widget.MaterialComponents.Button.TextButton"/>
+            style="?attr/materialCalendarHeaderCancelButton"/>
         <FrameLayout
             android:id="@+id/mtrl_picker_header_title_and_selection"
             android:paddingLeft="@dimen/mtrl_calendar_header_text_padding"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

@@ -16,6 +16,7 @@ import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.modules.network.ForwardingCookieHandler;
 import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.material.timepicker.TimeModel;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -37,7 +38,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/* loaded from: classes2.dex */
+/* loaded from: classes4.dex */
 public class ValveHelpersModule extends ReactContextBaseJavaModule {
     private static final String s_strSteamGuardStateFilenameBase = "Steamguard-";
     private ForwardingCookieHandler m_CookieHandler;
@@ -308,7 +309,7 @@ public class ValveHelpersModule extends ReactContextBaseJavaModule {
             str = null;
         }
         if (str == null) {
-            str = String.format(Locale.US, "%d", Long.valueOf(new GregorianCalendar().getTimeInMillis()));
+            str = String.format(Locale.US, TimeModel.NUMBER_FORMAT, Long.valueOf(new GregorianCalendar().getTimeInMillis()));
         }
         String format = String.format(Locale.US, "android:%s", str);
         sharedPreferences.edit().putString("uuidKey", format).commit();

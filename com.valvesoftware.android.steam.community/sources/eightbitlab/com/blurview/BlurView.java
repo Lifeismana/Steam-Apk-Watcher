@@ -9,7 +9,7 @@ import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
-/* loaded from: classes2.dex */
+/* loaded from: classes4.dex */
 public class BlurView extends FrameLayout {
     private static final String TAG = "BlurView";
     BlurController blurController;
@@ -34,8 +34,8 @@ public class BlurView extends FrameLayout {
     }
 
     private void init(AttributeSet attributeSet, int i) {
-        TypedArray obtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, C2260R.styleable.BlurView, i, 0);
-        this.overlayColor = obtainStyledAttributes.getColor(C2260R.styleable.BlurView_blurOverlayColor, 0);
+        TypedArray obtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, C2794R.styleable.BlurView, i, 0);
+        this.overlayColor = obtainStyledAttributes.getColor(C2794R.styleable.BlurView_blurOverlayColor, 0);
         obtainStyledAttributes.recycle();
     }
 

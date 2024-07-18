@@ -1,0 +1,22 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+CDI APIs
+
+
+From: 'an unknown organization'
+  - javax.inject (http://code.google.com/p/atinject/) javax.inject:javax.inject:jar:1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'GlassFish Community' (http://glassfish.org)
+  - Expression Language 3.0 API (http://uel-spec.java.net) javax.el:javax.el-api:jar:3.0.0
+    License: CDDL + GPLv2 with classpath exception  (https://glassfish.dev.java.net/nonav/public/CDDL+GPL.html)
+
+From: 'GlassFish Community' (https://glassfish.java.net)
+  - javax.interceptor API (http://interceptors-spec.java.net) javax.interceptor:javax.interceptor-api:jar:1.2
+    License: CDDL + GPLv2 with classpath exception  (https://glassfish.dev.java.net/nonav/public/CDDL+GPL.html)
+
+
+

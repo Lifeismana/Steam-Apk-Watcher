@@ -13,6 +13,15 @@
         <item>Pixel 4</item>
         <item>Pixel 4 XL</item>
     </array>
+    <array name="exo_controls_playback_speeds">
+        <item>0.25x</item>
+        <item>0.5x</item>
+        <item>0.75x</item>
+        <item>Normal</item>
+        <item>1.25x</item>
+        <item>1.5x</item>
+        <item>2x</item>
+    </array>
     <array name="hide_fingerprint_instantly_prefixes">
         <item>SM-A50</item>
         <item>SM-G973</item>
