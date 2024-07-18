@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="4982739"
+    android:versionName="2.3.9"
+    package="com.valvesoftware.android.steam.community"
+    platformBuildVersionCode="4982739"
+    platformBuildVersionName="2.3.9">
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="26"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <permission
+        android:name="com.valvesoftware.android.steam.community.permission.C2D_MESSAGE"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.valvesoftware.android.steam.community.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <supports-screens
+        android:anyDensity="true"
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"/>
+    <uses-configuration
+        android:reqTouchScreen="finger"
+        android:reqKeyboardType="undefined"
+        android:reqHardKeyboard="false"
+        android:reqNavigation="undefined"
+        android:reqFiveWayNav="false"/>
+    <application
+        android:label="@string/app_name"
+        android:icon="@drawable/ic_launcher"
+        android:name="com.valvesoftware.android.steam.community.SteamCommunityApplication"
+        android:allowBackup="false">
+        <activity
+            android:theme="@style/NoActionBarTheme"
+            android:name="com.valvesoftware.android.steam.community.activity.MainActivity"
+            android:launchMode="singleTop"
+            android:configChanges="fontScale|screenSize|screenLayout|orientation|navigation|keyboardHidden|keyboard|touchscreen|locale|mnc|mcc"
+            android:alwaysRetainTaskState="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:name="com.valvesoftware.android.steam.community.activity.PaypalUriActivity"
+            android:exported="false"
+            android:configChanges="fontScale|screenLayout|orientation|navigation|keyboardHidden|keyboard|touchscreen|locale|mnc|mcc">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <action android:name="com.google.android.c2dm.intent.GCM_RECEIVED_ACTION"/>
+                <category android:name="com.valvesoftware.android.steam.community"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.valvesoftware.android.steam.community.GcmProcessorService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.valvesoftware.android.steam.community.GcmRegistrar"
+            android:exported="false"/>
+        <service
+            android:name="com.valvesoftware.android.steam.community.GcmInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.valvesoftware.android.steam.community.SteamguardWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/steamguard_widget_info"/>
+        </receiver>
+        <receiver android:name="com.valvesoftware.android.steam.community.NotificationDeleteReceiver"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0"/>
+        <meta-data
+            android:name="android.arch.lifecycle.VERSION"
+            android:value="27.0.0-SNAPSHOT"/>
+    </application>
+</manifest>
