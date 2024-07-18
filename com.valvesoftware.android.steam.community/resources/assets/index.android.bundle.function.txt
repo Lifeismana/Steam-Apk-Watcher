@@ -1,5 +1,6 @@
 
 ?anon_0_
+?anon_0__loop
 A
 AbbreviateNumber
 AbortController
@@ -21,6 +22,7 @@ AddAccessors
 AddAppRelationship
 AddAuthenticator
 AddBundle
+AddCallback
 AddChild
 AddEventListener
 AddFriend
@@ -29,9 +31,12 @@ AddGuardAccountSelectorItem
 AddGuardScreen
 AddMissingStylesheetsToWindow
 AddNavParamToURL
+AddNotificationToRollupByAppID
 AddNotificationToRollups
 AddPackages
 AddReaction
+AddServiceMethodHandler
+AddServiceNotificationHandler
 AddSteamGuard
 AddStylesheetsToDocument
 AddToast
@@ -106,6 +111,7 @@ AuthSessionPoller
 AuthSessionTrigger
 AuthTypeToString
 AuthZoo
+Authenticate
 AuthenticatorFeature
 AuthenticatorSVG
 AuthorizeCurrentDevice
@@ -122,6 +128,7 @@ BBiometricsEnabled
 BCanAccessCookies
 BCanContinueUsingToken
 BCanGoBack
+BCanSendMessages
 BCheckDataRequestIncluded
 BCommentLoadOwnerProfile
 BCommentLoadPosterProfile
@@ -136,6 +143,7 @@ BDoesLocaleUse24Hourclock
 BDoesSaleItemTypeHaveParent
 BElementContainsSelection
 BElementFullscreen
+BGameMatchesFilter
 BHadRemoteInteraction
 BHasAgeSafeScreenshots
 BHasApp
@@ -181,6 +189,7 @@ BIsConfirmEmailForAddUrl
 BIsControllerConfigGameID
 BIsCreatorMissing
 BIsCustomComingSoonDisplay
+BIsCustomNotification
 BIsDownloading
 BIsDragLeaveOutOfElement
 BIsEFriendRelationshipBlocked
@@ -189,13 +198,12 @@ BIsEarlyAccess
 BIsElementScrollableOnAxis
 BIsEmoji
 BIsEmoticonsOnly
-BIsFeatureBlocked
 BIsFree
 BIsFreeWeekend
-BIsGameBlocked
 BIsHidden
 BIsHubCategoryMissing
 BIsIOS
+BIsInClientBeta
 BIsInPresentationMode
 BIsIndividualAccount
 BIsInitialized
@@ -246,6 +254,7 @@ BReplaceRollupItem
 BSendToCallbackAsNew
 BSessionUnlocked
 BShouldOpenLinkInExternalBrowser
+BShouldReconnect
 BShouldRefreshToken
 BShowNewIndicator
 BSuccess
@@ -524,25 +533,37 @@ CEmbeddedClient_AuthorizeCurrentDevice_Request
 CEmbeddedClient_AuthorizeDevice_Response
 CEmbeddedClient_Token
 CErrorReportingStore
-CFamilyGroupsClient_GroupStatus_Notification
-CFamilyGroupsClient_GroupStatus_Notification_PlayingMember
-CFamilyGroupsClient_GroupStatus_Notification_RunningApp
+CFamilyGroupsClient_GroupChanged_Notification
 CFamilyGroupsClient_InviteStatus_Notification
+CFamilyGroupsClient_NotifyRunningApps_Notification
+CFamilyGroupsClient_NotifyRunningApps_Notification_PlayingMember
+CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
 CFamilyGroups_CancelFamilyGroupInvite_Request
 CFamilyGroups_CancelFamilyGroupInvite_Response
+CFamilyGroups_ConfirmInviteToFamilyGroup_Request
+CFamilyGroups_ConfirmInviteToFamilyGroup_Response
+CFamilyGroups_ConfirmJoinFamilyGroup_Request
+CFamilyGroups_ConfirmJoinFamilyGroup_Response
 CFamilyGroups_CreateFamilyGroup_Request
 CFamilyGroups_CreateFamilyGroup_Response
 CFamilyGroups_DeleteFamilyGroup_Request
 CFamilyGroups_DeleteFamilyGroup_Response
+CFamilyGroups_FamilyDispersionGraph
+CFamilyGroups_FamilyDispersionGraph_Edge
 CFamilyGroups_GetChangeLog_Request
 CFamilyGroups_GetChangeLog_Response
 CFamilyGroups_GetChangeLog_Response_Change
+CFamilyGroups_GetDispersionForFamily_Request
+CFamilyGroups_GetDispersionForFamily_Response
 CFamilyGroups_GetFamilyGroupForUser_Request
 CFamilyGroups_GetFamilyGroupForUser_Response
 CFamilyGroups_GetFamilyGroup_Request
 CFamilyGroups_GetFamilyGroup_Response
 CFamilyGroups_GetPlaytimeSummary_Request
 CFamilyGroups_GetPlaytimeSummary_Response
+CFamilyGroups_GetPreferredLenders_Request
+CFamilyGroups_GetPreferredLenders_Response
+CFamilyGroups_GetPreferredLenders_Response_FamilyMember
 CFamilyGroups_GetPurchaseRequests_Request
 CFamilyGroups_GetPurchaseRequests_Response
 CFamilyGroups_GetSharedLibraryApps_Request
@@ -561,10 +582,14 @@ CFamilyGroups_RemoveFromFamilyGroup_Request
 CFamilyGroups_RemoveFromFamilyGroup_Response
 CFamilyGroups_RequestPurchase_Request
 CFamilyGroups_RequestPurchase_Response
+CFamilyGroups_ResendInvitationToFamilyGroup_Request
+CFamilyGroups_ResendInvitationToFamilyGroup_Response
 CFamilyGroups_RespondToRequestedPurchase_Request
 CFamilyGroups_RespondToRequestedPurchase_Response
 CFamilyGroups_SetFamilyCooldownOverrides_Request
 CFamilyGroups_SetFamilyCooldownOverrides_Response
+CFamilyGroups_SetPreferredLender_Request
+CFamilyGroups_SetPreferredLender_Response
 CHardwarePackageDetails
 CHelpRequestLogs_GetApplicationLogDemand_Request
 CHelpRequestLogs_GetApplicationLogDemand_Response
@@ -620,6 +645,8 @@ CLoyaltyRewards_RegisterForSteamDeckRewards_Response
 CMappedSubscribableValue
 CMarketingMessageHourlyStats
 CMarketingMessageProto
+CMarketingMessage_GetMarketingMessagesForApps_Request
+CMarketingMessage_GetMarketingMessagesForApps_Response
 CMarketingMessages_CreateMarketingMessage_Request
 CMarketingMessages_CreateMarketingMessage_Response
 CMarketingMessages_DeleteMarketingMessage_Request
@@ -713,6 +740,9 @@ CParental_ValidatePassword_Request
 CParental_ValidatePassword_Response
 CParental_ValidateToken_Request
 CParental_ValidateToken_Response
+CPartnerStoreBrowse_GetCountryRestrictions_Request
+CPartnerStoreBrowse_GetCountryRestrictions_Response
+CPartnerStoreBrowse_GetCountryRestrictions_Response_CCountryRestrictions
 CPartnerStoreBrowse_GetItems_Request
 CPasswordLoginSession
 CPersonaStateImpl
@@ -813,6 +843,9 @@ CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Response_UpgradedCustomizat
 CPlayer_GetPurchasedProfileCustomizations_Request
 CPlayer_GetPurchasedProfileCustomizations_Response
 CPlayer_GetPurchasedProfileCustomizations_Response_PurchasedCustomization
+CPlayer_GetRecentPlaytimeSessionsForChild_Request
+CPlayer_GetRecentPlaytimeSessionsForChild_Response
+CPlayer_GetRecentPlaytimeSessionsForChild_Response_PlaytimeSession
 CPlayer_GetSteamDeckKeyboardSkin_Request
 CPlayer_GetSteamDeckKeyboardSkin_Response
 CPlayer_GetTextFilterWords_Request
@@ -1037,6 +1070,7 @@ CStorePageFilter_ContentHubFilter_OptInInfo
 CStorePageFilter_SalePageFilter
 CStorePageFilter_StoreFilter
 CStoreQueryFilters
+CStoreQueryFilters_PriceFilters
 CStoreQueryFilters_TagFilter
 CStoreQueryFilters_TypeFilters
 CStoreQueryParams
@@ -1096,6 +1130,9 @@ CSupportRefreshTokenAudit
 CSupportRefreshTokenDescription
 CSupportRefreshTokenDescription_TokenUsageEvent
 CTrackedEventListeners
+CTransportAuth_Authenticate_Request
+CTransportAuth_Authenticate_Response
+CTransportAuth_StartShutdown_Notification
 CTwoFactor_AddAuthenticator_Request
 CTwoFactor_AddAuthenticator_Response
 CTwoFactor_FinalizeAddAuthenticator_Request
@@ -1140,6 +1177,9 @@ CUserAccount_ViewFriendInviteToken_Request
 CUserAccount_ViewFriendInviteToken_Response
 CUtlBuffer
 CWebAPIInterface
+CWebSocketConnection
+CWebUIServiceTransport
+CWebUITransportDefaults
 CacheUpdate
 CalculateMSForDuration
 CallDoLogin
@@ -1217,6 +1257,7 @@ ClipPath
 CloseAndCall
 CloseAppTray
 CloseSelector
+CoalesceOverlappingSessions
 CodeFallbackScreen
 CodedError
 CollectAllSessionLogs
@@ -1243,6 +1284,8 @@ ConfigContextRoot
 ConfigInit
 ConfigZoo
 ConfirmAddPhoneToAccount
+ConfirmInviteToFamilyGroup
+ConfirmJoinFamilyGroup
 ConfirmRemove
 ConfirmationDetails
 ConfirmationsList
@@ -1250,8 +1293,11 @@ ConfirmationsListContent
 ConfirmationsListEntry
 ConfirmationsListQueryKey
 ConfirmationsScreen
+Connect
+ConnectToSite
+ConnectToSocket
+ConnectWithRetry
 ConstructAssetURL
-ConstructServiceTransport
 Context
 ContinousBaseGesture
 ConvertAssociationTypeToEStoreItemType
@@ -1267,7 +1313,9 @@ ConvertMalformedNodeToText
 ConvertMarketingMessageAssociationTypeToEStoreItemType
 ConvertRemoteGuardDataToLocal
 ConvertSaleAppTypeToEStoreItemType
+ConvertStoreItemIDAndTypeToStringified
 ConvertStoreItemIDToItemType
+ConvertStoreItemIDToStoreItemKey
 ConvertStoreItemKeyToStoreItemID
 ConvertTo64BitString
 ConvertToStoreItemID
@@ -1282,6 +1330,7 @@ CountRegistered
 CountryCodePicker
 CountryCodePickerAndroid
 CountryCodePickerIOS
+CreateConnection
 CreateEmptyNotificationCounts
 CreateFailedMsgProtobuf
 CreateFamilyGroup
@@ -1293,11 +1342,11 @@ CreateNonce
 CreatePickerEntry
 CreateResizeObserver
 CreateWebAPIURL
-CreatorHomeIdentifier_t
 CreatorHomeModel
 CurrentUserProfile
 CustomEvent
 CustomEventTarget
+DEBUG_LogMessageDispatch
 DEBUG_LogToConsole
 DEBUG_ToObject
 DOMRect
@@ -1307,6 +1356,7 @@ DateField
 DateTimeFormat
 Debug
 DecayAnimation
+DecodeEventComponent
 DecodeToken
 DeepMap
 DeepMapEntry
@@ -1334,10 +1384,15 @@ Device
 Dimensions
 DisableParentalSettings
 DisableWithRecoveryCode
+Disconnect
 DiscoveryQueue
 DiscreteSlider
 Discussions
 Dispatch
+DispatchMethodResponse
+DispatchMsgToHandlers
+DispatchNotification
+DispatchTransportStatusUpdate
 DistanceBetweenRects
 Divider
 DoCheck
@@ -1375,6 +1430,8 @@ EAppControllerSupportLevelToString
 EAppGamepadGyroTrackpadSupportLevelToString
 EAppHDRSupportToString
 EAppReportTypeToString
+EAsyncGameSessionUserStateToString
+EAsyncGameSessionUserVisibilityToString
 EAuctionBadgeLevelToString
 EAuthSessionGuardTypeToString
 EAuthSessionSecurityHistoryToString
@@ -1383,6 +1440,8 @@ EAuthTokenRevokeActionToString
 EAuthTokenStateToString
 EAvatarStateToString
 EBanContentCheckResultToString
+EBannedVanityURLActionToString
+EBannedVanityURLSourceToString
 EBatteryStateToString
 EBluetoothDeviceTypeToString
 EBroadcastEncoderSettingToString
@@ -1396,6 +1455,7 @@ ECarrierStatusToString
 EClanAccountFlagsToString
 EClanImageFileTypeToString
 EClanImageGroupToString
+EClientExecutionSiteToString
 EClientPersonaStateFlagToString
 ECloudGamingPlatformToString
 ECloudStoragePersistStateToString
@@ -1408,6 +1468,7 @@ ECommentThreadTypeToString
 ECommunityItemClassToString
 ECommunityWordFilterReasonToString
 ECommunityWordFilterTypeToString
+ECompromiseDetectionTypeToString
 EContentCheckProviderToString
 EContentHubDiscountFilterTypeToString
 EDiscoveryQueueExperimentalCohortToString
@@ -1415,6 +1476,7 @@ EDisplayStatusToString
 EExternalAccountTypeToString
 EFamilyGroupChangeLogTypeToString
 EFamilyGroupRoleToString
+EFamilyGroupsTwoFactorMethodToString
 EFeaturedAppBonusRoundGrantReasonToString
 EFeaturedAppTypeToString
 EFeedbackStateToString
@@ -1456,6 +1518,7 @@ EMarketingMessageTemplateTypeToString
 EMarketingMessageTypeToString
 EMarketingMessageValidRealmsToString
 EMarketingMessageVisibilityToString
+EMessageQueueAlertPolicyToString
 EMobileAppToString
 EMobileConfirmationTypeToString
 EModeratorActionToString
@@ -1505,6 +1568,7 @@ EPurchaseRequestActionToString
 ERefundSupportActionToString
 EResult
 ERewardDefinitionsActionToString
+ERiskLevelToString
 ESDCardFormatStageToString
 ESLSHelperToString
 EScalingFilterToString
@@ -1517,6 +1581,7 @@ EStartupMovieVariantToString
 ESteamDeckCompatibilityCategoryToString
 ESteamDeckCompatibilityFeedbackToString
 ESteamDeckCompatibilityResultDisplayTypeToString
+ESteamDeckCompatibilityTestResultToString
 ESteamNotificationTargetToString
 ESteamNotificationTypeToString
 ESteamPipeOperationTypeToString
@@ -1527,6 +1592,7 @@ EStorageBlockFileSystemTypeToString
 EStorageDriveMediaTypeToString
 EStorageFormatStageToString
 EStoreAppTypeToString
+EStoreBrowseFilterFailureToString
 EStoreCategoryTypeToString
 EStoreDiscoveryQueueTypeToString
 EStoreItemTypeToString
@@ -1546,6 +1612,7 @@ ETextFilterOperationToString
 ETextFilterSettingToString
 ETickerCategoryLanguageRuleToString
 ETokenRenewalTypeToString
+ETokenRiskFactorToString
 ETouchGestureToString
 ETradeOfferConfirmationMethodToString
 ETradeOfferStateToString
@@ -1603,6 +1670,7 @@ ExpoImage
 ExtractTrailerFormats
 ExtractUniqueCreatorClanIDSet
 F
+FailAllPendingRequests
 FailedToAddCode
 FailedToStart
 Failure
@@ -1611,6 +1679,7 @@ FamilyGroupFormerMember
 FamilyGroupMember
 FamilyGroupPendingInvite
 FamilyGroupPendingInviteForUser
+FamilyGroupStoreRoot
 FancyBox
 FancyBoxText
 FeatureBox
@@ -1750,7 +1819,6 @@ GetAsPromise
 GetAssetClassInfo
 GetAssets
 GetAssetsWithoutOverrides
-GetAsyncGameNotificationData
 GetAuthSessionInfo
 GetAuthSessionsForAccount
 GetAvailableValveDiscountPromotions
@@ -1759,7 +1827,6 @@ GetAvatarHistory
 GetAvatarURLFullSize
 GetAvatarValueForSize
 GetBackgroundStyleName
-GetBasicNotificationData
 GetBasicNotificationProps
 GetBestEventsForUser
 GetBestPurchaseOption
@@ -1800,7 +1867,6 @@ GetClientPackageVersion
 GetClientSteamType
 GetClientWalletDetails
 GetClipboardText
-GetCommentData
 GetCommentThread
 GetCommentThreadRatings
 GetCommentURL
@@ -1816,10 +1882,12 @@ GetConfigJSON
 GetConfigJSONInternal
 GetConfiguredLocale
 GetConfirmationAssociatedMessage
+GetConnectionDetails
 GetContentDescriptorIDs
 GetContentDescriptors
 GetCookie
 GetCountBytesRemaining
+GetCountryRestrictions
 GetCreator
 GetCreatorHome
 GetCreatorHomeByID
@@ -1834,6 +1902,9 @@ GetCurrentGameRichPresence
 GetCurrentManifest
 GetCurrentState
 GetCurrentSteamGuardCode
+GetCustomNotificationData
+GetCustomNotificationDataByType
+GetCustomNotificationDataFromRollup
 GetDLCForApps
 GetDLCForAppsSolr
 GetDataRequest
@@ -1843,7 +1914,9 @@ GetDebugZooLinks
 GetDebugZooScreens
 GetDefaultAvatarUrl
 GetDefaultFormData
+GetDefaultHandlerRegistry
 GetDefaultParams
+GetDefaultTransport
 GetDetails
 GetDeveloperNames
 GetDeviceDetails
@@ -1852,6 +1925,7 @@ GetDeviceModel
 GetDiscoveryQueue
 GetDiscoveryQueueSettings
 GetDiscoveryQueueSkippedApps
+GetDispersionForFamily
 GetDisplayAddressFromLoginRequest
 GetDisplayIPAddressFromLoginRequest
 GetDisplayMarketingMessage
@@ -1888,12 +1962,10 @@ GetFranchiseNames
 GetFreeWeekendEnd
 GetFreeWeekendPlayTextOverride
 GetFriendInviteTokens
-GetFriendRequestData
 GetFriendsGameplayInfo
 GetFullSpacingPropertyName
 GetGameAchievements
 GetGameBadgeLevels
-GetGifterID
 GetHardwareItems
 GetHeaderURL
 GetHeadingStyleName
@@ -1911,13 +1983,13 @@ GetIncludedAppTypes
 GetInitialGuardAccount
 GetInitials
 GetInstance
+GetInterAttemptBackoffMs
 GetInteractionZooLinks
 GetInteractionZooScreens
 GetInternalName
 GetIntrinsic
 GetInventoryItemsWithDescriptions
 GetItemChanges
-GetItemIdentifiers
 GetItemInfo
 GetItems
 GetLabelForLanguage
@@ -1940,6 +2012,7 @@ GetMainCapsuleURL
 GetMapForType
 GetMarketingMessage
 GetMarketingMessageViewerStats
+GetMarketingMessagesForApps
 GetMarketingMessagesForUser
 GetMarketingMessagesViewerRangeStats
 GetMessageForFailureState
@@ -1958,7 +2031,6 @@ GetNewSteamAnnouncementState
 GetNewValue
 GetNicknameList
 GetNotificationData
-GetNotificationRenderProps
 GetNotificationTypeData
 GetNumFollowers
 GetOGGClanInfo
@@ -1981,6 +2053,7 @@ GetPacket
 GetPageBackgroundURL
 GetPageTitleForUrl
 GetParentAppID
+GetParentalFeatureForURL
 GetParentalSessionID
 GetParentalSettings
 GetParentalSettingsQueryKey
@@ -1998,6 +2071,7 @@ GetPlaytimeSummary
 GetPointsForSpend
 GetPostedStatus
 GetPreferences
+GetPreferredLenders
 GetPreferredLocale
 GetPreferredLocales
 GetPreviousSupersetLoadPromise
@@ -2020,11 +2094,11 @@ GetRandomElementArray
 GetReactionConfig
 GetReactions
 GetReactionsSummaryForUser
+GetRecentPlaytimeSessionsForChild
 GetRegionFromRequest
 GetReleaseDateRTime
 GetReplacementAuthenticator
 GetRequestParam
-GetRequestorID
 GetRequests
 GetRequestsQueryPrefix
 GetResponsivePersonaImageSize
@@ -2037,7 +2111,6 @@ GetSalePageVanityURL
 GetScreenshot
 GetSecureCookieName
 GetSelfPurchaseOption
-GetSenderID
 GetServerRTime32
 GetServiceTransport
 GetSessionID
@@ -2049,7 +2122,6 @@ GetShoppingCartContents
 GetShortDescription
 GetShortenedHostname
 GetSignedParentalSettings
-GetSimplePersonaNotificationData
 GetSmallCapsuleURL
 GetSocialList
 GetSpacingStyleName
@@ -2062,6 +2134,7 @@ GetSteamGuardStorageKey
 GetSteamGuardStorageOptions
 GetSteamID
 GetSteamInterface
+GetSteamNotificationData
 GetSteamNotifications
 GetStorageKey
 GetStoreBrowseContext
@@ -2140,7 +2213,7 @@ GetVanityString
 GetWebAPIAccessToken
 GetWebAPIInterface
 GetWebLink
-GetWishlistData
+GetWebUITransportDefaults
 GetWithFallback
 GoBack
 Gradient
@@ -2322,6 +2395,7 @@ IsPlatformMac
 IsPlatformWindows
 IsScheduled
 IsSteamChina
+IsSteamOS
 IsUpdateDesired
 IsUpdateUrgent
 IsUpperCase
@@ -2362,6 +2436,7 @@ Linking
 List
 ListCache
 ListItem
+Load
 LoadAppInfoBatch
 LoadAppInfoBatchFromLocalCache
 LoadAuthContextFromStorage
@@ -2514,6 +2589,7 @@ MergeRefs
 MergeStoreBrowseDataRequest
 MergeThemes
 MergeWithBaseThemeDefinition
+MessageHandlers
 MessagePartToString
 MessageQueue
 MigrateMobileSession
@@ -2570,6 +2646,7 @@ NotificationsScreen
 NotifyManager
 NotifyServerNotificationsHidden
 NotifyServerNotificationsRead
+NotifyStartShutdown
 NullExp
 O
 OOBEContents
@@ -2600,12 +2677,22 @@ OnItemPress
 OnNewNotification
 OnPress
 OnRefresh
+OnRequest
 OnRichPresenceLocUpdate
 OnSearchFocus
+OnSocketClose
+OnSocketError
+OnSocketMessage
+OnSocketOpen
+OnStartShutdown
 OnSteamIDChanged
 OnSteamMobileMessage
 OnUninstall
 OnWebAPIRequestNewAT
+OnWebsocketClose
+OnWebsocketMessage
+OnWebsocketReconnectFinish
+OnWebsocketReconnectStart
 OnlineManager
 OpenLinkInExternalBrowser
 OpenSelector
@@ -2613,6 +2700,7 @@ OpenSource
 OpenSourceScreen
 OpenUrl
 OrDivider
+OriginatingNavEventContextRoot
 Overlay
 OverlayModalScreen
 P
@@ -2628,13 +2716,16 @@ ParentalFeatureRequest
 ParentalPlaytimeDay
 ParentalPlaytimeRequest
 ParentalPlaytimeRestrictions
+ParentalRequestForm
 ParentalSection
 ParentalSettings
 ParentalTemporaryPlaytimeRestrictions
 ParentalUnlock
+ParentalUnlockForm
 Parse
 ParseBBCode
 ParseBBCodeToNodes
+ParseClientUserAgent
 ParseConfirmToken
 ParseHeaderData
 ParseQRData
@@ -2709,6 +2800,7 @@ PortalProviderComponent
 Position
 PostCommentToThread
 PostStatusToFriends
+PrepareForShutdown
 Pressability
 PressabilityDebugView
 PressabilityPerformanceEventEmitter
@@ -2730,6 +2822,7 @@ ProgressBar
 ProgressBarAndroid
 Promise
 PromiseObj
+PromiseWithResolvers
 Provider
 Publish
 PublishPartnerMessage
@@ -2801,8 +2894,10 @@ ReactQueryDevtools
 ReactQueryDevtoolsPanel
 ReactQueryRoot
 Reaction
+ReadBodyFromBuffer
 ReadItem
 ReadResults
+Reconnect
 RecordDisconnectedPlaytime
 RecoveryCode
 RecoveryCodeScreen
@@ -2825,12 +2920,16 @@ RefreshUserRefreshToken
 RefreshVotingQueue
 RegexSearchAndReplaceClanImageURL
 Register
+RegisterBaseEMessageHandler
 RegisterCDKey
 RegisterCallbackOnLoad
 RegisterChild
 RegisterClanData
 RegisterCompatTool
 RegisterDeviceWithServer
+RegisterEMessageAction
+RegisterEMessageHandler
+RegisterForNotifyStartShutdown
 RegisterForSettingsChanges
 RegisterForSteamDeckRewards
 RegisterForSteamMobileMessages
@@ -2839,6 +2938,10 @@ RegisterLogName
 RegisterMobileDevice
 RegisterOnNotificationCallback
 RegisterPushForAccounts
+RegisterServiceMethodHandler
+RegisterServiceMethodHandlerAction
+RegisterServiceNotificationHandler
+RegisterServiceNotificationHandlerAction
 ReleaseUpdatesZoo
 ReloadAllReservationPositionMessages
 RemapMetadataByField
@@ -2885,6 +2988,7 @@ RequestNewAccessToken
 RequestPlaytime
 RequestPurchase
 RequestRecoveryCode
+ResendInvitationToFamilyGroup
 ResendMoveCode
 Reset
 ResetCache
@@ -2914,6 +3018,8 @@ SVGMatrix
 SVGPoint
 SafeAreaProvider
 SafeAreaProviderCompat
+SanitizeEventComponent
+SanitizeNavData
 SaveAppInfoBatchToLocalCache
 SavePushNotificationSetting
 SaveSettings
@@ -2960,13 +3066,18 @@ SegmentedCharacterInput
 SelectDropdown
 SelectorRow
 Send
+SendAuthMessage
 SendEmail
 SendErrorReport
 SendErrorReports
 SendLocalNotification
+SendMsg
 SendMsgAndAwaitResponse
+SendMsgAuthenticate
+SendMsgNotifyStartShutdown
 SendNotification
 SendPhoneVerificationCode
+SendSerializedMessage
 SendSteamGuardCode
 Serialize
 SerializeBinary
@@ -2994,6 +3105,8 @@ SetCompatibilityFeedback
 SetCookie
 SetCookies
 SetDebugLogEnabled
+SetDefaultHandlerRegistry
+SetDefaultTransport
 SetEMsg
 SetEquippedProfileItemFlags
 SetErrorReportingStore
@@ -3016,6 +3129,7 @@ SetParentalSettings
 SetPerFriendPreferences
 SetPlaytimeForControllerConfigs
 SetPreferences
+SetPreferredLender
 SetPreferredLocales
 SetProfileBackground
 SetProfilePreferences
@@ -3025,6 +3139,7 @@ SetReturnUnavailableItems
 SetRewardDefinitions
 SetServerLanguageForAccount
 SetSettings
+SetStatusEventHandler
 SetSteamDeckKeyboardSkin
 SetSteamInterface
 SetStoreBrowseContext
@@ -3053,6 +3168,8 @@ Sleep
 Slider
 SliderZoo
 SlowBuffer
+SortGameByAcquired
+SortGameByName
 SortGamesByAppId
 SortGamesByInstalledOnClient
 SortGamesByName
@@ -3088,6 +3205,7 @@ Start
 StartMoveAuthenticator
 StartPlaytimeTracking
 StartPolling
+StartReconnect
 State
 StateSafePureComponent
 StaticContainer
@@ -3112,7 +3230,7 @@ SteamNotificationQueryKey
 SteamNotificationSimplePersona
 SteamNotificationTradeOffer
 SteamNotificationWishlist
-SteamNotificationWithAvatarAndStoreURL
+SteamNotificationWithAvatarAndURL
 SteamNotificationsScreen
 SteamPipeWorkStatsReport
 Stop
@@ -3122,6 +3240,7 @@ StopPolling
 Stopped
 StoreAppLink
 StoreBrowseContext
+StoreBrowseFilterFailure
 StoreBrowseItemDataRequest
 StoreDlcLink
 StoreGameRating
@@ -3130,6 +3249,7 @@ StoreItem
 StoreItemID
 StoreItemIDObjToEStoreItemType
 StoreItemIDObjToID
+StoreItemIDToEStoreItemType
 StoreItemIDToNumber
 StoreItemIDToString
 StoreItemKeyToEStoreItemType
@@ -3158,6 +3278,7 @@ StoreItem_Trailers_Trailer
 StoreItem_Trailers_VideoSource
 StoreNavEventContext
 StoreNavEventContextFromSNR
+StoreNavEventParamsToNavData
 StoreObject
 StoreString
 StoreWebviewHeader
@@ -3338,6 +3459,7 @@ VirtualizedSectionList
 VisitUsScreen
 Vote
 WaitForNextEvent
+WaitForSocketOpen
 WaitUntilLoggedOn
 WaitingForCode
 WaitingForConfirmation
@@ -3347,6 +3469,7 @@ WebModal
 WebScreen
 WebSocket
 WebSocketEvent
+WebUINoResponse
 WebViewScreen
 WebviewError
 Wishlist
@@ -3511,6 +3634,8 @@ _arrayLikeToArray
 _arrayWithHoles
 _arrayWithoutHoles
 _assertThisInitialized
+_asyncRequire
+_asyncRequireImpl
 _asyncToGenerator
 _authenticateAsync
 _buildMatchGraph
@@ -4002,6 +4127,8 @@ assignValue
 assocIndexOf
 astToReact
 asyncGeneratorStep
+asyncRequire
+asyncRequireImpl
 at
 atrulePrelude
 attachDefaultEventTypes
@@ -5170,14 +5297,18 @@ fn
 fnCallCurrent
 fnCheckBio
 fnCompareWrapper
+fnExecuteLatestCallback
 fnLoadAppInfoFromCache
 fnNumberFormatter
 fnPoll
 fnReactQueryLogger
 fnRefetchClientsOnError
+fnReply
+fnReplyWithEResult
 fnSetDebugLogEnabled
 fnSort
 fnUnregister
+fnWrapped
 focus
 focusCell
 focusField
@@ -5705,6 +5836,7 @@ getProperty
 getPropertyDescriptor
 getPublicKey
 getPurchaseRequestCartUrl
+getPurchaseRequestConfirmationUrl
 getQueriesData
 getQueryCache
 getQueryClientContext
@@ -6269,6 +6401,7 @@ isTextInput
 isThumbhashString
 isTouchEvent
 isTraversal
+isTruthy
 isType
 isTypedArray
 isURLSameOrigin
@@ -8129,6 +8262,8 @@ useComputedStyle
 useComputedZoom
 useConfigContext
 useConfirmEmailToken
+useConfirmInviteToFamilyGroup
+useConfirmJoinFamilyGroup
 useConfirmationCount
 useConfirmationsBadgeProps
 useCopiedAnimation
@@ -8137,6 +8272,7 @@ useCreateFamilyGroup
 useCreateFamilyGroupOnBehalfOf
 useCreatorHome
 useCurrentRender
+useCustomNotificationPropsForSteamNotification
 useDebouncedState
 useDebugAuthState
 useDeferredValue
@@ -8177,7 +8313,6 @@ useForceUpdateOnResizeObserved
 useFormFactor
 useGestureBottomSheetAnimation
 useGestureHandlerRef
-useGetPurchaseRequests
 useGetUserCountry
 useGlobalEventListener
 useGlobalMessageListener
@@ -8185,6 +8320,7 @@ useHTMLObserver
 useHasActiveCookie
 useHasGooglePlayServices
 useHasGooglePlayServicesQuery
+useHasParentalPassword
 useHasSeenOOBE
 useHomeTab
 useHovering
@@ -8194,6 +8330,7 @@ useId
 useImperativeHandle
 useInDesktopUI
 useInGamepadUI
+useInVR
 useIndicatorAnimation
 useInfiniteQuery
 useInitApp
@@ -8207,6 +8344,7 @@ useInitLegacyAppMigration
 useInitLocalization
 useInitLogs
 useInitNotifications
+useInitParentalSettings
 useInitRestoreCleanup
 useInitSettings
 useInitSteamGuard
@@ -8217,6 +8355,7 @@ useInsertionEffect
 useIntersectionObserver
 useInterval
 useInvalidateParentalQuery
+useInvalidateSharedLibraryApps
 useInventoryItemState
 useInviteToFamilyGroup
 useIsAccountWaitingForEmailConfirmation
@@ -8224,12 +8363,12 @@ useIsAppBlocked
 useIsCurrentUserParentalLocked
 useIsFetching
 useIsFocused
-useIsGameBlocked
 useIsGameListFetching
 useIsKeyboardShown
 useIsMutating
 useIsParentalFeatureBlocked
 useIsParentalSettingsFetching
+useIsStoreNavEventsMapLoaded
 useIsUnmounted
 useIsZooAccessible
 useKeyboardHeight
@@ -8247,6 +8386,7 @@ useLinking
 useLoadPendingAuthSessions
 useLocalObservable
 useLocalStore
+useLocalizedTimeUntil
 useLoginRequest
 useLogout
 useMainMenuBadgeProps
@@ -8308,6 +8448,7 @@ useOpenSupportURL
 useOpenTemporaryWebView
 useOpenUrl
 useOptionsGetters
+useOriginatingNavEventContext
 useOwnedAppQueryKey
 useOwnedGames
 usePagedSwipeGesture
@@ -8340,6 +8481,9 @@ usePressability
 usePreventVerticalShrinking
 usePreviousValue
 usePromise
+usePromiseWithResolvers
+usePurchaseRequestByID
+usePurchaseRequests
 usePushNotificationsSettingsQuery
 useQueries
 useQuery
@@ -8348,6 +8492,7 @@ useQueryErrorResetBoundary
 useQueryFromAsyncStorage
 useQuerySetDetailedErrorMessageEffect
 useQuerySetMessageOnErrorEffect
+useRecentPlaytimeSessionsForUser
 useReducer
 useRef
 useRefAndShareWith
@@ -8359,12 +8504,13 @@ useRemoveAuth
 useRemoveAuthenticator
 useRemoveFromFamily
 useRemoveSteamGuard
-useRequestAccountCartPurchase
 useRequestAdditionalPlaytime
 useRequestEmailTokenConfirmation
 useRequestParentalFeatureAccess
 useRequestPhoneConfirmationSms
 useRequestPurchase
+useRerenderOnInterval
+useResendInvitationToFamily
 useResizeObserver
 useResolvedResponsiveProp
 useRespondToPurchaseRequest
@@ -8393,6 +8539,7 @@ useShouldStartLoadWithRequest
 useShowLoginScreen
 useShowToast
 useSimpleSteamMobileProtocolHandler
+useSortedFilteredApps
 useSpacingValue
 useState
 useStaticRendering
@@ -8415,7 +8562,9 @@ useStoreItemCachePreloadMultiplePackages
 useStoreItemCacheUnavailableItems
 useStoreItemShortDescription
 useStoreNavEventContext
+useStoreNavEventContextAsNavData
 useStoreNavLink
+useStoreNavParam
 useSubscribableValue
 useSubscribableValueCallback
 useSyncExternalStore

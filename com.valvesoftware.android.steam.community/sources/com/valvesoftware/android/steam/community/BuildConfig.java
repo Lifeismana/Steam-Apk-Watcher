@@ -8,6 +8,6 @@ public final class BuildConfig {
     public static final boolean IS_HERMES_ENABLED = true;
     public static final boolean IS_NEW_ARCHITECTURE_ENABLED = false;
     public static final boolean REACT_NATIVE_UNSTABLE_USE_RUNTIME_SCHEDULER_ALWAYS = true;
-    public static final int VERSION_CODE = 8584803;
-    public static final String VERSION_NAME = "3.7.3";
+    public static final int VERSION_CODE = 8773122;
+    public static final String VERSION_NAME = "3.7.4";
 }
