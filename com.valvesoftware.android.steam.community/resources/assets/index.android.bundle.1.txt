@@ -781,6 +781,7 @@ BEFOREEND
 BEGAN
 BElementContainsSelection
 BElementFullscreen
+BExcludeRemoteClientIDTargetedNotification
 BF
 BG
 BGameMatchesFilter
@@ -820,6 +821,7 @@ BIsEFriendRelationshipFriend
 BIsElementScrollableOnAxis
 BIsEmoji
 BIsEmoticonsOnly
+BIsFriend
 BIsHubCategoryMissing
 BIsIOS
 BIsInClientBeta
@@ -840,6 +842,7 @@ BIsPaused
 BIsPersonaNotification
 BIsReducedUILauncher
 BIsSaleItemType
+BIsSteamCloseProtocol
 BIsSteamDeck
 BIsStoreItemMissing
 BIsTagMissing
@@ -865,6 +868,7 @@ BLoggingEnabled
 BLooksLikeToken
 BM
 BN
+BNotificationParentalBlocked
 BO
 BODY
 BODY_SENSORS
@@ -878,6 +882,7 @@ BRANCH_LENGTH
 BREAK
 BROWSER
 BROWSER_KNOWN_
+BRebuildFilter
 BReplaceRollupItem
 BS
 BSendToCallbackAsNew
@@ -1128,6 +1133,7 @@ Button_Ignored
 Button_Learn
 Button_Load
 Button_Manage
+Button_Next
 Button_NotInterested
 Button_NotifyMe
 Button_OK
@@ -1149,6 +1155,7 @@ Button_Submit
 Button_TryAgain
 Button_Update
 Button_Upload
+Button_View
 Button_ViewPage
 ByteString
 CA
@@ -1242,6 +1249,8 @@ CClientComm_GetClientLogonInfo_Request
 CClientComm_GetClientLogonInfo_Response
 CClientComm_InstallClientApp_Request
 CClientComm_InstallClientApp_Response
+CClientComm_LaunchClientApp_Request
+CClientComm_LaunchClientApp_Response
 CClientComm_SetClientAppUpdateState_Request
 CClientComm_SetClientAppUpdateState_Response
 CClientComm_UninstallClientApp_Request
@@ -1252,6 +1261,7 @@ CClientMetrics_AppInterfaceStats_Notification
 CClientMetrics_ClientBootstrap_Notification
 CClientMetrics_ClientBootstrap_RequestInfo
 CClientMetrics_ClientBootstrap_Summary
+CClientMetrics_ClipShare_Notification
 CClientMetrics_CloudAppSyncStats_Notification
 CClientMetrics_ContentDownloadResponse_Counts
 CClientMetrics_ContentDownloadResponse_Counts_Notification
@@ -1260,6 +1270,7 @@ CClientMetrics_ContentDownloadResponse_Hosts
 CClientMetrics_ContentValidation_Notification
 CClientMetrics_DownloadRates_Notification
 CClientMetrics_DownloadRates_Notification_StatsInfo
+CClientMetrics_EndGameRecording_Notification
 CClientMetrics_IPv6Connectivity_Notification
 CClientMetrics_IPv6Connectivity_Result
 CClientMetrics_ReportClientArgs_Notification
@@ -1362,6 +1373,8 @@ CFamilyGroupsClient_NotifyRunningApps_Notification_PlayingMember
 CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
 CFamilyGroups_CancelFamilyGroupInvite_Request
 CFamilyGroups_CancelFamilyGroupInvite_Response
+CFamilyGroups_ClearCooldownSkip_Request
+CFamilyGroups_ClearCooldownSkip_Response
 CFamilyGroups_ConfirmInviteToFamilyGroup_Request
 CFamilyGroups_ConfirmInviteToFamilyGroup_Response
 CFamilyGroups_ConfirmJoinFamilyGroup_Request
@@ -1370,17 +1383,17 @@ CFamilyGroups_CreateFamilyGroup_Request
 CFamilyGroups_CreateFamilyGroup_Response
 CFamilyGroups_DeleteFamilyGroup_Request
 CFamilyGroups_DeleteFamilyGroup_Response
-CFamilyGroups_FamilyDispersionGraph
-CFamilyGroups_FamilyDispersionGraph_Edge
+CFamilyGroups_ForceAcceptInvite_Request
+CFamilyGroups_ForceAcceptInvite_Response
 CFamilyGroups_GetChangeLog_Request
 CFamilyGroups_GetChangeLog_Response
 CFamilyGroups_GetChangeLog_Response_Change
-CFamilyGroups_GetDispersionForFamily_Request
-CFamilyGroups_GetDispersionForFamily_Response
 CFamilyGroups_GetFamilyGroupForUser_Request
 CFamilyGroups_GetFamilyGroupForUser_Response
 CFamilyGroups_GetFamilyGroup_Request
 CFamilyGroups_GetFamilyGroup_Response
+CFamilyGroups_GetInviteCheckResults_Request
+CFamilyGroups_GetInviteCheckResults_Response
 CFamilyGroups_GetPlaytimeSummary_Request
 CFamilyGroups_GetPlaytimeSummary_Response
 CFamilyGroups_GetPreferredLenders_Request
@@ -1431,6 +1444,7 @@ CL
 CLANACCOUNTID
 CLANSTEAMID
 CLAN_CDN_ASSET_URL
+CLIENT_SESSION
 CLOSED
 CLOSETAG
 CLOSING
@@ -1524,6 +1538,8 @@ CMobileAuth_MigrateMobileSession_Request
 CMobileAuth_MigrateMobileSession_Request_DeviceDetails
 CMobileAuth_MigrateMobileSession_Response
 CMobileDevice_DeregisterMobileDevice_Notification
+CMobileDevice_HasMobileDevice_Request
+CMobileDevice_HasMobileDevice_Response
 CMobileDevice_RegisterMobileDevice_Request
 CMobileDevice_RegisterMobileDevice_Response
 CMobilePerAccount_GetSettings_Request
@@ -1887,6 +1903,12 @@ CSteamDeckCompatibility_SetFeedback_Request
 CSteamDeckCompatibility_SetFeedback_Response
 CSteamDeckCompatibility_ShouldPrompt_Request
 CSteamDeckCompatibility_ShouldPrompt_Response
+CSteamEngine_GetGameIDForPID_Request
+CSteamEngine_GetGameIDForPID_Response
+CSteamEngine_GetTextFilterDictionary_Request
+CSteamEngine_GetTextFilterDictionary_Response
+CSteamEngine_TextFilterDictionaryChanged_Notification
+CSteamEngine_UpdateTextFilterDictionary_Notification
 CSteamID
 CSteamItemRewardDefinition
 CSteamNotificationStore
@@ -1929,6 +1951,7 @@ CStoreQueryParams
 CStoreQueryPerResultMetadata
 CStoreQueryResultMetadata
 CStoreQuery_GetItemsByUserRecommendedTags_Request
+CStoreQuery_GetItemsByUserRecommendedTags_Request_Section
 CStoreQuery_GetItemsByUserRecommendedTags_Response
 CStoreQuery_GetItemsByUserRecommendedTags_Response_Section
 CStoreQuery_Query_Request
@@ -1962,9 +1985,13 @@ CStore_GetTrendingAppsAmongFriends_Response_TrendingAppData
 CStore_GetUserGameInterestState_Request
 CStore_GetUserGameInterestState_Response
 CStore_GetUserGameInterestState_Response_InQueue
+CStore_GetWishlistDemoEmailStatus_Request
+CStore_GetWishlistDemoEmailStatus_Response
 CStore_MigratePartnerLinkTracking_Notification
 CStore_PurchaseReceiptInfo
 CStore_PurchaseReceiptInfo_LineItem
+CStore_QueueWishlistDemoEmailToFire_Request
+CStore_QueueWishlistDemoEmailToFire_Response
 CStore_RegisterCDKey_Request
 CStore_RegisterCDKey_Response
 CStore_ReloadAllReservationPositionMessages_Notification
@@ -1983,6 +2010,8 @@ CStore_UserTagPreferences_Tag
 CSupportRefreshTokenAudit
 CSupportRefreshTokenDescription
 CSupportRefreshTokenDescription_TokenUsageEvent
+CTextFilterAsyncStorage
+CTextFilterStore
 CTrackedEventListeners
 CTransportAuth_Authenticate_Request
 CTransportAuth_Authenticate_Response
@@ -2092,6 +2121,7 @@ ChatEntryButton_SendEmbed
 ChatEntryButton_Submit
 Chat_Settings_Error_ChatFileTooLarge_dynamic
 Chat_Settings_Error_ChatFileTypeNotSupported
+Chat_Settings_Error_ExportFailed
 Chat_Settings_Error_ServerError
 Chat_Upload_ErrorAction_Close
 Chat_Upload_ErrorAction_Retry
@@ -2129,6 +2159,7 @@ ClearAllCookies
 ClearBackgroundInterval
 ClearBackgroundTimeout
 ClearCookies
+ClearCooldownSkip
 ClearLanguageCookies
 ClearNotificationBadge
 ClearSinglePartnerEventsAppPriority
@@ -2235,11 +2266,20 @@ Consumer
 ContainsProximitySensor_Bool
 Content-Type
 ContentDescriptor
+ContentDescriptorExample_NoGames
 ContentDescriptor_AdultOnlySexualContent
+ContentDescriptor_AdultOnlySexualContent_Description
+ContentDescriptor_Affirm18YearsOld
+ContentDescriptor_ExampleProductsHeader
 ContentDescriptor_FrequentViolenceOrGore
+ContentDescriptor_FrequentViolenceOrGore_Description
 ContentDescriptor_GeneralMatureContent
+ContentDescriptor_GeneralMatureContent_Description
 ContentDescriptor_GratuitousNudityOrSexualContent
+ContentDescriptor_GratuitousNudityOrSexualContent_Description
 ContentDescriptor_NudityOrSexualContent
+ContentDescriptor_NudityOrSexualContent_Description
+ContentDescriptors_ViewExampleProducts
 ContentHub_NoReduceMotion
 ContentHub_Recommendation_Concurrent
 ContentHub_Recommendation_Curator
@@ -2551,6 +2591,8 @@ CreateIntersectionObserver
 CreateMarketingMessage
 CreateNewShoppingCart
 CreateNonce
+CreatePattern
+CreateProfanityReplacement
 CreateResizeObserver
 CreateWebAPIURL
 CreatorHomeModel
@@ -2713,6 +2755,7 @@ DeleteReservationPositionMessage
 Deleting
 Delim
 DemoContainer
+DeobfuscateString
 DeregisterMobileDevice
 Descendant
 DeserializeBinary
@@ -3356,6 +3399,14 @@ EClientPersonaStateFlag_9
 EClientUINotificationType
 EClientUsedInputType
 EClientVRError
+EClipShareMethod
+EClipShareMethodToString
+EClipShareMethod_0
+EClipShareMethod_1
+EClipShareMethod_2
+EClipShareMethod_3
+EClipShareMethod_4
+EClipShareMethod_5
 ECloudGamingPlatform
 ECloudGamingPlatformToString
 ECloudGamingPlatform_0
@@ -3599,6 +3650,8 @@ EFamilyGroupChangeLogType_20
 EFamilyGroupChangeLogType_21
 EFamilyGroupChangeLogType_22
 EFamilyGroupChangeLogType_23
+EFamilyGroupChangeLogType_24
+EFamilyGroupChangeLogType_25
 EFamilyGroupChangeLogType_3
 EFamilyGroupChangeLogType_4
 EFamilyGroupChangeLogType_5
@@ -3690,6 +3743,13 @@ EGPUPerformanceLevel_3
 EGPUPerformanceLevel_4
 EGPUPerformanceLevel_5
 EGameIDType
+EGameRecordingType
+EGameRecordingTypeToString
+EGameRecordingType_0
+EGameRecordingType_1
+EGameRecordingType_2
+EGameRecordingType_3
+EGameRecordingType_4
 EGamepadInputType
 EGamescopeBlurMode
 EGamescopeBlurModeToString
@@ -3816,6 +3876,7 @@ EHelpIssue_177
 EHelpIssue_178
 EHelpIssue_179
 EHelpIssue_18
+EHelpIssue_180
 EHelpIssue_19
 EHelpIssue_2
 EHelpIssue_20
@@ -4980,7 +5041,6 @@ EMsg_1450
 EMsg_1451
 EMsg_1452
 EMsg_1453
-EMsg_1454
 EMsg_146
 EMsg_147
 EMsg_148
@@ -5959,6 +6019,7 @@ ENewReleaseNotificationType_0
 ENewReleaseNotificationType_1
 ENewReleaseNotificationType_2
 ENewReleaseNotificationType_3
+ENewReleaseNotificationType_4
 ENewSteamAnnouncementState
 ENewSteamAnnouncementStateToString
 ENewSteamAnnouncementState_0
@@ -6152,6 +6213,12 @@ EPostGameSummaryType_1
 EPostGameSummaryType_2
 EPostGameSummaryType_3
 EPostGameSummaryType_4
+EPreapprovalResolution
+EPreapprovalResolutionToString
+EPreapprovalResolution_0
+EPreapprovalResolution_1
+EPreapprovalResolution_2
+EPreapprovalResolution_3
 EProfileColorStyle
 EProfileColorStyleToString
 EProfileColorStyle_0
@@ -6685,7 +6752,6 @@ ESharedLibraryExcludeReason_25
 ESharedLibraryExcludeReason_26
 ESharedLibraryExcludeReason_27
 ESharedLibraryExcludeReason_28
-ESharedLibraryExcludeReason_29
 ESharedLibraryExcludeReason_3
 ESharedLibraryExcludeReason_4
 ESharedLibraryExcludeReason_5
@@ -6724,6 +6790,7 @@ EStartupMovieVariantToString
 EStartupMovieVariant_0
 EStartupMovieVariant_1
 EStartupMovieVariant_2
+ESteamControllerStateFeedType
 ESteamDeckCompatibilityCategory
 ESteamDeckCompatibilityCategoryToString
 ESteamDeckCompatibilityCategory_0
@@ -6777,6 +6844,8 @@ ESteamNotificationType_2
 ESteamNotificationType_20
 ESteamNotificationType_21
 ESteamNotificationType_22
+ESteamNotificationType_23
+ESteamNotificationType_24
 ESteamNotificationType_3
 ESteamNotificationType_4
 ESteamNotificationType_5
@@ -7041,6 +7110,7 @@ ESupportPermissions_28
 ESupportPermissions_29
 ESupportPermissions_3
 ESupportPermissions_30
+ESupportPermissions_31
 ESupportPermissions_4
 ESupportPermissions_5
 ESupportPermissions_6
@@ -7375,6 +7445,18 @@ EWebAPIPartnerGroupPermission_3
 EWebAPIPartnerGroupPermission_4
 EWebAPIPartnerGroupPermission_5
 EWindowBringToFront
+EWindowsUpdateInstallationImpact
+EWindowsUpdateInstallationImpactToString
+EWindowsUpdateInstallationImpact_0
+EWindowsUpdateInstallationImpact_1
+EWindowsUpdateInstallationImpact_2
+EWindowsUpdateInstallationImpact_3
+EWindowsUpdateRebootBehavior
+EWindowsUpdateRebootBehaviorToString
+EWindowsUpdateRebootBehavior_0
+EWindowsUpdateRebootBehavior_1
+EWindowsUpdateRebootBehavior_2
+EWindowsUpdateRebootBehavior_3
 EWirelessEndpointStrength
 EWirelessSecurityFlags
 EWorkshopFileType
@@ -7731,6 +7813,8 @@ EventDisplay_InvitationPlannerPage
 EventDisplay_NewsHubSubtitle
 EventDisplay_NoEventsToSee
 EventDisplay_PostedBy
+EventDisplay_PreviewOnCommunity
+EventDisplay_PromotionEditor
 EventDisplay_RSSFeed
 EventDisplay_RSSFeed_ExtraShort
 EventDisplay_ReferencedApps
@@ -7877,6 +7961,7 @@ EventEditor_SaleValveApproval_Request_Approval
 EventEditor_SaleValveApproval_Request_Approval_ttip
 EventEditor_SaleValveApproval_Request_Button
 EventEditor_SaleValveApproval_Request_Desc
+EventEditor_SaleValveApproval_Request_Desc2
 EventEditor_SaleValveApproval_Request_Error
 EventEditor_SaleValveApproval_Request_InputText
 EventEditor_SaleValveApproval_Request_Link
@@ -8072,6 +8157,10 @@ FailedToStart
 Failure
 Family
 FamilyErrorContext
+FamilyGames_FromTheLibraryOf_Header
+FamilyGames_FromTheLibraryOf_Header_Owned
+FamilyGames_FromTheLibraryOf_Single
+FamilyGames_FromTheLibraryOf_Single_Owned
 FamilyGroupFormerMember
 FamilyGroupMember
 FamilyGroupPendingInvite
@@ -8087,9 +8176,11 @@ FamilyHistory_FamilyCreated
 FamilyHistory_FamilyDeleted
 FamilyHistory_FamilyModified
 FamilyHistory_FamilyRestored
+FamilyHistory_ForceAcceptedInvite
 FamilyHistory_InviteCancelled
 FamilyHistory_InviteDeniedByFamilySize
 FamilyHistory_InviteRejected
+FamilyHistory_JoinDenied
 FamilyHistory_JoinDeniedByFamilyCooldown
 FamilyHistory_JoinDeniedByMissingIpAddress
 FamilyHistory_JoinDeniedByOtherFamily
@@ -8114,7 +8205,6 @@ FamilyManagement_ErrorAccountLimitExceeded_JoinFamily
 FamilyManagement_ErrorAccountLimitExceeded_RemoveFromFamily
 FamilyManagement_ErrorCancelInvite
 FamilyManagement_ErrorCancelPurchaseRequest
-FamilyManagement_ErrorCountryCheck_JoinFamily
 FamilyManagement_ErrorCreateFamily
 FamilyManagement_ErrorDeclineInvite
 FamilyManagement_ErrorDeclinePurchaseRequest
@@ -8122,8 +8212,8 @@ FamilyManagement_ErrorDeleteFamily
 FamilyManagement_ErrorDuplicateRequest_InviteToFamily
 FamilyManagement_ErrorDuplicateRequest_JoinFamily
 FamilyManagement_ErrorDuplicateRequest_RemoveFromFamily
+FamilyManagement_ErrorFailed_NoAdditionalDetails
 FamilyManagement_ErrorFamilySizeLimitExceeded
-FamilyManagement_ErrorGetUserCountry
 FamilyManagement_ErrorInternalServerError
 FamilyManagement_ErrorInvite
 FamilyManagement_ErrorLimitExceeded
@@ -8140,10 +8230,12 @@ FamilyManagement_ErrorNoActiveInvite
 FamilyManagement_ErrorNoMatch
 FamilyManagement_ErrorRemovingFromFamily
 FamilyManagement_ErrorResendInvite
+FamilyManagement_Household_JoinFamily
 FamilyManagement_LimitedAccount_CreateFamily
 FamilyManagement_Me
 FamilyManagement_PartnerAccountCannotJoinAsChild
 FamilyManagement_RateLimitExceeded_CreateFamily
+FamilyManagement_RegionLocked_CreateFamily
 FamilyManagement_Role_0
 FamilyManagement_Role_1
 FamilyManagement_Role_2
@@ -8185,6 +8277,7 @@ FileSystemSessionType
 FileSystemUploadType
 Fill
 FilterInPlace
+FilterText
 FinalizationRegistry
 FinalizeAddAuthenticator
 FinalizeEmbeddedWebLogin
@@ -8232,6 +8325,7 @@ FlushPendingInfo
 FocusManager
 FontDisplay
 Foo4_0
+ForceAcceptInvite
 ForceTouch
 ForceTouchGesture
 ForceTouchGestureHandler
@@ -8499,6 +8593,7 @@ GetDLCForAppsSolr
 GetDataRequest
 GetDebugZooLinks
 GetDebugZooScreens
+GetDefaultAJAXFriendLookup
 GetDefaultAvatarUrl
 GetDefaultHandlerRegistry
 GetDefaultParams
@@ -8511,7 +8606,6 @@ GetDeviceModel
 GetDiscoveryQueue
 GetDiscoveryQueueSettings
 GetDiscoveryQueueSkippedApps
-GetDispersionForFamily
 GetDisplayMarketingMessage
 GetDisplayMarketingMessageAdmin
 GetDisplayMarketingMessageForUser
@@ -8543,6 +8637,8 @@ GetFriendInviteTokens
 GetFriendsGameplayInfo
 GetGameAchievements
 GetGameBadgeLevels
+GetGameIDForPID
+GetGameIDForPIDHandler
 GetHardwareItems
 GetHeaderURL
 GetHeadingStyleName
@@ -8558,6 +8654,8 @@ GetInterAttemptBackoffMs
 GetInteractionZooLinks
 GetInteractionZooScreens
 GetInventoryItemsWithDescriptions
+GetInviteCheckResults
+GetInviteCheckResultsKey
 GetItemChanges
 GetItemInfo
 GetItems
@@ -8586,7 +8684,6 @@ GetNavContext
 GetNavigator
 GetNewSteamAnnouncementState
 GetNicknameList
-GetNotificationTypeData
 GetOGGClanInfo
 GetOSVersion
 GetObject
@@ -8663,12 +8760,14 @@ GetSpacingStyleName
 GetStatus
 GetSteamClientURL
 GetSteamDeckKeyboardSkin
+GetSteamEngineTextFilterDictionary
 GetSteamGuardCodeForTime
 GetSteamGuardInfo
 GetSteamID
 GetSteamInterface
 GetSteamNotificationData
 GetSteamNotifications
+GetStorageKey
 GetStoreBrowseContext
 GetStoreCategories
 GetStoreCategories_Controller
@@ -8691,6 +8790,8 @@ GetSubSectionData
 GetSummary
 GetTabRouteName
 GetTagList
+GetTextFilterDictionary
+GetTextFilterDictionaryHandler
 GetTextFilterWords
 GetTextStyleName
 GetTextWeightStyleName
@@ -8723,6 +8824,7 @@ GetUserVoteSummary
 GetUsersSharingDevice
 GetUsersSharingDeviceKey
 GetWebUITransportDefaults
+GetWishlistDemoEmailStatus
 Gigabits
 Gigabits_PerSecond
 Gigabytes
@@ -8877,6 +8979,7 @@ HasControllerComponent_Bool
 HasCurrentGameRichPresence
 HasDisplayComponent_Bool
 HasDriverDirectModeComponent_Bool
+HasMobileDevice
 HasNotch
 HasSpatialAnchorsSupport_Bool
 HasStateFlag
@@ -9146,6 +9249,8 @@ InitFromMsg
 InitFromObject
 InitFromString
 InitHeaderFromPacket
+InitSteamEngineLanguage
+InitSteamEngineLanguages
 Initialize
 Inline
 InnerScreen
@@ -9517,6 +9622,7 @@ Language_vietnamese
 Large
 LargePersona
 LargeStatus
+LaunchClientApp
 LayoutAnimation
 Lazy
 LazyInit
@@ -9621,9 +9727,15 @@ LoadAppInfoBatch
 LoadAppInfoBatchFromLocalCache
 LoadClanInfoForClanSteamID
 LoadCreatorHome
+LoadFilter
+LoadLanguage
+LoadLanguages
 LoadLocalizationFiles
 LoadOGGClanInfoForGroupVanity
+LoadObfuscatedString
 LoadSettings
+LoadTextFilterPreferences
+LoadTextFilterWords
 Loading
 LoadingIndicator
 LoadingRemove
@@ -10322,6 +10434,8 @@ NotifySettingsChangeHandler
 NotifyStartShutdown
 NotifyStartShutdownHandler
 NotifyStorePreferencesChangedHandler
+NotifyTextFilterDictionaryChanged
+NotifyTextFilterDictionaryChangedHandler
 NotifyTextFilterWordsChangedHandler
 NotifyUnlockHandler
 Nth
@@ -10358,6 +10472,7 @@ OSType_SteamDeck
 OSType_Windows
 OSType_iOS
 OUTPUT
+ObfuscateString
 Object
 ObservableGroupMap
 ObservableMap
@@ -10367,6 +10482,7 @@ Ok
 OnAppActive
 OnAppBackgrounded
 OnClearSearch
+OnFilterDataChanged
 OnGetAppsResponse
 OnNewNotification
 OnRichPresenceLocUpdate
@@ -10376,6 +10492,7 @@ OnSocketMessage
 OnSocketOpen
 OnStartShutdown
 OnSteamIDChanged
+OnTextFilterDictionaryChanged
 OnWebsocketClose
 OnWebsocketMessage
 OnWebsocketReconnectFinish
@@ -10771,6 +10888,7 @@ QueueAppRequest
 QueueRichPresenceLocRequest
 QueueSend
 QueueStoreItemRequest
+QueueWishlistDemoEmailToFire
 QuirksMode
 RCTDeviceEventEmitter
 RCTEventEmitter
@@ -10967,8 +11085,10 @@ Register
 RegisterCDKey
 RegisterCompatTool
 RegisterForNotifyStartShutdown
+RegisterForNotifyTextFilterDictionaryChanged
 RegisterForSteamDeckRewards
 RegisterForSteamMobileMessages
+RegisterForUpdateTextFilterDictionary
 RegisterKey
 RegisterLogName
 RegisterMobileDevice
@@ -10980,6 +11100,7 @@ Remaining
 RemapMetadataByField
 RemapVal
 RemapValClamped
+RemoteLaunchClientApp
 RemotePlay_StoreFunctionalityBlocked_Description
 RemotePlay_StoreFunctionalityBlocked_Title
 Remove
@@ -11013,6 +11134,8 @@ ReplacementTokenToClanImageURL
 ReportApp
 ReportClientArgs
 ReportClientError
+ReportClipShare
+ReportEndGameRecording
 ReportError
 ReportPlaytimeAndNotify
 ReportReactUsage
@@ -11025,6 +11148,7 @@ RequestPlaytime
 RequestPurchase
 RequestPurchase_GenericError
 RequestRecoveryCode
+RequestUpdatedSettings
 ResendInvitationToFamilyGroup
 ResendMoveCode
 Reset
@@ -11370,6 +11494,7 @@ Sale_Minigame_LoadingReward
 Sale_OnWishlist
 Sale_OtherActions_MenuLabel
 Sale_PackageSave
+Sale_PersonalizedCarousel_Section_title
 Sale_PlaceHolder
 Sale_PlayDemo
 Sale_PlayNow
@@ -11806,8 +11931,12 @@ Sale_defautl_label_FreeToKeep
 SanitizeEventComponent
 SanitizeNavData
 SaveAppInfoBatchToLocalCache
+SaveFilter
+SaveObfuscatedString
 SavePushNotificationSetting
 SaveSettings
+SaveTextFilterPreferences
+SaveTextFilterWords
 Saving
 ScaleFromCenterAndroid
 ScaleFromCenterAndroidSpec
@@ -11865,7 +11994,11 @@ SendLocalNotification
 SendMsg
 SendMsgAndAwaitResponse
 SendMsgAuthenticate
+SendMsgGetGameIDForPID
+SendMsgGetTextFilterDictionary
 SendMsgNotifyStartShutdown
+SendMsgNotifyTextFilterDictionaryChanged
+SendMsgUpdateTextFilterDictionary
 SendNotification
 SendPhoneVerificationCode
 SendSerializedMessage
@@ -12221,6 +12354,7 @@ SteamDeckVerified_TestResult_UnsupportedAntiCheat_Other
 SteamDeckVerified_TestResult_UnsupportedGraphicsPerformance
 SteamDeckVerified_TestResult_VideoPlaybackHasNonblockingIssues
 SteamDeckVerified_ViewDeveloperPost
+SteamEngineService
 SteamGuardCodeExpectedDigits
 SteamGuardOptionsPicker
 SteamGuardScreen_Title
@@ -12603,6 +12737,8 @@ Text
 TextAlignCenter
 TextAlignLeft
 TextAlignRight
+TextDecoder
+TextEncoder
 TextInput
 TextInputPropTypes
 TextInputState
@@ -12856,6 +12992,7 @@ Update
 UpdateAuthSessionWithMobileConfirmation
 UpdateAuthSessionWithSteamGuardCode
 UpdateAutoRefresh
+UpdateCommunityPreferences
 UpdateContentDescriptors
 UpdateEventType
 UpdateGroupFlagsFeature
@@ -12867,6 +13004,9 @@ UpdateServer
 UpdateSettings
 UpdateSteamAnnouncementLastRead
 UpdateStylesheetsInDocument
+UpdateTextFilterDictionary
+UpdateTextFilterDictionaryHandler
+UpdateTextFilterWords
 UpdateTokenVersion
 UpdateTwoFactorVersion
 UpdateUserAuth
@@ -13902,6 +14042,7 @@ _pushMultiColumnViewable
 _query
 _queue
 _queueStack
+_reactDevToolsAgentListener
 _reactInternals
 _reactNativeMicrotasksCallback
 _readyState
@@ -14113,12 +14254,11 @@ account_restricted_from_purchasing
 account_steam_id
 account_type
 accountid
-accountid1
-accountid2
 accounts
 accumulator
 achievement_progress
 achievements
+act
 action
 actionCreators
 actionId_
@@ -14360,6 +14500,7 @@ announcementid
 announcements
 anonymous_user
 anser
+ansi-regex
 ansi16
 ansi256
 answer_actor
@@ -14624,12 +14765,14 @@ bAlwaysNewChatWindow
 bAnimatedAvatars
 bApprove
 bApproved
+bBiometricsReady
 bBroadcastCapable
 bCanDismiss
 bCanGoBack
 bCategorizeInGameFriendsByGame
 bCompactFriendsList
 bCompactQuickAccess
+bConfigReady
 bConnected
 bConstMethod
 bDisableEmbedInlining
@@ -14642,6 +14785,7 @@ bError
 bExiting
 bExpanded
 bFirst
+bFontsReady
 bForce24HourClock
 bForceAlphabeticFriendSorting
 bForceSingleUnits
@@ -14651,12 +14795,15 @@ bGranularToday
 bGranularTodayTimeOnly
 bGranularWeek
 bGranularYesterday
+bGuardReady
 bHadDataToMigrate
 bHardware
+bHasGooglePlayServicesReady
 bHideCategorizedFriends
 bHideOfflineFriendsInTagGroups
 bHighGranularity
 bHovering
+bIgnoreFriends
 bInOptionList
 bIncludeAboutSteamLinks
 bIncludeExcluded
@@ -14669,6 +14816,7 @@ bIsLeft
 bIsRecordingDesktop
 bLast
 bLoading
+bLocReady
 bLocked
 bLoggedIn
 bMakeActiveAccount
@@ -14677,6 +14825,7 @@ bMaxed
 bMigrated
 bMigratedNow
 bMigrationFailed
+bMigrationReady
 bNewUser
 bNotifications_EventsAndAnnouncements
 bNotifications_ShowChatRoomNotification
@@ -14684,6 +14833,7 @@ bNotifications_ShowIngame
 bNotifications_ShowMessage
 bNotifications_ShowOnline
 bOut
+bParentalSettingsReady
 bReady
 bReconnectOnFailure
 bRememberLogin
@@ -14998,6 +15148,7 @@ borderTopWidth
 borderWidth
 border_color
 borderless
+borrowed
 bottom
 bottom center
 bottom left
@@ -15185,8 +15336,10 @@ canUseEventListeners
 canUseNativeForeground
 canUseSandboxIframe
 canUseViewport
+can_add_two_factor_phone
 can_be_deleted
 can_claim
+can_fire
 can_post
 can_subscribe
 can_undelete_last_joined_family
@@ -15454,6 +15607,7 @@ closeTray
 closed-beta-access
 closest
 closestIdx
+closestInstance
 closing
 closingRouteKeys
 cloudfilename
@@ -15667,6 +15821,7 @@ content
 content-available
 content-disposition
 content-distribution
+content-hub-carousel
 content-list
 content-position
 content-replacement
@@ -16176,7 +16331,9 @@ deletions
 delim-token
 delimiter
 demo
+demo_appid
 demo_for_owned_game
+demo_release_date
 demos
 deny
 dependencies
@@ -16244,6 +16401,7 @@ device_type
 deviceid
 devtoolsOverlay
 dialogTitle
+dictionary
 didTimeout
 diff
 diffClamp
@@ -16384,6 +16542,7 @@ drShiftTo
 dragOffsetFromLeftEdge
 dragOffsetFromRightEdge
 dragX
+draw
 drawableFolderInBundle
 drawerBackgroundColor
 drawerContainer
@@ -16442,6 +16601,7 @@ ePrivilege
 eResult
 eStatus
 eSuffix
+eTextFilterSetting
 eWebAPIKeyRequirement
 ea
 each
@@ -16474,6 +16634,7 @@ edit_marketing
 edit_store_display_content
 editable
 effects
+efriendrelationship
 eject
 el-GR
 elanguage
@@ -16599,7 +16760,9 @@ enter
 enterKeyHint
 entries
 entriesIn
+entries_by_owner
 entry
+entryId
 entryType
 entryTypes
 enumerable
@@ -16922,6 +17085,7 @@ filter
 filter-function
 filter-function-list
 filterConfig
+filter_appids
 filter_event_type
 filter_failure
 filter_json
@@ -16989,12 +17153,14 @@ firstCharOffset
 firstChild
 firstContext
 firstExecution
+firstOfType
 firstRender
 firstVisibleItemKey
 first_deck_playtime
 first_linux_playtime
 first_mac_playtime
 first_name
+first_of_type
 first_played
 first_playtime
 first_seen
@@ -17184,6 +17350,7 @@ forwardRef
 forward_to_sysid
 forwardedRef
 found
+found_device
 fourArgumentPooler
 fps_counter_enabled
 fr
@@ -17223,7 +17390,9 @@ friendactivityfeed
 friendcontextmenu
 friendly_name
 friendpurchase
+friends
 friends-trending
+friendslist
 friendsui
 from
 fromApp
@@ -17795,12 +17964,12 @@ google
 google-protobuf@3.21.2
 googleMapIsInstalled
 gpu_webview_regkey_disabled
+gr_mode
 grad
 gradient
 gradientTransform
 gradientUnits
 granted_profile_modifier
-graph
 gray
 grayscale
 grayscale()
@@ -18041,6 +18210,7 @@ hide_discount_pct_for_compliance
 hide_profile_awards
 hide_store_broadcast
 hidesWhenStopped
+hierarchy
 high
 high_pending_orders
 high_pri
@@ -18478,6 +18648,7 @@ insetInlineEnd
 insetInlineStart
 insets
 inspect
+inspectedView
 inspector
 inspectorToggleListener
 inst
@@ -18542,6 +18713,7 @@ invert()
 invertBy
 invertStickyHeaders
 inverted
+invite_already_accepted
 invite_duration
 invite_id
 invite_limit
@@ -18557,6 +18729,7 @@ invokeMap
 ios
 ios_backgroundColor
 ip
+ip_match
 ip_private
 ip_public
 ip_v6
@@ -19051,6 +19224,7 @@ joinSignedDecimalString
 joinUint64
 joinUnsignedDecimalString
 joinZigzag64
+join_restriction
 jpg
 jsEngine
 jsEscapeCache_
@@ -19718,6 +19892,13 @@ k_eDropTypeAppNews
 k_eDropTypeBroadcast
 k_eDropTypeCommunity
 k_eDropTypeScreenshot
+k_eESteamControllerStateFeedType_AxesStateChanged
+k_eESteamControllerStateFeedType_ButtonStateChanged
+k_eESteamControllerStateFeedType_Count
+k_eESteamControllerStateFeedType_GyroAccelerometerStateChanged
+k_eESteamControllerStateFeedType_GyroCalibrationStateChanged
+k_eESteamControllerStateFeedType_GyroQuaternionStateChanged
+k_eESteamControllerStateFeedType_GyroSpeedStateChanged
 k_eIOS1
 k_eIOS10
 k_eIOS10_1
@@ -20197,6 +20378,7 @@ loadingIndicatorSrc
 loadingOrErrorView
 loadingProgressBar
 loadingRemove
+loaned
 lobby_steam_id
 loc
 locString
@@ -20288,6 +20470,7 @@ m_BestPurchaseOption
 m_CMInterface
 m_CacheStorage
 m_ContentDescriptorIDs
+m_DataAccess
 m_DataRequested
 m_ErrorReportingStore
 m_MicroTrailer
@@ -20306,9 +20489,13 @@ m_SettingsChangedCallback
 m_SteamInterface
 m_Storage
 m_StoreCategories
+m_TextFilterPreferences
+m_TextFilterWords
 m_Trailer480p
 m_TrailerMax
 m_Trailers
+m_Transport
+m_WebUIServiceTransport
 m_activeTimerID
 m_appid
 m_appidList
@@ -20340,6 +20527,7 @@ m_bReconnectOnFailure
 m_bRemoteInteraction
 m_bReturnUnavailableItems
 m_bSessionUnlocked
+m_bShownFilterTip
 m_bStatusInitialized
 m_bUsePartnerAPI
 m_bUsingCodeOverride
@@ -20445,6 +20633,7 @@ m_nLastUpdated
 m_nLastYMax
 m_nLastYMin
 m_nLength
+m_nLoadLanguagesRetryTimeout
 m_nOffset
 m_nReconnectAttemptTimeoutMs
 m_nReconnectAttemptsMax
@@ -20464,6 +20653,8 @@ m_otherTrailers
 m_promise
 m_ref
 m_refreshAccessTokenPromise
+m_regexBannedWords
+m_regexCleanWords
 m_registry
 m_renderingLanguage
 m_replacementAuthenticator
@@ -20527,8 +20718,12 @@ m_strActiveAuthCookie
 m_strActiveSteamID
 m_strAvatarHash
 m_strAvatarURLFullSize
+m_strBannedPattern
+m_strBannedWords
 m_strBroadcastTitle
 m_strChallengeURL
+m_strCleanPattern
+m_strCleanWords
 m_strClientID
 m_strCommunityIcon
 m_strConfirmEmailToken
@@ -20553,7 +20748,9 @@ m_strPackageHeaderURL
 m_strPageBackgroundURL
 m_strPlayerName
 m_strProduct
+m_strProfanityWords
 m_strProfileURL
+m_strRemoteClientID
 m_strScreenshotFull
 m_strScreenshotMedium
 m_strSmallCapsuleURL
@@ -20573,6 +20770,7 @@ m_timeBackgroundedWhileUnlocked
 m_timeLastUnlock
 m_transport
 m_ulSteamID
+m_unAccountID
 m_unAppID
 m_unGamePlayedAppID
 m_unGameServerIP
@@ -20866,6 +21064,7 @@ mergeItem
 mergeWith
 merged_into_account_cart
 message
+messageHandlers
 messageId
 messageId_
 messagePattern
@@ -20940,7 +21139,7 @@ minVelocityY
 minWidth
 minX
 minY
-min_items_per_tags
+min_items
 min_last_played
 mini_mode_enabled
 mini_profile_background
@@ -20951,6 +21150,7 @@ minimumViewTime
 minimumZoomScale
 minimum_cart_amount
 minimum_cart_amount_for_display
+minimum_version
 minmax()
 minor
 mintcream
@@ -22554,6 +22754,7 @@ push
 pushKey
 pushStackEntry
 push_enabled
+push_enabled_only
 pwid
 px
 py
@@ -22580,6 +22781,7 @@ queryKeyHashFn
 querySelector
 querySelectorAll
 query_name
+query_params
 query_type
 querypaginated
 questid
@@ -22610,6 +22812,7 @@ radio
 radius
 random
 randomizationFactor
+randomize
 range
 rangeCount
 rangeRight
@@ -22646,11 +22849,12 @@ react-native-svg@13.11.0
 react-native-url-polyfill@2.0.0
 react-native-web@0.19.7
 react-native-webview@13.2.2
-react-native@0.72.3
+react-native@0.72.12
 react-query@3.39.3
 react-refresh
 react-shallow-renderer
 react@18.2.0
+reactDevtoolsAgent
 reactNodes
 reaction
 reactionInvalidatedBeforeMount
@@ -22805,6 +23009,10 @@ recommendationfeed-two
 recommended
 recommended-by-deep-dive
 recommended-by-deep-dive-carousel
+recommended-by-deep-dive-carousel-cluster-games
+recommended-by-deep-dive-carousel-cluster-playtime
+recommended-by-deep-dive-carousel-cluster-recent
+recommended-by-deep-dive-carousel-default
 recommended-by-deep-dive-carousel_cluster_games
 recommended-by-deep-dive-carousel_cluster_playtime
 recommended-by-deep-dive-carousel_cluster_recent
@@ -22817,12 +23025,12 @@ recommended-onsale
 recommended-ranked-played
 recommended-recentlyviewed
 recommended-spotlight
-recommended_tag_count
 recommender
 reconcilerVersion
 record
 recordInteraction
 recordTouchTrack
+recording_type
 recoveryCode
 recovery_code
 recovery_email
@@ -22942,6 +23150,7 @@ remote
 remote-play-about
 remoteMessage
 remoteModuleConfig
+remote_client_id
 remoteplay
 remoteplayphone
 remoteplaytablet
@@ -23022,6 +23231,7 @@ renderToHardwareTextureAndroid
 renderValue
 rendererConfig
 rendererPackageName
+renderers
 rendering
 renderingStartTime
 renderspecials
@@ -23366,6 +23576,7 @@ runReaction_
 runReadCallback
 runWhen
 runnables
+running
 running_apps
 running_games
 runtimeVersion
@@ -23458,6 +23669,7 @@ salesectionrewards
 salesectiontext
 salesmartdlc
 salesmartir
+salesmartpersonalizedcarousel
 salesmarttagrec
 salesmartwishlist
 salesubscription
@@ -23651,6 +23863,7 @@ selectAll
 selectAssetSource
 selectError
 selectFn
+selectNode
 selectOne
 selectResult
 selectTextOnFocus
@@ -23983,10 +24196,12 @@ set_phone_number
 set_preferences
 set_product
 set_push_enabled
+set_query_params
 set_receiver_role
 set_receiver_steamid
 set_refresh_token
 set_remember_login
+set_remote_client_id
 set_renewal_type
 set_request_id
 set_requestid
@@ -24017,6 +24232,7 @@ set_token_to_revoke
 set_totalonly
 set_transport_error
 set_twofactor_device_identifier
+set_type
 set_unlock_token
 set_use_account_cart
 set_validate_sms_code
@@ -24058,6 +24274,7 @@ shape-radius
 shape-rendering
 share
 shareSingle
+share_method
 shared
 sharedAction
 sharedCookiesEnabled
@@ -24325,6 +24542,7 @@ spread
 spring
 springDamping
 springgreen
+springsale
 spy
 spyListeners
 sqrTo
@@ -24466,6 +24684,7 @@ stopAnimation
 stopColor
 stopDownload
 stopImmediatePropagation
+stopInspectingNative
 stopListening
 stopListeningToAnimatedNodeValue
 stopLoading
@@ -24905,6 +25124,7 @@ time_running_sec
 time_signed_utc
 time_ssa_accepted
 time_ssa_updated
+time_staged
 time_start
 time_subscribed
 time_transferred
@@ -25085,7 +25305,6 @@ totalTime
 total_achievements
 total_count
 total_discount
-total_dispersion
 total_file_size_corrupt
 total_friends
 total_given
@@ -25129,6 +25348,7 @@ touchableHandleResponderTerminate
 touchableHandleResponderTerminationRequest
 touchableHandleStartShouldSetResponder
 touchableLongPressCancelsPress
+touchedViewTag
 touches
 tr-TR
 trace
@@ -25274,6 +25494,7 @@ uiViewClassName
 uidCounter_
 uk-UA
 ukrainian
+ulfriendid
 um
 unary
 unboundDepsCount_
@@ -25396,6 +25617,7 @@ unwrapTrustedScript
 unwrapTrustedScriptURL
 unzip
 unzipWith
+up_to_date
 upcoming
 upcoming-queue
 update
@@ -25549,6 +25771,7 @@ useConfirmEmailToken
 useConfirmInviteToFamilyGroup
 useConfirmJoinFamilyGroup
 useConfirmationCount
+useConfirmationsList
 useContext
 useCopyParentalSettings
 useCreateFamilyGroup
@@ -25584,10 +25807,12 @@ useFamilyHistory
 useFamilyPlaytimeSummary
 useFocusEffect
 useFonts
+useForceAcceptInvite
 useForceUpdate
 useForceUpdateOnResizeObserved
 useForeground
 useFormFactor
+useGetInviteCheckResults
 useGetUserCountry
 useGlobalEventListener
 useGlobalMessageListener
@@ -25616,10 +25841,12 @@ useInitNotifications
 useInitSettings
 useInitSteamGuard
 useInitSteamNotificationsStore
+useInitTextFilterStore
 useInsertionEffect
 useIntersectionObserver
 useInterval
 useInvalidateParentalQuery
+useInvalidateParentalRequests
 useInvalidateSharedLibraryApps
 useInventoryItemState
 useInviteToFamilyGroup
@@ -25798,6 +26025,7 @@ useSubscribableValueCallback
 useSyncExternalStore
 useTabBarLayout
 useTextColor
+useTextFilterStore
 useTheme
 useThemeStyles
 useThrottle
@@ -25858,6 +26086,7 @@ users
 utf8
 utf8ByteArrayToString
 util
+utility_appids
 utils
 uuid
 v
@@ -25998,6 +26227,7 @@ walkContext
 walletBalance
 wallet_balance
 wallet_country_code
+wallet_country_matches
 wallet_credit_item
 wallet_region
 wallet_state

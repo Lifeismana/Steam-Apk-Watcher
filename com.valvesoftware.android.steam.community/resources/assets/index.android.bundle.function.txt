@@ -140,9 +140,11 @@ BContainDataRequest
 BDataRequestContainsOtherDataRequest
 BDateWithinLimit
 BDoesLocaleUse24Hourclock
+BDoesNotificationTypeRequireRemoteClientID
 BDoesSaleItemTypeHaveParent
 BElementContainsSelection
 BElementFullscreen
+BExcludeRemoteClientIDTargetedNotification
 BGameMatchesFilter
 BHadRemoteInteraction
 BHasAgeSafeScreenshots
@@ -154,6 +156,7 @@ BHasClanInfoLoaded
 BHasClanInfoLoadedByAccountID
 BHasCreator
 BHasCreatorHomeLoaded
+BHasFilter
 BHasHighlightTrailers
 BHasHubCategory
 BHasNotificationsData
@@ -230,6 +233,7 @@ BIsResponsiveObject
 BIsSaleItemType
 BIsSalePage
 BIsShortLink
+BIsSteamCloseProtocol
 BIsSteamDeck
 BIsStoreItemMissing
 BIsStoreItemUnavailableDueToCountryRestriction
@@ -250,7 +254,9 @@ BLightColor
 BLocStringExists
 BLoggingEnabled
 BLooksLikeToken
+BNotificationParentalBlocked
 BOpenVROverlayBrowser
+BRebuildFilter
 BReplaceRollupItem
 BSendToCallbackAsNew
 BSessionUnlocked
@@ -258,6 +264,7 @@ BShouldOpenLinkInExternalBrowser
 BShouldReconnect
 BShouldRefreshToken
 BShowNewIndicator
+BShownFilterTip
 BSuccess
 BUrlIsOnTrustedDomain
 BValidLookingLanguage
@@ -308,6 +315,7 @@ BlobManager
 BlobToFile
 BlurredAvatar
 Body
+BorderBox
 BorderlessButton
 BottomGradient
 BottomSheet
@@ -423,6 +431,8 @@ CClientComm_GetClientLogonInfo_Request
 CClientComm_GetClientLogonInfo_Response
 CClientComm_InstallClientApp_Request
 CClientComm_InstallClientApp_Response
+CClientComm_LaunchClientApp_Request
+CClientComm_LaunchClientApp_Response
 CClientComm_SetClientAppUpdateState_Request
 CClientComm_SetClientAppUpdateState_Response
 CClientComm_UninstallClientApp_Request
@@ -433,6 +443,7 @@ CClientMetrics_AppInterfaceStats_Notification
 CClientMetrics_ClientBootstrap_Notification
 CClientMetrics_ClientBootstrap_RequestInfo
 CClientMetrics_ClientBootstrap_Summary
+CClientMetrics_ClipShare_Notification
 CClientMetrics_CloudAppSyncStats_Notification
 CClientMetrics_ContentDownloadResponse_Counts
 CClientMetrics_ContentDownloadResponse_Counts_Notification
@@ -441,6 +452,7 @@ CClientMetrics_ContentDownloadResponse_Hosts
 CClientMetrics_ContentValidation_Notification
 CClientMetrics_DownloadRates_Notification
 CClientMetrics_DownloadRates_Notification_StatsInfo
+CClientMetrics_EndGameRecording_Notification
 CClientMetrics_IPv6Connectivity_Notification
 CClientMetrics_IPv6Connectivity_Result
 CClientMetrics_ReportClientArgs_Notification
@@ -536,6 +548,8 @@ CFamilyGroupsClient_NotifyRunningApps_Notification_PlayingMember
 CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
 CFamilyGroups_CancelFamilyGroupInvite_Request
 CFamilyGroups_CancelFamilyGroupInvite_Response
+CFamilyGroups_ClearCooldownSkip_Request
+CFamilyGroups_ClearCooldownSkip_Response
 CFamilyGroups_ConfirmInviteToFamilyGroup_Request
 CFamilyGroups_ConfirmInviteToFamilyGroup_Response
 CFamilyGroups_ConfirmJoinFamilyGroup_Request
@@ -544,17 +558,17 @@ CFamilyGroups_CreateFamilyGroup_Request
 CFamilyGroups_CreateFamilyGroup_Response
 CFamilyGroups_DeleteFamilyGroup_Request
 CFamilyGroups_DeleteFamilyGroup_Response
-CFamilyGroups_FamilyDispersionGraph
-CFamilyGroups_FamilyDispersionGraph_Edge
+CFamilyGroups_ForceAcceptInvite_Request
+CFamilyGroups_ForceAcceptInvite_Response
 CFamilyGroups_GetChangeLog_Request
 CFamilyGroups_GetChangeLog_Response
 CFamilyGroups_GetChangeLog_Response_Change
-CFamilyGroups_GetDispersionForFamily_Request
-CFamilyGroups_GetDispersionForFamily_Response
 CFamilyGroups_GetFamilyGroupForUser_Request
 CFamilyGroups_GetFamilyGroupForUser_Response
 CFamilyGroups_GetFamilyGroup_Request
 CFamilyGroups_GetFamilyGroup_Response
+CFamilyGroups_GetInviteCheckResults_Request
+CFamilyGroups_GetInviteCheckResults_Response
 CFamilyGroups_GetPlaytimeSummary_Request
 CFamilyGroups_GetPlaytimeSummary_Response
 CFamilyGroups_GetPreferredLenders_Request
@@ -680,6 +694,8 @@ CMobileAuth_MigrateMobileSession_Request
 CMobileAuth_MigrateMobileSession_Request_DeviceDetails
 CMobileAuth_MigrateMobileSession_Response
 CMobileDevice_DeregisterMobileDevice_Notification
+CMobileDevice_HasMobileDevice_Request
+CMobileDevice_HasMobileDevice_Response
 CMobileDevice_RegisterMobileDevice_Request
 CMobileDevice_RegisterMobileDevice_Response
 CMobilePerAccount_GetSettings_Request
@@ -1022,6 +1038,12 @@ CSteamDeckCompatibility_SetFeedback_Request
 CSteamDeckCompatibility_SetFeedback_Response
 CSteamDeckCompatibility_ShouldPrompt_Request
 CSteamDeckCompatibility_ShouldPrompt_Response
+CSteamEngine_GetGameIDForPID_Request
+CSteamEngine_GetGameIDForPID_Response
+CSteamEngine_GetTextFilterDictionary_Request
+CSteamEngine_GetTextFilterDictionary_Response
+CSteamEngine_TextFilterDictionaryChanged_Notification
+CSteamEngine_UpdateTextFilterDictionary_Notification
 CSteamGuardStore
 CSteamID
 CSteamItemRewardDefinition
@@ -1074,6 +1096,7 @@ CStoreQueryParams
 CStoreQueryPerResultMetadata
 CStoreQueryResultMetadata
 CStoreQuery_GetItemsByUserRecommendedTags_Request
+CStoreQuery_GetItemsByUserRecommendedTags_Request_Section
 CStoreQuery_GetItemsByUserRecommendedTags_Response
 CStoreQuery_GetItemsByUserRecommendedTags_Response_Section
 CStoreQuery_Query_Request
@@ -1107,9 +1130,13 @@ CStore_GetTrendingAppsAmongFriends_Response_TrendingAppData
 CStore_GetUserGameInterestState_Request
 CStore_GetUserGameInterestState_Response
 CStore_GetUserGameInterestState_Response_InQueue
+CStore_GetWishlistDemoEmailStatus_Request
+CStore_GetWishlistDemoEmailStatus_Response
 CStore_MigratePartnerLinkTracking_Notification
 CStore_PurchaseReceiptInfo
 CStore_PurchaseReceiptInfo_LineItem
+CStore_QueueWishlistDemoEmailToFire_Request
+CStore_QueueWishlistDemoEmailToFire_Response
 CStore_RegisterCDKey_Request
 CStore_RegisterCDKey_Response
 CStore_ReloadAllReservationPositionMessages_Notification
@@ -1129,6 +1156,8 @@ CSubscribableValue
 CSupportRefreshTokenAudit
 CSupportRefreshTokenDescription
 CSupportRefreshTokenDescription_TokenUsageEvent
+CTextFilterAsyncStorage
+CTextFilterStore
 CTrackedEventListeners
 CTransportAuth_Authenticate_Request
 CTransportAuth_Authenticate_Response
@@ -1232,6 +1261,7 @@ ClearAllCallbacks
 ClearAllCookies
 ClearCookies
 ClearCookiesInternal
+ClearCooldownSkip
 ClearLanguageCookies
 ClearNotificationBadge
 ClearNotifications
@@ -1339,7 +1369,9 @@ CreateIntersectionObserver
 CreateMarketingMessage
 CreateNewShoppingCart
 CreateNonce
+CreatePattern
 CreatePickerEntry
+CreateProfanityReplacement
 CreateResizeObserver
 CreateWebAPIURL
 CreatorHomeModel
@@ -1372,6 +1404,7 @@ DeleteReservationPositionMessage
 DemoBox
 DemoContainer
 DeniedRequest
+DeobfuscateString
 DeprecatedStyleSheetPropType
 DeregisterMobileDevice
 DeserializeBinary
@@ -1381,6 +1414,7 @@ DeserializeFromMessage
 Dev_AddTestNotification
 Dev_UpdateTestNotificationReadState
 Device
+DevtoolsOverlay
 Dimensions
 DisableParentalSettings
 DisableWithRecoveryCode
@@ -1454,6 +1488,7 @@ EClanImageFileTypeToString
 EClanImageGroupToString
 EClientExecutionSiteToString
 EClientPersonaStateFlagToString
+EClipShareMethodToString
 ECloudGamingPlatformToString
 ECloudStoragePersistStateToString
 ECodecUsagePlatformToString
@@ -1480,6 +1515,7 @@ EFeedbackStateToString
 EForceFeatureNotificationAdditionalFiltersToString
 EForceFeatureNotificationTargetSelectionToString
 EGPUPerformanceLevelToString
+EGameRecordingTypeToString
 EGamescopeBlurModeToString
 EGraphicsPerfOverlayLevelToString
 EHDRToneMapOperatorToString
@@ -1539,6 +1575,7 @@ EPhoneStatusToString
 EPhoneTOSPolicyToString
 EPhoneVACPolicyToString
 EPlaytestStatusToString
+EPreapprovalResolutionToString
 EProfileColorStyleToString
 EProfileCooldownToString
 EProfileCustomizationStyleToString
@@ -1625,7 +1662,10 @@ EUserReviewScoreToString
 EUserTagReportTypeToString
 EWebAPIIPFilterTypeToString
 EWebAPIPartnerGroupPermissionToString
+EWindowsUpdateInstallationImpactToString
+EWindowsUpdateRebootBehaviorToString
 Element
+ElementBox
 Ellipse
 EmailCode
 EmitterSubscription
@@ -1698,6 +1738,7 @@ FileSystemCancellableNetworkTask
 FillRateHelper
 FilterForParental
 FilterInPlace
+FilterText
 FinalizeAddAuthenticator
 FinalizeEmbeddedWebLogin
 FindAncestorWithAttribute
@@ -1725,6 +1766,7 @@ FocusManager
 FocusedTabBarMarker
 Footer
 FooterIcon
+ForceAcceptInvite
 ForceTouch
 ForceTouchFallback
 ForceTouchGesture
@@ -1911,6 +1953,7 @@ GetDateFromStorage
 GetDateFromString
 GetDebugZooLinks
 GetDebugZooScreens
+GetDefaultAJAXFriendLookup
 GetDefaultAvatarUrl
 GetDefaultFormData
 GetDefaultHandlerRegistry
@@ -1924,7 +1967,6 @@ GetDeviceModel
 GetDiscoveryQueue
 GetDiscoveryQueueSettings
 GetDiscoveryQueueSkippedApps
-GetDispersionForFamily
 GetDisplayAddressFromLoginRequest
 GetDisplayIPAddressFromLoginRequest
 GetDisplayMarketingMessage
@@ -1965,6 +2007,7 @@ GetFriendsGameplayInfo
 GetFullSpacingPropertyName
 GetGameAchievements
 GetGameBadgeLevels
+GetGameIDForPID
 GetHardwareItems
 GetHeaderURL
 GetHeadingStyleName
@@ -1988,6 +2031,7 @@ GetInteractionZooScreens
 GetInternalName
 GetIntrinsic
 GetInventoryItemsWithDescriptions
+GetInviteCheckResults
 GetItemChanges
 GetItemInfo
 GetItems
@@ -2128,6 +2172,7 @@ GetSpacingStyleName
 GetStatus
 GetSteamClientURL
 GetSteamDeckKeyboardSkin
+GetSteamEngineTextFilterDictionary
 GetSteamGuardCodeForTime
 GetSteamGuardInfo
 GetSteamGuardStorageKey
@@ -2166,6 +2211,7 @@ GetTagIDs
 GetTagLine
 GetTagList
 GetTags
+GetTextFilterDictionary
 GetTextFilterWords
 GetTextStyleName
 GetTextWeightStyleName
@@ -2214,6 +2260,7 @@ GetWebAPIAccessToken
 GetWebAPIInterface
 GetWebLink
 GetWebUITransportDefaults
+GetWishlistDemoEmailStatus
 GetWithFallback
 GoBack
 Gradient
@@ -2234,6 +2281,7 @@ HapticsZoo
 HasContentDescriptorID
 HasCurrentGameRichPresence
 HasLoadedClanAccountID
+HasMobileDevice
 HasNotch
 HasRichPresenceForViewGameInfo
 HasStateFlag
@@ -2347,6 +2395,8 @@ InitFromObjects
 InitFromPacket
 InitFromString
 InitHeaderFromPacket
+InitSteamEngineLanguage
+InitSteamEngineLanguages
 Initialize
 Inline
 InlineZoo
@@ -2399,6 +2449,7 @@ IsSteamOS
 IsUpdateDesired
 IsUpdateUrgent
 IsUpperCase
+IsValidTextFilterWord
 ItemSeparatorComponent
 ItemWithSeparator
 JoinFamilyGroup
@@ -2408,6 +2459,7 @@ KeyboardAvoidingView
 KeyboardManager
 LanguagePickerRow
 LargeQRSVG
+LaunchClientApp
 LayoutComponents
 LazyInit
 LazyWrapper
@@ -2445,13 +2497,19 @@ LoadClanInfoForClanAccountID
 LoadClanInfoForClanSteamID
 LoadCreatorHome
 LoadCreatorHomeListForAppIncludeHiddden
+LoadFilter
 LoadFromStorage
+LoadLanguage
+LoadLanguages
 LoadLocalizationFiles
 LoadOGGClanInfoForAppID
 LoadOGGClanInfoForGroupVanity
 LoadOGGClanInfoForIdentifier
+LoadObfuscatedString
 LoadSettings
 LoadSteamGuardStateFromStorage
+LoadTextFilterPreferences
+LoadTextFilterWords
 Loading
 LoadingIndicator
 LocalSvg
@@ -2647,6 +2705,7 @@ NotifyManager
 NotifyServerNotificationsHidden
 NotifyServerNotificationsRead
 NotifyStartShutdown
+NotifyTextFilterDictionaryChanged
 NullExp
 O
 OOBEContents
@@ -2656,6 +2715,7 @@ OOBESplash
 OSIcon
 OSName
 OSTypeFromUA
+ObfuscateString
 ObjectTextFields
 ObservableArrayAdministration
 ObservableGroupMap
@@ -2671,6 +2731,7 @@ OnAppOverviewChange
 OnChildLayout
 OnClearSearch
 OnError
+OnFilterDataChanged
 OnGetAppsResponse
 OnImageLoadError
 OnItemPress
@@ -2687,6 +2748,7 @@ OnSocketOpen
 OnStartShutdown
 OnSteamIDChanged
 OnSteamMobileMessage
+OnTextFilterDictionaryChanged
 OnUninstall
 OnWebAPIRequestNewAT
 OnWebsocketClose
@@ -2876,6 +2938,7 @@ QueueRichPresenceLocRequest
 QueueSend
 QueueStoreItemRequest
 QueueTagRequest
+QueueWishlistDemoEmailToFire
 QuotedArg
 R
 RCTNetworking
@@ -2931,9 +2994,11 @@ RegisterDeviceWithServer
 RegisterEMessageAction
 RegisterEMessageHandler
 RegisterForNotifyStartShutdown
+RegisterForNotifyTextFilterDictionaryChanged
 RegisterForSettingsChanges
 RegisterForSteamDeckRewards
 RegisterForSteamMobileMessages
+RegisterForUpdateTextFilterDictionary
 RegisterKey
 RegisterLogName
 RegisterMobileDevice
@@ -2952,6 +3017,7 @@ RemoteDownloadNoClients
 RemoteDownloading
 RemoteDownloads
 RemoteInstallUninstall
+RemoteLaunchClientApp
 RemoteUninstalling
 RemoteUpdatePending
 RemoveAppRelationship
@@ -2978,6 +3044,8 @@ ReplacementTokenToClanImageURL
 ReportApp
 ReportClientArgs
 ReportClientError
+ReportClipShare
+ReportEndGameRecording
 ReportError
 ReportPlaytimeAndNotify
 ReportReactUsage
@@ -2989,6 +3057,7 @@ RequestNewAccessToken
 RequestPlaytime
 RequestPurchase
 RequestRecoveryCode
+RequestUpdatedSettings
 ResendInvitationToFamilyGroup
 ResendMoveCode
 Reset
@@ -3022,9 +3091,13 @@ SafeAreaProviderCompat
 SanitizeEventComponent
 SanitizeNavData
 SaveAppInfoBatchToLocalCache
+SaveFilter
+SaveObfuscatedString
 SavePushNotificationSetting
 SaveSettings
 SaveSteamGuardStateToStorage
+SaveTextFilterPreferences
+SaveTextFilterWords
 ScanTarget
 ScannerLoading
 ScannerNotch
@@ -3075,7 +3148,11 @@ SendLocalNotification
 SendMsg
 SendMsgAndAwaitResponse
 SendMsgAuthenticate
+SendMsgGetGameIDForPID
+SendMsgGetTextFilterDictionary
 SendMsgNotifyStartShutdown
+SendMsgNotifyTextFilterDictionaryChanged
+SendMsgUpdateTextFilterDictionary
 SendNotification
 SendPhoneVerificationCode
 SendSerializedMessage
@@ -3114,6 +3191,7 @@ SetErrorReportingStore
 SetFailureState
 SetFamilyCooldownOverrides
 SetFavoriteBadge
+SetFilterTipShown
 SetFromComponents
 SetIncludeBacktraceInLog
 SetInstance
@@ -3136,6 +3214,7 @@ SetProfileBackground
 SetProfilePreferences
 SetProfileTheme
 SetReconnectErrorHandler
+SetRemoteClientID
 SetReservationPositionMessage
 SetReturnUnavailableItems
 SetRewardDefinitions
@@ -3352,6 +3431,7 @@ TextPath
 TextZoo
 ThemeProvider
 ThreeColumnHeader
+Throbber
 TimerBasedFinalizationRegistry
 TimingAnimation
 ToObject
@@ -3380,6 +3460,7 @@ TouchableItem
 TouchableNativeFeedback
 TouchableOpacity
 TouchableWithoutFeedback
+TraceUpdateOverlay
 TransferEmbeddedWebLogin
 TransferEmbeddedWebLoginResult
 TrimTrailingSlash
@@ -3408,6 +3489,7 @@ Update
 UpdateAuthSessionWithMobileConfirmation
 UpdateAuthSessionWithSteamGuardCode
 UpdateAutoRefresh
+UpdateCommunityPreferences
 UpdateContentDescriptors
 UpdateGroupFlagsFeature
 UpdateMarketingMessage
@@ -3421,6 +3503,8 @@ UpdateSetting
 UpdateSettings
 UpdateSteamAnnouncementLastRead
 UpdateStylesheetsInDocument
+UpdateTextFilterDictionary
+UpdateTextFilterWords
 UpdateTokenVersion
 UpdateTwoFactorVersion
 UpdateUserAuth
@@ -3486,6 +3570,7 @@ Wrap
 Wrapper
 WriteAuthContextToStorage
 WriteToStorage
+X
 XMLHttpRequest
 XMLHttpRequestEventTarget
 YellowBox
@@ -3561,6 +3646,7 @@ _RefreshCaptcha
 _RefreshUserRefreshToken
 _RegisterDeviceWithServer
 _RegisterPushForAccounts
+_RemoteLaunchClientApp
 _RequestNewAccessToken
 _RevokeRefreshToken
 _SavePushNotificationSetting
@@ -3640,6 +3726,7 @@ _assertThisInitialized
 _asyncRequire
 _asyncRequireImpl
 _asyncToGenerator
+_attachToDevtools
 _authenticateAsync
 _buildMatchGraph
 _byteCount
@@ -4139,6 +4226,7 @@ attachHandlers
 attachNativeEvent
 attachPingListener
 attachSuspenseRetryListeners
+attachToDevtools
 attemptEarlyBailoutIfNoScheduledUpdate
 auth
 authenticateAsync
@@ -4500,6 +4588,7 @@ clamp
 classEscape
 cleanHeaderConfig
 cleanPseudos
+cleanup
 clear
 clearAll
 clearAllLogs
@@ -5313,6 +5402,7 @@ fnReply
 fnReplyWithEResult
 fnSetDebugLogEnabled
 fnSort
+fnSortHistory
 fnUnregister
 fnWrapped
 focus
@@ -5401,6 +5491,7 @@ functions
 functionsIn
 funescape
 g
+g_DefaultFriendsListGetter
 g_onReportableError
 genMethod
 genModule
@@ -5719,6 +5810,7 @@ getInitialState
 getInitialURL
 getInjectName
 getInnerHTML
+getInspectorDataForViewAtPoint
 getInspectorDataForViewTag
 getInstallReferrerAsync
 getInstallationTimeAsync
@@ -6677,6 +6769,7 @@ mountClassInstance
 mountDebugValue
 mountEffect
 mountEffectImpl
+mountReactDevToolsOverlays
 mountSafeCallback_NOT_REALLY_SAFE
 mountState
 mountSuspenseOffscreenState
@@ -6789,6 +6882,10 @@ onAdapterRejection
 onAdapterResolution
 onAdd
 onAddAccount
+onAgentDisableTraceUpdates
+onAgentDrawTraceUpdates
+onAgentHideNativeHighlight
+onAgentShowNativeHighlight
 onAllowedNavigationChange
 onAnimationComplete
 onAuthenticatorHelp
@@ -6924,9 +7021,11 @@ onShouldStartLoadWithRequest
 onShow
 onShowOptions
 onStart
+onStartInspectingNative
 onStartReachedThresholdOrDefault
 onStartShouldSetResponder
 onStartShouldSetResponderCapture
+onStopInspectingNative
 onSubmit
 onSubmitCode
 onSubmitEditing
@@ -7491,6 +7590,7 @@ resolve
 resolveAssetSource
 resolveBase
 resolveBlurhashString
+resolveBoxStyle
 resolveConfirmation
 resolveContentFit
 resolveContentPosition
@@ -7498,8 +7598,10 @@ resolveDefaultProps
 resolveLazy
 resolveLazyComponentTag
 resolveOnce
+resolveRelativeSizes
 resolveRetryWakeable
 resolveSelections
+resolveSizeInPlace
 resolveSource
 resolveSources
 resolveThumbhashString
@@ -8276,6 +8378,7 @@ useConfirmInviteToFamilyGroup
 useConfirmJoinFamilyGroup
 useConfirmationCount
 useConfirmationsBadgeProps
+useConfirmationsList
 useCopiedAnimation
 useCopyParentalSettings
 useCreateFamilyGroup
@@ -8319,11 +8422,13 @@ useFocusEffect
 useFocusEvents
 useFocusedListenersChildrenAdapter
 useFonts
+useForceAcceptInvite
 useForceUpdate
 useForceUpdateOnResizeObserved
 useFormFactor
 useGestureBottomSheetAnimation
 useGestureHandlerRef
+useGetInviteCheckResults
 useGetUserCountry
 useGlobalEventListener
 useGlobalMessageListener
@@ -8362,11 +8467,13 @@ useInitSettings
 useInitSteamGuard
 useInitSteamNotificationsStore
 useInitStoreItemCache
+useInitTextFilterStore
 useInitUpdates
 useInsertionEffect
 useIntersectionObserver
 useInterval
 useInvalidateParentalQuery
+useInvalidateParentalRequests
 useInvalidateSharedLibraryApps
 useInventoryItemState
 useInviteToFamilyGroup
@@ -8584,6 +8691,7 @@ useSyncState
 useTabBarLayout
 useTextColor
 useTextColorStyle
+useTextFilterStore
 useTheme
 useThemeStyles
 useThenable
