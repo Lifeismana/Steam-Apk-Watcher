@@ -11,7 +11,8 @@ RUN pacman -Syu --noconfirm \
     jre-openjdk \
     jadx \
     which \
-    unzip
+    unzip \
+    imagemagick
 RUN python -m venv /data/.venv && \
 . /data/.venv/bin/activate && \
 pip install --upgrade git+https://github.com/P1sec/hermes-dec
