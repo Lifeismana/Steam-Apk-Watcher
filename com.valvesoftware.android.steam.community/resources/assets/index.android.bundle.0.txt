@@ -8755,7 +8755,7 @@ $|^
 3.0.0
 3.2.0
 3.3.6
-3.7.4
+3.7.5
 3.\xa0Quartal (Juli\xa0– September)\xa0%1$s
 3.º trimestre de %1$s
 3.º trimestre de %1$s (julho - setembro)
