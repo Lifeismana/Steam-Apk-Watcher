@@ -254,6 +254,7 @@
 #FamilyManagement_ErrorNoActiveInvite
 #FamilyManagement_ErrorNoMatch
 #FamilyManagement_LimitedAccount_CreateFamily
+#FamilyManagement_PartnerAccountCannotJoinAsChild
 #FamilyManagement_RateLimitExceeded_CreateFamily
 #FamilyView_Action_Enter
 #FamilyView_Action_Exit
@@ -627,7 +628,6 @@
 #SteamNotifications_Comment_Your_Screenshot
 #SteamNotifications_Comment_Your_Screenshot_Game
 #SteamNotifications_ConfirmationNeeded
-#SteamNotifications_ConfirmationNeeded_Plural
 #SteamNotifications_ErrorLoading
 #SteamNotifications_ErrorRetry
 #SteamNotifications_FamilyInviteBody
@@ -1000,16 +1000,12 @@ $|^
 %1$s Balasan dari Bantuan Steam
 %1$s Bekleyen Takas İsteği
 %1$s Bekleyen Yeni Hamle
-%1$s Bestätigung erforderlich
-%1$s Bestätigungen erforderlich
 %1$s Bit/sn
 %1$s Canlı Yayını, Hemen İzlemeye Başlayın
 %1$s Community Message
 %1$s Community Messages
 %1$s Communitynachricht
 %1$s Communitynachrichten
-%1$s Confirmation needed
-%1$s Confirmations needed
 %1$s DAKİKA %2$s SANİYE KALDI
 %1$s DAKİKA 1 SANİYE KALDI
 %1$s Demosunu İndir
@@ -1103,6 +1099,8 @@ $|^
 %1$s Nutzer hat diesen Artikel als „%2$s“ markiert
 %1$s PD
 %1$s Penawaran Pertukaran Tertunda
+%1$s Pending Confirmation
+%1$s Pending Confirmations
 %1$s Pending Trade Offer
 %1$s Pending Trade Offers
 %1$s Penonton
@@ -1181,6 +1179,7 @@ $|^
 %1$s a approuvé la demande d'achat de %2$s.
 %1$s a aprobat solicitarea de achiziție realizată de %2$s.
 %1$s a aprobat solicitarea ta de acces la funcțiile Steam
+%1$s a avut permisiunea de a ignora restricția.
 %1$s a ce produit dans sa liste de souhaits
 %1$s a comentat pe profilul lui %2$s
 %1$s a comentat pe profilul tău
@@ -1214,7 +1213,10 @@ $|^
 %1$s a renommé la famille «\xa0%2$s\xa0».
 %1$s a respins invitația de a se alătura.
 %1$s a respins solicitarea ta de acces la funcțiile Steam
+%1$s a restaurat familia.
+%1$s a restauré la famille.
 %1$s a retiré %2$s de la famille.
+%1$s a reçu l'autorisation de jouer sans avoir à attendre.
 %1$s a solicitat o achiziție.
 %1$s a stabilit numele familiei ca fiind „%2$s”.
 %1$s a supprimé la famille.
@@ -1337,12 +1339,6 @@ $|^
 %1$s bejelentés
 %1$s bejövő kérelem
 %1$s bekapcsolta a szülői felügyeletet %2$s fiókján.
-%1$s bekreftelse nødvendig
-%1$s bekreftelser nødvendig
-%1$s bekräftelse krävs
-%1$s bekräftelser krävs
-%1$s bekræftelse påkrævet
-%1$s bekræftelser påkrævet
 %1$s ber om et kjøp
 %1$s ber om ett köp
 %1$s ber om mer speltid
@@ -1351,8 +1347,6 @@ $|^
 %1$s ber om åtkomst till Steam-funktioner
 %1$s bergabung dalam obrolan
 %1$s bergabung ke keluarga.
-%1$s bevestiging vereist
-%1$s bevestigingen vereist
 %1$s beállította a(z) „%2$s” családnevet.
 %1$s billed annually thereafter, cancel anytime
 %1$s billed monthly thereafter, cancel anytime
@@ -1438,14 +1432,6 @@ $|^
 %1$s commented on your profile
 %1$s communitybericht
 %1$s communityberichten
-%1$s conferma necessaria
-%1$s conferme necessarie
-%1$s confirmaciones necesarias
-%1$s confirmación necesaria
-%1$s confirmare necesară
-%1$s confirmação necessária
-%1$s confirmações necessárias
-%1$s confirmări necesare
 %1$s convidou %3$s para a família, como %2$s.
 %1$s convidou %3$s para entrar (tipo de membro: %2$s).
 %1$s convidou você para uma família
@@ -1525,11 +1511,12 @@ $|^
 %1$s detik tersisa
 %1$s dias
 %1$s dias restantes
-%1$s diblokir untuk bergabung (keluarga tidak dapat bergabung untuk %2$s).
 %1$s diblokir untuk bergabung (pengguna sudah menjadi anggota keluarga lain).
-%1$s diblokir untuk bergabung (pengguna tidak dapat bergabung dengan keluarga mana pun untuk %2$s).
+%1$s diblokir untuk bergabung (pengguna tidak dapat bergabung dengan keluarga mana pun hingga %2$s).
 %1$s diblokir untuk bergabung (tidak bisa mendapatkan alamat IP).
+%1$s diblokir untuk bergabung (tidak dapat bergabung keluarga hingga %2$s).
 %1$s diblokir untuk bergabung (wilayah berbeda).
+%1$s diizinkan untuk melewati waktu jeda.
 %1$s dil varlıklarının tamamını görüntle
 %1$s dipilih melalui pengujian Valve.
 %1$s dipilih olehmu untuk produk ini.
@@ -1541,10 +1528,12 @@ $|^
 %1$s dni temu
 %1$s dní
 %1$s dnů
+%1$s dostal výjimku a přeskočil omezení přijímání nových členů.
 %1$s dołącza do czatu
 %1$s dołącza do rodziny.
 %1$s durante el primer año
 %1$s durante el primer mes
+%1$s durfte die Wartezeit überspringen.
 %1$s día(s) y %2$s:%3$s
 %1$s días
 %1$s e %2$s altri giochi sono in saldo!
@@ -1594,9 +1583,7 @@ $|^
 %1$s er blitt dempet i dette samtalerommet
 %1$s er fjernet som moderator.
 %1$s er for stor (maks %2$s MB).
-%1$s er for stor (maks 10 MB).
 %1$s er for stor (maks. %2$s MB).
-%1$s er for stor (maks. 10 MB).
 %1$s er ikke lenger dempet
 %1$s er ikke længere dæmpet
 %1$s er lagt til som moderator.
@@ -1607,7 +1594,6 @@ $|^
 %1$s er tilføjet som moderator.
 %1$s er tilgjengelig nå
 %1$s es demasiado grande (%2$s MB máximo).
-%1$s es demasiado grande (10 MB máximo).
 %1$s es demasiado grande (máximo, %2$s\xa0MB).
 %1$s esemény
 %1$s esemény betöltve %2$s dátumig
@@ -1619,12 +1605,10 @@ $|^
 %1$s est maintenant disponible en accès anticipé sur Steam\xa0!
 %1$s est maintenant gratuit
 %1$s est trop volumineux (%2$s\xa0Mo maximum).
-%1$s est trop volumineux (10 Mo maximum).
 %1$s este acum disponibil în acces timpuriu pe Steam!
 %1$s este disponibil acum
 %1$s este la reducere la %2$s
 %1$s este prea mare (%2$s MB maxim).
-%1$s este prea mare (10MB maxim).
 %1$s está a pedir acesso a funcionalidades do Steam
 %1$s está a pedir tempo de jogo adicional
 %1$s está a pedir uma compra
@@ -1650,6 +1634,8 @@ $|^
 %1$s felhasználótól
 %1$s felhasználótól.
 %1$s fichas
+%1$s fik lov til at springe nedkølingsperioden over.
+%1$s fikk tillatelse til å hoppe over ventetid.
 %1$s finns nu tillgängligt som Early Access på Steam!
 %1$s fjernede %2$s fra familien.
 %1$s fjernet %2$s fra familien.
@@ -1679,6 +1665,7 @@ $|^
 %1$s geliştiricileri, oyunu aşağıdaki kategoride aday göstermenizi rica ediyor.
 %1$s gemenskapsmeddelande
 %1$s gemenskapsmeddelanden
+%1$s gendannede familien.
 %1$s geselecteerd door testen van Valve.
 %1$s gettoni
 %1$s gick med i chatten
@@ -1690,6 +1677,7 @@ $|^
 %1$s giây trước
 %1$s giờ
 %1$s giờ trước
+%1$s gjenopprettet familien.
 %1$s godkendte %2$s's købsanmodning.
 %1$s godkendte din anmodning om adgang til Steam-funktioner
 %1$s godkendte din anmodning om mere spilletid
@@ -1735,6 +1723,7 @@ $|^
 %1$s ha rifiutato la tua richiesta di accesso alle funzionalità di Steam
 %1$s ha rifiutato la tua richiesta di tempo di gioco aggiuntivo
 %1$s ha rimosso %2$s dalla famiglia.
+%1$s ha ripristinato la condivisione familiare.
 %1$s ha sido silenciado
 %1$s ha sido silenciado en esta sala de chat
 %1$s ha solicitado acceso a características de Steam
@@ -1742,7 +1731,6 @@ $|^
 %1$s hafta
 %1$s hafta kaldı
 %1$s hafta önce
-%1$s hal yang perlu dikonfirmasi
 %1$s har afvist dit køb
 %1$s har aktiverat föräldrakontroll för kontot till %2$s.
 %1$s har avslått kjøpet
@@ -1779,6 +1767,7 @@ $|^
 %1$s hat die Einladung an %2$s zurückgezogen.
 %1$s hat die Einladung zum Beitritt abgelehnt.
 %1$s hat die Familie gelöscht.
+%1$s hat die Familie wiederhergestellt.
 %1$s hat die Kindersicherung für den Account von %2$s aktiviert.
 %1$s hat die Kindersicherung für den Account von %2$s deaktiviert.
 %1$s hat die Kindersicherung für den Account von %2$s geändert.
@@ -1804,6 +1793,7 @@ $|^
 %1$s heeft een gezin aangemaakt met de naam '%2$s'.
 %1$s heeft gereageerd op het profiel van %2$s
 %1$s heeft gereageerd op je profiel
+%1$s heeft het gezin hersteld.
 %1$s heeft het gezin verwijderd.
 %1$s heeft hun aankoopaanvraag geannuleerd.
 %1$s heeft je aankoop geweigerd
@@ -1814,8 +1804,10 @@ $|^
 %1$s heeft ouderlijk toezicht gewijzigd voor het account van %2$s.
 %1$s heeft ouderlijk toezicht ingeschakeld voor het account van %2$s.
 %1$s heeft ouderlijk toezicht uitgeschakeld voor het account van %2$s.
+%1$s helyreállította a családot.
 %1$s henkilö antoi kohteelle merkinnän %2$s
 %1$s henkilöä antoi kohteelle merkinnän %2$s
+%1$s hesabının bekleme süresini atlamasına izin verildi.
 %1$s hete
 %1$s heures
 %1$s hidden
@@ -1882,14 +1874,11 @@ $|^
 %1$s is requesting access to Steam features
 %1$s is requesting additional playtime
 %1$s is te groot (maximaal %2$s MB).
-%1$s is te groot (maximaal 10 MB).
 %1$s is too large (%2$sMB maximum).
-%1$s is too large (10MB maximum).
 %1$s is,
 %1$s ist der Familie beigetreten.
 %1$s ist für %2$s im Angebot
 %1$s ist zu groß. (max. %2$s MB)
-%1$s ist zu groß. (max. 10 MB)
 %1$s item disembunyikan mengikuti %2$s
 %1$s item is hidden due to %2$s
 %1$s item is verborgen vanwege %2$s
@@ -2025,7 +2014,6 @@ $|^
 %1$s matches
 %1$s md. %2$s d
 %1$s meddelelse
-%1$s megerősítés szükséges
 %1$s meghívta %3$s felhasználót, hogy csatlakozzon %2$s szerepben.
 %1$s megnyitása böngészőben...
 %1$s megváltoztatta a szülői felügyeletet %2$s fiókján.
@@ -2041,12 +2029,13 @@ $|^
 %1$s meminta pembelian
 %1$s meminta pembelian.
 %1$s meminta waktu bermain tambahan
+%1$s memulihkan keluarga.
 %1$s menerima permintaanmu untuk menambahkan waktu bermain
 %1$s mengaktifkan kontrol orang tua untuk akun %2$s.
 %1$s mengeluarkan %2$s dari keluarga.
 %1$s mengirimimu undangan keluarga
 %1$s mengubah kontrol orang tua untuk akun %2$s.
-%1$s mengundang %3$s untuk bergabung dengan peran sebagai %2$s.
+%1$s mengundang %3$s untuk bergabung sebagai %2$s.
 %1$s menimpa periode waktu jeda keluarga.
 %1$s meninggalkan obrolan
 %1$s menit
@@ -2174,6 +2163,7 @@ $|^
 %1$s minuuttia ja 1 sekunti sitten
 %1$s minuuttia jäljellä
 %1$s minuuttia sitten
+%1$s mocht de afkoelperiode overslaan.
 %1$s moderatör olarak eklendi.
 %1$s moderatör olarak eklenemedi!
 %1$s moderatörlükten çıkarılamadı!
@@ -2410,6 +2400,7 @@ $|^
 %1$s obiect nou în inventarul tău
 %1$s obiecte noi
 %1$s obiecte noi în inventarul tău
+%1$s obnovil rodinu.
 %1$s och %2$s spel till är på rea!
 %1$s och 1 spel till är på rea!
 %1$s oculto
@@ -2440,14 +2431,12 @@ $|^
 %1$s ohitti perheen odotusajan.
 %1$s om %2$s
 %1$s on alennuksessa hintaan %2$s
-%1$s on liian suuri (enintään 10 Mt).
 %1$s on liian suuri (maksimikoko %2$s Mb).
 %1$s on lisätty tilillesi
 %1$s on mykistetty
 %1$s on mykistetty tässä chat-huoneessa
 %1$s on nyt saatavilla Steamissä Early Access -pelinä!
 %1$s on oltava asennettuna ennen kuin voit asentaa ja käynnistää sovelluksen %2$s. Oletko asentanut Steamin tälle tietokoneelle?
-%1$s onay gerekli
 %1$s openen in een browser ...
 %1$s openstaande ruilaanbieding
 %1$s openstaande ruilaanbiedingen
@@ -2469,6 +2458,7 @@ $|^
 %1$s oyunun susturmasını kaldır
 %1$s oyununu Steam Ödülleri kategorilerinden birine aday göstermek için buraya tıklayın.
 %1$s pada %2$s
+%1$s palautti perheen.
 %1$s par an
 %1$s par mois
 %1$s partidă
@@ -2567,6 +2557,7 @@ $|^
 %1$s prosi o przyznanie dodatkowego czasu gry
 %1$s prosi o zakup
 %1$s prosi o zakup.
+%1$s przywraca rodzinę.
 %1$s puana daha ihtiyacınız var
 %1$s pukul %2$s
 %1$s pv %2$s t %3$s min
@@ -2578,6 +2569,7 @@ $|^
 %1$s päivää
 %1$s päivää jäljellä
 %1$s päivää sitten
+%1$s pôde entrar sem precisar aguardar.
 %1$s přepsala omezení přijímání nových členů rodiny.
 %1$s přidal komentář na\xa0Váš profil
 %1$s přidal komentář na\xa0profil uživatele %2$s
@@ -2613,6 +2605,9 @@ $|^
 %1$s respostas do Suporte Steam
 %1$s respuesta del Soporte de Steam
 %1$s respuestas del Soporte de Steam
+%1$s restaurou a família.
+%1$s restauró el grupo familiar.
+%1$s restored the family.
 %1$s resultat
 %1$s resultater
 %1$s rezultate
@@ -2632,6 +2627,7 @@ $|^
 %1$s saat kaldı
 %1$s saat önce
 %1$s sahip olmadan %2$s ürününü yükleyip çalıştıramazsınız. Bilgisayarınızda Steam yüklü mü?
+%1$s sai luvan ohittaa jäähyn.
 %1$s saiu da sala
 %1$s saiu da sala de chat
 %1$s samfunnsmelding
@@ -2740,6 +2736,7 @@ $|^
 %1$s svar från Steam Support
 %1$s személy látta el „%2$s” jelöléssel ezt az elemet.
 %1$s szt. żetonów
+%1$s számára engedélyezve lett a türelmi idő kihagyása.
 %1$s særtilbud
 %1$s săptămâni
 %1$s săptămâni rămase
@@ -2771,7 +2768,6 @@ $|^
 %1$s telah stop dibisukan
 %1$s tem este jogo
 %1$s terlalu besar (maks. %2$sMB).
-%1$s terlalu besar (maks. 10MB).
 %1$s tersisa sampai pengundian acak berikutnya!
 %1$s tham gia phòng trò chuyện
 %1$s tháng
@@ -2779,6 +2775,7 @@ $|^
 %1$s tháng trước
 %1$s thông điệp cộng đồng
 %1$s ti ha inviato un invito in famiglia
+%1$s tilläts att hoppa över cooldown.
 %1$s tilsidesatte familiens nedkølingsperiode.
 %1$s tilsluttede sig chatten
 %1$s timer
@@ -2904,6 +2901,7 @@ $|^
 %1$s vật phẩm mới
 %1$s vật phẩm mới trong kho đồ
 %1$s vật phẩm được ẩn do %2$s
+%1$s was allowed to skip cooldown.
 %1$s was blocked from joining (could not get IP address).
 %1$s was blocked from joining (different region).
 %1$s was blocked from joining (family cannot be joined for %2$s).
@@ -2981,7 +2979,6 @@ $|^
 %1$s ändrade familjenamnet till %2$s.
 %1$s är dold
 %1$s är för stor (max. %2$s MB).
-%1$s är för stor (max. 10MB)
 %1$s är inte dämpad längre
 %1$s är på rea för %2$s
 %1$s år
@@ -2991,10 +2988,10 @@ $|^
 %1$s år tilbage
 %1$s år återstår
 %1$s åsidosatte familjens cooldownperiod.
+%1$s återställde familjen.
 %1$s ændrede familienavnet til "%2$s".
 %1$s ændrede forældrekontrol for %2$s's konto.
 %1$s çok büyük (maksimum %2$s MB).
-%1$s çok büyük (maksimum 10MB).
 %1$s è disponibile ora
 %1$s è in saldo a %2$s
 %1$s è ora disponibile in accesso anticipato su Steam!
@@ -3002,11 +2999,8 @@ $|^
 %1$s è stato silenziato
 %1$s è stato silenziato in questa chat
 %1$s è troppo grande (massimo %2$s MB).
-%1$s è troppo grande (massimo 10 MB).
 %1$s é demasiado grande (máximo de %2$s\xa0MB).
-%1$s é demasiado grande (máximo de 10\xa0MB).
 %1$s é grande demais (máximo de %2$s MB).
-%1$s é grande demais (máximo de 10 MB).
 %1$s élő közvetítés, nézd most
 %1$s és %2$s között
 %1$s év
@@ -3041,6 +3035,7 @@ $|^
 %1$s đã gỡ bỏ thời gian chờ thêm thành viên gia đình.
 %1$s đã hủy lời mời tới %2$s.
 %1$s đã hủy yêu cầu mua hàng.
+%1$s đã khôi phục nhóm gia đình.
 %1$s đã mời %3$s tham gia với vai trò %2$s.
 %1$s đã ra mắt
 %1$s đã ra mắt trong Truy cập sớm trên Steam!
@@ -3060,6 +3055,7 @@ $|^
 %1$s đã đổi quyền quản lý trẻ em cho tài khoản của %2$s.
 %1$s được chọn bởi bạn cho sản phẩm này.
 %1$s được chọn theo thử nghiệm của Valve.
+%1$s được phép bỏ qua thời gian chờ.
 %1$s đề nghị trao đổi đang chờ
 %1$s İzleyici
 %1$s žetonů
@@ -3167,6 +3163,7 @@ $|^
 %1$s беше премахнат от заглушаване
 %1$s бит
 %1$s бит/с
+%1$s було дозволено пропустити період очікування.
 %1$s біт
 %1$s біт/с
 %1$s в %2$s
@@ -3182,9 +3179,12 @@ $|^
 %1$s включил(а) родительский контроль для аккаунта %2$s.
 %1$s владеет этим продуктом
 %1$s вмикає батьківський контроль для акаунта %2$s.
+%1$s восстановил(а) семейную группу.
 %1$s вступил(а) в семейную группу.
 %1$s входяща покана
 %1$s входящи покани
+%1$s възстанови семейството.
+%1$s відновлює сімейну групу.
 %1$s відсутні
 %1$s відхиляє ваш запит на додатковий ігровий час
 %1$s відхиляє ваш запит на доступ до функцій Steam
@@ -3207,7 +3207,6 @@ $|^
 %1$s е вече достъпно
 %1$s е на разпродажба за %2$s
 %1$s е прекалено голямо (%2$s MB максимум).
-%1$s е прекалено голямо (10 MB максимум).
 %1$s ед. опыта
 %1$s жетона
 %1$s за каждый последующий год, отмена в любое время
@@ -3252,7 +3251,6 @@ $|^
 %1$s коментира на профила Ви
 %1$s коментира на профила на %2$s
 %1$s має завеликий розмір (до %2$s МБ максимум).
-%1$s має завеликий розмір (до 10МБ максимум).
 %1$s мес.
 %1$s мес. %2$s д.
 %1$s мес. %2$s дн.
@@ -3338,6 +3336,7 @@ $|^
 %1$s покани %3$s да се присъедини с ролята „%2$s“.
 %1$s покидает чат
 %1$s покидає чат
+%1$s получил(а) разрешение на вступление в группу несмотря на временное ограничение.
 %1$s предлагает вам обмен
 %1$s през първата година
 %1$s през първия месец
@@ -3442,10 +3441,9 @@ $|^
 %1$s พร้อมเล่นแล้วในขณะนี้
 %1$s พร้อมให้เล่นระหว่างการพัฒนาบน Steam ได้แล้ว!
 %1$s มีขนาดใหญ่เกินไป (สูงสุด %2$sMB)
-%1$s มีขนาดใหญ่เกินไป (สูงสุด 10MB)
 %1$s รายการถูกซ่อนไว้เนื่องจาก %2$s
 %1$s วัน
-%1$s วัน %2$s:%3$s
+%1$s วัน %2$s: %3$s
 %1$s วันที่ผ่านมา
 %1$s วินาที
 %1$s วินาทีที่ผ่านมา
@@ -3481,6 +3479,7 @@ $|^
 %1$s ได้ยกเลิกคำขอสั่งซื้อของตนแล้ว
 %1$s ได้ยกเลิกคำเชิญที่ส่งให้ %2$s
 %1$s ได้ยกเลิกจำนวนจำกัดในระยะเวลาคูลดาวน์ของครอบครัวแล้ว
+%1$s ได้รับอนุญาตให้ละเว้นคูลดาวน์
 %1$s ได้ลบ %2$s ออกจากครอบครัว
 %1$s ได้ลบครอบครัวออก
 %1$s ได้สร้างครอบครัวชื่อ "%2$s"
@@ -3491,6 +3490,7 @@ $|^
 %1$s ได้เชิญให้ %3$s เข้าร่วมในประเภท %2$s
 %1$s ได้เปลี่ยนการควบคุมโดยผู้ปกครองสำหรับบัญชีของ %2$s
 %1$s ได้เปิดใช้งานการควบคุมโดยผู้ปกครองสำหรับบัญชีของ %2$s
+%1$s ได้เรียกคืนครอบครัว
 %1$s – "%2$s"
 %1$s – %2$s
 %1$s – %2$s %3$s
@@ -3616,7 +3616,6 @@ $|^
 %1$s − %2$s %3$s
 %1$s がチャットから退出しました
 %1$s がチャットに参加しました
-%1$s が大きすぎます (最大 10MB)
 %1$s のミュートを解除できませんでした。もう一度お試しください。
 %1$s はこのチャットルームでミュートされています
 %1$s はミュートされています
@@ -3635,7 +3634,7 @@ $|^
 %1$s 个项目已隐藏，原因是：%2$s
 %1$s 人の視聴者
 %1$s 人將此物品標為「%2$s」
-%1$s 从家庭中删除了 %2$s 。
+%1$s 从家庭中删除了 %2$s。
 %1$s 代幣
 %1$s 件库存中的新物品
 %1$s 件新物品
@@ -3684,7 +3683,7 @@ $|^
 %1$s 发出了购买请求
 %1$s 发行
 %1$s 取消了对 %2$s 的邀请。
-%1$s 取消對 %2$s 的邀請。
+%1$s 取消了對 %2$s 的邀請。
 %1$s 另外 %2$s 款遊戲現正特價中！
 %1$s 号实验
 %1$s 名<br>关注者
@@ -3741,6 +3740,7 @@ $|^
 %1$s 已擁有
 %1$s 已更改了 %2$s 帐户的家长控制。
 %1$s 已禁用了 %2$s 帐户的家长控制。
+%1$s 已获准跳过冷却时间。
 %1$s 已被禁止加入（不同区域）。
 %1$s 已被禁止加入（无法获取 IP 地址）。
 %1$s 已被禁止加入（用户已经是另一个家庭的成员）。
@@ -3766,6 +3766,7 @@ $|^
 %1$s 年第四季度
 %1$s 年第四季（10 月 - 12 月）
 %1$s 建立了名為「%2$s」的親友群組。
+%1$s 恢复了家庭。
 %1$s 截图
 %1$s 拒絕加入群組的邀請。
 %1$s 拒绝了加入邀请。
@@ -3776,7 +3777,6 @@ $|^
 %1$s 提出一則購買請求
 %1$s 提出一則購買請求。
 %1$s 文件过大（最大 %2$sMB）。
-%1$s 文件过大（最大 10MB）。
 %1$s 日
 %1$s 日前
 %1$s 時間
@@ -3788,7 +3788,6 @@ $|^
 %1$s 条社区消息
 %1$s 枚代币
 %1$s 檔案過大（上限為 %2$sMB）。
-%1$s 檔案過大（上限為 10MB）。
 %1$s 正在特卖：%2$s
 %1$s 正在請求存取 Steam 功能
 %1$s 活动
@@ -3848,6 +3847,7 @@ $|^
 %1$s 週間前
 %1$s 邀請了 %3$s 以%2$s的身分加入。
 %1$s 邀请 %3$s 以“%2$s”身份加入。
+%1$s 還原了親友群組。
 %1$s 錦標賽，立即觀賞
 %1$s 锦标赛，立即收看
 %1$s 離開了聊天
@@ -3856,7 +3856,6 @@ $|^
 %1$s 項已隱藏
 %1$s 項新物品
 %1$s 項符合
-%1$s 項需要確認
 %1$s 项已隐藏
 %1$s 项待处理的交易报价
 %1$s 게임 및 다른 게임 %2$s개 할인 중!
@@ -3876,6 +3875,7 @@ $|^
 %1$s 관련 이벤트
 %1$s 뉴스 허브 방문
 %1$s 님에게 보낸 메시지를 삭제하는 데 실패했습니다. 다시 시도해 주세요.
+%1$s 님에게 쿨다운 기간이 적용되지 않았습니다.
 %1$s 님으로부터 거래 제안을 받았습니다.
 %1$s 님으로부터 선물을 받았습니다.
 %1$s 님을 모더레이터로 추가하지 못했습니다!
@@ -3889,9 +3889,9 @@ $|^
 %1$s 님의 프로필
 %1$s 님이 %2$s 님에게 보낸 초대를 취소했습니다.
 %1$s 님이 %2$s 님을 가족 구성원에서 삭제했습니다.
-%1$s 님이 %2$s 님의 계정에 대한 가족 모드 기능을 변경했습니다.
-%1$s 님이 %2$s 님의 계정에 대한 가족 모드 기능을 비활성화했습니다.
-%1$s 님이 %2$s 님의 계정에 대한 가족 모드 기능을 활성화했습니다.
+%1$s 님이 %2$s 님의 계정에 대한 자녀 보호 기능을 변경했습니다.
+%1$s 님이 %2$s 님의 계정에 대한 자녀 보호 기능을 비활성화했습니다.
+%1$s 님이 %2$s 님의 계정에 대한 자녀 보호 기능을 활성화했습니다.
 %1$s 님이 %2$s 님의 구매 요청을 거절했습니다.
 %1$s 님이 %2$s 님의 구매 요청을 승인했습니다.
 %1$s 님이 %2$s 님의 프로필에 댓글을 남겼습니다.
@@ -3901,8 +3901,9 @@ $|^
 %1$s 님이 Steam 기능에 대한 사용 권한 요청을 승인했습니다.
 %1$s 님이 Steam 기능에 대한 사용 권한을 요청했습니다.
 %1$s 님이 가족 구성원이 되었습니다.
-%1$s 님이 가족 초대장을 보냈습니다.
 %1$s 님이 가족 쿨다운 기간을 다시 설정했습니다.
+%1$s 님이 가족에 초대했습니다.
+%1$s 님이 가족을 복구했습니다.
 %1$s 님이 가족을 삭제했습니다.
 %1$s 님이 구매 요청을 거부했습니다.
 %1$s 님이 구매 요청을 취소했습니다.
@@ -3953,7 +3954,6 @@ $|^
 %1$s 특별 제안
 %1$s 파일을 업로드할 수 없습니다. jpg, png, gif, webm, mpg, 및 ogv 파일 유형만 지원됩니다.
 %1$s 파일의 크기가 너무 큽니다(최대 %2$sMB).
-%1$s 파일의 크기가 너무 큽니다(최대 10MB).
 %1$s 프랜차이즈의 일부
 %1$s 활성화
 %1$s 후 종료
@@ -4107,6 +4107,7 @@ $|^
 %1$s, aile grubundan %2$s adlı kullanıcıyı çıkardı.
 %1$s, ailenin bekleme süresini geçersiz kıldı.
 %1$s, aileye katıldı.
+%1$s, aileyi geri getirdi.
 %1$s, aileyi sildi.
 %1$s, bir satın alma talep etti.
 %1$s, bu sohbet odasında susturuldu
@@ -4282,6 +4283,9 @@ $|^
 %1$s: %2$s đã xóa sự kiện khỏi Steam China
 %1$s: %2$s đã đánh dấu nội dung người lớn
 %1$s: %2$s оновлює сезонну позначку «%3$s»
+%1$s: %2$s.%3$s
+%1$s: %2$s: %3$s
+%1$s: %2$s: %3$s.%4$s
 %1$s: '%2$s'
 %1$s: El usuario %2$s cambió a la categoría %3$s
 %1$s: El usuario %2$s eliminó la marca de "revisado"
@@ -4465,8 +4469,6 @@ $|^
 %1$s\xa0Zuschauer
 %1$s\xa0années restantes
 %1$s\xa0b/s
-%1$s\xa0confirmation requise
-%1$s\xa0confirmations requises
 %1$s\xa0dni
 %1$s\xa0días
 %1$s\xa0godz.
@@ -4587,6 +4589,7 @@ $|^
 %1$sがウィッシュリストに追加
 %1$sがファミリーに参加しました。
 %1$sがファミリーを削除しました。
+%1$sがファミリーを復元しました。
 %1$sがファミリークールダウン期間をオーバーライドしました。
 %1$sがファミリー名を「%2$s」に設定しました。
 %1$sがプレイ時間の追加をリクエストしています
@@ -4612,6 +4615,7 @@ $|^
 %1$sのアイテム
 %1$sのアイテムを1個受け取りました
 %1$sのイベント
+%1$sのクールダウンが免除されました。
 %1$sのゲームが終了しました
 %1$sのサイズが大きすぎます（最大%2$sMB）。
 %1$sのスルーを解除
@@ -4664,7 +4668,6 @@ $|^
 %1$s件の新しいフレンドリクエスト
 %1$s件の新たに待機中のターン
 %1$s件の新着チャットメッセージ
-%1$s件の確認が必要です
 %1$s件以上のマッチ
 %1$s個のアイテムが%2$sにより非表示
 %1$s個のアイテムが含まれます
@@ -4734,7 +4737,6 @@ $|^
 %1$s년 남음
 %1$s년 이후
 %1$s년 전
-%1$s단계 인증 필요
 %1$s도 할 수 있습니다.
 %1$s명의 친구를 같이 알고 있습니다.
 %1$s명이 이 항목에 '%2$s' 표시를 했습니다
@@ -8661,6 +8663,7 @@ $|^
 23.9
 2313055b7dcb0a83514b787b61e9489e
 23456789BCDFGHJKMNPQRTVWXY
+24 Stunden
 25%
 270
 29.5.0
@@ -8755,7 +8758,7 @@ $|^
 3.0.0
 3.2.0
 3.3.6
-3.7.5
+3.7.7
 3.\xa0Quartal (Juli\xa0– September)\xa0%1$s
 3.º trimestre de %1$s
 3.º trimestre de %1$s (julho - setembro)
@@ -9679,6 +9682,7 @@ $|^
 @viewport {\n <group-rule-body>\n}
 A
 A %1$s felülbírálta a családi türelmi időt.
+A %1$s è stato permesso di saltare il tempo di attesa.
 A 'path' needs to be specified when specifying 'exact: true'. If you don't want this screen in the URL, specify it as empty string, e.g. `path: ''`.
 A <1>Gitármilliárdos</1>\nmár letölthető.
 A Barátok hálózat nem érhető el
@@ -9790,6 +9794,7 @@ A component suspended while responding to synchronous input. This will cause the
 A conceder a medalha "%1$s"
 A configuração inicial deste jogo necessita de uma ligação ativa à Internet.
 A conta com a qual estás a tentar terminar sessão tem um autenticador ativo do Steam Guard neste dispositivo. Migra ou remove o teu autenticador e tenta de novo.
+A conta de %1$s foi autorizada a ignorar a restrição.
 A conta de %1$s foi impedida de entrar (a conta não pode entrar numa família por %2$s).
 A conta de %1$s foi impedida de entrar (a família não aceita membros por %2$s).
 A conta de %1$s foi impedida de entrar (não foi possível obter o endereço IP).
@@ -9857,7 +9862,8 @@ A fost întâmpinată o eroare la încărcarea imaginii „%1$s”, având codul
 A framework for building native apps using React
 A funcionalidade de envio não está disponível
 A function must be passed to ErrorUtils.guard, got
-A função de streaming requer a instalação de drivers adicionais.\n\nPara tal, segue as instruções que irão aparecer no computador remoto.
+A função de streaming requer a instalação de drivers adicionais. Segue as instruções que irão aparecer no computador remoto.
+A função de streaming requer o emparelhamento com o computador remoto. Tenta outra vez e introduz o PIN de emparelhamento no computador remoto.
 A fájlnak nincs „.xml” vagy „.csv” kiterjesztése, így nem sikerült feldolgozni a fájlnevet: %1$s
 A fájlnév nem jelzi az API nyelvkódot. A fájlnevet <felhasználónév>_<nyelv>.xml formában várjuk: %1$s
 A fájltípus nem támogatott ezen elemhez.
@@ -9880,10 +9886,10 @@ A imagem colada é muito grande.
 A imagem fornecida não corresponde ao formato esperado (%1$s)
 A imagem que selecionou é demasiado pequena para este tipo de imagem. Deve ter as dimensões mínimas de %1$s\xa0x\xa0%2$s
 A imagem selecionada é muito pequena para este tipo de imagem. As dimensões mínimas são de %1$s x %2$s
-A inicialização do jogo requer a intervenção do usuário.\n\nInicie-o manualmente no computador remoto e, então, inicie a transmissão daqui.
+A inicialização do jogo requer a intervenção do usuário. Inicie-o manualmente no computador remoto e, então, inicie a transmissão daqui.
 A iniciar sessão
-A instalação deste jogo requer intervenção do utilizador.\n\nInstala-o manualmente no computador remoto.
-A instalação do jogo requer a intervenção do usuário.\n\nInstale-o manualmente no computador remoto.
+A instalação deste jogo requer a intervenção do utilizador. Instala‑o manualmente no computador remoto.
+A instalação do jogo requer a intervenção do usuário. Instale-o manualmente no computador remoto.
 A intervenit o problemă la eliminarea autentificatorului tău.
 A intervenit o problemă la încercarea de conectare. Te rugăm să încerci din nou mai târziu.
 A jelenleg legalacsonyabb árú játékok.
@@ -10015,9 +10021,11 @@ A továbbküldés hivatkozás a hírközpontbeli eseményre az alább kiválaszt
 A továbbküldés sikeresen megtörtént.
 A továbbítás indítása sikertelen
 A továbbítás indítására várakozás túllépte az időkorlátot.
-A továbbítás további illesztőprogramok telepítését igényli.\n\nKövesd a Steam üzeneteit a távoli számítógépen.
+A továbbítás párosítást igényel a távoli számítógéppel. Próbáld újra, és add meg a párosítási PIN-t a távoli számítógépen.
+A továbbítás további illesztőprogramok telepítését igényli. Kövesd a Steam üzeneteit a távoli számítógépen.
 A transferir: %1$s%
-A transmissão exige a instalação de drivers adicionais.\n\nSiga as instruções do Steam no computador remoto.
+A transmissão exige a instalação de drivers adicionais. Siga as instruções do Steam no computador remoto.
+A transmissão exige o pareamento com o computador remoto. Tente novamente e informe o código de pareamento no computador remoto.
 A tua Fila de Descoberta
 A tua Fila de Descoberta <1>Sabe mais</1>
 A tua Fila de Novidades <1>Sabe mais</1>
@@ -10068,7 +10076,6 @@ A(z) %1$s mostantól ingyenes
 A(z) %1$s már elérhető
 A(z) %1$s szerkesztette vázlatnak újabb változtatásai vannak. Legutóbb mentve: %2$s.
 A(z) %1$s túl nagy (%2$s MB a maximum).
-A(z) %1$s túl nagy (10 MB a maximum).
 A(z) %1$s és még %2$s játék akciós!
 A(z) %1$s és még egy játék akciós!
 A(z) „%1$s” kép a(z) %2$s nyelvhez rendelve.
@@ -10121,6 +10128,7 @@ Aan Apple Agenda toevoegen
 Aan Google Agenda toevoegen
 Aan Outlook Agenda toevoegen
 Aan Yahoo Agenda toevoegen
+Aan account toevoegen
 Aan agenda toevoegen
 Aan andere taal toewijzen
 Aan het inloggen
@@ -10637,6 +10645,7 @@ Adaugă în calendarul Apple
 Adaugă în calendarul Google
 Adaugă în calendarul Outlook
 Adaugă în calendarul Yahoo
+Adaugă în cont
 Adaugă în coș
 Adaugă în lista de dorințe
 Adaugă în lista de prieteni
@@ -10670,6 +10679,7 @@ Add meg a telefonodra küldött kódot.
 Add meg alább telefonszámodat, nemzetközi előhívószámmal együtt.
 Add meg ezt a kódot a bejelentkezésed megerősítéséhez mint:
 Add server to favorites
+Add to Account
 Add to Apple Calendar
 Add to Cart
 Add to Google Calendar
@@ -10726,6 +10736,7 @@ Adicionar servidor aos favoritos por endereço IP
 Adicionar servidor favorito por endereço IP
 Adicionar servidor por endereço IP
 Adicionar trailer de jogo
+Adicionar à conta
 Adicionar-me
 Adicione os detalhes de um orador ou de um streamer ao evento. Eles irão aparecer no evento e no respetivo resumo sob a forma de um widget visível para os utilizadores do Steam.
 Adj hozzá előadói vagy közvetítői információkat az eseményekhez. Ezek az eseménynél és az eseményösszefoglalónál fognak megjelenni, és a Steam felhasználók által megtekinthetők lesznek.
@@ -10974,6 +10985,7 @@ Aggiungi al Calendario Apple
 Aggiungi al Calendario di Outlook
 Aggiungi al calendario
 Aggiungi al carrello
+Aggiungi all'account
 Aggiungi all'evento i dettagli dei presentatori o degli streamer. Questi appariranno sull'evento e nei relativi dettagli come elemento ispezionabile dagli utenti di Steam.
 Aggiungi alla Lista dei desideri
 Aggiungi alla Lista dei desideri!
@@ -11005,6 +11017,7 @@ Agradecemos a sua resposta.
 Agradecimentos
 Agrandir la fenêtre de chat
 Agregar "%1$s" al diccionario
+Agregar a la cuenta
 Agregar a la lista de deseados
 Agregar al calendario
 Agregar al calendario de Apple
@@ -11150,6 +11163,7 @@ Ajout à la liste de souhaits\xa0: %1$s
 Ajouter
 Ajouter au Calendrier Outlook
 Ajouter au calendrier
+Ajouter au compte
 Ajouter au panier
 Ajouter aux favoris
 Ajouter des contacts
@@ -11314,6 +11328,7 @@ Akun ini sudah login di tempat lain
 Akun ini sudah memiliki Steam Guard aktif di perangkat lain.
 Akun ini sudah memiliki nomor telepon yang terverifikasi. Hapus nomor tersebut untuk mengganti nomor.
 Akun ini telah dinonaktifkan.
+Akun partner atau bantuan Steamworks tidak dapat bergabung dengan keluarga sebagai anggota anak-anak.
 Akun yang dibatasi tidak dapat membuat keluarga.
 Akun yang kamu coba logout memiliki pengautentikasi Steam Guard aktif di perangkat ini. Silakan pindahkan atau hapus pengautentikasimu dan coba lagi.
 Akun: %1$s
@@ -11488,12 +11503,14 @@ All News
 All Sales Events
 All VR
 All coordinates and lengths in SVG can be specified with or without a unit identifier
+All day
 All functionality is accessible when using the default controller configuration
 All funksjonalitet er tilgjengelig når du bruker standard kontrollerkonfigurasjon.
 All funktionalitet är tillgänglig vid användning av standardkontrollkonfigurationen
 All matching items, sorted by sales rank
 All native instances should have a tag.
 All promises were rejected
+All upcoming games, sorted by wishlists.
 All'apertura dell'applicazione
 All'uscita dall'applicazione
 Alla VR-spel
@@ -12631,7 +12648,6 @@ Artık kimlik doğrulayıcınıza erişiminiz yok mu?
 Artık mobil kimlik doğrulayıcıma erişimim yok.
 Artık:
 Aruba
-Arvioinnin julkaisussa tapahtui virhe. Yritä myöhemmin uudelleen.
 Arvioitu toimitusaika:
 Arvioitu toimitusaika: 1–2 viikkoa
 Arvioitu toimitusaika: 2–4 viikkoa
@@ -12643,6 +12659,7 @@ Arvonta käynnissä
 Arvonta on nyt päättynyt ja onnellisia voittajia oli %1$s, kiitos osallistumisestasi.
 Arvonta on nyt päättynyt, kiitos osallistumisestasi.
 Arvostelu
+Arvostelua julkaistaessa tapahtui virhe. Yritä myöhemmin uudelleen.
 Arábia Saudita
 Arène
 Aréna
@@ -12912,6 +12929,7 @@ Aucun serveur n'a été trouvé à cette adresse
 Aucun serveur n'a été trouvé à cette adresse. Si vous connaissez le port utilisé par le serveur, vous pouvez le renseigner.
 Aucun serveur n'a été utilisé récemment.
 Aucun serveur ne fonctionne sur votre réseau local.
+Aucun temps de jeu
 Aucun titre ne correspond à votre recherche actuelle
 Aucun évènement programmé dans cette section
 Aucun évènement trouvé
@@ -13397,8 +13415,8 @@ Açıklamayı Düzenle
 Açıklayıcı özet versiyonu
 Açılır pencere görüntülenmeleri
 Añade detalles sobre un ponente o emisor a los eventos. Aparecerán en el evento y en el resumen para que los usuarios de Steam puedan verlos.
-Añade detalles sobre un ponente o emisor a los eventos. Aparecerán en el evento y también en el resumen de este para que los usuarios de Steam puedan verlos.
-Añadir a deseados
+Añade detalles sobre un ponente o streamer a los eventos. Aparecerán en el evento y también en el resumen de este para que los usuarios de Steam puedan verlos.
+Añadir a la cuenta
 Añadir a la lista de deseados
 Añadir a un amigo
 Añadir al calendario
@@ -13468,6 +13486,7 @@ BIsConfirmEmailForAddUrl
 BIsCustomComingSoonDisplay
 BIsEarlyAccess
 BIsFree
+BIsFreeTemporary
 BIsFreeWeekend
 BIsHidden
 BIsIndividualAccount
@@ -15153,13 +15172,13 @@ Bu oyunun Steam Deck'te iyi çalışması için grafik ayarlarında manuel deği
 Bu oyunun Steam Deck'te sesle ilgili ufak sorunları var
 Bu oyunun anti hile ayarları, Steam Deck'i destekleyecek biçimde yapılandırılmamış
 Bu oyunun bazı kısımlarında harici bir klavye kullanmak faydalı olacaktır
+Bu oyunun başlatılması kullanıcı müdahalesi gerektiriyor. Uzak bilgisayarda manuel olarak başlatın ve buradan yayına katılın.
 Bu oyunun grafik ayarları Steam Deck'te iyi çalışacak şekilde yapılandırılamıyor
 Bu oyunun ilk kurulumu aktif bir internet bağlantısı gerektiriyor
 Bu oyunun tamamı veya bir kısmı şu anda Steam Deck'te işlevsel değil.
 Bu oyunun tasarımcıları getirdikleri yeni perspektifler ve akıllara durgunluk veren sürprizler ile yenilikçi deneylerin birer neferi konumundalar. Bu oyun, içerdiği yenilikler ile daha önce hiç olmadığı kadar eğlendirdi ve ilham verdi.
 Bu oyunun varsayılan grafik yapılandırması Steam Deck'te iyi çalışıyor
-Bu oyunun yüklenmesi kullanıcı müdahalesi gerektiriyor.\n\nUzaktan bilgisayarda elle yükleyin.
-Bu oyunun çalıştırılması kullanıcı müdahalesi gerektiriyor.\n\nUzaktan bilgisayarda elle çalıştırıp yayına buradan katılın.
+Bu oyunun yüklenmesi kullanıcı müdahalesi gerektiriyor. Uzak bilgisayarda manuel olarak yükleyin.
 Bu pakette bulunan oyunlar için %2$s kullanıcı incelemesinden %%%1$s kadarı olumlu
 Bu sayfa yayınlanmadan önce Valve tarafından incelenmesi gerekmektedir.
 Bu sayfada daha fazla etkinlik görmek için seçeneklerinizi ve ayarlarınızı değiştirebilirsiniz.
@@ -15520,10 +15539,11 @@ Bạn có thể thử chạy Steam trong chế độ ngắt mạng.
 Bạn có thể trao giải cho thứ bạn tự làm ra.
 Bạn có thể tùy chỉnh bốn thẻ đầu tiên trên thanh thẻ.
 Bạn cũng có thể %1$s
+Bạn cần bắt cặp với máy tính truy cập từ xa để phát sóng. Vui lòng thử lại và nhập mã PIN bắt cặp trên máy tính truy cập từ xa.
 Bạn cần cài đặt %1$s trước khi cài và chạy %2$s. Bạn đã cài đặt Steam trên máy này chưa?
 Bạn cần lời mời có hiệu lực để tham gia nhóm gia đình.
 Bạn cần thêm %1$s điểm nữa
-Bạn cần tải thêm driver để có thể phát sóng.\n\nVui lòng làm theo chỉ dẫn từ Steam trên máy tính truy cập từ xa.
+Bạn cần tải thêm driver để có thể phát sóng. Vui lòng làm theo chỉ dẫn từ Steam trên máy tính truy cập từ xa.
 Bạn hiện chưa chọn máy chủ yêu thích.
 Bạn hiện đang bị ngắt kết nối khỏi Steam. Hãy kết nối mạng để yêu cầu quyền truy cập vào chức năng này từ người lớn trong gia đình.
 Bạn hiện đang dùng ứng dụng với tài khoản %1$s.
@@ -16122,6 +16142,7 @@ Caymanøyene
 Caza
 Cazaquistão
 Caça
+Cały dzień
 Ce billet a été publié par l'équipe Steam
 Ce champ doit être un nombre.
 Ce code vous permettra de récupérer votre compte si vous n'y avez plus accès, si vous perdez votre appareil ou si vous supprimez cette application sans d'abord transférer votre authentificateur.
@@ -16203,6 +16224,7 @@ CellRenderMask.addCells called with invalid cell range
 CellRenderer
 Celá URL adresa
 Celá obrazovka
+Celý den
 Cena
 Centang kotak ini jika kamu menerima produk ini secara gratis
 Centang kotak ini jika kamu menerima produk ini secara gratis. Ini akan menampilkan tanda "Produk diterima secara gratis" pada ulasanmu. Jika kamu mendapatkan imbalan lainnya untuk pengulasan game ini, kamu harus menuliskannya di ulasanmu.
@@ -17449,6 +17471,8 @@ Contacts
 Contacts qui jouent à ce jeu
 Container does not support insertBefore operation
 Contains these %1$s items:
+Contas de parceiro Steamworks ou de suporte não podem entrar em uma família como criança.
+Contas de parceiros Steamworks ou da equipa de apoio não podem entrar numa família enquanto "Criança".
 Contas limitadas não podem criar uma família.
 Contatta l'Assistenza di Steam
 Contatta l'Assistenza di Steam per ulteriore aiuto
@@ -17608,6 +17632,7 @@ Contul tău nu are permisiunea de a realiza o rezervare.
 Contul tău nu îndeplinește cerințele pentru a folosi această caracteristică. %1$s pentru mai multe informații.
 Contul tău pare a fi limitat. Pentru a preveni abuzul de voturi, trebuie mai întâi să cheltuiești 5 USD pe Steam pentru a putea participa la Premiile Steam. %1$s pentru mai multe informații.
 Contul tău trebuie să se afle în aceeași țară în care se află toți membrii actuali ai familiei.
+Conturile de partener Steamworks sau de asistență nu se pot alătura unei familii în calitate de copil.
 Conturile limitate nu pot crea o familie.
 Contém estes %1$s artigos:
 Contém estes %1$s itens:
@@ -17845,7 +17870,6 @@ Crear nuevo canal de texto
 Crear un canal de voz
 Crear un chat de grupo
 Crear un recordatorio
-Crear una cuenta de forma gratuita
 Crear una cuenta gratuita
 Crear una nueva cuenta
 Creare de obiecte
@@ -18202,6 +18226,7 @@ Căutare jocuri
 Cơ chế chơi đơn yêu cầu có kết nối Internet
 Cướp biển (Yarr!)
 Cексуальний вміст лише для дорослих
+Cả ngày
 Cải tiến duyệt qua cửa hàng
 Cải tiến xác nhận giao dịch
 Cảm tạ
@@ -18218,7 +18243,6 @@ Cần khởi động lại Steam Chat khi đổi ngôn ngữ.\n\nTiếp tục?
 Cần kích hoạt thủ công bàn phím ảo để nhập chữ
 Cần trợ giúp với Steam?
 Cần tư vấn kỹ thuật, hỗ trợ khách hàng chính thức, hoặc yêu cầu hoàn tiền.
-Cần xác nhận: %1$s
 Cẩn thận: Ma quái
 Cập nhật
 Cập nhật gần đây
@@ -18540,9 +18564,10 @@ Das Format wird für dieses Element nicht unterstützt.
 Das Sonderangebot für die Gegenstände in Ihrem Einkaufswagen läuft in Kürze aus.
 Das Spiel erscheint wieder in Ihrem News-Hub und Sie empfangen zukünftig Mitteilungen dazu.
 Das Spiel schließt nicht korrekt und erfordert ggf. ein manuelles Beenden über das Steam-Overlay.
-Das Starten dieses Spiels erfordert einen Eingriff des Benutzers.\n\nStarten Sie es manuell auf dem Streamingserver und verbinden Sie von hier aus zum Stream.
+Das Starten dieses Spiels erfordert einen Eingriff des Benutzers. Starten Sie es manuell auf dem Streamingserver und verbinden Sie sich von dort aus mit dem Stream.
 Das Steam Deck ist in Japan, Südkorea, Taiwan und Hongkong bei Komodo unter <1>steamdeck.komodo.jp</1> zum Kauf verfügbar.
 Das Steam Deck unterstützt keine VR-Spiele.
+Das Streaming erfordert eine Kopplung mit dem Streamingserver. Bitte versuchen Sie es erneut und geben Sie die PIN zur Kopplung auf dem Streamingserver ein.
 Das System dieses Übertragenden unterstützt derzeit keine Steam-Übertragungen.
 Das VR-Spiel des Jahres tarnt sich nicht einfach als normale Realität. Dieses Spiel verbessert die Realität, nutzt das Medium VR und überschreitet die Grenzen virtueller Erlebnisse.
 Das eingefügte Bild war zu groß
@@ -18673,6 +18698,7 @@ De geit, aap en haan werkten samen, maar lieten de geit de achtste plaats inneme
 De gekozen afbeelding is te klein voor dit afbeeldingstype. De afmetingen moeten minimaal %1$sx%2$s zijn.
 De geplakte afbeelding was te groot
 De grafische instellingen van dit spel kunnen niet worden geconfigureerd zodat het goed werkt op Steam Deck.
+De hele dag
 De ingevoerde Steam Guard-code is onjuist. Controleer de code en probeer het opnieuw.
 De ingevoerde code komt niet overeen met de verwachte code. Probeer het opnieuw.
 De ingevoerde sms-code komt niet overeen met de verwachte code. Probeer het later opnieuw.
@@ -18704,7 +18730,7 @@ De mest populære spillene akkurat nå basert på antall spillere som bruker en 
 De mest populære spillene akkurat nå basert på antall spillere.
 De mest populære spillene basert på kjøp, som også er på tilbud akkurat nå.
 De momento segues este curador. Ao deixares de o seguir, os seus artigos não irão aparecer mais na tua Central de Notícias personalizada e as suas recomendações de jogos não irão aparecer na tua loja Steam.
-De momento, a fase beta da funcionalidade de Famílias Steam não está disponível para contas novas.
+De momento, a fase beta da funcionalidade Famílias Steam não está disponível para contas novas.
 De momento, a tua conta apenas pode reentrar na família anterior.
 De momento, esta família não pode aceitar membros novos e apenas pode aceitar ou convidar membros antigos.
 De momento, este jogo ou partes deste não funcionam no Steam Deck.
@@ -19090,6 +19116,7 @@ Denna flik visar alla produkter
 Denna inloggning använde ditt kontonamn och lösenord. Om du inte angav ditt lösenord på den här enheten bör du ändra ditt lösenord nu.
 Denna kurators artiklar syns i din personligt anpassade nyhetshubb och kuratorns spelrekommendationer syns på din Steam-butiksida.
 Denna sektion har inte stöd för lokalisering.
+Denna spelstart kräver handling från användaren. Starta spelet manuellt på fjärrdatorn och anslut till streamingen härifrån.
 Denna sändare håller för närvarande inte en stabil sändningsanslutning till Steam
 Denna sändare är för närvarande begränsad från att sända på Steam
 Denna vecka
@@ -19487,7 +19514,6 @@ Det här kontot loggade in på en annan dator
 Det här spelet finns i ditt bibliotek
 Det här spelet finns på din önskelista
 Det här spelet kan vara relevant för dig:
-Det här spelet kräver ingripande från användaren.\n\nStarta spelet manuellt på fjärrdatorn och anslut till streamingen härifrån.
 Det här spelet kräver manuell aktivering av handkontrollsstöd via inställningar i spelet
 Det här spelet kräver manuell aktivering av stöd för Steam Cloud via inställningarna i spelet.
 Det här spelet rekommenderas för dig
@@ -19701,8 +19727,8 @@ Dette spillet kan kjøres både i standardmodus og VR-modus.\nSe systemkrav for 
 Dette spillet krever at grafikkinnstillingene konfigureres manuelt for god ytelse på Steam Deck.
 Dette spillet krever at man manuelt slår på Steam Cloud-støtte for lagrede spill i spillets innstillinger.
 Dette spillet krever at man manuelt slår på kontrollerstøtte i spillets innstillinger.
-Dette spillet krever handling fra brukeren for å bli installert.\n\nInstaller manuelt på den eksterne datamaskinen.
-Dette spillet krever handling fra brukeren for å starte.\n\nStart spillet manuelt på den eksterne datamaskinen og koble deg til strømmen herfra.
+Dette spillet krever handling fra brukeren for å installeres. Installer manuelt på den eksterne datamaskinen.
+Dette spillet krever handling fra brukeren for å starte. Start spillet manuelt på den eksterne datamaskinen og koble deg til strømmen herfra.
 Dette spillet krever visse eksterne enheter: USB-gitar
 Dette spillet krever visse eksterne enheter: webkamera
 Dette spillet støtter HDR, men det må bli slått på manuelt i spillets innstillinger.
@@ -19821,6 +19847,7 @@ Di editori e sviluppatori che conosci
 Di sini kamu bisa melihat game-game yang telah kamu tambahkan ke akun Steam-mu.
 Di sini, kamu bisa melihat pemberitahuan Steam terkait Wishlist-mu, Teman, Game, Inventaris, dan lainnya.
 Di sini, kamu dapat melihat dan mengonfirmasi perubahan penting pada keamanan akun Steam-mu.
+Dia inteiro
 Diabaikan
 Dialog Steam
 DialogManagerAndroid
@@ -19856,7 +19883,7 @@ Die Einladung von %1$s an %2$s wurde geblockt, da die Familie bereits die maxima
 Die Entwickler empfehlen, dieses Spiel mit einem Controller zu spielen
 Die Entwickler würden sich freuen, wenn Sie %1$s für die folgende Kategorie nominieren.
 Die Ersteinrichtung dieses Spiels erfordert eine aktive Internetverbindung.
-Die Installation dieses Spiels erfordert einen Eingriff des Benutzers.\n\nInstallieren Sie es manuell auf dem Streamingserver.
+Die Installation dieses Spiels erfordert einen Eingriff des Benutzers. Installieren Sie es manuell auf dem Streamingserver.
 Die Kindersicherung Ihres Accounts erfordert eine Bestätigung Ihrer Anmeldedaten
 Die Kindersicherungseinstellungen konnten nicht geändert werden.
 Die Nutzung unterliegt dem <2>Steam-Nutzungsvertrag</2> und den <1>Steam-Datenschutzrichtlinien</1>.
@@ -20311,7 +20338,6 @@ Dit spel ondersteunt HDR, maar dit moet handmatig worden ingeschakeld in het spe
 Dit spel ondersteunt de standaard weergaveresolutie van Steam Deck niet, wat de prestaties mogelijk kan aantasten.
 Dit spel ondersteunt de standaard weergaveresolutie van Steam Deck, maar deze wordt niet standaard ingesteld. Je moet mogelijk handmatig de weergaveresolutie instellen.
 Dit spel ondersteunt streamen momenteel niet.
-Dit spel opstarten vereist een gebruikersactie.\n\nStart het spel handmatig op de computer op afstand en open hier vervolgens de stream.
 Dit spel sluit niet netjes af, dus je moet het mogelijk handmatig via de Steam-overlay afsluiten.
 Dit spel staat op je verlanglijst
 Dit spel vereist een VR-headset om te spelen. \nZie de systeemeisen voor meer informatie.
@@ -20409,6 +20435,7 @@ Dodaj do Kalendarza Google
 Dodaj do Kalendarza Outlook
 Dodaj do Kalendarza Yahoo
 Dodaj do kalendarza
+Dodaj do konta
 Dodaj do koszyka
 Dodaj do listy życzeń
 Dodaj do listy życzeń już teraz!
@@ -21189,7 +21216,7 @@ E játék első indítása aktív internetkapcsolatot igényel.
 E játék eltávolítása Hírközpontodból és a további kommunikáció blokkolása.
 E játék fejlesztői a kreatív kísérletezés frontvonalában állnak, friss nézőpontot és észbontó meglepetéseket hozva el. Ez a játék olyan újszerűséggel gyönyörködtetett, inspirált és szórakoztatott, amit játékban korábban még nem láttunk.
 E játék grafikai beállításait nem lehet úgy konfigurálni, hogy jól fusson Steam Decken.
-E játék indítása felhasználói beavatkozást igényel.\n\nIndítsd el manuálisan a távoli számítógépen, majd csatlakozz itt a továbbításhoz.
+E játék indítása felhasználói beavatkozást igényel. Indítsd el manuálisan a távoli számítógépen, majd csatlakozz itt a továbbításhoz.
 E játék indítóalkalmazása, illetve beállítási eszköze érintőkijelzőt vagy virtuális billentyűzetet igényelhet, vagy nehezen olvasható szövege lehet.
 E játék jelölése a(z) %1$s kategóriában
 E játék jó teljesítményt nyújt alapértelmezett grafikai beállításokkal Steam Decken.
@@ -21202,7 +21229,7 @@ E játék nem támogatja a Steam Deck natív megjelenítési felbontását, így
 E játék nem támogatja a platformok közti játékmentéseket.
 E játék nem támogatott Steam Decken egy nem támogatott csalásellenes szoftver használata miatt.
 E játék néha egér-, billentyűzet- vagy nem Steam Deck vezérlőikonokat mutat.
-E játék telepítése felhasználói beavatkozást igényel.\n\nTelepítsd manuálisan a távoli számítógépen.
+E játék telepítése felhasználói beavatkozást igényel. Telepítsd manuálisan a távoli számítógépen.
 E játék támogatja a HDR-t, de azt manuálisan kell bekapcsolni a játékbeli beállításokban.
 E játék támogatja a Steam Deck natív megjelenítési felbontását, de nem állítja be azt alapértelmezetten, így a megjelenítési felbontás manuális konfigurálására lehet szükség.
 E játék támogatja a giro-, illetve a trackpad egér módban való használatát a kamera vezérléséhez, a mozgás játékvezérlős irányításával.
@@ -21424,6 +21451,7 @@ Een nieuwe bibliotheekweergave
 Een nieuwe discussie in %1$s
 Een nieuwsfeed die is gebaseerd op je bibliotheek
 Een pagina als goedgekeurd markeren, zorgt ervoor dat de partner de uitverkoop kan publiceren en live zetten.
+Een partner- of ondersteuningsaccount van Steamworks kan niet als kind worden toegevoegd aan een gezin.
 Een profiel waarop je geabonneerd bent
 Een recensie plaatsen
 Een spel is afgelopen
@@ -21514,6 +21542,7 @@ Egyszerűsített kínai
 Egyszerűsített kínai - Steam China
 Egyéb esemény
 Együttműködő
+Egész nap
 Ehhez a fiókhoz egy másik eszközön már be van kapcsolva a Steam Guard.
 Ehhez a fiókhoz már van hitelesített telefonszám. Más szám beállításához távolítsd el.
 Ehhez a játékhoz VR fejszett szükséges. \nNézd meg a rendszerkövetelményeket a részletekért.
@@ -21720,8 +21749,8 @@ El evento ha comenzado
 El evento se ha eliminado con éxito.
 El evento «%1$s» no es visible, los recordatorios no aparecerán.
 El grupo familiar no existe.
-El inicio de este juego requiere la intervención del usuario.\n\nInícialo manualmente en el equipo remoto y únete a la retransmisión desde aquí.
-El inicio de este juego requiere la intervención del usuario.\n\nInícialo manualmente en el ordenador remoto y únete a la retransmisión desde aquí.
+El inicio de este juego requiere la intervención del usuario. Inícialo manualmente en el equipo remoto y únete a la transmisión desde aquí.
+El inicio de este juego requiere la intervención del usuario. Inícialo manualmente en el ordenador remoto y únete a la transmisión desde aquí.
 El inicio de la retransmisión ha fallado
 El inicio de sesión anónimo no es compatible ni con la web ni con el cliente de escritorio de Steam, solo con steamcmd.
 El inicio de sesión con código QR
@@ -21737,7 +21766,7 @@ El nombre del archivo no especifica el código de idioma de la API. El archivo d
 El ordenador remoto está utilizando la Retransmisión de Steam en estos momentos, por lo que no puede iniciar una sesión de Remote Play.
 El organizador debe indicar quién presenta este evento
 El origen del horóscopo chino
-El premio aparecerá inmediatamente y el receptor obtendrá %1$s puntos adicionales al cabo de %2$s.
+El premio aparecerá inmediatamente y el receptor obtendrá %1$s puntos adicionales al cabo de %2$s
 El premio ha sido otorgado con éxito.
 El próximo evento comienza
 El próximo evento va a comenzar
@@ -24199,6 +24228,7 @@ FamilyGroups.ResendInvitationToFamilyGroup#1
 FamilyGroups.RespondToRequestedPurchase#1
 FamilyGroups.SetFamilyCooldownOverrides#1
 FamilyGroups.SetPreferredLender#1
+FamilyGroups.UndeleteFamilyGroup#1
 FamilyGroupsClient.NotifyGroupChanged#1
 FamilyGroupsClient.NotifyInviteStatus#1
 FamilyGroupsClient.NotifyRunningApps#1
@@ -24694,6 +24724,7 @@ Fiók: %1$s
 Fiókadataid megváltoztak
 Fiókadatok betöltése...
 Fiókbeállítások használata
+Fiókhoz adás
 Fiókod nem felel meg e funkció használati követelményeinek. További információkért %1$s.
 Fiókrészletek
 Fiókváltás
@@ -25241,11 +25272,11 @@ Fäst kanallista
 Få besked via e-mail, når en genstand fra din ønskeliste bliver udgivet eller er på udsalg
 Få e-postmeddelanden när artiklar på din önskelista släpps eller är på rea
 Få en avisering
+Få en gratis belønning hver dag gjennom hele salget!
 Få en notifikation
 Få et varsel
 Få et varsel på e-post når gjenstander fra ønskelisten blir utgitt eller er på tilbud
 Få ett samlekort fra salget ved å gå gjennom oppdagelseskøen hver dag av salget! <1>Trykk her</1> for å lese mer.
-Få gratis belønning hver dag gjennom hele salget!
 Få hjelp med kjøpet
 Få hjälp med ditt köp
 Få hjælp til dit køb
@@ -25499,7 +25530,7 @@ Game ini dapat berjalan dengan baik di Steam Deck dengan kontrol dan tampilan ba
 Game ini dapat berjalan di Steam Deck, tapi mungkin membutuhkan langkah tambahan untuk interaksi atau konfigurasi.
 Game ini direkomendasikan untukmu
 Game ini layak mendapatkan pengakuan atas musiknya yang luar biasa. Soundtrack-nya memang paling TOP!
-Game ini membutuhkan campur tangan pengguna untuk diluncurkan.\n\nLuncurkan secara manual di komputer jarak jauh dan lihat stream dari sini.
+Game ini membutuhkan campur tangan pengguna untuk diluncurkan. Luncurkan secara manual di komputer jarak jauh dan lihat stream dari sini.
 Game ini membutuhkan pengaturan grafis manual untuk dapat berfungsi dengan baik di Steam Deck
 Game ini memerlukan dukungan Steam Cloud diaktifkan secara manual untuk game yang tersimpan menggunakan pengaturan di dalam game
 Game ini memerlukan dukungan kontroler diaktifkan secara manual menggunakan pengaturan di dalam game
@@ -25525,7 +25556,7 @@ Game ini terlalu seru sampai kamu ingin membawanya ke mana pun kamu pergi! Untun
 Game ini termasuk dalam Penjualan Terlaris
 Game ini tidak didukung di Steam Deck dikarenakan penggunaan anti-cheat yang tidak didukung
 Game ini tidak mendukung penyimpanan game lintas platform
-Game ini tidak mendukung resolusi tampilan bawaan Steam Deck dan penurunan performa mungkin terjadi
+Game ini tidak mendukung resolusi tampilan bawaan Steam Deck dan penurunan kinerja mungkin terjadi
 Game ini tidak menutup dengan benar dan mungkin membutuhkanmu untuk mengeluarkannya secara manual via overlay Steam
 Game ini tidak secara otomatis mendeteksi kontroler Bluetooth/USB eksternal untuk mode multipemain lokal
 Game ini tidak secara otomatis mendeteksi kontroler Bluetooth/USB eksternal. Kamu mungkin perlu mengganti kontroler secara manual melalui Menu Akses Cepat
@@ -26001,7 +26032,6 @@ GetFranchiseNames
 GetFreeWeekendEnd
 GetFreeWeekendPlayTextOverride
 GetFullSpacingPropertyName
-GetHeaderURL
 GetHeroCapsuleURL
 GetHeroCapsuleURL_2x
 GetHubCategory
@@ -26313,6 +26343,7 @@ Gjør denne brukeren til en moderator
 Gjør om
 Gjør synlig nå
 Glemt kontonavnet eller passordet?
+Gli account da partner di Steamworks o di assistenza non possono entrare a far parte di una condivisione familiare come bambini.
 Gli account limitati non possono creare una condivisione familiare.
 Gli amici e la chat non sono disponibili in modalità offline. Torna online per accedere alla chat e alla tua lista amici.
 Gli articoli dagli sconti più elevati in questo momento
@@ -26451,7 +26482,6 @@ Graphismes pixel
 Grappig
 Gras
 Grassetto
-Gratis account maken
 Gratis at spille
 Gratis att spela
 Gratis dan mudah. Temukan ribuan game PC untuk dimainkan dengan jutaan teman baru.
@@ -27114,7 +27144,7 @@ Halloweenské události
 Halloweenské události v hororových hrách
 Halloweenské události v nehororových hrách
 Haluaa pelata
-Haluatko julkaista arvioinnin?
+Haluatko julkaista arvostelun?
 Haluatko julkaista tapahtuman Steamissä?
 Haluatko päivittää arvostelusi?
 Haluatko varmasti kirjautua ulos?
@@ -27364,11 +27394,13 @@ Hecho
 Hediye
 Hediye aldığımda
 Heinä-syyskuu %1$s
+Hela dagen
 Hela eller delar av spelet fungerar för närvarande inte på Steam Deck.
 Helbredd
 Helden-Shooter
 Heldenbild bearbeiten
 Heldige vindere indtil videre!
+Hele dagen
 Hele spillet eller dele af det fungerer ikke på Steam Deck på nuværende tidspunkt.
 Hellas
 Hello
@@ -27460,6 +27492,7 @@ Herstelt je filters naar de standaardwaarden
 Herunterladen
 Hervorgehobene Angebote
 Herzerwärmend
+Hesaba Ekle
 Hesabınız devre dışı bırakıldı
 Hesabınız kısıtlı. Steam Ödülleri'ne katılabilmeniz ve aday göstermede kötüye kullanımın önüne geçmek için Steam'de 5 USD harcamalısınız. Daha fazla bilgi için %1$s.
 Hesabınız kısıtlı. Steam Ödülleri'ne katılabilmeniz ve oylamada kötüye kullanımın önüne geçmek için Steam'de 5 USD harcamalısınız. Daha fazla bilgi için %1$s.
@@ -29514,7 +29547,7 @@ Iniciar a sessão com uma nova conta
 Iniciar a sessão?
 Iniciar el modo de prueba
 Iniciar este jogo agora
-Iniciar este jogo requer a intervenção do utilizador.\n\nInicia-o manualmente no computador remoto e liga-te ao stream daqui.
+Iniciar este jogo requer a intervenção do utilizador. Inicia‑o manualmente no computador remoto e, de seguida, entra no stream aqui.
 Iniciar la lista de descubrimientos
 Iniciar modo de teste
 Iniciar prueba de micrófono
@@ -29756,15 +29789,15 @@ Instala uma das apps do Steam para receberes lembretes no teu dispositivo móvel
 Instala una de las aplicaciones de Steam para suscribirte a los recordatorios de móvil.
 Instala y ejecuta el demo para %1$s
 Instala y ejecuta la demo para %1$s
-Instalace této hry vyžaduje zásah uživatele.\n\nProveďte na vzdáleném počítači manuální instalaci.
-Instalacja tej gry wymaga ingerencji użytkownika.\n\nZainstaluj ręcznie na zdalnym komputerze.
+Instalace této hry vyžaduje zásah uživatele. Proveďte tedy na vzdáleném počítači manuální instalaci.
+Instalacja tej gry wymaga ingerencji użytkownika. Zainstaluj ręcznie na zdalnym komputerze.
 Instalado em %1$s
 Instalados en %1$s
 Instalar demo
 Instalar demonstração
 Instalar e iniciar a demonstração de %1$s
-Instalarea acestui joc necesită intervenție din partea utilizatorului.\n\nInstalează-l manual pe computerul la distanță.
-Instalasi driver tambahan dibutuhkan untuk memulai streaming.\n\nMohon ikuti petunjuk dari Steam di komputer jarak jauh.
+Instalarea acestui joc necesită intervenție din partea utilizatorului. Instalează-l manual pe computerul la distanță.
+Instalasi driver tambahan dibutuhkan untuk memulai streaming. Mohon ikuti petunjuk dari Steam di komputer jarak jauh.
 Instalat pe %1$s
 Instale um dos aplicativos do Steam para receber lembretes no seu dispositivo móvel.
 Instalează una dintre aplicațiile Steam pentru a primi notificări pe telefonul mobil.
@@ -29777,10 +29810,9 @@ Install one of the Steam apps to sign up for mobile reminders.
 Installa demo
 Installa ed esegui la demo di %1$s
 Installa una delle app di Steam per ricevere notifiche sul tuo telefono.
-Installatie van dit spel vereist een gebruikersactie.\n\nInstalleer het handmatig op de computer op afstand.
-Installation af dette spil kræver handling fra brugeren.\n\nInstallér spillet manuelt på fjerncomputeren.
-Installation of this game requires user intervention.\n\nInstall manually on the remote computer.
-Installationen av detta spel kräver ingripande från användaren.\n\nInstallera manuellt på fjärrdatorn.
+Installation af dette spil kræver handling fra brugeren. Installér spillet manuelt på fjerncomputeren.
+Installation of this game requires user intervention. Install manually on the remote computer.
+Installationen av detta spel kräver handling från användaren. Installera manuellt på fjärrdatorn.
 Installato su %1$s
 Installed on %1$s
 Installeer een van de Steam-apps om je aan te melden voor herinneringen op je mobiele apparaat.
@@ -31475,7 +31507,6 @@ Katso ja chattaa kavereiden kanssa Steam.tv:ssä
 Katso jäsenlista
 Katso kaikki päivitykset (viimeisin: %1$s)
 Katso kuraattorin %1$s suositukset tapahtuman peleistä.
-Katso lähetyssivua
 Katso nyt
 Katso suoratoistoa
 Katso suoratoistoa %1$s minuuttia ja saa esineitä kehittäjältä %2$s, kun tapahtuma on ohi!
@@ -31579,6 +31610,7 @@ Kein Interesse
 Kein Name
 Kein Tab festgelegt. Dieser Bereich wird auf der öffentlich sichtbaren Seite ausgeblendet.
 Keine
+Keine Auswahl
 Keine Beiträge gefunden
 Keine Beiträge von diesem Kurator gefunden
 Keine Bilder
@@ -31606,7 +31638,6 @@ Keine weiteren älteren Beiträge gefunden
 Keine Übereinstimmung zu unterstütztem BBCode
 Keine älteren Beiträge gefunden
 Keine übereinstimmenden Bilder
-Keiner
 Kekerasan
 Kelet-Timor
 Kelime Oyunları
@@ -31785,6 +31816,7 @@ Không hỗ trợ
 Không hỗ trợ tính năng tải lên
 Không hỗ trợ xác thực sinh trắc học cho thiết bị này.
 Không hợp lệ
+Không khi nào
 Không khớp với BBCode được hỗ trợ
 Không kết nối tới máy chủ Steam
 Không phải bạn bè
@@ -32228,6 +32260,7 @@ Kokemuspisteet: %1$s
 Kokemuspistelisä
 Koko URL
 Koko näyttö
+Koko päivä
 Kokosinseln
 Kokosové (Keelingovy) ostrovy
 Kokosöarna
@@ -32357,6 +32390,7 @@ Konstruksjon
 Konstruksjonssimulering
 Konstruktion
 Konstruktionssimulatorer
+Konta partnerskie Steamworks ani wsparcia nie mogą dołączyć do rodziny jako dziecko.
 Konta z ograniczeniami nie mogą utworzyć rodziny.
 Kontakt Steam Support
 Kontakt Steam Support for at få mere hjælp
@@ -33051,7 +33085,6 @@ Kênh Steam chính thức
 Kênh của nhà phát triển
 Kênh nổi tiếng
 Kích hoạt nguồn cấp RSS
-Kích thước của %1$s quá lớn (không quá 10MB).
 Kích thước sai
 Kína
 Kísérlet megvitatása
@@ -33277,7 +33310,7 @@ L'informazione immessa deve essere un numero.
 L'informazione immessa non è un URL valido.
 L'informazione immessa non è un'e-mail valida.
 L'inserimento di testo richiede di richiamare manualmente la tastiera virtuale.
-L'installation de ce jeu nécessite votre intervention.\n\nInstallez-le manuellement sur \u200b\u200bl'ordinateur distant.
+L'installation de ce jeu nécessite votre intervention. Installez-le manuellement sur \u200b\u200bl'ordinateur distant.
 L'invitation envoyée par %1$s à %2$s a été bloquée, car la famille a atteint la taille maximale.
 L'invito di %1$s a %2$s è stato bloccato perché la famiglia ha un numero massimo di membri consentiti.
 L'offerta termina: %1$s
@@ -33353,8 +33386,8 @@ La imagen pegada era demasiado grande.
 La imagen pegada es demasiado grande
 La imagen proporcionada no tiene el formato esperado de %1$s
 La imagen que seleccionaste es demasiado pequeña para este tipo de imagen. Las dimensiones deben tener al menos %1$s × %2$s
-La instalación de este juego requiere intervención del usuario.\n\nInstalar manualmente en el equipo remoto.
-La instalación de este juego requiere intervención del usuario.\n\nInstálalo manualmente en el ordenador remoto.
+La instalación de este juego requiere intervención del usuario. Instálalo manualmente en el equipo remoto.
+La instalación de este juego requiere intervención del usuario. Instálalo manualmente en el ordenador remoto.
 La introducción de algunos textos requiere la activación manual del teclado en pantalla.
 La introducción de texto requiere la activación manual del teclado en pantalla.
 La invitación de %1$s a %2$s fue bloqueada porque el grupo ya tiene el número máximo permitido de miembros.
@@ -33383,8 +33416,8 @@ La resolución de la imagen debe ser exactamente de %1$s × %2$s
 La resolución de la imagen debe ser exactamente de %1$s\xa0×\xa0%2$s
 La retransmisión de Steam no es compatible actualmente con el sistema de este emisor
 La retransmisión fuera de casa no está disponible actualmente. Inténtalo de nuevo más tarde.
-La retransmisión requiere la instalación de controladores adicionales.\n\nPor favor, sigue las indicaciones de Steam en el equipo remoto.
-La retransmisión requiere la instalación de controladores adicionales.\n\nPor favor, sigue las indicaciones de Steam en el ordenador remoto.
+La retransmisión requiere emparejamiento con el equipo remoto. Vuelve a intentarlo e ingresa el PIN de emparejamiento en el equipo remoto.
+La retransmisión requiere la instalación de controladores adicionales. Sigue las indicaciones de Steam en el equipo remoto.
 La revisione da parte di Valve è necessaria prima di poter pubblicare questa pagina
 La richiesta di accesso di %1$s è stata approvata
 La richiesta di accesso di %1$s è stata rifiutata
@@ -33405,6 +33438,10 @@ La siguiente sección tiene la función de revelación dinámica activada. Puede
 La solicitud de inicio de sesión ha caducado.
 La tecla rápida de Presionar para hablar ha sido asignada como
 La tecla rápida de Presionar para silenciar ha sido asignada como
+La transmisión requiere el emparejamiento con el ordenador remoto. Vuelve a intentarlo e introduce el PIN de emparejamiento en el ordenador remoto.
+La transmisión requiere la instalación de controladores adicionales. Por favor, sigue las indicaciones de Steam en el ordenador remoto.
+La trasmissione richiede l'associazione con il computer remoto. Riprova e inserisci il PIN di associazione sul computer remoto.
+La trasmissione richiede l'installazione di un driver aggiuntivo. Segui le istruzioni di Steam sul computer remoto.
 La tua condivisione familiare:
 La tua medaglia
 La tua pagina è approvata e pronta per la pubblicazione
@@ -33532,7 +33569,7 @@ Lansare de DLC
 Lansare de joc
 Lansare viitoare
 Lansare în curând
-Lansarea jocului necesită intervenție din partea utilizatorului.\n\nPornește-l manual pe computerul la distanță și, de aici, participă la transmisiune.
+Lansarea jocului necesită intervenția utilizatorului. Pornește-l manual pe computerul la distanță și, de aici, alătură-te transmisiunii.
 Lansarea unui sezon sau a unui permis de bătălie
 Lansat la: %1$s
 Lansate recent
@@ -33586,6 +33623,7 @@ Largura de banda necessária (Mb/s):
 Largura de banda necessária (Mbps):
 Largura total
 Las credenciales de tu cuenta han cambiado
+Las cuentas de soporte o de asociados de Steamworks no pueden unirse a un grupo familiar como menores.
 Las cuentas limitadas no pueden crear un grupo familiar.
 Las demos más descargadas
 Las discusiones de este evento están en la cola de migración al sistema de eventos y no se puede acceder a ellas temporalmente. Inténtalo más tarde.
@@ -33709,7 +33747,7 @@ Le jeu VR de l'année n'est pas une pâle imitation de la réalité\xa0: il l'am
 Le jeu VR de l'année n'est pas une pâle imitation de la réalité\xa0:\xa0il l'améliore en tirant parti des mécanismes de la VR et en repoussant les limites de l'univers virtuel.
 Le jeu rencontre de légers problèmes d'audio sur Steam\xa0Deck.
 Le jeu rencontre de légers problèmes graphiques ou d'affichage sur Steam\xa0Deck.
-Le lancement de ce jeu nécessite votre intervention.\n\nLancez-le manuellement sur l'ordinateur distant, puis rejoignez le stream ici.
+Le lancement de ce jeu nécessite votre intervention. Lancez-le manuellement sur l'ordinateur distant, puis rejoignez le stream ici.
 Le lanceur ou l'outil de configuration du jeu peut nécessiter l'écran tactile ou le clavier virtuel, ou comporter du texte difficile à lire.
 Le lien sur lequel vous avez cliqué a expiré. Veuillez renouveler votre demande.
 Le magasin n'est pas accessible au sein du client Steam\xa0Link.
@@ -33726,7 +33764,8 @@ Le réseau de contacts et le chat ne sont pas disponibles en mode hors ligne. Ve
 Le seguenti azioni avverranno dopo aver cliccato su OK:
 Le seguenti librerie open source sono state usate per la realizzazione di questa applicazione
 Le serpent furtif ne trouvait aucun intérêt à s'éreinter sur une longue distance et s'enroula discrètement autour du sabot avant du cheval.\n\nTandis que le cheval galopait en direction de la ligne d'arrivée, le serpent glissa au sol et surprit son destrier suffisamment longtemps pour ramper vers la sixième place, talonné par le cheval désarçonné.
-Le streaming nécessite l'installation d'un pilote supplémentaire.\n\nVeuillez suivre les instructions sur l'ordinateur distant.
+Le streaming nécessite l'installation d'un pilote supplémentaire. Veuillez suivre les instructions sur l'ordinateur distant.
+Le streaming nécessite une association avec l'ordinateur distant. Veuillez réessayer et saisissez le code\xa0PIN sur l'ordinateur distant.
 Le streaming à distance n'est pas disponible pour le moment. Veuillez réessayer ultérieurement.
 Le style visuel n'aspire pas à une représentation graphique fidèle au monde réel (même si c'est un but fort noble en soi), il insuffle au jeu son identité visuelle et son atmosphère.
 Le système antitriche de ce jeu n'est pas compatible avec Steam\xa0Deck.
@@ -33782,6 +33821,7 @@ Legg til i Google-kalender
 Legg til i Outlook-kalender
 Legg til i Yahoo-kalender
 Legg til i kalender
+Legg til i konto
 Legg til konto
 Legg til penger
 Legg til på ønskeliste
@@ -33868,6 +33908,7 @@ Les billets publiés par des groupes de curation que vous suivez sur Steam seron
 Les billets à la une, tels que ceux concernant les jeux les plus vendus, seront inclus.
 Les codes de secours sont des codes Steam Guard à usage unique que vous pouvez générer pour votre compte.
 Les comptes limités ne peuvent pas créer de famille.
+Les comptes partenaires ou de support Steamworks ne peuvent pas rejoindre de famille sous le statut enfant.
 Les discussions pour cet évènement attendent d'être déplacées vers le système d'évènements. Elles sont temporairement inaccessibles. Veuillez revenir plus tard.
 Les données originales ont été effacées. Tous les articles seront révélés au hasard. Cette section sera actualisée automatiquement toutes les %1$s\xa0secondes.
 Les identifiants ne sont pas sauvegardés sur ce PC, conformément aux paramètres Steam.
@@ -34285,6 +34326,7 @@ Lisää pelin traileri
 Lisää puhuja
 Lisää tapahtumiin puhujan tai striimaajan tiedot. Ne näkyvät tapahtumassa ja tapahtuman yhteenvedossa Steamin käyttäjille.
 Lisää tili
+Lisää tilille
 Lisää toivelistalle
 Lisää tuloksia
 Lisää varausvaihtoehto
@@ -34357,6 +34399,7 @@ Livssimulering
 Livssimulering och fängslande spel
 Livssimulering og oppslukende simulering
 Livssimuleringar
+Lizenz hinzufügen
 Lizenz: %1$s
 Liên hệ đội hỗ trợ Steam
 Liên hệ đội hỗ trợ Steam để được trợ giúp thêm
@@ -34376,7 +34419,6 @@ Lo sentimos, no cumples los requisitos
 Lo sentimos, no hemos podido encontrar esa página.
 Lo sentimos, no pudimos encontrar esa página.
 Lo stile visivo non punta alla fedeltà grafica del mondo reale (benché questo sia un nobile scopo), ma piuttosto descrive aspetti e contenuti che pervadono un intero gioco.
-Lo streaming richiede l'installazione di un driver aggiuntivo.\n\nSegui le istruzioni di Steam sul computer remoto.
 Lo sviluppatore ha fornito informazioni aggiuntive sul supporto di Steam Deck per questo gioco. Scopri di più sulla pagina della Comunità premendo
 Lo sviluppatore ha fornito informazioni aggiuntive sul supporto di Steam Deck per questo gioco. Troverai ulteriori dettagli sulla pagina della Comunità.
 Lo tiene %1$s
@@ -34834,6 +34876,7 @@ Lägg till i Google-kalender
 Lägg till i Outlook-kalender
 Lägg till i Yahoo-kalender
 Lägg till i kalender
+Lägg till i konto
 Lägg till i kundvagn
 Lägg till konto
 Lägg till mig
@@ -34885,7 +34928,6 @@ Lähetys käynnissä: seuraa kehittäjän peliä
 Lähetys käynnissä: seuraa kilpailullista ottelua
 Lähetys käynnissä: seuraa pikataivalta
 Lähetys käynnissä: seuraa yhteisön peliä
-Lähetys vaatii lisäajureiden asentamista.\n\nSeuraa etätietokoneella näkyviä Steamin ohjeita.
 Lähetystä ei voitu käynnistää.
 Lähetä
 Lähetä ilmoitus, kun...
@@ -35190,6 +35232,7 @@ Ma ekkor: %1$s
 Maaf, halaman tidak ditemukan.
 Maaf, tidak berhasil.
 Maaf, tidak memenuhi syarat
+Maak een gratis account
 Maaliskuun jälkeen (%1$s %2$s tai myöhemmin)
 Maandabonnement
 Maanviljelysimulaatiot
@@ -39422,6 +39465,7 @@ Nuevos de terror, próximamente...
 Nuevos lanzamientos
 Null
 Null Active Account Tokens
+Null Stunden
 NullExp
 Nullstill søk
 Nulová
@@ -39845,6 +39889,7 @@ Näytä saatavilla olevat sovellukset täällä.
 Näytä saatavilla olevat suoratoistot
 Näytä sisältö
 Näytä sivu
+Näytä suoratoistosivu
 Näytä tai piilota suora lähetys
 Näytä tapahtuma
 Näytä tarkistuspyyntö
@@ -40026,6 +40071,7 @@ O desenvolvedor forneceu mais informações a respeito da compatibilidade do jog
 O desenvolvedor forneceu mais informações a respeito da compatibilidade do jogo com o Steam Deck. Acesse mais informações na página da comunidade.
 O developer forneceu informações adicionais sobre a compatibilidade deste jogo com o Steam Deck. Fica a saber mais na respetiva página na Comunidade ao pressionar
 O developer forneceu informações adicionais sobre a compatibilidade deste jogo com o Steam Deck. Fica a saber mais na respetiva página na Comunidade.
+O dia todo
 O discuție nouă în „%1$s”
 O ecrã do computador remoto está bloqueado.
 O elige de
@@ -42079,13 +42125,12 @@ Pelillä on pieniä grafiikka- tai näyttöongelmia Steam Deckillä.
 Pelillä on pieniä ääniongelmia Steam Deckillä.
 Peliluettelon lataaminen palvelimelta epäonnistui. (%1$s)
 Pelin %1$s kehittäjät haluaisivat, että nimeät pelin palkintoehdokkaaksi alla olevassa kategoriassa.
-Pelin asennus vaatii toimenpiteitä.\n\nAsenna manuaalisesti etätietokoneelle.
 Pelin ensiasennus vaatii aktiivisen internet-yhteyden.
 Pelin grafiikka-asetuksia ei voida määrittää niin, että ne toimisivat hyvin Steam Deckillä.
 Pelin huijauksenestoa ei ole määritetty siten, että se tukee Steam Deckiä.
 Pelin kehittäjät suosittelevat ohjaimen käyttämistä.
 Pelin käynnistysohjelma/asennustyökalu saattaa vaatia kosketusnäytön tai virtuaalisen näppäimistön käyttöä, tai sen teksti saattaa olla vaikeasti luettavissa.
-Pelin käynnistäminen vaatii toimenpiteitä.\n\nKäynnistä manuaalisesti etätietokoneelta ja liity lähetykseen täältä käsin.
+Pelin käynnistäminen vaatii käyttäjän toimenpiteitä. Käynnistä peli manuaalisesti etätietokoneella ja palaa sitten suoratoistoon tällä laitteella.
 Pelin oletusgrafiikkamääritykset toimivat hyvin Steam Deckillä.
 Pelin omistaa %1$s
 Pelin omistaa <1>%1$s kaveri</1>
@@ -42199,7 +42244,7 @@ Penghargaan Steam
 Penghargaan Steam di event ini telah berakhir. Periksa kembali saat diskon Musim Gugur dan Musim Dingin untuk Penghargaan Steam tahunan!
 Penghargaan akan langsung terlihat dan penerima akan mendapatkan %1$s poin bonus setelah %2$s
 Penghargaan ini sudah diberikan.
-Penginstalan game ini membutuhkan campur tangan pengguna.\n\nInstal secara manual di komputer jarak jauh.
+Penginstalan game ini membutuhkan campur tangan pengguna. Instal secara manual di komputer jarak jauh.
 Penguji Aplikasi Steam Seluler versi beta bisa login dengan memindai kode QR.
 Pengumuman %1$s
 Pengumuman / Berita
@@ -42242,8 +42287,8 @@ Per adulti
 Per aprire il nuovo elenco scoperte è necessario aver effettuato l'accesso a Steam.
 Per chattare, accedi con il tuo account da partner di Steamworks
 Per invitare un amico a connettersi, inserisci il suo codice amico.
-Per l'avvio di questo gioco è richiesto l'intervento dell'utente.\n\nAvvialo manualmente sul computer remoto e connettiti alla trasmissione da qui.
-Per l'installazione di questo gioco è necessario l'intervento dell'utente.\n\nInstallalo manualmente sul computer remoto.
+Per l'avvio di questo gioco è richiesto l'intervento dell'utente. Avvialo manualmente sul computer remoto e connettiti alla trasmissione da qui.
+Per l'installazione di questo gioco è necessario l'intervento dell'utente. Installalo manualmente sul computer remoto.
 Per motivi di sicurezza, scansiona nuovamente il codice QR di Steam.
 Per ottenerne vai al %1$s
 Per poter assegnare premi devi prima effettuare l'accesso.
@@ -42979,7 +43024,6 @@ Plein écran
 Pleine largeur
 Plicul nu poate fi deschis
 Plik %1$s jest za duży (maksymalnie %2$s MB).
-Plik %1$s jest za duży (maksymalnie 10 MB).
 Plik nie posiada rozszerzenia. xml lub. csv. Nie udało się przetworzyć nazwy pliku: %1$s.
 Plná
 Plná podpora ovladačů
@@ -43938,7 +43982,8 @@ Pro rezervaci se přihlaste
 Pro schválení přihlášení použijte <1>mobilní aplikaci</1>...
 Pro spuštění aplikace %2$s je vyžadován %1$s. Máte ho na tomto zařízení nainstalovaného?
 Pro starší 17 let
-Pro streamování je vyžadována instalace dodatečného ovladače.\n\nNa vzdáleném počítači postupujte dle pokynů na obrazovce.
+Pro streamování je vyžadována instalace dodatečného ovladače. Postupujte tedy na vzdáleném počítači dle pokynů na obrazovce.
+Pro streamování je vyžadováno spárování se vzdáleným počítačem. Zkuste to tedy znovu a zadejte na vzdáleném počítači příslušný kód PIN.
 Pro tuto akci nemáte dostatečná oprávnění.
 Pro udělení vybraného ocenění nemáte dostatek věrnostních bodů.
 Pro ukončení režimu prodejny zadejte níže svůj PIN.
@@ -44161,6 +44206,7 @@ Progresul descărcării videoclipului:
 Prohledat seznam přátel
 Prohlédnout dostupné aplikace
 Prohlédněte si doporučení kurátora %1$s zaměřená na hry z tohoto výprodeje.
+Proibido de jogar
 Projektanci tej gry przodują w kreatywnym eksperymentowaniu, rzucając nowe światło na rozgrywkę i używając oszałamiających niespodzianek. Ta gra zachwyciła, zainspirowała i zabawiła nowością, której nigdy wcześniej nie było ci dane doświadczyć.
 Promise constructor's argument is not a function
 Promise was rejected with a falsy value
@@ -44753,7 +44799,6 @@ Přednačítač obrazu %1$s:
 Přednačítač zvuku %1$s:
 Předobjednat
 Předobjednejte si
-Předobjednávka
 Předplaťte si přístup na jeden rok a ušetřete %2$s.
 Předvolby
 Předvolby obchodu
@@ -44830,6 +44875,7 @@ Přidat do seznamu přání
 Přidat mluvčí
 Přidat možnost rezervace
 Přidat mě
+Přidat na účet
 Přidat prostředky
 Přidat přátele
 Přidat přítele
@@ -45144,7 +45190,8 @@ Quà tặng thứ tư
 Quà tặng đầu tiên
 Quá giỏi!
 Quá nhiều lần thử thất bại. Vui lòng chờ một chút và thử lại.
-Quá trình khởi động trò chơi này cần can thiệp từ người dùng.\n\nVui lòng tự khởi động trên máy tính từ xa, sau đó mới phát sóng lại từ đây.
+Quá trình cài đặt trò chơi cần can thiệp của người dùng. Vui lòng tự cài đặt trên máy tính truy cập từ xa.
+Quá trình khởi động trò chơi cần can thiệp từ người dùng. Vui lòng tự khởi động trên máy tính truy cập từ xa, sau đó tham gia phát sóng từ đây.
 Quân đội
 Qué hay de nuevo
 Qué se juega
@@ -45448,9 +45495,9 @@ Reale Veranstaltung
 Realidad virtual
 Realidade Virtual
 Realidade virtual
-Realist
 Realista
 Realistas
+Realiste
 Realistic
 Realistici
 Realistické
@@ -45746,9 +45793,9 @@ Redo
 Redo Responses
 ReducedValue
 Reducere pentru acest joc
+Reducere pentru articol sau DLC
+Reducere pentru articole din joc sau DLC-uri
 Reducere pentru joc
-Reducere pentru obiect sau DLC
-Reducere pentru obiecte din joc sau DLC
 Reducerea la articolele pe care le ai în coș se va încheia în curând.
 Reduceri
 Reduceri (lista de dorințe)
@@ -46442,7 +46489,7 @@ Rivinvaihdoilla ei yleensä ole merkitystä HTML-koodissa, mutta BBCode-koodissa
 Riwayat
 Riwayat Pengawasan
 Roda neste computador via <1>Steam Play.</1>
-Rodinný režim
+Rodičovský dohled
 Rodičovský zámek aktivní na účtu vyžaduje potvrzení přihlašovacích údajů
 Rodzaj transmisji głosu
 Roemeens
@@ -47457,6 +47504,7 @@ Se ha completado con éxito la republicación.
 Se ha elegido un tipo de imagen que no es válido
 Se ha enviado tu solicitud. Vuelve a esta página o actualízala cuando un adulto haya aprobado el acceso.
 Se ha otorgado el premio con éxito.
+Se ha permitido a %1$s saltarse el plazo de espera.
 Se ha producido un error al analizar y aplicar los datos XML: %1$s
 Se ha producido un error al añadir el producto a tu lista de deseados. Por favor, inténtalo de nuevo más tarde:
 Se ha producido un error al añadir esta cuenta. Por favor, inténtalo de nuevo más tarde.
@@ -47507,6 +47555,7 @@ Se og chat med venner på Steam.tv
 Se og snakk med venner på Steam.tv
 Se on ilmaista ja helppoa. Löydä tuhansia tietokonepelejä ja pelaa miljoonien uusien kavereiden kanssa.
 Se pare că o altă persoană îți cunoaște numele de utilizator și parola.
+Se permitió a %1$s saltarse el tiempo de espera.
 Se produjo el siguiente error al tratar de ignorar el evento:
 Se produjo el siguiente error al tratar de seguir el evento:
 Se produjo un error (código: %1$s) con los siguientes detalles: (%2$s)
@@ -48003,6 +48052,7 @@ Senza nome
 Senza titolo
 Sep
 Sepak Bola & American Football
+Sepanjang hari
 Separador %1$s
 Sepertinya ada orang lain yang tahu nama akun dan kata sandimu.
 Sepertinya akunmu dibatasi. Untuk menghindari penyalahgunaan nominasi, kamu harus membelanjakan 5 USD di Steam agar dapat berpartisipasi di Penghargaan Steam. %1$s untuk info lebih lanjut.
@@ -48142,6 +48192,7 @@ SetInstance
 SetLock
 SetNavEventParams
 SetParent
+SetReconnectErrorHandler
 SetStatusEventHandler
 SetUniverse
 Setează opacitatea ferestrei
@@ -48779,6 +48830,7 @@ Sin existencias
 Sin imágenes
 Sin información de fecha y hora
 Sin nombre
+Sin permisos
 Sin resultados
 Sin título
 Sind Sie sicher, dass Sie den folgenden Nutzer als Moderator entfernen möchten?
@@ -49509,7 +49561,6 @@ Sottoscrizione annuale
 Sottoscrizione mensile
 Soubor nemá příponu „.xml“ nebo „.csv“ a nepodařilo se přečíst jeho název: %1$s
 Soubor „%1$s“ je příliš velký (max. %2$s MB)
-Soubor „%1$s“ je příliš velký (max. 10 MB)
 Soubory záznamů byly nahrány
 Soudan
 Soudan du Sud
@@ -50009,7 +50060,7 @@ Spunta la casella se hai ricevuto il prodotto gratis
 Spustit
 Spuštění streamování se nezdařilo
 Spuštění streamování se nezdařilo.
-Spuštění této hry vyžaduje zásah uživatele.\n\nSpusťte hru na vzdáleném počítači manuálně a poté se odsud připojte ke streamování.
+Spuštění této hry vyžaduje zásah uživatele. Spusťte tedy hru na vzdáleném počítači manuálně a poté se odsud připojte ke streamování.
 Später in diesem Monat
 Später vielleicht
 Spør om å bli venner
@@ -50057,7 +50108,7 @@ Starea ta din joc este ascunsă de prietenii tăi din cauza setărilor tale de c
 Starea încărcării imaginii: %1$s
 Start Microphone Test
 Start Test Mode
-Start af dette spil kræver handling fra brugeren.\n\nStart spillet manuelt på fjerncomputeren, og tilslut dig streamingen herfra.
+Start af dette spil kræver handling fra brugeren. Start spillet manuelt på fjerncomputeren, og tilslut dig streamingen herfra.
 Start af streaming mislykkedes
 Start kiosktilstand
 Start mikrofontest
@@ -50228,6 +50279,7 @@ Steam Diyalog Penceresi
 Steam Díjak jelölt
 Steam Díjak jelölési kérés
 Steam Díjak szavazási kérés
+Steam Families Beta
 Steam Girdisi API'ı
 Steam Guard
 Steam Guard -koodi
@@ -50637,7 +50689,7 @@ Steam 输入 API
 Steam 通知
 Steam 驗證器
 Steam 验证器
-Steam 가족에 초대를 받았습니다.
+Steam 가족에 초대를 받았을 때
 Steam 게임 알림을 받았을 때
 Steam 계정 연결
 Steam 계정 이름
@@ -50921,9 +50973,21 @@ Steams nyhetshubb
 Steams nyhetssentral
 Steams%1$snyhets-sentral
 Steams%1$snyhetshubb
+Steamworks partner hesapları veya destek hesapları bir aileye çocuk olarak katılamaz.
+Steamworks partner or support accounts cannot join a family as a child.
+Steamworks partner- vagy támogatási fiókok nem csatlakozhatnak családhoz gyermekként.
+Steamworks акаунти за партньори или поддръжка не могат да се присъединят към дадено семейство като деца.
+Steamworks 合作伙伴帐户或客服帐户不能以儿童身份加入家庭。
+Steamworks 合作夥伴或客服帳戶無法以孩童成員身分加入親友群組。
 Steamworks 新手？
+Steamworks 파트너 또는 고객지원 계정은 가족에 자녀 구성원으로 가입할 수 없습니다.
 Steamworks'te yeni misiniz?
+Steamworks-Partner- und Supportaccounts können einer Steam-Familie nicht als Kind beitreten.
+Steamworks-kumppani- tai tukitilit eivät voi liittyä perheeseen lapsena.
+Steamworks-partnerkontoer eller supportkontoer kan ikke tilslutte sig en familie som et barn.
+Steamworks-partnerkonton eller supportkonton kan inte gå med i en familj som barn.
 Steamworksを初めて使用？
+Steamworksパートナーまたはサポートアカウントは、子どもメンバーとしてファミリーに参加できません。
 Steamworks에 처음 오셨나요?
 Steamがフレンドネットワークに接続しようとしています。これには数秒かかることがあります。
 Steamですべての確認済みゲームを表示
@@ -51138,6 +51202,7 @@ StoreBrowse.GetStoreCategories#1
 StoreClient.NotifyStorePreferencesChanged#1
 StoreHeaderContent
 StoreNavEventContext
+StoreQuery.GetItemsByUserRecommendedTags#1
 StoreQuery.Query#1
 StoreQuery.SearchSuggestions#1
 Stored Steam Guard state is in invalid format.
@@ -51203,11 +51268,15 @@ Stream-Start fehlgeschlagen
 StreamListener
 Streaming / Trasmissione
 Streaming außerhalb Ihres Zuhauses ist derzeit nicht verfügbar. Versuchen Sie es später erneut.
-Streaming kräver ytterligare installation av drivrutiner.\n\nFölj Steams anvisningar på fjärrdatorn.
-Streaming kræver installation af en ekstra driver.\n\nFølg Steam-instruktionerne på fjerncomputeren.
+Streaming kräver parkoppling med fjärrdatorn. Försök igen och ange pinkoden för parkoppling på fjärrdatorn.
+Streaming kräver ytterligare installation av drivrutiner. Följ Steams anvisningar på fjärrdatorn.
+Streaming kræver installation af en ekstra driver. Følg Steam-instruktionerne på fjerncomputeren.
+Streaming kræver tilknytning med fjerncomputeren. Prøv igen, og indtast tilknytningspinkoden på fjerncomputeren.
+Streaming memerlukan sambungan dengan komputer jarak jauh. Silakan coba lagi dan masukkan PIN sambungan di komputer jarak jauh.
 Streaming outside the home isn't currently available, try again later.
-Streaming requires additional driver installation.\n\nPlease follow the Steam prompts on the remote computer.
-Streaming setzt die Installation eines weiteren Treibers voraus.\n\nBitte folgen Sie den Anweisungen auf dem Streamingserver.
+Streaming requires additional driver installation. Please follow the Steam prompts on the remote computer.
+Streaming requires pairing with the remote computer. Please try again and enter the pairing PIN on the remote computer.
+Streaming setzt die Installation eines weiteren Treibers voraus. Bitte folgen Sie der Anleitung auf dem Streamingserver.
 Streaming uden for hjemmet er ikke muligt i øjeblikket. Prøv igen senere.
 Streaming utanför hemmet är inte tillgängligt just nu, försök igen senare.
 Streaming wird von diesem Spiel zurzeit nicht unterstützt.
@@ -51243,7 +51312,8 @@ Strona wyprzedaży w Sklepie Steam
 Strumenti
 Strumenti amministratore:
 Strumieniowanie poza domem nie jest obecnie dostępne, spróbuj ponownie później.
-Strumieniowanie wymaga zainstalowania dodatkowych sterowników.\n\nPostępuj zgodnie ze wskazówkami na zdalnym komputerze.
+Strumieniowanie wymaga sparowania ze zdalnym komputerem. Spróbuj ponownie i wprowadź PIN parowania na zdalnym komputerze.
+Strumieniowanie wymaga zainstalowania dodatkowych sterowników. Postępuj zgodnie ze wskazówkami na zdalnym komputerze.
 Strzelanka
 Strzelanka z bohaterami
 Strzelanka z perspektywą pierwszej osoby
@@ -51255,7 +51325,8 @@ Stránka produktu v obchodu
 Stránka v komunitě
 Stránka v obchodu
 Stránka výprodeje v obchodu
-Strømming krever installasjon av ytterligere drivere.\n\nFølg Steam-instruksjonene på den eksterne datamaskinen.
+Strømming krever installasjon av ytterligere drivere. Følg Steam-instruksjonene på den eksterne datamaskinen.
+Strømming krever sammenkobling med den eksterne datamaskinen. Prøv igjen og skriv inn sammenkoblings-PIN-en på den eksterne datamaskinen.
 Strømming utenfor hjemmet er ikke tilgjengelig for øyeblikket. Prøv igjen senere.
 StubArray
 Stuknij tutaj, by zeskanować kod QR
@@ -51300,6 +51371,7 @@ Støtte
 Støtte for andre enheter er ukjent
 Støtte for andre kontrollere er ukjent
 Støtte for flere kontoer
+Støttekontoer og partnerkontoer i Steamworks kan ikke bli med i en familie som barn.
 Støttes ikke
 Støykansellering
 Střední
@@ -51446,6 +51518,8 @@ Suora
 Suorana
 Suorat ja viimeaikaiset
 Suoratoisto
+Suoratoisto vaatii laitteen linkittämistä etätietokoneen kanssa. Kokeile uudelleen ja anna PIN-koodi etätietokoneella.
+Suoratoisto vaatii lisäajureiden asentamista. Seuraa Steamin ohjeita etätietokoneella.
 Suosikit
 Suosikkipelit, joissa on demo
 Suositellaan pelaamiesi pelien perusteella
@@ -51635,10 +51709,10 @@ Symbian
 Symbol(src)_1.
 Symulacje
 Symulator kolonizacji
-Symulatory farmy
 Symulatory hobby
 Symulatory pracy
 Symulatory randkowania
+Symulatory rolnictwa
 Symulatory wytwarzania
 Symulatory życia
 Synchronous http requests are not supported
@@ -51788,7 +51862,6 @@ São Tomé og Príncipe
 São Tomé und Príncipe
 São Vicente e Granadinas
 São esperados atrasos na entrega de novas encomendas devido a um elevado número de pedidos. Assim que o teu pedido tiver sido processado, a tua encomenda será enviada e entregue dentro de 4 a 8 dias úteis.
-São necessárias %1$s confirmações
 Säg något om detta till dina vänner ...
 Sähköposti
 Sähköposti ei kelpaa.
@@ -52250,6 +52323,7 @@ Tambahkan Pembicara
 Tambahkan Pengautentikasi
 Tambahkan Teman
 Tambahkan detail tentang pembicara atau streamer ke event. Info akan muncul pada event dan juga pada ringkasan event untuk ditinjau oleh pengguna Steam.
+Tambahkan ke Akun
 Tambahkan ke Kalendar Yahoo
 Tambahkan ke Kalender Apple
 Tambahkan ke Kalender Google
@@ -52391,8 +52465,6 @@ Tartománynév vagy IP-cím és opcionális port
 Tartışma Forumunu Görüntüle
 Tartışmalar
 Tartışın
-Tarvitaan %1$s vahvistus
-Tarvitaan %1$s vahvistusta
 Tarvitsen apua
 Tarvitsen apua kirjautumiseen
 Tarvitsen apua. Tiliin liitetty sähköpostiosoite ei ole enää käytettävissä.
@@ -53190,7 +53262,7 @@ This game is on your wishlist
 This game is recommended for you
 This game is the antidote to a busy day. It's smooth, it's relaxing, it lets your worries melt away. This game is your moment of zen.
 This game is unsupported on Steam Deck due to use of an unsupported anti-cheat
-This game launch requires user intervention.\n\nLaunch manually on the remote computer and then join the stream from here.
+This game launch requires user intervention. Launch manually on the remote computer and then join the stream from here.
 This game makes full use of Steam Input API, which means it will work well with any of over 200 devices you connect.
 This game may experience temporary issues after sleeping on Steam Deck
 This game requires a VR headset in order to play.\nSee system requirements for details.
@@ -53319,6 +53391,7 @@ Thêm vào lịch Apple
 Thêm vào lịch Google
 Thêm vào lịch Outlook
 Thêm vào lịch Yahoo
+Thêm vào tài khoản
 Thí nghiệm %1$s
 Thích
 Thông báo
@@ -53423,6 +53496,7 @@ Tidak Menemukan yang Cocok
 Tidak Terlihat
 Tidak Tertarik
 Tidak Valid
+Tidak ada
 Tidak ada %1$s
 Tidak ada %1$s yang baru-baru ini digunakan
 Tidak ada alamat email pemulihan yang disimpan. Untuk memperbarui alamat email pemulihanmu, silakan keluar dari Mode Keluarga dan jalankan kembali pengaturan Mode Keluarga.
@@ -53579,6 +53653,7 @@ Tilføj mig
 Tilføj oplysninger om en foredragsholder eller streaming til begivenheden. De vises på begivenhedens side og i begivenhedens resumé, som Steam-brugere kan se.
 Tilføj penge
 Tilføj reservationsmulighed
+Tilføj til konto
 Tilføj til ønskeliste
 Tilføj ven
 Tilføj venner
@@ -53892,6 +53967,7 @@ Toate produsele
 Toate produsele care corespund, sortate în funcție de vânzări
 Toate promoțiile
 Toate știrile
+Toată ziua
 Toca aqui para leres um código QR
 Toca aquí para escanear un código QR
 Toca aquí para escanear un código\xa0QR
@@ -53912,6 +53988,7 @@ Today at %1$s
 Todennusongelma.
 Todennäköisesti joku ulkopuolinen tietää käyttäjätunnuksesi ja salasanasi.
 Todista, ettet ole robotti kirjoittamalla alla näkyvät merkit.
+Todo el día
 Todo en RV
 Todos los artículos
 Todos los artículos correspondientes, ordenados según el nivel de ventas
@@ -54128,6 +54205,7 @@ Tous les évènements promotionnels
 Tout parcourir
 Tout supprimer
 Tout voir
+Toute la journée
 Toute la\xa0VR
 Toutes les actualités
 Toutes les fonctionnalités sont accessibles en utilisant la configuration du contrôleur par défaut.
@@ -54197,7 +54275,8 @@ Transformer-
 Transférer l'authentificateur
 Transmisiune live / difuzare
 Transmisiunea live %1$s, vizionează acum
-Transmisiunea necesită instalarea unui driver suplimentar.\n\nTe rugăm să urmezi instrucțiunile Steam pe calculatorul de la distanță.
+Transmisiunea necesită asocierea cu calculatorul de la distanță. Te rugăm să încerci din nou și să introduci PIN-ul de asociere pe calculatorul de la distanță.
+Transmisiunea necesită instalarea unui driver suplimentar. Te rugăm să urmezi instrucțiunile Steam pe calculatorul de la distanță.
 Transmisiunea nu a putut fi inițiată
 Transmisiunea nu poate începe.
 Transmisiunea în afara casei nu este momentan disponibilă. Încearcă din nou mai târziu.
@@ -54503,7 +54582,6 @@ Trò chơi mới ra mắt và bán chạy
 Trò chơi này chạy ở cả chế độ thường và VR.\nXem yêu cầu hệ thống để biết chi tiết về mũ chụp VR tùy chọn.
 Trò chơi này có trong danh sách ước
 Trò chơi này có trong thư viện
-Trò chơi này cần sự can thiệp của người dùng để cài đặt.\n\nHãy cài đặt thủ công trên máy tính điều khiển từ xa.
 Trò chơi này hay quá, bạn muốn đem nó theo đến tất cả mọi nơi. Và bạn đã làm thế! May mắn thay, mọi thứ vốn đã có thể chơi vô tận trên bàn máy tính giờ càng hay hơn khi mang đi cùng.
 Trò chơi này hiện tại không hỗ trợ phát sóng.
 Trò chơi này hỗ trợ HDR nhưng tính năng phải được kích hoạt thủ công bằng thiết lập trong trò chơi
@@ -54777,6 +54855,7 @@ Tutti gli eventi dei saldi
 Tutti i controller
 Tutti i giochi
 Tutti i titoli in VR
+Tutto il giorno
 Tutuilta julkaisijoilta ja kehittäjiltä
 Tutup
 Tutustu
@@ -54909,6 +54988,7 @@ Tài khoản này đã đăng nhập ở nơi khác
 Tài khoản này được bảo vệ bởi bộ xác thực di động.
 Tài khoản này được bảo vệ bởi bộ xác thực email.
 Tài khoản đang hoạt động của bạn đã đăng xuất.
+Tài khoản đối tác hoặc hỗ trợ Steamworks không thể tham gia nhóm gia đình với tư cách trẻ nhỏ.
 Tài khoản: %1$s
 Táblás játékok
 Tádzsikisztán
@@ -54950,6 +55030,7 @@ Tämä puhelinnumero ei ole kelvollinen. Syötä voimassaoleva numero ja kokeile
 Tämä sisältö ei ole saatavilla offline-tilassa.
 Tämä tapahtuma on jo Steamissä. Haluatko päivittää sen sisältöä RSS-tapahtumasta? Tämä on kätevää, jos RSS-tapahtuman sisältö on muuttunut. Tämä toiminto poistaa kaikki editorissa aiemmin tehdyt muokkaukset.
 Tämän kohteen käyttö: %1$s
+Tämän pelin asentaminen vaatii käyttäjän toimenpiteitä. Asenna peli manuaalisesti etätietokoneella.
 Tämän pelin suunnittelijat ovat kokeellisten pelikokemusten kärjessä ja rikkovat rajoja ennennäkemättömän jännittävillä ja tajunnanräjäyttävillä yllätyksillään. Peli ihastutti, innoitti ja viihdytti uutuudellaan.
 Tämän sovelluksen kehittämiseen käytettiin seuraavia avoimen lähdekoodin ohjelmakirjastoja:
 Tämän tapahtuman keskustelut ovat jonossa siirrettäviksi tapahtumajärjestelmään. Niitä ei voi tilapäisesti näyttää. Yritä myöhemmin uudelleen.
@@ -55089,6 +55170,7 @@ Tüm Haberler
 Tüm Oyunlar
 Tüm etkinliklerinizden ulaşılabilecek yeni görseller yüklemek için alt kısımda yer alan bölümü kullanın. Daha sonra gönderinize görseller eklemek için bu bölümü sürükleyip bırakabilir veya tıklayarak tam boyutlu veya küçük boyutlu görselleri yerleştirebilirsiniz.
 Tüm eşleşmeleri başından itibaren görmek için buraya tıklayın
+Tüm gün
 Tüm güncellemeleri görün (Son güncelleme: %1$s)
 Tüm kontrolcüler
 Tüm oyunlardan
@@ -56012,7 +56094,7 @@ Ursprungligen upplagt av: %1$s
 Ursprünglich verfasst von: %1$s
 Ursprünglicher Beitrag von
 Uruchom tryb testowy
-Uruchomienie tej gry wymaga ingerencji użytkownika.\n\nUruchom ręcznie na zdalnym komputerze i dołącz z tego poziomu do strumieniowanej gry.
+Uruchomienie tej gry wymaga ingerencji użytkownika. Uruchom ręcznie na zdalnym komputerze i dołącz z tego poziomu do strumieniowanej gry.
 Uruguai
 Uruguay
 Urugwaj
@@ -58194,8 +58276,11 @@ Voor dit spel moet Steam Cloud-ondersteuning voor bewaarde spellen handmatig wor
 Voor dit spel moet controllerondersteuning handmatig worden ingeschakeld via de instellingen in het spel
 Voor dit spel zijn externe apparaten vereist: USB-gitaar
 Voor dit spel zijn externe apparaten vereist: webcam
+Voor het installeren van dit spel is invoer van de gebruiker vereist. Installeer het handmatig op de computer op afstand.
+Voor het opstarten van dit spel is invoer van de gebruiker vereist. Start het spel handmatig op de computer op afstand en open hier vervolgens de stream.
 Voor openen van apps
-Voor streamen moeten extra stuurprogramma's worden geïnstalleerd.\n\nVolg de aanwijzingen van Steam op de computer op afstand.
+Voor streamen moet de computer op afstand gekoppeld worden. Probeer het opnieuw en voer de pincode voor koppelen in op de computer op afstand.
+Voor streamen moet een extra stuurprogramma worden geïnstalleerd. Volg de aanwijzingen van Steam op de computer op afstand.
 Voor volwassenen
 Voorbeeld
 Voorbeeld van dynamische zichtbaarheid
@@ -58544,7 +58629,6 @@ Vyzvednout odměnu
 Vyzvednout samolepku
 Vyzvedněte si každý den výprodeje odměnu zdarma!
 Vyčkejte, než server služby Steam dokončí požadovanou akci.
-Vyžadovaná potvrzení: %1$s
 Vyžadované místo: %1$s
 Vyžaduje, aby byly určeny třetí strany pořádající tuto událost
 Vzdálené stahování
@@ -58793,6 +58877,7 @@ W grze spoza Steam
 W momencie rozpoczęcia wydarzenia Steam wyśle ci powiadomienie e-mail na twoje konto.
 W momencie rozpoczęcia wydarzenia Steam wyśle ci powiadomienie.
 W niektóre części tej gry najlepiej gra się z użyciem klawiatury zewnętrznej.
+W ogóle
 W rodzinie musi być co najmniej jedna osoba dorosła.
 W serii:
 W tej chwili
@@ -59396,13 +59481,13 @@ Wymaga wciśnięcia określonego klawisza, by mówić na kanałach głosowych
 Wymagaj
 Wymagana przepustowość łącza (Mb/s):
 Wymagane miejsce: %1$s
-Wymagane potwierdzenia: %1$s
 Wymuś wywołanie usługi
 Wyprzedaż
 Wyprzedaż (lista życzeń)
 Wyprzedaż, którą objęte są produkty w twoim koszyku, dobiega końca
 Wyprzedaże
 Wyprzedaże i wydarzenia specjalne
+Wyrażono zgodę, by użytkownik %1$s pominął czas oczekiwania.
 Wyrównaj do lewej
 Wyrównaj do prawej
 Wyróżniona
@@ -59795,7 +59880,6 @@ Yayın açılır penceresini kapatır. Bu oturum esnasında bu açılır pencere
 Yayın başlatılamıyor.
 Yayın başlıyor
 Yayın sayfasını görüntüle
-Yayın yapmak, ek olarak sürücü yüklemesi gerektirir.\n\nLütfen uzak bilgisayardaki Steam yönlendirmelerini takip edin.
 Yayına tekrar bağlanılıyor
 Yayıncı
 Yayıncı çevrimdışı
@@ -59810,6 +59894,8 @@ Yayında: Topluluğu oynarken izle
 Yayınla
 Yayınlama süreci için "Yayınlama" sekmesine geçin.
 Yayınlamadan önce aşağıdan görünürlük ayarlarını tekrar kontrol ettiğinizden emin olun.
+Yayınlamak için ek sürücü yüklenmesi gerekiyor. Lütfen uzak bilgisayardaki Steam talimatlarını izleyin.
+Yayınlamak için uzak bilgisayarla eşleştirme gerekiyor. Lütfen tekrar deneyin ve uzaktaki bilgisayara eşleştirme PIN'ini girin.
 Yayınlanma tarihi:
 Yayınlanma: %1$s
 Yayınlar
@@ -63172,6 +63258,7 @@ cs
 csomag
 css-tree
 csstree/csstree
+ctz32
 curator/
 curator/0/ajaxsearchcurators
 current.txt
@@ -64016,6 +64103,7 @@ g4768_2_
 g_onReportableError
 game
 game_card_bg
+gamepad
 games/
 gameserver
 gecikme
@@ -64355,6 +64443,7 @@ getWrapper
 get_family_group
 get_family_group_for_user
 get_family_history
+get_playtime_summary
 get_purchase_requests
 get_shared_library_apps
 get_shopping_cart_contents
@@ -65794,6 +65883,7 @@ k_BluetoothDeviceType_OtherAudio
 k_BluetoothDeviceType_Phone
 k_BluetoothDeviceType_Speakers
 k_BluetoothDeviceType_Unknown
+k_ESteamNotificationType_
 kasım
 kaupan kieliasetukset
 kauppa-asetuksesi
@@ -66027,6 +66117,7 @@ maio
 mais jogados primeiro
 mais tarde
 maj
+major sale rendering:
 majorize
 makeClassComponentObserver
 makeCoordinatesForAnyLine
@@ -66267,6 +66358,7 @@ mobileClient
 mobileClientVersion
 mobileSummaryQueryName
 mobile_chat_client
+mobilechat
 mobileconf/ajaxop?
 mobileconf/detailspage/
 mobileconf/getlist
@@ -66912,6 +67004,7 @@ open next
 open now
 open-quote | close-quote | no-open-quote | no-close-quote
 openCommentsLandingPage
+openConfirmations
 openFriendsLandingPage
 openGiftsLandingPage
 openItemsLandingPage
@@ -68143,6 +68236,7 @@ steam/apps/
 steam://
 steam://openurl/
 steamLoginSecure
+steamLoginSpoofSteamID
 steamUI
 steam_display
 steam_player_group
@@ -68259,6 +68353,7 @@ série
 sê-ri
 să activezi un cod de produs,
 să activezi un cod pentru portofel.
+săptămâna aceasta
 săptămâna viitoare
 sıradakini aç
 sắp tới
@@ -68309,6 +68404,7 @@ telephoneNumber
 televisiotilassa
 temmuz
 template.config.js
+tenfoot
 terbuka
 terbuka %1$s
 terrain
@@ -68418,6 +68514,7 @@ transpile.js
 traverse
 traverseTwoPhase
 traverseTwoPhase$1
+tray
 tree
 treegrid
 treeitem
@@ -68553,16 +68650,12 @@ unkari
 unknown CMsgProtoBufHeader_ESessionDisposition (
 unknown EACState (
 unknown EAbuseNotificationType (
+unknown EAccountCountryChangeSource (
 unknown EAccountPhoneStatus (
 unknown EActorAffiliation (
 unknown EAgreementType (
 unknown EAnnouncementPlacement (
 unknown EAnswerActorRank (
-unknown EAppAssociationType (
-unknown EAppCloudStatus (
-unknown EAppControllerSupportLevel (
-unknown EAppGamepadGyroTrackpadSupportLevel (
-unknown EAppHDRSupport (
 unknown EAppReportType (
 unknown EAsyncGameSessionUserState (
 unknown EAsyncGameSessionUserVisibility (
@@ -68572,6 +68665,7 @@ unknown EAuthSessionSecurityHistory (
 unknown EAuthTokenPlatformType (
 unknown EAuthTokenRevokeAction (
 unknown EAuthTokenState (
+unknown EAuthenticationType (
 unknown EAvatarState (
 unknown EBanContentCheckResult (
 unknown EBannedVanityURLAction (
@@ -68606,9 +68700,9 @@ unknown ECompromiseDetectionType (
 unknown EContentCheckProvider (
 unknown EContentHubDiscountFilterType (
 unknown EDiscoveryQueueExperimentalCohort (
-unknown EDisplayStatus (
 unknown EExternalAccountType (
 unknown EFamilyGroupChangeLogType (
+unknown EFamilyGroupMembershipRemovalReason (
 unknown EFamilyGroupRole (
 unknown EFamilyGroupsTwoFactorMethod (
 unknown EFeaturedAppBonusRoundGrantReason (
@@ -68936,7 +69030,6 @@ useSimpleSteamMobileProtocolHandler
 useSteppedDurationAnimation
 useStoreItemCache: unmounting
 useStoreItemCacheMultiplePackages: unmounting
-useStoreItemCacheOrPackageSingleApp: unmounting
 useStoreItemCachePreloadMultiple
 useSyncState
 useTextColorStyle
@@ -69031,6 +69124,7 @@ version\\/([\\w(\\.|\\,)]+) .*(mobile ?safari|safari)
 version\\/([\\w\\.\\,]+) .*mobile\\/\\w+ (safari)
 vertical-inverted
 veut vous ajouter à ses contacts
+vgui
 vi
 via aplikasi seluler
 via e-mail
@@ -69509,7 +69603,7 @@ zítra
 ¡Ticket creado correctamente!
 ¡Usa tus puntos de Steam para destacar esta reseña y darle al autor puntos de bonificación!
 ¡Usa tus puntos de Steam para otorgarle un premio especial a esta discusión y darle al autor puntos de bonificación!
-¡Usa tus puntos de Steam para otorgarle un premio especial a esta reseña y darle al autor puntos de bonificación!
+¡Usa tus puntos de Steam para otorgarle un premio especial a este artículo y darle al autor puntos de bonificación!
 ¡Usa tus puntos de Steam para otorgarle un premio especial a este comentario y darle al autor puntos de bonificación!
 ¡Usa tus puntos de Steam para otorgarle un premio especial a este mensaje de discusión y darle al autor puntos de bonificación!
 ¡Usa tus puntos de Steam para otorgarle un premio especial a este perfil y darle al usuario puntos de bonificación!
@@ -69559,7 +69653,7 @@ zítra
 © %1$s Valve Corporation. Wszelkie prawa zastrzeżone. Wszystkie znaki handlowe są własnością ich prawnych właścicieli w Stanach Zjednoczonych i innych krajach.
 © %1$s Valve Corporation. Wszelkie prawa zastrzeżone. Wszystkie znaki handlowe są własnością ich prawnych właścicieli w Stanach Zjednoczonych i innych krajach. <1>Polityka prywatności</1> | <2>Informacje prawne</2> | <3>Umowa użytkownika Steam</3> | <4>Zwroty pieniędzy</4>
 © %1$s Valve Corporation. Με επιφύλαξη κάθε νόμιμου δικαιώματος. Όλα τα εμπορικά σήματα ανήκουν στους αντίστοιχους ιδιοκτήτες τους στις Η.Π.Α. και σε άλλες χώρες.
-© %1$s Valve Corporation. Все права защищены. Все торговые марки являются собственностью соответствующих владельцев в США и других странах.
+© %1$s Valve Corporation. Все права сохранены. Все торговые марки являются собственностью соответствующих владельцев в США и других странах.
 © %1$s Valve Corporation. Все права сохранены. Все торговые марки являются собственностью соответствующих владельцев в США и других странах. <1>Политика конфиденциальности</1> | <2>Правовая информация</2> | <3>Соглашение подписчика Steam</3> | <4>Возврат средств</4>
 © %1$s Valve Corporation. Всички права запазени. Всички търговски марки принадлежат на съответните им собственици в САЩ и други държави.
 © %1$s Valve Corporation. Всички права запазени. Всички търговски марки принадлежат на съответните им собственици в САЩ и други държави. <1>Декларация за поверителност</1> | <2>Юридическа информация</2> | <3>Условия за ползване на Steam</3> | <4>Възстановявания</4>
@@ -69851,7 +69945,6 @@ zítra
 È stato utilizzato il nome e la password dell'account per effettuare l'accesso. Se non hai inserito la password su questo dispositivo, dovresti cambiarla immediatamente.
 É gratuito e fácil. Descobre milhares de jogos para PC que podes jogar com milhões de novos amigos.
 É gratuito e fácil. Descubra milhares de jogos de computador para jogar com milhões de novos amigos.
-É necessária %1$s confirmação
 É necessária uma análise da Valve para que esta página seja publicada
 É necessária uma ligação à internet para visualizar este conteúdo
 É necessário informar os organizadores do evento
@@ -70241,6 +70334,7 @@ zítra
 Útmutatók
 Účet, od kterého se snažíte odhlásit, má na tomto zařízení aktivní mobilní autentifikátor funkce Steam Guard. Převeďte nebo odeberte autentifikátor a zkuste to znovu.
 Účet: %1$s
+Účty partnerů systému Steamworks a účty podpory se nemohou připojit do rodin jako dětští členové.
 Über die Sprecher:
 Über dieses Spiel:
 Übergreifende Aktion
@@ -71034,6 +71128,7 @@ zítra
 Όλα τα χειριστήρια
 Όλες οι ενημερώσεις (τελευταία: %1$s)
 Όλες οι φατσούλες
+Όλη την ημέρα
 Όνομα
 Όνομα διακομιστή
 Όνομα λογαριασμού Steam
@@ -71228,13 +71323,11 @@ zítra
 Αξιοσημείωτα: Τρόμος
 Απίθανες προσφορές σε παιχνίδια σε ολόκληρο το Κατάστημα
 Απαιτείται
-Απαιτείται %1$s επιβεβαίωση
 Απαιτείται έλεγχος από τη Valve για να γίνει δημόσια αυτή η σελίδα
 Απαιτείται σύνδεση στο διαδίκτυο για προβολή αυτού του περιεχομένου
 Απαιτείται χειριστήριο
 Απαιτούμενο εύρος ζώνης (Mbps):
 Απαιτούμενος χώρος: %1$s
-Απαιτούνται %1$s επιβεβαιώσεις
 Απασχολημένος
 Απεγκατάσταση
 Απενεργοποίηση ορθογραφικού ελέγχου
@@ -71429,7 +71522,7 @@ zítra
 Αυτό το παιχνίδι απαιτεί ειδική διαμόρφωση των ρυθμίσεων γραφικών για καλές επιδόσεις στο Steam Deck
 Αυτό το παιχνίδι απαιτεί ενεργοποίηση της υποστήριξης Steam Cloud για αποθηκεύσεις παιχνιδιών μέσω των ρυθμίσεων εντός παιχνιδιού
 Αυτό το παιχνίδι απαιτεί ενεργοποίηση υποστήριξης χειριστηρίου μέσω των ρυθμίσεων εντός παιχνιδιού
-Αυτό το παιχνίδι απαιτεί παρέμβαση χρήστη.\n\nΕκκινήστε το στον απομακρυσμένο υπολογιστή και έπειτα μπείτε στη μετάδοση από εδώ.
+Αυτό το παιχνίδι απαιτεί παρέμβαση χρήστη. Εκκινήστε το στον απομακρυσμένο υπολογιστή και έπειτα μπείτε στη μετάδοση από εδώ.
 Αυτό το παιχνίδι βρίσκεται στη Λίστα Επιθυμιών σας
 Αυτό το παιχνίδι δεν ελέγχεται από προεπιλογή από εξωτερικά χειριστήρια Bluetooth/USB σε Deck και μπορεί να απαιτεί εναλλαγή του ενεργού χειριστηρίου από τον χρήστη μέσω του μενού Γρήγορης Πρόσβασης
 Αυτό το παιχνίδι δεν περιλαμβάνει υποστήριξη για πληκτρολόγιο και ποντίκι. Απαιτείται χειριστήριο.
@@ -71690,7 +71783,7 @@ zítra
 Δεύτερο τρίμηνο %1$s
 Δεύτερο τρίμηνο (Απρίλιος – Ιούνιος) %1$s
 Δημιουργήθηκε από %1$s
-Δημιουργήστε έναν δωρεάν λογαριασμό
+Δημιουργήστε έναν δωρεάν
 Δημιουργήστε έναν σύνδεσμο για κοινοποίηση μέσω email ή SMS. Εσείς και οι φίλοι σας θα συνδεθείτε αμέσως μόλις αποδεχτούν. Προσέξτε εάν κοινοποιείτε σε δημόσιο χώρο.
 Δημιουργία
 Δημιουργία νέου καναλιού κειμένου
@@ -72107,6 +72200,7 @@ zítra
 Επιστροφή στην αρχική σελίδα Κοινότητας
 Επιστροφή στις εκπτώσεις
 Επιστροφή στο Κέντρο Νέων
+Επιτράπηκε στον χρήστη %1$s να παρακάμψει την περίοδο αδράνειας.
 Επιτρέψτε στην εφαρμογή Steam για κινητές συσκευές να αποκτήσει πρόσβαση στην κάμερα για να σαρώσει κωδικούς QR.
 Επιτραπέζια
 Επιτυχία
@@ -72179,7 +72273,7 @@ zítra
 Η αφαίρεση του επαληθευτή σας θα μειώσει την ασφάλεια του λογαριασμού σας.
 Η δωροπροσφορά πλέον τελείωσε με πάνω από %1$s τυχερούς νικητές, ευχαριστούμε για τη συμμετοχή σας.
 Η δωροπροσφορά πλέον τελείωσε. Ευχαριστούμε για τη συμμετοχή σας.
-Η εγκατάσταση αυτού του παιχνιδιού απαιτεί παρέμβαση χρήστη.\n\nΕγκαταστήστε το στον απομακρυσμένο υπολογιστή.
+Η εγκατάσταση αυτού του παιχνιδιού απαιτεί παρέμβαση χρήστη. Εγκαταστήστε το στον απομακρυσμένο υπολογιστή.
 Η εγκατάσταση αυτού του παιχνιδιού για πρώτη φορά απαιτεί μία ενεργή σύνδεση στο διαδίκτυο
 Η εικόνα «%1$s» ορίστηκε ως «%2$s».
 Η εικόνα δεν ταιριάζει με την αναμενόμενη μορφή του %1$s
@@ -72191,7 +72285,8 @@ zítra
 Η κράτηση έληξε.
 Η κριτική μου
 Η μετάδοση Steam δεν υποστηρίζεται αυτήν τη στιγμή στο σύστημα του μεταδότη
-Η μετάδοση απαιτεί εγκατάσταση επιπλέον οδηγού.\n\nΑκολουθήστε τις οδηγίες του Steam στον απομακρυσμένο υπολογιστή.
+Η μετάδοση απαιτεί εγκατάσταση επιπλέον οδηγού. Ακολουθήστε τις οδηγίες του Steam στον απομακρυσμένο υπολογιστή.
+Η μετάδοση απαιτεί σύζευξη με τον απομακρυσμένο υπολογιστή. Προσπαθήστε ξανά και εισαγάγετε το PIN σύζευξης στον απομακρυσμένο υπολογιστή.
 Η μετάδοση εκτός του σπιτιού δεν είναι προσωρινά διαθέσιμη. Δοκιμάστε ξανά αργότερα.
 Η μετάδοση ξεκινάει
 Η μετατροπή τελείωσε. Μπορείτε τώρα να κλείσετε με ασφάλεια αυτό το παράθυρο διαλόγου.
@@ -72319,6 +72414,7 @@ zítra
 Καθίστε Αναπαυτικά και Χαλαρώστε
 Καθίστε αναπαυτικά και χαλαρώστε
 Καθοδηγούμενο από ιστορία
+Καθόλου
 Και %1$s ακόμα αντικείμενα Steam
 Και %1$s ακόμα για %2$s
 Και %1$s ακόμα για αυτό το παιχνίδι
@@ -72776,6 +72872,7 @@ zítra
 Ο χρήστης %1$s ενέκρινε το αίτημά σας για πρόσθετο χρόνο παιχνιδιού
 Ο χρήστης %1$s ενέκρινε το αίτημα αγοράς του χρήστη %2$s.
 Ο χρήστης %1$s ενεργοποίησε τον γονικό έλεγχο για τον λογαριασμό του χρήστη %2$s.
+Ο χρήστης %1$s επανέφερε την οικογένεια.
 Ο χρήστης %1$s ζήτησε να κάνει μια αγορά.
 Ο χρήστης %1$s ζητά να κάνει μια αγορά
 Ο χρήστης %1$s ζητά περισσότερο χρόνο παιχνιδιού
@@ -72810,6 +72907,7 @@ zítra
 Οι δοκιμαστές έκδοσης βήτα του Steam για κινητές συσκευές μπορούν να συνδεθούν με σάρωση ενός κωδικού QR.
 Οι ειδοποιήσεις δεν είναι διαθέσιμες λόγω απουσίας υπηρεσιών πλατφόρμας.\n\nΠρέπει να είναι εγκατεστημένες οι υπηρεσίες Google Play για να μπορεί το Steam να στέλνει ειδοποιήσεις συσκευής.
 Οι εφεδρικοί κωδικοί είναι κωδικοί Steam Guard μιας χρήσης, που μπορείτε να δημιουργήσετε για τον λογαριασμό σας.
+Οι λογαριασμοί συνεργατών Steamworks και οι λογαριασμοί Yποστήριξης δεν μπορούν να μπουν σε μια οικογένεια ως παιδί.
 Οι περιορισμένοι λογαριασμοί δεν μπορούν να δημιουργήσουν μια οικογένεια.
 Οι ρυθμίσεις γραφικών αυτού του παιχνιδιού δεν μπορούν να διαμορφωθούν για να εκτελείται καλά στο Steam Deck
 Οι συζητήσεις για αυτό το συμβάν βρίσκονται σε ουρά αναμονής για να μεταφερθούν στο σύστημα συμβάντων. Είναι προσωρινά μη προσβάσιμες. Ελάτε ξανά αργότερα.
@@ -73121,6 +73219,7 @@ zítra
 Προσθήκη στο Ημερολόγιο Yahoo
 Προσθήκη στο ημερολόγιο
 Προσθήκη στο καλάθι
+Προσθήκη στον λογαριασμό
 Προσθήκη φίλου
 Προσθήκη φίλων
 Προσθήκη χρημάτων
@@ -73483,7 +73582,6 @@ zítra
 Τιμή
 Τμήματα του παιχνιδιού λειτουργούν καλύτερα με τη χρήση εξωτερικού πληκτρολογίου
 Το %1$s είναι πολύ μεγάλο (μέχρι %2$s MB).
-Το %1$s είναι πολύ μεγάλο (μέχρι 10 MB).
 Το %1$s είναι σε έκπτωση: %2$s
 Το %1$s είναι τώρα διαθέσιμο στην Πρόωρη Πρόσβαση του Steam!
 Το %1$s και άλλα %2$s παιχνίδια έχουν έκπτωση!
@@ -73993,6 +74091,7 @@ zítra
 Азербайджан
 Акаунт: %1$s
 Акаунти з обмеженнями не можуть створювати сімейні групи.
+Акаунти партнерів чи служби підтримки Steamworks не можуть приєднатися до сімейної групи в ролі дитини.
 Акаунтът Ви беше отписан. Моля, впишете се, за да продължите.
 Акаунтът Ви беше преустановен
 Акаунтът Ви не покрива изискванията за използване на тази характеристика. %1$s за още информация.
@@ -74531,6 +74630,7 @@ zítra
 Вертикален изглед
 Вертикальний режим
 Вертикальный режим
+Весь день
 Весь функционал доступен при использовании стандартных настроек управления контроллером
 Вече е възможно:
 Вече е достъпно безплатно %1$s демо
@@ -75488,7 +75588,7 @@ zítra
 Для гри в однокористувацькому режимі потрібне підключення до Інтернету
 Для дорослих
 Для запускача чи інструмента налаштування гри може знадобитись сенсорний екран чи віртуальна клавіатура, або ж текст у ньому нечитабельний
-Для запуску гри потрібне втручання користувача.\n\nЗапустіть її вручну на віддаленому комп’ютері, а потім долучіться звідси до трансляції.
+Для запуску гри потрібна участь користувача. Запустіть її вручну на віддаленому комп’ютері, а потім долучіться до трансляції звідси.
 Для належної роботи цієї гри на Steam Deck слід вручну налаштувати графіку
 Для одиночного режима требуется активное соединение с интернетом
 Для первоначальной настройки этой игры требуется активное соединение с интернетом
@@ -75499,8 +75599,10 @@ zítra
 Для присудження нагород необхідно увійти до свого акаунта.
 Для розділу нижче ввімкнена функція динамічного показу. Перейдіть до тестового режиму для її попереднього перегляду. Щоб вийти з тестового режиму, закрийте вкладку попереднього перегляду.
 Для розробки цього застосунку використовувалися такі бібліотеки з відкритим кодом
-Для транслювання потрібно інсталювати додатковий драйвер.\n\nБудь ласка, дотримуйтеся вказівок від Steam на віддаленому комп’ютері.
-Для трансляций требуются дополнительные драйверы.\n\nПожалуйста, следуйте указаниям Steam на удалённом компьютере.
+Для транслювання потрібне поєднання з віддаленим комп’ютером. Спробуйте ще раз і введіть ПІН-код для поєднання на віддаленому комп’ютері.
+Для транслювання потрібно інсталювати додатковий драйвер. Будь ласка, дотримуйтеся вказівок від Steam на віддаленому комп’ютері.
+Для трансляции необходима привязка к удалённому компьютеру. Повторите попытку и введите ПИН-код привязки на удалённом компьютере.
+Для трансляций требуются дополнительные драйверы. Следуйте указаниям Steam на удалённом компьютере.
 Для цього входу було використано ваш логін і пароль. Якщо ви не вводили свій пароль на цьому пристрої, його слід негайно змінити.
 Для цієї гри потрібен такий зовнішній пристрій: USB-гітара
 Для цієї гри потрібен такий зовнішній пристрій: вебкамера
@@ -75511,7 +75613,7 @@ zítra
 Для этой игры требуется определённое внешнее устройство: USB-гитара
 Для этой игры требуется определённое внешнее устройство: веб-камера
 Для этой игры требуется шлем виртуальной реальности.\nОзнакомьтесь с системными требованиями, чтобы узнать больше.
-Для інсталювання цієї гри потрібне втручання користувача.\n\nІнсталюйте її вручну на віддаленому комп’ютері.
+Для інсталювання цієї гри потрібна участь користувача. Інсталюйте її вручну на віддаленому комп’ютері.
 Днес
 Днес в %1$s
 До %2$s завантажено %1$s подій
@@ -75540,6 +75642,7 @@ zítra
 Добавить выступающего
 Добавить друга
 Добавить друзей
+Добавить на аккаунт
 Добавить опцию бронирования
 Добавить себя
 Добавить сервер в избранные по IP-адресу
@@ -75550,6 +75653,7 @@ zítra
 Добавяне към Google календара
 Добавяне към Outlook календара
 Добавяне към Yahoo календара
+Добавяне към акаунта
 Добавяне към календара
 Добавяне към кошницата
 Добавяне към списъка с желания
@@ -75585,6 +75689,7 @@ zítra
 Додати в список бажаного!
 Додати варіант резервування
 Додати вибраний сервер за IP-адресою
+Додати до акаунта
 Додати до бажаного
 Додати до календаря
 Додати до календаря Apple
@@ -76012,7 +76117,7 @@ zítra
 Запрошення користувача %1$s до «%2$s» заблоковане, тому що сімейна група вже має максимальну кількість учасників.
 Запрошення надіслано користувачу %1$s!
 Запуск нового сезона или выход боевого пропуска
-Запуск этой игры требует участия пользователя.\n\nЗапустите игру на удалённом компьютере вручную и присоединитесь к трансляции отсюда.
+Запуск этой игры требует участия пользователя. Запустите игру на удалённом компьютере вручную и присоединитесь к трансляции отсюда.
 Запускается на этом устройстве с помощью <1>Steam Play.</1>
 Запустить с помощью
 Запустить список рекомендаций
@@ -76340,7 +76445,8 @@ zítra
 Излизането от играта не е чисто и може да се наложи ръчно излизане посредством Steam слоя
 Излизащи скоро
 Излъчване/Предаване на живо
-Излъчването изисква инсталацията на допълнителен драйвер.\n\nМоля, следвайте подканите от Steam на дистанционния компютър.
+Излъчването изисква инсталацията на допълнителен драйвер. Моля, следвайте подканите от Steam на дистанционния компютър.
+Излъчването изисква сдвояване с дистанционния компютър. Моля, опитайте отново и въведете сдвояващия ПИН на дистанционния компютър.
 Излъчвания на живо
 Изменения в профиле вступят в силу после проверки
 Измените размер изображения
@@ -76488,7 +76594,7 @@ zítra
 Индонезийский
 Индонезия
 Иногда просто хочется погрузиться в сюжет с головой, и эта игра производит неизгладимое впечатление. Она захватывает, как любая мыльная опера, и выверена, будто первоклассное ТВ-шоу. Брависсимо! Аплодируем игре, затронувшей душу!
-Инсталацията на тази игра изисква намеса от потребителя.\n\nИнсталирайте я ръчно на дистанционния компютър.
+Инсталацията на тази игра изисква намеса от потребителя. Инсталирайте я ръчно на дистанционния компютър.
 Инсталирайте едно от Steam приложенията, така че да се регистрирате за мобилни напомняния.
 Инсталиране и пускане на демо за %1$s
 Инсталиране на демо
@@ -77135,6 +77241,7 @@ zítra
 Містобудівельні ігри
 Містобудівництво
 М’янма
+На %1$s беше позволено да прескочи времето за изчакване.
 На %1$s і ще кілька ігор (%2$s) діє знижка!
 На %1$s і ще одну гру діє знижка!
 На весь екран
@@ -77762,6 +77869,7 @@ zítra
 Ние сме изчистили първоначалните данни и ще разкриваме всички артикули произволно. Страницата ще се обновява автоматично на всеки %1$s секунди.
 Никакви интернет игри не откликнаха на запитването.
 Никакви сървъри в историята Ви не съответстват на текущите приложени филтри.
+Никакво
 Никарагуа
 Никога
 Никога не давайте кода си на друг потребител или уебсайт.
@@ -77912,9 +78020,7 @@ zítra
 Нужна Ви е активна покана за присъединяване към семейство.
 Нужна ми е помощ при вписване
 Нужна помощь со Steam?
-Нужни са %1$s потвърждения
 Нужни са Ви още %1$s точки
-Нужно е %1$s потвърждение
 Нужно е да имате инсталирано %1$s. Нужно е да сте сторили това, преди да инсталирате и пуснете %2$s. Имате ли инсталиран Steam на този компютър?
 Нулира филтрите Ви към стойностите по подразбиране
 Нулиране
@@ -78969,6 +79075,7 @@ zítra
 Полша
 Пользователей, давших награду «%2$s»: %1$s
 Пользователи мобильного приложения Steam могут войти в аккаунт, просканировав QR-код.
+Пользователи с аккаунтами партнёров или службы поддержки Steamworks не могут присоединиться к семейной группе в роли ребёнка.
 Пользователь %1$s заглушён
 Пользователь %1$s заглушён в этом чате
 Пользователь выключил микрофон
@@ -79150,7 +79257,6 @@ zítra
 Потрібна допомога зі Steam?
 Потрібно мати %1$s, щоб інсталювати й запустити %2$s. На вашому комп’ютері інстальовано Steam?
 Потрібно місця на диску: %1$s
-Потрібно підтверджень: %1$s
 Потяните за угол или край синего поля, чтобы выбрать часть изображения, предназначенную для события или объявления.
 Походження китайського зодіаку
 Походови
@@ -79314,6 +79420,7 @@ zítra
 Премахване от списъка с желания
 Премахването на Вашия удостоверител ще намали сигурността на акаунта Ви.
 Премахване…
+Премахнали сте това устройство от своя акаунт
 Преместване на удостоверителя
 Преминаване към режим „Извън линия“
 Премия Steam
@@ -79680,7 +79787,7 @@ zítra
 Пускане на опашката за откриване
 Пускане на тази игра сега
 Пускане сега
-Пускането на тази игра изисква намеса от потребителя.\n\nПуснете я ръчно на дистанционния компютър, а след това се присъединете към излъчването оттук.
+Пускането на тази игра изисква намеса от потребителя. Пуснете я ръчно на дистанционния компютър, а след това се присъединете към излъчването оттук.
 Пуснато в момента
 Пуснато:
 Пуснете сега!
@@ -80605,7 +80712,6 @@ zítra
 Старіших дописів не знайдено
 Статус за качване на изображението: %1$s
 Створити
-Створити безкоштовний акаунт
 Створити голосовий канал
 Створити налаштування стрічки новин
 Створити нове посилання
@@ -80615,6 +80721,7 @@ zítra
 Створити чат групи
 Створити/оновити стрічку новин? URL-адреса: %1$s
 Створює запит на перевірку та схвалення публікації сторінки розпродажу. Актуально, якщо на сторінці розпродажу вже представлені всі ігри, які ви плануєте показати, та остаточна версія ілюстрацій.
+Створіть безкоштовний акаунт
 Створіть допис або пошукайте відповідь на своє запитання в обговореннях Steam.
 Створіть посилання і надішліть його електронною поштою чи SMS. Ви миттєво станете друзями, щойно запрошення буде прийнято. Будьте обачними, якщо ділитеся посиланням у публічному місці.
 Стежити
@@ -80961,7 +81068,6 @@ zítra
 Треба це мати
 Требуется %1$s
 Требуется контроллер
-Требуется подтверждений: %1$s
 Трейлърът не може да бъде изобразен: Номерът на приложението и/или трейлъра не е предоставен. Официалното групово събитие може автоматично да определи № на приложението, въпреки това се изискват и двата.
 Трети подарък
 Третий подарок
@@ -81085,6 +81191,7 @@ zítra
 Уведіть посилання на зображення (як-от .jpg .gif чи .png), щоби додати його до свого допису.
 Уверете се, че адресът към изображението стартира с https://, а не с http://. Очакваме достъп до изображения чрез криптиран трансфер.
 Уверете се, че сте проверили повторно настройките за видимостта по-долу, преди да публикувате.
+Увесь день
 Увійдіть до акаунта
 Увійдіть до акаунта знову
 Увійдіть до акаунта знову (%1$s)
@@ -81179,7 +81286,7 @@ zítra
 Українська（ウクライナ語）
 Українська（乌克兰语）
 Українська（烏克蘭文）
-Уловете най-скорошните игрални новини от най-популярните съответни източници. Следвайте даден Steam новинарски куратор, за да добавите неговите новости и игрални препоръки към Вашия новинарски Steam център.
+Уловете последните игрални новини от най-популярните съответни източници. Следвайте даден Steam новинарски куратор, за да добавите неговите новости и игрални препоръки към Вашия новинарски Steam център.
 Улучшенные подтверждения обмена
 Улучшенный дизайн магазина
 Умник
@@ -81241,7 +81348,7 @@ zítra
 Установить демо
 Установить и запустить демоверсию %1$s
 Установить особый профиль
-Установка этой игры требует участия пользователя.\n\nУстановите эту игру на удалённом компьютере вручную.
+Установка этой игры требует участия пользователя. Установите эту игру на удалённом компьютере вручную.
 Установлено на %1$s
 Устройства
 Устройство голосового ввода
@@ -81249,7 +81356,6 @@ zítra
 Устройство за гласово въвеждане
 Устройство за гласово извеждане
 Устройство, которое планирует приобрести пользователь, когда подойдёт очередь его бронирования
-Устройството е премахнато от акаунта Ви
 Устройтесь поудобнее
 Усього унікальних переглядів:
 Усього унікальних показів:
@@ -81269,7 +81375,6 @@ zítra
 Учора
 Учётные данные вашего аккаунта изменились
 Файл %1$s слишком большой (максимум — %2$s МБ).
-Файл %1$s слишком большой (максимум — 10 МБ).
 Файл CSV, мови в рядках
 Файл CSV, мови в стовпцях
 Файл CSV, список токенів
@@ -81472,6 +81577,7 @@ zítra
 Ця помилка означає, що або ваша локальна мережа не підключена до Інтернету, або сервери чатів Steam наразі недоступні.
 Ця сімейна група не існує.
 Ця трансляція тільки починається
+Цял ден
 Цял екран
 Цялата игра или част от нея понастоящем не функционира в Steam Deck.
 Ціна
@@ -82161,7 +82267,7 @@ zítra
 การตั้งค่าและการทดสอบเสียง
 การตั้งค่าโปรไฟล์
 การติดตั้งครั้งแรกของเกมนี้จำเป็นต้องใช้การเชื่อมต่ออินเทอร์เน็ตที่ทำงานอยู่
-การติดตั้งเกมนี้ต้องการการตอบสนองจากผู้ใช้\n\nติดตั้งบนคอมพิวเตอร์ระยะไกลด้วยตนเอง
+การติดตั้งเกมนี้ต้องการการตอบสนองจากผู้ใช้ ติดตั้งบนคอมพิวเตอร์ระยะไกลด้วยตนเอง
 การติดตาม
 การต่อสู้ที่น่าตื่นตา
 การถ่ายทอดสด
@@ -82213,7 +82319,8 @@ zítra
 การวางจำหน่ายเกมในวันที่ระบุ
 การวางจำหน่ายเนื้อหาดาวน์โหลด
 การวางจำหน่ายในอนาคต
-การสตรีมต้องมีการติดตั้งไดรเวอร์เพิ่มเติม \n\nโปรดปฏิบัติตามหน้าต่างแจ้งจาก Steam บนคอมพิวเตอร์ระยะไกล
+การสตรีมต้องมีการติดตั้งไดรเวอร์เพิ่มเติม โปรดปฏิบัติตามหน้าต่างแจ้งจาก Steam บนคอมพิวเตอร์ระยะไกล
+การสตรีมต้องมีการเชื่อมโยงกับคอมพิวเตอร์ระยะไกล โปรดลองอีกครั้งและกรอกพินการเชื่อมโยงบนคอมพิวเตอร์ระยะไกล
 การสตรีมภายนอกบ้านยังไม่พร้อมใช้งานในขณะนี้ โปรดลองใหม่อีกครั้งภายหลัง
 การสมัครสมาชิก
 การสั่งจองหมดอายุแล้ว
@@ -82236,7 +82343,7 @@ zítra
 การเพิ่มเครื่องยืนยันตัวตน Steam แบบพกพาไม่เพียงแต่ช่วยปกป้องบัญชีของคุณเท่านั้น แต่ยังช่วยให้คุณแลกเปลี่ยนและลงขายบนตลาดได้รวดเร็วยิ่งขึ้นโดยยืนยันได้จากที่นี่
 การเริ่มต้นของกิจกรรมที่กำลังจะมาถึง
 การเริ่มสตรีมล้มเหลว
-การเริ่มเกมนี้จำเป็นต้องมีการตอบสนองจากผู้ใช้\n\nเริ่มเกมด้วยตัวคุณเองบนคอมพิวเตอร์ระยะไกล แล้วเข้าร่วมการสตรีมจากที่นี่
+การเริ่มเกมนี้จำเป็นต้องมีการตอบสนองจากผู้ใช้ เริ่มเกมด้วยตัวคุณเองบนคอมพิวเตอร์ระยะไกล แล้วเข้าร่วมการสตรีมจากที่นี่
 การเสนอชื่อผู้เข้าชิงรางวัล Steam ของกิจกรรมนี้ได้สิ้นสุดลงแล้ว โปรดกลับมาดูผู้ชนะรางวัล Steam ประจำปีในช่วงเทศกาลลดราคาฤดูใบไม้ร่วงและฤดูหนาวของปีนี้!
 การแก้ไขเสียงรบกวน
 การแก้ไขเสียงสะท้อน
@@ -82674,7 +82781,7 @@ zítra
 คุณได้รับไอเท็มใหม่สำหรับ %1$s
 คุณได้ลบอุปกรณ์นี้ออกจากบัญชีของคุณแล้ว
 คุณได้สแกนรหัส QR เพื่อเข้าสู่ระบบ Steam ด้วยบัญชี %1$s
-คุณได้เปลี่ยนตัวกรองที่เซิร์ฟเวอร์หลักนำมาใช้\nค้นหาอีกครั้งเพื่อดูเซิร์ฟเวอร์เกมทั้งหมดที่ตรงกับตัวกรองเหล่านี้
+คุณได้เปลี่ยนตัวกรองที่มาสเตอร์เซิร์ฟเวอร์นำมาใช้\nค้นหาอีกครั้งเพื่อดูเซิร์ฟเวอร์เกมทั้งหมดที่ตรงกับตัวกรองเหล่านี้
 คุณได้เล่นเกมนี้ในช่วง 6 เดือนที่ผ่านมา
 คุณได้เล่นเพิ่มเติมอีก %1$s
 คุณได้เล่นไป %1$s
@@ -82756,7 +82863,6 @@ zítra
 จำลองสถานการณ์ชีวิตและจำลองสถานการณ์เน้นตัวเลือก
 จำลองสถานการณ์อาชีพ
 จำลองสถานการณ์อาณานิคม
-จำเป็นต้องยืนยัน %1$s รายการ
 จำเป็นต้องเชื่อมต่อกับอินเทอร์เน็ตเพื่อดูเนื้อหานี้
 จำเป็นต้องใช้
 จิตระเบิด
@@ -82930,8 +83036,9 @@ zítra
 ตรวจพบเกมทางอินเทอร์เน็ต แต่ไม่พบเกมใดที่ตรงกับตัวกรองการแสดงผลปัจจุบัน
 ตรวจพบเซิร์ฟเวอร์ แต่ไม่ตรงกับตัวกรองการแสดงผลปัจจุบัน
 ตรวจสอบว่าเส้นทางไปยังรูปภาพนั้นถูกต้อง
-ตรวจสอบให้แน่ใจว่า URL ของภาพเริ่มต้นด้วย https:// ไม่ใช่ http:// เราต้องการเข้าถึงภาพด้วยการถ่ายโอนที่ถูกเข้ารหัสแล้ว
+ตรวจสอบให้แน่ใจว่า URL ของภาพเริ่มต้นด้วย https: // ไม่ใช่ http: // เราต้องการเข้าถึงภาพด้วยการถ่ายโอนที่ถูกเข้ารหัสแล้ว
 ตรินิแดดและโตเบโก
+ตลอดวัน
 ตลาด
 ตลาดชุมชน
 ตองกา
@@ -83096,6 +83203,7 @@ zítra
 บัญชีของคุณได้ออกจากระบบแล้ว โปรดเข้าสู่ระบบเพื่อดำเนินการต่อ
 บัญชีของคุณไม่ได้รับอนุญาตให้ทำการสั่งจอง
 บัญชีของคุณไม่ได้รับอนุญาตให้ทำการสั่งซื้อ
+บัญชีของพันธมิตร Steamworks หรือฝ่ายสนับสนุนไม่สามารถเข้าร่วมครอบครัวในฐานะผู้เยาว์ได้
 บัญชีที่คุณพยายามออกจากระบบมีเครื่องยืนยันตัวตน Steam Guard ที่อุปกรณ์นี้ยังใช้งานอยู่ โปรดโอนย้ายหรือลบเครื่องยืนยันตัวตนของคุณออก แล้วลองใหม่อีกครั้ง
 บัญชีนี้มีการเปิดใช้งาน Steam Guard บนอุปกรณ์อีกเครื่องหนึ่งอยู่แล้ว
 บัญชีนี้มีหมายเลขโทรศัพท์ที่ได้รับการยืนยันแล้ว โปรดลบหมายเลขดังกล่าวออกเพื่อใช้หมายเลขอื่น
@@ -83654,7 +83762,7 @@ zítra
 สร้างตั๋วเพื่อขอให้ตรวจสอบการอนุมัติให้เผยแพร่หน้าการลดราคา โปรดดำเนินการดังกล่าวนี้เมื่อหน้าการลดราคาของคุณมีอาร์ตเวิร์กขั้นสุดท้ายและเกมทั้งหมดที่คุณต้องการนำเสนอแล้ว
 สร้างตั๋วเสร็จเรียบร้อยแล้ว!
 สร้างบัญชีใหม่
-สร้างบัญชีใหม่ฟรี
+สร้างบัญชีได้ฟรี
 สร้างลิงก์เพื่อแบ่งปันผ่านอีเมลหรือ SMS คุณและเพื่อนของคุณจะเชื่อมต่อกันได้ในทันทีเมื่อเพื่อนยอมรับคำเชิญ โปรดระวังหากเป็นการแบ่งปันในสถานที่สาธารณะ
 สร้างลิงก์ใหม่
 สร้างเมืองและการตั้งอาณานิคม
@@ -83790,7 +83898,7 @@ zítra
 หลัง %1$s
 หลัง %1$s %2$s
 หลังจากที่คุณส่งแล้ว คุณจะได้รับรางวัลของคุณ อย่างไรก็ตาม คุณไม่สามารถย้อนกลับไปและเปลี่ยนคำตอบของคุณได้ คุณแน่ใจใช่หรือไม่?
-หลังจากนั้น %1$s/เดือน และยกเลิกได้ทุกเวลา \nเฉพาะสมาชิกใหม่เท่านั้น \nข้อเสนอหมดเขตวันที่ 9 ก.พ. 2022 - 01:00 น. เวลาประเทศไทย
+หลังจากนั้น %1$s/เดือน และยกเลิกได้ทุกเวลา \nเฉพาะสมาชิกใหม่เท่านั้น \nข้อเสนอหมดเขตวันที่ 9 ก.พ. 2022 - 01: 00 น. เวลาประเทศไทย
 หลังจากนั้นจะเรียกเก็บเงินปีละ %1$s โดยจะยกเลิกเมื่อใดก็ได้
 หลังจากนั้นจะเรียกเก็บเงินเดือนละ %1$s โดยจะยกเลิกเมื่อใดก็ได้
 หลังไตรมาสที่ 1 (%1$s %2$s หรือหลังจากนั้น)
@@ -84261,6 +84369,7 @@ zítra
 เพิ่มเติมเกี่ยวกับเกมนี้
 เพิ่มเพื่อน
 เพิ่มในสิ่งที่อยากได้
+เพิ่มไปยังบัญชี
 เพิ่มไปยังปฏิทิน
 เพิ่มไปยังปฏิทิน Apple
 เพิ่มไปยังปฏิทิน Google
@@ -84788,7 +84897,7 @@ zítra
 ไม่พบอัปเดตเพิ่มเติม
 ไม่พบเกมที่ตรงกัน
 ไม่พบเกมแบบอินเทอร์เน็ตที่ตรงกับการค้นหา
-ไม่พบเกมแบบอินเทอร์เน็ตที่แสดงบนเซิร์ฟเวอร์หลักที่ผ่านการตั้งค่าตัวกรองของคุณ
+ไม่พบเกมแบบอินเทอร์เน็ตที่แสดงบนมาสเตอร์เซิร์ฟเวอร์ที่ผ่านการตั้งค่าตัวกรองของคุณ
 ไม่พบเซิร์ฟเวอร์ใด ๆ ตามที่อยู่นั้น
 ไม่พบเซิร์ฟเวอร์ใด ๆ ตามที่อยู่นั้น หากคุณทราบพอร์ตที่เซิร์ฟเวอร์นั้นใช้อยู่ คุณอาจลองระบุพอร์ตดังกล่าว
 ไม่พบเดโม
@@ -85097,8 +85206,8 @@ zítra
 このゲームの初回起動時のセットアップにはインターネットへの接続が必要です
 このゲームの割引
 このゲームの詳細について
-このゲームの起動にはユーザーによる操作が必要です。\n\nリモートコンピューターで手動でインストールしてください。
-このゲームの起動にはユーザーによる操作が必要です。\n\nリモートコンピューターで手動で起動した後に、ここからストリーミングに参加してください。
+このゲームの起動にはユーザーによる操作が必要です。リモートコンピューターで手動でインストールしてください。
+このゲームの起動にはユーザーによる操作が必要です。リモートコンピューターで手動で起動した後に、ここからストリーミングに参加してください。
 このゲームはHDRをサポートしていますが、ゲーム内設定を使用して手動で有効にする必要があります
 このゲームはSteam Deckで完全に機能し、内蔵のコントロールとディスプレイで快適に動作します。
 このゲームはSteam Deckで機能しますが、操作や設定に追加の作業が必要な場合があります。
@@ -85147,7 +85256,7 @@ zítra
 このコードは、アカウントにアクセスできなくなったときや、デバイスを紛失したとき、認証用機器を移行せずにこのアプリを削除したときに、アカウントを復元するためのものです。
 このコードは誰とも共有しないでください。
 このサインインであなたのアカウント名とパスワードが使用されました。このデバイスでパスワードを入力した覚えがない場合は、今すぐパスワードを変更してください。
-このサードパーティイベントは%1$sと%2$sの主催です
+このサードパーティーイベントは%1$sと%2$sの共催です
 このサードパーティーイベントは%1$sの主催です
 このシリーズのユーザーレビュー%2$s件中%1$s%が好評です
 このステータスをフレンドのアクティビティフィードに表示します。Steamは以下に表示されるアイテムのプレビューとメッセージを含めます。
@@ -85312,6 +85421,7 @@ zítra
 アイルランド
 アカウントからサインアウトしました。続行するにはサインインしてください。
 アカウントが認証用機器で保護されていない場合、不正アクセスされた際に取引を確認し停止する時間を確保できるように、Steamはこれらの取引を保留します。
+アカウントに追加
 アカウントのペアレンタルコントロールには、認証情報の確認が必要です
 アカウントのメールアドレスにコードを送信しました。
 アカウントの国は現在のファミリーメンバー全員と同じである必要があります。
@@ -85798,7 +85908,8 @@ zítra
 ストア閲覧機能の改善
 ストラテジー
 ストラテジーのハイライト
-ストリーミングには追加のドライバーをインストールしてください。\n\nリモートコンピューターでSteamプロンプトの指示に従ってください。
+ストリーミングにはリモートコンピューターとのペアリングが必要です。再度リモートコンピューターでペアリング用のPINを入力してください。
+ストリーミングには追加のドライバーのインストールが必要です。リモートコンピューターでSteamプロンプトの指示に従ってください。
 ストリーミングの起動待機中にタイムアウトしました。
 ストリーミングの開始に失敗しました
 ストリーミングを%1$s分間視聴し、イベント終了時に%2$sからアイテムドロップをゲットしよう！
@@ -86684,7 +86795,6 @@ zítra
 中非共和国
 中非共和國
 串流啟動失敗
-串流需安裝額外的驅動程式。\n\n請依遠端電腦上 Steam 所顯示的指示操作。
 丹麥
 丹麥文
 丹麦
@@ -87044,6 +87154,7 @@ zítra
 儲存為草稿
 儲存為草稿，已排程自動發佈日期：%1$s
 儿童
+允許 %1$s 免除冷卻期。
 允許 Steam 行動應用程式存取相機以掃描 QR 碼。
 允許留言
 允许 Steam 手机应用访问摄像头以扫描二维码。
@@ -87092,6 +87203,8 @@ zítra
 全ゲームから
 全タイトル用に自分で選択
 全体に公開
+全天
+全天開放
 全屏
 全幅
 全店遊戲特價優惠
@@ -87518,6 +87631,7 @@ zítra
 反作弊
 反対票
 发布
+发布于
 发布于：%1$s
 发布您的评测时遇到问题。请稍后再试。
 发布新闻至 Steam 吗？
@@ -87625,7 +87739,7 @@ zítra
 向您推荐此游戏
 向您的愿望单添加内容时出错。请稍后再试：
 否
-启动该游戏需要用户干预。\n\n手动在远程计算机上启动，然后从这里加入流式传输。
+启动此游戏需要用户干预。手动在远程计算机上启动，然后从这里加入流式传输。
 启用%1$s
 启用拼写检查
 吸血鬼ゲーム
@@ -87664,7 +87778,6 @@ zítra
 問題を解決する
 問題解決のためにSteamサポートに問い合わせる
 啟動時顯示 Steam 桌面快顯通知
-啟動此遊戲需由使用者操作。\n\n請手動啟動遠端電腦，然後從這裡加入串流。
 啟用 RSS 動態消息
 啟用拼字檢查
 啟用產品序號
@@ -87969,8 +88082,8 @@ zítra
 安提瓜和巴布达
 安装任意一款 Steam 应用以注册移动版提醒。
 安装并运行 %1$s 的试用版
+安装此游戏需要用户干预。手动在远程计算机上安装。
 安装试用版
-安装该游戏需要用户干预。\n\n手动在远程计算机上安装。
 安裝 Steam 了嗎？
 安裝並執行 %1$s 的試玩版
 安裝任一 Steam 應用程式以登記行動提醒。
@@ -88136,7 +88249,6 @@ zítra
 已加入愿望单
 已加入管理員 %1$s。
 已加入願望清單
-已发布
 已同意購買
 已在 %1$s 上安装
 已在地化
@@ -89248,6 +89360,7 @@ zítra
 新增帳戶
 新增文字頻道
 新增此帳戶時發生錯誤。請稍後再試。
+新增至帳戶
 新增語音頻道
 新增資金
 新增項目至您的願望清單時發生錯誤，請稍後再試：
@@ -89256,6 +89369,7 @@ zítra
 新库存物品
 新推出
 新機能！
+新発表
 新登場
 新發行
 新的回合等待中
@@ -90099,7 +90213,6 @@ zítra
 此遊戲有時會顯示滑鼠、鍵盤或非 Steam Deck 控制器的圖示
 此遊戲的啟動器 / 設定工具可能需要使用觸控螢幕或虛擬鍵盤，或有難以閱讀的文字
 此遊戲的圖像設定無法在 Steam Deck 上設定至可順暢執行的程度
-此遊戲的安裝作業需由使用者操作。\n\n請手動安裝到遠端電腦上。
 此遊戲的折扣
 此遊戲的防作弊系統並未針對 Steam Deck 支援進行設定
 此遊戲的預設圖像設定能在 Steam Deck 上順暢地執行
@@ -90281,7 +90394,8 @@ zítra
 活動開始時，Steam 將發送電子郵件通知至您的帳戶。
 派手なアクション
 流式传输启动失败
-流式传输需要安装额外的驱动程序。\n\n请按照远程计算机上的 Steam 提示进行操作。
+流式传输需要与远程计算机配对。请重试并在远程计算机上输入配对 PIN。
+流式传输需要安装额外的驱动程序。请按照远程计算机上的 Steam 提示进行操作。
 测试邀请/新闻
 浏览全部
 浏览分类
@@ -90303,6 +90417,7 @@ zítra
 深思熟慮
 深思熟虑
 添加 Steam 手机验证器不仅可以保护您的帐户，还可以让您通过它进行确认以便加快交易和在市场上架的速度。
+添加到帐户
 添加好友
 添加帐户
 添加我
@@ -90416,6 +90531,7 @@ zítra
 热门即将推出
 热门来源
 無
+無し
 無効
 無効な日時
 無効な画像タイプが選択されました
@@ -90434,7 +90550,7 @@ zítra
 無效的日期時間
 無料でコンテンツをホスティングするために画像をSteamにアップロードできます。
 無料でプレイ！
-無料アカウントの作成
+無料アカウントを作成
 無料ウィーク
 無料ウィークエンド
 無料トライアル
@@ -90502,6 +90618,7 @@ zítra
 無緩衝的音訊片段
 無視
 無謂 / 頻繁的裸露或色情內容
+無開放時段
 無雙
 無題
 無題のメモ
@@ -90745,7 +90862,6 @@ zítra
 発生したエラー（コード： %1$s）の詳細：（%2$s）
 発行元：
 発行元：%1$s
-発表されました
 発表予定
 発送予定日：
 登入
@@ -91147,6 +91263,7 @@ zítra
 索馬利亞
 索马里
 終了
+終日
 組み込みクライアント
 組合包
 結束
@@ -92479,7 +92596,6 @@ zítra
 電話番号へアクセスできません
 電話番号を変更
 需使用控制器
-需要 %1$s 个确认
 需要 Steam 方面的帮助吗？
 需要控制器
 需要的空间 %1$s
@@ -92834,12 +92950,13 @@ zítra
 계정: %1$s
 계정에 적용된 제한으로 인하여 포인트로 어워드를 수여할 수 없습니다.
 계정에 접근할 수 없거나 기기를 분실한 경우, 또는 인증기를 이전하지 않고 앱을 삭제한 경우 해당 코드를 사용하여 계정을 복구할 수 있습니다.
+계정에 추가
 계정에 현재 쿨다운이 적용되어 이전 가족에만 다시 가입할 수 있습니다.
 계정에서 이 기기를 제거했습니다.
 계정을 추가하는 도중 오류가 발생했습니다. 나중에 다시 시도해 주세요.
-계정의 가족 모드 설정으로 인해 로그인 정보를 인증해야 합니다
 계정의 국가는 모든 가족 구성원의 국가와 같아야 합니다.
 계정의 이메일 주소로 코드가 전송되었습니다.
+계정의 자녀 보호 기능 설정으로 인해 로그인 정보를 인증해야 합니다.
 계정이 로그아웃 상태입니다. 계속하려면 로그인하세요.
 고객님의 계정은 이 기능을 사용하기 위한 조건을 충족하지 못합니다. 자세한 정보는 %1$s 페이지를 참고하세요.
 고객님의 상점 환경 설정에 따라 아이템이 숨김 처리되었습니다. 여기를 클릭해 환경 설정을 변경하세요.
@@ -92895,6 +93012,7 @@ zítra
 국가를 확인할 수 없습니다.
 군사
 굵게
+권한 없음
 귀하의 계정에 등록된 이메일 주소가 없습니다. 이메일 주소를 추가하려면 가족 모드를 종료한 뒤 가족 모드 설정을 실행하세요.
 귀하의 계정이 비활성화되었습니다
 귀하의 이메일 주소로 링크를 보내드렸습니다.
@@ -92981,7 +93099,7 @@ zítra
 내 신제품 대기열 <1>더 알아보기</1>
 내 언어로 제공되는 뉴스 출처를 표시합니다
 내 인증기를 더 이상 확인할 수 없습니다.
-내 잔고
+내 잔액
 내 찜 목록에서 항목 숨기기
 내 추천작 보기
 내 콘텐츠
@@ -93748,7 +93866,8 @@ zítra
 스트리밍을 %1$s시간 시청하고, 이벤트가 종료될 때 %2$s에서 드롭되는 아이템을 획득하세요!
 스트리밍을 %1$s시간 시청하고, 이벤트가 종료될 때 개발사에서 드롭되는 아이템을 획득하세요!
 스트리밍을 시작할 수 없습니다.
-스트리밍을 하려면 드라이버를 추가로 설치해야 합니다.\n\n원격 컴퓨터에 나오는 Steam의 안내를 따르세요.
+스트리밍을 하려면 드라이버를 추가로 설치해야 합니다. 원격 PC에서 Steam의 안내를 따르세요.
+스트리밍을 하려면 원격 PC와 페어링을 해야 합니다. 원격 PC에 페어링 PIN을 입력하고 다시 시도하세요.
 스티커
 스티커 획득
 스페셜 메시지 보내기
@@ -94125,8 +94244,8 @@ zítra
 이 게임을 뉴스 허브로 복구하고 앞으로 모든 소식을 표시합니다.
 이 게임을 뉴스 허브에서 제거하고 앞으로 모든 소식을 차단합니다.
 이 게임을 다른 플레이어들에게 추천하시겠어요?
-이 게임을 설치하려면 사용자 작업이 필요합니다.\n\n원격 컴퓨터에서 수동으로 설치하세요.
-이 게임을 시작하려면 사용자 조작이 필요합니다.\n\n원격 컴퓨터에서 직접 시작한 후 여기에서 스트리밍으로 즐기세요.
+이 게임을 설치하려면 사용자가 추가 작업을 해야 합니다. 원격 PC에서 수동으로 설치하세요.
+이 게임을 실행하려면 사용자가 추가 작업을 해야 합니다. 원격 PC에서 직접 실행한 후 여기에서 스트리밍으로 즐기세요.
 이 게임을 플레이하려면 VR 헤드셋이 필요합니다.\n자세한 정보는 시스템 요구 사항을 참고하세요.
 이 게임을 플레이하려면 외부 키보드를 사용하는 것이 좋습니다.
 이 게임의 디자이너들은 창의적인 실험의 최전선에서 참신한 시각과 뇌를 깨우는 놀라움을 선사합니다. 이 게임은 이전에 한 번도 플레이한 적 없었던 새로움으로 즐거움, 영감 그리고 재미를 선사합니다.
@@ -94479,6 +94598,7 @@ zítra
 제품에 대한 여러분의 생각을 다른 플레이어와 공유하세요.
 제품을 무료로 받았다면 이 확인란을 체크하세요. '무료로 받은 제품'이라는 태그가 평가와 함께 표시됩니다. 게임을 평가하고 추가 보상을 받은 경우, 반드시 평가에 해당 내용을 명시해야 합니다.
 제품을 무료로 받은 경우, 이 확인란을 체크하세요
+제한 없음
 제한된 계정은 가족을 생성할 수 없습니다.
 제한된 계정입니다. 추천 남용을 방지하기 위해, Steam에서 미화 5달러를 소비한 사용자만 Steam 어워드에 참여할 수 있습니다. 자세한 내용은 %1$s에서 확인하세요.
 제한된 계정입니다. 투표 남용을 방지하기 위해, Steam에서 미화 5달러를 소비한 사용자만 Steam 어워드에 참여할 수 있습니다. 자세한 내용은 %1$s에서 확인하세요.
