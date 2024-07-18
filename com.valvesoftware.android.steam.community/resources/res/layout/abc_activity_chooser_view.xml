@@ -4,7 +4,7 @@
     android:id="@+id/activity_chooser_view_content"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    class="android.support.v7.widget.ActivityChooserView$InnerLayout"
+    class="androidx.appcompat.widget.ActivityChooserView$InnerLayout"
     style="?attr/activityChooserViewStyle">
     <FrameLayout
         android:layout_gravity="center"

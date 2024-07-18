@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:fillViewport="true"
     style="?attr/buttonBarStyle">
-    <android.support.v7.widget.ButtonBarLayout
+    <androidx.appcompat.widget.ButtonBarLayout
         android:gravity="bottom"
         android:orientation="horizontal"
         android:paddingLeft="12dp"
@@ -13,13 +13,14 @@
         android:paddingRight="12dp"
         android:paddingBottom="4dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layoutDirection="locale">
         <Button
             android:id="@android:id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="?attr/buttonBarNeutralButtonStyle"/>
-        <android.support.v4.widget.Space
+        <android.widget.Space
             android:id="@+id/spacer"
             android:visibility="invisible"
             android:layout_width="0dp"
@@ -35,5 +36,5 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="?attr/buttonBarPositiveButtonStyle"/>
-    </android.support.v7.widget.ButtonBarLayout>
+    </androidx.appcompat.widget.ButtonBarLayout>
 </ScrollView>

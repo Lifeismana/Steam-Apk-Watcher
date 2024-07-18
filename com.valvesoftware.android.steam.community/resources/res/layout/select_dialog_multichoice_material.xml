@@ -12,4 +12,6 @@
     android:minHeight="?attr/listPreferredItemHeightSmall"
     android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
     android:drawablePadding="20dp"
-    android:drawableStart="?android:attr/listChoiceIndicatorMultiple"/>
+    android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+    android:paddingStart="@dimen/abc_select_dialog_padding_start_material"
+    android:paddingEnd="?attr/dialogPreferredPadding"/>
