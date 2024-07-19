@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="5000241"
+    android:versionName="1.2.0"
+    android:installLocation="auto"
+    android:compileSdkVersion="31"
+    android:compileSdkVersionCodename="12"
+    package="com.valvesoftware.steamlink"
+    platformBuildVersionCode="31"
+    platformBuildVersionName="12">
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="31"/>
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.gamepad"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.type.pc"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.usb.host"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <supports-screens
+        android:anyDensity="true"
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"/>
+    <queries>
+        <package android:name="com.virtualhere.androidserver"/>
+    </queries>
+    <application
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+        android:label="Steam Link"
+        android:icon="@mipmap/ic_launcher"
+        android:name="org.qtproject.qt5.android.bindings.QtApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:banner="@mipmap/ic_banner"
+        android:isGame="true"
+        android:extractNativeLibs="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:isSplitRequired="true">
+        <meta-data
+            android:name="SDL_ENV.SDL_ACCELEROMETER_AS_JOYSTICK"
+            android:value="0"/>
+        <meta-data
+            android:name="SDL_ENV.SDL_TV_REMOTE_AS_JOYSTICK"
+            android:value="0"/>
+        <meta-data
+            android:name="SDL_ENV.SDL_ANDROID_TRAP_BACK_BUTTON"
+            android:value="1"/>
+        <meta-data
+            android:name="com.samsung.android.dex.launchwidth"
+            android:value="0"/>
+        <meta-data
+            android:name="com.samsung.android.dex.launchheight"
+            android:value="0"/>
+        <activity
+            android:name="com.valvesoftware.steamlink.SteamShellActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="fontScale|layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard|locale">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="shell"/>
+            <meta-data
+                android:name="android.app.qt_sources_resource_id"
+                android:resource="@array/qt_sources"/>
+            <meta-data
+                android:name="android.app.repository"
+                android:value="default"/>
+            <meta-data
+                android:name="android.app.qt_libs_resource_id"
+                android:resource="@array/qt_libs"/>
+            <meta-data
+                android:name="android.app.bundled_libs_resource_id"
+                android:resource="@array/bundled_libs"/>
+            <meta-data
+                android:name="android.app.bundle_local_qt_libs"
+                android:value="1"/>
+            <meta-data
+                android:name="android.app.use_local_qt_libs"
+                android:value="1"/>
+            <meta-data
+                android:name="android.app.libs_prefix"
+                android:value="/data/local/tmp/qt/"/>
+            <meta-data
+                android:name="android.app.load_local_libs_resource_id"
+                android:resource="@array/load_local_libs"/>
+            <meta-data
+                android:name="android.app.load_local_jars"
+                android:value="jar/QtAndroid.jar:jar/QtAndroidExtras.jar:jar/QtAndroidBearer.jar"/>
+            <meta-data
+                android:name="android.app.static_init_classes"
+                android:value=""/>
+            <meta-data
+                android:name="android.app.background_running"
+                android:value="false"/>
+            <meta-data
+                android:name="android.app.auto_screen_scale_factor"
+                android:value="false"/>
+            <meta-data
+                android:name="android.app.extract_android_style"
+                android:value="none"/>
+        </activity>
+        <activity
+            android:label="Steam Link"
+            android:name="com.valvesoftware.steamlink.SteamLink"
+            android:exported="true"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="fontScale|layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard|locale"
+            android:preferMinimalPostProcessing="true">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="https"
+                    android:host="s.team"
+                    android:pathPrefix="/remoteplay/"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="https"
+                    android:host="store.steampowered.com"
+                    android:pathPrefix="/steamlink/connect/"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="https"
+                    android:host="store.steamchina.com"
+                    android:pathPrefix="/steamlink/connect/"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="steamlink"/>
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="com.android.vending.splits.required"
+            android:value="true"/>
+        <meta-data
+            android:name="com.android.stamp.source"
+            android:value="https://play.google.com/store"/>
+        <meta-data
+            android:name="com.android.stamp.type"
+            android:value="STAMP_TYPE_DISTRIBUTION_APK"/>
+        <meta-data
+            android:name="com.android.vending.splits"
+            android:resource="@xml/splits0"/>
+        <meta-data
+            android:name="com.android.vending.derived.apk.id"
+            android:value="2"/>
+    </application>
+</manifest>

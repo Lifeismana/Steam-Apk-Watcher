@@ -1,0 +1,114 @@
+Manifest-Version: 1.0
+
+Name: AndroidManifest.xml
+SHA-256-Digest: jACKE/qFC9pFC8AJpIrjWRy0xLbBpiywKfn5qClUeUc=
+
+Name: assets/--Added-by-androiddeployqt--/debugger.command
+SHA-256-Digest: Yo5Iih25KFavidHmDBDxQrsd5zVkblHmmUEj/IWhL+k=
+
+Name: assets/--Added-by-androiddeployqt--/qt_cache_pregenerated_file_l
+ ist
+SHA-256-Digest: B9c6CUiJOIG/GFgunJUINvhGDGYp223k00a6gV3u6gg=
+
+Name: classes.dex
+SHA-256-Digest: OfmtTHBoVsGrtVlPb37dSj9G5/eTFyrcuUXxg6KQPys=
+
+Name: org/kde/necessitas/ministro/IMinistro.aidl
+SHA-256-Digest: tepx/qE0m3da0SVNCLM3WXMyw8lMId6KtVHMQic/8Hw=
+
+Name: org/kde/necessitas/ministro/IMinistroCallback.aidl
+SHA-256-Digest: q49d0EI6JKkAli+AJ6ffE/gAkjJjD6QgghFSgIcVY+Y=
+
+Name: res/layout/main.xml
+SHA-256-Digest: UKSQT5TQf3uqxhTofLi3KtZvgobyMOW96wyx56jCUZc=
+
+Name: res/mipmap-anydpi-v26/ic_launcher.xml
+SHA-256-Digest: a1yP4GYfyQu74G+uFdYwO/DLjHxdv789LYljUwmmqDk=
+
+Name: res/mipmap-anydpi-v26/ic_launcher_round.xml
+SHA-256-Digest: a1yP4GYfyQu74G+uFdYwO/DLjHxdv789LYljUwmmqDk=
+
+Name: res/mipmap-hdpi-v4/ic_launcher.png
+SHA-256-Digest: Jo/2QL+U46aX0woOAVPcC/gGiYpV+oska34WlwExIac=
+
+Name: res/mipmap-hdpi-v4/ic_launcher_background.png
+SHA-256-Digest: vv7PEvPFdjWLGDQ7l8fwu9i9v1QA/lSDygKB354b2Is=
+
+Name: res/mipmap-hdpi-v4/ic_launcher_foreground.png
+SHA-256-Digest: O2kV0pLL5abv/vfli/9YCO0w0MNfCZ8ydJB8p8kk40M=
+
+Name: res/mipmap-hdpi-v4/ic_launcher_round.png
+SHA-256-Digest: thR8xLr+C6UCDJakTH3RkonJjmRdlpEfJgsll6EwEP8=
+
+Name: res/mipmap-ldpi-v4/ic_launcher.png
+SHA-256-Digest: QSCCqTW6dqCg1GNr+CjjeqM3clfp4LfEPVEl5rFxdr0=
+
+Name: res/mipmap-ldpi-v4/ic_launcher_background.png
+SHA-256-Digest: xxkVebTbR+jVkR3bpznTUpNZvxfPMO7Ax6EHKuOFyF8=
+
+Name: res/mipmap-ldpi-v4/ic_launcher_foreground.png
+SHA-256-Digest: ozf0h1lSjP4s4e1VEDVSb0/Z8eZCDDjPeutzIcPfcn8=
+
+Name: res/mipmap-ldpi-v4/ic_launcher_round.png
+SHA-256-Digest: pz5VuyXBwFNiIuWksArLLNl0pfyClSz4jHDDgSMnllI=
+
+Name: res/mipmap-mdpi-v4/ic_launcher.png
+SHA-256-Digest: JIIEPF7hzMaSBFn5OF4o4GtO44JtvWmJIhgeMf82dJM=
+
+Name: res/mipmap-mdpi-v4/ic_launcher_background.png
+SHA-256-Digest: NJcPTR34DxwtBXxJx/Jr7MqLjEpaLWgpqWu9yiTT33E=
+
+Name: res/mipmap-mdpi-v4/ic_launcher_foreground.png
+SHA-256-Digest: cRMlVq9sbxjt03tjigm8fRpO3vs0G5fUPMWmIZpuMBI=
+
+Name: res/mipmap-mdpi-v4/ic_launcher_round.png
+SHA-256-Digest: iucGYnTFGrRqqkKk0tLTMImMaVyIhXaORDEyy3pTwk0=
+
+Name: res/mipmap-xhdpi-v4/ic_banner.png
+SHA-256-Digest: uEYm7HhfcSd4frMZ7R8t8yVQxuUAnX1hYczeH/BudpQ=
+
+Name: res/mipmap-xhdpi-v4/ic_launcher.png
+SHA-256-Digest: kio4NqWCM43xF6/8wID3iytzqcbzahSoEu2CqbpOeFY=
+
+Name: res/mipmap-xhdpi-v4/ic_launcher_background.png
+SHA-256-Digest: meyoSKr6MBTYUBwX7/MyQGTWpCt6aE2zdowNI/+9CVg=
+
+Name: res/mipmap-xhdpi-v4/ic_launcher_foreground.png
+SHA-256-Digest: mts60KWhfR0TYlXw+RKK6I0fwwpsT9xKqWKzmB5pw7U=
+
+Name: res/mipmap-xhdpi-v4/ic_launcher_round.png
+SHA-256-Digest: tyggbmsaWaa0zi988qZy3VVtWZ79UiKcbqX/CocTWPc=
+
+Name: res/mipmap-xxhdpi-v4/ic_launcher.png
+SHA-256-Digest: GoGav2uMkE7B2LwUrRuFD3bhGVJ0AOE+54Wok8Ruafg=
+
+Name: res/mipmap-xxhdpi-v4/ic_launcher_background.png
+SHA-256-Digest: tfoAk9RAI+KuVf0fl/jT2OlG3hNqkB9vkqucmId+32w=
+
+Name: res/mipmap-xxhdpi-v4/ic_launcher_foreground.png
+SHA-256-Digest: GIn72N1Hba5vBKixe+4jL3FJ2Pf9rmO8iks+x3+GTm8=
+
+Name: res/mipmap-xxhdpi-v4/ic_launcher_round.png
+SHA-256-Digest: kwp0cnxhofHBCa2lHrCnkotrhwCqRt1k5sd6O/WuJQ0=
+
+Name: res/mipmap-xxxhdpi-v4/ic_launcher.png
+SHA-256-Digest: sl9qSEwVJ9Aky5FerbVUEvtouDOUYqTWcB6fdTHLVYY=
+
+Name: res/mipmap-xxxhdpi-v4/ic_launcher_background.png
+SHA-256-Digest: oDLbix2AmotgoIU1BfcUYMXNxPmDy1QoIazwt7V4vHc=
+
+Name: res/mipmap-xxxhdpi-v4/ic_launcher_foreground.png
+SHA-256-Digest: PZpBtAFLKnYdyNVOP+xldSVVEeEXAErhADQTGeR494g=
+
+Name: res/mipmap-xxxhdpi-v4/ic_launcher_round.png
+SHA-256-Digest: KBj4PQlaUmsFVExkj39Iecb+/CeLIgApiAVViZHVS6c=
+
+Name: res/xml/splits0.xml
+SHA-256-Digest: R5wfhIEV3xxgXUNl/eRisMXF0uLodINtJhabd6NufCU=
+
+Name: resources.arsc
+SHA-256-Digest: rFdycKRBRmvP7MV/CjJN6nGDJ1h4mZtGGQ1y+ASFMzg=
+
+Name: stamp-cert-sha256
+SHA-256-Digest: HZwqAqk4Fv9ceuZPmq0Cwj3kncUUYg2xp61iTSqDZ5w=
+

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="bundled_in_assets">
+    </array>
+    <array name="bundled_libs">
+        <item>arm64-v8a;SDL2</item>
+        <item>arm64-v8a;SDL2_image</item>
+        <item>arm64-v8a;SDL2_mixer</item>
+        <item>arm64-v8a;SDL2_ttf</item>
+        <item>arm64-v8a;h264bitstream</item>
+        <item>arm64-v8a;hevcbitstream</item>
+        <item>arm64-v8a;shell_arm64-v8a</item>
+        <item>arm64-v8a;steamwebrtc</item>
+        <item>armeabi-v7a;SDL2</item>
+        <item>armeabi-v7a;SDL2_image</item>
+        <item>armeabi-v7a;SDL2_mixer</item>
+        <item>armeabi-v7a;SDL2_ttf</item>
+        <item>armeabi-v7a;h264bitstream</item>
+        <item>armeabi-v7a;hevcbitstream</item>
+        <item>armeabi-v7a;shell_armeabi-v7a</item>
+        <item>armeabi-v7a;steamwebrtc</item>
+        <item>x86;SDL2</item>
+        <item>x86;SDL2_image</item>
+        <item>x86;SDL2_mixer</item>
+        <item>x86;SDL2_ttf</item>
+        <item>x86;h264bitstream</item>
+        <item>x86;hevcbitstream</item>
+        <item>x86;shell_x86</item>
+        <item>x86;steamwebrtc</item>
+        <item>x86_64;SDL2</item>
+        <item>x86_64;SDL2_image</item>
+        <item>x86_64;SDL2_mixer</item>
+        <item>x86_64;SDL2_ttf</item>
+        <item>x86_64;h264bitstream</item>
+        <item>x86_64;hevcbitstream</item>
+        <item>x86_64;shell_x86_64</item>
+        <item>x86_64;steamwebrtc</item>
+    </array>
+    <array name="load_local_libs">
+        <item>arm64-v8a;libplugins_platforms_qtforandroid_arm64-v8a.so:libplugins_bearer_qandroidbearer_arm64-v8a.so:libplugins_iconengines_qsvgicon_arm64-v8a.so:libplugins_imageformats_qgif_arm64-v8a.so:libplugins_imageformats_qjpeg_arm64-v8a.so:libplugins_imageformats_qsvg_arm64-v8a.so</item>
+        <item>x86_64;libplugins_platforms_qtforandroid_x86_64.so:libplugins_bearer_qandroidbearer_x86_64.so:libplugins_iconengines_qsvgicon_x86_64.so:libplugins_imageformats_qgif_x86_64.so:libplugins_imageformats_qjpeg_x86_64.so:libplugins_imageformats_qsvg_x86_64.so</item>
+        <item>armeabi-v7a;libplugins_platforms_qtforandroid_armeabi-v7a.so:libplugins_bearer_qandroidbearer_armeabi-v7a.so:libplugins_iconengines_qsvgicon_armeabi-v7a.so:libplugins_imageformats_qgif_armeabi-v7a.so:libplugins_imageformats_qjpeg_armeabi-v7a.so:libplugins_imageformats_qsvg_armeabi-v7a.so</item>
+        <item>x86;libplugins_platforms_qtforandroid_x86.so:libplugins_bearer_qandroidbearer_x86.so:libplugins_iconengines_qsvgicon_x86.so:libplugins_imageformats_qgif_x86.so:libplugins_imageformats_qjpeg_x86.so:libplugins_imageformats_qsvg_x86.so</item>
+    </array>
+    <array name="qt_libs">
+        <item>arm64-v8a;c++_shared</item>
+        <item>arm64-v8a;Qt5Core_arm64-v8a</item>
+        <item>arm64-v8a;Qt5AndroidExtras_arm64-v8a</item>
+        <item>arm64-v8a;Qt5Gui_arm64-v8a</item>
+        <item>arm64-v8a;Qt5Network_arm64-v8a</item>
+        <item>arm64-v8a;Qt5Widgets_arm64-v8a</item>
+        <item>arm64-v8a;Qt5Svg_arm64-v8a</item>
+        <item>x86_64;c++_shared</item>
+        <item>x86_64;Qt5Core_x86_64</item>
+        <item>x86_64;Qt5AndroidExtras_x86_64</item>
+        <item>x86_64;Qt5Gui_x86_64</item>
+        <item>x86_64;Qt5Network_x86_64</item>
+        <item>x86_64;Qt5Widgets_x86_64</item>
+        <item>x86_64;Qt5Svg_x86_64</item>
+        <item>armeabi-v7a;c++_shared</item>
+        <item>armeabi-v7a;Qt5Core_armeabi-v7a</item>
+        <item>armeabi-v7a;Qt5AndroidExtras_armeabi-v7a</item>
+        <item>armeabi-v7a;Qt5Gui_armeabi-v7a</item>
+        <item>armeabi-v7a;Qt5Network_armeabi-v7a</item>
+        <item>armeabi-v7a;Qt5Widgets_armeabi-v7a</item>
+        <item>armeabi-v7a;Qt5Svg_armeabi-v7a</item>
+        <item>x86;c++_shared</item>
+        <item>x86;Qt5Core_x86</item>
+        <item>x86;Qt5AndroidExtras_x86</item>
+        <item>x86;Qt5Gui_x86</item>
+        <item>x86;Qt5Network_x86</item>
+        <item>x86;Qt5Widgets_x86</item>
+        <item>x86;Qt5Svg_x86</item>
+    </array>
+    <array name="qt_sources">
+        <item>https://download.qt.io/ministro/android/qt5/qt-5.9</item>
+    </array>
+</resources>
