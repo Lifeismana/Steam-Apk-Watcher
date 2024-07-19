@@ -1,6 +1,0 @@
-964   13e2c025  AndroidManifest.xml
-1259  fad212c0  META-INF/BNDLTOOL.RSA
-342   d7ba6c2d  META-INF/BNDLTOOL.SF
-234   3325deeb  META-INF/MANIFEST.MF
-40    1336500b  resources.arsc
-32    62d68276  stamp-cert-sha256
