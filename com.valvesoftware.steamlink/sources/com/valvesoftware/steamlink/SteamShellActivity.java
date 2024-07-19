@@ -1,12 +1,15 @@
 package com.valvesoftware.steamlink;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.Log;
 import android.view.InputDevice;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
-import java.util.Locale;
 import org.libsdl.app.HIDDeviceManager;
 import org.libsdl.app.SDL;
 import org.libsdl.app.SDLActivity;
@@ -180,9 +183,31 @@ public class SteamShellActivity extends QtActivity {
         System.exit(0);
     }
 
-    public String getLocale() {
-        Locale locale = Locale.getDefault();
-        return locale.getLanguage() + "_" + locale.getCountry();
+    public void startVRLink(String str, String str2) {
+        this.mStreamingInProgress = true;
+        Intent intent = new Intent();
+        intent.addCategory("com.oculus.intent.category.VR");
+        intent.setComponent(new ComponentName("com.valvesoftware.steamlinkvr", "android.app.NativeActivity"));
+        Intent makeRestartActivityTask = Intent.makeRestartActivityTask(intent.getComponent());
+        makeRestartActivityTask.putExtra("sOriginalPackage", "com.valvesoftware.steamlinkvr");
+        makeRestartActivityTask.putExtra("sOriginalActivity", getClass().getName());
+        makeRestartActivityTask.putExtra("sNetworkTest", str2);
+        makeRestartActivityTask.putExtra("sArgs", str);
+        makeRestartActivityTask.putExtra("sNetworkTestResults", str2);
+        if (getPackageManager().hasSystemFeature("oculus.software.vr.app.hybrid")) {
+            Log.v(TAG, "Hybrid support found. Launching activity.");
+            makeRestartActivityTask.addFlags(268435456);
+            startActivity(makeRestartActivityTask);
+            return;
+        }
+        Log.v(TAG, "Hybrid support not found. Launching activity using legacy method.");
+        makeRestartActivityTask.addCategory("com.oculus.intent.category.VR");
+        ((AlarmManager) getSystemService("alarm")).set(3, SystemClock.elapsedRealtime(), PendingIntent.getActivity(SDL.getContext(), 354678, makeRestartActivityTask, 33554432));
+        try {
+            Thread.sleep(10000L);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override // org.qtproject.qt5.android.bindings.QtActivity, android.app.Activity
