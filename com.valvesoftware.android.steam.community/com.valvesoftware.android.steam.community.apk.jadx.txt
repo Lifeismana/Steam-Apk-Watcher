@@ -1,5 +1,5 @@
 c7fb2173ca53d99304a03658043f4869  com.valvesoftware.android.steam.community/com.valvesoftware.android.steam.community.apk
-72c1ba683813dcd402cd7db612aca757  com.valvesoftware.android.steam.community/com.valvesoftware.android.steam.community.apk.jadx.txt
+1947f45e761c1db38af49f58cf650020  com.valvesoftware.android.steam.community/com.valvesoftware.android.steam.community.apk.jadx.txt
 b9b989b4818772afc2d1d0facc425d83  com.valvesoftware.android.steam.community/resources/AndroidManifest.xml
 26e4a87d5450c027450ee547f1fb2d45  com.valvesoftware.android.steam.community/resources/DebugProbesKt.bin
 8fb43305d9323b6692a80e1a91b18ce7  com.valvesoftware.android.steam.community/resources/META-INF/CERT.RSA
@@ -2637,7 +2637,7 @@ e910be850ff991c3d508dbf6e95f4d4a  com.valvesoftware.android.steam.community/sour
 7311a3d9d87074060b4a3b91be9958e5  com.valvesoftware.android.steam.community/sources/androidx/camera/core/AndroidImageReaderProxy.java
 178d8b0ec43b4e9462a018401032f8c4  com.valvesoftware.android.steam.community/sources/androidx/camera/core/AspectRatio.java
 5bd0ac1433aada24ca1b588ef480689f  com.valvesoftware.android.steam.community/sources/androidx/camera/core/AutoValue_CameraState.java
-600838b87643153d19763d85d273f1aa  com.valvesoftware.android.steam.community/sources/androidx/camera/core/AutoValue_CameraState_StateError.java
+11e47422c399a2bab35d6dc5ac47e981  com.valvesoftware.android.steam.community/sources/androidx/camera/core/AutoValue_CameraState_StateError.java
 c383ff3fe2c966d7fb9ed8b4105434be  com.valvesoftware.android.steam.community/sources/androidx/camera/core/AutoValue_ImageReaderFormatRecommender_FormatCombo.java
 0595d089c4a7c351d8c5caf2f73bc46d  com.valvesoftware.android.steam.community/sources/androidx/camera/core/AutoValue_ImmutableImageInfo.java
 bebe86020c3c0cb69e89330637fc6c55  com.valvesoftware.android.steam.community/sources/androidx/camera/core/AutoValue_ResolutionInfo_ResolutionInfoInternal.java
@@ -2936,7 +2936,7 @@ a4c8f85dfb676bd42fa0a63ed4ab53b5  com.valvesoftware.android.steam.community/sour
 df9b23b43442a70846ca34ffcd8ac58d  com.valvesoftware.android.steam.community/sources/androidx/camera/core/internal/utils/package-info.java
 4e96789fa7a82640c980200716d2bb05  com.valvesoftware.android.steam.community/sources/androidx/camera/core/processing/AutoValue_DefaultSurfaceProcessor_PendingSnapshot.java
 aac5ff8ce6477037ebb4b2d4e24bd0b3  com.valvesoftware.android.steam.community/sources/androidx/camera/core/processing/AutoValue_OpenGlRenderer_GraphicDeviceInfo.java
-99bb7c3b6d14a631df3dc261201c2f5e  com.valvesoftware.android.steam.community/sources/androidx/camera/core/processing/AutoValue_OpenGlRenderer_OutputSurface.java
+0fe4af1bbe25dc01bc5b8f67506bd84f  com.valvesoftware.android.steam.community/sources/androidx/camera/core/processing/AutoValue_OpenGlRenderer_OutputSurface.java
 010672e918393d64d7347bccebfadf56  com.valvesoftware.android.steam.community/sources/androidx/camera/core/processing/AutoValue_Packet.java
 aa9bea36b5422c7c7bedbb12b250eac5  com.valvesoftware.android.steam.community/sources/androidx/camera/core/processing/AutoValue_SurfaceProcessorNode_In.java
 30c5d49a592f3faae644855f86167596  com.valvesoftware.android.steam.community/sources/androidx/camera/core/processing/AutoValue_SurfaceProcessorNode_OutConfig.java
@@ -5591,12 +5591,12 @@ b3938c71aa07344a5ad953254d70b8b6  com.valvesoftware.android.steam.community/sour
 3e3775878e594ded884980d602554cc1  com.valvesoftware.android.steam.community/sources/com/facebook/react/animated/MultiplicationAnimatedNode.java
 8375b53dea5354ba1ce36e6efb3071f1  com.valvesoftware.android.steam.community/sources/com/facebook/react/animated/NativeAnimatedModule.java
 62c104bea0bfc4041603ca6f5f7d4198  com.valvesoftware.android.steam.community/sources/com/facebook/react/animated/NativeAnimatedNodesManager.java
-7c5420baf3343aa91af8ebb75f25e210  com.valvesoftware.android.steam.community/sources/com/facebook/react/animated/ObjectAnimatedNode.java
+eba86478c105d6a82d34cdfa9337e087  com.valvesoftware.android.steam.community/sources/com/facebook/react/animated/ObjectAnimatedNode.java
 630ad635548a4cf6f3a1a9182c85595d  com.valvesoftware.android.steam.community/sources/com/facebook/react/animated/PropsAnimatedNode.java
 185b8b70de8f4149656eabbe97187e6b  com.valvesoftware.android.steam.community/sources/com/facebook/react/animated/SpringAnimation.java
 a92e252b859c31dcb06ef338c1a01a2d  com.valvesoftware.android.steam.community/sources/com/facebook/react/animated/StyleAnimatedNode.java
-8b7f8295a5ecbdf52788145599a469ae  com.valvesoftware.android.steam.community/sources/com/facebook/react/animated/SubtractionAnimatedNode.java
-2a78ccf15b7daa25967201b88edd6bb7  com.valvesoftware.android.steam.community/sources/com/facebook/react/animated/TrackingAnimatedNode.java
+2d07f0453fd88494379d596b9af3fd27  com.valvesoftware.android.steam.community/sources/com/facebook/react/animated/SubtractionAnimatedNode.java
+7bf9441ea0faf2524e19662aed0a0bdf  com.valvesoftware.android.steam.community/sources/com/facebook/react/animated/TrackingAnimatedNode.java
 9f8cdf2514e65f960c83073e2c7a84d1  com.valvesoftware.android.steam.community/sources/com/facebook/react/animated/TransformAnimatedNode.java
 7a17a7ad75417e3622f70717ade17624  com.valvesoftware.android.steam.community/sources/com/facebook/react/animated/ValueAnimatedNode.java
 c1b1861c80602b1a0c156ddf3649d082  com.valvesoftware.android.steam.community/sources/com/facebook/react/bridge/ActivityEventListener.java
@@ -8352,7 +8352,7 @@ cc4474423f4eff8d2cbed745d7350343  com.valvesoftware.android.steam.community/sour
 7bf78e8890f3ec138e92a49c8342e7be  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_common/zzau.java
 b8c8b842656b1b25fc62caa0d7b0d988  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_common/zzav.java
 a4970bd3548e45031bd517d928806f10  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_common/zzaw.java
-3cfdc36339b439a4eeaef231ba39496e  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_common/zzax.java
+290b7cb06bbd37759a8674cdb2693087  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_common/zzax.java
 cd6232d7e6de3bb459dd005b25e40912  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_common/zzay.java
 23e9c4092c64df55f84c58310041550e  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_common/zzaz.java
 849db9c686140337f638985c39923b8b  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_common/zzb.java
@@ -9499,7 +9499,7 @@ dd8afe510b6b32e53f0ff4fd7edd43ba  com.valvesoftware.android.steam.community/sour
 535f80182d4831f82f67af0be0c23703  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhd.java
 9db50601c3e49ef71b426cd21248089d  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhe.java
 b3ff0e298e87e928fca37781b28aae3a  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhf.java
-f8d287d9ab038f8fa6afa6d5d6d18267  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhg.java
+72fd2162ebc8629ad328a74e3942de10  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhg.java
 b3e7f64c7bf9d9e89cf30d669ac34094  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhh.java
 052cf001c3932919718c7b0f66ea225b  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhi.java
 21ca09ca4b4336e4c1a953fa6d95c359  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhj.java
@@ -10686,7 +10686,7 @@ e28e5d3dfdb4054a20894fba2944b35f  com.valvesoftware.android.steam.community/sour
 1c923f4d319a07b3453969bfdc04e694  com.valvesoftware.android.steam.community/sources/com/google/barhopper/deeplearning/zzc.java
 2269c6c80c50dc7604ae920e2a0aa0f7  com.valvesoftware.android.steam.community/sources/com/google/barhopper/deeplearning/zzd.java
 583da28e621d734e53afe23d954b7cb0  com.valvesoftware.android.steam.community/sources/com/google/barhopper/deeplearning/zze.java
-e7d1b13d37d1bd7c43fcff147a8b5031  com.valvesoftware.android.steam.community/sources/com/google/barhopper/deeplearning/zzf.java
+1ea0a242ad31cdbfb4ee8ede7121d0c6  com.valvesoftware.android.steam.community/sources/com/google/barhopper/deeplearning/zzf.java
 ddb2ff453b7efede1fc084ea68ade222  com.valvesoftware.android.steam.community/sources/com/google/barhopper/deeplearning/zzg.java
 62ac0c85af996407acb5e2f77c1ca52f  com.valvesoftware.android.steam.community/sources/com/google/barhopper/deeplearning/zzh.java
 7c9f3ef5e08e5ede67e234a85a4f030d  com.valvesoftware.android.steam.community/sources/com/google/barhopper/deeplearning/zzi.java
@@ -18536,7 +18536,7 @@ eb0786ddbfd10b45e156511fc25e8363  com.valvesoftware.android.steam.community/sour
 88f53264981880ff72927e7e1a5f5d7a  com.valvesoftware.android.steam.community/sources/org/bouncycastle/pqc/crypto/sphincs/SPHINCSKeyParameters.java
 409bd689c48e18b6ae0cc30ebf714546  com.valvesoftware.android.steam.community/sources/org/bouncycastle/pqc/crypto/sphincs/SPHINCSPrivateKeyParameters.java
 047223ed6a8c5fc25784c5c5d41e6a48  com.valvesoftware.android.steam.community/sources/org/bouncycastle/pqc/crypto/sphincs/SPHINCSPublicKeyParameters.java
-63b0aa386d90b8d6cb0cad92f1966bfa  com.valvesoftware.android.steam.community/sources/org/bouncycastle/pqc/crypto/sphincs/Seed.java
+5eb5b453cf3031a4075526d730996668  com.valvesoftware.android.steam.community/sources/org/bouncycastle/pqc/crypto/sphincs/Seed.java
 ecf3d68904a6f77047b6af7084440814  com.valvesoftware.android.steam.community/sources/org/bouncycastle/pqc/crypto/sphincs/Tree.java
 c2f951437cd0d33f03e8e150acbe35d5  com.valvesoftware.android.steam.community/sources/org/bouncycastle/pqc/crypto/sphincs/Wots.java
 43dbd80ac8d91dc097c132b46f888601  com.valvesoftware.android.steam.community/sources/org/bouncycastle/pqc/crypto/sphincsplus/ADRS.java
@@ -18549,7 +18549,7 @@ bd5f8a4bdfca83e0c94c7032b8e633f1  com.valvesoftware.android.steam.community/sour
 14b16ec0ecb48687688727e71e6d8f6f  com.valvesoftware.android.steam.community/sources/org/bouncycastle/pqc/crypto/sphincsplus/SIG.java
 273d099b9ca3e542bdc98df716355774  com.valvesoftware.android.steam.community/sources/org/bouncycastle/pqc/crypto/sphincsplus/SIG_FORS.java
 ad9760ec223d8c90d618d9cd885b1ca8  com.valvesoftware.android.steam.community/sources/org/bouncycastle/pqc/crypto/sphincsplus/SIG_XMSS.java
-912c50e4a0378e1de53117eb05ebabb0  com.valvesoftware.android.steam.community/sources/org/bouncycastle/pqc/crypto/sphincsplus/SPHINCSPlusEngine.java
+914dce9bf8ec59e4f3a2a725abc911c9  com.valvesoftware.android.steam.community/sources/org/bouncycastle/pqc/crypto/sphincsplus/SPHINCSPlusEngine.java
 f0536326ad026cc2e9fc7c61f9362fb6  com.valvesoftware.android.steam.community/sources/org/bouncycastle/pqc/crypto/sphincsplus/SPHINCSPlusKeyGenerationParameters.java
 fedab56efb1fd9b1f1d753fb08a1248d  com.valvesoftware.android.steam.community/sources/org/bouncycastle/pqc/crypto/sphincsplus/SPHINCSPlusKeyPairGenerator.java
 809279baedfd7e1d7d02790ea66cbdba  com.valvesoftware.android.steam.community/sources/org/bouncycastle/pqc/crypto/sphincsplus/SPHINCSPlusKeyParameters.java
