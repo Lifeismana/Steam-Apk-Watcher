@@ -8,11 +8,14 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
-/* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: SDLControllerManager.java */
 /* loaded from: classes.dex */
-public class SDLJoystickHandler_API16 extends SDLJoystickHandler {
+class SDLJoystickHandler_API16 extends SDLJoystickHandler {
     private final ArrayList<SDLJoystick> mJoysticks = new ArrayList<>();
+
+    public int getAxisMask(List<InputDevice.MotionRange> list) {
+        return -1;
+    }
 
     public int getButtonMask(InputDevice inputDevice) {
         return -1;
@@ -60,6 +63,16 @@ public class SDLJoystickHandler_API16 extends SDLJoystickHandler {
             } else if (axis2 == 23) {
                 axis2 = 22;
             }
+            if (axis == 11) {
+                axis = 13;
+            } else if (axis > 11 && axis < 14) {
+                axis--;
+            }
+            if (axis2 == 11) {
+                axis2 = 13;
+            } else if (axis2 > 11 && axis2 < 14) {
+                axis2--;
+            }
             return axis - axis2;
         }
     }
@@ -88,11 +101,11 @@ public class SDLJoystickHandler_API16 extends SDLJoystickHandler {
                     }
                 }
                 this.mJoysticks.add(sDLJoystick);
-                SDLControllerManager.nativeAddJoystick(sDLJoystick.device_id, sDLJoystick.name, sDLJoystick.desc, getVendorId(device), getProductId(device), false, getButtonMask(device), sDLJoystick.axes.size(), sDLJoystick.hats.size() / 2, 0);
+                SDLControllerManager.nativeAddJoystick(sDLJoystick.device_id, sDLJoystick.name, sDLJoystick.desc, getVendorId(device), getProductId(device), false, getButtonMask(device), sDLJoystick.axes.size(), getAxisMask(sDLJoystick.axes), sDLJoystick.hats.size() / 2);
             }
         }
-        ArrayList arrayList = null;
         Iterator<SDLJoystick> it = this.mJoysticks.iterator();
+        ArrayList arrayList = null;
         while (it.hasNext()) {
             int i2 = it.next().device_id;
             int i3 = 0;

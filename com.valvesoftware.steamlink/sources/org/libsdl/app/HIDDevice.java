@@ -8,8 +8,6 @@ interface HIDDevice {
 
     UsbDevice getDevice();
 
-    boolean getFeatureReport(byte[] bArr);
-
     int getId();
 
     String getManufacturerName();
@@ -26,11 +24,11 @@ interface HIDDevice {
 
     boolean open();
 
-    int sendFeatureReport(byte[] bArr);
-
-    int sendOutputReport(byte[] bArr);
+    boolean readReport(byte[] bArr, boolean z);
 
     void setFrozen(boolean z);
 
     void shutdown();
+
+    int writeReport(byte[] bArr, boolean z);
 }

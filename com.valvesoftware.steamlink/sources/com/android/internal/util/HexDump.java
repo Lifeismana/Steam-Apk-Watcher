@@ -17,9 +17,8 @@ public class HexDump {
     }
 
     public static String dumpHexString(byte[] bArr, int i, int i2) {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder("\n0x");
         byte[] bArr2 = new byte[16];
-        sb.append("\n0x");
         sb.append(toHexString(i));
         int i3 = i;
         int i4 = 0;
@@ -27,7 +26,8 @@ public class HexDump {
             if (i4 == 16) {
                 sb.append(" ");
                 for (int i5 = 0; i5 < 16; i5++) {
-                    if (bArr2[i5] > 32 && bArr2[i5] < 126) {
+                    byte b = bArr2[i5];
+                    if (b > 32 && b < 126) {
                         sb.append(new String(bArr2, i5, 1));
                     } else {
                         sb.append(".");
@@ -37,12 +37,12 @@ public class HexDump {
                 sb.append(toHexString(i3));
                 i4 = 0;
             }
-            byte b = bArr[i3];
+            byte b2 = bArr[i3];
             sb.append(" ");
             char[] cArr = HEX_DIGITS;
-            sb.append(cArr[(b >>> 4) & 15]);
-            sb.append(cArr[b & 15]);
-            bArr2[i4] = b;
+            sb.append(cArr[(b2 >>> 4) & 15]);
+            sb.append(cArr[b2 & 15]);
+            bArr2[i4] = b2;
             i3++;
             i4++;
         }
@@ -52,7 +52,8 @@ public class HexDump {
                 sb.append(" ");
             }
             for (int i8 = 0; i8 < i4; i8++) {
-                if (bArr2[i8] > 32 && bArr2[i8] < 126) {
+                byte b3 = bArr2[i8];
+                if (b3 > 32 && b3 < 126) {
                     sb.append(new String(bArr2, i8, 1));
                 } else {
                     sb.append(".");

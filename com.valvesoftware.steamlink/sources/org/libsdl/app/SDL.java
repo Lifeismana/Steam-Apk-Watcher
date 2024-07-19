@@ -1,7 +1,6 @@
 package org.libsdl.app;
 
 import android.content.Context;
-import java.util.Objects;
 
 /* loaded from: classes.dex */
 public class SDL {
@@ -21,6 +20,7 @@ public class SDL {
     }
 
     public static void setContext(Context context) {
+        SDLAudioManager.setContext(context);
         mContext = context;
     }
 
@@ -29,22 +29,18 @@ public class SDL {
     }
 
     public static void loadLibrary(String str) throws UnsatisfiedLinkError, SecurityException, NullPointerException {
-        Objects.requireNonNull(str, "No library name provided.");
+        if (str == null) {
+            throw new NullPointerException("No library name provided.");
+        }
         try {
-            try {
-                Class<?> loadClass = mContext.getClassLoader().loadClass("com.getkeepsafe.relinker.ReLinker");
-                Class<?> loadClass2 = mContext.getClassLoader().loadClass("com.getkeepsafe.relinker.ReLinker$LoadListener");
-                Class<?> loadClass3 = mContext.getClassLoader().loadClass("android.content.Context");
-                Class<?> loadClass4 = mContext.getClassLoader().loadClass("java.lang.String");
-                Object invoke = loadClass.getDeclaredMethod("force", new Class[0]).invoke(null, new Object[0]);
-                invoke.getClass().getDeclaredMethod("loadLibrary", loadClass3, loadClass4, loadClass4, loadClass2).invoke(invoke, mContext, str, null, null);
-            } catch (Throwable unused) {
-                System.loadLibrary(str);
-            }
-        } catch (SecurityException e) {
-            throw e;
-        } catch (UnsatisfiedLinkError e2) {
-            throw e2;
+            Class<?> loadClass = mContext.getClassLoader().loadClass("com.getkeepsafe.relinker.ReLinker");
+            Class<?> loadClass2 = mContext.getClassLoader().loadClass("com.getkeepsafe.relinker.ReLinker$LoadListener");
+            Class<?> loadClass3 = mContext.getClassLoader().loadClass("android.content.Context");
+            Class<?> loadClass4 = mContext.getClassLoader().loadClass("java.lang.String");
+            Object invoke = loadClass.getDeclaredMethod("force", new Class[0]).invoke(null, new Object[0]);
+            invoke.getClass().getDeclaredMethod("loadLibrary", loadClass3, loadClass4, loadClass4, loadClass2).invoke(invoke, mContext, str, null, null);
+        } catch (Throwable unused) {
+            System.loadLibrary(str);
         }
     }
 }

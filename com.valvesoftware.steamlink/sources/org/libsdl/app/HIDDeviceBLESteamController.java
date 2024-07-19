@@ -250,9 +250,11 @@ public class HIDDeviceBLESteamController extends BluetoothGattCallback implement
     }
 
     private BluetoothGatt connectGatt(boolean z) {
+        BluetoothGatt connectGatt;
         if (Build.VERSION.SDK_INT >= 23) {
             try {
-                return this.mDevice.connectGatt(this.mManager.getContext(), z, this, 2);
+                connectGatt = this.mDevice.connectGatt(this.mManager.getContext(), z, this, 2);
+                return connectGatt;
             } catch (Exception unused) {
                 return this.mDevice.connectGatt(this.mManager.getContext(), z, this);
             }
@@ -458,7 +460,7 @@ public class HIDDeviceBLESteamController extends BluetoothGattCallback implement
     @Override // android.bluetooth.BluetoothGattCallback
     public void onCharacteristicRead(BluetoothGatt bluetoothGatt, BluetoothGattCharacteristic bluetoothGattCharacteristic, int i) {
         if (bluetoothGattCharacteristic.getUuid().equals(reportCharacteristic) && !this.mFrozen) {
-            this.mManager.HIDDeviceFeatureReport(getId(), bluetoothGattCharacteristic.getValue());
+            this.mManager.HIDDeviceReportResponse(getId(), bluetoothGattCharacteristic.getValue());
         }
         finishCurrentGattOperation();
     }
@@ -499,45 +501,37 @@ public class HIDDeviceBLESteamController extends BluetoothGattCallback implement
     }
 
     @Override // org.libsdl.app.HIDDevice
-    public int sendFeatureReport(byte[] bArr) {
+    public int writeReport(byte[] bArr, boolean z) {
         if (!isRegistered()) {
-            Log.e(TAG, "Attempted sendFeatureReport before Steam Controller is registered!");
+            Log.e(TAG, "Attempted writeReport before Steam Controller is registered!");
             if (!this.mIsConnected) {
                 return -1;
             }
             probeService(this);
             return -1;
         }
-        writeCharacteristic(reportCharacteristic, Arrays.copyOfRange(bArr, 1, bArr.length - 1));
-        return bArr.length;
-    }
-
-    @Override // org.libsdl.app.HIDDevice
-    public int sendOutputReport(byte[] bArr) {
-        if (!isRegistered()) {
-            Log.e(TAG, "Attempted sendOutputReport before Steam Controller is registered!");
-            if (!this.mIsConnected) {
-                return -1;
-            }
-            probeService(this);
-            return -1;
+        if (z) {
+            writeCharacteristic(reportCharacteristic, Arrays.copyOfRange(bArr, 1, bArr.length - 1));
+            return bArr.length;
         }
         writeCharacteristic(reportCharacteristic, bArr);
         return bArr.length;
     }
 
     @Override // org.libsdl.app.HIDDevice
-    public boolean getFeatureReport(byte[] bArr) {
-        if (!isRegistered()) {
-            Log.e(TAG, "Attempted getFeatureReport before Steam Controller is registered!");
-            if (!this.mIsConnected) {
+    public boolean readReport(byte[] bArr, boolean z) {
+        if (isRegistered()) {
+            if (!z) {
                 return false;
             }
-            probeService(this);
-            return false;
+            readCharacteristic(reportCharacteristic);
+            return true;
         }
-        readCharacteristic(reportCharacteristic);
-        return true;
+        Log.e(TAG, "Attempted readReport before Steam Controller is registered!");
+        if (this.mIsConnected) {
+            probeService(this);
+        }
+        return false;
     }
 
     @Override // org.libsdl.app.HIDDevice

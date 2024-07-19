@@ -73,8 +73,8 @@ public class SDLHapticHandler {
         } else {
             z = false;
         }
-        ArrayList arrayList = null;
         Iterator<SDLHaptic> it = this.mHaptics.iterator();
+        ArrayList arrayList = null;
         while (it.hasNext()) {
             int i = it.next().device_id;
             int i2 = 0;

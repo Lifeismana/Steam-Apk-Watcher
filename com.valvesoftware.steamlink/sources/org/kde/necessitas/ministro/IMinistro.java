@@ -5,11 +5,13 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.os.IInterface;
 import android.os.Parcel;
+import android.os.Parcelable;
 import android.os.RemoteException;
 import org.kde.necessitas.ministro.IMinistroCallback;
 
 /* loaded from: classes.dex */
 public interface IMinistro extends IInterface {
+    public static final String DESCRIPTOR = "org.kde.necessitas.ministro.IMinistro";
 
     /* loaded from: classes.dex */
     public static class Default implements IMinistro {
@@ -27,7 +29,6 @@ public interface IMinistro extends IInterface {
 
     /* loaded from: classes.dex */
     public static abstract class Stub extends Binder implements IMinistro {
-        private static final String DESCRIPTOR = "org.kde.necessitas.ministro.IMinistro";
         static final int TRANSACTION_requestLoader = 1;
 
         @Override // android.os.IInterface
@@ -36,14 +37,14 @@ public interface IMinistro extends IInterface {
         }
 
         public Stub() {
-            attachInterface(this, DESCRIPTOR);
+            attachInterface(this, IMinistro.DESCRIPTOR);
         }
 
         public static IMinistro asInterface(IBinder iBinder) {
             if (iBinder == null) {
                 return null;
             }
-            IInterface queryLocalInterface = iBinder.queryLocalInterface(DESCRIPTOR);
+            IInterface queryLocalInterface = iBinder.queryLocalInterface(IMinistro.DESCRIPTOR);
             if (queryLocalInterface != null && (queryLocalInterface instanceof IMinistro)) {
                 return (IMinistro) queryLocalInterface;
             }
@@ -52,27 +53,27 @@ public interface IMinistro extends IInterface {
 
         @Override // android.os.Binder
         public boolean onTransact(int i, Parcel parcel, Parcel parcel2, int i2) throws RemoteException {
-            if (i != 1) {
-                if (i == 1598968902) {
-                    parcel2.writeString(DESCRIPTOR);
-                    return true;
-                }
-                return super.onTransact(i, parcel, parcel2, i2);
+            if (i >= 1 && i <= 16777215) {
+                parcel.enforceInterface(IMinistro.DESCRIPTOR);
             }
-            parcel.enforceInterface(DESCRIPTOR);
-            requestLoader(IMinistroCallback.Stub.asInterface(parcel.readStrongBinder()), parcel.readInt() != 0 ? (Bundle) Bundle.CREATOR.createFromParcel(parcel) : null);
-            parcel2.writeNoException();
-            return true;
+            if (i == 1598968902) {
+                parcel2.writeString(IMinistro.DESCRIPTOR);
+                return true;
+            }
+            if (i == 1) {
+                requestLoader(IMinistroCallback.Stub.asInterface(parcel.readStrongBinder()), (Bundle) _Parcel.readTypedObject(parcel, Bundle.CREATOR));
+                parcel2.writeNoException();
+                return true;
+            }
+            return super.onTransact(i, parcel, parcel2, i2);
         }
 
-        /* JADX INFO: Access modifiers changed from: private */
         /* loaded from: classes.dex */
-        public static class Proxy implements IMinistro {
-            public static IMinistro sDefaultImpl;
+        private static class Proxy implements IMinistro {
             private IBinder mRemote;
 
             public String getInterfaceDescriptor() {
-                return Stub.DESCRIPTOR;
+                return IMinistro.DESCRIPTOR;
             }
 
             Proxy(IBinder iBinder) {
@@ -89,39 +90,37 @@ public interface IMinistro extends IInterface {
                 Parcel obtain = Parcel.obtain();
                 Parcel obtain2 = Parcel.obtain();
                 try {
-                    obtain.writeInterfaceToken(Stub.DESCRIPTOR);
-                    obtain.writeStrongBinder(iMinistroCallback != null ? iMinistroCallback.asBinder() : null);
-                    if (bundle != null) {
-                        obtain.writeInt(1);
-                        bundle.writeToParcel(obtain, 0);
-                    } else {
-                        obtain.writeInt(0);
-                    }
-                    if (!this.mRemote.transact(1, obtain, obtain2, 0) && Stub.getDefaultImpl() != null) {
-                        Stub.getDefaultImpl().requestLoader(iMinistroCallback, bundle);
-                    } else {
-                        obtain2.readException();
-                    }
+                    obtain.writeInterfaceToken(IMinistro.DESCRIPTOR);
+                    obtain.writeStrongInterface(iMinistroCallback);
+                    _Parcel.writeTypedObject(obtain, bundle, 0);
+                    this.mRemote.transact(1, obtain, obtain2, 0);
+                    obtain2.readException();
                 } finally {
                     obtain2.recycle();
                     obtain.recycle();
                 }
             }
         }
+    }
 
-        public static boolean setDefaultImpl(IMinistro iMinistro) {
-            if (Proxy.sDefaultImpl != null) {
-                throw new IllegalStateException("setDefaultImpl() called twice");
+    /* loaded from: classes.dex */
+    public static class _Parcel {
+        /* JADX INFO: Access modifiers changed from: private */
+        public static <T> T readTypedObject(Parcel parcel, Parcelable.Creator<T> creator) {
+            if (parcel.readInt() != 0) {
+                return creator.createFromParcel(parcel);
             }
-            if (iMinistro == null) {
-                return false;
-            }
-            Proxy.sDefaultImpl = iMinistro;
-            return true;
+            return null;
         }
 
-        public static IMinistro getDefaultImpl() {
-            return Proxy.sDefaultImpl;
+        /* JADX INFO: Access modifiers changed from: private */
+        public static <T extends Parcelable> void writeTypedObject(Parcel parcel, T t, int i) {
+            if (t != null) {
+                parcel.writeInt(1);
+                t.writeToParcel(parcel, i);
+            } else {
+                parcel.writeInt(0);
+            }
         }
     }
 }

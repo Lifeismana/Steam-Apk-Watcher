@@ -243,14 +243,13 @@ public class VirtualHere {
 
     public void stopSharing() {
         this.mIsSharing = false;
-        if (!isConnected() || this.mService == null) {
-            return;
-        }
-        try {
-            Message obtain = Message.obtain((Handler) null, VHDAEMON_MSGS.SET_STEAM_LICENSE.ordinal());
-            obtain.replyTo = this.mMessenger;
-            this.mService.send(obtain);
-        } catch (RemoteException unused) {
+        if (isConnected() && this.mService != null) {
+            try {
+                Message obtain = Message.obtain((Handler) null, VHDAEMON_MSGS.SET_STEAM_LICENSE.ordinal());
+                obtain.replyTo = this.mMessenger;
+                this.mService.send(obtain);
+            } catch (RemoteException unused) {
+            }
         }
     }
 

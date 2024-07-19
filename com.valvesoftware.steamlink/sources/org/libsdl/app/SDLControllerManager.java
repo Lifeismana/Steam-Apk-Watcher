@@ -30,11 +30,7 @@ public class SDLControllerManager {
 
     public static void initialize() {
         if (mJoystickHandler == null) {
-            if (Build.VERSION.SDK_INT >= 19) {
-                mJoystickHandler = new SDLJoystickHandler_API19();
-            } else {
-                mJoystickHandler = new SDLJoystickHandler_API16();
-            }
+            mJoystickHandler = new SDLJoystickHandler_API19();
         }
         if (mHapticHandler == null) {
             if (Build.VERSION.SDK_INT >= 26) {
