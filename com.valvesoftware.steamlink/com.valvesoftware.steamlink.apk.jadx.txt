@@ -1,5 +1,5 @@
 3f0393837bb4162db700eb1b7a90b3c2  com.valvesoftware.steamlink/com.valvesoftware.steamlink.apk
-b26bc7288e955c61fa51326cd0dbd4f4  com.valvesoftware.steamlink/com.valvesoftware.steamlink.apk.jadx.txt
+b07403416dce54ee63efd842845a733d  com.valvesoftware.steamlink/com.valvesoftware.steamlink.apk.jadx.txt
 20c9e7df023071ef5151be807672f448  com.valvesoftware.steamlink/com.valvesoftware.steamlink.xapk
 411739af8cbb7f849606ded2e11334ce  com.valvesoftware.steamlink/config.mdpi.apk
 9a9aab90c7b6a2ee734597cf6daa532d  com.valvesoftware.steamlink/config.x86.apk

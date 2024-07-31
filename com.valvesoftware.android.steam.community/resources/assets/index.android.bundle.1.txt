@@ -955,6 +955,7 @@ Button_Back
 Button_Cancel
 Button_Clone
 Button_Close
+Button_Color
 Button_Confirm
 Button_Continue
 Button_Copied
@@ -3328,6 +3329,7 @@ ECodecUsageReason_0
 ECodecUsageReason_1
 ECodecUsageReason_2
 ECodecUsageReason_3
+ECodecUsageReason_4
 EColorGamutLabelSet
 EColorGamutLabelSetToString
 EColorGamutLabelSet_0
@@ -3536,6 +3538,7 @@ EExternalSaleEventType_1
 EExternalSaleEventType_2
 EExternalSaleEventType_3
 EExternalSaleEventType_4
+EExternalSaleEventType_5
 EFamilyGroupChangeLogType
 EFamilyGroupChangeLogTypeToString
 EFamilyGroupChangeLogType_0
@@ -4958,7 +4961,6 @@ EMsg_1451
 EMsg_1452
 EMsg_1453
 EMsg_1454
-EMsg_1455
 EMsg_146
 EMsg_147
 EMsg_148
@@ -5972,6 +5974,8 @@ EOSBranch_3
 EOSBranch_4
 EOSBranch_5
 EOSBranch_6
+EOSBranch_7
+EOSBranch_8
 EOSType
 EOverlayToStoreFlag
 EPHEMERAL
@@ -7209,6 +7213,7 @@ EUpdaterState_3
 EUpdaterState_4
 EUpdaterState_5
 EUpdaterState_6
+EUpdaterState_7
 EUpdaterType
 EUpdaterTypeToString
 EUpdaterType_0
@@ -7997,6 +8002,11 @@ ExportClip_SendToPhone
 ExportClip_Share
 ExportClip_ShareToChat
 ExportClip_Title
+ExportImage_GIF_Desc
+ExportImage_JPEG_Desc
+ExportImage_JPG_Desc
+ExportImage_PNG_Desc
+ExportImage_Title
 ExtensionFieldBinaryInfo
 ExtensionFieldInfo
 ExternalCachesDirectoryPath
@@ -8467,6 +8477,7 @@ GamepadOverlay_GameRecording_AddMarkerExplainer
 GamepadOverlay_GameRecording_GoToMedia
 GamepadOverlay_GameRecording_GoToRecording
 GamepadOverlay_GameRecording_GoToSettings
+GamepadOverlay_GameRecording_NotRecordingExplainer
 GamepadOverlay_GameRecording_RecordingStateExplainer
 GamepadOverlay_GameRecording_StartManualRecording
 GamepadOverlay_GameRecording_StopManualRecording
@@ -9159,6 +9170,7 @@ ImageBackground
 ImageBridgeFirmwareVersion_Uint64
 ImageDisplay_NoAssetUploaded
 ImageDisplay_ShowAllAssets
+ImagePickerLoc_DismissWarning
 ImagePicker_ChooseFile
 ImagePicker_DeleteAreYouSure
 ImagePicker_DeleteImageTitle
@@ -10200,6 +10212,7 @@ MediaManager_DeleteDialog_SizeInfo
 MediaManager_DeleteDialog_Title
 MediaManager_DeleteDialog_Title_Plural
 MediaManager_Dialog_Header
+MediaManager_Dialog_Header_China
 MediaManager_EnterSelectMode
 MediaManager_FilterModal_Footer
 MediaManager_FilterModal_MediaType
@@ -10896,6 +10909,7 @@ Playback_UserSelectionControls_AddUserMarkerLiveEdge
 Playback_UserSelectionControls_ClipLatest
 Playback_UserSelectionControls_SetClipEnd
 Playback_UserSelectionControls_SetClipStart
+Playback_UserSelectionControls_TakeScreenshot
 Playback_ViewRecordings_Tooltip
 Played_Hours
 Played_Minutes
@@ -11214,6 +11228,8 @@ RecordingState_ManualRecStartShortName_CTA
 RecordingState_ManualRecStart_CTA
 RecordingState_ManualRecStopShortName_CTA
 RecordingState_ManualRecStop_CTA
+RecordingState_ManualRec_ActiveBroadcast
+RecordingState_ManualRec_ActiveBroadcastTooltip
 RecordingState_ManualRec_LowDiskSpace
 RecoveryCode
 RecoveryCodeScreen
@@ -11679,6 +11695,7 @@ Sale_Minigame_LoadingReward
 Sale_OnWishlist
 Sale_OtherActions_MenuLabel
 Sale_PackageSave
+Sale_PersonalizedCarousel_Section_subtitle
 Sale_PersonalizedCarousel_Section_title
 Sale_PlaceHolder
 Sale_PlayDemo
@@ -12178,9 +12195,11 @@ Send
 SendAuthMessage
 SendClip_Description
 SendClip_Description2
+SendClip_Description3
 SendClip_FileTooLarge
 SendClip_Finished
 SendClip_NoClients
+SendClip_NoClients2
 SendClip_Online
 SendClip_SelectTarget
 SendClip_Title
@@ -12401,6 +12420,7 @@ Settings_GameRecording_Length
 Settings_GameRecording_LowDiskSpace_Description
 Settings_GameRecording_LowDiskSpace_Header
 Settings_GameRecording_MaxDisk
+Settings_GameRecording_MaxFrameRate
 Settings_GameRecording_ModeDescription_Always
 Settings_GameRecording_ModeDescription_Manual
 Settings_GameRecording_ModeDescription_Manual_Fallback
@@ -12423,20 +12443,15 @@ Settings_GameRecording_TimelineMarker
 Settings_GameRecording_TimelineMarker_Description
 Settings_GameRecording_ToggleRecording
 Settings_GameRecording_VideoHardwareEncoding
+Settings_GameRecording_VideoRecording
 Settings_HomeScreen_Guard
 Settings_HomeScreen_Label
 Settings_HomeScreen_Library
 Settings_HomeScreen_News
 Settings_HomeScreen_Notifications
 Settings_HomeScreen_Store
-Settings_Notifications_Comment
 Settings_Notifications_Error
-Settings_Notifications_FriendInvite
-Settings_Notifications_Gift
-Settings_Notifications_Item
-Settings_Notifications_MajorSale
 Settings_Notifications_MissingPlatformServices_Android
-Settings_Notifications_PreloadAvailable
 Settings_Notifications_SaveError
 Settings_Notifications_Title
 Settings_Page_GameRecording
@@ -12444,10 +12459,6 @@ Settings_Tabs_Description
 Settings_Tabs_Empty
 Settings_Tabs_PopupTitle
 Settings_Tabs_TabNumber
-Settings_notifications_AsyncGame
-Settings_notifications_HelpRequest
-Settings_notifications_TradeOffer
-Settings_notifications_Wishlist
 ShadowStandard
 ShallowCompare
 Shape
@@ -12634,6 +12645,7 @@ SteamDeckVerified_TestResult_ResumeFromSleepNotFunctional
 SteamDeckVerified_TestResult_SimultaneousInputGyroTrackpadFriendly
 SteamDeckVerified_TestResult_SingleplayerGameplayRequiresActiveInternetConnection
 SteamDeckVerified_TestResult_SteamOSDoesNotSupport
+SteamDeckVerified_TestResult_SteamOSDoesNotSupport_OperatingSystem
 SteamDeckVerified_TestResult_SteamOSDoesNotSupport_Retired
 SteamDeckVerified_TestResult_SteamOSDoesNotSupport_Software
 SteamDeckVerified_TestResult_SteamOSDoesNotSupport_VR
@@ -12685,6 +12697,7 @@ SteamNotificationTypeDesc_3
 SteamNotificationTypeDesc_4
 SteamNotificationTypeDesc_5
 SteamNotificationTypeDesc_6
+SteamNotificationTypeDesc_7
 SteamNotificationTypeDesc_8
 SteamNotificationTypeDesc_9
 SteamNotificationWishlist
@@ -13152,6 +13165,7 @@ TimelineDialog_ClipVideo
 TimelineDialog_Header
 TimelineDialog_NoRecordings
 TimelineDialog_ShareSave
+TimelineDialog_TakeScreenshot
 TimelineDialog_ViewClip
 TimelineDialog_ViewScreenshot
 TimerBasedFinalizationRegistry
@@ -13352,6 +13366,7 @@ UserGameBadge
 UserGameNotes_ClickToOpenLink
 UserGameNotes_DeleteNote
 UserGameNotes_Edit
+UserGameNotes_FlipWindow
 UserGameNotes_ImageTooLarge
 UserGameNotes_NewNote
 UserGameNotes_NotesList
@@ -15209,7 +15224,6 @@ bAlwaysNewChatWindow
 bAnimatedAvatars
 bApprove
 bApproved
-bBiometricsReady
 bBroadcastCapable
 bCanDismiss
 bCanGoBack
@@ -15229,7 +15243,6 @@ bError
 bExiting
 bExpanded
 bFirst
-bFontsReady
 bForce24HourClock
 bForceAlphabeticFriendSorting
 bForceSingleUnits
@@ -15239,10 +15252,8 @@ bGranularToday
 bGranularTodayTimeOnly
 bGranularWeek
 bGranularYesterday
-bGuardReady
 bHadDataToMigrate
 bHardware
-bHasGooglePlayServicesReady
 bHideCategorizedFriends
 bHideOfflineFriendsInTagGroups
 bHighGranularity
@@ -15260,7 +15271,6 @@ bIsLeft
 bIsRecordingDesktop
 bLast
 bLoading
-bLocReady
 bLocked
 bLoggedIn
 bMakeActiveAccount
@@ -15269,7 +15279,6 @@ bMaxed
 bMigrated
 bMigratedNow
 bMigrationFailed
-bMigrationReady
 bNewUser
 bNotifications_EventsAndAnnouncements
 bNotifications_ShowChatRoomNotification
@@ -15277,7 +15286,6 @@ bNotifications_ShowIngame
 bNotifications_ShowMessage
 bNotifications_ShowOnline
 bOut
-bParentalSettingsReady
 bReady
 bReconnectOnFailure
 bRememberLogin
@@ -17416,6 +17424,7 @@ flLastExecutionTimeMs
 flOffsetHeight
 flOffsetWidth
 flags
+flags_
 flashMode
 flashScrollIndicators
 flat
@@ -18750,6 +18759,7 @@ include_supported_languages
 include_tag_count
 include_trailers
 include_unpublished
+include_unvetted_apps
 include_video
 includeadditionalpreviews
 includechildren
@@ -18998,7 +19008,8 @@ isAvailableAsync
 isAxiosError
 isBackwards
 isBase64File
-isBeingObserved_
+isBeingObserved
+isBeingObservedMask_
 isBigInt64Array
 isBigIntObject
 isBigUint64Array
@@ -19026,7 +19037,8 @@ isColor
 isComponentError
 isComputed
 isComputedProp
-isComputing_
+isComputing
+isComputingMask_
 isConcatSpreadable
 isConcurrentMode
 isConfigured
@@ -19050,6 +19062,7 @@ isDevice
 isDirectory
 isDisableAnimations
 isDisabled
+isDisjointFrom
 isDisplacement
 isDisposed
 isDisposed_
@@ -19213,7 +19226,8 @@ isPacked
 isPadding_
 isParentHeaderShown
 isPaused
-isPendingUnobservation_
+isPendingUnobservation
+isPendingUnobservationMask_
 isPersistent
 isPlaceholderData
 isPlainObject
@@ -19268,7 +19282,8 @@ isRtlText
 isRunning
 isRunningInExpoGo
 isRunningReactions
-isRunningSetter_
+isRunningSetter
+isRunningSetterMask_
 isRunning_
 isSafari
 isSafariDesktop_
@@ -19298,7 +19313,9 @@ isStream
 isStrictMode
 isString
 isStringObject
+isSubsetOf
 isSuccess
+isSupersetOf
 isSupportedColorStyleProp
 isSupportedInterpolationParam
 isSupportedStyleProp
@@ -24955,6 +24972,7 @@ sweepTimeout
 swipeDirection
 swiping
 symbol
+symmetricDifference
 syncMapFields_
 sync_timeout
 synchronous
@@ -25119,6 +25137,8 @@ thru
 thumbColor
 thumbTintColor
 thumbhash
+thumbnailURL
+thumbnail_url
 ticket
 ticket_crc
 ticket_type
@@ -25803,6 +25823,7 @@ useBiometricCheck
 useBiometricSettings
 useCallback
 useCallbackList
+useCallbackListUpdates
 useCameraPermissions
 useCancelFamilyInvite
 useCancelTokenSource
@@ -25931,6 +25952,7 @@ useLoadPendingAuthSessions
 useLocalObservable
 useLocalStore
 useLocalizedTimeUntil
+useMediaThumbnail
 useMemo
 useMicrophonePermissions
 useMigrateSteamGuardAndAuth
@@ -26107,7 +26129,6 @@ useUnregisterPushNotifications
 useUsersSharingDevice
 useValueWasTrueRecently
 useValueWasTrueRecentlyOrNow
-useVideoThumbnail
 useViewRefSet
 useVisibleOnScreen
 useWeb
@@ -26212,6 +26233,7 @@ version_string
 vertical
 verticalAlign
 verticallyInverted
+vetted
 vi-VN
 vibrate
 vibrateByPattern

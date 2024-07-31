@@ -5836,6 +5836,7 @@ getFabricUIManager
 getFiberCurrentPropsFromNode$1
 getFileExtension
 getFilename
+getFlag
 getFocusedRouteNameFromRoute
 getFontScale
 getForwardedRef
@@ -6291,6 +6292,7 @@ internalInterpolate
 internalMatch
 interpolate
 interpolateColor
+intersection
 invalidate
 invalidateConfirmationsListQuery
 invalidateContextProvider
@@ -6379,6 +6381,7 @@ isDateTrigger
 isDeepEqual
 isDeepStrictEqual
 isDirectory
+isDisjointFrom
 isDocumentDotAll
 isDoubleDot
 isDrawerOpen
@@ -6491,6 +6494,7 @@ isOnline
 isOverride
 isPackageInstalled
 isPathPercentEncode
+isPlainES6Map
 isPlainJSObject
 isPlainObject
 isPointFeature
@@ -6547,6 +6551,8 @@ isStrictComparable
 isString
 isStringObject
 isStringish
+isSubsetOf
+isSupersetOf
 isSupportedColorStyleProp
 isSupportedInterpolationParam
 isSupportedStyleProp
@@ -7835,6 +7841,7 @@ setErrorMessage
 setEventListener
 setEventPhase
 setExtra
+setFlag
 setFocused
 setFunctionLength
 setGestureStateChromeDebugger
@@ -8143,6 +8150,7 @@ swap32
 swap64
 swapLeftAndRightInRTL
 swizzle
+symmetricDifference
 tagMessage
 tail
 take
@@ -8487,6 +8495,7 @@ useBoxColors
 useBoxStyles
 useCallback
 useCallbackList
+useCallbackListUpdates
 useCancelFamilyInvite
 useCancelTokenSource
 useCardAnimation
@@ -8644,6 +8653,7 @@ useLocalizedTimeUntil
 useLoginRequest
 useLogout
 useMainMenuBadgeProps
+useMediaThumbnail
 useMemo
 useMergeRefs
 useMigrateBrowserID
@@ -8851,7 +8861,6 @@ useUnregisterPushNotifications
 useUsersSharingDevice
 useValueWasTrueRecently
 useValueWasTrueRecentlyOrNow
-useVideoThumbnail
 useViewRefSetJS
 useViewRefSetNative
 useVisibleOnScreen

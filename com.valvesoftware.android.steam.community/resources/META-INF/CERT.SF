@@ -1,10 +1,10 @@
 Signature-Version: 1.0
 Created-By: Android Gradle 8.2.1
-SHA-256-Digest-Manifest: 9W+R08eitDxFt8IGRXSwJZyr07cgTeHe0do1+Nn5CqA=
+SHA-256-Digest-Manifest: sxmUc2+KVT4Mi1ijUy7kgS/l+qp42PZwFq8rr5mlxHM=
 X-Android-APK-Signed: 2
 
 Name: AndroidManifest.xml
-SHA-256-Digest: 9ZDo1an/8eS0sg+4l50X7BzoY5HuiZW0smYM9paB2F8=
+SHA-256-Digest: wvLWp2haI1Qj7LJaUxK/90g6G1FrIAj0UDuoHvq3DFA=
 
 Name: DebugProbesKt.bin
 SHA-256-Digest: f1VLL3ND49UIB8KI6Qz30xG64Fz+tJnIVlR2zwEcJAM=
@@ -242,13 +242,13 @@ Name: META-INF/services/kotlinx.coroutines.internal.MainDispatcherFact
 SHA-256-Digest: CvpiKzNhVHqONkAL//lJVL9QOZGQGXeAZRDX9l7tM4E=
 
 Name: assets/app.config
-SHA-256-Digest: sYg3KmUnICCHczzL4wzcQnCsKcpP+7EptvYRelHqwTw=
+SHA-256-Digest: c8FyJcLDj3LK7UAy8VgHkEtZPSjB9D874RPp/QeomUo=
 
 Name: assets/app.manifest
-SHA-256-Digest: R3ddHeV7uSBRqjKdL9pL5HjhWrTaUULd/9I24jZxP6o=
+SHA-256-Digest: GtzbJwQ/gwN3HWimqbfkvVaT+ayO9RCaiPkDn05wa/I=
 
 Name: assets/dexopt/baseline.prof
-SHA-256-Digest: caTXDs8k9zsusHWHiXEC4AKzClklvFrWzuDPw+dfouI=
+SHA-256-Digest: WWIizLFXJFuPVyvYIvQtXavu0Bh7O0ceFeijq/zj/X4=
 
 Name: assets/dexopt/baseline.profm
 SHA-256-Digest: A0kZ4LyOWt6Mvc3qYySlUOAD2VKxTAi4ZIfRH5+DM4o=
@@ -257,7 +257,7 @@ Name: assets/expo-root.pem
 SHA-256-Digest: dzAH1HUEwT+vw1F8q4qEfRqgpPIUBuREStzvHMAWFMw=
 
 Name: assets/index.android.bundle
-SHA-256-Digest: RmkV7ugPOxh9kkz3VD4EStK36PCgSfuqks5UwC6JzNQ=
+SHA-256-Digest: yhMX7kqejMeDcyJijDWZIVxgxHNZIMsGmGLPVVwEg3Q=
 
 Name: assets/mlkit_barcode_models/barcode_ssd_mobilenet_v1_dmp25_quant
  .tflite
@@ -291,7 +291,7 @@ Name: classes3.dex
 SHA-256-Digest: LKM85ZiDPygpOAV6DwLdpeuV5Co39xE+O1NR/Vakk3A=
 
 Name: classes4.dex
-SHA-256-Digest: TVXkJUT0yHg/GEmui+u++yYS72jYI6fEiAx/kes0Hwk=
+SHA-256-Digest: eo18RJ3ZbV6KnWy/8rT7G/0lv6hkr5bzT7+mdTQCbM8=
 
 Name: classes5.dex
 SHA-256-Digest: IqABNdFNGMR6PC+KqTtW2VwpMhi455Pmf83xg2nAwxk=
