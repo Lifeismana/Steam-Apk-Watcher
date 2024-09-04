@@ -12,6 +12,8 @@ on:
                 required: false
                 default: ''
     repository_dispatch:
+    schedule:
+        - cron: '0 6 * * TUE,WED,THU,FRI,SAT'
 
 jobs:
     
