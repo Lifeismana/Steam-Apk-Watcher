@@ -11,6 +11,15 @@ on:
                 description: 'Version to use with the app id'
                 required: false
                 default: ''
+            force:
+                description: 'Force Staging'
+                type: choice
+                options:
+                    - true
+                    - false
+                required: false
+                default: "false"
+
     repository_dispatch:
     schedule:
         - cron: '0 6 * * TUE,WED,THU,FRI,SAT'
@@ -46,6 +55,7 @@ jobs:
                 ref: main
             - uses: docker://ghcr.io/lifeismana/steam-apk-watcher:latest
               env:
+                FORCE: ${{ inputs.force }}
                 APP_TO_PROCESS: ${{ inputs.app_id }}
                 APP_VERSION: ${{ inputs.version }}
                 GIT_NAME: ${{ secrets.GIT_NAME}}

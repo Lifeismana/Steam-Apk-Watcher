@@ -111,7 +111,7 @@ ProcessApp()
         current_version=$(xpath -q -e "string(/manifest/@android:versionName)" $1/resources/AndroidManifest.xml)
     fi
     echo "Current version: $current_version"
-    if [ -n "$APP_TO_PROCESS" ] || [ "$previous_version" != "$current_version" ]; then
+    if [ -n "$APP_TO_PROCESS" ] || [ "$previous_version" != "$current_version" ] || [ -n "$FORCE" -a "$FORCE" = "true" ]; then
         git add $1
     else
         echo "Skipping staging changes: apk version didn't change"
