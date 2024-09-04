@@ -37,11 +37,17 @@ MergeDPIPNG()
                 mv -f "$FILE" "$foldernodpi/$filename"
             fi
         fi
-    done < <(find . -type f -name "*.png")
+    done < <(find $1 -type f -name "*.png")
 }
 
 ProcessApp()
 {
+    echo "Processing $1"
+    previous_version=''
+    if [ -f $1/resources/AndroidManifest.xml ]; then
+        previous_version=$(xpath -q -e "string(/manifest/@android:versionName)" $1/resources/AndroidManifest.xml)
+    fi
+    echo "Previous version: $previous_version"
     rm -rf $1
     mkdir -p $1
     if [ -n "$2" ]; then
@@ -98,6 +104,18 @@ ProcessApp()
         sort -uo $1/resources/assets/index.android.bundle.1.txt $1/resources/assets/index.android.bundle.1.txt
         sort -uo $1/resources/assets/index.android.bundle.function.txt $1/resources/assets/index.android.bundle.function.txt
     fi
+    MergeDPIPNG $1
+
+    current_version=''
+    if [ -f $1/resources/AndroidManifest.xml ]; then
+        current_version=$(xpath -q -e "string(/manifest/@android:versionName)" $1/resources/AndroidManifest.xml)
+    fi
+    echo "Current version: $current_version"
+    if [ -n "$APP_TO_PROCESS" ] || [ "$previous_version" != "$current_version" ]; then
+        git add $1
+    else
+        echo "Skipping staging changes: apk version didn't change"
+    fi
 }
 
 if [ -n "$APP_TO_PROCESS" ]; then
@@ -109,8 +127,5 @@ else
     done
 fi
 
-MergeDPIPNG
-
-git add -A
-git commit -a -m "$Commit_message | $(git status --porcelain | wc -l) files | $(git status --porcelain|awk '{print "basename " $2}'| sh | sed '{:q;N;s/\n/, /g;t q}')"
+git commit -m "$Commit_message | $(git status --porcelain | wc -l) files | $(git status --porcelain|awk '{print "basename " $2}'| sh | sed '{:q;N;s/\n/, /g;t q}')"
 git push
