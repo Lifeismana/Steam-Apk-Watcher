@@ -1,5 +1,5 @@
 9ab14b81ed883f275f7be54b163559f6  com.valvesoftware.android.steam.friendsui/com.valvesoftware.android.steam.friendsui.apk
-7648ad4e9f7fbd66574561d8a2306667  com.valvesoftware.android.steam.friendsui/com.valvesoftware.android.steam.friendsui.apk.jadx.txt
+9c8c461ca872b998932a33a716c7b690  com.valvesoftware.android.steam.friendsui/com.valvesoftware.android.steam.friendsui.apk.jadx.txt
 5610a3ef571cab1a8cd36c9e8d0e5e34  com.valvesoftware.android.steam.friendsui/resources/AndroidManifest.xml
 26e4a87d5450c027450ee547f1fb2d45  com.valvesoftware.android.steam.friendsui/resources/DebugProbesKt.bin
 79450bb5a7df87235634de1f9e2d527f  com.valvesoftware.android.steam.friendsui/resources/META-INF/CERT.RSA
@@ -3237,7 +3237,7 @@ a4126463d4d9262ed2621302ab1fd558  com.valvesoftware.android.steam.friendsui/sour
 c62a4b5d0778e3b857ea839be60db20b  com.valvesoftware.android.steam.friendsui/sources/androidx/viewpager2/widget/MarginPageTransformer.java
 8e6171c0d6562fb96618b44fb18099b6  com.valvesoftware.android.steam.friendsui/sources/androidx/viewpager2/widget/PageTransformerAdapter.java
 2716d403f6bd1e57cfd67417d38ad5ab  com.valvesoftware.android.steam.friendsui/sources/androidx/viewpager2/widget/ScrollEventAdapter.java
-971ed2185cd0dd7b44764a7f54f81d8e  com.valvesoftware.android.steam.friendsui/sources/androidx/viewpager2/widget/ViewPager2.java
+48335f8577488d3f57549eabf81847ce  com.valvesoftware.android.steam.friendsui/sources/androidx/viewpager2/widget/ViewPager2.java
 d081584342abca60d9528a42be180f27  com.valvesoftware.android.steam.friendsui/sources/androidx/webkit/C0584R.java
 95280096c61b5c8fd53cb02d8497e7dd  com.valvesoftware.android.steam.friendsui/sources/androidx/webkit/JavaScriptReplyProxy.java
 b8d168ae70b3451a07354a2ab9947cdd  com.valvesoftware.android.steam.friendsui/sources/androidx/webkit/ProxyConfig.java
@@ -5161,7 +5161,7 @@ bea9aebfd569c1144a69999cc6587c06  com.valvesoftware.android.steam.friendsui/sour
 0fbea5c9b0e84e1bf81a185c8b24f9ec  com.valvesoftware.android.steam.friendsui/sources/com/google/android/datatransport/runtime/TransportRuntime_Factory.java
 7daef0ccd8111c76a36e6c7c7375640c  com.valvesoftware.android.steam.friendsui/sources/com/google/android/datatransport/runtime/backends/AutoValue_BackendRequest.java
 9f30183bc3859ef3cae7ba4faf5ffa19  com.valvesoftware.android.steam.friendsui/sources/com/google/android/datatransport/runtime/backends/AutoValue_BackendResponse.java
-4a659550834b619563fbe5f6707851b0  com.valvesoftware.android.steam.friendsui/sources/com/google/android/datatransport/runtime/backends/AutoValue_CreationContext.java
+947080134e0261693c0c440137fbc052  com.valvesoftware.android.steam.friendsui/sources/com/google/android/datatransport/runtime/backends/AutoValue_CreationContext.java
 a3d5b908104a563c8a2684b7139187c4  com.valvesoftware.android.steam.friendsui/sources/com/google/android/datatransport/runtime/backends/BackendFactory.java
 386c2d55846a74502b42f41e559cebfd  com.valvesoftware.android.steam.friendsui/sources/com/google/android/datatransport/runtime/backends/BackendRegistry.java
 374f81e4a1d4c537b849fff450715c77  com.valvesoftware.android.steam.friendsui/sources/com/google/android/datatransport/runtime/backends/BackendRegistryModule.java

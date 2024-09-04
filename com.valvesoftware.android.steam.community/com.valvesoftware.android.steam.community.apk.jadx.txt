@@ -2637,7 +2637,7 @@ e910be850ff991c3d508dbf6e95f4d4a  com.valvesoftware.android.steam.community/sour
 7311a3d9d87074060b4a3b91be9958e5  com.valvesoftware.android.steam.community/sources/androidx/camera/core/AndroidImageReaderProxy.java
 178d8b0ec43b4e9462a018401032f8c4  com.valvesoftware.android.steam.community/sources/androidx/camera/core/AspectRatio.java
 5bd0ac1433aada24ca1b588ef480689f  com.valvesoftware.android.steam.community/sources/androidx/camera/core/AutoValue_CameraState.java
-600838b87643153d19763d85d273f1aa  com.valvesoftware.android.steam.community/sources/androidx/camera/core/AutoValue_CameraState_StateError.java
+11e47422c399a2bab35d6dc5ac47e981  com.valvesoftware.android.steam.community/sources/androidx/camera/core/AutoValue_CameraState_StateError.java
 c383ff3fe2c966d7fb9ed8b4105434be  com.valvesoftware.android.steam.community/sources/androidx/camera/core/AutoValue_ImageReaderFormatRecommender_FormatCombo.java
 0595d089c4a7c351d8c5caf2f73bc46d  com.valvesoftware.android.steam.community/sources/androidx/camera/core/AutoValue_ImmutableImageInfo.java
 bebe86020c3c0cb69e89330637fc6c55  com.valvesoftware.android.steam.community/sources/androidx/camera/core/AutoValue_ResolutionInfo_ResolutionInfoInternal.java
@@ -4238,11 +4238,11 @@ bd26b1f48787648c0508b7591670dc0b  com.valvesoftware.android.steam.community/sour
 ca0c528824bf9478fd1325c4ec024c00  com.valvesoftware.android.steam.community/sources/androidx/viewpager2/adapter/FragmentViewHolder.java
 90f51e0e8c967a54db769c85c5745a3d  com.valvesoftware.android.steam.community/sources/androidx/viewpager2/adapter/StatefulAdapter.java
 798524075398fcab99fa71ed687e4196  com.valvesoftware.android.steam.community/sources/androidx/viewpager2/widget/AnimateLayoutChangeDetector.java
-be9ce7ae7545e5b61aeba3eb814b3571  com.valvesoftware.android.steam.community/sources/androidx/viewpager2/widget/CompositeOnPageChangeCallback.java
+accfca13817812f4b6808dc7b4b2f829  com.valvesoftware.android.steam.community/sources/androidx/viewpager2/widget/CompositeOnPageChangeCallback.java
 f6ed03543af0fa06bbf6df2cc10c50bf  com.valvesoftware.android.steam.community/sources/androidx/viewpager2/widget/CompositePageTransformer.java
-a2406f0847940cef28dbf886d1283a4a  com.valvesoftware.android.steam.community/sources/androidx/viewpager2/widget/FakeDrag.java
+a4126463d4d9262ed2621302ab1fd558  com.valvesoftware.android.steam.community/sources/androidx/viewpager2/widget/FakeDrag.java
 c62a4b5d0778e3b857ea839be60db20b  com.valvesoftware.android.steam.community/sources/androidx/viewpager2/widget/MarginPageTransformer.java
-6202cd9de8b03a40eb599963dfd9fa6f  com.valvesoftware.android.steam.community/sources/androidx/viewpager2/widget/PageTransformerAdapter.java
+57f941ca5a7efa1052fff3ab460549fd  com.valvesoftware.android.steam.community/sources/androidx/viewpager2/widget/PageTransformerAdapter.java
 c33fd883c1a33c3d0bda3c5fbde6ae23  com.valvesoftware.android.steam.community/sources/androidx/viewpager2/widget/ScrollEventAdapter.java
 bff81a901254af3ab3350e6aaf55fba9  com.valvesoftware.android.steam.community/sources/androidx/viewpager2/widget/ViewPager2.java
 2e94073f9e8b33bf33662836697c65f0  com.valvesoftware.android.steam.community/sources/androidx/webkit/C0834R.java
@@ -10686,7 +10686,7 @@ e28e5d3dfdb4054a20894fba2944b35f  com.valvesoftware.android.steam.community/sour
 1c923f4d319a07b3453969bfdc04e694  com.valvesoftware.android.steam.community/sources/com/google/barhopper/deeplearning/zzc.java
 2269c6c80c50dc7604ae920e2a0aa0f7  com.valvesoftware.android.steam.community/sources/com/google/barhopper/deeplearning/zzd.java
 583da28e621d734e53afe23d954b7cb0  com.valvesoftware.android.steam.community/sources/com/google/barhopper/deeplearning/zze.java
-e2d3ae52e0454f87beb03d3b2e48ea78  com.valvesoftware.android.steam.community/sources/com/google/barhopper/deeplearning/zzf.java
+1ea0a242ad31cdbfb4ee8ede7121d0c6  com.valvesoftware.android.steam.community/sources/com/google/barhopper/deeplearning/zzf.java
 ddb2ff453b7efede1fc084ea68ade222  com.valvesoftware.android.steam.community/sources/com/google/barhopper/deeplearning/zzg.java
 62ac0c85af996407acb5e2f77c1ca52f  com.valvesoftware.android.steam.community/sources/com/google/barhopper/deeplearning/zzh.java
 7c9f3ef5e08e5ede67e234a85a4f030d  com.valvesoftware.android.steam.community/sources/com/google/barhopper/deeplearning/zzi.java
