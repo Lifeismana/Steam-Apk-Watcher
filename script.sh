@@ -17,7 +17,7 @@ MergeDPIPNG()
         if [[ ! $(dirname "$FILE") == *-@(ldpi|mdpi|hdpi|xhdpi|xxhdpi|xxxhdpi) ]]; then
             continue
         fi
-        if [ -f "$FILE" ]; then
+        if [[ -f "$FILE" ]]; then
             echo "Merging $FILE"
             filename=$(basename "$FILE")
             folder=$(basename $(dirname "$FILE"))
@@ -25,10 +25,10 @@ MergeDPIPNG()
             foldernodpi=$(dirname $(dirname "$FILE"))/${folder%-*}
             [ -d $foldernodpi ] || ( mkdir -p "$foldernodpi" && touch "$foldernodpi/.folderisnotreal" )
             # if the file already exists in that folder compare pixel count and keep the bigger one
-            if [ -f "$foldernodpi/$filename"    ]; then
+            if [[ -f "$foldernodpi/$filename"    ]]; then
                 new=($(identify -format "%w %h" "$FILE"))
                 old=($(identify -format "%w %h" "$foldernodpi/$filename"))
-                if [ $(expr ${new[0]} \* ${new[1]}) -gt $(expr ${old[0]} \* ${old[1]}) ]; then
+                if [[ $(expr ${new[0]} \* ${new[1]}) -gt $(expr ${old[0]} \* ${old[1]}) ]]; then
                     mv -f "$FILE" "$foldernodpi/$filename"
                 else
                     rm -f "$FILE"
@@ -44,27 +44,31 @@ ProcessApp()
 {
     echo "Processing $1"
     previous_version=''
-    if [ -f $1/resources/AndroidManifest.xml ]; then
+    if [[ -f $1/resources/AndroidManifest.xml ]]; then
         previous_version=$(xpath -q -e "string(/manifest/@android:versionName)" $1/resources/AndroidManifest.xml)
     fi
     echo "Previous version: $previous_version"
     rm -rf $1
     mkdir -p $1
-    if [ -n "$2" ]; then
-        apkeep -a $1@$2 -d apk-pure $1
-        for FILE in $1/*@*apk
-        do
-            echo "Renaming $FILE"
-            extension="${FILE##*.}"
-            filename="${FILE%@*}"
-            mv $FILE $filename.$extension
-        done
-        Commit_message="$1 Version $2"
-    else
-        apkeep -a $1 -d apk-pure $1
-    fi
-    if [ -f $1/$1.xapk ]; then
-        unzip -o $1/$1.xapk -d $1
+    if [[ "$SOURCE" == "apk-pure" || "$SOURCE" == "" ]]; then
+        if [[ -n "$2" ]]; then
+            apkeep -a $1@$2 -d apk-pure $1
+            for FILE in $1/*@*apk
+            do
+                echo "Renaming $FILE"
+                extension="${FILE##*.}"
+                filename="${FILE%@*}"
+                mv $FILE $filename.$extension
+            done
+            Commit_message="$1 Version $2"
+        else
+            apkeep -a $1 -d apk-pure $1
+        fi
+        if [[ -f $1/$1.xapk ]]; then
+            unzip -o $1/$1.xapk -d $1
+        fi
+    elif [[ "$SOURCE" == "google" ]]; then
+        apkeep -a $1 -d google-play -e $GOOGLE_MAIL -t $AAS_TOKEN $1
     fi
     jadx --deobf --show-bad-code -d $1 $1/$1.apk
     find $1 -type f -exec md5sum {} >> $1/$1.apk.jadx.txt \;
@@ -77,7 +81,7 @@ ProcessApp()
         column -t "/tmp/apkunzip.txt" > "$FILE.txt"
     done
     # decompile bundle
-    if [ -f $1/resources/assets/index.android.bundle ]; then
+    if [[ -f $1/resources/assets/index.android.bundle ]]; then
         echo "Decompiling $1/resources/assets/index.android.bundle"
         hbc-decompiler $1/resources/assets/index.android.bundle $1/resources/assets/index.android.bundle.decompiled.js
         hbc-file-parser $1/resources/assets/index.android.bundle > /tmp/index.android.bundle.header.txt
@@ -107,7 +111,7 @@ ProcessApp()
     MergeDPIPNG $1
 
     current_version=''
-    if [ -f $1/resources/AndroidManifest.xml ]; then
+    if [[ -f $1/resources/AndroidManifest.xml ]]; then
         current_version=$(xpath -q -e "string(/manifest/@android:versionName)" $1/resources/AndroidManifest.xml)
     fi
     echo "Current version: $current_version"
@@ -118,7 +122,7 @@ ProcessApp()
     fi
 }
 
-if [ -n "$APP_TO_PROCESS" ]; then
+if [[ -n "$APP_TO_PROCESS" ]]; then
     ProcessApp $APP_TO_PROCESS $APP_VERSION
 else
     for APP in $APPS;
