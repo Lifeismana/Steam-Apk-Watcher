@@ -127,7 +127,7 @@ else
     done
 fi
 
-if git diff-index --quiet HEAD; then
+if ! git diff-index --cached --quiet HEAD; then
     git commit -m "$Commit_message | $(git status --porcelain | wc -l) files | $(git status --porcelain|awk '{print "basename " $2}'| sh | sed '{:q;N;s/\n/, /g;t q}')"
     git push
 fi
