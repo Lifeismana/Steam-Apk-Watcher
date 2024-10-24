@@ -98,7 +98,7 @@ public class SteamShellActivity extends QtActivity {
         if (keyEvent.getSource() == 0 && (device = InputDevice.getDevice(deviceId)) != null) {
             device.getSources();
         }
-        if (SDLControllerManager.isDeviceSDLJoystick(deviceId) && SDLControllerManager.onNativePadDown(deviceId, i) == 0) {
+        if (SDLControllerManager.isDeviceSDLJoystick(deviceId) && SDLControllerManager.onNativePadDown(deviceId, i)) {
             return true;
         }
         return super.onKeyDown(i, keyEvent);
@@ -111,7 +111,7 @@ public class SteamShellActivity extends QtActivity {
         if (keyEvent.getSource() == 0 && (device = InputDevice.getDevice(deviceId)) != null) {
             device.getSources();
         }
-        if (SDLControllerManager.isDeviceSDLJoystick(deviceId) && SDLControllerManager.onNativePadUp(deviceId, i) == 0) {
+        if (SDLControllerManager.isDeviceSDLJoystick(deviceId) && SDLControllerManager.onNativePadUp(deviceId, i)) {
             return true;
         }
         return super.onKeyUp(i, keyEvent);
