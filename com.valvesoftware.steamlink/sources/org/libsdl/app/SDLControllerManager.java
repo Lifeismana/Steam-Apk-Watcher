@@ -10,13 +10,13 @@ public class SDLControllerManager {
     protected static SDLHapticHandler mHapticHandler;
     protected static SDLJoystickHandler mJoystickHandler;
 
-    public static native void nativeAddHaptic(int i, String str);
+    public static native int nativeAddHaptic(int i, String str);
 
-    public static native void nativeAddJoystick(int i, String str, String str2, int i2, int i3, int i4, int i5, int i6, int i7, boolean z);
+    public static native int nativeAddJoystick(int i, String str, String str2, int i2, int i3, boolean z, int i4, int i5, int i6, int i7);
 
-    public static native void nativeRemoveHaptic(int i);
+    public static native int nativeRemoveHaptic(int i);
 
-    public static native void nativeRemoveJoystick(int i);
+    public static native int nativeRemoveJoystick(int i);
 
     public static native int nativeSetupJNI();
 
@@ -24,18 +24,16 @@ public class SDLControllerManager {
 
     public static native void onNativeJoy(int i, int i2, float f);
 
-    public static native boolean onNativePadDown(int i, int i2);
+    public static native int onNativePadDown(int i, int i2);
 
-    public static native boolean onNativePadUp(int i, int i2);
+    public static native int onNativePadUp(int i, int i2);
 
     public static void initialize() {
         if (mJoystickHandler == null) {
             mJoystickHandler = new SDLJoystickHandler_API19();
         }
         if (mHapticHandler == null) {
-            if (Build.VERSION.SDK_INT >= 31) {
-                mHapticHandler = new SDLHapticHandler_API31();
-            } else if (Build.VERSION.SDK_INT >= 26) {
+            if (Build.VERSION.SDK_INT >= 26) {
                 mHapticHandler = new SDLHapticHandler_API26();
             } else {
                 mHapticHandler = new SDLHapticHandler();
@@ -57,10 +55,6 @@ public class SDLControllerManager {
 
     public static void hapticRun(int i, float f, int i2) {
         mHapticHandler.run(i, f, i2);
-    }
-
-    public static void hapticRumble(int i, float f, float f2, int i2) {
-        mHapticHandler.rumble(i, f, f2, i2);
     }
 
     public static void hapticStop(int i) {

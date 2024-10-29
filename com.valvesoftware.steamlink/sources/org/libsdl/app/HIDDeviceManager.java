@@ -147,11 +147,7 @@ public class HIDDeviceManager {
         intentFilter.addAction("android.hardware.usb.action.USB_DEVICE_ATTACHED");
         intentFilter.addAction("android.hardware.usb.action.USB_DEVICE_DETACHED");
         intentFilter.addAction(ACTION_USB_PERMISSION);
-        if (Build.VERSION.SDK_INT >= 33) {
-            this.mContext.registerReceiver(this.mUsbBroadcast, intentFilter, 2);
-        } else {
-            this.mContext.registerReceiver(this.mUsbBroadcast, intentFilter);
-        }
+        this.mContext.registerReceiver(this.mUsbBroadcast, intentFilter);
         Iterator<UsbDevice> it = this.mUsbManager.getDeviceList().values().iterator();
         while (it.hasNext()) {
             handleUsbDeviceAttached(it.next());
@@ -188,10 +184,10 @@ public class HIDDeviceManager {
     }
 
     private boolean isXboxOneController(UsbDevice usbDevice, UsbInterface usbInterface) {
-        int[] iArr = {1008, 1103, 1118, 1848, 2821, 3695, 3853, 4341, 5426, 8406, 9414, 11720, 11812, 13623};
+        int[] iArr = {1103, 1118, 1848, 3695, 3853, 4341, 5426, 8406, 9414, 11720, 11812, 13623};
         if (usbInterface.getId() == 0 && usbInterface.getInterfaceClass() == 255 && usbInterface.getInterfaceSubclass() == 71 && usbInterface.getInterfaceProtocol() == 208) {
             int vendorId = usbDevice.getVendorId();
-            for (int i = 0; i < 14; i++) {
+            for (int i = 0; i < 12; i++) {
                 if (vendorId == iArr[i]) {
                     return true;
                 }
@@ -255,10 +251,6 @@ public class HIDDeviceManager {
     private void initializeBluetooth() {
         BluetoothAdapter adapter;
         Log.d(TAG, "Initializing Bluetooth");
-        if (Build.VERSION.SDK_INT >= 31 && this.mContext.getPackageManager().checkPermission("android.permission.BLUETOOTH_CONNECT", this.mContext.getPackageName()) != 0) {
-            Log.d(TAG, "Couldn't initialize Bluetooth, missing android.permission.BLUETOOTH_CONNECT");
-            return;
-        }
         if (Build.VERSION.SDK_INT <= 30 && this.mContext.getPackageManager().checkPermission("android.permission.BLUETOOTH", this.mContext.getPackageName()) != 0) {
             Log.d(TAG, "Couldn't initialize Bluetooth, missing android.permission.BLUETOOTH");
             return;
@@ -281,11 +273,7 @@ public class HIDDeviceManager {
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction("android.bluetooth.device.action.ACL_CONNECTED");
         intentFilter.addAction("android.bluetooth.device.action.ACL_DISCONNECTED");
-        if (Build.VERSION.SDK_INT >= 33) {
-            this.mContext.registerReceiver(this.mBluetoothBroadcast, intentFilter, 2);
-        } else {
-            this.mContext.registerReceiver(this.mBluetoothBroadcast, intentFilter);
-        }
+        this.mContext.registerReceiver(this.mBluetoothBroadcast, intentFilter);
         if (this.mIsChromebook) {
             this.mHandler = new Handler(Looper.getMainLooper());
             this.mLastBluetoothDevices = new ArrayList();
@@ -424,14 +412,7 @@ public class HIDDeviceManager {
         if (device2 != null && !this.mUsbManager.hasPermission(device2)) {
             HIDDeviceOpenPending(i);
             try {
-                int i2 = Build.VERSION.SDK_INT >= 31 ? 33554432 : 0;
-                if (Build.VERSION.SDK_INT >= 33) {
-                    Intent intent = new Intent(ACTION_USB_PERMISSION);
-                    intent.setPackage(this.mContext.getPackageName());
-                    this.mUsbManager.requestPermission(device2, PendingIntent.getBroadcast(this.mContext, 0, intent, i2));
-                } else {
-                    this.mUsbManager.requestPermission(device2, PendingIntent.getBroadcast(this.mContext, 0, new Intent(ACTION_USB_PERMISSION), i2));
-                }
+                this.mUsbManager.requestPermission(device2, PendingIntent.getBroadcast(this.mContext, 0, new Intent(ACTION_USB_PERMISSION), Build.VERSION.SDK_INT >= 31 ? 33554432 : 0));
             } catch (Exception unused) {
                 Log.v(TAG, "Couldn't request permission for USB device " + device2);
                 HIDDeviceOpenResult(i, false);

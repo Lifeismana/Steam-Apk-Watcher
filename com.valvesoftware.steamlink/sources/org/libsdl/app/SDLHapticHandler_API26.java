@@ -2,6 +2,7 @@ package org.libsdl.app;
 
 import android.os.VibrationEffect;
 import android.os.Vibrator;
+import android.util.Log;
 import org.libsdl.app.SDLHapticHandler;
 
 /* JADX INFO: Access modifiers changed from: package-private */
@@ -13,6 +14,7 @@ public class SDLHapticHandler_API26 extends SDLHapticHandler {
         VibrationEffect createOneShot;
         SDLHapticHandler.SDLHaptic haptic = getHaptic(i);
         if (haptic != null) {
+            Log.d("SDL", "Rtest: Vibe with intensity " + f + " for " + i2);
             if (f == 0.0f) {
                 stop(i);
                 return;

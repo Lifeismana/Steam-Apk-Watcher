@@ -1,6 +1,7 @@
 package org.libsdl.app;
 
 import android.os.Vibrator;
+import android.view.InputDevice;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -9,9 +10,6 @@ import java.util.Iterator;
 /* loaded from: classes.dex */
 public class SDLHapticHandler {
     private final ArrayList<SDLHaptic> mHaptics = new ArrayList<>();
-
-    public void rumble(int i, float f, float f2, int i2) {
-    }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: SDLControllerManager.java */
@@ -41,16 +39,36 @@ public class SDLHapticHandler {
 
     public void pollHapticDevices() {
         boolean z;
-        Vibrator vibrator = (Vibrator) SDL.getContext().getSystemService("vibrator");
-        if (vibrator != null) {
-            z = vibrator.hasVibrator();
+        int[] deviceIds = InputDevice.getDeviceIds();
+        int length = deviceIds.length;
+        while (true) {
+            length--;
+            if (length <= -1) {
+                break;
+            }
+            if (getHaptic(deviceIds[length]) == null) {
+                InputDevice device = InputDevice.getDevice(deviceIds[length]);
+                Vibrator vibrator = device.getVibrator();
+                if (vibrator.hasVibrator()) {
+                    SDLHaptic sDLHaptic = new SDLHaptic();
+                    sDLHaptic.device_id = deviceIds[length];
+                    sDLHaptic.name = device.getName();
+                    sDLHaptic.vib = vibrator;
+                    this.mHaptics.add(sDLHaptic);
+                    SDLControllerManager.nativeAddHaptic(sDLHaptic.device_id, sDLHaptic.name);
+                }
+            }
+        }
+        Vibrator vibrator2 = (Vibrator) SDL.getContext().getSystemService("vibrator");
+        if (vibrator2 != null) {
+            z = vibrator2.hasVibrator();
             if (z && getHaptic(999999) == null) {
-                SDLHaptic sDLHaptic = new SDLHaptic();
-                sDLHaptic.device_id = 999999;
-                sDLHaptic.name = "VIBRATOR_SERVICE";
-                sDLHaptic.vib = vibrator;
-                this.mHaptics.add(sDLHaptic);
-                SDLControllerManager.nativeAddHaptic(sDLHaptic.device_id, sDLHaptic.name);
+                SDLHaptic sDLHaptic2 = new SDLHaptic();
+                sDLHaptic2.device_id = 999999;
+                sDLHaptic2.name = "VIBRATOR_SERVICE";
+                sDLHaptic2.vib = vibrator2;
+                this.mHaptics.add(sDLHaptic2);
+                SDLControllerManager.nativeAddHaptic(sDLHaptic2.device_id, sDLHaptic2.name);
             }
         } else {
             z = false;
@@ -59,11 +77,17 @@ public class SDLHapticHandler {
         ArrayList arrayList = null;
         while (it.hasNext()) {
             int i = it.next().device_id;
+            int i2 = 0;
+            while (i2 < deviceIds.length && i != deviceIds[i2]) {
+                i2++;
+            }
             if (i != 999999 || !z) {
-                if (arrayList == null) {
-                    arrayList = new ArrayList();
+                if (i2 == deviceIds.length) {
+                    if (arrayList == null) {
+                        arrayList = new ArrayList();
+                    }
+                    arrayList.add(Integer.valueOf(i));
                 }
-                arrayList.add(Integer.valueOf(i));
             }
         }
         if (arrayList != null) {
@@ -71,16 +95,16 @@ public class SDLHapticHandler {
             while (it2.hasNext()) {
                 int intValue = ((Integer) it2.next()).intValue();
                 SDLControllerManager.nativeRemoveHaptic(intValue);
-                int i2 = 0;
+                int i3 = 0;
                 while (true) {
-                    if (i2 >= this.mHaptics.size()) {
+                    if (i3 >= this.mHaptics.size()) {
                         break;
                     }
-                    if (this.mHaptics.get(i2).device_id == intValue) {
-                        this.mHaptics.remove(i2);
+                    if (this.mHaptics.get(i3).device_id == intValue) {
+                        this.mHaptics.remove(i3);
                         break;
                     }
-                    i2++;
+                    i3++;
                 }
             }
         }

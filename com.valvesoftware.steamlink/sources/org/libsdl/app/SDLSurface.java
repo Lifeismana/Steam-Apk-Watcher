@@ -1,7 +1,6 @@
 package org.libsdl.app;
 
 import android.content.Context;
-import android.graphics.Insets;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -17,12 +16,11 @@ import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
-import android.view.WindowInsets;
 import android.view.WindowManager;
 import org.libsdl.app.SDLActivity;
 
 /* loaded from: classes.dex */
-public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, View.OnApplyWindowInsetsListener, View.OnKeyListener, View.OnTouchListener, SensorEventListener {
+public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, View.OnKeyListener, View.OnTouchListener, SensorEventListener {
     protected Display mDisplay;
     protected float mHeight;
     public boolean mIsSurfaceReady;
@@ -39,7 +37,6 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
         setFocusable(true);
         setFocusableInTouchMode(true);
         requestFocus();
-        setOnApplyWindowInsetsListener(this);
         setOnKeyListener(this);
         setOnTouchListener(this);
         this.mDisplay = ((WindowManager) context.getSystemService("window")).getDefaultDisplay();
@@ -58,7 +55,6 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
         setFocusable(true);
         setFocusableInTouchMode(true);
         requestFocus();
-        setOnApplyWindowInsetsListener(this);
         setOnKeyListener(this);
         setOnTouchListener(this);
         enableSensor(1, true);
@@ -94,6 +90,7 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
         int i6;
         int i7;
         float f;
+        boolean isInMultiWindowMode;
         Log.v("SDL", "surfaceChanged()");
         if (SDLActivity.mSingleton == null) {
             return;
@@ -144,7 +141,11 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
             }
         }
         if (z && Build.VERSION.SDK_INT >= 24) {
-            z = false;
+            isInMultiWindowMode = SDLActivity.mSingleton.isInMultiWindowMode();
+            if (isInMultiWindowMode) {
+                Log.v("SDL", "Don't skip in Multi-Window");
+                z = false;
+            }
         }
         if (z) {
             Log.v("SDL", "Skip .. Surface is not ready.");
@@ -157,56 +158,9 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
         }
     }
 
-    @Override // android.view.View.OnApplyWindowInsetsListener
-    public WindowInsets onApplyWindowInsets(View view, WindowInsets windowInsets) {
-        int systemBars;
-        int systemGestures;
-        int mandatorySystemGestures;
-        int tappableElement;
-        int displayCutout;
-        Insets insets;
-        int i;
-        int i2;
-        int i3;
-        int i4;
-        if (Build.VERSION.SDK_INT >= 30) {
-            systemBars = WindowInsets.Type.systemBars();
-            systemGestures = WindowInsets.Type.systemGestures();
-            int i5 = systemBars | systemGestures;
-            mandatorySystemGestures = WindowInsets.Type.mandatorySystemGestures();
-            int i6 = i5 | mandatorySystemGestures;
-            tappableElement = WindowInsets.Type.tappableElement();
-            int i7 = i6 | tappableElement;
-            displayCutout = WindowInsets.Type.displayCutout();
-            insets = windowInsets.getInsets(i7 | displayCutout);
-            i = insets.left;
-            i2 = insets.right;
-            i3 = insets.top;
-            i4 = insets.bottom;
-            SDLActivity.onNativeInsetsChanged(i, i2, i3, i4);
-        }
-        return windowInsets;
-    }
-
     @Override // android.view.View.OnKeyListener
     public boolean onKey(View view, int i, KeyEvent keyEvent) {
         return SDLActivity.handleKeyEvent(view, i, keyEvent, null);
-    }
-
-    private float getNormalizedX(float f) {
-        float f2 = this.mWidth;
-        if (f2 <= 1.0f) {
-            return 0.5f;
-        }
-        return f / (f2 - 1.0f);
-    }
-
-    private float getNormalizedY(float f) {
-        float f2 = this.mHeight;
-        if (f2 <= 1.0f) {
-            return 0.5f;
-        }
-        return f / (f2 - 1.0f);
     }
 
     @Override // android.view.View.OnTouchListener
@@ -216,6 +170,9 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
         int deviceId = motionEvent.getDeviceId();
         int pointerCount = motionEvent.getPointerCount();
         int actionMasked = motionEvent.getActionMasked();
+        if (deviceId < 0) {
+            deviceId--;
+        }
         int i2 = 0;
         if (motionEvent.getSource() == 8194 || motionEvent.getSource() == 12290) {
             try {
@@ -235,18 +192,18 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
                 if (actionMasked == 2) {
                     for (int i3 = 0; i3 < pointerCount; i3++) {
                         int pointerId = motionEvent.getPointerId(i3);
-                        float normalizedX = getNormalizedX(motionEvent.getX(i3));
-                        float normalizedY = getNormalizedY(motionEvent.getY(i3));
+                        float x = motionEvent.getX(i3) / this.mWidth;
+                        float y = motionEvent.getY(i3) / this.mHeight;
                         float pressure = motionEvent.getPressure(i3);
-                        SDLActivity.onNativeTouch(deviceId, pointerId, actionMasked, normalizedX, normalizedY, pressure > 1.0f ? 1.0f : pressure);
+                        SDLActivity.onNativeTouch(deviceId, pointerId, actionMasked, x, y, pressure > 1.0f ? 1.0f : pressure);
                     }
                 } else if (actionMasked == 3) {
                     for (int i4 = 0; i4 < pointerCount; i4++) {
                         int pointerId2 = motionEvent.getPointerId(i4);
-                        float normalizedX2 = getNormalizedX(motionEvent.getX(i4));
-                        float normalizedY2 = getNormalizedY(motionEvent.getY(i4));
+                        float x2 = motionEvent.getX(i4) / this.mWidth;
+                        float y2 = motionEvent.getY(i4) / this.mHeight;
                         float pressure2 = motionEvent.getPressure(i4);
-                        SDLActivity.onNativeTouch(deviceId, pointerId2, 1, normalizedX2, normalizedY2, pressure2 > 1.0f ? 1.0f : pressure2);
+                        SDLActivity.onNativeTouch(deviceId, pointerId2, 1, x2, y2, pressure2 > 1.0f ? 1.0f : pressure2);
                     }
                 } else if (actionMasked == 5 || actionMasked == 6) {
                     i2 = -1;
@@ -256,10 +213,10 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
                 i2 = motionEvent.getActionIndex();
             }
             int pointerId3 = motionEvent.getPointerId(i2);
-            float normalizedX3 = getNormalizedX(motionEvent.getX(i2));
-            float normalizedY3 = getNormalizedY(motionEvent.getY(i2));
+            float x3 = motionEvent.getX(i2) / this.mWidth;
+            float y3 = motionEvent.getY(i2) / this.mHeight;
             float pressure3 = motionEvent.getPressure(i2);
-            SDLActivity.onNativeTouch(deviceId, pointerId3, actionMasked, normalizedX3, normalizedY3, pressure3 > 1.0f ? 1.0f : pressure3);
+            SDLActivity.onNativeTouch(deviceId, pointerId3, actionMasked, x3, y3, pressure3 > 1.0f ? 1.0f : pressure3);
         }
         return true;
     }

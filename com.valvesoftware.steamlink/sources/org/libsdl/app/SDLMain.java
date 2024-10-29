@@ -9,14 +9,17 @@ import android.util.Log;
 public class SDLMain implements Runnable {
     @Override // java.lang.Runnable
     public void run() {
+        String mainSharedObject = SDLActivity.mSingleton.getMainSharedObject();
+        String mainFunction = SDLActivity.mSingleton.getMainFunction();
+        String[] arguments = SDLActivity.mSingleton.getArguments();
         try {
             Process.setThreadPriority(-4);
         } catch (Exception e) {
             Log.v("SDL", "modify thread properties failed " + e.toString());
         }
-        SDLActivity.nativeInitMainThread();
-        SDLActivity.mSingleton.main();
-        SDLActivity.nativeCleanupMainThread();
+        Log.v("SDL", "Running main function " + mainFunction + " from library " + mainSharedObject);
+        SDLActivity.nativeRunMain(mainSharedObject, mainFunction, arguments);
+        Log.v("SDL", "Finished main function");
         if (SDLActivity.mSingleton == null || SDLActivity.mSingleton.isFinishing()) {
             return;
         }
