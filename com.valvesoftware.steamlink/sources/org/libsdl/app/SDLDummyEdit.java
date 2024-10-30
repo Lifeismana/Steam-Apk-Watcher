@@ -6,29 +6,32 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
 
-/* JADX INFO: Access modifiers changed from: package-private */
-/* compiled from: SDLActivity.java */
 /* loaded from: classes.dex */
-public class DummyEdit extends View implements View.OnKeyListener {
+public class SDLDummyEdit extends View implements View.OnKeyListener {
 
     /* renamed from: ic */
-    InputConnection f0ic;
+    InputConnection f5ic;
+    int input_type;
 
     @Override // android.view.View
     public boolean onCheckIsTextEditor() {
         return true;
     }
 
-    public DummyEdit(Context context) {
+    public SDLDummyEdit(Context context) {
         super(context);
         setFocusableInTouchMode(true);
         setFocusable(true);
         setOnKeyListener(this);
     }
 
+    public void setInputType(int i) {
+        this.input_type = i;
+    }
+
     @Override // android.view.View.OnKeyListener
     public boolean onKey(View view, int i, KeyEvent keyEvent) {
-        return SDLActivity.handleKeyEvent(view, i, keyEvent, this.f0ic);
+        return SDLActivity.handleKeyEvent(view, i, keyEvent, this.f5ic);
     }
 
     @Override // android.view.View
@@ -41,9 +44,9 @@ public class DummyEdit extends View implements View.OnKeyListener {
 
     @Override // android.view.View
     public InputConnection onCreateInputConnection(EditorInfo editorInfo) {
-        this.f0ic = new SDLInputConnection(this, true);
-        editorInfo.inputType = 131073;
+        this.f5ic = new SDLInputConnection(this, true);
+        editorInfo.inputType = this.input_type;
         editorInfo.imeOptions = 301989888;
-        return this.f0ic;
+        return this.f5ic;
     }
 }

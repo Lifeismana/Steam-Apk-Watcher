@@ -1,5 +1,7 @@
 package org.libsdl.app;
 
+import android.os.Build;
+import android.os.VibratorManager;
 import android.view.InputDevice;
 import android.view.MotionEvent;
 import java.util.ArrayList;
@@ -79,6 +81,9 @@ class SDLJoystickHandler_API16 extends SDLJoystickHandler {
 
     @Override // org.libsdl.app.SDLJoystickHandler
     public void pollInputDevices() {
+        boolean z;
+        VibratorManager vibratorManager;
+        int[] vibratorIds;
         int[] deviceIds = InputDevice.getDeviceIds();
         for (int i : deviceIds) {
             if (SDLControllerManager.isDeviceSDLJoystick(i) && getJoystick(i) == null) {
@@ -100,8 +105,18 @@ class SDLJoystickHandler_API16 extends SDLJoystickHandler {
                         }
                     }
                 }
+                if (Build.VERSION.SDK_INT >= 31) {
+                    vibratorManager = device.getVibratorManager();
+                    vibratorIds = vibratorManager.getVibratorIds();
+                    if (vibratorIds.length > 0) {
+                        z = true;
+                        this.mJoysticks.add(sDLJoystick);
+                        SDLControllerManager.nativeAddJoystick(sDLJoystick.device_id, sDLJoystick.name, sDLJoystick.desc, getVendorId(device), getProductId(device), getButtonMask(device), sDLJoystick.axes.size(), getAxisMask(sDLJoystick.axes), sDLJoystick.hats.size() / 2, z);
+                    }
+                }
+                z = false;
                 this.mJoysticks.add(sDLJoystick);
-                SDLControllerManager.nativeAddJoystick(sDLJoystick.device_id, sDLJoystick.name, sDLJoystick.desc, getVendorId(device), getProductId(device), false, getButtonMask(device), sDLJoystick.axes.size(), getAxisMask(sDLJoystick.axes), sDLJoystick.hats.size() / 2);
+                SDLControllerManager.nativeAddJoystick(sDLJoystick.device_id, sDLJoystick.name, sDLJoystick.desc, getVendorId(device), getProductId(device), getButtonMask(device), sDLJoystick.axes.size(), getAxisMask(sDLJoystick.axes), sDLJoystick.hats.size() / 2, z);
             }
         }
         Iterator<SDLJoystick> it = this.mJoysticks.iterator();

@@ -7,8 +7,6 @@ import android.view.View;
 import android.view.inputmethod.BaseInputConnection;
 import android.widget.EditText;
 
-/* JADX INFO: Access modifiers changed from: package-private */
-/* compiled from: SDLActivity.java */
 /* loaded from: classes.dex */
 public class SDLInputConnection extends BaseInputConnection {
     protected String mCommittedText;

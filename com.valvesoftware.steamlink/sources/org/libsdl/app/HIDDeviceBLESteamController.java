@@ -136,7 +136,7 @@ public class HIDDeviceBLESteamController extends BluetoothGattCallback implement
             BluetoothGattCharacteristic characteristic;
             BluetoothGattDescriptor descriptor;
             byte[] bArr;
-            int i = C00114.f1xa1f10085[this.mOp.ordinal()];
+            int i = C00154.f0xa1f10085[this.mOp.ordinal()];
             if (i == 1) {
                 if (!this.mGatt.readCharacteristic(getCharacteristic(this.mUuid))) {
                     Log.e(HIDDeviceBLESteamController.TAG, "Unable to read characteristic " + this.mUuid.toString());
@@ -208,24 +208,24 @@ public class HIDDeviceBLESteamController extends BluetoothGattCallback implement
     /* JADX INFO: Access modifiers changed from: package-private */
     /* renamed from: org.libsdl.app.HIDDeviceBLESteamController$4 */
     /* loaded from: classes.dex */
-    public static /* synthetic */ class C00114 {
+    public static /* synthetic */ class C00154 {
 
         /* renamed from: $SwitchMap$org$libsdl$app$HIDDeviceBLESteamController$GattOperation$Operation */
-        static final /* synthetic */ int[] f1xa1f10085;
+        static final /* synthetic */ int[] f0xa1f10085;
 
         static {
             int[] iArr = new int[GattOperation.Operation.values().length];
-            f1xa1f10085 = iArr;
+            f0xa1f10085 = iArr;
             try {
                 iArr[GattOperation.Operation.CHR_READ.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f1xa1f10085[GattOperation.Operation.CHR_WRITE.ordinal()] = 2;
+                f0xa1f10085[GattOperation.Operation.CHR_WRITE.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                f1xa1f10085[GattOperation.Operation.ENABLE_NOTIFICATION.ordinal()] = 3;
+                f0xa1f10085[GattOperation.Operation.ENABLE_NOTIFICATION.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
         }

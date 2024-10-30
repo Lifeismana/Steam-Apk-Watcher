@@ -6,7 +6,7 @@ import android.view.PointerIcon;
 /* loaded from: classes.dex */
 public final /* synthetic */ class SDLSurface$$ExternalSyntheticApiModelOutline0 {
     /* renamed from: m */
-    public static /* bridge */ /* synthetic */ PointerIcon m12m(Object obj) {
+    public static /* bridge */ /* synthetic */ PointerIcon m17m(Object obj) {
         return (PointerIcon) obj;
     }
 }
