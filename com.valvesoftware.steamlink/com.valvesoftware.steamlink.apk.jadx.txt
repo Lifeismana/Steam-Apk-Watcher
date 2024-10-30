@@ -1,11 +1,11 @@
-982d86b7b0ed2833a4a479e842c8203b  com.valvesoftware.steamlink/com.valvesoftware.steamlink.apk
-bb1e1de3acbc29fb6a39a428e8492efe  com.valvesoftware.steamlink/com.valvesoftware.steamlink.apk.jadx.txt
-e64ad1fb35e1fa58123aee06161c11ff  com.valvesoftware.steamlink/resources/AndroidManifest.xml
-bc2f4cecc33cf4f891651f74121e359e  com.valvesoftware.steamlink/resources/META-INF/BNDLTOOL.RSA
-8c9dae432ad233a25bde86f120ba6682  com.valvesoftware.steamlink/resources/META-INF/BNDLTOOL.SF
-5ba9a9676c24e006c3cbfbf2c50cc726  com.valvesoftware.steamlink/resources/META-INF/MANIFEST.MF
+929cda0ffb2609942c5a7766a0967696  com.valvesoftware.steamlink/com.valvesoftware.steamlink.apk
+02e651972ce195465995ff414f3c3e8d  com.valvesoftware.steamlink/com.valvesoftware.steamlink.apk.jadx.txt
+4f84bbc4d1f760786ddba927bf2ee540  com.valvesoftware.steamlink/resources/AndroidManifest.xml
+1f8790fab8c41b13e27abe8dd6912367  com.valvesoftware.steamlink/resources/META-INF/BNDLTOOL.RSA
+e3e871eb649aa3c2fcc400d65d757e96  com.valvesoftware.steamlink/resources/META-INF/BNDLTOOL.SF
+4697c71b334321126b892b3832eca140  com.valvesoftware.steamlink/resources/META-INF/MANIFEST.MF
 bb0b1a2f84dda7d47daa3cd6d195119f  com.valvesoftware.steamlink/resources/META-INF/com/android/build/gradle/app-metadata.properties
-f236212bfb3c2c09af1cbcb7a9c30dab  com.valvesoftware.steamlink/resources/classes.dex
+1da5262bf5e6e1ea1388195b135dd70e  com.valvesoftware.steamlink/resources/classes.dex
 2e41a6d72d12972c5e99298f83cdc773  com.valvesoftware.steamlink/resources/org/kde/necessitas/ministro/IMinistro.aidl
 144c32427a952390e76467150d67ed26  com.valvesoftware.steamlink/resources/org/kde/necessitas/ministro/IMinistroCallback.aidl
 a7bbd91d110f2bf7012faab59c8a0b5f  com.valvesoftware.steamlink/resources/res/layout/main.xml
@@ -59,7 +59,7 @@ bed800ac7c24fb503a50cf144edaee22  com.valvesoftware.steamlink/sources/com/getkee
 c30d22e36cc6e48b15f8b1b1dc9d886b  com.valvesoftware.steamlink/sources/com/getkeepsafe/relinker/elf/Program64Header.java
 70fd771f8ba038f44e7d570cba960e98  com.valvesoftware.steamlink/sources/com/getkeepsafe/relinker/elf/Section32Header.java
 28fe30fd530af5f171b72a49b0d57b4e  com.valvesoftware.steamlink/sources/com/getkeepsafe/relinker/elf/Section64Header.java
-5f8a1c659b59a7e7458641fda8794b59  com.valvesoftware.steamlink/sources/com/valvesoftware/steamlink/BuildConfig.java
+c957f465964fbe97b683c447d2f6cc8f  com.valvesoftware.steamlink/sources/com/valvesoftware/steamlink/BuildConfig.java
 5c29658f1e16f8bba1a75be45ef0d05f  com.valvesoftware.steamlink/sources/com/valvesoftware/steamlink/C0003R.java
 3869b773243f885ff41dfc4dac8974e5  com.valvesoftware.steamlink/sources/com/valvesoftware/steamlink/SteamLink.java
 24865cb27bae2e609a5ca771d864f632  com.valvesoftware.steamlink/sources/com/valvesoftware/steamlink/SteamLinkUtils.java
@@ -70,7 +70,7 @@ c76e136d40b0b8fbd9e839ab1fa9d284  com.valvesoftware.steamlink/sources/org/kde/ne
 221ea9ddadb936a2b2dd9919d4386514  com.valvesoftware.steamlink/sources/org/libsdl/app/HIDDevice.java
 8ceb3dcea2994fd439d62ac35ac11847  com.valvesoftware.steamlink/sources/org/libsdl/app/HIDDeviceBLESteamController.java
 e681ee0a02b2dc891c6d5b0727a0eb6b  com.valvesoftware.steamlink/sources/org/libsdl/app/HIDDeviceManager.java
-5281c4cfdbeb0f28d845f30fd1678058  com.valvesoftware.steamlink/sources/org/libsdl/app/HIDDeviceUSB.java
+0d1424fcfcd5a3a900b5b5532d98ae66  com.valvesoftware.steamlink/sources/org/libsdl/app/HIDDeviceUSB.java
 decb52407e500e05cf02896789091420  com.valvesoftware.steamlink/sources/org/libsdl/app/SDL.java
 726a0db6b5ef9c0604227dc62a564b32  com.valvesoftware.steamlink/sources/org/libsdl/app/SDLActivity.java
 9c4580844bf58e628706c10e77e403f9  com.valvesoftware.steamlink/sources/org/libsdl/app/SDLAudioManager.java
