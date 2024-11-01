@@ -7,6 +7,6 @@ public final class BuildConfig {
     public static final boolean DEBUG = false;
     public static final boolean IS_HERMES_ENABLED = true;
     public static final boolean IS_NEW_ARCHITECTURE_ENABLED = false;
-    public static final int VERSION_CODE = 9241149;
-    public static final String VERSION_NAME = "3.9.2";
+    public static final int VERSION_CODE = 9305784;
+    public static final String VERSION_NAME = "3.9.3";
 }

@@ -226,6 +226,7 @@ BIsLinuxPC
 BIsLoaded
 BIsLocatedOnValveCDNOrSite
 BIsMacOSPC
+BIsMobile
 BIsPackageMissing
 BIsPackageUnavailableDueToCountryRestriction
 BIsParent
@@ -265,6 +266,7 @@ BLoggingEnabled
 BLooksLikeToken
 BNotificationParentalBlocked
 BOpenVROverlayBrowser
+BQuizPassed
 BRebuildFilter
 BReplaceRollupItem
 BSendToCallbackAsNew
@@ -275,6 +277,7 @@ BShouldRefreshToken
 BShowNewIndicator
 BShownFilterTip
 BSuccess
+BUnknownPlatformType
 BUrlIsOnTrustedDomain
 BValidLookingLanguage
 BValidLookingPartialSteamGuardCode
@@ -367,9 +370,6 @@ Button
 ButtonRoot
 ButtonWithConfirmation
 C
-CAccountLinking_GetLinkedAccountInfo_Request
-CAccountLinking_GetLinkedAccountInfo_Response
-CAccountLinking_GetLinkedAccountInfo_Response_CExternalAccountTuple_Response
 CAppInfoStore
 CAppPriority
 CAuthState
@@ -401,6 +401,8 @@ CAuthentication_GetPasswordRSAPublicKey_Request
 CAuthentication_GetPasswordRSAPublicKey_Response
 CAuthentication_MigrateMobileSession_Request
 CAuthentication_MigrateMobileSession_Response
+CAuthentication_NotifyRiskQuizResults_Notification
+CAuthentication_NotifyRiskQuizResults_Notification_RiskQuizResults
 CAuthentication_PollAuthSessionStatus_Request
 CAuthentication_PollAuthSessionStatus_Response
 CAuthentication_RefreshToken_Enumerate_Request
@@ -519,6 +521,10 @@ CCommunity_GetBestEventsForUser_Request
 CCommunity_GetBestEventsForUser_Response
 CCommunity_GetClanAnnouncementVoteForUser_Request
 CCommunity_GetClanAnnouncementVoteForUser_Response
+CCommunity_GetClanCrowdInMetadata_Request
+CCommunity_GetClanCrowdInMetadata_Response
+CCommunity_GetClanEventCrowdInMetadata_Request
+CCommunity_GetClanEventCrowdInMetadata_Response
 CCommunity_GetCommentThreadRatings_Request
 CCommunity_GetCommentThreadRatings_Response
 CCommunity_GetCommentThread_Request
@@ -1284,6 +1290,7 @@ ChatApp_AppleStore
 ChatApp_GooglePlay
 ChatApp_ThisPlatform
 Check
+CheckAnswer
 CheckCircle
 CheckPhoneEmail
 Checkbox
@@ -1425,6 +1432,7 @@ CreateNewShoppingCart
 CreateNonce
 CreatePattern
 CreateProfanityReplacement
+CreateQuiz
 CreateResizeObserver
 CreateWebAPIURL
 CreatorHomeModel
@@ -1572,7 +1580,6 @@ EContentCheckProviderToString
 EContentHubDiscountFilterTypeToString
 EDiscoveryQueueExperimentalCohortToString
 EExportCodecToString
-EExternalAccountTypeToString
 EExternalSaleEventTypeToString
 EFamilyGroupChangeLogTypeToString
 EFamilyGroupMembershipRemovalReasonToString
@@ -1587,6 +1594,7 @@ EForumTypeToString
 EGPUPerformanceLevelToString
 EGameRecordingTypeToString
 EGamescopeBlurModeToString
+EGpuDriverIdToString
 EGraphicsPerfOverlayLevelToString
 EHDRToneMapOperatorToString
 EHDRVisualizationToString
@@ -1603,7 +1611,6 @@ EHelpRequestStateToString
 EHelpRequestStatsResponderTypeToString
 EHelpRequestStatsRollupIntervalToString
 EHelpRequestTypeToString
-EInternalAccountTypeToString
 ELanguagePchLanguage
 ELanguagePchWebLanguageCode
 ELoyaltyRewardAuditTypeToString
@@ -1705,6 +1712,7 @@ EStoreCategoryTypeToString
 EStoreDiscoveryQueueTypeToString
 EStoreItemTypeToString
 EStoreLinkTypeToString
+EStoreQueryExcludeFromToString
 EStoreQuerySortToString
 EStoreUsabilityEventToString
 EStoreUsabilityFrontPageScrollToString
@@ -1945,6 +1953,7 @@ GetAllTrailers
 GetAllowedAppsMap
 GetAnimatedAvatar
 GetAnonymousServiceTransport
+GetAnswerOptions
 GetApp
 GetAppAndBundleVersion
 GetAppID
@@ -1995,6 +2004,8 @@ GetChangeHistoryEntry
 GetChangeLog
 GetClanAccountID
 GetClanAnnouncementVoteForUser
+GetClanCrowdInMetadata
+GetClanEventCrowdInMetadata
 GetClanImageBaseURL
 GetClanInfoByClanAccountID
 GetClanMemberCount
@@ -2056,6 +2067,7 @@ GetDefaultAvatarUrl
 GetDefaultFormData
 GetDefaultHandlerRegistry
 GetDefaultParams
+GetDefaultReportingInterval
 GetDefaultTransport
 GetDemoAppIDs
 GetDemoStandaloneStorePageAppIDs
@@ -2154,7 +2166,6 @@ GetLibraryCapsuleURL_2x
 GetLibraryHeroURL
 GetLibraryHeroURL_2x
 GetLinkParam
-GetLinkedAccountInfo
 GetLinks
 GetLocaleForLanguage
 GetLocalizationDict
@@ -2252,6 +2263,7 @@ GetPurchasedAndUpgradedProfileCustomizations
 GetPurchasedProfileCustomizations
 GetPushDeviceID
 GetQueryErrorString
+GetQuizQuestions
 GetRandomElementArray
 GetReactionConfig
 GetReactions
@@ -2325,6 +2337,7 @@ GetStyleSheetLinks
 GetStyleSheetLinksForDocument
 GetSubSectionData
 GetSummary
+GetSupportedLanguages
 GetTabRouteName
 GetTag
 GetTagIDs
@@ -2502,6 +2515,7 @@ IconVerticalDots
 IconWindowsLogo
 IconWishlist
 IconX
+IconYield
 IgnoreFriend
 Image
 ImageBackground
@@ -2690,6 +2704,7 @@ LocalizePlayTime
 LocalizePlural
 LocalizeRTimeToDateAndTimeAndTZ
 LocalizeRTimeToHourAndMinutes
+LocalizeRTimeToHourRange
 LocalizeReact
 LocalizeReactPlural
 LocalizeRoughHumanReadableDuration
@@ -2718,6 +2733,7 @@ LoginHistoryItemScreen
 LoginHistoryRow
 LoginHistoryScreen
 LoginModal
+LoginQuiz
 LoginRequestMap
 LoginRequestScreen
 LogoBackground
@@ -2882,6 +2898,7 @@ NotificationTimeDisplayString
 NotificationTimeoutError
 NotificationsFeature
 NotificationsScreen
+NotifyRiskQuizResults
 NotifyServerNotificationsHidden
 NotifyServerNotificationsRead
 NotifyStartShutdown
@@ -2988,6 +3005,8 @@ Path
 Pattern
 PatternTracker
 PauseCircle
+PauseReporting
+PauseReportingForDuration
 PchLanguageToELanguage
 PchNameFromELauncherType
 PedestalPage
@@ -3034,6 +3053,7 @@ PinwheelIn
 PinwheelOut
 PixelRatio
 PlaceholderScreen
+PlatformAnswerForPlatformType
 PlatformColor
 PlatformHeader
 PlatformIcon
@@ -3133,11 +3153,16 @@ QueueMultiplePackageRequests
 QueueMultipleStoreItemRequests
 QueueMultipleTagRequests
 QueuePackageRequest
+QueueReport
 QueueRichPresenceLocRequest
-QueueSend
 QueueStoreItemRequest
 QueueTagRequest
 QueueWishlistDemoEmailToFire
+QuizFailedResults
+QuizFailedToLoad
+QuizPassedResults
+QuizQuestion
+QuizResults
 QuotedArg
 R
 RCTDeviceEventEmitter
@@ -3287,6 +3312,7 @@ ResourceSavingScene
 RespondToClanInvite
 RespondToRequestedPurchase
 Response
+ResumeReporting
 ReturnUnicode
 RevokeFriendInviteToken
 RevokeRefreshToken
@@ -3337,6 +3363,7 @@ ScannerScreen
 SceneContent
 SceneView
 Schedule
+ScheduleSend
 ScheduledInternal
 Screen
 ScreenContainer
@@ -3639,6 +3666,7 @@ SummaryBox
 Sun
 SuperJSON
 Suspender
+SuspiciousLogin
 Svg
 SvgAst
 SvgCss
@@ -6690,6 +6718,7 @@ getString
 getStringForKey
 getStrokeWidth
 getStyle
+getStyleForAnswer
 getSupportedRatiosAsync
 getSuspendedThenable
 getSwipeSimulator
@@ -7633,6 +7662,7 @@ nav
 navigate
 navigateToFirstKey
 navigateToKey
+navigateToQuiz
 nbi
 nbits
 nbv
@@ -7801,6 +7831,7 @@ onAddAccount
 onAllowedNavigationChange
 onAndroidFinishTransitioning
 onAnimationComplete
+onAnswer
 onAuthenticatorHelp
 onAvatarImagePressed
 onBO
@@ -7874,6 +7905,7 @@ onKeyPress
 onKeyboardHide
 onLangChange
 onLayout
+onLearnMore
 onLoadEnd
 onLoadStart
 onLoginComplete
@@ -7925,16 +7957,17 @@ onPressMove
 onPressOut
 onPressSkip
 onQueryUpdate
+onQuizFinished
 onReactionError
 onRecoverableError
 onRejected
-onRememberToggle
 onRemoveSecondaryAccounts
 onRequestCancel
 onRequestClose
 onRequestEmailConfirmation
 onRequestRemoveMobileAuthenticator
 onResendCode
+onResolveLogin
 onResponderEnd
 onResponderGrant
 onResponderMove
@@ -7943,6 +7976,7 @@ onResponderRelease
 onResponderStart
 onResponderTerminate
 onResponderTerminationRequest
+onReviewDevices
 onRowPress
 onSelect
 onSelectItem
@@ -8254,6 +8288,7 @@ property
 propertyOf
 props2transform
 propsAndStyles
+provideAnswer
 provider
 publishRegistrationName
 pullAll
@@ -9218,6 +9253,7 @@ toggleClassKey
 toggleDrawer
 toggleExpanded
 toggleLock
+togglePersistence
 toggleSelectAll
 toggleSelection
 touch
@@ -9785,6 +9821,7 @@ useQueryErrorResetBoundary
 useQueryFromAsyncStorage
 useQuerySetDetailedErrorMessageEffect
 useQuerySetMessageOnErrorEffect
+useQuiz
 useRadioGroupContext
 useRadioGroupItemContext
 useRecentPlaytimeSessionsForUser
@@ -9872,6 +9909,7 @@ useSubscribableValueCallback
 useSuspenseInfiniteQuery
 useSuspenseQueries
 useSuspenseQuery
+useSuspiciousLoginInfo
 useSyncExternalStore
 useSyncState
 useTabBarLayout
