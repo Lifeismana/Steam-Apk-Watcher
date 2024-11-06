@@ -45,7 +45,7 @@ ProcessApp()
     echo "Processing $1"
     previous_version=''
     if [[ -f $1/resources/AndroidManifest.xml ]]; then
-        previous_version=$(xpath -q -e "string(/manifest/@android:versionName)" $1/resources/AndroidManifest.xml)
+        previous_version=$(xpath -q -e "string(/manifest/@android:versionCode)" $1/resources/AndroidManifest.xml)
     fi
     echo "Previous version: $previous_version"
     rm -rf $1
@@ -112,10 +112,10 @@ ProcessApp()
 
     current_version=''
     if [[ -f $1/resources/AndroidManifest.xml ]]; then
-        current_version=$(xpath -q -e "string(/manifest/@android:versionName)" $1/resources/AndroidManifest.xml)
+        current_version=$(xpath -q -e "string(/manifest/@android:versionCode)" $1/resources/AndroidManifest.xml)
     fi
     echo "Current version: $current_version"
-    if [ -n "$APP_TO_PROCESS" ] || [ "$previous_version" != "$current_version" ] || [ -n "$FORCE" -a "$FORCE" = "true" ]; then
+    if [ -n "$APP_TO_PROCESS" ] || [ "$current_version" -gt "$previous_version" ] || [ -n "$FORCE" -a "$FORCE" = "true" ]; then
         git add $1
     else
         echo "Skipping staging changes: apk version didn't change"
