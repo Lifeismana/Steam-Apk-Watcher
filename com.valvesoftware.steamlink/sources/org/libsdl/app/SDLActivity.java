@@ -54,7 +54,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     protected static final int COMMAND_TEXTEDIT_HIDE = 3;
     protected static final int COMMAND_USER = 32768;
     private static final int SDL_MAJOR_VERSION = 3;
-    private static final int SDL_MICRO_VERSION = 5;
+    private static final int SDL_MICRO_VERSION = 7;
     private static final int SDL_MINOR_VERSION = 1;
     protected static final int SDL_ORIENTATION_LANDSCAPE = 1;
     protected static final int SDL_ORIENTATION_LANDSCAPE_FLIPPED = 2;
@@ -330,7 +330,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             message = e3.getMessage();
         }
         if (!mBrokenLibraries) {
-            String str = String.valueOf(3) + "." + String.valueOf(1) + "." + String.valueOf(5);
+            String str = String.valueOf(3) + "." + String.valueOf(1) + "." + String.valueOf(7);
             String nativeGetVersion = nativeGetVersion();
             if (!nativeGetVersion.equals(str)) {
                 mBrokenLibraries = true;
@@ -841,7 +841,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             } else if (!z4 || !z3) {
             }
         } else if (!z) {
-            i5 = i > i2 ? SDL_SYSTEM_CURSOR_SIZENESW : SDL_SYSTEM_CURSOR_SIZEWE;
+            i5 = i > i2 ? SDL_SYSTEM_CURSOR_SIZENESW : 7;
         }
         Log.v(TAG, "setOrientation() requestedOrientation=" + i5 + " width=" + i + " height=" + i2 + " resizable=" + z + " hint=" + str);
         mSingleton.setRequestedOrientation(i5);
@@ -1297,7 +1297,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             case SDL_SYSTEM_CURSOR_WINDOW_BOTTOMLEFT /* 18 */:
                 i2 = 1016;
                 break;
-            case SDL_SYSTEM_CURSOR_SIZEWE /* 7 */:
+            case 7:
             case SDL_SYSTEM_CURSOR_WINDOW_RIGHT /* 15 */:
             case SDL_SYSTEM_CURSOR_WINDOW_LEFT /* 19 */:
                 i2 = 1014;

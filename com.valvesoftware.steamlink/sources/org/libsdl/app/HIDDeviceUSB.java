@@ -7,9 +7,8 @@ import android.hardware.usb.UsbInterface;
 import android.util.Log;
 import java.util.Arrays;
 
-/* JADX INFO: Access modifiers changed from: package-private */
 /* loaded from: classes.dex */
-public class HIDDeviceUSB implements HIDDevice {
+class HIDDeviceUSB implements HIDDevice {
     private static final String TAG = "hidapi";
     protected UsbDeviceConnection mConnection;
     protected UsbDevice mDevice;
