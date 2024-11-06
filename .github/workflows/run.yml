@@ -70,8 +70,6 @@ jobs:
                     echo "::set-output name=source::${{ inputs.download_source }}"
                 fi
             - uses: actions/checkout@v4
-              with:
-                ref: main
             - uses: docker://ghcr.io/lifeismana/steam-apk-watcher:latest
               env:
                 FORCE: ${{ inputs.force }}
