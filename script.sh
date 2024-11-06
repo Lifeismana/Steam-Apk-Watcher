@@ -43,11 +43,12 @@ MergeDPIPNG()
 ProcessApp()
 {
     echo "Processing $1"
-    previous_version=''
+    prev_version_code=''
     if [[ -f $1/resources/AndroidManifest.xml ]]; then
-        previous_version=$(xpath -q -e "string(/manifest/@android:versionCode)" $1/resources/AndroidManifest.xml)
+        prev_version_code=$(xpath -q -e "string(/manifest/@android:versionCode)" $1/resources/AndroidManifest.xml)
+        prev_version_name=$(xpath -q -e "string(/manifest/@android:versionName)" $1/resources/AndroidManifest.xml)
     fi
-    echo "Previous version: $previous_version"
+    echo "Previous version: $prev_version_name - $prev_version_code"
     rm -rf $1
     mkdir -p $1
     if [[ "$SOURCE" == "apk-pure" || "$SOURCE" == "" ]]; then
@@ -110,12 +111,14 @@ ProcessApp()
     fi
     MergeDPIPNG $1
 
-    current_version=''
+    cur_version_code=''
+    cur_version_name=''
     if [[ -f $1/resources/AndroidManifest.xml ]]; then
-        current_version=$(xpath -q -e "string(/manifest/@android:versionCode)" $1/resources/AndroidManifest.xml)
+        cur_version_code=$(xpath -q -e "string(/manifest/@android:versionCode)" $1/resources/AndroidManifest.xml)
+        cur_version_name=$(xpath -q -e "string(/manifest/@android:versionName)" $1/resources/AndroidManifest.xml)
     fi
-    echo "Current version: $current_version"
-    if [ -n "$APP_TO_PROCESS" ] || [ "$current_version" -gt "$previous_version" ] || [ -n "$FORCE" -a "$FORCE" = "true" ]; then
+    echo "Current version: $cur_version_name - $cur_version_code"
+    if [ -n "$APP_TO_PROCESS" ] || [ "$cur_version_code" -gt "$prev_version_code" ] || [ -n "$FORCE" -a "$FORCE" = "true" ]; then
         git add $1
     else
         echo "Skipping staging changes: apk version didn't change"
