@@ -117,7 +117,9 @@ public class SteamLink extends SDLActivity {
     public void onResume() {
         super.onResume();
         enableWiFiLock();
-        setLowLatencyAudio(true);
+        if (SDLActivity.nativeGetHintBoolean("SDL_ANDROID_LOW_LATENCY_AUDIO", true)) {
+            setLowLatencyAudio(true);
+        }
         thawRendering();
     }
 
