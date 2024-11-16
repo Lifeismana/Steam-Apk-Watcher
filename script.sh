@@ -141,7 +141,7 @@ ProcessApp()
         cur_version_name=$(xpath -q -e "string(/manifest/@android:versionName)" $1/resources/AndroidManifest.xml)
     fi
     echo "Current version: $cur_version_name - $cur_version_code"
-    if [ -n "$APP_TO_PROCESS" ] || [ "$cur_version_code" -gt "$prev_version_code" ] || [ -n "$FORCE" -a "$FORCE" = "true" ]; then
+    if [ -n "$APP_TO_PROCESS" ] || [[ -z "$prev_version_code" ]] || [ "$cur_version_code" -gt "$prev_version_code" ] || [ -n "$FORCE" -a "$FORCE" = "true" ]; then
         git add $1
     else
         echo "Skipping staging changes: apk version didn't change"
@@ -159,11 +159,12 @@ if [[ "$SOURCE" == "manual" ]]; then
             continue
         fi
 
-        declare -a APKS=($(find $1 -name "*.apk" | sort -V))
+        declare -a APKS=($(find $APP -name "*.apk" | sort -V))
 
-        for APK in $APKS;
+        for APK in ${APKS[@]};
         do
-            ProcessApp $APP $APK
+            echo "Processing $APK"
+            ProcessApp $(basename $APP) $APK
         done
     done
 elif [[ -n "$APP_TO_PROCESS" ]]; then
