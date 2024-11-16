@@ -143,6 +143,16 @@ ProcessApp()
     echo "Current version: $cur_version_name - $cur_version_code"
     if [ -n "$APP_TO_PROCESS" ] || [[ -z "$prev_version_code" ]] || [ "$cur_version_code" -gt "$prev_version_code" ] || [ -n "$FORCE" -a "$FORCE" = "true" ]; then
         git add $1
+
+        if [[ -n "$prev_version_code" ]]; then
+            Commit_message="$1 Version $cur_version_name - $prev_version_code -> $cur_version_code"
+        else
+            Commit_message="$1 Initial Version $cur_version_name - $cur_version_code"
+        fi
+
+        if ! git diff-index --cached --quiet HEAD; then
+            git commit -m "$Commit_message | $(git status --porcelain | wc -l) files | $(git status --porcelain|awk '{print "basename " $2}'| sh | sed '{:q;N;s/\n/, /g;t q}')"
+        fi
     else
         echo "Skipping staging changes: apk version didn't change"
     fi
@@ -176,7 +186,4 @@ else
     done
 fi
 
-if ! git diff-index --cached --quiet HEAD; then
-    git commit -m "$Commit_message | $(git status --porcelain | wc -l) files | $(git status --porcelain|awk '{print "basename " $2}'| sh | sed '{:q;N;s/\n/, /g;t q}')"
-    git push
-fi
+git push
