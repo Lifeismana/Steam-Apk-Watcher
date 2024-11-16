@@ -40,18 +40,11 @@ MergeDPIPNG()
     done < <(find $1 -type f -name "*.png")
 }
 
-ProcessApp()
+DownloadAPK()
 {
-    echo "Processing $1"
-    prev_version_code=''
-    if [[ -f $1/resources/AndroidManifest.xml ]]; then
-        prev_version_code=$(xpath -q -e "string(/manifest/@android:versionCode)" $1/resources/AndroidManifest.xml)
-        prev_version_name=$(xpath -q -e "string(/manifest/@android:versionName)" $1/resources/AndroidManifest.xml)
-    fi
-    echo "Previous version: $prev_version_name - $prev_version_code"
-    rm -rf $1
-    mkdir -p $1
-    if [[ "$SOURCE" == "apk-pure" || "$SOURCE" == "" ]]; then
+    if [[ "$SOURCE" == "google" ]]; then
+        apkeep -a $1 -d google-play -e $GOOGLE_MAIL -t $AAS_TOKEN $1
+    elif [[ "$SOURCE" == "apk-pure" || "$SOURCE" == "" ]]; then
         if [[ -n "$2" ]]; then
             apkeep -a $1@$2 -d apk-pure $1
             for FILE in $1/*@*apk
@@ -68,9 +61,24 @@ ProcessApp()
         if [[ -f $1/$1.xapk ]]; then
             unzip -o $1/$1.xapk -d $1
         fi
-    elif [[ "$SOURCE" == "google" ]]; then
-        apkeep -a $1 -d google-play -e $GOOGLE_MAIL -t $AAS_TOKEN $1
+    else
+        echo "Unknown source"
+        exit 1
     fi
+}
+
+ProcessApp()
+{
+    echo "Processing $1"
+    prev_version_code=''
+    if [[ -f $1/resources/AndroidManifest.xml ]]; then
+        prev_version_code=$(xpath -q -e "string(/manifest/@android:versionCode)" $1/resources/AndroidManifest.xml)
+        prev_version_name=$(xpath -q -e "string(/manifest/@android:versionName)" $1/resources/AndroidManifest.xml)
+    fi
+    echo "Previous version: $prev_version_name - $prev_version_code"
+    rm -rf $1
+    mkdir -p $1
+    DownloadAPK $1 $2
     jadx --deobf --show-bad-code -d $1 $1/$1.apk
     find $1 -type f -exec md5sum {} >> $1/$1.apk.jadx.txt \;
     sort -k 2 -o "$1/$1.apk.jadx.txt"{,}
