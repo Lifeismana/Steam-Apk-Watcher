@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    android:versionCode="5000834"
-    android:versionName="2.0.9"
+    android:versionCode="5001076"
+    android:versionName="2.0.10"
     android:installLocation="auto"
     android:compileSdkVersion="34"
     android:compileSdkVersionCodename="14"
@@ -103,8 +103,8 @@
         android:isGame="true"
         android:extractNativeLibs="true">
         <meta-data
-            android:name="SDL_ENV.SDL_ACCELEROMETER_AS_JOYSTICK"
-            android:value="0"/>
+            android:name="SDL_ENV.SDL_JOYSTICK_HIDAPI"
+            android:value="1"/>
         <meta-data
             android:name="SDL_ENV.SDL_TV_REMOTE_AS_JOYSTICK"
             android:value="0"/>

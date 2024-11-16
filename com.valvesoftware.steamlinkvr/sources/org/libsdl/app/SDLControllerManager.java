@@ -1,5 +1,6 @@
 package org.libsdl.app;
 
+import android.os.Build;
 import android.view.InputDevice;
 import android.view.MotionEvent;
 
@@ -11,7 +12,7 @@ public class SDLControllerManager {
 
     public static native int nativeAddHaptic(int i, String str);
 
-    public static native int nativeAddJoystick(int i, String str, String str2, int i2, int i3, int i4, int i5, int i6, int i7);
+    public static native int nativeAddJoystick(int i, String str, String str2, int i2, int i3, int i4, int i5, int i6, int i7, boolean z);
 
     public static native int nativeRemoveHaptic(int i);
 
@@ -32,7 +33,11 @@ public class SDLControllerManager {
             mJoystickHandler = new SDLJoystickHandler_API19();
         }
         if (mHapticHandler == null) {
-            mHapticHandler = new SDLHapticHandler_API26();
+            if (Build.VERSION.SDK_INT >= 31) {
+                mHapticHandler = new SDLHapticHandler_API31();
+            } else {
+                mHapticHandler = new SDLHapticHandler_API26();
+            }
         }
     }
 
@@ -50,6 +55,10 @@ public class SDLControllerManager {
 
     public static void hapticRun(int i, float f, int i2) {
         mHapticHandler.run(i, f, i2);
+    }
+
+    public static void hapticRumble(int i, float f, float f2, int i2) {
+        mHapticHandler.rumble(i, f, f2, i2);
     }
 
     public static void hapticStop(int i) {

@@ -66,7 +66,7 @@ public class SDLAudioManager {
         char c;
         char c2;
         int i8 = i3;
-        Log.v(TAG, "Opening " + (z ? "capture" : "playback") + ", requested " + i4 + " frames of " + i8 + " channel " + getAudioFormatString(i2) + " audio at " + i + " Hz");
+        Log.v(TAG, "Opening " + (z ? "recording" : "playback") + ", requested " + i4 + " frames of " + i8 + " channel " + getAudioFormatString(i2) + " audio at " + i + " Hz");
         int i9 = i2;
         if (i9 == 4) {
             if (Build.VERSION.SDK_INT < (z ? 23 : 21)) {
@@ -146,7 +146,7 @@ public class SDLAudioManager {
                     return null;
                 }
                 if (i5 != 0) {
-                    mAudioRecord.setPreferredDevice(getOutputAudioDeviceInfo(i5));
+                    mAudioRecord.setPreferredDevice(getPlaybackAudioDeviceInfo(i5));
                 }
                 mAudioRecord.startRecording();
             } else {
@@ -155,13 +155,13 @@ public class SDLAudioManager {
             iArr[0] = mAudioRecord.getSampleRate();
             iArr[1] = mAudioRecord.getAudioFormat();
             iArr[2] = mAudioRecord.getChannelCount();
-            str = "capture";
+            str = "recording";
             c = 3;
             c2 = 1;
         } else {
             iArr = iArr2;
             if (mAudioTrack == null) {
-                str = "capture";
+                str = "recording";
                 c = 3;
                 c2 = 1;
                 AudioTrack audioTrack = new AudioTrack(3, i, i7, i9, max * i10, 1);
@@ -177,7 +177,7 @@ public class SDLAudioManager {
                 }
                 mAudioTrack.play();
             } else {
-                str = "capture";
+                str = "recording";
                 c = 3;
                 c2 = 1;
             }
@@ -199,7 +199,7 @@ public class SDLAudioManager {
         return null;
     }
 
-    private static AudioDeviceInfo getOutputAudioDeviceInfo(int i) {
+    private static AudioDeviceInfo getPlaybackAudioDeviceInfo(int i) {
         for (AudioDeviceInfo audioDeviceInfo : ((AudioManager) mContext.getSystemService("audio")).getDevices(2)) {
             if (audioDeviceInfo.getId() == i) {
                 return audioDeviceInfo;
@@ -295,19 +295,19 @@ public class SDLAudioManager {
         }
     }
 
-    public static int[] captureOpen(int i, int i2, int i3, int i4, int i5) {
+    public static int[] recordingOpen(int i, int i2, int i3, int i4, int i5) {
         return open(true, i, i2, i3, i4, i5);
     }
 
-    public static int captureReadFloatBuffer(float[] fArr, boolean z) {
+    public static int recordingReadFloatBuffer(float[] fArr, boolean z) {
         return mAudioRecord.read(fArr, 0, fArr.length, !z ? 1 : 0);
     }
 
-    public static int captureReadShortBuffer(short[] sArr, boolean z) {
+    public static int recordingReadShortBuffer(short[] sArr, boolean z) {
         return mAudioRecord.read(sArr, 0, sArr.length, !z ? 1 : 0);
     }
 
-    public static int captureReadByteBuffer(byte[] bArr, boolean z) {
+    public static int recordingReadByteBuffer(byte[] bArr, boolean z) {
         return mAudioRecord.read(bArr, 0, bArr.length, !z ? 1 : 0);
     }
 
@@ -320,7 +320,7 @@ public class SDLAudioManager {
         }
     }
 
-    public static void captureClose() {
+    public static void recordingClose() {
         AudioRecord audioRecord = mAudioRecord;
         if (audioRecord != null) {
             audioRecord.stop();

@@ -232,7 +232,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
 
     public void loadLibraries() {
         for (String str : getLibraries()) {
-            SDL.loadLibrary(str);
+            SDL.loadLibrary(str, this);
         }
     }
 
@@ -792,7 +792,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         }
         boolean z3 = i3 != -1;
         boolean z4 = i4 != -1;
-        int i6 = SDL_SYSTEM_CURSOR_NO;
+        int i6 = SDL_SYSTEM_CURSOR_WINDOW_TOP;
         if (z4 || z3) {
             if (!z) {
                 if (z4) {
@@ -865,7 +865,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     }
 
     public static boolean isVRHeadset() {
-        return Build.MANUFACTURER.equals("Oculus") && Build.MODEL.startsWith("Quest");
+        return (Build.MANUFACTURER.equals("Oculus") && Build.MODEL.startsWith("Quest")) || Build.MANUFACTURER.equals("Pico");
     }
 
     public static double getDiagonal() {

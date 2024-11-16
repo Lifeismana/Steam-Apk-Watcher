@@ -1,5 +1,6 @@
 package org.libsdl.app;
 
+import android.os.Build;
 import android.view.InputDevice;
 import android.view.MotionEvent;
 import java.util.ArrayList;
@@ -100,8 +101,9 @@ class SDLJoystickHandler_API16 extends SDLJoystickHandler {
                         }
                     }
                 }
+                boolean z = Build.VERSION.SDK_INT >= 31 && device.getVibratorManager().getVibratorIds().length > 0;
                 this.mJoysticks.add(sDLJoystick);
-                SDLControllerManager.nativeAddJoystick(sDLJoystick.device_id, sDLJoystick.name, sDLJoystick.desc, getVendorId(device), getProductId(device), getButtonMask(device), sDLJoystick.axes.size(), getAxisMask(sDLJoystick.axes), sDLJoystick.hats.size() / 2);
+                SDLControllerManager.nativeAddJoystick(sDLJoystick.device_id, sDLJoystick.name, sDLJoystick.desc, getVendorId(device), getProductId(device), getButtonMask(device), sDLJoystick.axes.size(), getAxisMask(sDLJoystick.axes), sDLJoystick.hats.size() / 2, z);
             }
         }
         Iterator<SDLJoystick> it = this.mJoysticks.iterator();

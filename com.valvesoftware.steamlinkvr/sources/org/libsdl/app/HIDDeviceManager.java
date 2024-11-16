@@ -188,10 +188,10 @@ public class HIDDeviceManager {
     }
 
     private boolean isXboxOneController(UsbDevice usbDevice, UsbInterface usbInterface) {
-        int[] iArr = {1008, 1103, 1118, 1848, 3695, 3853, 4341, 5426, 8406, 9414, 11720, 11812, 13623};
+        int[] iArr = {1008, 1103, 1118, 1848, 2821, 3695, 3853, 4341, 5426, 8406, 9414, 11720, 11812, 13623};
         if (usbInterface.getId() == 0 && usbInterface.getInterfaceClass() == 255 && usbInterface.getInterfaceSubclass() == 71 && usbInterface.getInterfaceProtocol() == 208) {
             int vendorId = usbDevice.getVendorId();
-            for (int i = 0; i < 13; i++) {
+            for (int i = 0; i < 14; i++) {
                 if (vendorId == iArr[i]) {
                     return true;
                 }
@@ -424,7 +424,14 @@ public class HIDDeviceManager {
         if (device2 != null && !this.mUsbManager.hasPermission(device2)) {
             HIDDeviceOpenPending(i);
             try {
-                this.mUsbManager.requestPermission(device2, PendingIntent.getBroadcast(this.mContext, 0, new Intent(ACTION_USB_PERMISSION), Build.VERSION.SDK_INT >= 31 ? 33554432 : 0));
+                int i2 = Build.VERSION.SDK_INT >= 31 ? 33554432 : 0;
+                if (Build.VERSION.SDK_INT >= 33) {
+                    Intent intent = new Intent(ACTION_USB_PERMISSION);
+                    intent.setPackage(this.mContext.getPackageName());
+                    this.mUsbManager.requestPermission(device2, PendingIntent.getBroadcast(this.mContext, 0, intent, i2));
+                } else {
+                    this.mUsbManager.requestPermission(device2, PendingIntent.getBroadcast(this.mContext, 0, new Intent(ACTION_USB_PERMISSION), i2));
+                }
             } catch (Exception unused) {
                 Log.v(TAG, "Couldn't request permission for USB device " + device2);
                 HIDDeviceOpenResult(i, false);
