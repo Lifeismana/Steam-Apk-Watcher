@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    android:versionCode="5000549"
+    android:versionCode="5000610"
     android:versionName="2.0.1"
     android:installLocation="auto"
     android:compileSdkVersion="34"
@@ -90,7 +90,6 @@
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
         android:label="Steam Link"
         android:icon="@mipmap/ic_launcher"
-        android:name="org.qtproject.qt5.android.bindings.QtApplication"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:isGame="true"
@@ -148,69 +147,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.valvesoftware.steamlink.SteamShellActivity"
+            android:label="Steam Link"
+            android:name="com.valvesoftware.steamlink.SteamLink"
             android:exported="true"
             android:launchMode="singleTask"
             android:screenOrientation="landscape"
-            android:configChanges="fontScale|layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard|locale">
+            android:configChanges="fontScale|layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard|locale"
+            android:preferMinimalPostProcessing="true">
+            <layout
+                android:defaultWidth="1280px"
+                android:defaultHeight="800px"/>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
                 <category android:name="com.oculus.intent.category.2D"/>
             </intent-filter>
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="shell"/>
-            <meta-data
-                android:name="android.app.qt_sources_resource_id"
-                android:resource="@array/qt_sources"/>
-            <meta-data
-                android:name="android.app.repository"
-                android:value="default"/>
-            <meta-data
-                android:name="android.app.qt_libs_resource_id"
-                android:resource="@array/qt_libs"/>
-            <meta-data
-                android:name="android.app.bundled_libs_resource_id"
-                android:resource="@array/bundled_libs"/>
-            <meta-data
-                android:name="android.app.bundle_local_qt_libs"
-                android:value="1"/>
-            <meta-data
-                android:name="android.app.use_local_qt_libs"
-                android:value="1"/>
-            <meta-data
-                android:name="android.app.libs_prefix"
-                android:value="/data/local/tmp/qt/"/>
-            <meta-data
-                android:name="android.app.load_local_libs_resource_id"
-                android:resource="@array/load_local_libs"/>
-            <meta-data
-                android:name="android.app.load_local_jars"
-                android:value="jar/QtAndroid.jar:jar/QtAndroidExtras.jar:jar/QtAndroidBearer.jar"/>
-            <meta-data
-                android:name="android.app.static_init_classes"
-                android:value=""/>
-            <meta-data
-                android:name="android.app.background_running"
-                android:value="false"/>
-            <meta-data
-                android:name="android.app.auto_screen_scale_factor"
-                android:value="false"/>
-            <meta-data
-                android:name="android.app.extract_android_style"
-                android:value="none"/>
-            <layout
-                android:defaultWidth="1280px"
-                android:defaultHeight="800px"/>
-        </activity>
-        <activity
-            android:label="Steam Link"
-            android:name="com.valvesoftware.steamlink.SteamLink"
-            android:exported="true"
-            android:screenOrientation="landscape"
-            android:configChanges="fontScale|layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard|locale"
-            android:preferMinimalPostProcessing="true">
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>

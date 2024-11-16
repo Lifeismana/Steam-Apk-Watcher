@@ -9,8 +9,7 @@ import android.media.AudioTrack;
 import android.os.Build;
 import android.os.Process;
 import android.util.Log;
-import org.qtproject.qt5.android.EditContextView;
-import org.qtproject.qt5.android.QtNative;
+import com.getkeepsafe.relinker.elf.Elf;
 
 /* loaded from: classes.dex */
 public class SDLAudioManager {
@@ -93,13 +92,13 @@ public class SDLAudioManager {
                 case 2:
                     i7 = 12;
                     break;
-                case QtNative.IdRightHandle /* 3 */:
+                case 3:
                     i7 = 28;
                     break;
                 case 4:
                     i7 = 204;
                     break;
-                case 5:
+                case Elf.DynamicStructure.DT_STRTAB /* 5 */:
                     i7 = 220;
                     break;
                 case 6:
@@ -108,7 +107,7 @@ public class SDLAudioManager {
                 case 7:
                     i7 = 1276;
                     break;
-                case EditContextView.SALL_BUTTON /* 8 */:
+                case 8:
                     i7 = 6396;
                     break;
                 default:

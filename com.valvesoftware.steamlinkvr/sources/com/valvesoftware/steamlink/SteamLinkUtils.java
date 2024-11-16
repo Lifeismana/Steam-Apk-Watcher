@@ -7,7 +7,7 @@ import org.libsdl.app.SDL;
 
 /* loaded from: classes.dex */
 public class SteamLinkUtils {
-    public static final String TAG = "SteamLinkShell";
+    public static final String TAG = "SteamLink";
 
     public static boolean canDisplay4KVideo() {
         Activity activity = (Activity) SDL.getContext();

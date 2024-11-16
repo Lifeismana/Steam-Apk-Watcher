@@ -223,9 +223,9 @@ public class VirtualHere {
                 } catch (RemoteException unused) {
                 }
             }
-            this.mContext.unbindService(this.mConnection);
             this.mIsBound = false;
         }
+        this.mContext.unbindService(this.mConnection);
     }
 
     public void startSharing(int i) {

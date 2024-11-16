@@ -1,27 +1,43 @@
 package com.valvesoftware.steamlink;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.SurfaceTexture;
+import android.net.ConnectivityManager;
+import android.net.Network;
+import android.net.NetworkCapabilities;
+import android.net.NetworkRequest;
 import android.net.Uri;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.Log;
 import android.view.Display;
 import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
 import org.libsdl.app.SDL;
 import org.libsdl.app.SDLActivity;
 
 /* loaded from: classes.dex */
 public class SteamLink extends SDLActivity {
-    private static final String ARGS_KEY = "args";
     private static final String TAG = "SteamLink";
     VirtualHere mVirtualHere;
+    ShellWifiInfo mWifiInfo = null;
     float m_flOverlayScale;
+    View m_marginBottom;
+    View m_marginLeft;
+    View m_marginRight;
+    View m_marginTop;
     int m_nDisplayHeight;
     int m_nDisplayWidth;
     int m_nOverlayHeight;
@@ -49,14 +65,72 @@ public class SteamLink extends SDLActivity {
     public native void videoSurfaceDestroyed();
 
     /* JADX INFO: Access modifiers changed from: protected */
+    @Override // org.libsdl.app.SDLActivity
+    public String getMainFunction() {
+        return "main";
+    }
+
+    /* loaded from: classes.dex */
+    public class ShellWifiInfo extends ConnectivityManager.NetworkCallback {
+        private Context mContext;
+        public int m_nNetworkID = -1;
+        public String m_sSSID = "";
+        public int m_nFrequency = 0;
+        public int m_nStrength = 0;
+
+        public ShellWifiInfo(Context context) {
+            this.mContext = context;
+        }
+
+        public void Start() {
+            ((ConnectivityManager) this.mContext.getSystemService(ConnectivityManager.class)).registerNetworkCallback(new NetworkRequest.Builder().addTransportType(1).build(), this);
+            Update();
+        }
+
+        public void Stop() {
+            ((ConnectivityManager) this.mContext.getSystemService(ConnectivityManager.class)).unregisterNetworkCallback(this);
+        }
+
+        public void Update() {
+            WifiInfo connectionInfo = ((WifiManager) this.mContext.getSystemService("wifi")).getConnectionInfo();
+            int networkId = connectionInfo.getNetworkId();
+            this.m_nNetworkID = networkId;
+            if (networkId < 0) {
+                this.m_sSSID = "";
+            } else {
+                this.m_sSSID = connectionInfo.getSSID();
+            }
+            this.m_nFrequency = connectionInfo.getFrequency();
+            this.m_nStrength = WifiManager.calculateSignalLevel(connectionInfo.getRssi(), 3);
+        }
+
+        @Override // android.net.ConnectivityManager.NetworkCallback
+        public void onAvailable(Network network) {
+            Update();
+        }
+
+        @Override // android.net.ConnectivityManager.NetworkCallback
+        public void onCapabilitiesChanged(Network network, NetworkCapabilities networkCapabilities) {
+            Update();
+        }
+
+        @Override // android.net.ConnectivityManager.NetworkCallback
+        public void onLost(Network network) {
+            Update();
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: protected */
     @Override // org.libsdl.app.SDLActivity, android.app.Activity
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setWindowStyle(true);
-        if (mLayout != null && useVideoSurface()) {
+        if (useVideoSurface()) {
             createVideoSurface();
         }
         this.mVirtualHere = VirtualHere.acquire(this);
+        this.mWifiInfo = new ShellWifiInfo(this);
+        nativeSetenv("QT_PLUGIN_PATH", getApplicationInfo().nativeLibraryDir);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -68,16 +142,26 @@ public class SteamLink extends SDLActivity {
             VirtualHere.release(virtualHere);
             this.mVirtualHere = null;
         }
-        if (isFinishing()) {
-            return;
-        }
-        finish();
+    }
+
+    /* JADX INFO: Access modifiers changed from: protected */
+    @Override // org.libsdl.app.SDLActivity, android.app.Activity
+    public void onPause() {
+        super.onPause();
+        this.mWifiInfo.Stop();
+    }
+
+    @Override // org.libsdl.app.SDLActivity, android.app.Activity
+    public void onResume() {
+        super.onResume();
+        this.mWifiInfo.Start();
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // org.libsdl.app.SDLActivity, android.app.Activity
     public void onStart() {
         super.onStart();
+        thawRendering();
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -88,29 +172,76 @@ public class SteamLink extends SDLActivity {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // org.libsdl.app.SDLActivity, android.app.Activity
-    public void onResume() {
-        super.onResume();
-        thawRendering();
+    @Override // org.libsdl.app.SDLActivity
+    public String getMainSharedObject() {
+        return "libshell_" + Build.SUPPORTED_ABIS[0] + ".so";
+    }
+
+    @Override // org.libsdl.app.SDLActivity
+    protected String[] getLibraries() {
+        String str = Build.SUPPORTED_ABIS[0];
+        return new String[]{"SDL3", "SDL3_image", "SDL3_mixer", "SDL3_ttf", "c++_shared", "Qt6Core_" + str, "Qt6Gui_" + str, "Qt6Network_" + str, "Qt6Widgets_" + str, "Qt6Svg_" + str, "shell_" + str, "h264bitstream", "hevcbitstream", "steamwebrtc"};
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // org.libsdl.app.SDLActivity
     public String[] getArguments() {
         Uri data = getIntent().getData();
-        if (data != null) {
-            return new String[]{data.toString()};
+        return data != null ? new String[]{data.toString()} : new String[0];
+    }
+
+    /* JADX INFO: Access modifiers changed from: protected */
+    @Override // org.libsdl.app.SDLActivity
+    public boolean sendCommand(int i, Object obj) {
+        if (i == 2 && ((Integer) obj).intValue() == 0) {
+            return true;
         }
-        Bundle extras = getIntent().getExtras();
-        if (extras == null) {
-            return new String[0];
+        return super.sendCommand(i, obj);
+    }
+
+    public ShellWifiInfo getWifiInfo() {
+        return this.mWifiInfo;
+    }
+
+    public void openWifiSettings() {
+        startActivity(new Intent("android.settings.WIFI_SETTINGS"));
+    }
+
+    public void startVRLink(String str) {
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName(BuildConfig.APPLICATION_ID, "android.app.NativeActivity"));
+        intent.addFlags(268468224);
+        intent.putExtra("sOriginalPackage", BuildConfig.APPLICATION_ID);
+        intent.putExtra("sOriginalActivity", getClass().getName());
+        String[] split = str.split("~");
+        if (split.length > 3) {
+            intent.putExtra("sStartInfo", split[3]);
         }
-        String[] strArr = (String[]) extras.get(ARGS_KEY);
-        if (strArr != null) {
-            return strArr;
+        if (split.length < 1) {
+            intent.putExtra("sGenInfo", "sArgs Is Empty");
         }
-        ArrayList<String> stringArrayList = extras.getStringArrayList(ARGS_KEY);
-        return stringArrayList != null ? (String[]) stringArrayList.toArray(new String[stringArrayList.size()]) : new String[0];
+        intent.putExtra("sArgs", str);
+        if (getPackageManager().hasSystemFeature("oculus.software.vr.app.hybrid")) {
+            startActivity(intent);
+        } else {
+            Log.v("SteamLink", "Hybrid support not found. Launching activity using legacy method.");
+            Intent.makeRestartActivityTask(intent.getComponent()).addCategory("com.oculus.intent.category.VR");
+            ((AlarmManager) getSystemService("alarm")).set(3, SystemClock.elapsedRealtime(), PendingIntent.getActivity(this, 354678, intent, 33554432));
+        }
+        finishAndRemoveTask();
+    }
+
+    public boolean wasLaunchedFromVRLink() {
+        String stringExtra = getIntent().getStringExtra("returnFrom");
+        return stringExtra != null && stringExtra.equals("vrlink");
+    }
+
+    public String getMessageTitle() {
+        return getIntent().getStringExtra("displayTitle");
+    }
+
+    public String getMessageText() {
+        return getIntent().getStringExtra("displayMessage");
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -173,7 +304,25 @@ public class SteamLink extends SDLActivity {
         holder.setFixedSize(this.m_nOverlayWidth, this.m_nOverlayHeight);
         holder.addCallback(new OverlaySurfaceCallback());
         mLayout.addView(this.m_overlaySurface);
+        View view = new View(getApplication());
+        this.m_marginLeft = view;
+        view.setBackgroundColor(-16777216);
+        mLayout.addView(this.m_marginLeft);
+        View view2 = new View(getApplication());
+        this.m_marginRight = view2;
+        view2.setBackgroundColor(-16777216);
+        mLayout.addView(this.m_marginRight);
+        View view3 = new View(getApplication());
+        this.m_marginTop = view3;
+        view3.setBackgroundColor(-16777216);
+        mLayout.addView(this.m_marginTop);
+        View view4 = new View(getApplication());
+        this.m_marginBottom = view4;
+        view4.setBackgroundColor(-16777216);
+        mLayout.addView(this.m_marginBottom);
         updateViewRects(0, 0, this.m_nDisplayWidth, this.m_nDisplayHeight);
+        setVideoSurfaceVisible(false);
+        setOverlaySurfaceVisible(false);
         try {
             Class<?> cls = Class.forName("android.view.PointerIcon");
             Method method = cls.getMethod("getSystemIcon", Context.class, Integer.TYPE);
@@ -181,6 +330,56 @@ public class SteamLink extends SDLActivity {
             method2.invoke(this.m_videoSurface, method.invoke(null, SDL.getContext(), 0));
             method2.invoke(this.m_overlaySurface, method.invoke(null, SDL.getContext(), 0));
         } catch (Exception unused) {
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public void setVideoSurfaceVisible(boolean z) {
+        int i = z ? 0 : 8;
+        this.m_videoSurface.setVisibility(i);
+        this.m_marginLeft.setVisibility(i);
+        this.m_marginRight.setVisibility(i);
+        this.m_marginTop.setVisibility(i);
+        this.m_marginBottom.setVisibility(i);
+    }
+
+    public void showVideoSurface() {
+        Runnable runnable = new Runnable() { // from class: com.valvesoftware.steamlink.SteamLink.1
+            @Override // java.lang.Runnable
+            public void run() {
+                SteamLink.this.setVideoSurfaceVisible(true);
+                synchronized (this) {
+                    notify();
+                }
+            }
+        };
+        try {
+            synchronized (runnable) {
+                runOnUiThread(runnable);
+                runnable.wait();
+            }
+        } catch (InterruptedException unused) {
+            Log.e("SteamLink", "Semaphore interrupted while we waited!");
+        }
+    }
+
+    public void hideVideoSurface() {
+        Runnable runnable = new Runnable() { // from class: com.valvesoftware.steamlink.SteamLink.2
+            @Override // java.lang.Runnable
+            public void run() {
+                SteamLink.this.setVideoSurfaceVisible(false);
+                synchronized (this) {
+                    notify();
+                }
+            }
+        };
+        try {
+            synchronized (runnable) {
+                runOnUiThread(runnable);
+                runnable.wait();
+            }
+        } catch (InterruptedException unused) {
+            Log.e("SteamLink", "Semaphore interrupted while we waited!");
         }
     }
 
@@ -203,15 +402,47 @@ public class SteamLink extends SDLActivity {
         if (i6 < 0) {
             i6 = 0;
         }
+        if (i > 0) {
+            RelativeLayout.LayoutParams layoutParams2 = new RelativeLayout.LayoutParams(i, this.m_nDisplayHeight);
+            layoutParams2.setMargins(0, 0, this.m_nDisplayWidth - i, 0);
+            this.m_marginLeft.setLayoutParams(layoutParams2);
+            this.m_marginLeft.setVisibility(0);
+        } else {
+            this.m_marginLeft.setVisibility(8);
+        }
+        if (i5 > 0) {
+            RelativeLayout.LayoutParams layoutParams3 = new RelativeLayout.LayoutParams(i5, this.m_nDisplayHeight);
+            layoutParams3.setMargins(this.m_nDisplayWidth - i5, 0, 0, 0);
+            this.m_marginRight.setLayoutParams(layoutParams3);
+            this.m_marginRight.setVisibility(0);
+        } else {
+            this.m_marginRight.setVisibility(8);
+        }
+        if (i2 > 0) {
+            RelativeLayout.LayoutParams layoutParams4 = new RelativeLayout.LayoutParams(this.m_nDisplayWidth, i2);
+            layoutParams4.setMargins(0, 0, 0, this.m_nDisplayHeight - i2);
+            this.m_marginTop.setLayoutParams(layoutParams4);
+            this.m_marginTop.setVisibility(0);
+        } else {
+            this.m_marginTop.setVisibility(8);
+        }
+        if (i6 > 0) {
+            RelativeLayout.LayoutParams layoutParams5 = new RelativeLayout.LayoutParams(this.m_nDisplayWidth, i6);
+            layoutParams5.setMargins(0, this.m_nDisplayHeight - i6, 0, 0);
+            this.m_marginBottom.setLayoutParams(layoutParams5);
+            this.m_marginBottom.setVisibility(0);
+        } else {
+            this.m_marginBottom.setVisibility(8);
+        }
         int i7 = (this.m_nDisplayWidth - i) - i5;
         int i8 = (this.m_nDisplayHeight - i2) - i6;
-        RelativeLayout.LayoutParams layoutParams2 = new RelativeLayout.LayoutParams(i7, i8);
-        layoutParams2.setMargins(i, i2 + (i8 - ((int) (this.m_nOverlayHeight * (i7 / this.m_nOverlayWidth)))), i5, i6);
-        this.m_overlaySurface.setLayoutParams(layoutParams2);
+        RelativeLayout.LayoutParams layoutParams6 = new RelativeLayout.LayoutParams(i7, i8);
+        layoutParams6.setMargins(i, i2 + (i8 - ((int) (this.m_nOverlayHeight * (i7 / this.m_nOverlayWidth)))), i5, i6);
+        this.m_overlaySurface.setLayoutParams(layoutParams6);
     }
 
     public void setVideoDisplayRect(final int i, final int i2, final int i3, final int i4) {
-        Runnable runnable = new Runnable() { // from class: com.valvesoftware.steamlink.SteamLink.1
+        Runnable runnable = new Runnable() { // from class: com.valvesoftware.steamlink.SteamLink.3
             @Override // java.lang.Runnable
             public void run() {
                 SteamLink.this.updateViewRects(i, i2, i3, i4);
@@ -226,7 +457,52 @@ public class SteamLink extends SDLActivity {
                 runnable.wait();
             }
         } catch (InterruptedException unused) {
-            Log.e(TAG, "Semaphore interrupted while we waited!");
+            Log.e("SteamLink", "Semaphore interrupted while we waited!");
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public void setOverlaySurfaceVisible(boolean z) {
+        this.m_overlaySurface.setVisibility(z ? 0 : 8);
+    }
+
+    public void showOverlaySurface() {
+        Runnable runnable = new Runnable() { // from class: com.valvesoftware.steamlink.SteamLink.4
+            @Override // java.lang.Runnable
+            public void run() {
+                SteamLink.this.setOverlaySurfaceVisible(true);
+                synchronized (this) {
+                    notify();
+                }
+            }
+        };
+        try {
+            synchronized (runnable) {
+                runOnUiThread(runnable);
+                runnable.wait();
+            }
+        } catch (InterruptedException unused) {
+            Log.e("SteamLink", "Semaphore interrupted while we waited!");
+        }
+    }
+
+    public void hideOverlaySurface() {
+        Runnable runnable = new Runnable() { // from class: com.valvesoftware.steamlink.SteamLink.5
+            @Override // java.lang.Runnable
+            public void run() {
+                SteamLink.this.setOverlaySurfaceVisible(false);
+                synchronized (this) {
+                    notify();
+                }
+            }
+        };
+        try {
+            synchronized (runnable) {
+                runOnUiThread(runnable);
+                runnable.wait();
+            }
+        } catch (InterruptedException unused) {
+            Log.e("SteamLink", "Semaphore interrupted while we waited!");
         }
     }
 
@@ -245,9 +521,5 @@ public class SteamLink extends SDLActivity {
             surfaceTexture.release();
             this.m_videoTexture = null;
         }
-    }
-
-    public void streamingComplete(int i) {
-        SteamShellActivity.onStreamingResult(i);
     }
 }

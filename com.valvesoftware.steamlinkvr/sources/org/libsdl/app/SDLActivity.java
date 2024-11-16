@@ -34,16 +34,16 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.getkeepsafe.relinker.elf.Elf;
 import java.util.Hashtable;
 import java.util.Locale;
-import org.qtproject.qt5.android.QtNative;
 
 /* loaded from: classes.dex */
 public class SDLActivity extends Activity implements View.OnSystemUiVisibilityChangeListener {
-    static final int COMMAND_CHANGE_TITLE = 1;
-    static final int COMMAND_CHANGE_WINDOW_STYLE = 2;
-    static final int COMMAND_SET_KEEP_SCREEN_ON = 5;
-    static final int COMMAND_TEXTEDIT_HIDE = 3;
+    protected static final int COMMAND_CHANGE_TITLE = 1;
+    protected static final int COMMAND_CHANGE_WINDOW_STYLE = 2;
+    protected static final int COMMAND_SET_KEEP_SCREEN_ON = 5;
+    protected static final int COMMAND_TEXTEDIT_HIDE = 3;
     protected static final int COMMAND_USER = 32768;
     private static final int SDL_MAJOR_VERSION = 3;
     private static final int SDL_MICRO_VERSION = 0;
@@ -360,8 +360,9 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         handleNativeState();
     }
 
+    /* JADX INFO: Access modifiers changed from: protected */
     @Override // android.app.Activity
-    protected void onPause() {
+    public void onPause() {
         Log.v(TAG, "onPause()");
         super.onPause();
         HIDDeviceManager hIDDeviceManager = mHIDDeviceManager;
@@ -510,7 +511,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         if (mSDLThread != null) {
             nativeSendQuit();
             try {
-                mSDLThread.join(500L);
+                mSDLThread.join(1000L);
             } catch (Exception e) {
                 Log.v(TAG, "Problem stopping SDLThread: " + e);
             }
@@ -663,7 +664,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         }
     }
 
-    boolean sendCommand(int i, Object obj) {
+    /* JADX INFO: Access modifiers changed from: protected */
+    public boolean sendCommand(int i, Object obj) {
         Message obtainMessage = this.commandHandler.obtainMessage();
         obtainMessage.arg1 = i;
         obtainMessage.obj = obj;
@@ -726,7 +728,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         } else if (str.contains("LandscapeLeft")) {
             i3 = 0;
         } else {
-            i3 = str.contains("LandscapeRight") ? 8 : -1;
+            i3 = str.contains("LandscapeRight") ? SDL_SYSTEM_CURSOR_SIZENS : -1;
         }
         boolean z2 = str.contains("Portrait ") || str.endsWith("Portrait");
         if (z2 && str.contains("PortraitUpsideDown")) {
@@ -851,7 +853,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             }
             for (String str : bundle.keySet()) {
                 if (str.startsWith("SDL_ENV.")) {
-                    nativeSetenv(str.substring(8), bundle.get(str).toString());
+                    nativeSetenv(str.substring(SDL_SYSTEM_CURSOR_SIZENS), bundle.get(str).toString());
                 }
             }
             return true;
@@ -1162,7 +1164,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     public static boolean setSystemCursor(int i) {
         int i2 = 1004;
         switch (i) {
-            case 0:
+            case Elf.DynamicStructure.DT_NULL /* 0 */:
                 i2 = 1000;
                 break;
             case 1:
@@ -1171,10 +1173,10 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             case 2:
             case 4:
                 break;
-            case QtNative.IdRightHandle /* 3 */:
+            case 3:
                 i2 = 1007;
                 break;
-            case 5:
+            case Elf.DynamicStructure.DT_STRTAB /* 5 */:
                 i2 = 1017;
                 break;
             case SDL_SYSTEM_CURSOR_SIZENESW /* 6 */:
@@ -1183,7 +1185,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             case SDL_SYSTEM_CURSOR_SIZEWE /* 7 */:
                 i2 = 1014;
                 break;
-            case 8:
+            case SDL_SYSTEM_CURSOR_SIZENS /* 8 */:
                 i2 = 1015;
                 break;
             case SDL_SYSTEM_CURSOR_SIZEALL /* 9 */:

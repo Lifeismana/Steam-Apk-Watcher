@@ -135,7 +135,7 @@ public class HIDDeviceBLESteamController extends BluetoothGattCallback implement
             BluetoothGattCharacteristic characteristic;
             BluetoothGattDescriptor descriptor;
             byte[] bArr;
-            int i = C00114.f1xa1f10085[this.mOp.ordinal()];
+            int i = C00134.f1xa1f10085[this.mOp.ordinal()];
             if (i == 1) {
                 if (!this.mGatt.readCharacteristic(getCharacteristic(this.mUuid))) {
                     Log.e(HIDDeviceBLESteamController.TAG, "Unable to read characteristic " + this.mUuid.toString());
@@ -209,7 +209,7 @@ public class HIDDeviceBLESteamController extends BluetoothGattCallback implement
     /* JADX INFO: Access modifiers changed from: package-private */
     /* renamed from: org.libsdl.app.HIDDeviceBLESteamController$4 */
     /* loaded from: classes.dex */
-    public static /* synthetic */ class C00114 {
+    public static /* synthetic */ class C00134 {
 
         /* renamed from: $SwitchMap$org$libsdl$app$HIDDeviceBLESteamController$GattOperation$Operation */
         static final /* synthetic */ int[] f1xa1f10085;
