@@ -65,6 +65,14 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     private static final int SDL_SYSTEM_CURSOR_SIZEWE = 7;
     private static final int SDL_SYSTEM_CURSOR_WAIT = 2;
     private static final int SDL_SYSTEM_CURSOR_WAITARROW = 4;
+    private static final int SDL_SYSTEM_CURSOR_WINDOW_BOTTOM = 17;
+    private static final int SDL_SYSTEM_CURSOR_WINDOW_BOTTOMLEFT = 18;
+    private static final int SDL_SYSTEM_CURSOR_WINDOW_BOTTOMRIGHT = 16;
+    private static final int SDL_SYSTEM_CURSOR_WINDOW_LEFT = 19;
+    private static final int SDL_SYSTEM_CURSOR_WINDOW_RIGHT = 15;
+    private static final int SDL_SYSTEM_CURSOR_WINDOW_TOP = 13;
+    private static final int SDL_SYSTEM_CURSOR_WINDOW_TOPLEFT = 12;
+    private static final int SDL_SYSTEM_CURSOR_WINDOW_TOPRIGHT = 14;
     private static final String TAG = "SDL";
     protected static SDLClipboardHandler mClipboardHandler;
     protected static Locale mCurrentLocale;
@@ -83,7 +91,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     protected static boolean mScreenKeyboardShown;
     protected static SDLActivity mSingleton;
     protected static SDLSurface mSurface;
-    protected static DummyEdit mTextEdit;
+    protected static SDLDummyEdit mTextEdit;
     Handler commandHandler = new SDLCommandHandler();
     protected final int[] messageboxSelection = new int[1];
     private final Runnable rehideSystemUi = new Runnable() { // from class: org.libsdl.app.SDLActivity.7
@@ -196,6 +204,10 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             mMotionListener = new SDLGenericMotionListener_API26();
         }
         return mMotionListener;
+    }
+
+    protected Runnable createSDLMainRunnable() {
+        return new SDLMain();
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -326,7 +338,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         } catch (Exception unused) {
         }
         int i = getContext().getResources().getConfiguration().uiMode & 48;
-        if (i == 16) {
+        if (i == SDL_SYSTEM_CURSOR_WINDOW_BOTTOMRIGHT) {
             onNativeDarkModeChanged(false);
         } else if (i == 32) {
             onNativeDarkModeChanged(true);
@@ -484,7 +496,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             onNativeLocaleChanged();
         }
         int i = configuration.uiMode & 48;
-        if (i == 16) {
+        if (i == SDL_SYSTEM_CURSOR_WINDOW_BOTTOMRIGHT) {
             onNativeDarkModeChanged(false);
         } else {
             if (i != 32) {
@@ -580,7 +592,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         if (mNextNativeState == NativeState.RESUMED && mSurface.mIsSurfaceReady) {
             if ((mHasFocus || mHasMultiWindow) && mIsResumedCalled) {
                 if (mSDLThread == null) {
-                    mSDLThread = new Thread(new SDLMain(), "SDLThread");
+                    mSDLThread = new Thread(mSingleton.createSDLMainRunnable(), "SDLThread");
                     mSurface.enableSensor(1, true);
                     mSDLThread.start();
                 } else {
@@ -874,37 +886,37 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         static final int HEIGHT_PADDING = 15;
 
         /* renamed from: h */
-        public int f2h;
+        public int f1h;
 
         /* renamed from: w */
-        public int f3w;
+        public int f2w;
 
         /* renamed from: x */
-        public int f4x;
+        public int f3x;
 
         /* renamed from: y */
-        public int f5y;
+        public int f4y;
 
         public ShowTextInputTask(int i, int i2, int i3, int i4) {
-            this.f4x = i;
-            this.f5y = i2;
-            this.f3w = i3;
-            this.f2h = i4;
+            this.f3x = i;
+            this.f4y = i2;
+            this.f2w = i3;
+            this.f1h = i4;
             if (i3 <= 0) {
-                this.f3w = 1;
+                this.f2w = 1;
             }
             if (i4 + HEIGHT_PADDING <= 0) {
-                this.f2h = -14;
+                this.f1h = -14;
             }
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(this.f3w, this.f2h + HEIGHT_PADDING);
-            layoutParams.leftMargin = this.f4x;
-            layoutParams.topMargin = this.f5y;
+            RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(this.f2w, this.f1h + HEIGHT_PADDING);
+            layoutParams.leftMargin = this.f3x;
+            layoutParams.topMargin = this.f4y;
             if (SDLActivity.mTextEdit == null) {
-                SDLActivity.mTextEdit = new DummyEdit(SDL.getContext());
+                SDLActivity.mTextEdit = new SDLDummyEdit(SDL.getContext());
                 SDLActivity.mLayout.addView(SDLActivity.mTextEdit, layoutParams);
             } else {
                 SDLActivity.mTextEdit.setLayoutParams(layoutParams);
@@ -1044,7 +1056,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             }
         });
         TextView textView = new TextView(this);
-        textView.setGravity(17);
+        textView.setGravity(SDL_SYSTEM_CURSOR_WINDOW_BOTTOM);
         textView.setText(bundle.getString("message"));
         if (i2 != 0) {
             textView.setTextColor(i2);
@@ -1055,7 +1067,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         final SparseArray sparseArray = new SparseArray();
         LinearLayout linearLayout = new LinearLayout(this);
         linearLayout.setOrientation(0);
-        linearLayout.setGravity(17);
+        linearLayout.setGravity(SDL_SYSTEM_CURSOR_WINDOW_BOTTOM);
         for (int i6 = 0; i6 < stringArray.length; i6++) {
             Button button = new Button(this);
             final int i7 = intArray3[i6];
@@ -1179,15 +1191,23 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
                 i2 = 1007;
                 break;
             case Elf.DynamicStructure.DT_STRTAB /* 5 */:
+            case SDL_SYSTEM_CURSOR_WINDOW_TOPLEFT /* 12 */:
+            case SDL_SYSTEM_CURSOR_WINDOW_BOTTOMRIGHT /* 16 */:
                 i2 = 1017;
                 break;
             case SDL_SYSTEM_CURSOR_SIZENESW /* 6 */:
+            case SDL_SYSTEM_CURSOR_WINDOW_TOPRIGHT /* 14 */:
+            case SDL_SYSTEM_CURSOR_WINDOW_BOTTOMLEFT /* 18 */:
                 i2 = 1016;
                 break;
             case SDL_SYSTEM_CURSOR_SIZEWE /* 7 */:
+            case SDL_SYSTEM_CURSOR_WINDOW_RIGHT /* 15 */:
+            case SDL_SYSTEM_CURSOR_WINDOW_LEFT /* 19 */:
                 i2 = 1014;
                 break;
             case SDL_SYSTEM_CURSOR_SIZENS /* 8 */:
+            case SDL_SYSTEM_CURSOR_WINDOW_TOP /* 13 */:
+            case SDL_SYSTEM_CURSOR_WINDOW_BOTTOM /* 17 */:
                 i2 = 1015;
                 break;
             case SDL_SYSTEM_CURSOR_SIZEALL /* 9 */:
@@ -1248,11 +1268,11 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         }
         try {
             sDLActivity.runOnUiThread(new Runnable(str, i, i2, i3, i4) { // from class: org.libsdl.app.SDLActivity.1OneShotTask
-                int mDuration;
-                int mGravity;
-                String mMessage;
-                int mXOffset;
-                int mYOffset;
+                private final int mDuration;
+                private final int mGravity;
+                private final String mMessage;
+                private final int mXOffset;
+                private final int mYOffset;
 
                 {
                     this.mMessage = str;

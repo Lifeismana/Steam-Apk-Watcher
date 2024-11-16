@@ -251,6 +251,10 @@ public class HIDDeviceManager {
     private void initializeBluetooth() {
         BluetoothAdapter adapter;
         Log.d(TAG, "Initializing Bluetooth");
+        if (Build.VERSION.SDK_INT >= 31 && this.mContext.getPackageManager().checkPermission("android.permission.BLUETOOTH_CONNECT", this.mContext.getPackageName()) != 0) {
+            Log.d(TAG, "Couldn't initialize Bluetooth, missing android.permission.BLUETOOTH_CONNECT");
+            return;
+        }
         if (Build.VERSION.SDK_INT <= 30 && this.mContext.getPackageManager().checkPermission("android.permission.BLUETOOTH", this.mContext.getPackageName()) != 0) {
             Log.d(TAG, "Couldn't initialize Bluetooth, missing android.permission.BLUETOOTH");
             return;

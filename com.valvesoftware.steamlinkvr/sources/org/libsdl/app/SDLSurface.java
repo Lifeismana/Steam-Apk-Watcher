@@ -158,6 +158,22 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
         return SDLActivity.handleKeyEvent(view, i, keyEvent, null);
     }
 
+    private float getNormalizedX(float f) {
+        float f2 = this.mWidth;
+        if (f2 <= 1.0f) {
+            return 0.5f;
+        }
+        return f / (f2 - 1.0f);
+    }
+
+    private float getNormalizedY(float f) {
+        float f2 = this.mHeight;
+        if (f2 <= 1.0f) {
+            return 0.5f;
+        }
+        return f / (f2 - 1.0f);
+    }
+
     @Override // android.view.View.OnTouchListener
     public boolean onTouch(View view, MotionEvent motionEvent) {
         int i;
@@ -187,18 +203,18 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
                 if (actionMasked == 2) {
                     for (int i3 = 0; i3 < pointerCount; i3++) {
                         int pointerId = motionEvent.getPointerId(i3);
-                        float x = motionEvent.getX(i3) / this.mWidth;
-                        float y = motionEvent.getY(i3) / this.mHeight;
+                        float normalizedX = getNormalizedX(motionEvent.getX(i3));
+                        float normalizedY = getNormalizedY(motionEvent.getY(i3));
                         float pressure = motionEvent.getPressure(i3);
-                        SDLActivity.onNativeTouch(deviceId, pointerId, actionMasked, x, y, pressure > 1.0f ? 1.0f : pressure);
+                        SDLActivity.onNativeTouch(deviceId, pointerId, actionMasked, normalizedX, normalizedY, pressure > 1.0f ? 1.0f : pressure);
                     }
                 } else if (actionMasked == 3) {
                     for (int i4 = 0; i4 < pointerCount; i4++) {
                         int pointerId2 = motionEvent.getPointerId(i4);
-                        float x2 = motionEvent.getX(i4) / this.mWidth;
-                        float y2 = motionEvent.getY(i4) / this.mHeight;
+                        float normalizedX2 = getNormalizedX(motionEvent.getX(i4));
+                        float normalizedY2 = getNormalizedY(motionEvent.getY(i4));
                         float pressure2 = motionEvent.getPressure(i4);
-                        SDLActivity.onNativeTouch(deviceId, pointerId2, 1, x2, y2, pressure2 > 1.0f ? 1.0f : pressure2);
+                        SDLActivity.onNativeTouch(deviceId, pointerId2, 1, normalizedX2, normalizedY2, pressure2 > 1.0f ? 1.0f : pressure2);
                     }
                 } else if (actionMasked == 5 || actionMasked == 6) {
                     i2 = -1;
@@ -208,10 +224,10 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
                 i2 = motionEvent.getActionIndex();
             }
             int pointerId3 = motionEvent.getPointerId(i2);
-            float x3 = motionEvent.getX(i2) / this.mWidth;
-            float y3 = motionEvent.getY(i2) / this.mHeight;
+            float normalizedX3 = getNormalizedX(motionEvent.getX(i2));
+            float normalizedY3 = getNormalizedY(motionEvent.getY(i2));
             float pressure3 = motionEvent.getPressure(i2);
-            SDLActivity.onNativeTouch(deviceId, pointerId3, actionMasked, x3, y3, pressure3 > 1.0f ? 1.0f : pressure3);
+            SDLActivity.onNativeTouch(deviceId, pointerId3, actionMasked, normalizedX3, normalizedY3, pressure3 > 1.0f ? 1.0f : pressure3);
         }
         return true;
     }
