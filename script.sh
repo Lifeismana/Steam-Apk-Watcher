@@ -8,6 +8,19 @@ APPS="com.valvesoftware.android.steam.community com.valvesoftware.android.steam.
 
 Commit_message="Daily update"
 
+VerifyRequirements()
+{
+    echo "Verifying requirements"
+    command -v identify >/dev/null 2>&1 || { echo >&2 "identify missing.  Aborting."; exit 1; }
+    command -v apkeep >/dev/null 2>&1 || { echo >&2 "apkeep missing.  Aborting."; exit 1; }
+    command -v unzip >/dev/null 2>&1 || { echo >&2 "unzip missing.  Aborting."; exit 1; }
+    command -v jadx >/dev/null 2>&1 || { echo >&2 "jadx missing.  Aborting."; exit 1; }
+    command -v xpath >/dev/null 2>&1 || { echo >&2 "xpath missing.  Aborting."; exit 1; }
+    command -v hbc-decompiler >/dev/null 2>&1 || { echo >&2 "hbc-decompiler missing.  Aborting."; exit 1; }
+    command -v hbc-file-parser >/dev/null 2>&1 || { echo >&2 "hbc-file-parser missing.  Aborting."; exit 1; }
+    command -v git >/dev/null 2>&1 || { echo >&2 "git missing.  Aborting."; exit 1; }
+}
+
 MergeDPIPNG()
 {
     echo "Merging DPI PNG"
@@ -61,7 +74,7 @@ DownloadAPK()
         if [[ -f $1/$1.xapk ]]; then
             unzip -o $1/$1.xapk -d $1
         fi
-    elif [[ "$SOURCE" == "manual"]]; then
+    elif [[ "$SOURCE" == "manual" ]]; then
         cp $2 $1/$1.apk
     else
         echo "Unknown source"
@@ -134,6 +147,8 @@ ProcessApp()
         echo "Skipping staging changes: apk version didn't change"
     fi
 }
+
+VerifyRequirements
 
 if [[ "$SOURCE" == "manual" ]]; then
     for APP in "./.storage/*";
