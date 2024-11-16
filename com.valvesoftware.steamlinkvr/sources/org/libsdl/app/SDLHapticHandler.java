@@ -39,6 +39,8 @@ public class SDLHapticHandler {
 
     public void pollHapticDevices() {
         boolean z;
+        InputDevice device;
+        Vibrator vibrator;
         int[] deviceIds = InputDevice.getDeviceIds();
         int length = deviceIds.length;
         while (true) {
@@ -46,17 +48,13 @@ public class SDLHapticHandler {
             if (length <= -1) {
                 break;
             }
-            if (getHaptic(deviceIds[length]) == null) {
-                InputDevice device = InputDevice.getDevice(deviceIds[length]);
-                Vibrator vibrator = device.getVibrator();
-                if (vibrator.hasVibrator()) {
-                    SDLHaptic sDLHaptic = new SDLHaptic();
-                    sDLHaptic.device_id = deviceIds[length];
-                    sDLHaptic.name = device.getName();
-                    sDLHaptic.vib = vibrator;
-                    this.mHaptics.add(sDLHaptic);
-                    SDLControllerManager.nativeAddHaptic(sDLHaptic.device_id, sDLHaptic.name);
-                }
+            if (getHaptic(deviceIds[length]) == null && (vibrator = (device = InputDevice.getDevice(deviceIds[length])).getVibrator()) != null && vibrator.hasVibrator()) {
+                SDLHaptic sDLHaptic = new SDLHaptic();
+                sDLHaptic.device_id = deviceIds[length];
+                sDLHaptic.name = device.getName();
+                sDLHaptic.vib = vibrator;
+                this.mHaptics.add(sDLHaptic);
+                SDLControllerManager.nativeAddHaptic(sDLHaptic.device_id, sDLHaptic.name);
             }
         }
         Vibrator vibrator2 = (Vibrator) SDL.getContext().getSystemService("vibrator");

@@ -46,8 +46,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     protected static final int COMMAND_TEXTEDIT_HIDE = 3;
     protected static final int COMMAND_USER = 32768;
     private static final int SDL_MAJOR_VERSION = 3;
-    private static final int SDL_MICRO_VERSION = 0;
-    private static final int SDL_MINOR_VERSION = 0;
+    private static final int SDL_MICRO_VERSION = 1;
+    private static final int SDL_MINOR_VERSION = 1;
     protected static final int SDL_ORIENTATION_LANDSCAPE = 1;
     protected static final int SDL_ORIENTATION_LANDSCAPE_FLIPPED = 2;
     protected static final int SDL_ORIENTATION_PORTRAIT = 3;
@@ -287,7 +287,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             message = e3.getMessage();
         }
         if (!mBrokenLibraries) {
-            String str = String.valueOf(3) + "." + String.valueOf(0) + "." + String.valueOf(0);
+            String str = String.valueOf(3) + "." + String.valueOf(1) + "." + String.valueOf(1);
             String nativeGetVersion = nativeGetVersion();
             if (!nativeGetVersion.equals(str)) {
                 mBrokenLibraries = true;
@@ -473,10 +473,10 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         handleNativeState();
     }
 
-    @Override // android.app.Activity, android.content.ComponentCallbacks
-    public void onLowMemory() {
-        Log.v(TAG, "onLowMemory()");
-        super.onLowMemory();
+    @Override // android.app.Activity, android.content.ComponentCallbacks2
+    public void onTrimMemory(int i) {
+        Log.v(TAG, "onTrimMemory()");
+        super.onTrimMemory(i);
         if (mBrokenLibraries) {
             return;
         }
