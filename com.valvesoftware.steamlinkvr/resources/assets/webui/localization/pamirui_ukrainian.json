@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "Головний ПК заблокований",
   "StreamPreflight_HostPCLockedDescription": "Трансляція почнеться, коли головний ПК буде розблоковано.",
   "StreamPreflight_HostPCOnWireless": "Головний ПК підключений до маршрутизатора через бездротову мережу.",
-  "StreamPreflight_HostPCOnWirelessDescription": "Головний ПК підключений до маршрутизатора через бездротову мережу. SteamLinkVR не підтримує цей спосіб підключення.",
+  "StreamPreflight_HostPCOnWirelessDescription": "Головний ПК підключений до маршрутизатора через бездротову мережу. Steam Link не підтримує цей спосіб підключення.",
   "StreamPreflight_WifiBandwidthLow": "Нестабільне бездротове підключення.",
   "StreamPreflight_WifiBandwidthLowDescription": "Для кращої якості трансляції потрібне надійніше підключення до мережі Wi-Fi.",
   "StreamCheck_WifiNotConnected": "Немає підключення до Wi-Fi",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "ПК із запущеним Steam Link надсилає дані, але шолом не може їх обробити. Спробуйте перезапустити Steam Link.",
   "StreamSideBand_WrongId": "Невідповідність сеансів",
   "StreamSideBand_WrongIdDescription": "Сеанс шолому не відповідає сеансу SteamVR на головному ПК. Перезапустіть застосунок.",
+  "StreamSideBand_AlreadyActiveLocal": "Активований інший шолом",
+  "StreamSideBand_AlreadyActiveLocalDescription": "На головному ПК вже активований інший шолом — його слід відключити й перезапустити SteamVR.",
   "StreamSideBand_AlreadyActive": "Головний ПК зайнятий",
   "StreamSideBand_AlreadyActiveDescription": "До головного ПК підключено інший шолом — його слід відключити.",
   "StreamSideBand_UnknownIssue": "Невідома помилка",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "SteamVR на вашому ПК було перезапущено. Будь ласка, підключіться знову.",
   "Abort_HostQuitTitle": "Головний ПК вийшов",
   "Abort_HostQuitDescription": "Роботу SteamVR було завершено на вашому ПК. Перезапустіть Steam Link для повторного підключення.",
-  "ErrorCode": "Помилка: %0$s"
+  "ErrorCode": "Помилка: %0$s",
+  "StreamPreflight_IgnoreForNetwork": "Більше не попереджувати про це в цій мережі"
 }

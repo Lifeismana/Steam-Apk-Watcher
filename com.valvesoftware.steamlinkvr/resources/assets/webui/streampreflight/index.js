@@ -1,3 +1,5 @@
+let checkboxStates = {};
+
 const OnPreflightResultReceived = (sReceivedData) => {
     const json = JSON.parse(sReceivedData);
 
@@ -41,11 +43,32 @@ const OnPreflightResultReceived = (sReceivedData) => {
         preflightResultElement.querySelector('.result-type').src = stateText;
         preflightResultElement.querySelector('.result-title-message').innerText = Localize(preflightCheck.title);
         preflightResultElement.querySelector('.result-description-message').innerText = Localize(preflightCheck.description);
+
+        if(preflightCheck?.ignorePath) {
+            preflightResultElement.querySelector('.preflight-ignore').hidden = false;
+
+            const checkbox = preflightResultElement.querySelector('.preflight-ignore-checkbox');
+            checkbox.name = preflightCheck.ignorePath;
+            checkbox.checked = checkboxStates[preflightCheck.ignorePath];
+            if(checkbox.checked) {
+                checkbox.setAttribute('checked', 'checked');
+            }
+
+            checkbox.addEventListener('change', (e) => {
+                checkboxStates[preflightCheck.ignorePath] = !!e.currentTarget.checked;
+            });
+
+            preflightResultElement.querySelector('.preflight-ignore-text').innerText = Localize("#StreamPreflight_IgnoreForNetwork");
+        } else {
+            preflightResultElement.querySelector('.preflight-ignore').classList += 'hidden';
+        }
+
         preflightResultsElement.appendChild(preflightResultElement);
     }
 }
 
 const OnContinueClicked = () => {
+    UpdateAppPaths(checkboxStates);
     SendIPCMessage("continue", {});
 }
 

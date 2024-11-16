@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "Host-pc is vergrendeld",
   "StreamPreflight_HostPCLockedDescription": "Je host-pc is vergrendeld en het streamen kan pas starten nadat deze is ontgrendeld. ",
   "StreamPreflight_HostPCOnWireless": "Je host-pc is draadloos verbonden met je router.",
-  "StreamPreflight_HostPCOnWirelessDescription": "Je host-pc is draadloos verbonden met je router, wat geen ondersteunde methode is om Steam Link VR te gebruiken.",
+  "StreamPreflight_HostPCOnWirelessDescription": "Je host-pc is draadloos verbonden met je router, wat geen ondersteunde methode is om Steam Link te gebruiken.",
   "StreamPreflight_WifiBandwidthLow": "De draadloze verbinding is van lage kwaliteit.",
   "StreamPreflight_WifiBandwidthLowDescription": "Verbeter je wifi-verbinding voor een betere streamingervaring.",
   "StreamCheck_WifiNotConnected": "Niet verbonden met wifi",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "Je pc waarop Steam Link draait verzendt gegevens, maar je headset kan deze niet parseren. Probeer Steam Link opnieuw op te starten.",
   "StreamSideBand_WrongId": "Sessie komt niet overeen",
   "StreamSideBand_WrongIdDescription": "Je headset-sessie komt niet overeen met de Steam VR-sessie van je host. Start de app opnieuw.",
+  "StreamSideBand_AlreadyActiveLocal": "Andere headset geactiveerd",
+  "StreamSideBand_AlreadyActiveLocalDescription": "Er is een andere headset geactiveerd op je host-pc. Verbreek de verbinding en start SteamVR opnieuw op.",
   "StreamSideBand_AlreadyActive": "Host-pc bezet",
   "StreamSideBand_AlreadyActiveDescription": "Een andere headset is verbonden met je host-pc. Er wordt gewacht tot de verbinding is verbroken.",
   "StreamSideBand_UnknownIssue": "Onbekend probleem",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "SteamVR is herstart op je pc. Maak opnieuw verbinding.",
   "Abort_HostQuitTitle": "Host is gestopt",
   "Abort_HostQuitDescription": "SteamVR is afgesloten op je pc. Herstart Steam Link om opnieuw te verbinden.",
-  "ErrorCode": "Fout %0$s"
+  "ErrorCode": "Fout %0$s",
+  "StreamPreflight_IgnoreForNetwork": "Deze waarschuwing niet meer weergeven op dit netwerk"
 }

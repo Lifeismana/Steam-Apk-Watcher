@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "O PC transmissor está bloqueado",
   "StreamPreflight_HostPCLockedDescription": "O PC transmissor está bloqueado. O stream não irá começar enquanto o PC não for desbloqueado.",
   "StreamPreflight_HostPCOnWireless": "O PC transmissor está conectado ao router por uma rede sem fios.",
-  "StreamPreflight_HostPCOnWirelessDescription": "O PC transmissor está conectado ao router por uma rede sem fios, o que não é compatível para usar com o SteamLinkVR.",
+  "StreamPreflight_HostPCOnWirelessDescription": "O PC transmissor está conectado ao router por uma rede sem fios, o que não é compatível com o Steam Link.",
   "StreamPreflight_WifiBandwidthLow": "A ligação sem fios está fraca.",
   "StreamPreflight_WifiBandwidthLowDescription": "Melhora a ligação à rede Wi-Fi para uma melhor experiência de streaming.",
   "StreamCheck_WifiNotConnected": "Não conectado a rede Wi‑Fi",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "O PC a executar o Steam Link está a enviar dados, mas o headset não consegue analisá‑los. Tenta reiniciar o Steam Link.",
   "StreamSideBand_WrongId": "Discrepância entre sessões",
   "StreamSideBand_WrongIdDescription": "A sessão do teu headset não corresponde à sessão de SteamVR do PC transmissor. Reinicia a aplicação.",
+  "StreamSideBand_AlreadyActiveLocal": "Outro headset ativo",
+  "StreamSideBand_AlreadyActiveLocalDescription": "Outro headset foi ativado no PC transmissor. Desconecta‑o e reinicia o SteamVR.",
   "StreamSideBand_AlreadyActive": "O PC transmissor está ocupado",
   "StreamSideBand_AlreadyActiveDescription": "Outro headset está conectado ao PC transmissor. A aguardar que seja desconectado.",
   "StreamSideBand_UnknownIssue": "Problema desconhecido",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "O SteamVR foi reiniciado no teu PC. Volta a estabelecer ligação.",
   "Abort_HostQuitTitle": "O transmissor encerrou",
   "Abort_HostQuitDescription": "O SteamVR foi encerrado no teu PC. Reinicia o Steam Link para voltares a estabelecer ligação.",
-  "ErrorCode": "Erro %0$s"
+  "ErrorCode": "Erro %0$s",
+  "StreamPreflight_IgnoreForNetwork": "Não mostrar este aviso novamente nesta rede"
 }

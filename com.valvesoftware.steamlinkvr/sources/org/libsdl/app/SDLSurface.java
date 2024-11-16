@@ -1,10 +1,12 @@
 package org.libsdl.app;
 
 import android.content.Context;
+import android.graphics.Insets;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.os.Build;
 import android.os.Handler;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -15,11 +17,12 @@ import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
+import android.view.WindowInsets;
 import android.view.WindowManager;
 import org.libsdl.app.SDLActivity;
 
 /* loaded from: classes.dex */
-public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, View.OnKeyListener, View.OnTouchListener, SensorEventListener {
+public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, View.OnApplyWindowInsetsListener, View.OnKeyListener, View.OnTouchListener, SensorEventListener {
     protected Display mDisplay;
     protected float mHeight;
     public boolean mIsSurfaceReady;
@@ -36,6 +39,7 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
         setFocusable(true);
         setFocusableInTouchMode(true);
         requestFocus();
+        setOnApplyWindowInsetsListener(this);
         setOnKeyListener(this);
         setOnTouchListener(this);
         this.mDisplay = ((WindowManager) context.getSystemService("window")).getDefaultDisplay();
@@ -54,6 +58,7 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
         setFocusable(true);
         setFocusableInTouchMode(true);
         requestFocus();
+        setOnApplyWindowInsetsListener(this);
         setOnKeyListener(this);
         setOnTouchListener(this);
         enableSensor(1, true);
@@ -151,6 +156,15 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
             SDLActivity.mNextNativeState = SDLActivity.NativeState.RESUMED;
             SDLActivity.handleNativeState();
         }
+    }
+
+    @Override // android.view.View.OnApplyWindowInsetsListener
+    public WindowInsets onApplyWindowInsets(View view, WindowInsets windowInsets) {
+        if (Build.VERSION.SDK_INT >= 30) {
+            Insets insets = windowInsets.getInsets(WindowInsets.Type.systemBars() | WindowInsets.Type.systemGestures() | WindowInsets.Type.mandatorySystemGestures() | WindowInsets.Type.tappableElement() | WindowInsets.Type.displayCutout());
+            SDLActivity.onNativeInsetsChanged(insets.left, insets.right, insets.top, insets.bottom);
+        }
+        return windowInsets;
     }
 
     @Override // android.view.View.OnKeyListener

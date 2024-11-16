@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "Isäntäkone lukittu",
   "StreamPreflight_HostPCLockedDescription": "Isäntäkone on lukittu. Suoratoisto alkaa vasta, kun lukitus on avattu.",
   "StreamPreflight_HostPCOnWireless": "Isäntäkone on yhdistetty langattomasti reitittimeen.",
-  "StreamPreflight_HostPCOnWirelessDescription": "Isäntäkone on yhdistetty langattomasti reitittimeen. SteamLinkVR ei tue tätä toimintoa.",
+  "StreamPreflight_HostPCOnWirelessDescription": "Isäntäkone on yhdistetty langattomasti reitittimeen. Steam Link ei tue tätä toimintoa.",
   "StreamPreflight_WifiBandwidthLow": "Langaton yhteys on heikko.",
   "StreamPreflight_WifiBandwidthLowDescription": "Suoratoiston laatu riippuu langattoman yhteyden vahvuudesta.",
   "StreamCheck_WifiNotConnected": "Ei wifi-yhteyttä",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "Steam Link -tietokone lähettää tietoa, mutta VR-lasit eivät pysty jäsentämään sitä. Yritä käynnistää Steam Link uudelleen.",
   "StreamSideBand_WrongId": "Istunto ei täsmää",
   "StreamSideBand_WrongIdDescription": "VR-lasien istunto ei vastaa isäntäkoneen SteamVR-istuntoa. Käynnistä sovellus uudelleen.",
+  "StreamSideBand_AlreadyActiveLocal": "Toiset lasit ovat jo aktiivisena",
+  "StreamSideBand_AlreadyActiveLocalDescription": "Toiset lasit on jo aktivoitu isäntätietokoneella. Katkaise yhteys ja käynnistä SteamVR uudelleen.",
   "StreamSideBand_AlreadyActive": "Isäntäkone varattu",
   "StreamSideBand_AlreadyActiveDescription": "Toiset VR-lasit on yhdistetty isäntäkoneeseen. Odotetaan yhteyden katkaisemista.",
   "StreamSideBand_UnknownIssue": "Tuntematon virhe",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "SteamVR on käynnistetty uudelleen tietokoneellasi. Luo yhteys uudelleen.",
   "Abort_HostQuitTitle": "Isäntä poistui",
   "Abort_HostQuitDescription": "SteamVR on suljettu tietokoneellasi. Palauta yhteys käynnistämällä Steam Link uudelleen.",
-  "ErrorCode": "Virhe: %0$s"
+  "ErrorCode": "Virhe: %0$s",
+  "StreamPreflight_IgnoreForNetwork": "Älä näytä tätä varoitusta käyttäessäni tätä verkkoyhteyttä"
 }

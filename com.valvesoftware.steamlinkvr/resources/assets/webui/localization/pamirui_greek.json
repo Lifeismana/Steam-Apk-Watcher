@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "Ο κεντρικός υπολογιστής είναι κλειδωμένος",
   "StreamPreflight_HostPCLockedDescription": "Ο κεντρικός υπολογιστής σας είναι κλειδωμένος. Η μετάδοση δεν θα ξεκινήσει μέχρι να ξεκλειδωθεί",
   "StreamPreflight_HostPCOnWireless": "Ο κεντρικός υπολογιστής σας είναι συνδεδεμένος ασύρματα στον δρομολογητή σας",
-  "StreamPreflight_HostPCOnWirelessDescription": "Ο κεντρικός υπολογιστής σας είναι συνδεδεμένος ασύρματα στον δρομολογητή σας, κάτι που δεν υποστηρίζει τη χρήση του SteamLinkVR.",
+  "StreamPreflight_HostPCOnWirelessDescription": "Ο κεντρικός υπολογιστής σας είναι συνδεδεμένος ασύρματα στον δρομολογητή σας, κάτι που δεν υποστηρίζεται ως μέθοδος χρήσης του SteamLink.",
   "StreamPreflight_WifiBandwidthLow": "Κακή ποιότητα ασύρματης σύνδεσης.",
   "StreamPreflight_WifiBandwidthLowDescription": "Βελτιώστε τη σύνδεσή σας μέσω Wi-Fi για καλύτερη εμπειρία μετάδοσης.",
   "StreamCheck_WifiNotConnected": "Χωρίς σύνδεση σε WiFi",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "Ο υπολογιστής σας που εκτελεί το Steam Link στέλνει δεδομένα, αλλά το headset δεν μπορεί να τα αναλύσει. Δοκιμάστε να επανεκκινήσετε το Steam Link.",
   "StreamSideBand_WrongId": "Αναντιστοιχία συνεδρίας",
   "StreamSideBand_WrongIdDescription": "Η συνεδρία του headset σας δεν ταιριάζει με τη συνεδρία του SteamVR. Επανεκκινήστε την εφαρμογή.",
+  "StreamSideBand_AlreadyActiveLocal": "Ενεργοποιήθηκε άλλο headset",
+  "StreamSideBand_AlreadyActiveLocalDescription": "Ένα άλλο headset έχει ενεργοποιηθεί στον κεντρικό υπολογιστή σας. Αποσυνδέστε και επανεκκινήστε το SteamVR.",
   "StreamSideBand_AlreadyActive": "Ο κεντρικός υπολογιστής είναι απασχολημένος",
   "StreamSideBand_AlreadyActiveDescription": "Ένα άλλο headset είναι συνδεδεμένο στον κεντρικό υπολογιστή σας. Περιμένετε να αποσυνδεθεί.",
   "StreamSideBand_UnknownIssue": "Άγνωστο πρόβλημα",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "Έγινε επανεκκίνηση του SteamVR στον υπολογιστή σας. Συνδεθείτε ξανά.",
   "Abort_HostQuitTitle": "Ο κεντρικός υπολογιστής τερματίστηκε",
   "Abort_HostQuitDescription": "Έγινε τερματισμός του SteamVR στον υπολογιστή σας. Επανεκκινήστε το Steam Link για να συνδεθείτε ξανά.",
-  "ErrorCode": "Σφάλμα %0$s"
+  "ErrorCode": "Σφάλμα %0$s",
+  "StreamPreflight_IgnoreForNetwork": "Να μην ειδοποιηθώ ξανά για αυτό, σε αυτό το δίκτυο"
 }

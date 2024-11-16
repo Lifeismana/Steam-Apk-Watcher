@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "El ordenador que realiza la transmisión está bloqueado",
   "StreamPreflight_HostPCLockedDescription": "Tu ordenador está bloqueado y la transmisión no empezará hasta que se desbloquee.",
   "StreamPreflight_HostPCOnWireless": "El ordenador que realiza la transmisión está conectado al router de forma inalámbrica",
-  "StreamPreflight_HostPCOnWirelessDescription": "El ordenador que realiza la transmisión está conectado al router de forma inalámbrica y este método no es compatible con SteamLinkVR.",
+  "StreamPreflight_HostPCOnWirelessDescription": "El ordenador que realiza la transmisión está conectado al router de forma inalámbrica y este método no es compatible con Steam Link.",
   "StreamPreflight_WifiBandwidthLow": "La conexión inalámbrica es de baja calidad.",
   "StreamPreflight_WifiBandwidthLowDescription": "Comprueba tu conexión wifi para que la transmisión funcione mejor.",
   "StreamCheck_WifiNotConnected": "No hay conexión a la wifi",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "El ordenador en el que se ejecuta Steam Link está enviando datos, pero el visor no puede analizarlos. Intenta reiniciar Steam Link.",
   "StreamSideBand_WrongId": "La sesión no coincide",
   "StreamSideBand_WrongIdDescription": "La sesión del visor no coincide con la de SteamVR del ordenador que realiza la transmisión. Reinicia la aplicación.",
+  "StreamSideBand_AlreadyActiveLocal": "Otro visor activado",
+  "StreamSideBand_AlreadyActiveLocalDescription": "Hay otro visor conectado al ordenador que realiza la transmisión. Desconéctalo y reinicia SteamVR.",
   "StreamSideBand_AlreadyActive": "El ordenador que realiza la transmisión está ocupado",
   "StreamSideBand_AlreadyActiveDescription": "Hay otro visor conectado al ordenador. Esperando a que se desconecte.",
   "StreamSideBand_UnknownIssue": "Problema desconocido",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "SteamVR se ha reiniciado en tu ordenador. Vuelve a conectarte.",
   "Abort_HostQuitTitle": "Transmisión cancelada",
   "Abort_HostQuitDescription": "Se ha cerrado SteamVR en tu ordenador. Reinicia Steam Link para restablecer la conexión.",
-  "ErrorCode": "Error: %0$s"
+  "ErrorCode": "Error: %0$s",
+  "StreamPreflight_IgnoreForNetwork": "No volver a mostrar este aviso en esta red"
 }

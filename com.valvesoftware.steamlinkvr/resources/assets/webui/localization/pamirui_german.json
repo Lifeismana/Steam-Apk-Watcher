@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "Host-Computer ist gesperrt",
   "StreamPreflight_HostPCLockedDescription": "Der Host-Computer ist gesperrt. Entsperren Sie das Gerät, um das Streaming zu beginnen.",
   "StreamPreflight_HostPCOnWireless": "Ihr Host-Computer ist drahtlos mit Ihrem Router verbunden.",
-  "StreamPreflight_HostPCOnWirelessDescription": "Ihr Host-Computer ist drahtlos mit Ihrem Router verbunden. Diese Verbindung wird von SteamLinkVR nicht unterstützt.",
+  "StreamPreflight_HostPCOnWirelessDescription": "Ihr Host-Computer ist drahtlos mit Ihrem Router verbunden. Diese Verbindung wird von Steam Link nicht unterstützt.",
   "StreamPreflight_WifiBandwidthLow": "Die drahtlose Verbindung ist schlecht.",
   "StreamPreflight_WifiBandwidthLowDescription": "Bitte verbessern Sie Ihre WLAN-Verbindung für ein besseres Streaming-Erlebnis.",
   "StreamCheck_WifiNotConnected": "WLAN nicht verbunden",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "Ihr Gerät, auf dem Steam Link ausgeführt wird, sendet Daten, aber das VR-Headset kann diese nicht verarbeiten. Starten Sie Steam Link neu.",
   "StreamSideBand_WrongId": "Sitzungsfehler",
   "StreamSideBand_WrongIdDescription": "Ihre VR-Headset-Sitzung stimmt nicht mit der SteamVR-Sitzung Ihres Host-Computers überein. Bitte starten Sie die Anwendung neu.",
+  "StreamSideBand_AlreadyActiveLocal": "Anderes VR-Headset aktiviert",
+  "StreamSideBand_AlreadyActiveLocalDescription": "Ein anderes VR-Headset wurde auf Ihrem Host-Computer aktiviert. Bitte trennen Sie es und starten Sie SteamVR neu.",
   "StreamSideBand_AlreadyActive": "Host-Computer ausgelastet",
   "StreamSideBand_AlreadyActiveDescription": "Ein anderes VR-Headset ist mit Ihrem Host-Computer verbunden. Warten auf Trennung der Verbindung.",
   "StreamSideBand_UnknownIssue": "Unbekanntes Problem",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "SteamVR wurde auf Ihrem Computer neu gestartet. Verbinden Sie sich erneut.",
   "Abort_HostQuitTitle": "Durch Host-Computer beendet",
   "Abort_HostQuitDescription": "SteamVR wurde auf Ihrem Computer beendet. Starten Sie Steam Link neu, um die Verbindung wiederherzustellen.",
-  "ErrorCode": "Fehler: %0$s"
+  "ErrorCode": "Fehler: %0$s",
+  "StreamPreflight_IgnoreForNetwork": "Diese Warnung nicht mehr in diesem Netzwerk versenden."
 }

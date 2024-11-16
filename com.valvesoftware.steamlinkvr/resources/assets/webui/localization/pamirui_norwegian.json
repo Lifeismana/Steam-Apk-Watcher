@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "Vertsdatamaskinen er låst",
   "StreamPreflight_HostPCLockedDescription": "Vertsdatamaskinen er låst, og strømming kan ikke starte før den låses opp.",
   "StreamPreflight_HostPCOnWireless": "Vertsdatamaskinen er koblet trådløst til ruteren.",
-  "StreamPreflight_HostPCOnWirelessDescription": "Vertsdatamaskinen er koblet trådløst til ruteren, noe som ikke støttes for bruk av SteamLinkVR.",
+  "StreamPreflight_HostPCOnWirelessDescription": "Vertsmaskinen er koblet trådløst til ruteren, som ikke er en støttet metode for bruk av Steam Link.",
   "StreamPreflight_WifiBandwidthLow": "Trådløs tilkobling er dårlig.",
   "StreamPreflight_WifiBandwidthLowDescription": "Forbedre Wi-Fi-tilkoblingen for en bedre strømmeopplevelse.",
   "StreamCheck_WifiNotConnected": "WiFi er ikke tilkoblet",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "Datamaskinen som kjører Steam Link, sender data, men hodesettet er ikke i stand til å analysere dette. Prøv å starte Steam Link på nytt.",
   "StreamSideBand_WrongId": "Økten samsvarer ikke",
   "StreamSideBand_WrongIdDescription": "Økten til hodesettet samsvarer ikke med vertens SteamVR-økt. Start applikasjonen på nytt.",
+  "StreamSideBand_AlreadyActiveLocal": "Et annet hodesett er aktivert",
+  "StreamSideBand_AlreadyActiveLocalDescription": "Et annet hodesett er aktivert på vertsmaskinen. Koble fra og start SteamVR på nytt.",
   "StreamSideBand_AlreadyActive": "Vertsdatamaskinen er opptatt",
   "StreamSideBand_AlreadyActiveDescription": "Et annet hodesett er koblet til vertsmaskinen. Venter på at det kobles fra.",
   "StreamSideBand_UnknownIssue": "Ukjent feil",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "SteamVR er startet på nytt på datamaskinen. Koble til på nytt.",
   "Abort_HostQuitTitle": "Verten avsluttet",
   "Abort_HostQuitDescription": "SteamVR ble avsluttet på datamaskinen. Start Steam Link på nytt for å koble til igjen.",
-  "ErrorCode": "Feil %0$s"
+  "ErrorCode": "Feil %0$s",
+  "StreamPreflight_IgnoreForNetwork": "Ikke gi advarsel om dette på dette nettverket igjen"
 }

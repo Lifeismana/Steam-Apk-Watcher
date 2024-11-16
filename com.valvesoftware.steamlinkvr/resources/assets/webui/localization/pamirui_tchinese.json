@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "主機電腦已鎖定",
   "StreamPreflight_HostPCLockedDescription": "您的主機電腦已鎖定，須在解鎖後才會開始串流",
   "StreamPreflight_HostPCOnWireless": "您的主機電腦是以無線方式連接至您的路由器",
-  "StreamPreflight_HostPCOnWirelessDescription": "您的主機電腦是以無線方式連接至您的路由器，但 SteamLinkVR 並不支援此使用方式",
+  "StreamPreflight_HostPCOnWirelessDescription": "您的主機電腦是以無線方式連接至您的路由器，但 Steam 串流並不支援此使用方式。",
   "StreamPreflight_WifiBandwidthLow": "無線連接品質不佳。",
   "StreamPreflight_WifiBandwidthLowDescription": "請改善您的 WiFi 連線品質以獲得更好的串流體驗。",
   "StreamCheck_WifiNotConnected": "未連線至 WiFi",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "執行 Steam Link 的電腦正在傳送資料，但頭戴顯示器無法對之進行分析。請嘗試重新啟動 Steam Link。",
   "StreamSideBand_WrongId": "工作階段不相符",
   "StreamSideBand_WrongIdDescription": "您的頭戴顯示器工作階段與您的主機的 SteamVR 工作階段的不相符。請重新啟動應用程式。",
+  "StreamSideBand_AlreadyActiveLocal": "已啟用其它頭戴顯示器",
+  "StreamSideBand_AlreadyActiveLocalDescription": "您的主機電腦已啟用了另一個頭戴顯示器。請斷開連線並重新啟動 SteamVR。",
   "StreamSideBand_AlreadyActive": "主機電腦忙碌",
   "StreamSideBand_AlreadyActiveDescription": "另一台頭戴顯示器正連接到您的主機電腦。正在等待其斷線。",
   "StreamSideBand_UnknownIssue": "不明問題",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "SteamVR 已在電腦上重新啟動。請重新連線。",
   "Abort_HostQuitTitle": "主機退出",
   "Abort_HostQuitDescription": "SteamVR 已從電腦退出。重新啟動 Steam Link 以重新連線。",
-  "ErrorCode": "錯誤代碼 %0$s"
+  "ErrorCode": "錯誤代碼 %0$s",
+  "StreamPreflight_IgnoreForNetwork": "不要再在此網路上顯示這個警告通知"
 }

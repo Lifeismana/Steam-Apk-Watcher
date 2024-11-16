@@ -38,8 +38,6 @@ public class SteamLink extends SDLActivity {
     View m_marginLeft;
     View m_marginRight;
     View m_marginTop;
-    int m_nDisplayHeight;
-    int m_nDisplayWidth;
     int m_nOverlayHeight;
     int m_nOverlayWidth;
     SurfaceView m_overlaySurface;
@@ -64,9 +62,8 @@ public class SteamLink extends SDLActivity {
     /* JADX INFO: Access modifiers changed from: private */
     public native void videoSurfaceDestroyed();
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // org.libsdl.app.SDLActivity
-    public String getMainFunction() {
+    protected String getMainFunction() {
         return "main";
     }
 
@@ -171,9 +168,8 @@ public class SteamLink extends SDLActivity {
         freezeRendering();
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // org.libsdl.app.SDLActivity
-    public String getMainSharedObject() {
+    protected String getMainSharedObject() {
         return "libshell_" + Build.SUPPORTED_ABIS[0] + ".so";
     }
 
@@ -183,9 +179,8 @@ public class SteamLink extends SDLActivity {
         return new String[]{"SDL3", "SDL3_image", "SDL3_mixer", "SDL3_ttf", "c++_shared", "Qt6Core_" + str, "Qt6Gui_" + str, "Qt6Network_" + str, "Qt6Widgets_" + str, "Qt6Svg_" + str, "shell_" + str, "h264bitstream", "hevcbitstream", "steamwebrtc"};
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // org.libsdl.app.SDLActivity
-    public String[] getArguments() {
+    protected String[] getArguments() {
         Uri data = getIntent().getData();
         return data != null ? new String[]{data.toString()} : new String[0];
     }
@@ -287,9 +282,6 @@ public class SteamLink extends SDLActivity {
     }
 
     public void createVideoSurface() {
-        Display defaultDisplay = ((WindowManager) getApplication().getSystemService("window")).getDefaultDisplay();
-        this.m_nDisplayWidth = defaultDisplay.getWidth();
-        this.m_nDisplayHeight = defaultDisplay.getHeight();
         SurfaceView surfaceView = new SurfaceView(getApplication());
         this.m_videoSurface = surfaceView;
         surfaceView.getHolder().addCallback(new VideoSurfaceCallback());
@@ -320,7 +312,7 @@ public class SteamLink extends SDLActivity {
         this.m_marginBottom = view4;
         view4.setBackgroundColor(-16777216);
         mLayout.addView(this.m_marginBottom);
-        updateViewRects(0, 0, this.m_nDisplayWidth, this.m_nDisplayHeight);
+        updateViewRects(0, 0, 0, 0);
         setVideoSurfaceVisible(false);
         setOverlaySurfaceVisible(false);
         try {
@@ -385,8 +377,11 @@ public class SteamLink extends SDLActivity {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void updateViewRects(int i, int i2, int i3, int i4) {
-        int i5 = (this.m_nDisplayWidth - i3) - i;
-        int i6 = (this.m_nDisplayHeight - i4) - i2;
+        Display defaultDisplay = ((WindowManager) getApplication().getSystemService("window")).getDefaultDisplay();
+        int width = defaultDisplay.getWidth();
+        int height = defaultDisplay.getHeight();
+        int i5 = (width - i3) - i;
+        int i6 = (height - i4) - i2;
         RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(i3, i4);
         layoutParams.setMargins(i, i2, i5, i6);
         this.m_videoSurface.setLayoutParams(layoutParams);
@@ -403,39 +398,39 @@ public class SteamLink extends SDLActivity {
             i6 = 0;
         }
         if (i > 0) {
-            RelativeLayout.LayoutParams layoutParams2 = new RelativeLayout.LayoutParams(i, this.m_nDisplayHeight);
-            layoutParams2.setMargins(0, 0, this.m_nDisplayWidth - i, 0);
+            RelativeLayout.LayoutParams layoutParams2 = new RelativeLayout.LayoutParams(i, height);
+            layoutParams2.setMargins(0, 0, width - i, 0);
             this.m_marginLeft.setLayoutParams(layoutParams2);
             this.m_marginLeft.setVisibility(0);
         } else {
             this.m_marginLeft.setVisibility(8);
         }
         if (i5 > 0) {
-            RelativeLayout.LayoutParams layoutParams3 = new RelativeLayout.LayoutParams(i5, this.m_nDisplayHeight);
-            layoutParams3.setMargins(this.m_nDisplayWidth - i5, 0, 0, 0);
+            RelativeLayout.LayoutParams layoutParams3 = new RelativeLayout.LayoutParams(i5, height);
+            layoutParams3.setMargins(width - i5, 0, 0, 0);
             this.m_marginRight.setLayoutParams(layoutParams3);
             this.m_marginRight.setVisibility(0);
         } else {
             this.m_marginRight.setVisibility(8);
         }
         if (i2 > 0) {
-            RelativeLayout.LayoutParams layoutParams4 = new RelativeLayout.LayoutParams(this.m_nDisplayWidth, i2);
-            layoutParams4.setMargins(0, 0, 0, this.m_nDisplayHeight - i2);
+            RelativeLayout.LayoutParams layoutParams4 = new RelativeLayout.LayoutParams(width, i2);
+            layoutParams4.setMargins(0, 0, 0, height - i2);
             this.m_marginTop.setLayoutParams(layoutParams4);
             this.m_marginTop.setVisibility(0);
         } else {
             this.m_marginTop.setVisibility(8);
         }
         if (i6 > 0) {
-            RelativeLayout.LayoutParams layoutParams5 = new RelativeLayout.LayoutParams(this.m_nDisplayWidth, i6);
-            layoutParams5.setMargins(0, this.m_nDisplayHeight - i6, 0, 0);
+            RelativeLayout.LayoutParams layoutParams5 = new RelativeLayout.LayoutParams(width, i6);
+            layoutParams5.setMargins(0, height - i6, 0, 0);
             this.m_marginBottom.setLayoutParams(layoutParams5);
             this.m_marginBottom.setVisibility(0);
         } else {
             this.m_marginBottom.setVisibility(8);
         }
-        int i7 = (this.m_nDisplayWidth - i) - i5;
-        int i8 = (this.m_nDisplayHeight - i2) - i6;
+        int i7 = (width - i) - i5;
+        int i8 = (height - i2) - i6;
         RelativeLayout.LayoutParams layoutParams6 = new RelativeLayout.LayoutParams(i7, i8);
         layoutParams6.setMargins(i, i2 + (i8 - ((int) (this.m_nOverlayHeight * (i7 / this.m_nOverlayWidth)))), i5, i6);
         this.m_overlaySurface.setLayoutParams(layoutParams6);

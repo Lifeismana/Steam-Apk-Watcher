@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "Værts-PC'en er låst",
   "StreamPreflight_HostPCLockedDescription": "Værts-PC'en er låst, og streamingen starter ikke, før den låses op",
   "StreamPreflight_HostPCOnWireless": "Værts-PC'en er forbundet trådløst til routeren",
-  "StreamPreflight_HostPCOnWirelessDescription": "Værts-PC'en er trådløst forbundet til routeren, hvilket ikke understøttes til brug af SteamLinkVR",
+  "StreamPreflight_HostPCOnWirelessDescription": "Værts-PC'en er trådløst forbundet til routeren, hvilket ikke understøttes til brug af Steam Link.",
   "StreamPreflight_WifiBandwidthLow": "Trådløs forbindelse er dårlig.",
   "StreamPreflight_WifiBandwidthLowDescription": "Forbedr wi-fi-forbindelsen for at få en bedre streamingoplevelse.",
   "StreamCheck_WifiNotConnected": "Wi-fi ikke tilsluttet",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "PC'en, der kører Steam Link, sender data, men headsettet kan ikke læse dem. Prøv at genstarte Steam Link.",
   "StreamSideBand_WrongId": "Sessionsfejl",
   "StreamSideBand_WrongIdDescription": "Headsetsessionen stemmer ikke overens med værtens SteamVR-session. Genstart appen.",
+  "StreamSideBand_AlreadyActiveLocal": "Andet headset aktiveret",
+  "StreamSideBand_AlreadyActiveLocalDescription": "Et andet headset er aktiveret på din værts-PC. Afbryd og genstart SteamVR.",
   "StreamSideBand_AlreadyActive": "Værts-PC'en er optaget",
   "StreamSideBand_AlreadyActiveDescription": "Der er tilsluttet et andet headset til værts-PC'en. Venter på, at det frakobles.",
   "StreamSideBand_UnknownIssue": "Ukendt problem",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "SteamVR er blevet genstartet på din PC. Opret forbindelse igen.",
   "Abort_HostQuitTitle": "Værten afsluttede",
   "Abort_HostQuitDescription": "SteamVR er blevet afsluttet på din PC. Genstart Steam Link for at oprette forbindelse igen.",
-  "ErrorCode": "Fejl %0$s"
+  "ErrorCode": "Fejl %0$s",
+  "StreamPreflight_IgnoreForNetwork": "Advar mig ikke om dette på dette netværk igen"
 }

@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "PC hôte verrouillé",
   "StreamPreflight_HostPCLockedDescription": "Le PC hôte est verrouillé. Déverrouillez-le pour commencer le streaming.",
   "StreamPreflight_HostPCOnWireless": "Le PC hôte est connecté sans fil au routeur.",
-  "StreamPreflight_HostPCOnWirelessDescription": "Le PC hôte est connecté sans fil au routeur. Cette méthode de connexion n'est pas prise en charge par Steam Link VR.",
+  "StreamPreflight_HostPCOnWirelessDescription": "Le PC hôte est connecté sans fil au routeur. Cette méthode de connexion n'est pas prise en charge par Steam Link.",
   "StreamPreflight_WifiBandwidthLow": "La connexion sans fil est de mauvaise qualité.",
   "StreamPreflight_WifiBandwidthLowDescription": "Veuillez améliorer la qualité de la connexion wifi pour bénéficier d'une meilleure expérience de streaming.",
   "StreamCheck_WifiNotConnected": "Aucune connexion wifi",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "Le PC qui exécute Steam Link envoie des données, mais le casque n'arrive pas à les lire. Essayez de redémarrer Steam Link.",
   "StreamSideBand_WrongId": "Mauvaise session",
   "StreamSideBand_WrongIdDescription": "La session du casque n'est pas la même que celle du PC hôte. Veuillez redémarrer l'application.",
+  "StreamSideBand_AlreadyActiveLocal": "Autre casque activé",
+  "StreamSideBand_AlreadyActiveLocalDescription": "Un autre casque a été activé sur votre PC hôte. Veuillez déconnecter et redémarrer SteamVR.",
   "StreamSideBand_AlreadyActive": "PC hôte occupé",
   "StreamSideBand_AlreadyActiveDescription": "Un autre casque est connecté à votre PC hôte. En attente de déconnexion.",
   "StreamSideBand_UnknownIssue": "Erreur inconnue",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "SteamVR a été redémarré sur votre PC. Veuillez vous reconnecter.",
   "Abort_HostQuitTitle": "Le PC hôte a quitté",
   "Abort_HostQuitDescription": "SteamVR a été arrêté sur votre PC. Redémarrez Steam Link pour vous reconnecter.",
-  "ErrorCode": "Erreur : %0$s"
+  "ErrorCode": "Erreur : %0$s",
+  "StreamPreflight_IgnoreForNetwork": "Ignorer cet avertissement pour ce réseau"
 }

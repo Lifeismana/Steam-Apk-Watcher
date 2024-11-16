@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "Хост компютърът е заключен",
   "StreamPreflight_HostPCLockedDescription": "Хост компютърът Ви е заключен и излъчването няма да започне, докато не бъде отключен.",
   "StreamPreflight_HostPCOnWireless": "Хост компютърът Ви е свързан безжично към Вашия рутер",
-  "StreamPreflight_HostPCOnWirelessDescription": "Хост компютърът Ви е свързан безжично към Вашия рутер, което не е поддържан метод за използването на SteamLinkVR.",
+  "StreamPreflight_HostPCOnWirelessDescription": "Хост компютърът Ви е свързан безжично към Вашия рутер, което не е поддържан метод за използването на Steam Link.",
   "StreamPreflight_WifiBandwidthLow": "Безжичната връзка е нискокачествена.",
   "StreamPreflight_WifiBandwidthLowDescription": "Моля, подобрете своята безжична връзка за по-добро преживяване при излъчване.",
   "StreamCheck_WifiNotConnected": "Няма връзка към безжичната мрежа",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "Компютърът Ви с пуснат Steam Link изпраща данни, но ВР шлемът не е способен да им направи морфологичен разбор. Опитайте да рестартирате Steam Link.",
   "StreamSideBand_WrongId": "Несъответствие на сесията",
   "StreamSideBand_WrongIdDescription": "Сесията на ВР шлема Ви не съответства с тази на Вашия SteamVR хост. Моля, рестартирайте приложението.",
+  "StreamSideBand_AlreadyActiveLocal": "Активиран е друг ВР шлем",
+  "StreamSideBand_AlreadyActiveLocalDescription": "Друг ВР шлем е активиран на хост компютъра Ви. Моля, разкачете го и рестартирайте SteamVR.",
   "StreamSideBand_AlreadyActive": "Хост компютърът е зает",
   "StreamSideBand_AlreadyActiveDescription": "Друг ВР шлем е свързан към хост компютъра Ви. Изчаква се да бъде разкачен.",
   "StreamSideBand_UnknownIssue": "Неизвестен проблем",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "SteamVR беше рестартирано на компютъра Ви. Моля, свържете се повторно.",
   "Abort_HostQuitTitle": "Хостът излезе",
   "Abort_HostQuitDescription": "SteamVR на компютъра Ви излезе. Рестартирайте Steam Link, за да се свържете повторно.",
-  "ErrorCode": "Грешка %0$s"
+  "ErrorCode": "Грешка %0$s",
+  "StreamPreflight_IgnoreForNetwork": "Не ме предупреждавайте относно това в тази мрежа отново"
 }

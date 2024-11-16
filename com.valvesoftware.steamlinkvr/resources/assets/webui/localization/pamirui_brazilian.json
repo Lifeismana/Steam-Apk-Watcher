@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "PC remoto bloqueado",
   "StreamPreflight_HostPCLockedDescription": "O PC remoto está bloqueado. A transmissão não será iniciada até que ele seja desbloqueado.",
   "StreamPreflight_HostPCOnWireless": "PC remoto conectado ao roteador por Wi-Fi",
-  "StreamPreflight_HostPCOnWirelessDescription": "O PC remoto está conectado ao roteador por Wi-Fi, o que não é compatível com o SteamLinkVR.",
+  "StreamPreflight_HostPCOnWirelessDescription": "O PC remoto está conectado ao roteador por Wi-Fi, o que não é compatível com o Steam Link.",
   "StreamPreflight_WifiBandwidthLow": "A conexão sem fio está fraca.",
   "StreamPreflight_WifiBandwidthLowDescription": "Aprimore a sua conexão Wi-Fi para uma melhor experiência de transmissão.",
   "StreamCheck_WifiNotConnected": "Não conectado à rede Wi-Fi",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "O PC que roda o Steam Link está enviando dados, mas o headset não consegue analisá-los. Tente reiniciar o Steam Link.",
   "StreamSideBand_WrongId": "Incompatibilidade de sessão",
   "StreamSideBand_WrongIdDescription": "A sessão do headset não corresponde à sessão do SteamVR no PC remoto. Reinicie o aplicativo.",
+  "StreamSideBand_AlreadyActiveLocal": "Outro headset ativado",
+  "StreamSideBand_AlreadyActiveLocalDescription": "Outro headset foi ativado no seu computador remoto. Desconecte e reinicie o SteamVR.",
   "StreamSideBand_AlreadyActive": "PC remoto ocupado",
   "StreamSideBand_AlreadyActiveDescription": "Outro headset está conectado ao PC remoto. Aguardando a sua desconexão.",
   "StreamSideBand_UnknownIssue": "Problema desconhecido",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "O SteamVR foi reiniciado no PC remoto. Reconecte-se.",
   "Abort_HostQuitTitle": "SteamVR encerrado",
   "Abort_HostQuitDescription": "O SteamVR foi encerrado no PC remoto. Reinicie o Steam Link para reconectar.",
-  "ErrorCode": "Erro %0$s"
+  "ErrorCode": "Erro %0$s",
+  "StreamPreflight_IgnoreForNetwork": "Não exibir esse aviso para esta rede novamente"
 }

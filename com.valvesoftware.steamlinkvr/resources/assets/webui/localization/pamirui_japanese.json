@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "ホストPCがロックされています",
   "StreamPreflight_HostPCLockedDescription": "ホストPCはロックされており、ロックが解除されるまでストリーミングは開始されません",
   "StreamPreflight_HostPCOnWireless": "ホストPCがルーターにワイヤレスで接続されています",
-  "StreamPreflight_HostPCOnWirelessDescription": "ホストPCがルーターにワイヤレスで接続されていますが、これはSteamLinkVRの使用方法としてサポートされていません",
+  "StreamPreflight_HostPCOnWirelessDescription": "ホストPCがルーターにワイヤレスで接続されていますが、これはSteamリンクの使用方法としてサポートされていません。",
   "StreamPreflight_WifiBandwidthLow": "ワイヤレス接続が不良です。",
   "StreamPreflight_WifiBandwidthLowDescription": "ストリーミング体験を向上させるために、Wi-Fi接続を改善してください。",
   "StreamCheck_WifiNotConnected": "WiFiに接続されていません",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "Steamリンクを実行中のPCはデータを送信していますが、ヘッドセットがそれを解析できません。Steamリンクを再起動してみてください。",
   "StreamSideBand_WrongId": "セッションの不一致",
   "StreamSideBand_WrongIdDescription": "ヘッドセットのセッションがホストのSteamVRセッションと一致しません。アプリを再起動してください。",
+  "StreamSideBand_AlreadyActiveLocal": "他のヘッドセットがアクティブになりました",
+  "StreamSideBand_AlreadyActiveLocalDescription": "ホストPCで別のヘッドセットがアクティブになっています。接続を解除してSteamVRを再起動してください。",
   "StreamSideBand_AlreadyActive": "ホストPCがビジー状態です",
   "StreamSideBand_AlreadyActiveDescription": "別のヘッドセットがホストPCに接続されています。接続が切断されるのを待っています。",
   "StreamSideBand_UnknownIssue": "不明なエラー",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "SteamVRがお使いのPCで再起動されました。再接続してください。",
   "Abort_HostQuitTitle": "ホストが終了",
   "Abort_HostQuitDescription": "お使いのPCでSteamVRが終了しました。Steamリンクを再起動して再接続してください。",
-  "ErrorCode": "エラー %0$s"
+  "ErrorCode": "エラー %0$s",
+  "StreamPreflight_IgnoreForNetwork": "このネットワークで今後これについて警告しない"
 }

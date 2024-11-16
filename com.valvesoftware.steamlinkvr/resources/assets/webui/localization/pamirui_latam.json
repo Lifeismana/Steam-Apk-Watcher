@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "LA PC host está bloqueada",
   "StreamPreflight_HostPCLockedDescription": "Tu PC host está bloqueada y la retransmisión no comenzará hasta que se desbloquee",
   "StreamPreflight_HostPCOnWireless": "Tu PC host está conectada de manera inalámbrica a tu router",
-  "StreamPreflight_HostPCOnWirelessDescription": "Tu PC host está conectada de manera inalámbrica a tu router, lo cual no es un método compatible para usar SteamLinkVR",
+  "StreamPreflight_HostPCOnWirelessDescription": "Tu PC host está conectada de manera inalámbrica a tu router, lo cual no es un método compatible con SteamLink.",
   "StreamPreflight_WifiBandwidthLow": "La conexión inalámbrica es de baja calidad.",
   "StreamPreflight_WifiBandwidthLowDescription": "Comprueba tu conexión wifi para que la transmisión funcione mejor.",
   "StreamCheck_WifiNotConnected": "Wifi desconectado",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "El equipo en el que se ejecuta Steam Link está enviando datos, pero el visor no puede analizarlos. Intenta reiniciar Steam Link.",
   "StreamSideBand_WrongId": "Error de coincidencia en la sesión",
   "StreamSideBand_WrongIdDescription": "Tu sesión de visor no coincide con la sesión de SteamVR. Reinicia la aplicación.",
+  "StreamSideBand_AlreadyActiveLocal": "Otro visor activado",
+  "StreamSideBand_AlreadyActiveLocalDescription": "Se activó otro visor en tu PC. Desconecta y reinicia SteamVR.",
   "StreamSideBand_AlreadyActive": "El equipo que realiza la transmisión está ocupado",
   "StreamSideBand_AlreadyActiveDescription": "Hay otro visor conectado al equipo. Esperando a que se desconecte.",
   "StreamSideBand_UnknownIssue": "Problema desconocido",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "SteamVR ha sido reiniciado en tu PC. Vuelve a conectar.",
   "Abort_HostQuitTitle": "Transmisión cancelada",
   "Abort_HostQuitDescription": "Se cerró SteamVR en tu equipo. Reinicia Steam Link para restablecer la conexión.",
-  "ErrorCode": "Error: %0$s"
+  "ErrorCode": "Error: %0$s",
+  "StreamPreflight_IgnoreForNetwork": "No volver a mostrar este aviso en esta red"
 }

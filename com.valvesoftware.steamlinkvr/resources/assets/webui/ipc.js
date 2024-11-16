@@ -17,9 +17,12 @@ const SetOnConnectCallback = (callback) => {
 
 const UpdateAppPath = (sPath, value) => {
     SendIPCMessage("app_path_updated", {
-        sPath,
-        value
+        [sPath]: value
     });
+}
+
+const UpdateAppPaths = (paths) => {
+    SendIPCMessage("app_path_updated", paths);
 }
 
 const SendHaptic = () => {
@@ -86,7 +89,8 @@ const OnLaserIntersectionMessage = (sReceivedData) => {
         let bDidClickSomething = false;
         const elements = document.elementsFromPoint(x, y);
         for (const element of elements) {
-            if (element.nodeName === "BUTTON") {
+            const lElement = element.nodeName?.toLowerCase();
+            if (lElement === "button") {
                 element.click();
                 bDidClickSomething = true;
                 console.log("click: " + element.id);
@@ -95,6 +99,20 @@ const OnLaserIntersectionMessage = (sReceivedData) => {
                 setTimeout(() => {
                     RemoveClass(element, "button-active");
                 }, 200);
+            }
+
+            if(lElement === "input" && element.type === "checkbox") {
+                element.checked = !element.checked;
+                if(element.checked) {
+                    element.setAttribute("checked", "checked");
+                } else {
+                    element.removeAttribute("checked");
+                }
+
+                let event = new Event('change');
+                element.dispatchEvent(event);
+                bDidClickSomething = true;
+                SendHaptic();
             }
         }
         if (!bDidClickSomething)

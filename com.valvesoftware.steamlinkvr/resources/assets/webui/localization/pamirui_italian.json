@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "Il PC host è bloccato",
   "StreamPreflight_HostPCLockedDescription": "Il tuo PC host è bloccato, e la trasmissione non inizierà finché non sarà sbloccato.",
   "StreamPreflight_HostPCOnWireless": "Il tuo PC host è connesso al tuo router in modalità wireless.",
-  "StreamPreflight_HostPCOnWirelessDescription": "Il tuo PC host è connesso al tuo router in modalità wireless, che non è un metodo supportato per l'utilizzo di SteamLinkVR.",
+  "StreamPreflight_HostPCOnWirelessDescription": "Il tuo PC host è connesso in modalità wireless al router, il che non è un metodo supportato per utilizzare Steam Link.",
   "StreamPreflight_WifiBandwidthLow": "La connessione wireless è scadente.",
   "StreamPreflight_WifiBandwidthLowDescription": "Migliora la tua connessione WiFi per una migliore esperienza di trasmissione.",
   "StreamCheck_WifiNotConnected": "Wi-Fi non connesso",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "Il tuo PC con Steam Link in esecuzione sta inviando i dati, ma il visore non è in grado di elaborarli. Prova a riavviare Steam Link.",
   "StreamSideBand_WrongId": "Incompatibilità tra sessioni",
   "StreamSideBand_WrongIdDescription": "La sessione del tuo visore non corrisponde alla sessione di SteamVR del tuo host. Riavvia l'applicazione.",
+  "StreamSideBand_AlreadyActiveLocal": "Altro visore attivato",
+  "StreamSideBand_AlreadyActiveLocalDescription": "Si è attivato un altro visore sul tuo PC host. Disconnettilo e riavvia SteamVR.",
   "StreamSideBand_AlreadyActive": "Il PC host è occupato",
   "StreamSideBand_AlreadyActiveDescription": "Un altro visore è collegato al PC host. In attesa della disconnessione.",
   "StreamSideBand_UnknownIssue": "Problema sconosciuto",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "SteamVR è stato riavviato sul tuo PC. Riconnettiti.",
   "Abort_HostQuitTitle": "Host chiuso",
   "Abort_HostQuitDescription": "SteamVR è uscito sul tuo PC. Riavvia Steam Link per riconnetterti.",
-  "ErrorCode": "Errore %0$s"
+  "ErrorCode": "Errore %0$s",
+  "StreamPreflight_IgnoreForNetwork": "Non visualizzare più questo avviso su questa rete"
 }

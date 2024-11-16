@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "Ana bilgisayar kilitli.",
   "StreamPreflight_HostPCLockedDescription": "Ana bilgisayarınız kilitli ve kilidi açılana kadar yayın başlamayacaktır.",
   "StreamPreflight_HostPCOnWireless": "Ana bilgisayarınız modeminize kablosuz bir şekilde bağlı.",
-  "StreamPreflight_HostPCOnWirelessDescription": "Ana bilgisayarınız, SteamLinkVR'ı kullanmak için desteklemeyen bir yöntem olan kablosuz olarak bağlıdır.",
+  "StreamPreflight_HostPCOnWirelessDescription": "Ana bilgisayarınız yönlendiriciye kablosuz olarak bağlı. Steam Link bu bağlantı yöntemini desteklemiyor.",
   "StreamPreflight_WifiBandwidthLow": "Kablosuz bağlantı gücü zayıf.",
   "StreamPreflight_WifiBandwidthLowDescription": "Daha iyi bir deneyim için lütfen Wi-Fi bağlantınızı iyileştirin.",
   "StreamCheck_WifiNotConnected": "Wi-Fi bağlı değil",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "Steam Link'i çalıştıran bilgisayarınız veri gönderiyor ancak başlık bunu ayrıştıramıyor. Steam Link'i yeniden başlatmayı deneyin.",
   "StreamSideBand_WrongId": "Oturum Uyuşmazlığı",
   "StreamSideBand_WrongIdDescription": "Başlıktaki oturumunuz ana bilgisayarınızdaki SteamVR oturumuyla eşleşmiyor. Lütfen uygulamayı yeniden başlatın.",
+  "StreamSideBand_AlreadyActiveLocal": "Başka Bir Başlık Etkinleştirildi",
+  "StreamSideBand_AlreadyActiveLocalDescription": "Ana bilgisayarınızda başka bir başlık etkinleştirildi. Lütfen bağlantısını kesin ve SteamVR'ı yeniden başlatın.",
   "StreamSideBand_AlreadyActive": "Ana bilgisayar meşgul.",
   "StreamSideBand_AlreadyActiveDescription": "Ana bilgisayarınıza başka bir başlık bağlı. Bu başlığın bağlantısının kesilmesi bekleniyor.",
   "StreamSideBand_UnknownIssue": "Bilinmeyen Sorun",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "SteamVR, bilgisayarınızda yeniden başlatıldı. Lütfen tekrar bağlanın.",
   "Abort_HostQuitTitle": "Ana bilgisayar çıktı.",
   "Abort_HostQuitDescription": "SteamVR, bilgisayarınızda çıktı. Tekrar bağlanmak için Steam Link'i yeniden başlatın.",
-  "ErrorCode": "Hata: %0$s"
+  "ErrorCode": "Hata: %0$s",
+  "StreamPreflight_IgnoreForNetwork": "Bu ağda beni bir daha bu konuda uyarma"
 }

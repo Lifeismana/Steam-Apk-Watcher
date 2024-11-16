@@ -16,7 +16,8 @@
         "sInputProfilePath": "{oculus}/input/touch_profile.json",
         "flLaserMouseHmdAngleDegrees": 0,
         "sControllerType": "oculus_touch",
-        "sDeviceType": "oculus/VRLINKQ2_Controller_Left"
+        "sDeviceType": "oculus/VRLINKQ2_Controller_Left",
+        "ubDriverType": 0
       },
       "right": {
         "sTrackingSystem": "oculus",
@@ -28,7 +29,8 @@
         "sInputProfilePath": "{oculus}/input/touch_profile.json",
         "flLaserMouseHmdAngleDegrees": 0,
         "sControllerType": "oculus_touch",
-        "sDeviceType": "oculus/VRLINKQ2_Controller_Right"
+        "sDeviceType": "oculus/VRLINKQ2_Controller_Right",
+        "ubDriverType": 0
       }
     },
     "/interaction_profiles/facebook/touch_controller_pro": {
@@ -42,7 +44,8 @@
         "sInputProfilePath": "{oculus}/input/touch_profile.json",
         "flLaserMouseHmdAngleDegrees": 0,
         "sControllerType": "oculus_touch",
-        "sDeviceType": "oculus/VRLINKQP_Controller_Left"
+        "sDeviceType": "oculus/VRLINKQP_Controller_Left",
+        "ubDriverType": 0
       },
       "right": {
         "sTrackingSystem": "oculus",
@@ -54,7 +57,8 @@
         "sInputProfilePath": "{oculus}/input/touch_profile.json",
         "flLaserMouseHmdAngleDegrees": 0,
         "sControllerType": "oculus_touch",
-        "sDeviceType": "oculus/VRLINKQP_Controller_Right"
+        "sDeviceType": "oculus/VRLINKQP_Controller_Right",
+        "ubDriverType": 0
       }
     },
     "/interaction_profiles/meta/touch_controller_plus": {
@@ -68,7 +72,8 @@
         "sInputProfilePath": "{oculus}/input/touch_profile.json",
         "flLaserMouseHmdAngleDegrees": 0,
         "sControllerType": "oculus_touch",
-        "sDeviceType": "oculus/VRLINKQ3_Controller_Left"
+        "sDeviceType": "oculus/VRLINKQ3_Controller_Left",
+        "ubDriverType": 0
       },
       "right": {
         "sTrackingSystem": "oculus",
@@ -80,7 +85,8 @@
         "sInputProfilePath": "{oculus}/input/touch_profile.json",
         "flLaserMouseHmdAngleDegrees": 0,
         "sControllerType": "oculus_touch",
-        "sDeviceType": "oculus/VRLINKQ3_Controller_Right"
+        "sDeviceType": "oculus/VRLINKQ3_Controller_Right",
+        "ubDriverType": 0
       }
     },
     "/interaction_profiles/bytedance/pico4_controller": {
@@ -94,7 +100,8 @@
         "sInputProfilePath": "{oculus}/input/touch_profile.json",
         "flLaserMouseHmdAngleDegrees": 0,
         "sControllerType": "oculus_touch",
-        "sDeviceType": "oculus/VRLINKQ3_Controller_Left"
+        "sDeviceType": "oculus/VRLINKQ3_Controller_Left",
+        "ubDriverType": 0
       },
       "right": {
         "sTrackingSystem": "oculus",
@@ -106,7 +113,8 @@
         "sInputProfilePath": "{oculus}/input/touch_profile.json",
         "flLaserMouseHmdAngleDegrees": 0,
         "sControllerType": "oculus_touch",
-        "sDeviceType": "oculus/VRLINKQ3_Controller_Right"
+        "sDeviceType": "oculus/VRLINKQ3_Controller_Right",
+        "ubDriverType": 0
       }
     }
   },

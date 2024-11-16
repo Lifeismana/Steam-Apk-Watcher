@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "เครื่อง PC ที่เป็นโฮสต์ถูกล็อค",
   "StreamPreflight_HostPCLockedDescription": "เครื่อง PC ของคุณที่เป็นโฮสต์ถูกล็อค และการสตรีมจะไม่เริ่มต้นจนกว่าจะปลดล็อค PC ดังกล่าวก่อน",
   "StreamPreflight_HostPCOnWireless": "เครื่อง PC ของคุณที่เป็นโฮสต์เชื่อมต่อแบบไร้สายอยู่กับเราเตอร์ของคุณ",
-  "StreamPreflight_HostPCOnWirelessDescription": "เครื่อง PC ของคุณที่เป็นโฮสต์เชื่อมต่อแบบไร้สายอยู่กับเราเตอร์ของคุณ ซึ่งไม่ใช่วิธีใช้ SteamLinkVR ที่ได้รับการรองรับ",
+  "StreamPreflight_HostPCOnWirelessDescription": "เครื่อง PC ของคุณที่เป็นโฮสต์เชื่อมต่อแบบไร้สายอยู่กับเราเตอร์ของคุณ ซึ่งไม่ใช่วิธีใช้ Steam Link ที่ได้รับการรองรับ",
   "StreamPreflight_WifiBandwidthLow": "การเชื่อมต่อแบบไร้สายมีประสิทธิภาพต่ำ",
   "StreamPreflight_WifiBandwidthLowDescription": "โปรดปรับปรุงการเชื่อมต่อ Wi-Fi ของคุณเพื่อให้มีประสบการณ์การสตรีมที่ดียิ่งขึ้น",
   "StreamCheck_WifiNotConnected": "WiFi ไม่ได้เชื่อมต่ออยู่",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "เครื่อง PC ของคุณที่ใช้ Steam Link กำลังส่งข้อมูลอยู่ แต่เครื่องสวมศีรษะไม่สามารถวิเคราะห์ได้ โปรดลองรีสตาร์ท Steam Link",
   "StreamSideBand_WrongId": "เซสชันไม่ตรงกัน",
   "StreamSideBand_WrongIdDescription": "เซสชันเครื่องสวมศีรษะของคุณไม่ตรงกับเซสชัน SteamVR ของโฮสต์ของคุณ โปรดรีสตาร์ทแอป",
+  "StreamSideBand_AlreadyActiveLocal": "เครื่องสวมศีรษะอีกชุดหนึ่งเปิดใช้งานอยู่",
+  "StreamSideBand_AlreadyActiveLocalDescription": "เครื่องสวมศีรษะอีกชุดหนึ่งเปิดใช้งานบนเครื่อง PC ที่เป็นโฮสต์ของคุณอยู่ โปรดตัดการเชื่อมต่อแล้วรีสตาร์ท SteamVR",
   "StreamSideBand_AlreadyActive": "เครื่อง PC ที่เป็นโฮสต์ไม่ว่าง",
   "StreamSideBand_AlreadyActiveDescription": "เครื่องสวมศีรษะอีกชุดหนึ่งเชื่อมต่อกับเครื่อง PC ที่เป็นโฮสต์ของคุณอยู่แล้ว กำลังรอตัดการเชื่อมต่อกับชุดดังกล่าว",
   "StreamSideBand_UnknownIssue": "ปัญหาที่ไม่ทราบสาเหตุ",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "SteamVR ได้รีสตาร์ทในเครื่อง PC ของคุณแล้ว โปรดเชื่อมต่อใหม่อีกครั้ง",
   "Abort_HostQuitTitle": "โฮสต์หยุดทำงาน",
   "Abort_HostQuitDescription": "SteamVR ในเครื่อง PC ของคุณได้ปิดโปรแกรมลงแล้ว โปรดรีสตาร์ท Steam Link เพื่อเชื่อมต่อใหม่อีกครั้ง",
-  "ErrorCode": "ข้อผิดพลาด %0$s"
+  "ErrorCode": "ข้อผิดพลาด %0$s",
+  "StreamPreflight_IgnoreForNetwork": "อย่าเตือนฉันเกี่ยวกับเรื่องนี้ในเครือข่ายนี้อีก"
 }

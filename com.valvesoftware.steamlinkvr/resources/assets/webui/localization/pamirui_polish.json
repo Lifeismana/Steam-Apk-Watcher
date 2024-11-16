@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "Komputer-host jest zablokowany",
   "StreamPreflight_HostPCLockedDescription": "Twój komputer-host jest zablokowany i strumieniowanie nie będzie możliwe do czasu, aż zostanie odblokowany.",
   "StreamPreflight_HostPCOnWireless": "Twój komputer-host jest połączony bezprzewodowo z twoim routerem",
-  "StreamPreflight_HostPCOnWirelessDescription": "Twój komputer-host jest połączony bezprzewodowo z twoim routerem, co nie jest obsługiwaną metodą przez SteamLinkVR.",
+  "StreamPreflight_HostPCOnWirelessDescription": "Twój komputer-host jest połączony bezprzewodowo z twoim routerem, co nie jest obsługiwaną metodą korzystania z aplikacji Steam Link.",
   "StreamPreflight_WifiBandwidthLow": "Połączenie bezprzewodowe jest kiepskiej jakości",
   "StreamPreflight_WifiBandwidthLowDescription": "Popraw swoje połączenie Wi-Fi, by strumieniowanie działało lepiej.",
   "StreamCheck_WifiNotConnected": "Brak połączenia z siecią Wi-Fi",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "Twój komputer z uruchomioną aplikacją Steam Link przesyła dane, ale gogle nie są w stanie ich przetworzyć. Uruchom aplikację ponownie.",
   "StreamSideBand_WrongId": "Niezgodność sesji",
   "StreamSideBand_WrongIdDescription": "Sesja gogli jest niezgodna z sesją SteamVR twojego hosta. Uruchom aplikację ponownie.",
+  "StreamSideBand_AlreadyActiveLocal": "Włączono inne gogle",
+  "StreamSideBand_AlreadyActiveLocalDescription": "Na twoim komputerze-hoście zostały włączone inne gogle. Odłącz je i zrestartuj SteamVR.",
   "StreamSideBand_AlreadyActive": "Komputer-host jest zajęty",
   "StreamSideBand_AlreadyActiveDescription": "Do twojego komputera-hosta podłączone są inne gogle. Oczekiwanie na odłączenie ich.",
   "StreamSideBand_UnknownIssue": "Nieznany problem",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "SteamVR został zrestartowany na twoim komputerze. Nawiąż połączenie ponownie.",
   "Abort_HostQuitTitle": "Host zakończył połączenie",
   "Abort_HostQuitDescription": "SteamVR zostało zamknięte na twoim komputerze. Zrestartuj aplikację Steam Link, aby ponownie nawiązać połączenie.",
-  "ErrorCode": "Błąd %0$s"
+  "ErrorCode": "Błąd %0$s",
+  "StreamPreflight_IgnoreForNetwork": "Nie ostrzegaj mnie o tym ponownie w tej sieci."
 }

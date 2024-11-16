@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "Основной компьютер заблокирован",
   "StreamPreflight_HostPCLockedDescription": "Трансляция не начнётся, пока основной компьютер не будет разблокирован.",
   "StreamPreflight_HostPCOnWireless": "Основной компьютер подключён к маршрутизатору по беспроводной сети",
-  "StreamPreflight_HostPCOnWirelessDescription": "Основной компьютер подключён к маршрутизатору по беспроводной сети. Этот способ подключения не поддерживается для Steam Link VR.",
+  "StreamPreflight_HostPCOnWirelessDescription": "Основной компьютер подключён к маршрутизатору по беспроводной сети. Этот способ подключения не поддерживается Steam Link.",
   "StreamPreflight_WifiBandwidthLow": "Плохое беспроводное соединение.",
   "StreamPreflight_WifiBandwidthLowDescription": "Чтобы повысить качество трансляции, улучшите своё соединение Wi-Fi.",
   "StreamCheck_WifiNotConnected": "Нет подключения к Wi-Fi",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "Компьютер с запущенным Steam Link отправляет данные, однако шлем не может их обработать. Попробуйте перезапустить Steam Link.",
   "StreamSideBand_WrongId": "Несоответствие сессий",
   "StreamSideBand_WrongIdDescription": "Сессия шлема не соответствует сессии SteamVR на основном компьютере. Перезапустите приложение.",
+  "StreamSideBand_AlreadyActiveLocal": "Активирован другой шлем",
+  "StreamSideBand_AlreadyActiveLocalDescription": "На основном компьютере активирован другой шлем. Отключите его и перезапустите SteamVR.",
   "StreamSideBand_AlreadyActive": "Основной компьютер занят",
   "StreamSideBand_AlreadyActiveDescription": "К основному компьютеру подключён другой шлем. Отключите его.",
   "StreamSideBand_UnknownIssue": "Неизвестная ошибка",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "SteamVR на вашем компьютере перезапустился. Подключитесь заново.",
   "Abort_HostQuitTitle": "SteamVR прекратил работу",
   "Abort_HostQuitDescription": "SteamVR на вашем компьютере прекратил работу. Перезапустите Steam Link, чтобы подключиться заново.",
-  "ErrorCode": "Ошибка %0$s"
+  "ErrorCode": "Ошибка %0$s",
+  "StreamPreflight_IgnoreForNetwork": "Не повторять предупреждение в этой сети"
 }

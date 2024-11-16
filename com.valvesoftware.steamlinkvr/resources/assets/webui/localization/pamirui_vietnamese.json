@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "Máy PC chủ bị khóa",
   "StreamPreflight_HostPCLockedDescription": "Máy PC chủ bị khóa và không thể phát sóng cho đến khi mở khóa",
   "StreamPreflight_HostPCOnWireless": "Máy PC chủ đang kết nối không dây tới router",
-  "StreamPreflight_HostPCOnWirelessDescription": "Máy PC chủ đang kết nối không dây tới router và đây không phải là cách được hỗ trợ để dùng SteamLinkVR",
+  "StreamPreflight_HostPCOnWirelessDescription": "Máy PC chủ đang kết nối không dây tới router và đây không phải là cách được hỗ trợ để dùng Steam Link.",
   "StreamPreflight_WifiBandwidthLow": "Kết nối không dây kém.",
   "StreamPreflight_WifiBandwidthLowDescription": "Vui lòng cải thiện kết nối wifi để có trải nghiệm phát sóng tốt hơn.",
   "StreamCheck_WifiNotConnected": "Không kết nối được WiFi",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "PC chạy Steam Link của bạn đang gửi dữ liệu, nhưng mũ chụp không thể đọc nó. Hãy thử khởi động lại Steam Link.",
   "StreamSideBand_WrongId": "Phiên không khớp",
   "StreamSideBand_WrongIdDescription": "Phiên của mũ chụp không khớp với phiên SteamVR của máy chủ. Hãy khởi động lại ứng dụng.",
+  "StreamSideBand_AlreadyActiveLocal": "Đã kích hoạt mũ chụp khác",
+  "StreamSideBand_AlreadyActiveLocalDescription": "Một mũ chụp khác đã kích hoạt trên máy PC chủ. Vui lòng ngắt kết nối và khởi động lại SteamVR.",
   "StreamSideBand_AlreadyActive": "Máy PC chủ đang bận",
   "StreamSideBand_AlreadyActiveDescription": "Một mũ chụp khác đang kết nối với máy PC chủ. Đang chờ nó ngắt kết nối.",
   "StreamSideBand_UnknownIssue": "Lỗi không xác định",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "SteamVR đã khởi động lại trên PC của bạn. Vui lòng kết nối lại.",
   "Abort_HostQuitTitle": "Máy chủ đã thoát",
   "Abort_HostQuitDescription": "SteamVR đã đóng trên PC của bạn. Khởi động lại Steam Link để kết nối lại.",
-  "ErrorCode": "Lỗi %0$s"
+  "ErrorCode": "Lỗi %0$s",
+  "StreamPreflight_IgnoreForNetwork": "Đừng cảnh báo tôi về điều này trên mạng này nữa"
 }

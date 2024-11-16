@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "主机已锁定",
   "StreamPreflight_HostPCLockedDescription": "您的主机已锁定，只有解锁后才能进行流式传输",
   "StreamPreflight_HostPCOnWireless": "您的主机已无线连接至您的路由器",
-  "StreamPreflight_HostPCOnWirelessDescription": "您的主机已无线连接至您的路由器，但无法通过无线连接的方式使用 SteamLinkVR",
+  "StreamPreflight_HostPCOnWirelessDescription": "您的主机 PC 已无线连接至您的路由器，但是不支持用此方式使用 Steam 流式传输。",
   "StreamPreflight_WifiBandwidthLow": "无线连接质量不佳。",
   "StreamPreflight_WifiBandwidthLowDescription": "请改善您的 WiFi 连接以获得更好的流式传输体验。",
   "StreamCheck_WifiNotConnected": "WiFi 未连接",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "使用 Steam 流式应用的 PC 正在发送数据，但头戴式显示器无法对其进行分析。请尝试重启 Steam 流式应用。",
   "StreamSideBand_WrongId": "会话不匹配",
   "StreamSideBand_WrongIdDescription": "您头戴式显示器的会话与您主机的 SteamVR 会话不匹配。请重启应用。",
+  "StreamSideBand_AlreadyActiveLocal": "已启用其他头戴式显示器",
+  "StreamSideBand_AlreadyActiveLocalDescription": "在您的主机上已启用了另一台头戴式显示器。请将其断开连接然后重启 SteamVR。",
   "StreamSideBand_AlreadyActive": "主机忙",
   "StreamSideBand_AlreadyActiveDescription": "另一头戴式显示器已连接至您的主机。正在等待其断开连接。",
   "StreamSideBand_UnknownIssue": "未知问题",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "SteamVR 已在您的 PC 上重新启动。请重新连接。",
   "Abort_HostQuitTitle": "主机退出",
   "Abort_HostQuitDescription": "SteamVR 已在您的 PC 上退出。重启 Steam 流式应用以重新连接。",
-  "ErrorCode": "错误 %0$s"
+  "ErrorCode": "错误 %0$s",
+  "StreamPreflight_IgnoreForNetwork": "不要再在此网络上警告我这个问题"
 }

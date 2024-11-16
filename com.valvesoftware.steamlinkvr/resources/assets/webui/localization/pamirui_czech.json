@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "Hostitelský počítač je zamčený",
   "StreamPreflight_HostPCLockedDescription": "Váš hostitelský počítač je zamčený – streamování bude zahájeno po odemčení.",
   "StreamPreflight_HostPCOnWireless": "Hostitelský počítač je připojený bezdrátově",
-  "StreamPreflight_HostPCOnWirelessDescription": "Váš hostitelský počítač je k routeru připojený bezdrátově, což aplikace Steam Link VR nepodporuje.",
+  "StreamPreflight_HostPCOnWirelessDescription": "Váš hostitelský počítač je k routeru připojený bezdrátově, což aplikace Steam Link nepodporuje.",
   "StreamPreflight_WifiBandwidthLow": "Špatné bezdrátové připojení",
   "StreamPreflight_WifiBandwidthLowDescription": "Pro zkvalitnění zážitku ze streamování zajistěte lepší bezdrátové připojení.",
   "StreamCheck_WifiNotConnected": "Zařízení není připojeno",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "Váš počítač se spuštěnou aplikací Steam Link odesílá data, ale headset je nezvládá zpracovat. Zkuste restartovat aplikaci Steam Link.",
   "StreamSideBand_WrongId": "Neshoda relací",
   "StreamSideBand_WrongIdDescription": "Relace headsetu se neshoduje s relací režimu SteamVR na hostitelském počítači. Restartujte aplikaci.",
+  "StreamSideBand_AlreadyActiveLocal": "Byl aktivován jiný headset",
+  "StreamSideBand_AlreadyActiveLocalDescription": "Na hostitelském počítači byl aktivován jiný headset. Odpojte ho a restartujte režim SteamVR.",
   "StreamSideBand_AlreadyActive": "Hostitelský počítač je zaneprázdněný",
   "StreamSideBand_AlreadyActiveDescription": "K hostitelskému počítači je připojen jiný headset. Čeká se na jeho odpojení.",
   "StreamSideBand_UnknownIssue": "Neznámá chyba",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "Na hostitelském počítači byl restartován režim SteamVR. Zopakujte připojení.",
   "Abort_HostQuitTitle": "Na hostitelském počítači došlo k ukončení",
   "Abort_HostQuitDescription": "Na hostitelském počítači došlo k ukončení režimu SteamVR. Pro opětovné připojení restartujte aplikaci Steam Link.",
-  "ErrorCode": "Chyba %0$s"
+  "ErrorCode": "Chyba %0$s",
+  "StreamPreflight_IgnoreForNetwork": "V této síti znovu neupozorňovat"
 }

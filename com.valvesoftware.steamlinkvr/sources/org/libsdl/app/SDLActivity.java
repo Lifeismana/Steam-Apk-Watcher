@@ -126,6 +126,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
 
     public static native int nativeCheckSDLThreadCounter();
 
+    public static native void nativeCleanupMainThread();
+
     public static native void nativeFocusChanged(boolean z);
 
     public static native String nativeGetHint(String str);
@@ -133,6 +135,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     public static native boolean nativeGetHintBoolean(String str, boolean z);
 
     public static native String nativeGetVersion();
+
+    public static native void nativeInitMainThread();
 
     public static native void nativeLowMemory();
 
@@ -166,6 +170,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
 
     public static native void onNativeFileDialog(int i, String[] strArr, int i2);
 
+    public static native void onNativeInsetsChanged(int i, int i2, int i3, int i4);
+
     public static native void onNativeKeyDown(int i);
 
     public static native void onNativeKeyUp(int i);
@@ -194,13 +200,11 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         return false;
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
-    public String[] getArguments() {
+    protected String[] getArguments() {
         return new String[0];
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
-    public String getMainFunction() {
+    protected String getMainFunction() {
         return "SDL_main";
     }
 
@@ -216,12 +220,17 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         return mMotionListener;
     }
 
-    protected Runnable createSDLMainRunnable() {
-        return new SDLMain();
+    /* JADX INFO: Access modifiers changed from: protected */
+    public void main() {
+        String mainSharedObject = mSingleton.getMainSharedObject();
+        String mainFunction = mSingleton.getMainFunction();
+        String[] arguments = mSingleton.getArguments();
+        Log.v(TAG, "Running main function " + mainFunction + " from library " + mainSharedObject);
+        nativeRunMain(mainSharedObject, mainFunction, arguments);
+        Log.v(TAG, "Finished main function");
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
-    public String getMainSharedObject() {
+    protected String getMainSharedObject() {
         String[] libraries = mSingleton.getLibraries();
         return getContext().getApplicationInfo().nativeLibraryDir + "/" + (libraries.length > 0 ? "lib" + libraries[libraries.length - 1] + ".so" : "libmain.so");
     }
@@ -630,7 +639,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         if (mNextNativeState == NativeState.RESUMED && mSurface.mIsSurfaceReady) {
             if ((mHasFocus || mHasMultiWindow) && mIsResumedCalled) {
                 if (mSDLThread == null) {
-                    mSDLThread = new Thread(mSingleton.createSDLMainRunnable(), "SDLThread");
+                    mSDLThread = new Thread(new SDLMain(), "SDLThread");
                     mSurface.enableSensor(1, true);
                     mSDLThread.start();
                 } else {
@@ -674,12 +683,13 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
                             window2.addFlags(1024);
                             window2.clearFlags(2048);
                             SDLActivity.mFullscreenModeActive = true;
-                            return;
+                        } else {
+                            window2.getDecorView().setSystemUiVisibility(256);
+                            window2.addFlags(2048);
+                            window2.clearFlags(1024);
+                            SDLActivity.mFullscreenModeActive = false;
                         }
-                        window2.getDecorView().setSystemUiVisibility(256);
-                        window2.addFlags(2048);
-                        window2.clearFlags(1024);
-                        SDLActivity.mFullscreenModeActive = false;
+                        window2.getAttributes().layoutInDisplayCutoutMode = 3;
                         return;
                     }
                     return;
@@ -763,9 +773,9 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         }
     }
 
-    /* JADX WARN: Code restructure failed: missing block: B:33:0x0075, code lost:
+    /* JADX WARN: Code restructure failed: missing block: B:34:0x0075, code lost:
     
-        if (r6 != false) goto L59;
+        if (r4 != false) goto L57;
      */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
@@ -773,10 +783,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     public void setOrientationBis(int i, int i2, boolean z, String str) {
         int i3;
         int i4;
-        boolean contains = str.contains("LandscapeRight");
-        int i5 = SDL_SYSTEM_CURSOR_SIZENESW;
-        if (contains && str.contains("LandscapeLeft")) {
-            i3 = SDL_SYSTEM_CURSOR_SIZENESW;
+        if (str.contains("LandscapeRight") && str.contains("LandscapeLeft")) {
+            i3 = SDL_SYSTEM_CURSOR_HAND;
         } else if (str.contains("LandscapeLeft")) {
             i3 = 0;
         } else {
@@ -784,7 +792,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         }
         boolean z2 = str.contains("Portrait ") || str.endsWith("Portrait");
         if (z2 && str.contains("PortraitUpsideDown")) {
-            i4 = SDL_SYSTEM_CURSOR_SIZEWE;
+            i4 = SDL_SYSTEM_CURSOR_WINDOW_TOPLEFT;
         } else if (z2) {
             i4 = 1;
         } else {
@@ -792,23 +800,21 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         }
         boolean z3 = i3 != -1;
         boolean z4 = i4 != -1;
-        int i6 = SDL_SYSTEM_CURSOR_WINDOW_TOP;
+        int i5 = SDL_SYSTEM_CURSOR_WINDOW_TOP;
         if (z4 || z3) {
             if (!z) {
                 if (z4) {
                 }
                 i3 = i4;
-                i6 = i3;
+                i5 = i3;
             } else if (!z4 || !z3) {
             }
         } else if (!z) {
-            if (i <= i2) {
-                i5 = SDL_SYSTEM_CURSOR_SIZEWE;
-            }
-            i6 = i5;
+            i3 = i > i2 ? SDL_SYSTEM_CURSOR_SIZENESW : SDL_SYSTEM_CURSOR_SIZEWE;
+            i5 = i3;
         }
-        Log.v(TAG, "setOrientation() requestedOrientation=" + i6 + " width=" + i + " height=" + i2 + " resizable=" + z + " hint=" + str);
-        mSingleton.setRequestedOrientation(i6);
+        Log.v(TAG, "setOrientation() requestedOrientation=" + i5 + " width=" + i + " height=" + i2 + " resizable=" + z + " hint=" + str);
+        mSingleton.setRequestedOrientation(i5);
     }
 
     public static void minimizeWindow() {
@@ -929,6 +935,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
 
         /* renamed from: h */
         public int f1h;
+        public int input_type;
 
         /* renamed from: w */
         public int f2w;
@@ -939,15 +946,16 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         /* renamed from: y */
         public int f4y;
 
-        public ShowTextInputTask(int i, int i2, int i3, int i4) {
-            this.f3x = i;
-            this.f4y = i2;
-            this.f2w = i3;
-            this.f1h = i4;
-            if (i3 <= 0) {
+        public ShowTextInputTask(int i, int i2, int i3, int i4, int i5) {
+            this.input_type = i;
+            this.f3x = i2;
+            this.f4y = i3;
+            this.f2w = i4;
+            this.f1h = i5;
+            if (i4 <= 0) {
                 this.f2w = 1;
             }
-            if (i4 + HEIGHT_PADDING <= 0) {
+            if (i5 + HEIGHT_PADDING <= 0) {
                 this.f1h = -14;
             }
         }
@@ -963,6 +971,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             } else {
                 SDLActivity.mTextEdit.setLayoutParams(layoutParams);
             }
+            SDLActivity.mTextEdit.setInputType(this.input_type);
             SDLActivity.mTextEdit.setVisibility(0);
             SDLActivity.mTextEdit.requestFocus();
             ((InputMethodManager) SDL.getContext().getSystemService("input_method")).showSoftInput(SDLActivity.mTextEdit, 0);
@@ -970,8 +979,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         }
     }
 
-    public static boolean showTextInput(int i, int i2, int i3, int i4) {
-        return mSingleton.commandHandler.post(new ShowTextInputTask(i, i2, i3, i4));
+    public static boolean showTextInput(int i, int i2, int i3, int i4, int i5) {
+        return mSingleton.commandHandler.post(new ShowTextInputTask(i, i2, i3, i4, i5));
     }
 
     public static boolean isTextInputEvent(KeyEvent keyEvent) {

@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "A gazdaszámítógép zárolva van",
   "StreamPreflight_HostPCLockedDescription": "A gazdaszámítógéped zárolva van, és a továbbítás annak feloldásáig nem fog elindulni.",
   "StreamPreflight_HostPCOnWireless": "A gazdaszámítógéped vezeték nélkül csatlakozik a routeredhez.",
-  "StreamPreflight_HostPCOnWirelessDescription": "A gazdaszámítógéped vezeték nélkül csatlakozik a routeredhez, ami nem támogatott módja a SteamLinkVR használatának.",
+  "StreamPreflight_HostPCOnWirelessDescription": "A gazdaszámítógéped vezeték nélkül csatlakozik a routeredhez, ami nem támogatott módja a Steam Link használatának.",
   "StreamPreflight_WifiBandwidthLow": "A vezeték nélküli kapcsolat gyenge.",
   "StreamPreflight_WifiBandwidthLowDescription": "A jobb továbbítási élmény érdekében kérjük, javíts Wi-Fi kapcsolatodon.",
   "StreamCheck_WifiNotConnected": "A WiFi nem csatlakozik",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "A Steam Linket futtató számítógéped küld adatokat, de a fejszett nem tudja értelmezni azokat. Próbáld meg újraindítani a Steam Linket.",
   "StreamSideBand_WrongId": "Munkamenet-eltérés",
   "StreamSideBand_WrongIdDescription": "A fejszett-munkameneted nem egyezik meg a gazdagép SteamVR munkamenetével. Kérjük, indítsd újra az alkalmazást.",
+  "StreamSideBand_AlreadyActiveLocal": "Másik fejszett aktiválva",
+  "StreamSideBand_AlreadyActiveLocalDescription": "Egy másik fejszett aktiválódott a gazdaszámítógépeden. Kérjük, válaszd le, és indítsd újra a SteamVR-t.",
   "StreamSideBand_AlreadyActive": "A gazdaszámítógép elfoglalt",
   "StreamSideBand_AlreadyActiveDescription": "Egy másik fejszett csatlakozik a gazdaszámítógépedhez. Várakozás annak leválasztására.",
   "StreamSideBand_UnknownIssue": "Ismeretlen probléma",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "A SteamVR újraindult a számítógépeden. Kérjük, csatlakozz újra.",
   "Abort_HostQuitTitle": "A gazdagép kilépett",
   "Abort_HostQuitDescription": "A SteamVR kilépett a számítógépeden. Az újracsatlakozáshoz indítsd újra a Steam Linket.",
-  "ErrorCode": "Hiba: %0$s"
+  "ErrorCode": "Hiba: %0$s",
+  "StreamPreflight_IgnoreForNetwork": "Erre ezen a hálózaton ne figyelmeztess többé."
 }

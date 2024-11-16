@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "Host PC is locked",
   "StreamPreflight_HostPCLockedDescription": "Your host PC is locked and streaming won't begin until it's unlocked",
   "StreamPreflight_HostPCOnWireless": "Your host PC is connected wirelessly to your router",
-  "StreamPreflight_HostPCOnWirelessDescription": "Your host PC is connected wirelessly to your router which is not a supported method to use SteamLinkVR",
+  "StreamPreflight_HostPCOnWirelessDescription": "Your host PC is connected wirelessly to your router which is not a supported method to use Steam Link.",
   "StreamPreflight_WifiBandwidthLow": "Wireless connection is poor.",
   "StreamPreflight_WifiBandwidthLowDescription": "Please improve your wifi connection for a better streaming experience.",
   "StreamCheck_WifiNotConnected": "WiFi not connected",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "Your PC running Steam Link is sending data, but the headset is not able to parse it. Try restarting Steam Link.",
   "StreamSideBand_WrongId": "Session Mismatch",
   "StreamSideBand_WrongIdDescription": "Your headset session does not match your host's SteamVR session. Please restart the app.",
+  "StreamSideBand_AlreadyActiveLocal": "Other Headset Activated",
+  "StreamSideBand_AlreadyActiveLocalDescription": "Another headset has activated on your host PC. Please disconnect and restart SteamVR.",
   "StreamSideBand_AlreadyActive": "Host PC Busy",
   "StreamSideBand_AlreadyActiveDescription": "Another headset is connected to your host PC. Waiting for it to disconnect.",
   "StreamSideBand_UnknownIssue": "Unknown Issue",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "SteamVR has been restarted on your PC. Please reconnect.",
   "Abort_HostQuitTitle": "Host quit",
   "Abort_HostQuitDescription": "SteamVR has exited on your PC. Restart Steam Link to reconnect.",
-  "ErrorCode": "Error %0$s"
+  "ErrorCode": "Error %0$s",
+  "StreamPreflight_IgnoreForNetwork": "Don't warn me about this on this network again"
 }

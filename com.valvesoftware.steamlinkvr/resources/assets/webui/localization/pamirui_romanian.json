@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "PC-ul gazdă este blocat",
   "StreamPreflight_HostPCLockedDescription": "PC-ul tău gazdă este blocat, iar transmisiunea nu va începe până ce acesta nu este deblocat.",
   "StreamPreflight_HostPCOnWireless": "PC-ul tău gazdă este conectat wireless la routerul tău",
-  "StreamPreflight_HostPCOnWirelessDescription": "PC-ul tău gazdă este conectat wireless la routerul tău, iar aceasta nu este o metodă acceptată de SteamLinkVR.",
+  "StreamPreflight_HostPCOnWirelessDescription": "PC-ul tău gazdă este conectat wireless la routerul tău, iar aceasta nu este o metodă acceptată de Steam Link.",
   "StreamPreflight_WifiBandwidthLow": "Conexiunea wireless este slabă.",
   "StreamPreflight_WifiBandwidthLowDescription": "Te rugăm să-ți îmbunătățești conexiunea Wi-Fi pentru o experiență mai bună de transmisiune.",
   "StreamCheck_WifiNotConnected": "Neconectat la Wi-Fi",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "PC-ul tău pe care rulează Steam Link transmite date, dar casca nu le poate analiza sintactic. Încearcă să repornești Steam Link.",
   "StreamSideBand_WrongId": "Sesiune neconcordantă",
   "StreamSideBand_WrongIdDescription": "Sesiunea căștii tale nu corespunde sesiunii SteamVR a gazdei. Te rugăm să repornești aplicația.",
+  "StreamSideBand_AlreadyActiveLocal": "Altă cască activată",
+  "StreamSideBand_AlreadyActiveLocalDescription": "O altă cască a fost activată pe PC-ul gazdă. Te rugăm să o deconectezi și să repornești SteamVR.",
   "StreamSideBand_AlreadyActive": "PC-ul gazdă este ocupat",
   "StreamSideBand_AlreadyActiveDescription": "O altă cască este conectată la PC-ul tău gazdă. Se așteaptă ca aceasta să fie deconectată.",
   "StreamSideBand_UnknownIssue": "Problemă necunoscută",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "SteamVR a fost repornit pe calculatorul tău. Te rugăm să te reconectezi.",
   "Abort_HostQuitTitle": "Gazda a încetat transmisiunea",
   "Abort_HostQuitDescription": "SteamVR a fost închis pe calculatorul tău. Repornește Steam Link pentru a te reconecta.",
-  "ErrorCode": "Eroare: %0$s"
+  "ErrorCode": "Eroare: %0$s",
+  "StreamPreflight_IgnoreForNetwork": "Nu mă avertiza din nou despre acest lucru pentru această rețea"
 }

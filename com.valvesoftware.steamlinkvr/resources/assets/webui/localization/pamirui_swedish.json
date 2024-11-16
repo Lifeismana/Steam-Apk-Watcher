@@ -10,7 +10,7 @@
   "StreamPreflight_HostPCLocked": "Värddatorn är låst",
   "StreamPreflight_HostPCLockedDescription": "Din värddator är låst och streamingen startar inte förrän den är upplåst.",
   "StreamPreflight_HostPCOnWireless": "Värddatorn är trådlöst ansluten till routern.",
-  "StreamPreflight_HostPCOnWirelessDescription": "Värddatorn är trådlöst ansluten till routern, vilket inte stöds vid användning av SteamLinkVR.",
+  "StreamPreflight_HostPCOnWirelessDescription": "Värddatorn är trådlöst ansluten till routern, vilket inte stöds vid användning av SteamLink.",
   "StreamPreflight_WifiBandwidthLow": "Den trådlösa anslutningen är dålig.",
   "StreamPreflight_WifiBandwidthLowDescription": "Förbättra wifi-anslutningen för en bättre streamingupplevelse.",
   "StreamCheck_WifiNotConnected": "Wifi är inte anslutet",
@@ -25,6 +25,8 @@
   "StreamSideBand_BadProtocolDescription": "Datorn som kör Steam Link skickar data, men headsetet kan inte läsa in dem. Testa att starta om Steam Link.",
   "StreamSideBand_WrongId": "Sessionen svarar inte",
   "StreamSideBand_WrongIdDescription": "Headsetsessionen överensstämmer inte med värdens SteamVR-session. Starta om appen.",
+  "StreamSideBand_AlreadyActiveLocal": "Ett annat headset är aktiverat",
+  "StreamSideBand_AlreadyActiveLocalDescription": "Ett annat headset har aktiverats på din värddator. Koppla bort headsetet och starta om SteamVR.",
   "StreamSideBand_AlreadyActive": "Värddatorn är upptagen",
   "StreamSideBand_AlreadyActiveDescription": "Ett annat headset är anslutet till värddatorn. Väntar på att det ska kopplas ifrån.",
   "StreamSideBand_UnknownIssue": "Okänt problem",
@@ -53,5 +55,6 @@
   "Abort_KeyChangedMessage": "SteamVR har startats om på din pc. Anslut på nytt.",
   "Abort_HostQuitTitle": "Värden har avslutats",
   "Abort_HostQuitDescription": "SteamVR har avslutats på din pc. Starta om Steam Link för att återansluta.",
-  "ErrorCode": "Fel %0$s"
+  "ErrorCode": "Fel %0$s",
+  "StreamPreflight_IgnoreForNetwork": "Varna mig inte om detta på det här nätverket igen"
 }

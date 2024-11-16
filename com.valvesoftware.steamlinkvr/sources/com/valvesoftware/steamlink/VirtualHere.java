@@ -229,7 +229,10 @@ public class VirtualHere {
             }
             this.mIsBound = false;
         }
-        this.mContext.unbindService(this.mConnection);
+        try {
+            this.mContext.unbindService(this.mConnection);
+        } catch (Exception unused2) {
+        }
     }
 
     public void startSharing(int i) {

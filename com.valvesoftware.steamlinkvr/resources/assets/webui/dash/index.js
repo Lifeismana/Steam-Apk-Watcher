@@ -98,8 +98,12 @@ const OnPermissionsStateMessage = (sReceivedData) => {
     }
 }
 
-const ClearIgnorePreflightCheckWarnings = () => {
-    UpdateAppPath("/settings/preflight/ignore_microphone_muted", false);
+const ClearSavedPaths = () => {
+    SendIPCMessage("clear_saved_paths", {});
+}
+
+const DisableShutdownOnExit = () => {
+    UpdateAppPath("/settings/stream/disable_exit_on_shutdown", true);
 }
 
 const OnMessageReceived = (sMailboxName, sReceivedData) => {
