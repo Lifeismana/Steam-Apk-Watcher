@@ -1,4 +1,4 @@
-14636     03338679  AndroidManifest.xml
+14636     5311bfc5  AndroidManifest.xml
 56        3c557a5b  META-INF/com/android/build/gradle/app-metadata.properties
 18447     9c87fbcf  assets/config/controller_config.json
 61        d09b3de8  assets/config/default_config.json
@@ -76,7 +76,7 @@
 672091    6dfe4817  assets/webui/styles/fonts.css
 3266      4cc6dae7  assets/webui/styles/spinner.css
 5391      484fa722  assets/webui/styles/style.css
-123052    899df791  classes.dex
+123052    33c22228  classes.dex
 117040    5603a8f2  lib/arm64-v8a/libQt5AndroidExtras_arm64-v8a.so
 5912184   d48233a9  lib/arm64-v8a/libQt5Core_arm64-v8a.so
 4436064   35d4d36e  lib/arm64-v8a/libQt5Gui_arm64-v8a.so
@@ -95,7 +95,7 @@
 1026616   474e8fc3  lib/arm64-v8a/libc++_shared.so
 86432     9b1019cb  lib/arm64-v8a/libh264bitstream.so
 114376    963e31b7  lib/arm64-v8a/libhevcbitstream.so
-13655824  6f84ba7f  lib/arm64-v8a/libmain.so
+13655824  5b0a65da  lib/arm64-v8a/libmain.so
 731464    d2d95684  lib/arm64-v8a/libopenxr_loader.so
 59864     dc4c7e04  lib/arm64-v8a/libplugins_bearer_qandroidbearer_arm64-v8a.so
 47216     78bb3fd4  lib/arm64-v8a/libplugins_iconengines_qsvgicon_arm64-v8a.so
@@ -106,9 +106,9 @@
 1160776   388d4bf0  lib/arm64-v8a/libplugins_platforms_qtforandroid_arm64-v8a.so
 43368     e8e9c446  lib/arm64-v8a/libplugins_platforms_qvirtual_arm64-v8a.so
 92192     cba4dc29  lib/arm64-v8a/libplugins_styles_qandroidstyle_arm64-v8a.so
-26917680  9420526e  lib/arm64-v8a/libshell_arm64-v8a.so
+26917680  7379238e  lib/arm64-v8a/libshell_arm64-v8a.so
 6396824   48be9e29  lib/arm64-v8a/libsteamwebrtc.so
-2098664   751fce8a  lib/arm64-v8a/libvrlink_scene.so
+2100392   1c1cae64  lib/arm64-v8a/libvrlink_scene.so
 544       2cf698ae  res/01.xml
 2720      02a5f4ba  res/9w.png
 448       a42b0e1e  res/BW.xml
