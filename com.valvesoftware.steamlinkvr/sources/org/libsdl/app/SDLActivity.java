@@ -577,16 +577,18 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             mCurrentNativeState = mNextNativeState;
             return;
         }
-        if (mNextNativeState == NativeState.RESUMED && mSurface.mIsSurfaceReady && mHasFocus && mIsResumedCalled) {
-            if (mSDLThread == null) {
-                mSDLThread = new Thread(new SDLMain(), "SDLThread");
-                mSurface.enableSensor(1, true);
-                mSDLThread.start();
-            } else {
-                nativeResume();
+        if (mNextNativeState == NativeState.RESUMED && mSurface.mIsSurfaceReady) {
+            if ((mHasFocus || mHasMultiWindow) && mIsResumedCalled) {
+                if (mSDLThread == null) {
+                    mSDLThread = new Thread(new SDLMain(), "SDLThread");
+                    mSurface.enableSensor(1, true);
+                    mSDLThread.start();
+                } else {
+                    nativeResume();
+                }
+                mSurface.handleResume();
+                mCurrentNativeState = mNextNativeState;
             }
-            mSurface.handleResume();
-            mCurrentNativeState = mNextNativeState;
         }
     }
 

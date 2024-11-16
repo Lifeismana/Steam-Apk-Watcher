@@ -3,10 +3,9 @@ package org.libsdl.app;
 import android.view.MotionEvent;
 import android.view.View;
 
-/* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: SDLControllerManager.java */
 /* loaded from: classes.dex */
-public class SDLGenericMotionListener_API24 extends SDLGenericMotionListener_API12 {
+class SDLGenericMotionListener_API24 extends SDLGenericMotionListener_API12 {
     private boolean mRelativeModeEnabled;
 
     @Override // org.libsdl.app.SDLGenericMotionListener_API12

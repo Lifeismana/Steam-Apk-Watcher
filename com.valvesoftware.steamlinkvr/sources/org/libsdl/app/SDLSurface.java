@@ -139,8 +139,7 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
                 z = false;
             }
         }
-        if (z && SDLActivity.mSingleton.isInMultiWindowMode()) {
-            Log.v("SDL", "Don't skip in Multi-Window");
+        if (z) {
             z = false;
         }
         if (z) {
