@@ -1,5 +1,6 @@
 package org.libsdl.app;
 
+import android.os.Build;
 import android.text.Editable;
 import android.view.KeyEvent;
 import android.view.View;
@@ -54,11 +55,21 @@ public class SDLInputConnection extends BaseInputConnection {
 
     @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
     public boolean deleteSurroundingText(int i, int i2) {
-        if (!super.deleteSurroundingText(i, i2)) {
-            return false;
+        if (Build.VERSION.SDK_INT > 29 || i <= 0 || i2 != 0) {
+            if (!super.deleteSurroundingText(i, i2)) {
+                return false;
+            }
+            updateText();
+            return true;
         }
-        updateText();
-        return true;
+        while (true) {
+            int i3 = i - 1;
+            if (i <= 0) {
+                return true;
+            }
+            nativeGenerateScancodeForUnichar('\b');
+            i = i3;
+        }
     }
 
     protected void updateText() {

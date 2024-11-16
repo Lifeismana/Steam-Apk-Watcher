@@ -16,6 +16,10 @@
         "/interaction_profiles/meta/touch_controller_plus": [
           "/user/hand/left/input/trigger/value",
           "/user/hand/right/input/trigger/value"
+        ],
+        "/interaction_profiles/bytedance/pico4_controller": [
+          "/user/hand/left/input/trigger/value",
+          "/user/hand/right/input/trigger/value"
         ]
       }
     },
@@ -37,6 +41,12 @@
           "/user/hand/left/input/aim/pose",
           "/user/hand/right/input/aim/pose"
         ]
+      },
+      "/interaction_profiles/bytedance/pico4_controller": {
+        "bindings": [
+          "/user/hand/left/input/aim/pose",
+          "/user/hand/right/input/aim/pose"
+        ]
       }
     }
   },
@@ -52,6 +62,10 @@
           "/user/hand/right/output/haptic"
         ],
         "/interaction_profiles/meta/touch_controller_plus": [
+          "/user/hand/left/output/haptic",
+          "/user/hand/right/output/haptic"
+        ],
+        "/interaction_profiles/bytedance/pico4_controller": [
           "/user/hand/left/output/haptic",
           "/user/hand/right/output/haptic"
         ]

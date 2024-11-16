@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    android:versionCode="5000710"
-    android:versionName="2.0.6"
+    android:versionCode="5000736"
+    android:versionName="2.0.7"
     android:installLocation="auto"
     android:compileSdkVersion="34"
     android:compileSdkVersionCodename="14"
@@ -9,7 +9,7 @@
     platformBuildVersionCode="34"
     platformBuildVersionName="14">
     <uses-sdk
-        android:minSdkVersion="30"
+        android:minSdkVersion="29"
         android:targetSdkVersion="32"/>
     <uses-feature
         android:name="android.hardware.bluetooth"
@@ -39,6 +39,7 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.picovr.permission.EYE_TRACKING"/>
     <supports-screens
         android:anyDensity="true"
         android:smallScreens="true"
@@ -137,6 +138,9 @@
             android:screenOrientation="landscape"
             android:configChanges="density|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard"
             android:resizeableActivity="false">
+            <meta-data
+                android:name="pvr.app.type"
+                android:value="vr"/>
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="vrlink_scene"/>

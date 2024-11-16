@@ -51,6 +51,42 @@
       "sControllerType": "rift",
       "sDeviceType": "oculus/VRLINKHMDQUEST3"
     },
+    "PICO 4": {
+      "sTrackingSystem": "oculus",
+      "sSerialNumber": "VRLINKHMDQUEST3",
+      "sManufacturerName": "Oculus",
+      "sModelNumber": "Oculus Quest3",
+      "sRenderModelName": "generic_hmd",
+      "sResourceRoot": "vrlink",
+      "sInputProfilePath": "{oculus}/input/rift_profile.json",
+      "flLaserMouseHmdAngleDegrees": 0,
+      "sControllerType": "rift",
+      "sDeviceType": "oculus/VRLINKHMDQUEST3"
+    },
+    "PICO 4 Enterprise": {
+      "sTrackingSystem": "oculus",
+      "sSerialNumber": "VRLINKHMDQUEST3",
+      "sManufacturerName": "Oculus",
+      "sModelNumber": "Oculus Quest3",
+      "sRenderModelName": "generic_hmd",
+      "sResourceRoot": "vrlink",
+      "sInputProfilePath": "{oculus}/input/rift_profile.json",
+      "flLaserMouseHmdAngleDegrees": 0,
+      "sControllerType": "rift",
+      "sDeviceType": "oculus/VRLINKHMDQUEST3"
+    },
+    "PICO 4 Pro": {
+      "sTrackingSystem": "oculus",
+      "sSerialNumber": "VRLINKHMDQUEST3",
+      "sManufacturerName": "Oculus",
+      "sModelNumber": "Oculus Quest3",
+      "sRenderModelName": "generic_hmd",
+      "sResourceRoot": "vrlink",
+      "sInputProfilePath": "{oculus}/input/rift_profile.json",
+      "flLaserMouseHmdAngleDegrees": 0,
+      "sControllerType": "rift",
+      "sDeviceType": "oculus/VRLINKHMDQUEST3"
+    },
     "unknown": {
       "sTrackingSystem": "oculus",
       "sSerialNumber": "VRLINKHMDUNKNOWN",

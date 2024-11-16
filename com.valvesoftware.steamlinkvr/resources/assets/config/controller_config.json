@@ -1,7 +1,8 @@
 {
   "requestedExtensions": [
     "XR_FB_touch_controller_pro",
-    "XR_META_touch_controller_plus"
+    "XR_META_touch_controller_plus",
+    "XR_BD_controller_interaction"
   ],
   "staticProps": {
     "/interaction_profiles/oculus/touch_controller": {
@@ -81,6 +82,32 @@
         "sControllerType": "oculus_touch",
         "sDeviceType": "oculus/VRLINKQ3_Controller_Right"
       }
+    },
+    "/interaction_profiles/bytedance/pico4_controller": {
+      "left": {
+        "sTrackingSystem": "oculus",
+        "sSerialNumber": "VRLINKQ3_Controller_Left",
+        "sManufacturerName": "Oculus",
+        "sModelNumber": "Oculus Quest3 (Left Controller)",
+        "sRenderModelName": "oculus_quest_plus_controller_left",
+        "sResourceRoot": "vrlink",
+        "sInputProfilePath": "{oculus}/input/touch_profile.json",
+        "flLaserMouseHmdAngleDegrees": 0,
+        "sControllerType": "oculus_touch",
+        "sDeviceType": "oculus/VRLINKQ3_Controller_Left"
+      },
+      "right": {
+        "sTrackingSystem": "oculus",
+        "sSerialNumber": "VRLINKQ3_Controller_Right",
+        "sManufacturerName": "Oculus",
+        "sModelNumber": "Oculus Quest3 (Right Controller)",
+        "sRenderModelName": "oculus_quest_plus_controller_right",
+        "sResourceRoot": "vrlink",
+        "sInputProfilePath": "{oculus}/input/touch_profile.json",
+        "flLaserMouseHmdAngleDegrees": 0,
+        "sControllerType": "oculus_touch",
+        "sDeviceType": "oculus/VRLINKQ3_Controller_Right"
+      }
     }
   },
   "poseAction": {
@@ -91,14 +118,14 @@
       ],
       "offset": {
         "position": {
-          "x": 0,
-          "y": 0,
-          "z": 0
+          "x": -0.007,
+          "y": -0.03416,
+          "z": -0.09607
         },
         "rotation": {
-          "x": 0,
-          "y": 0,
-          "z": 0
+          "x": -20.6,
+          "y": 0.0,
+          "z": 0.0
         }
       }
     },
@@ -109,14 +136,14 @@
       ],
       "offset": {
         "position": {
-          "x": 0,
-          "y": 0,
-          "z": 0
+          "x": -0.007,
+          "y": -0.03416,
+          "z": -0.09607
         },
         "rotation": {
-          "x": 0,
-          "y": 0,
-          "z": 0
+          "x": -20.6,
+          "y": 0.0,
+          "z": 0.0
         }
       }
     },
@@ -127,14 +154,32 @@
       ],
       "offset": {
         "position": {
-          "x": 0,
-          "y": 0,
-          "z": 0
+          "x": -0.007,
+          "y": -0.03416,
+          "z": -0.09607
         },
         "rotation": {
-          "x": 0,
-          "y": 0,
-          "z": 0
+          "x": -20.6,
+          "y": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    "/interaction_profiles/bytedance/pico4_controller": {
+      "bindings": [
+        "/user/hand/left/input/grip/pose",
+        "/user/hand/right/input/grip/pose"
+      ],
+      "offset": {
+        "position": {
+          "x": -0.007,
+          "y": -0.03416,
+          "z": -0.09607
+        },
+        "rotation": {
+          "x": -10.0,
+          "y": 0.0,
+          "z": 0.0
         }
       }
     }
@@ -154,6 +199,10 @@
             "/user/hand/right/input/a/touch"
           ],
           "/interaction_profiles/meta/touch_controller_plus": [
+            "/user/hand/left/input/x/touch",
+            "/user/hand/right/input/a/touch"
+          ],
+          "/interaction_profiles/bytedance/pico4_controller": [
             "/user/hand/left/input/x/touch",
             "/user/hand/right/input/a/touch"
           ]
@@ -180,6 +229,10 @@
           "/interaction_profiles/meta/touch_controller_plus": [
             "/user/hand/left/input/y/touch",
             "/user/hand/right/input/b/touch"
+          ],
+          "/interaction_profiles/bytedance/pico4_controller": [
+            "/user/hand/left/input/y/touch",
+            "/user/hand/right/input/b/touch"
           ]
         }
       },
@@ -204,6 +257,10 @@
           "/interaction_profiles/meta/touch_controller_plus": [
             "/user/hand/left/input/trigger/touch",
             "/user/hand/right/input/trigger/touch"
+          ],
+          "/interaction_profiles/bytedance/pico4_controller": [
+            "/user/hand/left/input/trigger/touch",
+            "/user/hand/right/input/trigger/touch"
           ]
         }
       },
@@ -226,6 +283,10 @@
             "/user/hand/right/input/thumbstick/touch"
           ],
           "/interaction_profiles/meta/touch_controller_plus": [
+            "/user/hand/left/input/thumbstick/touch",
+            "/user/hand/right/input/thumbstick/touch"
+          ],
+          "/interaction_profiles/bytedance/pico4_controller": [
             "/user/hand/left/input/thumbstick/touch",
             "/user/hand/right/input/thumbstick/touch"
           ]
@@ -276,6 +337,10 @@
           "/interaction_profiles/meta/touch_controller_plus": [
             "/user/hand/left/input/x/click",
             "/user/hand/right/input/a/click"
+          ],
+          "/interaction_profiles/bytedance/pico4_controller": [
+            "/user/hand/left/input/x/click",
+            "/user/hand/right/input/a/click"
           ]
         }
       },
@@ -298,6 +363,10 @@
             "/user/hand/right/input/b/click"
           ],
           "/interaction_profiles/meta/touch_controller_plus": [
+            "/user/hand/left/input/y/click",
+            "/user/hand/right/input/b/click"
+          ],
+          "/interaction_profiles/bytedance/pico4_controller": [
             "/user/hand/left/input/y/click",
             "/user/hand/right/input/b/click"
           ]
@@ -321,6 +390,9 @@
           ],
           "/interaction_profiles/meta/touch_controller_plus": [
             "/user/hand/left/input/menu/click"
+          ],
+          "/interaction_profiles/bytedance/pico4_controller": [
+            "/user/hand/left/input/menu/click"
           ]
         }
       },
@@ -345,6 +417,10 @@
           "/interaction_profiles/meta/touch_controller_plus": [
             "/user/hand/left/input/thumbstick/click",
             "/user/hand/right/input/thumbstick/click"
+          ],
+          "/interaction_profiles/bytedance/pico4_controller": [
+            "/user/hand/left/input/thumbstick/click",
+            "/user/hand/right/input/thumbstick/click"
           ]
         }
       },
@@ -367,6 +443,10 @@
             "/user/hand/right/input/trigger/value"
           ],
           "/interaction_profiles/meta/touch_controller_plus": [
+            "/user/hand/left/input/trigger/value",
+            "/user/hand/right/input/trigger/value"
+          ],
+          "/interaction_profiles/bytedance/pico4_controller": [
             "/user/hand/left/input/trigger/value",
             "/user/hand/right/input/trigger/value"
           ]
@@ -393,6 +473,10 @@
           "/interaction_profiles/meta/touch_controller_plus": [
             "/user/hand/left/input/thumbstick/x",
             "/user/hand/right/input/thumbstick/x"
+          ],
+          "/interaction_profiles/bytedance/pico4_controller": [
+            "/user/hand/left/input/thumbstick/x",
+            "/user/hand/right/input/thumbstick/x"
           ]
         }
       },
@@ -415,6 +499,10 @@
             "/user/hand/right/input/thumbstick/y"
           ],
           "/interaction_profiles/meta/touch_controller_plus": [
+            "/user/hand/left/input/thumbstick/y",
+            "/user/hand/right/input/thumbstick/y"
+          ],
+          "/interaction_profiles/bytedance/pico4_controller": [
             "/user/hand/left/input/thumbstick/y",
             "/user/hand/right/input/thumbstick/y"
           ]
@@ -441,6 +529,10 @@
           "/interaction_profiles/meta/touch_controller_plus": [
             "/user/hand/left/input/squeeze/value",
             "/user/hand/right/input/squeeze/value"
+          ],
+          "/interaction_profiles/bytedance/pico4_controller": [
+            "/user/hand/left/input/squeeze/value",
+            "/user/hand/right/input/squeeze/value"
           ]
         }
       },
@@ -461,6 +553,10 @@
         "/user/hand/right/output/haptic"
       ],
       "/interaction_profiles/meta/touch_controller_plus": [
+        "/user/hand/left/output/haptic",
+        "/user/hand/right/output/haptic"
+      ],
+      "/interaction_profiles/bytedance/pico4_controller": [
         "/user/hand/left/output/haptic",
         "/user/hand/right/output/haptic"
       ]

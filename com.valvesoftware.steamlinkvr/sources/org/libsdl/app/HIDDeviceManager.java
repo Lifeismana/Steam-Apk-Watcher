@@ -147,7 +147,11 @@ public class HIDDeviceManager {
         intentFilter.addAction("android.hardware.usb.action.USB_DEVICE_ATTACHED");
         intentFilter.addAction("android.hardware.usb.action.USB_DEVICE_DETACHED");
         intentFilter.addAction(ACTION_USB_PERMISSION);
-        this.mContext.registerReceiver(this.mUsbBroadcast, intentFilter);
+        if (Build.VERSION.SDK_INT >= 33) {
+            this.mContext.registerReceiver(this.mUsbBroadcast, intentFilter, 2);
+        } else {
+            this.mContext.registerReceiver(this.mUsbBroadcast, intentFilter);
+        }
         Iterator<UsbDevice> it = this.mUsbManager.getDeviceList().values().iterator();
         while (it.hasNext()) {
             handleUsbDeviceAttached(it.next());
@@ -277,7 +281,11 @@ public class HIDDeviceManager {
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction("android.bluetooth.device.action.ACL_CONNECTED");
         intentFilter.addAction("android.bluetooth.device.action.ACL_DISCONNECTED");
-        this.mContext.registerReceiver(this.mBluetoothBroadcast, intentFilter);
+        if (Build.VERSION.SDK_INT >= 33) {
+            this.mContext.registerReceiver(this.mBluetoothBroadcast, intentFilter, 2);
+        } else {
+            this.mContext.registerReceiver(this.mBluetoothBroadcast, intentFilter);
+        }
         if (this.mIsChromebook) {
             this.mHandler = new Handler(Looper.getMainLooper());
             this.mLastBluetoothDevices = new ArrayList();
