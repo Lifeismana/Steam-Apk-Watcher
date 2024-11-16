@@ -201,6 +201,10 @@ public class VirtualHere {
         if (isConnected()) {
             return;
         }
+        if (this.mContext == null) {
+            Log.w(TAG, "Tried to connect to service with null context");
+            return;
+        }
         Log.v(TAG, "Connecting to service...");
         Intent intent = new Intent();
         intent.setClassName(VHDAEMON_PACKAGE, "com.virtualhere.androidserver.DaemonService");

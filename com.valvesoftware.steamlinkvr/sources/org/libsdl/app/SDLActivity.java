@@ -3,6 +3,8 @@ package org.libsdl.app;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.UiModeManager;
+import android.content.ActivityNotFoundException;
+import android.content.ClipData;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -15,6 +17,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.os.ParcelFileDescriptor;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.SparseArray;
@@ -29,24 +32,28 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputConnection;
 import android.view.inputmethod.InputMethodManager;
+import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.getkeepsafe.relinker.elf.Elf;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Locale;
 
 /* loaded from: classes.dex */
 public class SDLActivity extends Activity implements View.OnSystemUiVisibilityChangeListener {
+    static final /* synthetic */ boolean $assertionsDisabled = false;
     protected static final int COMMAND_CHANGE_TITLE = 1;
     protected static final int COMMAND_CHANGE_WINDOW_STYLE = 2;
     protected static final int COMMAND_SET_KEEP_SCREEN_ON = 5;
     protected static final int COMMAND_TEXTEDIT_HIDE = 3;
     protected static final int COMMAND_USER = 32768;
     private static final int SDL_MAJOR_VERSION = 3;
-    private static final int SDL_MICRO_VERSION = 1;
+    private static final int SDL_MICRO_VERSION = 2;
     private static final int SDL_MINOR_VERSION = 1;
     protected static final int SDL_ORIENTATION_LANDSCAPE = 1;
     protected static final int SDL_ORIENTATION_LANDSCAPE_FLIPPED = 2;
@@ -104,6 +111,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     public static boolean mBrokenLibraries = true;
     protected static boolean mSDLMainFinished = false;
     protected static boolean mActivityCreated = false;
+    private static SDLFileDialogState mFileDialogState = null;
 
     /* loaded from: classes.dex */
     public enum NativeState {
@@ -155,6 +163,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     public static native void onNativeDarkModeChanged(boolean z);
 
     public static native void onNativeDropFile(String str);
+
+    public static native void onNativeFileDialog(int i, String[] strArr, int i2);
 
     public static native void onNativeKeyDown(int i);
 
@@ -250,6 +260,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     public void onCreate(Bundle bundle) {
         String message;
         String path;
+        Log.v(TAG, "Manufacturer: " + Build.MANUFACTURER);
         Log.v(TAG, "Device: " + Build.DEVICE);
         Log.v(TAG, "Model: " + Build.MODEL);
         Log.v(TAG, "onCreate()");
@@ -287,7 +298,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             message = e3.getMessage();
         }
         if (!mBrokenLibraries) {
-            String str = String.valueOf(3) + "." + String.valueOf(1) + "." + String.valueOf(1);
+            String str = String.valueOf(3) + "." + String.valueOf(1) + "." + String.valueOf(2);
             String nativeGetVersion = nativeGetVersion();
             if (!nativeGetVersion.equals(str)) {
                 mBrokenLibraries = true;
@@ -538,6 +549,33 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             return;
         }
         super.onBackPressed();
+    }
+
+    @Override // android.app.Activity
+    protected void onActivityResult(int i, int i2, Intent intent) {
+        String[] strArr;
+        super.onActivityResult(i, i2, intent);
+        SDLFileDialogState sDLFileDialogState = mFileDialogState;
+        if (sDLFileDialogState == null || sDLFileDialogState.requestCode != i) {
+            return;
+        }
+        if (intent != null) {
+            Uri data = intent.getData();
+            if (data == null) {
+                ClipData clipData = intent.getClipData();
+                int itemCount = clipData.getItemCount();
+                strArr = new String[itemCount];
+                for (int i3 = 0; i3 < itemCount; i3++) {
+                    strArr[i3] = clipData.getItemAt(i3).getUri().toString();
+                }
+            } else {
+                strArr = new String[]{data.toString()};
+            }
+        } else {
+            strArr = new String[0];
+        }
+        onNativeFileDialog(i, strArr, -1);
+        mFileDialogState = null;
     }
 
     public static void manualBackButton() {
@@ -826,6 +864,10 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         return Build.MANUFACTURER.equals("Amlogic") && Build.MODEL.startsWith("TV");
     }
 
+    public static boolean isVRHeadset() {
+        return Build.MANUFACTURER.equals("Oculus") && Build.MODEL.startsWith("Quest");
+    }
+
     public static double getDiagonal() {
         DisplayMetrics displayMetrics = new DisplayMetrics();
         Activity activity = (Activity) getContext();
@@ -940,7 +982,6 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     }
 
     public static boolean handleKeyEvent(View view, int i, KeyEvent keyEvent, InputConnection inputConnection) {
-        int action;
         InputDevice device;
         int deviceId = keyEvent.getDeviceId();
         int source = keyEvent.getSource();
@@ -956,8 +997,12 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
                 return true;
             }
         }
-        if ((source & 8194) == 8194 && ((i == 4 || i == 125) && ((action = keyEvent.getAction()) == 0 || action == 1))) {
-            return true;
+        if ((source & 8194) == 8194 && !isVRHeadset() && (i == 4 || i == 125)) {
+            Log.v(TAG, "keycode is back or forward");
+            int action = keyEvent.getAction();
+            if (action == 0 || action == 1) {
+                return true;
+            }
         }
         if (keyEvent.getAction() == 0) {
             if (isTextInputEvent(keyEvent)) {
@@ -1295,6 +1340,81 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             return 0;
         } catch (Exception unused) {
             return -1;
+        }
+    }
+
+    public static int openFileDescriptor(String str, String str2) throws Exception {
+        SDLActivity sDLActivity = mSingleton;
+        if (sDLActivity == null) {
+            return -1;
+        }
+        try {
+            ParcelFileDescriptor openFileDescriptor = sDLActivity.getContentResolver().openFileDescriptor(Uri.parse(str), str2);
+            if (openFileDescriptor != null) {
+                return openFileDescriptor.detachFd();
+            }
+            return -1;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return -1;
+        }
+    }
+
+    public static boolean showFileDialog(String[] strArr, boolean z, boolean z2, int i) {
+        if (mSingleton == null) {
+            return false;
+        }
+        if (z2) {
+            z = false;
+        }
+        ArrayList arrayList = new ArrayList();
+        MimeTypeMap singleton = MimeTypeMap.getSingleton();
+        if (strArr != null) {
+            for (String str : strArr) {
+                String[] split = str.split(";");
+                if (split.length == 1 && split[0].equals("*")) {
+                    arrayList.add("*/*");
+                } else {
+                    for (String str2 : split) {
+                        String mimeTypeFromExtension = singleton.getMimeTypeFromExtension(str2);
+                        if (mimeTypeFromExtension != null) {
+                            arrayList.add(mimeTypeFromExtension);
+                        }
+                    }
+                }
+            }
+        }
+        Intent intent = new Intent(z2 ? "android.intent.action.CREATE_DOCUMENT" : "android.intent.action.OPEN_DOCUMENT");
+        intent.addCategory("android.intent.category.OPENABLE");
+        intent.putExtra("android.intent.extra.ALLOW_MULTIPLE", z);
+        int size = arrayList.size();
+        if (size == 0) {
+            intent.setType("*/*");
+        } else if (size == 1) {
+            intent.setType((String) arrayList.get(0));
+        } else {
+            intent.setType("*/*");
+            intent.putExtra("android.intent.extra.MIME_TYPES", (String[]) arrayList.toArray(new String[0]));
+        }
+        try {
+            mSingleton.startActivityForResult(intent, i);
+            SDLFileDialogState sDLFileDialogState = new SDLFileDialogState();
+            mFileDialogState = sDLFileDialogState;
+            sDLFileDialogState.requestCode = i;
+            mFileDialogState.multipleChoice = z;
+            return true;
+        } catch (ActivityNotFoundException e) {
+            Log.e(TAG, "Unable to open file dialog.", e);
+            return false;
+        }
+    }
+
+    /* loaded from: classes.dex */
+    static class SDLFileDialogState {
+        boolean multipleChoice;
+        int requestCode;
+
+        SDLFileDialogState() {
         }
     }
 }
