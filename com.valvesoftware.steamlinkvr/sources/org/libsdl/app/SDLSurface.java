@@ -181,9 +181,6 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
         int deviceId = motionEvent.getDeviceId();
         int pointerCount = motionEvent.getPointerCount();
         int actionMasked = motionEvent.getActionMasked();
-        if (deviceId < 0) {
-            deviceId--;
-        }
         int i2 = 0;
         if (motionEvent.getSource() == 8194 || motionEvent.getSource() == 12290) {
             try {

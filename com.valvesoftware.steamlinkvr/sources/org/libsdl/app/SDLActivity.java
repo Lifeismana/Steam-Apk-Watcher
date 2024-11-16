@@ -989,11 +989,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         for (int i : InputDevice.getDeviceIds()) {
             InputDevice device = InputDevice.getDevice(i);
             if (device != null && ((device.getSources() & 4098) == 4098 || device.isVirtual())) {
-                int id = device.getId();
-                if (id < 0) {
-                    id--;
-                }
-                nativeAddTouch(id, device.getName());
+                nativeAddTouch(device.getId(), device.getName());
             }
         }
     }

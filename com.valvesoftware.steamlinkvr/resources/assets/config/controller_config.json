@@ -1,6 +1,7 @@
 {
   "requestedExtensions": [
-    "XR_FB_touch_controller_pro"
+    "XR_FB_touch_controller_pro",
+    "XR_META_touch_controller_plus"
   ],
   "staticProps": {
     "/interaction_profiles/oculus/touch_controller": {
