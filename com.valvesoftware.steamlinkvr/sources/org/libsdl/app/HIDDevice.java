@@ -2,9 +2,8 @@ package org.libsdl.app;
 
 import android.hardware.usb.UsbDevice;
 
-/* JADX INFO: Access modifiers changed from: package-private */
 /* loaded from: classes.dex */
-public interface HIDDevice {
+interface HIDDevice {
     void close();
 
     UsbDevice getDevice();
