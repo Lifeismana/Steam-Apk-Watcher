@@ -999,10 +999,10 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         }
         if (SDLControllerManager.isDeviceSDLJoystick(deviceId)) {
             if (keyEvent.getAction() == 0) {
-                if (SDLControllerManager.onNativePadDown(deviceId, i) == 0) {
+                if (SDLControllerManager.onNativePadDown(deviceId, i)) {
                     return true;
                 }
-            } else if (keyEvent.getAction() == 1 && SDLControllerManager.onNativePadUp(deviceId, i) == 0) {
+            } else if (keyEvent.getAction() == 1 && SDLControllerManager.onNativePadUp(deviceId, i)) {
                 return true;
             }
         }
@@ -1299,22 +1299,22 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         nativePermissionResult(i, z);
     }
 
-    public static int openURL(String str) {
+    public static boolean openURL(String str) {
         try {
             Intent intent = new Intent("android.intent.action.VIEW");
             intent.setData(Uri.parse(str));
             intent.addFlags(1208483840);
             mSingleton.startActivity(intent);
-            return 0;
+            return true;
         } catch (Exception unused) {
-            return -1;
+            return false;
         }
     }
 
-    public static int showToast(String str, int i, int i2, int i3, int i4) {
+    public static boolean showToast(String str, int i, int i2, int i3, int i4) {
         SDLActivity sDLActivity = mSingleton;
         if (sDLActivity == null) {
-            return -1;
+            return false;
         }
         try {
             sDLActivity.runOnUiThread(new Runnable(str, i, i2, i3, i4) { // from class: org.libsdl.app.SDLActivity.1OneShotTask
@@ -1346,9 +1346,9 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
                     }
                 }
             });
-            return 0;
+            return true;
         } catch (Exception unused) {
-            return -1;
+            return false;
         }
     }
 

@@ -47,6 +47,12 @@ const Open8814Connection = () => {
     });
 }
 
+const OpenDeadEndConnection = () => {
+    SendIPCMessage("host_connect", {
+        sUDPIp: ""
+    });
+}
+
 const EnableFrameBins = () => {
     SendIPCMessage("app_paths", {
         "/settings/stream/enable_frame_bins": true,

@@ -219,7 +219,7 @@ public class SteamLink extends SDLActivity {
         if (getPackageManager().hasSystemFeature("oculus.software.vr.app.hybrid")) {
             startActivity(intent);
         } else {
-            Log.v("SteamLink", "Hybrid support not found. Launching activity using legacy method.");
+            Log.v(TAG, "Hybrid support not found. Launching activity using legacy method.");
             Intent.makeRestartActivityTask(intent.getComponent()).addCategory("com.oculus.intent.category.VR");
             ((AlarmManager) getSystemService("alarm")).set(3, SystemClock.elapsedRealtime(), PendingIntent.getActivity(this, 354678, intent, 33554432));
         }
@@ -351,7 +351,7 @@ public class SteamLink extends SDLActivity {
                 runnable.wait();
             }
         } catch (InterruptedException unused) {
-            Log.e("SteamLink", "Semaphore interrupted while we waited!");
+            Log.e(TAG, "Semaphore interrupted while we waited!");
         }
     }
 
@@ -371,7 +371,7 @@ public class SteamLink extends SDLActivity {
                 runnable.wait();
             }
         } catch (InterruptedException unused) {
-            Log.e("SteamLink", "Semaphore interrupted while we waited!");
+            Log.e(TAG, "Semaphore interrupted while we waited!");
         }
     }
 
@@ -452,7 +452,7 @@ public class SteamLink extends SDLActivity {
                 runnable.wait();
             }
         } catch (InterruptedException unused) {
-            Log.e("SteamLink", "Semaphore interrupted while we waited!");
+            Log.e(TAG, "Semaphore interrupted while we waited!");
         }
     }
 
@@ -477,7 +477,7 @@ public class SteamLink extends SDLActivity {
                 runnable.wait();
             }
         } catch (InterruptedException unused) {
-            Log.e("SteamLink", "Semaphore interrupted while we waited!");
+            Log.e(TAG, "Semaphore interrupted while we waited!");
         }
     }
 
@@ -497,7 +497,7 @@ public class SteamLink extends SDLActivity {
                 runnable.wait();
             }
         } catch (InterruptedException unused) {
-            Log.e("SteamLink", "Semaphore interrupted while we waited!");
+            Log.e(TAG, "Semaphore interrupted while we waited!");
         }
     }
 

@@ -15,6 +15,8 @@
   "StreamPreflight_WifiBandwidthLowDescription": "Please improve your wifi connection for a better streaming experience.",
   "StreamCheck_WifiNotConnected": "WiFi not connected",
   "StreamCheck_WifiNotConnectedDescription": "Your device is not connected to WiFi",
+  "StreamCheck_StreamNotPossible": "Connection Failed",
+  "StreamCheck_StreamNotPossibleDescription": "Streaming VR requires your headset and PC to be on the same network. Please ensure you are streaming on the same network and are not using a mesh or guest network.",
   "StreamSideBand_Title": "Streaming Error",
   "StreamSideBand_Description": "There has been an error with the stream.",
   "StreamSideBand_ConnectionStarted": "Connection is starting",
