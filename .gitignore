@@ -9,6 +9,7 @@
 *.ttf
 node_modules/
 .venv/
+.storage/
 index.android.bundle
 *.xsd
 *.tflite

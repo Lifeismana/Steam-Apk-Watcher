@@ -61,6 +61,8 @@ DownloadAPK()
         if [[ -f $1/$1.xapk ]]; then
             unzip -o $1/$1.xapk -d $1
         fi
+    elif [[ "$SOURCE" == "manual"]]; then
+        cp $2 $1/$1.apk
     else
         echo "Unknown source"
         exit 1
@@ -133,7 +135,23 @@ ProcessApp()
     fi
 }
 
-if [[ -n "$APP_TO_PROCESS" ]]; then
+if [[ "$SOURCE" == "manual" ]]; then
+    for APP in "./.storage/*";
+    do
+        # untested, future-proofing
+        if [[ -n "$APP_TO_PROCESS" && "$APP" != *"$APP_TO_PROCESS"* ]]; then
+            echo "Skipping $APP"
+            continue
+        fi
+
+        declare -a APKS=($(find $1 -name "*.apk" | sort -V))
+
+        for APK in $APKS;
+        do
+            ProcessApp $APP $APK
+        done
+    done
+elif [[ -n "$APP_TO_PROCESS" ]]; then
     ProcessApp $APP_TO_PROCESS $APP_VERSION
 else
     for APP in $APPS;
