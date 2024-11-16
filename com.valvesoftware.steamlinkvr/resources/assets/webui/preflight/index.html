@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dialog</title>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+<div id="pointer-circle">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="50" fill="#FFFFFF" id="pointer-pip"/>
+    </svg>
+</div>
+<div class="ui-main">
+    <p id="title">Your setup might not be optimal for streaming:</p>
+    <div class="ui-content">
+        <div id="preflight-results">
+
+        </div>
+
+        <div class="action-buttons">
+            <button class="button" onclick="OnContinueClicked()" id="preflight-continue">Continue</button>
+            <button class="button" onclick="OnExitClicked()">Exit</button>
+        </div>
+    </div>
+</div>
+</body>
+
+<template id="preflight-result-template">
+    <div class="result">
+        <div class="result-title-and-description">
+            <p class="result-title"><span class="result-type"></span>️ <span class="result-title-message"></span></p>
+            <p class="result-description">- <span class="result-description-message"></span></p>
+        </div>
+        <button class="result-ignore-button" hidden="true">Ignore Forever</button>
+    </div>
+</template>
+
+<script src="../ipc.js"></script>
+<script src="index.js"></script>
+</html>

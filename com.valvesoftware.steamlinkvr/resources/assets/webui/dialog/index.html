@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dialog</title>
+    <link rel="stylesheet" href="../styles/style.css"/>
+</head>
+<body>
+
+<!-- ** OLD CURSOR REFS NEEDS REMOVED ** -->
+<div id="pointer-circle">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="50" fill="#FFFFFF" id="pointer-pip"/>
+    </svg>
+</div>
+<!-- ********************************** -->
+
+<div class="ui-main">
+    <div class="ui-content">
+
+        <div class="header">
+            <div class="logo"></div>
+        </div>
+
+        <div class="dialog">
+            <div class="dialog-header">
+                <h2>This Is A Temporary Dialog Title!</h2>
+                <h3 id="title-description">This is a slightly longer temporary dialog title that has some extra information related to the title. Something something something.</h3>
+            </div>
+            <div class="dialog-content">
+                <div id="error-container"><p>Hello World</p></div>
+            </div>
+            <div class="dialog-footer">
+                <button id="button" onclick="" data-localize="#Button_String"></button>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+
+<script src="../ipc.js"></script>
+<script src="index.js"></script>
+</html>

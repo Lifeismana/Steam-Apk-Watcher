@@ -1,0 +1,61 @@
+{
+  "requestedExtensions": [
+    "XR_FB_touch_controller_pro"
+  ],
+  "input": {
+    "select": {
+      "bindings": {
+        "/interaction_profiles/oculus/touch_controller": [
+          "/user/hand/left/input/trigger/value",
+          "/user/hand/right/input/trigger/value"
+        ],
+        "/interaction_profiles/facebook/touch_controller_pro": [
+          "/user/hand/left/input/trigger/value",
+          "/user/hand/right/input/trigger/value"
+        ],
+        "/interaction_profiles/meta/touch_controller_plus": [
+          "/user/hand/left/input/trigger/value",
+          "/user/hand/right/input/trigger/value"
+        ]
+      }
+    },
+    "pointer": {
+      "/interaction_profiles/oculus/touch_controller": {
+        "bindings": [
+          "/user/hand/left/input/aim/pose",
+          "/user/hand/right/input/aim/pose"
+        ]
+      },
+      "/interaction_profiles/facebook/touch_controller_pro": {
+        "bindings": [
+          "/user/hand/left/input/aim/pose",
+          "/user/hand/right/input/aim/pose"
+        ]
+      },
+      "/interaction_profiles/meta/touch_controller_plus": {
+        "bindings": [
+          "/user/hand/left/input/aim/pose",
+          "/user/hand/right/input/aim/pose"
+        ]
+      }
+    }
+  },
+  "output": {
+    "hapticAction": {
+      "bindings": {
+        "/interaction_profiles/oculus/touch_controller": [
+          "/user/hand/left/output/haptic",
+          "/user/hand/right/output/haptic"
+        ],
+        "/interaction_profiles/facebook/touch_controller_pro": [
+          "/user/hand/left/output/haptic",
+          "/user/hand/right/output/haptic"
+        ],
+        "/interaction_profiles/meta/touch_controller_plus": [
+          "/user/hand/left/output/haptic",
+          "/user/hand/right/output/haptic"
+        ]
+      }
+    }
+  }
+}

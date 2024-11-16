@@ -1,0 +1,468 @@
+{
+  "requestedExtensions": [
+    "XR_FB_touch_controller_pro"
+  ],
+  "staticProps": {
+    "/interaction_profiles/oculus/touch_controller": {
+      "left": {
+        "sTrackingSystem": "oculus",
+        "sSerialNumber": "VRLINKQ2_Controller_Left",
+        "sManufacturerName": "Oculus",
+        "sModelNumber": "Oculus Quest2 (Left Controller)",
+        "sRenderModelName": "oculus_quest2_controller_left",
+        "sResourceRoot": "vrlink",
+        "sInputProfilePath": "{oculus}/input/touch_profile.json",
+        "flLaserMouseHmdAngleDegrees": 0,
+        "sControllerType": "oculus_touch",
+        "sDeviceType": "oculus/VRLINKQ2_Controller_Left"
+      },
+      "right": {
+        "sTrackingSystem": "oculus",
+        "sSerialNumber": "VRLINKQ2_Controller_Right",
+        "sManufacturerName": "Oculus",
+        "sModelNumber": "Oculus Quest2 (Right Controller)",
+        "sRenderModelName": "oculus_quest2_controller_right",
+        "sResourceRoot": "vrlink",
+        "sInputProfilePath": "{oculus}/input/touch_profile.json",
+        "flLaserMouseHmdAngleDegrees": 0,
+        "sControllerType": "oculus_touch",
+        "sDeviceType": "oculus/VRLINKQ2_Controller_Right"
+      }
+    },
+    "/interaction_profiles/facebook/touch_controller_pro": {
+      "left": {
+        "sTrackingSystem": "oculus",
+        "sSerialNumber": "VRLINKQP_Controller_Left",
+        "sManufacturerName": "Oculus",
+        "sModelNumber": "Oculus Quest Pro (Left Controller)",
+        "sRenderModelName": "oculus_quest_pro_controller_left",
+        "sResourceRoot": "vrlink",
+        "sInputProfilePath": "{oculus}/input/touch_profile.json",
+        "flLaserMouseHmdAngleDegrees": 0,
+        "sControllerType": "oculus_touch",
+        "sDeviceType": "oculus/VRLINKQP_Controller_Left"
+      },
+      "right": {
+        "sTrackingSystem": "oculus",
+        "sSerialNumber": "VRLINKQP_Controller_Right",
+        "sManufacturerName": "Oculus",
+        "sModelNumber": "Oculus Quest Pro (Right Controller)",
+        "sRenderModelName": "oculus_quest_pro_controller_right",
+        "sResourceRoot": "vrlink",
+        "sInputProfilePath": "{oculus}/input/touch_profile.json",
+        "flLaserMouseHmdAngleDegrees": 0,
+        "sControllerType": "oculus_touch",
+        "sDeviceType": "oculus/VRLINKQP_Controller_Right"
+      }
+    },
+    "/interaction_profiles/meta/touch_controller_plus": {
+      "left": {
+        "sTrackingSystem": "oculus",
+        "sSerialNumber": "VRLINKQ3_Controller_Left",
+        "sManufacturerName": "Oculus",
+        "sModelNumber": "Oculus Quest3 (Left Controller)",
+        "sRenderModelName": "oculus_quest_plus_controller_left",
+        "sResourceRoot": "vrlink",
+        "sInputProfilePath": "{oculus}/input/touch_profile.json",
+        "flLaserMouseHmdAngleDegrees": 0,
+        "sControllerType": "oculus_touch",
+        "sDeviceType": "oculus/VRLINKQ3_Controller_Left"
+      },
+      "right": {
+        "sTrackingSystem": "oculus",
+        "sSerialNumber": "VRLINKQ3_Controller_Right",
+        "sManufacturerName": "Oculus",
+        "sModelNumber": "Oculus Quest3 (Right Controller)",
+        "sRenderModelName": "oculus_quest_plus_controller_right",
+        "sResourceRoot": "vrlink",
+        "sInputProfilePath": "{oculus}/input/touch_profile.json",
+        "flLaserMouseHmdAngleDegrees": 0,
+        "sControllerType": "oculus_touch",
+        "sDeviceType": "oculus/VRLINKQ3_Controller_Right"
+      }
+    }
+  },
+  "poseAction": {
+    "/interaction_profiles/oculus/touch_controller": {
+      "bindings": [
+        "/user/hand/left/input/grip/pose",
+        "/user/hand/right/input/grip/pose"
+      ],
+      "offset": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    "/interaction_profiles/facebook/touch_controller_pro": {
+      "bindings": [
+        "/user/hand/left/input/grip/pose",
+        "/user/hand/right/input/grip/pose"
+      ],
+      "offset": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    "/interaction_profiles/meta/touch_controller_plus": {
+      "bindings": [
+        "/user/hand/left/input/grip/pose",
+        "/user/hand/right/input/grip/pose"
+      ],
+      "offset": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    }
+  },
+  "inputActions": [
+    {
+      "actionInfo": {
+        "actionType": 1,
+        "subActionPathHand": 2,
+        "bindings": {
+          "/interaction_profiles/oculus/touch_controller": [
+            "/user/hand/left/input/x/touch",
+            "/user/hand/right/input/a/touch"
+          ],
+          "/interaction_profiles/facebook/touch_controller_pro": [
+            "/user/hand/left/input/x/touch",
+            "/user/hand/right/input/a/touch"
+          ],
+          "/interaction_profiles/meta/touch_controller_plus": [
+            "/user/hand/left/input/x/touch",
+            "/user/hand/right/input/a/touch"
+          ]
+        }
+      },
+      "inputInfo": {
+        "inputType": 1,
+        "inputTypeIndex": 0
+      }
+    },
+    {
+      "actionInfo": {
+        "actionType": 1,
+        "subActionPathHand": 2,
+        "bindings": {
+          "/interaction_profiles/oculus/touch_controller": [
+            "/user/hand/left/input/y/touch",
+            "/user/hand/right/input/b/touch"
+          ],
+          "/interaction_profiles/facebook/touch_controller_pro": [
+            "/user/hand/left/input/y/touch",
+            "/user/hand/right/input/b/touch"
+          ],
+          "/interaction_profiles/meta/touch_controller_plus": [
+            "/user/hand/left/input/y/touch",
+            "/user/hand/right/input/b/touch"
+          ]
+        }
+      },
+      "inputInfo": {
+        "inputType": 1,
+        "inputTypeIndex": 1
+      }
+    },
+    {
+      "actionInfo": {
+        "actionType": 1,
+        "subActionPathHand": 2,
+        "bindings": {
+          "/interaction_profiles/oculus/touch_controller": [
+            "/user/hand/left/input/trigger/touch",
+            "/user/hand/right/input/trigger/touch"
+          ],
+          "/interaction_profiles/facebook/touch_controller_pro": [
+            "/user/hand/left/input/trigger/touch",
+            "/user/hand/right/input/trigger/touch"
+          ],
+          "/interaction_profiles/meta/touch_controller_plus": [
+            "/user/hand/left/input/trigger/touch",
+            "/user/hand/right/input/trigger/touch"
+          ]
+        }
+      },
+      "inputInfo": {
+        "inputType": 1,
+        "inputTypeIndex": 2
+      }
+    },
+    {
+      "actionInfo": {
+        "actionType": 1,
+        "subActionPathHand": 2,
+        "bindings": {
+          "/interaction_profiles/oculus/touch_controller": [
+            "/user/hand/left/input/thumbstick/touch",
+            "/user/hand/right/input/thumbstick/touch"
+          ],
+          "/interaction_profiles/facebook/touch_controller_pro": [
+            "/user/hand/left/input/thumbstick/touch",
+            "/user/hand/right/input/thumbstick/touch"
+          ],
+          "/interaction_profiles/meta/touch_controller_plus": [
+            "/user/hand/left/input/thumbstick/touch",
+            "/user/hand/right/input/thumbstick/touch"
+          ]
+        }
+      },
+      "inputInfo": {
+        "inputType": 1,
+        "inputTypeIndex": 3
+      }
+    },
+    {
+      "actionInfo": {
+        "actionType": 1,
+        "subActionPathHand": 2,
+        "bindings": {
+          "/interaction_profiles/oculus/touch_controller": [
+            "/user/hand/left/input/thumbrest/touch",
+            "/user/hand/right/input/thumbrest/touch"
+          ],
+          "/interaction_profiles/facebook/touch_controller_pro": [
+            "/user/hand/left/input/thumbrest/touch",
+            "/user/hand/right/input/thumbrest/touch"
+          ],
+          "/interaction_profiles/meta/touch_controller_plus": [
+            "/user/hand/left/input/thumbrest/touch",
+            "/user/hand/right/input/thumbrest/touch"
+          ]
+        }
+      },
+      "inputInfo": {
+        "inputType": 1,
+        "inputTypeIndex": 4
+      }
+    },
+    {
+      "actionInfo": {
+        "actionType": 1,
+        "subActionPathHand": 2,
+        "bindings": {
+          "/interaction_profiles/oculus/touch_controller": [
+            "/user/hand/left/input/x/click",
+            "/user/hand/right/input/a/click"
+          ],
+          "/interaction_profiles/facebook/touch_controller_pro": [
+            "/user/hand/left/input/x/click",
+            "/user/hand/right/input/a/click"
+          ],
+          "/interaction_profiles/meta/touch_controller_plus": [
+            "/user/hand/left/input/x/click",
+            "/user/hand/right/input/a/click"
+          ]
+        }
+      },
+      "inputInfo": {
+        "inputType": 0,
+        "inputTypeIndex": 0
+      }
+    },
+    {
+      "actionInfo": {
+        "actionType": 1,
+        "subActionPathHand": 2,
+        "bindings": {
+          "/interaction_profiles/oculus/touch_controller": [
+            "/user/hand/left/input/y/click",
+            "/user/hand/right/input/b/click"
+          ],
+          "/interaction_profiles/facebook/touch_controller_pro": [
+            "/user/hand/left/input/y/click",
+            "/user/hand/right/input/b/click"
+          ],
+          "/interaction_profiles/meta/touch_controller_plus": [
+            "/user/hand/left/input/y/click",
+            "/user/hand/right/input/b/click"
+          ]
+        }
+      },
+      "inputInfo": {
+        "inputType": 0,
+        "inputTypeIndex": 1
+      }
+    },
+    {
+      "actionInfo": {
+        "actionType": 1,
+        "subActionPathHand": 0,
+        "bindings": {
+          "/interaction_profiles/oculus/touch_controller": [
+            "/user/hand/left/input/menu/click"
+          ],
+          "/interaction_profiles/facebook/touch_controller_pro": [
+            "/user/hand/left/input/menu/click"
+          ],
+          "/interaction_profiles/meta/touch_controller_plus": [
+            "/user/hand/left/input/menu/click"
+          ]
+        }
+      },
+      "inputInfo": {
+        "inputType": 0,
+        "inputTypeIndex": 2
+      }
+    },
+    {
+      "actionInfo": {
+        "actionType": 1,
+        "subActionPathHand": 2,
+        "bindings": {
+          "/interaction_profiles/oculus/touch_controller": [
+            "/user/hand/left/input/thumbstick/click",
+            "/user/hand/right/input/thumbstick/click"
+          ],
+          "/interaction_profiles/facebook/touch_controller_pro": [
+            "/user/hand/left/input/thumbstick/click",
+            "/user/hand/right/input/thumbstick/click"
+          ],
+          "/interaction_profiles/meta/touch_controller_plus": [
+            "/user/hand/left/input/thumbstick/click",
+            "/user/hand/right/input/thumbstick/click"
+          ]
+        }
+      },
+      "inputInfo": {
+        "inputType": 0,
+        "inputTypeIndex": 3
+      }
+    },
+    {
+      "actionInfo": {
+        "actionType": 2,
+        "subActionPathHand": 2,
+        "bindings": {
+          "/interaction_profiles/oculus/touch_controller": [
+            "/user/hand/left/input/trigger/value",
+            "/user/hand/right/input/trigger/value"
+          ],
+          "/interaction_profiles/facebook/touch_controller_pro": [
+            "/user/hand/left/input/trigger/value",
+            "/user/hand/right/input/trigger/value"
+          ],
+          "/interaction_profiles/meta/touch_controller_plus": [
+            "/user/hand/left/input/trigger/value",
+            "/user/hand/right/input/trigger/value"
+          ]
+        }
+      },
+      "inputInfo": {
+        "inputType": 2,
+        "inputTypeIndex": 0
+      }
+    },
+    {
+      "actionInfo": {
+        "actionType": 2,
+        "subActionPathHand": 2,
+        "bindings": {
+          "/interaction_profiles/oculus/touch_controller": [
+            "/user/hand/left/input/thumbstick/x",
+            "/user/hand/right/input/thumbstick/x"
+          ],
+          "/interaction_profiles/facebook/touch_controller_pro": [
+            "/user/hand/left/input/thumbstick/x",
+            "/user/hand/right/input/thumbstick/x"
+          ],
+          "/interaction_profiles/meta/touch_controller_plus": [
+            "/user/hand/left/input/thumbstick/x",
+            "/user/hand/right/input/thumbstick/x"
+          ]
+        }
+      },
+      "inputInfo": {
+        "inputType": 2,
+        "inputTypeIndex": 1
+      }
+    },
+    {
+      "actionInfo": {
+        "actionType": 2,
+        "subActionPathHand": 2,
+        "bindings": {
+          "/interaction_profiles/oculus/touch_controller": [
+            "/user/hand/left/input/thumbstick/y",
+            "/user/hand/right/input/thumbstick/y"
+          ],
+          "/interaction_profiles/facebook/touch_controller_pro": [
+            "/user/hand/left/input/thumbstick/y",
+            "/user/hand/right/input/thumbstick/y"
+          ],
+          "/interaction_profiles/meta/touch_controller_plus": [
+            "/user/hand/left/input/thumbstick/y",
+            "/user/hand/right/input/thumbstick/y"
+          ]
+        }
+      },
+      "inputInfo": {
+        "inputType": 2,
+        "inputTypeIndex": 2
+      }
+    },
+    {
+      "actionInfo": {
+        "actionType": 2,
+        "subActionPathHand": 2,
+        "bindings": {
+          "/interaction_profiles/oculus/touch_controller": [
+            "/user/hand/left/input/squeeze/value",
+            "/user/hand/right/input/squeeze/value"
+          ],
+          "/interaction_profiles/facebook/touch_controller_pro": [
+            "/user/hand/left/input/squeeze/value",
+            "/user/hand/right/input/squeeze/value"
+          ],
+          "/interaction_profiles/meta/touch_controller_plus": [
+            "/user/hand/left/input/squeeze/value",
+            "/user/hand/right/input/squeeze/value"
+          ]
+        }
+      },
+      "inputInfo": {
+        "inputType": 2,
+        "inputTypeIndex": 3
+      }
+    }
+  ],
+  "hapticAction": {
+    "bindings": {
+      "/interaction_profiles/oculus/touch_controller": [
+        "/user/hand/left/output/haptic",
+        "/user/hand/right/output/haptic"
+      ],
+      "/interaction_profiles/facebook/touch_controller_pro": [
+        "/user/hand/left/output/haptic",
+        "/user/hand/right/output/haptic"
+      ],
+      "/interaction_profiles/meta/touch_controller_plus": [
+        "/user/hand/left/output/haptic",
+        "/user/hand/right/output/haptic"
+      ]
+    }
+  }
+}

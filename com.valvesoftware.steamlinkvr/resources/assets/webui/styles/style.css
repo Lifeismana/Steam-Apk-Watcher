@@ -1,0 +1,322 @@
+@import url("fonts.css");
+
+:root {
+	--neutrals_lightest_gray: #DCDEDF;
+	--neutrals_light_gray: #8B929A;
+	--neutrals_darker_gray: #23262E;
+	--neutrals_darkest_gray: #0E141B;
+	--blues_lighter_gray: #A7BACC;
+	--blues_dark_gray: #2A475E;
+	--blue: #199FFF;
+	--green: #59BF40;
+	--red: #D94126;
+	--yellow: #FFC82C;
+
+	--button_color: red;
+	--blue_hover: red;
+	--green_color: red;
+	--button_CTA_color_hover: red;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'MotivaSans-Regular';
+    color: var(--blues_lighter_gray);
+
+    background: transparent;
+}
+
+body:lang(ja) { 
+    font-family: 'NotoSansJP-Regular';
+}
+body:lang(ko) { 
+    font-family: 'NotoSansKR-Regular';
+}
+body:lang(zh), body:lang(zh-Hans) { 
+    font-family: 'NotoSansSC-Regular';
+}
+body:lang(zh-Hant) { 
+    font-family: 'NotoSansTC-Regular';
+}
+
+.ui-main {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+
+    border-radius: 18px;
+
+    background: #0E141B url("../images/background_tile_box_art.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.ui-content {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: 96px 1fr 96px;
+    align-items: center;
+    justify-items: center;
+}
+
+.header  {
+    width: 100%;
+    height: 96px;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.logo {
+    height: 35%;
+    flex: 1;
+
+    background-image: url("../images/steam_link_logo_horizontal_long.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.75;
+}
+
+.dialog {
+    z-index: 10;
+    min-width: 512px;
+    min-height: 192px;
+    max-width: 864px;
+    max-height: 504px;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    overflow: clip;
+
+    background: radial-gradient(100% 155.42% at 0% 0%, #2A475E 0%, #1B2838 100%);
+    border-top: 4px solid var(--yellow);
+
+    position: relative;
+    /* //standard dialog gradient border color
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg, #06BFFF 0%, #2D73FF 100%);
+    */
+}
+
+.dialog-header {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dialog-content {
+    flex: 4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.steam-loader {
+    width: 256px;
+    height: 256px;
+    margin: 40px;
+}
+
+h1 {
+    font-family: 'MotivaSans-Light';
+}
+
+h1:lang(ja) { 
+    font-family: 'NotoSansJP-Light';
+}
+h1:lang(ko) { 
+    font-family: 'NotoSansKR-Light';
+}
+h1:lang(zh), h1:lang(zh-Hans) { 
+    font-family: 'NotoSansSC-Light';
+}
+h1:lang(zh-Hant) { 
+    font-family: 'NotoSansTC-Light';
+}
+
+h2 {
+    font-family: 'MotivaSans-Extrabold';
+    margin: 0;
+    font-size: 27px;
+    color: white;
+}
+
+h2:lang(ja) { 
+    font-family: 'NotoSansJP-Bold';
+}
+h2:lang(ko) { 
+    font-family: 'NotoSansKR-Bold';
+}
+h2:lang(zh), h2:lang(zh-Hans) { 
+    font-family: 'NotoSansSC-Bold';
+}
+h2:lang(zh-Hant) { 
+    font-family: 'NotoSansTC-Bold';
+}
+
+h3 {
+    font-family: 'MotivaSans-Medium';
+    font-size: 14px;
+    margin: 0;
+}
+
+h3:lang(ja) {
+    font-family: 'NotoSansJP-Regular';
+}
+h3:lang(ko) {
+    font-family: 'NotoSansKR-Regular';
+}
+h3:lang(zh), h3:lang(zh-Hans) { 
+    font-family: 'NotoSansSC-Regular';
+}
+h3:lang(zh-Hant) { 
+    font-family: 'NotoSansTC-Regular';
+}
+
+p {
+    margin: 0;
+    font-size: 18px;
+}
+.spinner-body {
+    width: 100%;
+    height: 100%;
+}
+.spinner-main {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%
+}
+
+.spinner {
+    flex-grow: 1;
+}
+
+.dialog-footer {
+    margin-top: 20px;
+    display: flex;
+    gap: 8px;
+}
+
+button {
+    z-index: 100;
+    margin: 0;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    color: var(--neutrals_lightest_gray);
+    background-color: rgba(42, 71, 94, 1);
+}
+
+.button-hover {
+    color: white;
+    background-color: #416E91;
+    filter: brightness(1.1);
+}
+
+.button-active {
+    color: #0E141B;
+    background-color: #DCDEDF;
+}
+
+.button-cta {
+    color: white;
+    background-color: var(--blue);
+
+}
+.button-cta-hover {
+    color: white;
+    filter: brightness(1.25);
+}
+
+.button-cta-active {
+    color: #0E141B;
+    background-color: #DCDEDF;
+}
+
+.button.small {
+    width: auto;
+    font-size: 8px;
+    padding: 6px 18px;
+}
+
+
+.session_error_list {
+    margin-bottom: 18px;
+}
+
+.preflight-results {
+    flex-grow: 1;
+    font-size: 14px;
+    overflow-y: auto;
+}
+
+.result-title-and-description {
+}
+
+.result {
+}
+
+.result-ignore-button {
+    height: 40px;
+    margin-left: 20px;
+}
+
+.result-title {
+    font-size: 18px;
+}
+
+.result-description {
+    font-size: 14px;
+    padding-left: 36px;
+    color: var(--blues_lighter_gray);
+    opacity: 0.7;
+}
+
+.result-type {
+    width: 24px;
+    height: 24px;
+    padding-right: 12px;
+    transform: translate(0, 6px);
+}
+
+#loader-animation {
+    display:none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+#wifi {
+    position:absolute;
+    bottom: 5px;
+    right: 12px;
+    color: gray;
+}
+
+#error-code {
+    position:absolute;
+    bottom: 5px;
+    left: 12px;
+    color: gray;
+}

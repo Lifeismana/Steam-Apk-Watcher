@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="bundled_in_assets">
+    </array>
+    <array name="bundled_libs">
+        <item>arm64-v8a;openxr_loader</item>
+        <item>arm64-v8a;vrlink_scene</item>
+        <item>arm64-v8a;SDL3</item>
+        <item>arm64-v8a;SDL3_image</item>
+        <item>arm64-v8a;SDL3_mixer</item>
+        <item>arm64-v8a;SDL3_ttf</item>
+        <item>arm64-v8a;h264bitstream</item>
+        <item>arm64-v8a;hevcbitstream</item>
+        <item>arm64-v8a;shell_arm64-v8a</item>
+        <item>arm64-v8a;steamwebrtc</item>
+    </array>
+    <array name="load_local_libs">
+        <item>arm64-v8a;libplugins_platforms_qtforandroid_arm64-v8a.so:libplugins_bearer_qandroidbearer_arm64-v8a.so:libplugins_iconengines_qsvgicon_arm64-v8a.so:libplugins_imageformats_qgif_arm64-v8a.so:libplugins_imageformats_qjpeg_arm64-v8a.so:libplugins_imageformats_qsvg_arm64-v8a.so</item>
+    </array>
+    <array name="qt_libs">
+        <item>arm64-v8a;c++_shared</item>
+        <item>arm64-v8a;Qt5Core_arm64-v8a</item>
+        <item>arm64-v8a;Qt5AndroidExtras_arm64-v8a</item>
+        <item>arm64-v8a;Qt5Gui_arm64-v8a</item>
+        <item>arm64-v8a;Qt5Network_arm64-v8a</item>
+        <item>arm64-v8a;Qt5Widgets_arm64-v8a</item>
+        <item>arm64-v8a;Qt5Svg_arm64-v8a</item>
+    </array>
+    <array name="qt_sources">
+        <item>https://download.qt.io/ministro/android/qt5/qt-5.9</item>
+    </array>
+</resources>

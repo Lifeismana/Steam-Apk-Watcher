@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <public type="array" name="bundled_in_assets" id="0x7f010000" />
+    <public type="array" name="bundled_libs" id="0x7f010001" />
+    <public type="array" name="load_local_libs" id="0x7f010002" />
+    <public type="array" name="qt_libs" id="0x7f010003" />
+    <public type="array" name="qt_sources" id="0x7f010004" />
+    <public type="drawable" name="res_0x7f020000_ic_launcher_background__0" id="0x7f020000" />
+    <public type="drawable" name="ic_launcher" id="0x7f020001" />
+    <public type="drawable" name="ic_launcher_background" id="0x7f020002" />
+    <public type="layout" name="main" id="0x7f030000" />
+    <public type="mipmap" name="ic_launcher" id="0x7f040000" />
+</resources>

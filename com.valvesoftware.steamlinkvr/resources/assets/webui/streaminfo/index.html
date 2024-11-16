@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dialog</title>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+
+<div id="pointer-circle">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="50" fill="#FFFFFF" id="pointer-pip"/>
+    </svg>
+</div>
+
+<!--Better performance than background-image with animations !-->
+<img id="background-image" src="../images/client_login_bg_grid.jpg"/>
+
+<div class="ui-main">
+    <div class="heading">
+        <p id="title"><b>Connection Error</b></p>
+        <p id="title-description">The connection to your host device running Steam was lost. Attempting to
+            reconnect...</p>
+    </div>
+
+    <div class="spinner">
+        <div class="ActivitySpinner">
+            <div class="Bar"></div>
+            <div class="Bar"></div>
+            <div class="Bar"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <button id="button-abort-connection" onclick="AbortConnection()">Disconnect</button>
+    </div>
+</div>
+</body>
+<script src="../ipc.js"></script>
+<script src="index.js"></script>
+</html>

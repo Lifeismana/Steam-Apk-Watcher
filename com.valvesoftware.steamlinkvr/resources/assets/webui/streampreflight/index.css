@@ -1,0 +1,112 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    display: flex;
+}
+
+#background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 3rem;
+}
+
+
+.ui-main {
+    margin: 5rem;
+
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: center;
+
+    color: #DEE2E5;
+
+    background: linear-gradient(
+            135deg,
+            #29455c 0%,
+            #1b2838 100%
+    ) no-repeat fixed;
+
+    border-top: 10px solid #e8ba31;
+}
+
+.heading {
+    align-self: flex-start;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+#title {
+    font-size: 3vw;
+    color: white;
+    flex: 1;
+    margin: 0;
+}
+
+#title-description {
+    font-size: 1vw;
+    color: white;
+}
+
+.preflight-results {
+    flex-grow: 1;
+}
+
+.dialog-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.result {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-ignore-button {
+    height: 40px;
+    margin-left: 20px;
+}
+
+.result-title {
+    font-size: 2vw;
+}
+
+.result-description {
+    font-size: 1vw;
+}
+
+#pointer-circle {
+	visibility: hidden;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    z-index: 1000;
+}
+
+.button {
+    width: 20rem;
+    height: 6rem;
+    font-size: 2rem;
+    color:white;
+    background-color: #2a465d;
+    border: none;
+    border-radius: 5px;
+}
+
+.button-red {
+    background-color: #d74026;
+}
