@@ -10,6 +10,7 @@
 node_modules/
 .venv/
 .storage/
+.env
 index.android.bundle
 *.xsd
 *.tflite

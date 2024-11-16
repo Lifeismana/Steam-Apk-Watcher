@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+    volumes:
+      - .:/data/repo
+      - $SSH_AUTH_SOCK:/ssh-agent      
+    environment:
+        SSH_AUTH_SOCK: /ssh-agent
+        GITHUB_WORKSPACE: /data/repo
+    env_file:
+      - .env
