@@ -11,7 +11,7 @@ public class SDLControllerManager {
 
     public static native int nativeAddHaptic(int i, String str);
 
-    public static native int nativeAddJoystick(int i, String str, String str2, int i2, int i3, boolean z, int i4, int i5, int i6, int i7);
+    public static native int nativeAddJoystick(int i, String str, String str2, int i2, int i3, int i4, int i5, int i6, int i7);
 
     public static native int nativeRemoveHaptic(int i);
 

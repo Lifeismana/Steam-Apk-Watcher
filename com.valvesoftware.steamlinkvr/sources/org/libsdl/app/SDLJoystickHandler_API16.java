@@ -101,7 +101,7 @@ class SDLJoystickHandler_API16 extends SDLJoystickHandler {
                     }
                 }
                 this.mJoysticks.add(sDLJoystick);
-                SDLControllerManager.nativeAddJoystick(sDLJoystick.device_id, sDLJoystick.name, sDLJoystick.desc, getVendorId(device), getProductId(device), false, getButtonMask(device), sDLJoystick.axes.size(), getAxisMask(sDLJoystick.axes), sDLJoystick.hats.size() / 2);
+                SDLControllerManager.nativeAddJoystick(sDLJoystick.device_id, sDLJoystick.name, sDLJoystick.desc, getVendorId(device), getProductId(device), getButtonMask(device), sDLJoystick.axes.size(), getAxisMask(sDLJoystick.axes), sDLJoystick.hats.size() / 2);
             }
         }
         Iterator<SDLJoystick> it = this.mJoysticks.iterator();
