@@ -458,6 +458,7 @@ ActionButtonLabelSort
 ActionType
 Actions
 ActiveAccountProvider
+ActiveLocaleProvider
 ActivityIndicator
 ActualTrackingSystemName_String
 AddAccessors
@@ -626,6 +627,7 @@ AssertMsg
 AssertNever
 AssertionError
 Asset
+AssetURL
 Assets
 AssignOpenUrl
 AssignSetActiveUser
@@ -758,7 +760,6 @@ BIsHubCategoryMissing
 BIsIOS
 BIsInClientBeta
 BIsInPresentationMode
-BIsInitialized
 BIsLinkFilterUrl
 BIsLinuxPC
 BIsLoaded
@@ -930,6 +931,7 @@ BounceOutLeft
 BounceOutRight
 BounceOutUp
 Box
+BoxProps_t
 BreadCrumbs_AllEvents
 BreadCrumbs_GameEvents
 BroadcastChat_AddModeratorFailed
@@ -1253,6 +1255,8 @@ CCommunity_Comment
 CCommunity_Comment_Reaction
 CCommunity_DeleteCommentFromThread_Request
 CCommunity_DeleteCommentFromThread_Response
+CCommunity_FetchTranslationFromCrowdIn_Request
+CCommunity_FetchTranslationFromCrowdIn_Response
 CCommunity_GetAppRichPresenceLocalization_Request
 CCommunity_GetAppRichPresenceLocalization_Response
 CCommunity_GetAppRichPresenceLocalization_Response_Token
@@ -1745,6 +1749,8 @@ CPlayer_UpdateSteamAnnouncementLastRead_Response
 CPlaytest_GetInvites_Request
 CPlaytest_GetInvites_Response
 CPlaytest_GetInvites_Response_Invite
+CPlaytest_RequestInvite_Request
+CPlaytest_RequestInvite_Response
 CPlaytest_UpdateInvites_Request
 CPlaytest_UpdateInvites_Response
 CPrivacySettings
@@ -1839,14 +1845,6 @@ CReactBBCodeParser
 CRemoveAuthenticatorViaChallengeContinue_Replacement_Token
 CReservationPositionMessage
 CSS
-CSaleItemRewards_CanClaimItem_Request
-CSaleItemRewards_CanClaimItem_Response
-CSaleItemRewards_ClaimItem_Request
-CSaleItemRewards_ClaimItem_Response
-CSaleItemRewards_GetRewardDefinitions_Request
-CSaleItemRewards_GetRewardDefinitions_Response
-CSaleItemRewards_SetRewardDefinitions_Request
-CSaleItemRewards_SetRewardDefinitions_Response
 CScheduledFunc
 CShoppingCart_AddBundle_Request
 CShoppingCart_AddBundle_Response
@@ -1884,7 +1882,6 @@ CSteamEngine_SetOverlayEscapeKeyHandling_Notification
 CSteamEngine_TextFilterDictionaryChanged_Notification
 CSteamEngine_UpdateTextFilterDictionary_Notification
 CSteamID
-CSteamItemRewardDefinition
 CSteamNotificationStore
 CSteamNotification_GetPreferences_Request
 CSteamNotification_GetPreferences_Response
@@ -2070,7 +2067,6 @@ CameraSupportsCompatibilityModes_Bool
 CameraToHeadTransform_Matrix34
 CameraToHeadTransforms_Matrix34_Array
 CameraType
-CanClaimItem
 CanSubscribe
 CanUnifyCoordinateSystemWithHmd_Bool
 Cancel
@@ -2119,7 +2115,6 @@ Circle
 CircleCodeScreen
 CircularProgress
 CircularTimer
-ClaimItem
 Clamp
 ClanImageChooser_Desc
 ClanImageChooser_None
@@ -2231,9 +2226,12 @@ Color
 ColorProperties
 ColorSpace
 Column
+ColumnProps
 Columns
+ColumnsProps
 Commands
 CommonActions
+CommonIconProps_t
 CommunityConfig
 CommunityLink_Label
 CommunityScreen_Title
@@ -2889,6 +2887,10 @@ DiscoveryQueue_OpenWizard
 DiscoveryQueue_RecommendedByIR
 DiscoveryQueue_RemoveFromWishlist
 DiscoveryQueue_SalePage_Exhausted
+DiscoveryQueue_SaleStatus_Desc
+DiscoveryQueue_SaleStatus_Link
+DiscoveryQueue_SaleStatus_Title
+DiscoveryQueue_SaleStatus_Title_Complete
 DiscoveryQueue_SimilarGames
 DiscoveryQueue_SummaryTitle
 DiscoveryQueue_Title
@@ -2905,6 +2907,8 @@ DiscoveryQueue_ViewedCaps
 DiscoveryQueue_WhyRelevant
 DiscoveryQueue_WidgetHeader
 DiscoveryQueue_WidgetHeader_LoggedOut
+DiscoveryQueue_Widget_SaleDesc
+DiscoveryQueue_Widget_SaleTitle
 DiscoveryQueue_Wishlisted
 DiscoveryQueue_WishlistedCaps
 DiscoveryQueue_YourStats
@@ -3206,6 +3210,11 @@ EAuthSessionSecurityHistoryToString
 EAuthSessionSecurityHistory_0
 EAuthSessionSecurityHistory_1
 EAuthSessionSecurityHistory_2
+EAuthTokenAppType
+EAuthTokenAppTypeToString
+EAuthTokenAppType_0
+EAuthTokenAppType_1
+EAuthTokenAppType_2
 EAuthTokenPlatformType
 EAuthTokenPlatformTypeToString
 EAuthTokenPlatformType_0
@@ -3339,6 +3348,7 @@ EBrowserGPUStatus_5
 EBrowserGPUStatus_6
 EBrowserGPUStatus_7
 EBrowserGPUStatus_8
+EBrowserGPUStatus_9
 EBrowserType
 EBrowserType_ChildHWNDNative
 EBrowserType_DirectHWND
@@ -6380,6 +6390,7 @@ EPlaytestInviteStatus_0
 EPlaytestInviteStatus_1
 EPlaytestInviteStatus_2
 EPlaytestInviteStatus_3
+EPlaytestInviteStatus_4
 EPlaytestStatus
 EPlaytestStatusToString
 EPlaytestStatus_0
@@ -6728,12 +6739,6 @@ ERemoteStoragePublishedFileVisibility_1
 ERemoteStoragePublishedFileVisibility_2
 ERemoteStoragePublishedFileVisibility_3
 EResult
-ERewardDefinitionsAction
-ERewardDefinitionsActionToString
-ERewardDefinitionsAction_0
-ERewardDefinitionsAction_1
-ERewardDefinitionsAction_2
-ERewardDefinitionsAction_3
 ERiskLevel
 ERiskLevelToString
 ERiskLevel_0
@@ -7591,6 +7596,7 @@ EUserBadge_63
 EUserBadge_64
 EUserBadge_65
 EUserBadge_66
+EUserBadge_67
 EUserBadge_7
 EUserBadge_8
 EUserBadge_9
@@ -8197,6 +8203,7 @@ EventEditor_SaleValveApproval_Request_Approval_ttip
 EventEditor_SaleValveApproval_Request_Button
 EventEditor_SaleValveApproval_Request_Desc
 EventEditor_SaleValveApproval_Request_Desc2
+EventEditor_SaleValveApproval_Request_Desc3
 EventEditor_SaleValveApproval_Request_DuplicateError
 EventEditor_SaleValveApproval_Request_Error
 EventEditor_SaleValveApproval_Request_InputText
@@ -8537,6 +8544,7 @@ FetchItemMetadata
 FetchNotifications
 FetchNotificationsSettings
 FetchResult
+FetchTranslationFromCrowdIn
 FieldOfViewBottomDegrees_Float
 FieldOfViewLeftDegrees_Float
 FieldOfViewRightDegrees_Float
@@ -8646,6 +8654,7 @@ FormattingToolbar_InsertLink
 FormattingToolbar_Italic
 FormattingToolbar_LinkAddress
 FormattingToolbar_LinkText
+FormattingToolbar_OrderedList
 FormattingToolbar_OutdentList
 FormattingToolbar_Paragraph
 FormattingToolbar_Redo
@@ -8910,6 +8919,7 @@ GetCountBytesRemaining
 GetCountryRestrictions
 GetCreatorHome
 GetCreatorHomeURL
+GetCurrentCode
 GetCurrentState
 GetCurrentSteamGuardCode
 GetCustomNotificationData
@@ -9006,6 +9016,7 @@ GetMarketingMessagesForUser
 GetMarketingMessagesViewerRangeStats
 GetMicroTrailer
 GetMiniProfileBackground
+GetMobileDeviceDetails
 GetMobileSummary
 GetMostPopularTags
 GetMsgAndErrorCodeFromResponse
@@ -9079,7 +9090,6 @@ GetReplacementAuthenticator
 GetRequestParam
 GetRequests
 GetResponsivePersonaImageSize
-GetRewardDefinitions
 GetRichPresenceLoc
 GetServerRTime32
 GetServiceTransport
@@ -9101,7 +9111,6 @@ GetSteamEngineTextFilterDictionary
 GetSteamGuardCodeForTime
 GetSteamGuardInfo
 GetSteamID
-GetSteamInterface
 GetSteamNotificationData
 GetSteamNotifications
 GetStorageKey
@@ -9342,6 +9351,8 @@ HeaderMenuButton
 HeaderStyleInterpolators
 Headers
 Heading
+HeadingLevel_t
+HeadingProps
 Heatmap
 Heavy
 HeightFull
@@ -9590,6 +9601,8 @@ ImuFactoryAccelerometerScale_Vector3
 ImuFactoryGyroBias_Vector3
 ImuFactoryGyroScale_Vector3
 ImuToHeadTransform_Matrix34
+InRangeArray
+InRangeInclusive
 Inactive
 IncludeBacktraceInLog
 Indie
@@ -9700,6 +9713,7 @@ IsDebugLogEnabled
 IsDesktopClientProtocol
 IsELanguageValidInRealm
 IsEmojiOnly
+IsEmulator
 IsGooglePlayServicesAvailable
 IsHTMLElement
 IsHTMLElementTextInput
@@ -10556,6 +10570,7 @@ MarketingMessagesService
 Mask
 Massively Multiplayer
 Math
+MathUtils
 MaybeScreen
 MaybeScreenContainer
 MediaManager_AllApps_Dropdown
@@ -10618,8 +10633,10 @@ MediaTransfer_Notification_Title
 MediaTransfer_ProgressPctComplete
 MediaTransfer_ProgressTitle
 Medium
-MeetSteam_CancelRegistration
-MeetSteam_ChangingRegistration
+MeetSteam_ChoosePartner
+MeetSteam_ChoosePartnerOther
+MeetSteam_CompleteRegistration
+MeetSteam_CompleteRegistration_Desc
 MeetSteam_Max
 MeetSteam_Or
 MeetSteam_Reg_Company
@@ -10630,12 +10647,16 @@ MeetSteam_Reg_GuestCount_ttip
 MeetSteam_Reg_Name
 MeetSteam_Reg_Others
 MeetSteam_Reg_Others_name
-MeetSteam_Register_session_start
+MeetSteam_Reg_Preset
+MeetSteam_Reg_Preset_ttip
 MeetSteam_Register_title
 MeetSteam_Registered
-MeetSteam_Registered_Plural
+MeetSteam_Registering
+MeetSteam_RegistrationFailed
 MeetSteam_Spot
 MeetSteam_Spot_Plural
+MeetSteam_Unegistering
+MeetSteam_Unregister_title
 Megabits
 Megabits_PerSecond
 Megabytes
@@ -10672,7 +10693,6 @@ Mixin
 MobXProviderContext
 MobileAppService
 MobileAuthService
-MobileDeviceDetails
 MobileDeviceService
 MobileFeedback
 MobileLogin_AccountName
@@ -11729,6 +11749,7 @@ ReportsTimeSinceVSync_Bool
 Request
 RequestFeatureAccess
 RequestFullscreen
+RequestInvite
 RequestNewAccessToken
 RequestPlaytime
 RequestPurchase
@@ -11748,6 +11769,7 @@ RespondToClanInvite
 RespondToRequestedPurchase
 ResponderEventPlugin
 Response
+ResponsiveTextSize_t
 ResultFailed
 ResumeReporting
 Retrying
@@ -11956,7 +11978,6 @@ SafeScript
 SafeStyle
 SafeStyleSheet
 SafeUrl
-SaleItemRewardsService
 SalePage_Admin_SaleEventDay
 SalePage_Answers
 SalePage_BadgeProgress_LevelNum
@@ -12034,6 +12055,11 @@ Sale_BrowserSortOption_Demo
 Sale_BrowserSortOption_Discounted
 Sale_BrowserSortOption_Discounted_ttip
 Sale_BrowserSortOption_Game
+Sale_BrowserSortOption_Incompatible
+Sale_BrowserSortOption_MLPlaytime
+Sale_BrowserSortOption_MLPlaytime_ttip
+Sale_BrowserSortOption_MLWishlist
+Sale_BrowserSortOption_MLWishlist_ttip
 Sale_BrowserSortOption_MostPlayedDemo
 Sale_BrowserSortOption_MostPlayedDemo_ttip
 Sale_BrowserSortOption_NewAndTrending
@@ -12207,13 +12233,16 @@ Sale_ReserveUnavailable
 Sale_SaleEvent_Section
 Sale_SectionDisabled
 Sale_SectionLink_BrowseAll
+Sale_Section_PointShop_class_1
 Sale_Section_PointShop_class_11
 Sale_Section_PointShop_class_12
 Sale_Section_PointShop_class_13
 Sale_Section_PointShop_class_14
 Sale_Section_PointShop_class_15
+Sale_Section_PointShop_class_2
 Sale_Section_PointShop_class_3
 Sale_Section_PointShop_class_4
+Sale_Section_PointShop_class_5
 Sale_Section_PointShop_class_8
 Sale_Section_Redeem_AlreadyRedeemed
 Sale_Section_Redeem_Countdown
@@ -12446,6 +12475,8 @@ Sale_default_label_267
 Sale_default_label_268
 Sale_default_label_269
 Sale_default_label_27
+Sale_default_label_270
+Sale_default_label_271
 Sale_default_label_28
 Sale_default_label_29
 Sale_default_label_3
@@ -12553,7 +12584,6 @@ Sale_default_label_RemotePlay_TV
 Sale_default_label_RemotePlay_Tablet
 Sale_default_label_RemotePlay_Together
 Sale_default_label_TopSellers
-Sale_default_label_WishlistRecommender
 Sale_default_label_custom
 Sale_default_subtitle
 Sale_default_subtitle_1
@@ -12661,6 +12691,7 @@ SendToChat_ClipTooLong
 SendToPhone_Description
 SendToPhone_DescriptionMobile
 SendToPhone_DescriptionMobileQR
+SendToPhone_Exporting
 SendToPhone_Finished
 SendToPhone_LoadingPhone
 SendToPhone_NoPhone
@@ -12795,11 +12826,10 @@ SetProfilePreferences
 SetProfileTheme
 SetReservationPositionMessage
 SetReturnUnavailableItems
-SetRewardDefinitions
 SetServerLanguageForAccount
+SetServiceTransport
 SetSettings
 SetSteamDeckKeyboardSkin
-SetSteamInterface
 SetStoreBrowseContext
 SetStoreBrowseDataRequest
 SetStoreBrowseFilters
@@ -12860,13 +12890,19 @@ Settings_GameRecording_BitRate_Ultra
 Settings_GameRecording_BitRate_Ultra_Short
 Settings_GameRecording_CleanUp
 Settings_GameRecording_Cleanup_Button
+Settings_GameRecording_Cleanup_Confirm
 Settings_GameRecording_Description
+Settings_GameRecording_DiskSpace1080
+Settings_GameRecording_DiskSpace4k
+Settings_GameRecording_DiskSpaceTooltip
 Settings_GameRecording_Gamepad_Clip
 Settings_GameRecording_Gamepad_MarkHotkey
 Settings_GameRecording_Gamepad_ToggleRecordingHotkey
 Settings_GameRecording_Hotkey_AddMarker
 Settings_GameRecording_Hotkey_ToggleRecording
 Settings_GameRecording_InstantClip
+Settings_GameRecording_InstantClipDropdown_Label
+Settings_GameRecording_InstantClipDropdown_Option
 Settings_GameRecording_Intro
 Settings_GameRecording_Length
 Settings_GameRecording_Length_Choice_Disabled
@@ -12895,6 +12931,7 @@ Settings_GameRecording_OptOut_Description
 Settings_GameRecording_OptOut_Title
 Settings_GameRecording_Path
 Settings_GameRecording_Path_NeedRestart
+Settings_GameRecording_Path_Reset
 Settings_GameRecording_Path_Title
 Settings_GameRecording_PerGameSettings_AddGame_Button
 Settings_GameRecording_PerGameSettings_AddGame_Title
@@ -13594,6 +13631,8 @@ TextInput
 TextInputState
 TextLink
 TextPath
+TextProps_t
+TextTone_t
 ThemeProvider
 ThirdPartyPaths
 TimeInterval_1Day
@@ -13677,6 +13716,10 @@ TimeSince_XWeeks
 TimeSince_XYears
 Time_Now
 Time_Past_At
+Time_QuarterOfYear_Expanded_Q1
+Time_QuarterOfYear_Expanded_Q2
+Time_QuarterOfYear_Expanded_Q3
+Time_QuarterOfYear_Expanded_Q4
 Time_QuarterOfYear_Q1
 Time_QuarterOfYear_Q2
 Time_QuarterOfYear_Q3
@@ -16356,7 +16399,6 @@ canUseSandboxIframe
 canUseViewport
 can_add_two_factor_phone
 can_be_deleted
-can_claim
 can_fire
 can_post
 can_subscribe
@@ -17408,6 +17450,7 @@ developer
 developers
 development
 device
+deviceDetails
 deviceId
 deviceName
 devicePushToken
@@ -17671,7 +17714,9 @@ edistributor
 editDistance
 edit_info
 edit_marketing
+edit_sort_order
 edit_store_display_content
+edit_url
 editable
 editableInput
 effects
@@ -19800,6 +19845,7 @@ invite_sent
 invite_token
 inviter_steamid
 invites
+invites_remaining
 invites_updated
 invoke
 invokeCallbackAndReturnFlushedQueue
@@ -20300,6 +20346,7 @@ item_movie_webm_small
 item_name
 item_title
 item_type
+itemcollections
 itemfavorited
 itemid
 items
@@ -21606,7 +21653,6 @@ m_Screenshots
 m_SelfPurchaseOption
 m_ServiceTransport
 m_SettingsChangedCallback
-m_SteamInterface
 m_Storage
 m_StoreCategories
 m_TextFilterPreferences
@@ -21820,6 +21866,7 @@ m_sURL
 m_schTimer
 m_sendTimer
 m_sequenceStart
+m_serviceTransport
 m_setActiveUser
 m_setEnabledDebugLogs
 m_setKnownDebugLogs
@@ -21970,6 +22017,7 @@ mapApps
 mapAppsAllowed
 mapHeight
 mapKeys
+mapMap
 mapNotificationResponse
 mapType
 mapValues
@@ -22527,7 +22575,6 @@ nextSibling
 nextTick
 nextWireType_
 next_appid
-next_claim_time
 next_cursor
 nextfest
 nextlevelname
@@ -22888,6 +22935,7 @@ onOpenAutoFocus
 onOpenChange
 onOpenExternally
 onOpenRoute
+onOpenURLInExternalBrowser
 onOpenWindow
 onOpenWindowProp
 onOptionsChange
@@ -23841,6 +23889,7 @@ purple
 push
 pushKey
 pushStackEntry
+push_by_default
 push_enabled
 push_enabled_only
 puzzlematching
@@ -24564,7 +24613,6 @@ revokeObjectURL
 revokeObjectUrl
 revoke_action
 reward_id
-reward_item
 reward_types
 rgAccounts
 rgCards
@@ -24677,14 +24725,12 @@ rtime_after
 rtime_before
 rtime_created
 rtime_end
-rtime_end_time
 rtime_estimated_notification
 rtime_expires
 rtime_last_played
 rtime_mod_reviewed
 rtime_oldest_date
 rtime_start
-rtime_start_time
 rtime_subscribed
 rtime_temporary_feature_expiration
 rtime_updated
@@ -24784,7 +24830,6 @@ sale-tag-bucket-top
 sale-vr
 sale-yesterdaydeals
 sale_filter
-sale_reward_def_id
 sale_tagid
 sale_three_section_hide_chat
 sale_three_section_show_chat
@@ -24959,6 +25004,7 @@ scrolling
 scrollingElement
 seagreen
 seal
+sealed
 search
 search-results
 search-share
@@ -24977,6 +25023,7 @@ search_tags
 search_term
 search_text
 seashell
+seasonpassproductpage
 secDuration
 secondary
 secondary_languages
@@ -25895,6 +25942,7 @@ status_text
 staysActiveInBackground
 stderr
 steam-logo
+steamGuardHelpers
 steamID
 steamUI
 steam_deck_compat_category
@@ -26936,12 +26984,16 @@ updateValue_
 updateView
 updateWith
 update_appid
+update_bytes_copied
 update_bytes_downloaded
 update_bytes_processed
 update_bytes_staged
+update_bytes_to_copy
 update_bytes_to_download
 update_bytes_to_process
 update_bytes_to_stage
+update_bytes_to_verify
+update_bytes_verified
 update_disc_bytes_per_second
 update_is_install
 update_is_prefetch_estimate
@@ -26954,6 +27006,7 @@ update_publishedfileid
 update_seconds_remaining
 update_start_time
 update_state
+update_state_flags
 update_time
 updated
 updated-games
@@ -27500,7 +27553,6 @@ views
 viewsRef
 violet
 virtualOffset0Based
-virtual_item_reward_event_id
 virtualized
 visibility
 visibilityState

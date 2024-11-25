@@ -3153,18 +3153,18 @@ public final class C2790R {
     /* renamed from: com.valvesoftware.android.steam.community.R$raw */
     /* loaded from: classes4.dex */
     public static final class raw {
-        public static int src_fonts_motivasansbold = 2131755008;
-        public static int src_fonts_motivasansbolditalic = 2131755009;
-        public static int src_fonts_motivasansextrabold = 2131755010;
-        public static int src_fonts_motivasansextrabolditalic = 2131755011;
-        public static int src_fonts_motivasanslight = 2131755012;
-        public static int src_fonts_motivasanslightitalic = 2131755013;
-        public static int src_fonts_motivasansmedium = 2131755014;
-        public static int src_fonts_motivasansmediumitalic = 2131755015;
-        public static int src_fonts_motivasansregular = 2131755016;
-        public static int src_fonts_motivasansregularitalic = 2131755017;
-        public static int src_fonts_motivasansthin = 2131755018;
-        public static int src_fonts_motivasansthinitalic = 2131755019;
+        public static int __packages_sharedmobileui_src_fonts_motivasansbold = 2131755008;
+        public static int __packages_sharedmobileui_src_fonts_motivasansbolditalic = 2131755009;
+        public static int __packages_sharedmobileui_src_fonts_motivasansextrabold = 2131755010;
+        public static int __packages_sharedmobileui_src_fonts_motivasansextrabolditalic = 2131755011;
+        public static int __packages_sharedmobileui_src_fonts_motivasanslight = 2131755012;
+        public static int __packages_sharedmobileui_src_fonts_motivasanslightitalic = 2131755013;
+        public static int __packages_sharedmobileui_src_fonts_motivasansmedium = 2131755014;
+        public static int __packages_sharedmobileui_src_fonts_motivasansmediumitalic = 2131755015;
+        public static int __packages_sharedmobileui_src_fonts_motivasansregular = 2131755016;
+        public static int __packages_sharedmobileui_src_fonts_motivasansregularitalic = 2131755017;
+        public static int __packages_sharedmobileui_src_fonts_motivasansthin = 2131755018;
+        public static int __packages_sharedmobileui_src_fonts_motivasansthinitalic = 2131755019;
 
         private raw() {
         }

@@ -3684,18 +3684,18 @@
     <public type="plurals" name="exo_controls_fastforward_by_amount_description" id="0x7f0f0000" />
     <public type="plurals" name="exo_controls_rewind_by_amount_description" id="0x7f0f0001" />
     <public type="plurals" name="mtrl_badge_content_description" id="0x7f0f0002" />
-    <public type="raw" name="src_fonts_motivasansbold" id="0x7f100000" />
-    <public type="raw" name="src_fonts_motivasansbolditalic" id="0x7f100001" />
-    <public type="raw" name="src_fonts_motivasansextrabold" id="0x7f100002" />
-    <public type="raw" name="src_fonts_motivasansextrabolditalic" id="0x7f100003" />
-    <public type="raw" name="src_fonts_motivasanslight" id="0x7f100004" />
-    <public type="raw" name="src_fonts_motivasanslightitalic" id="0x7f100005" />
-    <public type="raw" name="src_fonts_motivasansmedium" id="0x7f100006" />
-    <public type="raw" name="src_fonts_motivasansmediumitalic" id="0x7f100007" />
-    <public type="raw" name="src_fonts_motivasansregular" id="0x7f100008" />
-    <public type="raw" name="src_fonts_motivasansregularitalic" id="0x7f100009" />
-    <public type="raw" name="src_fonts_motivasansthin" id="0x7f10000a" />
-    <public type="raw" name="src_fonts_motivasansthinitalic" id="0x7f10000b" />
+    <public type="raw" name="__packages_sharedmobileui_src_fonts_motivasansbold" id="0x7f100000" />
+    <public type="raw" name="__packages_sharedmobileui_src_fonts_motivasansbolditalic" id="0x7f100001" />
+    <public type="raw" name="__packages_sharedmobileui_src_fonts_motivasansextrabold" id="0x7f100002" />
+    <public type="raw" name="__packages_sharedmobileui_src_fonts_motivasansextrabolditalic" id="0x7f100003" />
+    <public type="raw" name="__packages_sharedmobileui_src_fonts_motivasanslight" id="0x7f100004" />
+    <public type="raw" name="__packages_sharedmobileui_src_fonts_motivasanslightitalic" id="0x7f100005" />
+    <public type="raw" name="__packages_sharedmobileui_src_fonts_motivasansmedium" id="0x7f100006" />
+    <public type="raw" name="__packages_sharedmobileui_src_fonts_motivasansmediumitalic" id="0x7f100007" />
+    <public type="raw" name="__packages_sharedmobileui_src_fonts_motivasansregular" id="0x7f100008" />
+    <public type="raw" name="__packages_sharedmobileui_src_fonts_motivasansregularitalic" id="0x7f100009" />
+    <public type="raw" name="__packages_sharedmobileui_src_fonts_motivasansthin" id="0x7f10000a" />
+    <public type="raw" name="__packages_sharedmobileui_src_fonts_motivasansthinitalic" id="0x7f10000b" />
     <public type="string" name="abc_action_bar_home_description" id="0x7f110000" />
     <public type="string" name="abc_action_bar_up_description" id="0x7f110001" />
     <public type="string" name="abc_action_menu_overflow_description" id="0x7f110002" />

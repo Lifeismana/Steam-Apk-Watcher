@@ -20,6 +20,7 @@ AccountSwitcher
 AccountSwitcherRow
 ActiveAccount
 ActiveGradient
+ActiveLocaleProvider
 ActivityIndicator
 Add
 AddAccessors
@@ -108,6 +109,7 @@ AssertNever
 AssertionError
 Asset
 AssetSourceResolver
+AssetURL
 AssignOpenUrl
 AssignSetActiveUser
 AsyncActionMenuRow
@@ -508,6 +510,8 @@ CCommunity_Comment
 CCommunity_Comment_Reaction
 CCommunity_DeleteCommentFromThread_Request
 CCommunity_DeleteCommentFromThread_Response
+CCommunity_FetchTranslationFromCrowdIn_Request
+CCommunity_FetchTranslationFromCrowdIn_Response
 CCommunity_GetAppRichPresenceLocalization_Request
 CCommunity_GetAppRichPresenceLocalization_Response
 CCommunity_GetAppRichPresenceLocalization_Response_Token
@@ -951,6 +955,8 @@ CPlayer_UpdateSteamAnnouncementLastRead_Response
 CPlaytest_GetInvites_Request
 CPlaytest_GetInvites_Response
 CPlaytest_GetInvites_Response_Invite
+CPlaytest_RequestInvite_Request
+CPlaytest_RequestInvite_Response
 CPlaytest_UpdateInvites_Request
 CPlaytest_UpdateInvites_Response
 CPrivacySettings
@@ -1044,14 +1050,6 @@ CPushNotificationStore
 CReactBBCodeParser
 CRemoveAuthenticatorViaChallengeContinue_Replacement_Token
 CReservationPositionMessage
-CSaleItemRewards_CanClaimItem_Request
-CSaleItemRewards_CanClaimItem_Response
-CSaleItemRewards_ClaimItem_Request
-CSaleItemRewards_ClaimItem_Response
-CSaleItemRewards_GetRewardDefinitions_Request
-CSaleItemRewards_GetRewardDefinitions_Response
-CSaleItemRewards_SetRewardDefinitions_Request
-CSaleItemRewards_SetRewardDefinitions_Response
 CScheduledFunc
 CShoppingCart_AddBundle_Request
 CShoppingCart_AddBundle_Response
@@ -1090,7 +1088,6 @@ CSteamEngine_TextFilterDictionaryChanged_Notification
 CSteamEngine_UpdateTextFilterDictionary_Notification
 CSteamGuardStore
 CSteamID
-CSteamItemRewardDefinition
 CSteamNotificationMobileStore
 CSteamNotificationStore
 CSteamNotification_GetPreferences_Request
@@ -1265,7 +1262,6 @@ CallGetRSAKey
 CallGetRSAKeyUM
 CallbackHandleDisposer
 Camera
-CanClaimItem
 CanSubscribe
 Cancel
 CancelCooldown
@@ -1303,7 +1299,6 @@ CircleCodeScreen
 CircularExpirationMeter
 CircularProgress
 CircularTimer
-ClaimItem
 Clamp
 Class
 ClassHeading
@@ -1536,6 +1531,7 @@ EAsyncGameSessionUserVisibilityToString
 EAuctionBadgeLevelToString
 EAuthSessionGuardTypeToString
 EAuthSessionSecurityHistoryToString
+EAuthTokenAppTypeToString
 EAuthTokenPlatformTypeToString
 EAuthTokenRevokeActionToString
 EAuthTokenStateToString
@@ -1681,7 +1677,6 @@ EPurchaseRequestActionToString
 EPushUpdatesToCrowdInToString
 ERefundSupportActionToString
 EResult
-ERewardDefinitionsActionToString
 ERiskLevelToString
 ESDCardFormatStageToString
 ESLSHelperToString
@@ -1822,6 +1817,7 @@ FetchNotificationsSettings
 FetchOwnedApps
 FetchPersona
 FetchPushNotificationsSettings
+FetchTranslationFromCrowdIn
 FiberNode
 FiberRootNode
 File
@@ -2185,6 +2181,7 @@ GetMediaTransferPath
 GetMessageForFailureState
 GetMicroTrailer
 GetMiniProfileBackground
+GetMobileDeviceDetails
 GetMobileSummary
 GetMostPopularTags
 GetMsgAndErrorCodeFromResponse
@@ -2278,7 +2275,6 @@ GetRequests
 GetRequestsQueryPrefix
 GetResponsivePersonaImageSize
 GetReturnUnavailableItems
-GetRewardDefinitions
 GetRichPresenceLoc
 GetRichPresenceLocAsync
 GetRotationFromDirection
@@ -2310,7 +2306,6 @@ GetSteamGuardInfo
 GetSteamGuardStorageKey
 GetSteamGuardStorageOptions
 GetSteamID
-GetSteamInterface
 GetSteamNotificationData
 GetSteamNotifications
 GetStorageKey
@@ -2520,6 +2515,8 @@ IgnoreFriend
 Image
 ImageBackground
 ImplementsStaticInterface
+InRangeArray
+InRangeInclusive
 Index
 InfiniteQueryObserver
 Info
@@ -2843,7 +2840,6 @@ MessageQueue
 MigrateMobileSession
 MigratePartnerLinkTracking
 MobXGlobals
-MobileDeviceDetails
 MobileFeedback
 MobilePlatformHeader
 Modal
@@ -3202,6 +3198,7 @@ ReadOnlyElement
 ReadOnlyNode
 ReadOnlyText
 ReadResults
+Reauth
 Reconnect
 RecordDisconnectedPlaytime
 Recording
@@ -3298,6 +3295,7 @@ ReportedErrorInfo
 Request
 RequestFeatureAccess
 RequestFullscreen
+RequestInvite
 RequestNewAccessToken
 RequestPlaytime
 RequestPurchase
@@ -3487,8 +3485,8 @@ SetProfileTheme
 SetReconnectErrorHandler
 SetReservationPositionMessage
 SetReturnUnavailableItems
-SetRewardDefinitions
 SetServerLanguageForAccount
+SetServiceTransport
 SetSettings
 SetStatusEventHandler
 SetSteamDeckKeyboardSkin
@@ -3939,7 +3937,6 @@ _LogMessageToDisk
 _MergeClientAppMaps
 _MergePromises
 _MigrateMobileSession
-_MobileDeviceDetails
 _Mutation
 _MutationCache
 _MutationObserver
@@ -7513,6 +7510,7 @@ mapEquiv
 mapHasEqualEntry
 mapKeys
 mapLikeFunc
+mapMap
 mapMightHaveLoosePrim
 mapNotificationResponse
 mapRemainingChildren
@@ -7868,6 +7866,7 @@ onConfirm
 onContentSizeChange
 onContinue
 onDeauth
+onDeviceDetails
 onDismiss
 onDispatchAction
 onDone
@@ -7965,7 +7964,6 @@ onRemoveSecondaryAccounts
 onRequestCancel
 onRequestClose
 onRequestEmailConfirmation
-onRequestRemoveMobileAuthenticator
 onResendCode
 onResolveLogin
 onResponderEnd
@@ -10025,7 +10023,6 @@ wrapRaw
 wrapRounded
 wrappedFn
 wrappedOnChange
-wrappedOnPress
 wrapper
 wrapperChain
 wrapperClone
