@@ -3848,6 +3848,8 @@ WebUINoResponse
 WebViewScreen
 WebviewError
 Wifi
+WindowSizeMeasurer
+WindowSizeProvider
 Wishlist
 WithErrorBoundary
 WithErrorBoundaryComponent
@@ -9714,6 +9716,7 @@ useMigrateSteamGuard
 useMigrateSteamGuardAndAuth
 useMobilePasswordAuthSession
 useMobileSummaryQuery
+useMobileWindowSize
 useModalState
 useModifyFamilyGroup
 useMouseDownOrTouchStartRef

@@ -14369,6 +14369,7 @@ WidthContent
 WidthFull
 WidthNone
 WillDriftInYaw_Bool
+WindowSizeProvider
 WindowTitle_FriendsList
 WireType
 Wired
@@ -23029,6 +23030,7 @@ onShow
 onShowAgreement
 onShowOptions
 onShowUnderlay
+onSizeChange
 onSortChange
 onStart
 onStartReached
@@ -27231,6 +27233,7 @@ useMemo
 useMicrophonePermissions
 useMigrateSteamGuardAndAuth
 useMobileSummaryQuery
+useMobileWindowSize
 useModalState
 useModernRuntimeScheduler
 useModifyFamilyGroup
