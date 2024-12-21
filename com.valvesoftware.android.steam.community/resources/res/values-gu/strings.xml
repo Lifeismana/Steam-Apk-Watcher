@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">લિંક કૉપિ કરો</string>
     <string name="fallback_menu_item_open_in_browser">બ્રાઉઝરમાં ખોલો</string>
     <string name="fallback_menu_item_share_link">લિંક શેર કરો</string>
-    <string name="fcm_fallback_notification_channel_label">વિવિધ</string>
     <string name="fingerprint_dialog_icon_description">ફિંગરપ્રિન્ટ આઇકન</string>
     <string name="fingerprint_dialog_touch_sensor">ફિંગરપ્રિન્ટના સેન્સરને સ્પર્શ કરો</string>
     <string name="fingerprint_error_hw_not_available">ફિંગરપ્રિન્ટ હાર્ડવેર ઉપલબ્ધ નથી.</string>

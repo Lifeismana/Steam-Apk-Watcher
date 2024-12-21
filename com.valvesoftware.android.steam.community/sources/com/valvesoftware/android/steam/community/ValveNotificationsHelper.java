@@ -5,24 +5,20 @@ import com.google.firebase.messaging.RemoteMessage;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-/* loaded from: classes4.dex */
+/* loaded from: classes3.dex */
 public class ValveNotificationsHelper {
     private static ValveNotificationsHelper sm_instance = new ValveNotificationsHelper();
     private HashMap<String, RemoteMessage> m_mapNotifications = new HashMap<>();
     private ArrayList<Pair<RemoteMessage, ENotificationAppState>> m_mapPendingNotifications = new ArrayList<>();
     private OnMessageReceivedListener m_listener = null;
 
-    /* loaded from: classes4.dex */
+    /* loaded from: classes3.dex */
     public interface OnMessageReceivedListener {
         void onMessageReceived(RemoteMessage remoteMessage);
     }
 
     public static ValveNotificationsHelper getInstance() {
         return sm_instance;
-    }
-
-    public ArrayList getPendingNotifications() {
-        return this.m_mapPendingNotifications;
     }
 
     public void registerMessageReceivedListener(OnMessageReceivedListener onMessageReceivedListener) {
@@ -46,7 +42,7 @@ public class ValveNotificationsHelper {
         return null;
     }
 
-    /* loaded from: classes4.dex */
+    /* loaded from: classes3.dex */
     public enum ENotificationAppState {
         Invalid(0),
         Pressed(1),
@@ -56,13 +52,17 @@ public class ValveNotificationsHelper {
 
         private final int value;
 
-        public int getValue() {
-            return this.value;
-        }
-
         ENotificationAppState(int i) {
             this.value = i;
         }
+
+        public int getValue() {
+            return this.value;
+        }
+    }
+
+    public ArrayList getPendingNotifications() {
+        return this.m_mapPendingNotifications;
     }
 
     public void clearPendingNotifications() {

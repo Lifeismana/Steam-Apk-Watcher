@@ -41,16 +41,17 @@ public class InstallReferrerClientImpl extends InstallReferrerClient {
         private final InstallReferrerStateListener mListener;
 
         private InstallReferrerServiceConnection(InstallReferrerStateListener installReferrerStateListener) {
-            if (installReferrerStateListener == null) {
-                throw new RuntimeException("Please specify a listener to know when setup is done.");
+            if (installReferrerStateListener != null) {
+                this.mListener = installReferrerStateListener;
+                return;
             }
-            this.mListener = installReferrerStateListener;
+            throw new RuntimeException("Please specify a listener to know when setup is done.");
         }
 
         @Override // android.content.ServiceConnection
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
             InstallReferrerCommons.logVerbose(InstallReferrerClientImpl.TAG, "Install Referrer service connected.");
-            InstallReferrerClientImpl.this.service = IGetInstallReferrerService.Stub.m1172b(iBinder);
+            InstallReferrerClientImpl.this.service = IGetInstallReferrerService.Stub.m595b(iBinder);
             InstallReferrerClientImpl.this.clientState = 2;
             this.mListener.onInstallReferrerSetupFinished(0);
         }
@@ -91,7 +92,7 @@ public class InstallReferrerClientImpl extends InstallReferrerClient {
         Bundle bundle = new Bundle();
         bundle.putString("package_name", this.mApplicationContext.getPackageName());
         try {
-            return new ReferrerDetails(this.service.mo1171c(bundle));
+            return new ReferrerDetails(this.service.mo594c(bundle));
         } catch (RemoteException e) {
             InstallReferrerCommons.logWarn(TAG, "RemoteException getting install referrer information");
             this.clientState = 0;

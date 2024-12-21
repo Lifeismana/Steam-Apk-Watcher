@@ -4,7 +4,7 @@
     <string name="abc_action_bar_up_description">Navigera uppåt</string>
     <string name="abc_action_menu_overflow_description">Fler alternativ</string>
     <string name="abc_action_mode_done">Klar</string>
-    <string name="abc_activity_chooser_view_see_all">Visa alla</string>
+    <string name="abc_activity_chooser_view_see_all">Se alla</string>
     <string name="abc_activitychooserview_choose_application">Välj en app</string>
     <string name="abc_capital_off">AV</string>
     <string name="abc_capital_on">PÅ</string>
@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">Kopiera länk</string>
     <string name="fallback_menu_item_open_in_browser">Öppna i webbläsaren</string>
     <string name="fallback_menu_item_share_link">Dela länk</string>
-    <string name="fcm_fallback_notification_channel_label">Diverse</string>
     <string name="fingerprint_dialog_icon_description">Ikon för fingeravtryck</string>
     <string name="fingerprint_dialog_touch_sensor">Tryck på fingeravtryckssensorn</string>
     <string name="fingerprint_error_hw_not_available">Det finns ingen maskinvara för fingeravtryck.</string>

@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">העתקת הקישור</string>
     <string name="fallback_menu_item_open_in_browser">פתיחה בדפדפן</string>
     <string name="fallback_menu_item_share_link">לשיתוף הקישור</string>
-    <string name="fcm_fallback_notification_channel_label">שונות</string>
     <string name="fingerprint_dialog_icon_description">סמל טביעת אצבע</string>
     <string name="fingerprint_dialog_touch_sensor">יש לגעת בחיישן טביעות האצבע</string>
     <string name="fingerprint_error_hw_not_available">החומרה בשביל טביעת אצבע אינה זמינה.</string>

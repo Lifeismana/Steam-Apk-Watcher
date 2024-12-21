@@ -8,13 +8,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/* loaded from: classes4.dex */
+/* loaded from: classes3.dex */
 public class ValvePackage implements ReactPackage {
-    @Override // com.facebook.react.ReactPackage
-    public /* synthetic */ NativeModule getModule(String str, ReactApplicationContext reactApplicationContext) {
-        return ReactPackage.CC.$default$getModule(this, str, reactApplicationContext);
-    }
-
     @Override // com.facebook.react.ReactPackage
     public List<ViewManager> createViewManagers(ReactApplicationContext reactApplicationContext) {
         return Collections.emptyList();

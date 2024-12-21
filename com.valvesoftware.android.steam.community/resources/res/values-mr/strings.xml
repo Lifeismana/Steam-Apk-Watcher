@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">लिंक कॉपी करा</string>
     <string name="fallback_menu_item_open_in_browser">ब्राउझरमध्ये उघडा</string>
     <string name="fallback_menu_item_share_link">लिंक शेअर करा</string>
-    <string name="fcm_fallback_notification_channel_label">मिश्र</string>
     <string name="fingerprint_dialog_icon_description">फिंगरप्रिंटचा आयकन</string>
     <string name="fingerprint_dialog_touch_sensor">फिंगरप्रिंट सेन्सरला स्पर्श करा</string>
     <string name="fingerprint_error_hw_not_available">फिंगरप्रिंट हार्डवेअर उपलब्‍ध नाही.</string>

@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">Копирај го линкот</string>
     <string name="fallback_menu_item_open_in_browser">Отвори во прелистувач</string>
     <string name="fallback_menu_item_share_link">Сподели линк</string>
-    <string name="fcm_fallback_notification_channel_label">Разно</string>
     <string name="fingerprint_dialog_icon_description">Икона за отпечаток</string>
     <string name="fingerprint_dialog_touch_sensor">Допрете го сенз. за отпечатоци</string>
     <string name="fingerprint_error_hw_not_available">Нема достапен хардвер за отпечатоци.</string>
@@ -195,7 +194,7 @@
     <string name="rn_tab_description">Картичка</string>
     <string name="screen_lock_prompt_message">Внесете го заклучувањето на екранот за да продолжите</string>
     <string name="scrollbar_description">Лента за лизгање</string>
-    <string name="search_menu_title">Пребарај</string>
+    <string name="search_menu_title">Пребарување</string>
     <string name="spinbutton_description">Копче за вртење</string>
     <string name="state_busy_description">зафатено</string>
     <string name="state_collapsed_description">собрано</string>

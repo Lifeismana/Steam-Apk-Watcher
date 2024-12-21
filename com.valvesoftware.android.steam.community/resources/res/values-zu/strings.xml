@@ -119,7 +119,6 @@
     <string name="fallback_menu_item_copy_link">Kopisha isixhumanisi</string>
     <string name="fallback_menu_item_open_in_browser">Vula kusiphequluli</string>
     <string name="fallback_menu_item_share_link">Yabelana ngesixhumanisi</string>
-    <string name="fcm_fallback_notification_channel_label">Okwahlukahlukene</string>
     <string name="fingerprint_dialog_icon_description">Isithonjana sezigxivizo zeminwe</string>
     <string name="fingerprint_dialog_touch_sensor">Thinta inzwa yezigxivizo zeminwe</string>
     <string name="fingerprint_error_hw_not_available">Izingxenyekazi zekhompuyutha zezigxivizo zeminwe azitholakali.</string>

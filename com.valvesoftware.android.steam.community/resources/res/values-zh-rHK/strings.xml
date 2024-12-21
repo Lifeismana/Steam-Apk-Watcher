@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">複製連結</string>
     <string name="fallback_menu_item_open_in_browser">在瀏覽器中開啟</string>
     <string name="fallback_menu_item_share_link">分享連結</string>
-    <string name="fcm_fallback_notification_channel_label">其他</string>
     <string name="fingerprint_dialog_icon_description">指紋圖示</string>
     <string name="fingerprint_dialog_touch_sensor">請輕觸指紋感應器</string>
     <string name="fingerprint_error_hw_not_available">無法使用指紋硬件。</string>

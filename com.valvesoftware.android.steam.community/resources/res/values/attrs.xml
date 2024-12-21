@@ -140,13 +140,9 @@
     </attr>
     <attr name="arrowShaftLength" format="dimension">
     </attr>
-    <attr name="aspectRatio" format="string">
-    </attr>
     <attr name="attributeName" format="string">
     </attr>
     <attr name="autoCompleteTextViewStyle" format="reference">
-    </attr>
-    <attr name="autoFocus" format="boolean">
     </attr>
     <attr name="autoSizeMaxTextSize" format="dimension">
     </attr>
@@ -996,10 +992,6 @@
         <enum name="normal" value="0" />
         <enum name="mini" value="1" />
     </attr>
-    <attr name="facing">
-        <enum name="back" value="0" />
-        <enum name="front" value="1" />
-    </attr>
     <attr name="fadeDuration" format="integer">
     </attr>
     <attr name="failureImage" format="reference">
@@ -1027,13 +1019,6 @@
     <attr name="fastScrollVerticalTrackDrawable" format="reference">
     </attr>
     <attr name="firstBaselineToTopHeight" format="dimension">
-    </attr>
-    <attr name="flash">
-        <enum name="off" value="0" />
-        <enum name="on" value="1" />
-        <enum name="torch" value="2" />
-        <enum name="auto" value="3" />
-        <enum name="redEye" value="4" />
     </attr>
     <attr name="floatingActionButtonLargePrimaryStyle" format="reference">
     </attr>
@@ -2011,6 +1996,8 @@
     </attr>
     <attr name="popupWindowStyle" format="reference">
     </attr>
+    <attr name="postSplashScreenTheme" format="reference">
+    </attr>
     <attr name="prefixText" format="string">
     </attr>
     <attr name="prefixTextAppearance" format="reference">
@@ -2267,6 +2254,8 @@
     <attr name="spinnerDropDownItemStyle" format="reference">
     </attr>
     <attr name="spinnerStyle" format="reference">
+    </attr>
+    <attr name="splashScreenIconSize" format="dimension">
     </attr>
     <attr name="splitTrack" format="boolean">
     </attr>
@@ -2806,6 +2795,14 @@
     <attr name="windowMinWidthMinor" format="dimension|fraction">
     </attr>
     <attr name="windowNoTitle" format="boolean">
+    </attr>
+    <attr name="windowSplashScreenAnimatedIcon" format="reference">
+    </attr>
+    <attr name="windowSplashScreenAnimationDuration" format="integer">
+    </attr>
+    <attr name="windowSplashScreenBackground" format="color">
+    </attr>
+    <attr name="windowSplashScreenIconBackgroundColor" format="color">
     </attr>
     <attr name="yearSelectedStyle" format="reference">
     </attr>

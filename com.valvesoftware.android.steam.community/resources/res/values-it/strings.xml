@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">Copia link</string>
     <string name="fallback_menu_item_open_in_browser">Apri nel browser</string>
     <string name="fallback_menu_item_share_link">Condividi link</string>
-    <string name="fcm_fallback_notification_channel_label">Varie</string>
     <string name="fingerprint_dialog_icon_description">Icona dell\'impronta</string>
     <string name="fingerprint_dialog_touch_sensor">Tocca sensore impronte</string>
     <string name="fingerprint_error_hw_not_available">Hardware per l\'impronta non disponibile.</string>

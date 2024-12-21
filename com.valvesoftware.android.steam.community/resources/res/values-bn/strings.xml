@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">লিঙ্ক কপি করুন</string>
     <string name="fallback_menu_item_open_in_browser">ব্রাউজারে খুলুন</string>
     <string name="fallback_menu_item_share_link">লিঙ্ক শেয়ার করুন</string>
-    <string name="fcm_fallback_notification_channel_label">বিবিধ</string>
     <string name="fingerprint_dialog_icon_description">ফিঙ্গারপ্রিন্ট আইকন</string>
     <string name="fingerprint_dialog_touch_sensor">আঙ্গুলের ছাপের সেন্সর টাচ করুন</string>
     <string name="fingerprint_error_hw_not_available">আঙ্গুলের ছাপ নেওয়ার হার্ডওয়্যার উপলভ্য নয়।</string>

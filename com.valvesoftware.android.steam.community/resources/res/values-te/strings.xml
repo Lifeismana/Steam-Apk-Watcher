@@ -50,7 +50,7 @@
     <string name="common_google_play_services_install_title">Google Play సేవలను పొందండి</string>
     <string name="common_google_play_services_notification_channel_name">Google Play సేవల లభ్యత</string>
     <string name="common_google_play_services_notification_ticker">Google Play సేవల ఎర్రర్</string>
-    <string name="common_google_play_services_unknown_issue">%1$s Google Play సేవలతో సమస్య కలిగి ఉంది. దయచేసి మళ్లీ ప్రయత్నించండి.</string>
+    <string name="common_google_play_services_unknown_issue">%1$s Google Play సేవలతో సమస్య కలిగి ఉంది. దయచేసి మళ్లీ ట్రై చేయండి.</string>
     <string name="common_google_play_services_unsupported_text">%1$s Google Play సేవలు లేకుండా అమలు కాదు, ఈ సేవలకు మీ పరికరంలో మద్దతు లేదు.</string>
     <string name="common_google_play_services_update_button">అప్‌డేట్ చేయి</string>
     <string name="common_google_play_services_update_text">మీరు Google Play సేవలను నవీకరిస్తే మినహా %1$s అమలు కాదు.</string>
@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">లింక్‌ను కాపీ చేయి</string>
     <string name="fallback_menu_item_open_in_browser">బ్రౌజర్‌లో తెరువు</string>
     <string name="fallback_menu_item_share_link">లింక్‌ను షేర్ చేయి</string>
-    <string name="fcm_fallback_notification_channel_label">ఇతరాలు</string>
     <string name="fingerprint_dialog_icon_description">వేలిముద్ర చిహ్నం</string>
     <string name="fingerprint_dialog_touch_sensor">వేలిముద్ర సెన్సార్‌ను తాకండి</string>
     <string name="fingerprint_error_hw_not_available">వేలిముద్ర హార్డ్‌వేర్ అందుబాటులో లేదు.</string>

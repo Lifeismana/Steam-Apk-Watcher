@@ -120,7 +120,6 @@
     <string name="fallback_menu_item_copy_link">Шилтемени көчүрүү</string>
     <string name="fallback_menu_item_open_in_browser">Серепчиден ачуу</string>
     <string name="fallback_menu_item_share_link">Шилтемени бөлүшүү</string>
-    <string name="fcm_fallback_notification_channel_label">Аралаш</string>
     <string name="fingerprint_dialog_icon_description">Манжа изинин сүрөтчөсү</string>
     <string name="fingerprint_dialog_touch_sensor">Манжа изинин сенсорун басыңыз</string>
     <string name="fingerprint_error_hw_not_available">Манжа изинин аппараттык камсыздоосу жеткиликтүү эмес.</string>

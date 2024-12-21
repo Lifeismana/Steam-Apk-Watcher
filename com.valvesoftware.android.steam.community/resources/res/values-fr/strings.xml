@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">Copier le lien</string>
     <string name="fallback_menu_item_open_in_browser">Ouvrir dans un navigateur</string>
     <string name="fallback_menu_item_share_link">Partager le lien</string>
-    <string name="fcm_fallback_notification_channel_label">Divers</string>
     <string name="fingerprint_dialog_icon_description">Icône d\'empreinte digitale</string>
     <string name="fingerprint_dialog_touch_sensor">Appuyez sur lecteur d\'empreinte</string>
     <string name="fingerprint_error_hw_not_available">Matériel de lecture d\'empreinte digitale indisponible.</string>

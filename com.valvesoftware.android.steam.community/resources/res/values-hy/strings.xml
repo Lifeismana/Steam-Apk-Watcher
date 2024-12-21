@@ -120,7 +120,6 @@
     <string name="fallback_menu_item_copy_link">Պատճենել հղումը</string>
     <string name="fallback_menu_item_open_in_browser">Բացել դիտարկիչում</string>
     <string name="fallback_menu_item_share_link">Կիսվել հղումով</string>
-    <string name="fcm_fallback_notification_channel_label">Զանազան</string>
     <string name="fingerprint_dialog_icon_description">Մատնահետքի պատկերակ</string>
     <string name="fingerprint_dialog_touch_sensor">Հպեք մատնահետքի սկաներին</string>
     <string name="fingerprint_error_hw_not_available">Մատնահետքերի սարքն անհասանելի է:</string>

@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">Nakili kiungo</string>
     <string name="fallback_menu_item_open_in_browser">Fungua katika kivinjari</string>
     <string name="fallback_menu_item_share_link">Shiriki kiungo</string>
-    <string name="fcm_fallback_notification_channel_label">Zinginezo</string>
     <string name="fingerprint_dialog_icon_description">Aikoni ya alama ya kidole</string>
     <string name="fingerprint_dialog_touch_sensor">Gusa kitambua alama ya kidole</string>
     <string name="fingerprint_error_hw_not_available">Maunzi ya alama ya kidole hayapatikani.</string>

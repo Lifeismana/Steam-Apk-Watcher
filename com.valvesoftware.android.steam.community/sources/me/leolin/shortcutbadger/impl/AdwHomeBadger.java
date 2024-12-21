@@ -9,7 +9,7 @@ import me.leolin.shortcutbadger.Badger;
 import me.leolin.shortcutbadger.ShortcutBadgeException;
 import me.leolin.shortcutbadger.util.BroadcastHelper;
 
-/* loaded from: classes5.dex */
+/* loaded from: classes4.dex */
 public class AdwHomeBadger implements Badger {
     public static final String CLASSNAME = "CNAME";
     public static final String COUNT = "COUNT";

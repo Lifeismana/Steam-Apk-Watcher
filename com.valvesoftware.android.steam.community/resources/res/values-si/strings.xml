@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">සබැඳිය පිටපත් කරන්න</string>
     <string name="fallback_menu_item_open_in_browser">බ්‍රව්සරයේ විවෘත කරන්න</string>
     <string name="fallback_menu_item_share_link">සබැඳිය බෙදා ගන්න</string>
-    <string name="fcm_fallback_notification_channel_label">විවිධ</string>
     <string name="fingerprint_dialog_icon_description">ඇඟිලි සලකුණු නිරූපකය</string>
     <string name="fingerprint_dialog_touch_sensor">ඇඟිලි සලකුණු සංවේදකය ස්පර්ශ කරන්න</string>
     <string name="fingerprint_error_hw_not_available">ඇඟිලි සලකුණු දෘඪාංගය ලද නොහැකිය.</string>

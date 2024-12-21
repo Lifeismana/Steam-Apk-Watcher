@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">Копиране на връзката</string>
     <string name="fallback_menu_item_open_in_browser">Отваряне в браузър</string>
     <string name="fallback_menu_item_share_link">Споделяне на връзката</string>
-    <string name="fcm_fallback_notification_channel_label">Разни</string>
     <string name="fingerprint_dialog_icon_description">Икона за отпечатък</string>
     <string name="fingerprint_dialog_touch_sensor">Докоснете сензора за отпечатъци</string>
     <string name="fingerprint_error_hw_not_available">Хардуерът за отпечатъци не е налице.</string>

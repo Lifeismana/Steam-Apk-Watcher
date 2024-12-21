@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">ចម្លង​តំណ</string>
     <string name="fallback_menu_item_open_in_browser">បើក​នៅក្នុង​កម្មវិធី​រុករកតាម​អ៊ីនធឺណិត</string>
     <string name="fallback_menu_item_share_link">តំណចែករំលែក</string>
-    <string name="fcm_fallback_notification_channel_label">ផ្សេងៗ</string>
     <string name="fingerprint_dialog_icon_description">រូបស្នាមម្រាមដៃ</string>
     <string name="fingerprint_dialog_touch_sensor">ប៉ះ​ឧបករណ៍​ចាប់ស្នាម​ម្រាមដៃ</string>
     <string name="fingerprint_error_hw_not_available">មិន​អាច​ប្រើហាតវែរ​ស្នាមម្រាមដៃបាន​ទេ។</string>

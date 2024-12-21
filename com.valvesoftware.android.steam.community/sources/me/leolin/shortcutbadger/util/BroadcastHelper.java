@@ -9,7 +9,7 @@ import java.util.List;
 import me.leolin.shortcutbadger.ShortcutBadgeException;
 import me.leolin.shortcutbadger.impl.IntentConstants;
 
-/* loaded from: classes5.dex */
+/* loaded from: classes4.dex */
 public class BroadcastHelper {
     public static List<ResolveInfo> resolveBroadcast(Context context, Intent intent) {
         List<ResolveInfo> queryBroadcastReceivers = context.getPackageManager().queryBroadcastReceivers(intent, 0);

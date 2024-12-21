@@ -120,7 +120,6 @@
     <string name="fallback_menu_item_copy_link">ბმულის კოპირება</string>
     <string name="fallback_menu_item_open_in_browser">ბრაუზერში გახსნა</string>
     <string name="fallback_menu_item_share_link">ბმულის გაზიარება</string>
-    <string name="fcm_fallback_notification_channel_label">სხვადასხვა</string>
     <string name="fingerprint_dialog_icon_description">თითის ანაბეჭდის ხატულა</string>
     <string name="fingerprint_dialog_touch_sensor">შეეხეთ თითის ანაბეჭდის სენსორს</string>
     <string name="fingerprint_error_hw_not_available">თითის ანაბეჭდის აპარატურა მიუწვდომელია.</string>

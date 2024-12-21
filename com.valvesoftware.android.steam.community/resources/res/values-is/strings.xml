@@ -119,7 +119,6 @@
     <string name="fallback_menu_item_copy_link">Afrita tengil</string>
     <string name="fallback_menu_item_open_in_browser">Opna í vafra</string>
     <string name="fallback_menu_item_share_link">Deila tengli</string>
-    <string name="fcm_fallback_notification_channel_label">Ýmislegt</string>
     <string name="fingerprint_dialog_icon_description">Fingrafaratákn</string>
     <string name="fingerprint_dialog_touch_sensor">Snertu fingrafaralesarann</string>
     <string name="fingerprint_error_hw_not_available">Fingrafarsvélbúnaður ekki til staðar.</string>

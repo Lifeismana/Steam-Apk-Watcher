@@ -179,11 +179,9 @@
     </style>
     <style name="Base.TextAppearance.AppCompat.Widget.Button" parent="@android:style/TextAppearance.Material.Widget.Button">
     </style>
-    <style name="Base.TextAppearance.AppCompat.Widget.Button.Borderless.Colored" parent="@style/Base.TextAppearance.AppCompat.Widget.Button">
-        <item name="android:textColor">@color/abc_btn_colored_borderless_text_material</item>
+    <style name="Base.TextAppearance.AppCompat.Widget.Button.Borderless.Colored" parent="@android:style/TextAppearance.Material.Widget.Button.Borderless.Colored">
     </style>
-    <style name="Base.TextAppearance.AppCompat.Widget.Button.Colored" parent="@style/Base.TextAppearance.AppCompat.Widget.Button">
-        <item name="android:textColor">@color/abc_btn_colored_text_material</item>
+    <style name="Base.TextAppearance.AppCompat.Widget.Button.Colored" parent="@android:style/TextAppearance.Material.Widget.Button.Colored">
     </style>
     <style name="Base.TextAppearance.AppCompat.Widget.Button.Inverse" parent="@android:style/TextAppearance.Material.Widget.Button.Inverse">
     </style>
@@ -297,17 +295,17 @@
     </style>
     <style name="Base.Theme.AppCompat.Light.DialogWhenLarge" parent="@style/Theme.AppCompat.Light">
     </style>
-    <style name="Base.Theme.Material3.Dark" parent="@style/Base.V14.Theme.Material3.Dark">
+    <style name="Base.Theme.Material3.Dark" parent="@style/Base.V24.Theme.Material3.Dark">
     </style>
     <style name="Base.Theme.Material3.Dark.BottomSheetDialog" parent="@style/Base.V14.Theme.Material3.Dark.BottomSheetDialog">
     </style>
-    <style name="Base.Theme.Material3.Dark.Dialog" parent="@style/Base.V14.Theme.Material3.Dark.Dialog">
+    <style name="Base.Theme.Material3.Dark.Dialog" parent="@style/Base.V24.Theme.Material3.Dark.Dialog">
     </style>
-    <style name="Base.Theme.Material3.Light" parent="@style/Base.V14.Theme.Material3.Light">
+    <style name="Base.Theme.Material3.Light" parent="@style/Base.V24.Theme.Material3.Light">
     </style>
     <style name="Base.Theme.Material3.Light.BottomSheetDialog" parent="@style/Base.V14.Theme.Material3.Light.BottomSheetDialog">
     </style>
-    <style name="Base.Theme.Material3.Light.Dialog" parent="@style/Base.V14.Theme.Material3.Light.Dialog">
+    <style name="Base.Theme.Material3.Light.Dialog" parent="@style/Base.V24.Theme.Material3.Light.Dialog">
     </style>
     <style name="Base.Theme.MaterialComponents" parent="@style/Base.V21.Theme.MaterialComponents">
     </style>
@@ -370,6 +368,12 @@
         <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
     </style>
     <style name="Base.Theme.MaterialComponents.Light.DialogWhenLarge" parent="@style/Theme.MaterialComponents.Light">
+    </style>
+    <style name="Base.Theme.SplashScreen" parent="@style/Base.v21.Theme.SplashScreen">
+    </style>
+    <style name="Base.Theme.SplashScreen.DayNight" parent="@style/Base.Theme.SplashScreen.Light">
+    </style>
+    <style name="Base.Theme.SplashScreen.Light" parent="@style/Base.v21.Theme.SplashScreen.Light">
     </style>
     <style name="Base.ThemeOverlay.AppCompat" parent="@style/Platform.ThemeOverlay.AppCompat">
     </style>
@@ -1127,6 +1131,7 @@
         <item name="android:buttonBarButtonStyle">?attr/buttonBarButtonStyle</item>
         <item name="android:timePickerDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog</item>
         <item name="android:datePickerDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog</item>
+        <item name="android:contextPopupMenuStyle">@style/Widget.MaterialComponents.PopupMenu.ContextMenu</item>
         <item name="actionBarPopupTheme">@style/ThemeOverlay.MaterialComponents.Dark</item>
         <item name="actionBarSize">@dimen/mtrl_toolbar_default_height</item>
         <item name="actionBarStyle">@style/Widget.MaterialComponents.ActionBar.Surface</item>
@@ -1234,6 +1239,7 @@
     </style>
     <style name="Base.V14.Theme.MaterialComponents.Dialog" parent="@style/Base.V14.Theme.MaterialComponents.Dialog.Bridge">
         <item name="android:colorBackground">@color/design_dark_default_color_background</item>
+        <item name="android:contextPopupMenuStyle">@style/Widget.MaterialComponents.PopupMenu.ContextMenu</item>
         <item name="actionBarPopupTheme">@style/ThemeOverlay.MaterialComponents.Dark</item>
         <item name="actionBarSize">@dimen/mtrl_toolbar_default_height</item>
         <item name="actionBarStyle">@style/Widget.MaterialComponents.ActionBar.Surface</item>
@@ -1340,6 +1346,7 @@
         <item name="android:buttonBarButtonStyle">?attr/buttonBarButtonStyle</item>
         <item name="android:timePickerDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog</item>
         <item name="android:datePickerDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog</item>
+        <item name="android:contextPopupMenuStyle">@style/Widget.MaterialComponents.PopupMenu.ContextMenu</item>
         <item name="actionBarPopupTheme">@style/ThemeOverlay.MaterialComponents.Light</item>
         <item name="actionBarSize">@dimen/mtrl_toolbar_default_height</item>
         <item name="actionBarStyle">@style/Widget.MaterialComponents.Light.ActionBar.Solid</item>
@@ -1492,6 +1499,7 @@
     </style>
     <style name="Base.V14.Theme.MaterialComponents.Light.Dialog" parent="@style/Base.V14.Theme.MaterialComponents.Light.Dialog.Bridge">
         <item name="android:colorBackground">@color/design_default_color_background</item>
+        <item name="android:contextPopupMenuStyle">@style/Widget.MaterialComponents.PopupMenu.ContextMenu</item>
         <item name="actionBarPopupTheme">@style/ThemeOverlay.MaterialComponents.Light</item>
         <item name="actionBarSize">@dimen/mtrl_toolbar_default_height</item>
         <item name="actionBarStyle">@style/Widget.MaterialComponents.Light.ActionBar.Solid</item>
@@ -1747,6 +1755,18 @@
         <item name="controlBackground">@drawable/abc_control_background_material</item>
         <item name="ratingBarStyleIndicator">?android:attr/ratingBarStyleIndicator</item>
         <item name="ratingBarStyleSmall">?android:attr/ratingBarStyleSmall</item>
+    </style>
+    <style name="Base.V24.Theme.Material3.Dark" parent="@style/Base.V14.Theme.Material3.Dark">
+        <item name="android:contextPopupMenuStyle">@style/Widget.Material3.PopupMenu.ContextMenu</item>
+    </style>
+    <style name="Base.V24.Theme.Material3.Dark.Dialog" parent="@style/Base.V14.Theme.Material3.Dark.Dialog">
+        <item name="android:contextPopupMenuStyle">@style/Widget.Material3.PopupMenu.ContextMenu</item>
+    </style>
+    <style name="Base.V24.Theme.Material3.Light" parent="@style/Base.V14.Theme.Material3.Light">
+        <item name="android:contextPopupMenuStyle">@style/Widget.Material3.PopupMenu.ContextMenu</item>
+    </style>
+    <style name="Base.V24.Theme.Material3.Light.Dialog" parent="@style/Base.V14.Theme.Material3.Light.Dialog">
+        <item name="android:contextPopupMenuStyle">@style/Widget.Material3.PopupMenu.ContextMenu</item>
     </style>
     <style name="Base.V7.Theme.AppCompat" parent="@style/Platform.AppCompat">
         <item name="android:panelBackground">@android:color/transparent</item>
@@ -2606,6 +2626,11 @@
     </style>
     <style name="Base.Widget.MaterialComponents.TextView" parent="@style/Widget.AppCompat.TextView">
     </style>
+    <style name="Base.v21.Theme.SplashScreen" parent="@android:style/Theme.DeviceDefault.NoActionBar">
+    </style>
+    <style name="Base.v21.Theme.SplashScreen.Light" parent="@android:style/Theme.DeviceDefault.Light.NoActionBar">
+        <item name="isLightTheme">true</item>
+    </style>
     <style name="CalendarDatePickerDialog" parent="@android:style/Theme.Material.Dialog.Alert">
         <item name="android:windowIsFloating">true</item>
         <item name="android:datePickerStyle">@style/CalendarDatePickerStyle</item>
@@ -2888,6 +2913,10 @@
     <style name="MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked" parent="@style/Base.MaterialAlertDialog.MaterialComponents.Title.Text">
         <item name="android:layout_gravity">center</item>
         <item name="android:textAlignment">center</item>
+    </style>
+    <style name="NoAnimationDialog" parent="@style/Theme.AppCompat.Dialog">
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
     </style>
     <style name="Platform.AppCompat" parent="@style/Platform.V21.AppCompat">
     </style>
@@ -3320,24 +3349,20 @@
     <style name="TextAppearance.Compat.Notification.Info" parent="@android:style/TextAppearance.Material.Notification.Info">
     </style>
     <style name="TextAppearance.Compat.Notification.Info.Media" parent="@style/TextAppearance.Compat.Notification.Info">
-        <item name="android:textColor">@color/secondary_text_default_material_dark</item>
     </style>
     <style name="TextAppearance.Compat.Notification.Line2" parent="@style/TextAppearance.Compat.Notification.Info">
     </style>
     <style name="TextAppearance.Compat.Notification.Line2.Media" parent="@style/TextAppearance.Compat.Notification.Info.Media">
     </style>
     <style name="TextAppearance.Compat.Notification.Media" parent="@style/TextAppearance.Compat.Notification">
-        <item name="android:textColor">@color/secondary_text_default_material_dark</item>
     </style>
     <style name="TextAppearance.Compat.Notification.Time" parent="@android:style/TextAppearance.Material.Notification.Time">
     </style>
     <style name="TextAppearance.Compat.Notification.Time.Media" parent="@style/TextAppearance.Compat.Notification.Time">
-        <item name="android:textColor">@color/secondary_text_default_material_dark</item>
     </style>
     <style name="TextAppearance.Compat.Notification.Title" parent="@android:style/TextAppearance.Material.Notification.Title">
     </style>
     <style name="TextAppearance.Compat.Notification.Title.Media" parent="@style/TextAppearance.Compat.Notification.Title">
-        <item name="android:textColor">@color/primary_text_default_material_dark</item>
     </style>
     <style name="TextAppearance.Design.CollapsingToolbar.Expanded" parent="@style/TextAppearance.AppCompat.Display1">
         <item name="android:textColor">?android:attr/textColorPrimary</item>
@@ -3671,7 +3696,7 @@
     <style name="Theme" parent="">
     </style>
     <style name="Theme.App.SplashScreen" parent="@style/Theme.AppCompat.DayNight.NoActionBar">
-        <item name="android:windowBackground">@color/splashscreen_background</item>
+        <item name="android:windowBackground">@drawable/splashscreen</item>
     </style>
     <style name="Theme.AppCompat" parent="@style/Base.Theme.AppCompat">
     </style>
@@ -4006,6 +4031,27 @@
     </style>
     <style name="Theme.ReactNative.TextInput.DefaultBackground" parent="@android:style/Widget.EditText">
         <item name="android:editTextBackground">@drawable/abc_edit_text_material</item>
+    </style>
+    <style name="Theme.SplashScreen" parent="@style/Theme.SplashScreen.Common">
+        <item name="postSplashScreenTheme">?android:attr/theme</item>
+        <item name="windowSplashScreenAnimatedIcon">@android:drawable/sym_def_app_icon</item>
+        <item name="windowSplashScreenAnimationDuration">@integer/default_icon_animation_duration</item>
+        <item name="windowSplashScreenBackground">?android:attr/colorBackground</item>
+    </style>
+    <style name="Theme.SplashScreen.Common" parent="@style/Base.Theme.SplashScreen.DayNight">
+        <item name="android:windowBackground">@drawable/compat_splash_screen_no_icon_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:opacity">opaque</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="splashScreenIconSize">@dimen/splashscreen_icon_size_no_background</item>
+    </style>
+    <style name="Theme.SplashScreen.IconBackground" parent="@style/Theme.SplashScreen">
+        <item name="android:windowBackground">@drawable/compat_splash_screen</item>
+        <item name="splashScreenIconSize">@dimen/splashscreen_icon_size_with_background</item>
     </style>
     <style name="ThemeOverlay.AppCompat" parent="@style/Base.ThemeOverlay.AppCompat">
     </style>
@@ -4622,13 +4668,6 @@
         <item name="android:layout_marginRight">4dp</item>
         <item name="android:layout_marginStart">4dp</item>
         <item name="android:layout_marginEnd">4dp</item>
-    </style>
-    <style name="Widget.CameraView" parent="@android:style/Widget">
-        <item name="android:adjustViewBounds">false</item>
-        <item name="aspectRatio">4:3</item>
-        <item name="autoFocus">true</item>
-        <item name="facing">back</item>
-        <item name="flash">auto</item>
     </style>
     <style name="Widget.Compat.NotificationActionContainer" parent="">
         <item name="android:background">@drawable/notification_action_background</item>

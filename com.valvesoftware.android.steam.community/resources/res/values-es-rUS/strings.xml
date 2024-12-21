@@ -119,7 +119,6 @@
     <string name="fallback_menu_item_copy_link">Copiar vínculo</string>
     <string name="fallback_menu_item_open_in_browser">Abrir en el navegador</string>
     <string name="fallback_menu_item_share_link">Compartir vínculo</string>
-    <string name="fcm_fallback_notification_channel_label">Varios</string>
     <string name="fingerprint_dialog_icon_description">Ícono de huella dactilar</string>
     <string name="fingerprint_dialog_touch_sensor">Toca el sensor de huellas dac.</string>
     <string name="fingerprint_error_hw_not_available">El hardware para detectar huellas dactilares no está disponible.</string>

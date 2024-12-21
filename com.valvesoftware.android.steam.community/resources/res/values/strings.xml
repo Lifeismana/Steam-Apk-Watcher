@@ -46,7 +46,7 @@
     <string name="catalyst_copy_button">Copy\n</string>
     <string name="catalyst_debug_connecting">Connecting to debugger...</string>
     <string name="catalyst_debug_error">Failed to connect to debugger!</string>
-    <string name="catalyst_debug_open">Open Debugger</string>
+    <string name="catalyst_debug_open">Open DevTools</string>
     <string name="catalyst_debug_open_disabled">Connect to the bundler to debug JavaScript</string>
     <string name="catalyst_dev_menu_header">React Native Dev Menu (%1$s)</string>
     <string name="catalyst_dev_menu_sub_header">Running %1$s</string>
@@ -58,7 +58,7 @@
     <string name="catalyst_hot_reloading_stop">Disable Fast Refresh</string>
     <string name="catalyst_inspector_toggle">Toggle Element Inspector</string>
     <string name="catalyst_loading_from_url">Loading from %1$s…</string>
-    <string name="catalyst_open_debugger_error">Failed to open debugger. Please check that the dev server is running and reload the app.</string>
+    <string name="catalyst_open_debugger_error">Failed to open DevTools. Please check that the dev server is running and reload the app.</string>
     <string name="catalyst_perf_monitor">Show Perf Monitor</string>
     <string name="catalyst_perf_monitor_stop">Hide Perf Monitor</string>
     <string name="catalyst_reload">Reload</string>
@@ -158,8 +158,6 @@
     <string name="exo_track_surround_7_point_1">7.1 surround sound</string>
     <string name="exo_track_unknown">Unknown</string>
     <string name="expo_notifications_fallback_channel_name">Miscellaneous</string>
-    <string name="expo_splash_screen_resize_mode">contain</string>
-    <string name="expo_splash_screen_status_bar_translucent">false</string>
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
     <string name="fab_transformation_scrim_behavior">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
     <string name="fab_transformation_sheet_behavior">com.google.android.material.transformation.FabTransformationSheetBehavior</string>

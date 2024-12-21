@@ -119,7 +119,6 @@
     <string name="fallback_menu_item_copy_link">Copia l\'enllaç</string>
     <string name="fallback_menu_item_open_in_browser">Obre al navegador</string>
     <string name="fallback_menu_item_share_link">Comparteix l\'enllaç</string>
-    <string name="fcm_fallback_notification_channel_label">Altres</string>
     <string name="fingerprint_dialog_icon_description">Icona d\'empremta digital</string>
     <string name="fingerprint_dialog_touch_sensor">Toca sensor d\'empremtes</string>
     <string name="fingerprint_error_hw_not_available">El maquinari d\'empremtes digitals no està disponible.</string>

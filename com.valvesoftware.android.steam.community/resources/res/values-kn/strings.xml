@@ -3,7 +3,7 @@
     <string name="abc_action_bar_home_description">ಹೋಮ್‌ಗೆ ನ್ಯಾವಿಗೇಟ್ ಮಾಡಿ</string>
     <string name="abc_action_bar_up_description">ಮೇಲಕ್ಕೆ ನ್ಯಾವಿಗೇಟ್ ಮಾಡಿ</string>
     <string name="abc_action_menu_overflow_description">ಇನ್ನಷ್ಟು ಆಯ್ಕೆಗಳು</string>
-    <string name="abc_action_mode_done">ಮುಗಿದಿದೆ</string>
+    <string name="abc_action_mode_done">ಆಯಿತು</string>
     <string name="abc_activity_chooser_view_see_all">ಎಲ್ಲವನ್ನೂ ನೋಡಿ</string>
     <string name="abc_activitychooserview_choose_application">ಆ್ಯಪ್‌ವೊಂದನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="abc_capital_off">ಆಫ್</string>
@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">ಲಿಂಕ್ ನಕಲಿಸಿ</string>
     <string name="fallback_menu_item_open_in_browser">ಬ್ರೌಸರ್‌ನಲ್ಲಿ ತೆರೆಯಿರಿ</string>
     <string name="fallback_menu_item_share_link">ಲಿಂಕ್ ಹಂಚಿರಿ</string>
-    <string name="fcm_fallback_notification_channel_label">ಇತರೆ</string>
     <string name="fingerprint_dialog_icon_description">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಐಕಾನ್</string>
     <string name="fingerprint_dialog_touch_sensor">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಸೆನ್ಸರ್‌‌ ಅನ್ನು ಸ್ಪರ್ಶಿಸಿ</string>
     <string name="fingerprint_error_hw_not_available">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಹಾರ್ಡ್‌ವೇರ್‌ ಲಭ್ಯವಿಲ್ಲ.</string>

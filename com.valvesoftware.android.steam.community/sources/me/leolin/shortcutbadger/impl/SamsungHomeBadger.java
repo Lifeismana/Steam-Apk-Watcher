@@ -12,7 +12,7 @@ import me.leolin.shortcutbadger.Badger;
 import me.leolin.shortcutbadger.ShortcutBadgeException;
 import me.leolin.shortcutbadger.util.CloseHelper;
 
-/* loaded from: classes5.dex */
+/* loaded from: classes4.dex */
 public class SamsungHomeBadger implements Badger {
     private static final String[] CONTENT_PROJECTION = {"_id", "class"};
     private static final String CONTENT_URI = "content://com.sec.badge/apps?notify=true";

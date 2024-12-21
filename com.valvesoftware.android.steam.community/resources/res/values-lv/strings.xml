@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">Kopēt saiti</string>
     <string name="fallback_menu_item_open_in_browser">Atvērt pārlūkprogrammā</string>
     <string name="fallback_menu_item_share_link">Kopīgot saiti</string>
-    <string name="fcm_fallback_notification_channel_label">Dažādi</string>
     <string name="fingerprint_dialog_icon_description">Pirksta nospieduma ikona</string>
     <string name="fingerprint_dialog_touch_sensor">Pieskarieties pirksta nospieduma sensoram</string>
     <string name="fingerprint_error_hw_not_available">Pirksta nospieduma aparatūra nav pieejama.</string>

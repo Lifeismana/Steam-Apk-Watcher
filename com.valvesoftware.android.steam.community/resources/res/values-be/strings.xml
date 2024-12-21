@@ -120,7 +120,6 @@
     <string name="fallback_menu_item_copy_link">Скапіраваць спасылку</string>
     <string name="fallback_menu_item_open_in_browser">Адкрыць у браўзеры</string>
     <string name="fallback_menu_item_share_link">Абагуліць спасылку</string>
-    <string name="fcm_fallback_notification_channel_label">Рознае</string>
     <string name="fingerprint_dialog_icon_description">Значок адбітка пальца</string>
     <string name="fingerprint_dialog_touch_sensor">Дакраніцеся да сканера адбіткаў пальцаў</string>
     <string name="fingerprint_error_hw_not_available">Апаратныя сродкі для зняцця адбіткаў пальцаў недаступныя.</string>

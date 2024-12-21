@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">Kopiér link</string>
     <string name="fallback_menu_item_open_in_browser">Åbn i browser</string>
     <string name="fallback_menu_item_share_link">Del link</string>
-    <string name="fcm_fallback_notification_channel_label">Diverse</string>
     <string name="fingerprint_dialog_icon_description">Ikon for fingeraftryk</string>
     <string name="fingerprint_dialog_touch_sensor">Sæt finger på fingeraftrykslæser</string>
     <string name="fingerprint_error_hw_not_available">Hardwaren til fingeraftryk er ikke tilgængelig.</string>

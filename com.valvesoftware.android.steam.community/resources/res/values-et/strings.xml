@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">Kopeeri link</string>
     <string name="fallback_menu_item_open_in_browser">Ava brauseris</string>
     <string name="fallback_menu_item_share_link">Jaga linki</string>
-    <string name="fcm_fallback_notification_channel_label">Muu</string>
     <string name="fingerprint_dialog_icon_description">Sõrmejälje ikoon</string>
     <string name="fingerprint_dialog_touch_sensor">Puudutage sõrmejäljeandurit</string>
     <string name="fingerprint_error_hw_not_available">Sõrmejälje riistvara pole saadaval.</string>

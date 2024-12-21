@@ -8,6 +8,7 @@
     <integer name="config_tooltipAnimTime">150</integer>
     <integer name="default_blur_radius">15</integer>
     <integer name="default_downsample_factor">8</integer>
+    <integer name="default_icon_animation_duration">10000</integer>
     <integer name="design_snackbar_text_max_lines">2</integer>
     <integer name="design_tab_indicator_anim_duration_ms">300</integer>
     <integer name="exo_media_button_opacity_percentage_disabled">33</integer>

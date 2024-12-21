@@ -21,7 +21,7 @@
     <string name="abc_search_hint">खोज्नुहोस्…</string>
     <string name="abc_searchview_description_clear">क्वेरी खाली गर्नुहोस्</string>
     <string name="abc_searchview_description_query">खोज प्रश्न</string>
-    <string name="abc_searchview_description_search">खोज</string>
+    <string name="abc_searchview_description_search">खोज्नुहोस्</string>
     <string name="abc_searchview_description_submit">क्वेरी पेस गर्नुहोस्</string>
     <string name="abc_searchview_description_voice">आवाजमा आधारित खोजी</string>
     <string name="abc_shareactionprovider_share_with">यसमार्फत सेयर गर्नुहोस्</string>
@@ -120,7 +120,6 @@
     <string name="fallback_menu_item_copy_link">लिंक प्रतिलिपि गर्नुहोस्</string>
     <string name="fallback_menu_item_open_in_browser">ब्राउजरमा खोल्नुहोस्</string>
     <string name="fallback_menu_item_share_link">लिंक सेयर गर्नुहोस्</string>
-    <string name="fcm_fallback_notification_channel_label">विविध</string>
     <string name="fingerprint_dialog_icon_description">फिंगरप्रिन्ट जनाउने आइकन</string>
     <string name="fingerprint_dialog_touch_sensor">फिंगरप्रिन्ट सेन्सरमा छुनुहोस्‌</string>
     <string name="fingerprint_error_hw_not_available">फिंगरप्रिन्ट हार्डवेयर उपलब्ध छैन।</string>

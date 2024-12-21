@@ -120,7 +120,6 @@
     <string name="fallback_menu_item_copy_link">Kopiuj link</string>
     <string name="fallback_menu_item_open_in_browser">Otwórz w przeglądarce</string>
     <string name="fallback_menu_item_share_link">Udostępnij link</string>
-    <string name="fcm_fallback_notification_channel_label">Różne</string>
     <string name="fingerprint_dialog_icon_description">Ikona odcisku palca</string>
     <string name="fingerprint_dialog_touch_sensor">Dotknij czytnika linii papilarnych</string>
     <string name="fingerprint_error_hw_not_available">Czytnik linii papilarnych nie jest dostępny.</string>

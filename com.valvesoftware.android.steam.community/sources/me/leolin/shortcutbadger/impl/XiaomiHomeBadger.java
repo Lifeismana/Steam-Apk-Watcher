@@ -16,7 +16,7 @@ import me.leolin.shortcutbadger.ShortcutBadgeException;
 import me.leolin.shortcutbadger.util.BroadcastHelper;
 
 @Deprecated
-/* loaded from: classes5.dex */
+/* loaded from: classes4.dex */
 public class XiaomiHomeBadger implements Badger {
     public static final String EXTRA_UPDATE_APP_COMPONENT_NAME = "android.intent.extra.update_application_component_name";
     public static final String EXTRA_UPDATE_APP_MSG_TEXT = "android.intent.extra.update_application_message_text";
@@ -26,6 +26,7 @@ public class XiaomiHomeBadger implements Badger {
     @Override // me.leolin.shortcutbadger.Badger
     public void executeBadge(Context context, ComponentName componentName, int i) throws ShortcutBadgeException {
         Object valueOf;
+        Object obj = "";
         try {
             Object newInstance = Class.forName("android.app.MiuiNotification").newInstance();
             Field declaredField = newInstance.getClass().getDeclaredField("messageCount");
@@ -43,7 +44,10 @@ public class XiaomiHomeBadger implements Badger {
         } catch (Exception unused2) {
             Intent intent = new Intent(INTENT_ACTION);
             intent.putExtra(EXTRA_UPDATE_APP_COMPONENT_NAME, componentName.getPackageName() + "/" + componentName.getClassName());
-            intent.putExtra(EXTRA_UPDATE_APP_MSG_TEXT, String.valueOf(i != 0 ? Integer.valueOf(i) : ""));
+            if (i != 0) {
+                obj = Integer.valueOf(i);
+            }
+            intent.putExtra(EXTRA_UPDATE_APP_MSG_TEXT, String.valueOf(obj));
             try {
                 BroadcastHelper.sendIntentExplicitly(context, intent);
             } catch (ShortcutBadgeException unused3) {

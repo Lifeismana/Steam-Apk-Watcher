@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import eightbitlab.com.blurview.SizeScaler;
 
-/* loaded from: classes4.dex */
+/* loaded from: classes3.dex */
 final class PreDrawBlurController implements BlurController {
     static final int TRANSPARENT = 0;
     private final BlurAlgorithm blurAlgorithm;
@@ -29,18 +29,6 @@ final class PreDrawBlurController implements BlurController {
         }
     };
     private boolean blurEnabled = true;
-
-    @Override // eightbitlab.com.blurview.BlurViewFacade
-    public BlurViewFacade setBlurRadius(float f) {
-        this.blurRadius = f;
-        return this;
-    }
-
-    @Override // eightbitlab.com.blurview.BlurViewFacade
-    public BlurViewFacade setFrameClearDrawable(Drawable drawable) {
-        this.frameClearDrawable = drawable;
-        return this;
-    }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public PreDrawBlurController(BlurView blurView, ViewGroup viewGroup, int i, BlurAlgorithm blurAlgorithm) {
@@ -136,6 +124,18 @@ final class PreDrawBlurController implements BlurController {
         setBlurAutoUpdate(false);
         this.blurAlgorithm.destroy();
         this.initialized = false;
+    }
+
+    @Override // eightbitlab.com.blurview.BlurViewFacade
+    public BlurViewFacade setBlurRadius(float f) {
+        this.blurRadius = f;
+        return this;
+    }
+
+    @Override // eightbitlab.com.blurview.BlurViewFacade
+    public BlurViewFacade setFrameClearDrawable(Drawable drawable) {
+        this.frameClearDrawable = drawable;
+        return this;
     }
 
     @Override // eightbitlab.com.blurview.BlurViewFacade

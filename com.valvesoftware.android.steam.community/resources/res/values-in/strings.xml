@@ -2,7 +2,7 @@
 <resources>
     <string name="abc_action_bar_home_description">Tunjukkan jalan ke rumah</string>
     <string name="abc_action_bar_up_description">Kembali ke atas</string>
-    <string name="abc_action_menu_overflow_description">Opsi lain</string>
+    <string name="abc_action_menu_overflow_description">Opsi lainnya</string>
     <string name="abc_action_mode_done">Selesai</string>
     <string name="abc_activity_chooser_view_see_all">Lihat semua</string>
     <string name="abc_activitychooserview_choose_application">Pilih aplikasi</string>
@@ -119,7 +119,6 @@
     <string name="fallback_menu_item_copy_link">Salin link</string>
     <string name="fallback_menu_item_open_in_browser">Buka di browser</string>
     <string name="fallback_menu_item_share_link">Bagikan link</string>
-    <string name="fcm_fallback_notification_channel_label">Lain-Lain</string>
     <string name="fingerprint_dialog_icon_description">Ikon sidik jari</string>
     <string name="fingerprint_dialog_touch_sensor">Sentuh sensor sidik jari</string>
     <string name="fingerprint_error_hw_not_available">Hardware sidik jari tidak tersedia.</string>

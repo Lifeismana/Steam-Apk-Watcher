@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">کپی پیوند</string>
     <string name="fallback_menu_item_open_in_browser">بازکردن در مرورگر</string>
     <string name="fallback_menu_item_share_link">هم‌رسانی پیوند</string>
-    <string name="fcm_fallback_notification_channel_label">موارد دیگر</string>
     <string name="fingerprint_dialog_icon_description">نماد اثر انگشت</string>
     <string name="fingerprint_dialog_touch_sensor">حسگر اثر انگشت را لمس کنید</string>
     <string name="fingerprint_error_hw_not_available">سخت‌افزار اثر انگشت در دسترس نیست.</string>

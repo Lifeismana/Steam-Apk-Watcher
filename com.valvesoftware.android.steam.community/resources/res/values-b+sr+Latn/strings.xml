@@ -119,7 +119,6 @@
     <string name="fallback_menu_item_copy_link">Kopiraj link</string>
     <string name="fallback_menu_item_open_in_browser">Otvori u pregledaču</string>
     <string name="fallback_menu_item_share_link">Deli link</string>
-    <string name="fcm_fallback_notification_channel_label">Razno</string>
     <string name="fingerprint_dialog_icon_description">Ikona otiska prsta</string>
     <string name="fingerprint_dialog_touch_sensor">Dodirn. senzor za otisak prsta</string>
     <string name="fingerprint_error_hw_not_available">Hardver za otiske prstiju nije dostupan.</string>

@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">Kopieer skakel</string>
     <string name="fallback_menu_item_open_in_browser">Maak in blaaier oop</string>
     <string name="fallback_menu_item_share_link">Deel skakel</string>
-    <string name="fcm_fallback_notification_channel_label">Diverse</string>
     <string name="fingerprint_dialog_icon_description">Vingerafdrukikoon</string>
     <string name="fingerprint_dialog_touch_sensor">Raak die vingerafdruksensor</string>
     <string name="fingerprint_error_hw_not_available">Vingerafdrukhardeware is nie beskikbaar nie.</string>

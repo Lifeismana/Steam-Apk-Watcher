@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">Αντιγραφή συνδέσμου</string>
     <string name="fallback_menu_item_open_in_browser">Άνοιγμα σε πρόγραμμα περιήγησης</string>
     <string name="fallback_menu_item_share_link">Κοινοποίηση συνδέσμου</string>
-    <string name="fcm_fallback_notification_channel_label">Διάφορα</string>
     <string name="fingerprint_dialog_icon_description">Εικονίδιο δακτυλικών αποτυπωμάτων</string>
     <string name="fingerprint_dialog_touch_sensor">Αγγίξτε τον αισθ. δακτ. αποτ.</string>
     <string name="fingerprint_error_hw_not_available">Ο εξοπλισμός δακτυλικού αποτυπώματος δεν είναι διαθέσιμος.</string>

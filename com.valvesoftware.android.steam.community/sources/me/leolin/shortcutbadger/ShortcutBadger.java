@@ -25,7 +25,7 @@ import me.leolin.shortcutbadger.impl.VivoHomeBadger;
 import me.leolin.shortcutbadger.impl.ZTEHomeBadger;
 import me.leolin.shortcutbadger.impl.ZukHomeBadger;
 
-/* loaded from: classes5.dex */
+/* loaded from: classes4.dex */
 public final class ShortcutBadger {
     private static final List<Class<? extends Badger>> BADGERS;
     private static final String LOG_TAG = "ShortcutBadger";

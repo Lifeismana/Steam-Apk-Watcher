@@ -11,7 +11,7 @@ import me.leolin.shortcutbadger.Badger;
 import me.leolin.shortcutbadger.ShortcutBadgeException;
 import me.leolin.shortcutbadger.util.BroadcastHelper;
 
-/* loaded from: classes5.dex */
+/* loaded from: classes4.dex */
 public class OPPOHomeBader implements Badger {
     private static final String INTENT_ACTION = "com.oppo.unsettledevent";
     private static final String INTENT_EXTRA_BADGEUPGRADE_COUNT = "app_badge_count";

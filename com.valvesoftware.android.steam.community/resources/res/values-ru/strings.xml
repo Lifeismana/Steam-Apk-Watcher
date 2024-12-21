@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">Копировать ссылку</string>
     <string name="fallback_menu_item_open_in_browser">Открыть в браузере</string>
     <string name="fallback_menu_item_share_link">Отправить ссылку</string>
-    <string name="fcm_fallback_notification_channel_label">Другое</string>
     <string name="fingerprint_dialog_icon_description">Значок отпечатка пальца</string>
     <string name="fingerprint_dialog_touch_sensor">Коснитесь сканера отпечатков.</string>
     <string name="fingerprint_error_hw_not_available">Сканер отпечатков пальцев недоступен.</string>

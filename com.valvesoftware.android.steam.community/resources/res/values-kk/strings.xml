@@ -120,7 +120,6 @@
     <string name="fallback_menu_item_copy_link">Сілтемені көшіру</string>
     <string name="fallback_menu_item_open_in_browser">Браузерден ашу</string>
     <string name="fallback_menu_item_share_link">Сілтемені бөлісу</string>
-    <string name="fcm_fallback_notification_channel_label">Өзге</string>
     <string name="fingerprint_dialog_icon_description">Саусақ ізі белгішесі</string>
     <string name="fingerprint_dialog_touch_sensor">Саусақ ізін оқу сканерін түртіңіз</string>
     <string name="fingerprint_error_hw_not_available">Саусақ ізі жабдығы қолжетімді емес.</string>

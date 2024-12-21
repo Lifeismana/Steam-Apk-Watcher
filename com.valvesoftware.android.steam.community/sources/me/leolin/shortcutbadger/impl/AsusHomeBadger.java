@@ -9,7 +9,7 @@ import me.leolin.shortcutbadger.Badger;
 import me.leolin.shortcutbadger.ShortcutBadgeException;
 import me.leolin.shortcutbadger.util.BroadcastHelper;
 
-/* loaded from: classes5.dex */
+/* loaded from: classes4.dex */
 public class AsusHomeBadger implements Badger {
     private static final String INTENT_ACTION = "android.intent.action.BADGE_COUNT_UPDATE";
     private static final String INTENT_EXTRA_ACTIVITY_NAME = "badge_count_class_name";

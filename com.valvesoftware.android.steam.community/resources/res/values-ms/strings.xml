@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">Salin pautan</string>
     <string name="fallback_menu_item_open_in_browser">Buka dalam penyemak imbas</string>
     <string name="fallback_menu_item_share_link">Kongsi pautan</string>
-    <string name="fcm_fallback_notification_channel_label">Pelbagai</string>
     <string name="fingerprint_dialog_icon_description">Ikon cap jari</string>
     <string name="fingerprint_dialog_touch_sensor">Sentuh penderia cap jari</string>
     <string name="fingerprint_error_hw_not_available">Perkakasan cap jari tidak tersedia.</string>

@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">இணைப்பை நகலெடு</string>
     <string name="fallback_menu_item_open_in_browser">உலாவியில் திற</string>
     <string name="fallback_menu_item_share_link">இணைப்பைப் பகிர்</string>
-    <string name="fcm_fallback_notification_channel_label">மற்றவை</string>
     <string name="fingerprint_dialog_icon_description">கைரேகை ஐகான்</string>
     <string name="fingerprint_dialog_touch_sensor">கைரேகை சென்சாரைத் தொடுக</string>
     <string name="fingerprint_error_hw_not_available">கைரேகை வன்பொருள் இல்லை.</string>

@@ -1,6 +1,6 @@
 package me.leolin.shortcutbadger;
 
-/* loaded from: classes5.dex */
+/* loaded from: classes4.dex */
 public class ShortcutBadgeException extends Exception {
     public ShortcutBadgeException(String str) {
         super(str);

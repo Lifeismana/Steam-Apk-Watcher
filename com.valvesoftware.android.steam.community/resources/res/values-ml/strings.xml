@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">ലിങ്ക് പകർത്തുക</string>
     <string name="fallback_menu_item_open_in_browser">ബ്രൗസറിൽ തുറക്കുക</string>
     <string name="fallback_menu_item_share_link">ലിങ്ക് പങ്കിടുക</string>
-    <string name="fcm_fallback_notification_channel_label">പലവക</string>
     <string name="fingerprint_dialog_icon_description">ഫിംഗർപ്രിന്റ് ഐക്കൺ</string>
     <string name="fingerprint_dialog_touch_sensor">ഫിംഗർപ്രിന്റ് സെൻസർ സ്‌പർശിക്കുക</string>
     <string name="fingerprint_error_hw_not_available">ഫിംഗർപ്രിന്റ് ഹാർഡ്‌വെയർ ലഭ്യമല്ല.</string>

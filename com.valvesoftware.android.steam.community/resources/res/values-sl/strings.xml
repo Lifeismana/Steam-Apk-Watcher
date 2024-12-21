@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">Kopiraj povezavo</string>
     <string name="fallback_menu_item_open_in_browser">Odpri v brskalniku</string>
     <string name="fallback_menu_item_share_link">Deli povezavo</string>
-    <string name="fcm_fallback_notification_channel_label">Razno</string>
     <string name="fingerprint_dialog_icon_description">Ikona prstnih odtisov</string>
     <string name="fingerprint_dialog_touch_sensor">Dotaknite se tipala prst. odt.</string>
     <string name="fingerprint_error_hw_not_available">Strojna oprema za prstne odtise ni na voljo.</string>

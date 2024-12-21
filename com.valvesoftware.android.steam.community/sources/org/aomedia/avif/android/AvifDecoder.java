@@ -3,7 +3,7 @@ package org.aomedia.avif.android;
 import android.graphics.Bitmap;
 import java.nio.ByteBuffer;
 
-/* loaded from: classes5.dex */
+/* loaded from: classes4.dex */
 public class AvifDecoder {
     private boolean alphaPresent;
     private long decoder;
@@ -14,7 +14,7 @@ public class AvifDecoder {
     private int repetitionCount;
     private int width;
 
-    /* loaded from: classes5.dex */
+    /* loaded from: classes4.dex */
     public static class Info {
         public boolean alphaPresent;
         public int depth;
@@ -42,34 +42,6 @@ public class AvifDecoder {
 
     public static native String versionString();
 
-    public boolean getAlphaPresent() {
-        return this.alphaPresent;
-    }
-
-    public int getDepth() {
-        return this.depth;
-    }
-
-    public int getFrameCount() {
-        return this.frameCount;
-    }
-
-    public double[] getFrameDurations() {
-        return this.frameDurations;
-    }
-
-    public int getHeight() {
-        return this.height;
-    }
-
-    public int getRepetitionCount() {
-        return this.repetitionCount;
-    }
-
-    public int getWidth() {
-        return this.width;
-    }
-
     static {
         try {
             System.loadLibrary("avif_android");
@@ -88,6 +60,34 @@ public class AvifDecoder {
 
     public static boolean decode(ByteBuffer encoded, int length, Bitmap bitmap) {
         return decode(encoded, length, bitmap, 0);
+    }
+
+    public int getWidth() {
+        return this.width;
+    }
+
+    public int getHeight() {
+        return this.height;
+    }
+
+    public int getDepth() {
+        return this.depth;
+    }
+
+    public boolean getAlphaPresent() {
+        return this.alphaPresent;
+    }
+
+    public int getFrameCount() {
+        return this.frameCount;
+    }
+
+    public int getRepetitionCount() {
+        return this.repetitionCount;
+    }
+
+    public double[] getFrameDurations() {
+        return this.frameDurations;
     }
 
     public void release() {

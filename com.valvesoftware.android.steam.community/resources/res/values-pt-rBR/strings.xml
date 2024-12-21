@@ -68,7 +68,6 @@
     <string name="fallback_menu_item_copy_link">Copiar link</string>
     <string name="fallback_menu_item_open_in_browser">Abrir no navegador</string>
     <string name="fallback_menu_item_share_link">Compartilhar link</string>
-    <string name="fcm_fallback_notification_channel_label">Diversos</string>
     <string name="fingerprint_dialog_icon_description">Ícone de impressão digital</string>
     <string name="fingerprint_dialog_touch_sensor">Toque no sensor de digital</string>
     <string name="fingerprint_error_hw_not_available">Hardware de impressão digital não disponível.</string>

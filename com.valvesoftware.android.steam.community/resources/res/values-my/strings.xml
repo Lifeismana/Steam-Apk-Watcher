@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">လင့်ခ်ကို ကူးယူရန်</string>
     <string name="fallback_menu_item_open_in_browser">ဘရောင်ဇာတွင် ဖွင့်ရန်</string>
     <string name="fallback_menu_item_share_link">လင့်ခ်ကို မျှဝေရန်</string>
-    <string name="fcm_fallback_notification_channel_label">အထွေထွေ</string>
     <string name="fingerprint_dialog_icon_description">လက်ဗွေ သင်္ကေတ</string>
     <string name="fingerprint_dialog_touch_sensor">လက်ဗွေအာရုံခံကိရိယာကို တို့ပါ</string>
     <string name="fingerprint_error_hw_not_available">လက်ဗွေစက်ပစ္စည်း မရနိုင်ပါ။</string>

@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">Kopioi linkki</string>
     <string name="fallback_menu_item_open_in_browser">Avaa selaimessa</string>
     <string name="fallback_menu_item_share_link">Jaa linkki</string>
-    <string name="fcm_fallback_notification_channel_label">Muut</string>
     <string name="fingerprint_dialog_icon_description">Sormenjälkikuvake</string>
     <string name="fingerprint_dialog_touch_sensor">Kosketa sormenjälkitunnistinta</string>
     <string name="fingerprint_error_hw_not_available">Sormenjälkilaitteisto ei ole käytettävissä.</string>

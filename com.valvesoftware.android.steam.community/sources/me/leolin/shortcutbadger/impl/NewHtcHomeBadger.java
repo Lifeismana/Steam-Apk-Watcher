@@ -9,7 +9,7 @@ import me.leolin.shortcutbadger.Badger;
 import me.leolin.shortcutbadger.ShortcutBadgeException;
 import me.leolin.shortcutbadger.util.BroadcastHelper;
 
-/* loaded from: classes5.dex */
+/* loaded from: classes4.dex */
 public class NewHtcHomeBadger implements Badger {
     public static final String COUNT = "count";
     public static final String EXTRA_COMPONENT = "com.htc.launcher.extra.COMPONENT";
@@ -39,10 +39,9 @@ public class NewHtcHomeBadger implements Badger {
             z2 = true;
         } catch (ShortcutBadgeException unused2) {
         }
-        if (z || z2) {
-            return;
+        if (!z && !z2) {
+            throw new ShortcutBadgeException("unable to resolve intent: " + intent2.toString());
         }
-        throw new ShortcutBadgeException("unable to resolve intent: " + intent2.toString());
     }
 
     @Override // me.leolin.shortcutbadger.Badger

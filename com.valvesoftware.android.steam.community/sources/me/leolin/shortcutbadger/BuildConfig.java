@@ -1,6 +1,6 @@
 package me.leolin.shortcutbadger;
 
-/* loaded from: classes5.dex */
+/* loaded from: classes4.dex */
 public final class BuildConfig {
     public static final String APPLICATION_ID = "me.leolin.shortcutbadger";
     public static final String BUILD_TYPE = "release";

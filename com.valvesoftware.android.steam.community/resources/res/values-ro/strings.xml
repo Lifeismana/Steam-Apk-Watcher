@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="abc_action_bar_home_description">Navigați la ecranul de pornire</string>
-    <string name="abc_action_bar_up_description">Navigați în sus</string>
+    <string name="abc_action_bar_home_description">Navighează la ecranul de pornire</string>
+    <string name="abc_action_bar_up_description">Navighează în sus</string>
     <string name="abc_action_menu_overflow_description">Mai multe opțiuni</string>
     <string name="abc_action_mode_done">Gata</string>
-    <string name="abc_activity_chooser_view_see_all">Afișați tot</string>
-    <string name="abc_activitychooserview_choose_application">Alegeți o aplicație</string>
+    <string name="abc_activity_chooser_view_see_all">Afișează tot</string>
+    <string name="abc_activitychooserview_choose_application">Alege o aplicație</string>
     <string name="abc_capital_off">DEZACTIVAT</string>
     <string name="abc_capital_on">ACTIVAT</string>
     <string name="abc_menu_alt_shortcut_label">Alt+</string>
@@ -18,15 +18,15 @@
     <string name="abc_menu_space_shortcut_label">space</string>
     <string name="abc_menu_sym_shortcut_label">Sym+</string>
     <string name="abc_prepend_shortcut_label">Meniu+</string>
-    <string name="abc_search_hint">Căutați…</string>
-    <string name="abc_searchview_description_clear">Ștergeți interogarea</string>
+    <string name="abc_search_hint">Caută…</string>
+    <string name="abc_searchview_description_clear">Șterge interogarea</string>
     <string name="abc_searchview_description_query">Termen de căutare</string>
-    <string name="abc_searchview_description_search">Căutați</string>
-    <string name="abc_searchview_description_submit">Trimiteți interogarea</string>
+    <string name="abc_searchview_description_search">Caută</string>
+    <string name="abc_searchview_description_submit">Trimite interogarea</string>
     <string name="abc_searchview_description_voice">Căutare vocală</string>
-    <string name="abc_shareactionprovider_share_with">Trimiteți la</string>
-    <string name="abc_shareactionprovider_share_with_application">Trimiteți folosind %s</string>
-    <string name="abc_toolbar_collapse_description">Restrângeți</string>
+    <string name="abc_shareactionprovider_share_with">Trimite la</string>
+    <string name="abc_shareactionprovider_share_with_application">Trimite folosind %s</string>
+    <string name="abc_toolbar_collapse_description">Restrânge</string>
     <string name="alert_description">Alertă</string>
     <string name="biometric_or_screen_lock_prompt_message">Folosiți sistemele biometrice sau blocarea ecranului pentru a continua</string>
     <string name="biometric_prompt_message">Folosiți sistemele biometrice pentru a continua</string>
@@ -50,7 +50,7 @@
     <string name="common_google_play_services_install_title">Descarcă serviciile Google Play</string>
     <string name="common_google_play_services_notification_channel_name">Disponibilitatea serviciilor Google Play</string>
     <string name="common_google_play_services_notification_ticker">Eroare a serviciilor Google Play</string>
-    <string name="common_google_play_services_unknown_issue">%1$s întâmpină probleme privind serviciile Google Play. Încercați din nou.</string>
+    <string name="common_google_play_services_unknown_issue">%1$s întâmpină probleme privind serviciile Google Play. Încearcă din nou.</string>
     <string name="common_google_play_services_unsupported_text">%1$s nu va rula fără serviciile Google Play, care nu sunt acceptate de dispozitivul tău.</string>
     <string name="common_google_play_services_update_button">Actualizează</string>
     <string name="common_google_play_services_update_text">%1$s nu va rula decât dacă actualizezi serviciile Google Play.</string>
@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">Copiază linkul</string>
     <string name="fallback_menu_item_open_in_browser">Deschide în browser</string>
     <string name="fallback_menu_item_share_link">Trimite linkul</string>
-    <string name="fcm_fallback_notification_channel_label">Diverse</string>
     <string name="fingerprint_dialog_icon_description">Pictograma amprentă</string>
     <string name="fingerprint_dialog_touch_sensor">Atingeți senzorul de amprentă</string>
     <string name="fingerprint_error_hw_not_available">Hardware-ul pentru amprentă nu este disponibil.</string>
@@ -194,7 +193,7 @@
     <string name="rn_tab_description">Filă</string>
     <string name="screen_lock_prompt_message">Introduceți blocarea ecranului ca să continuați</string>
     <string name="scrollbar_description">Bară de derulare</string>
-    <string name="search_menu_title">Căutați</string>
+    <string name="search_menu_title">Caută</string>
     <string name="spinbutton_description">Buton de incrementare</string>
     <string name="state_busy_description">ocupat</string>
     <string name="state_collapsed_description">restrâns</string>

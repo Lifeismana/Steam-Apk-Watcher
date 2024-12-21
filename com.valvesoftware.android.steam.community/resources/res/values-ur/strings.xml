@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">لنک کاپی کریں</string>
     <string name="fallback_menu_item_open_in_browser">براؤزر میں کھولیں</string>
     <string name="fallback_menu_item_share_link">لنک کا اشتراک کریں</string>
-    <string name="fcm_fallback_notification_channel_label">متفرق</string>
     <string name="fingerprint_dialog_icon_description">فنگر پرنٹ آئیکن</string>
     <string name="fingerprint_dialog_touch_sensor">فنگر پرنٹ سینسر کو ٹچ کریں</string>
     <string name="fingerprint_error_hw_not_available">فنگر پرنٹ ہارڈ ویئر دستیاب نہیں ہے۔</string>

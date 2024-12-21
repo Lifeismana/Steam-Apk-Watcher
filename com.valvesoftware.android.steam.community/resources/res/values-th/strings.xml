@@ -121,7 +121,6 @@
     <string name="fallback_menu_item_copy_link">คัดลอกลิงก์</string>
     <string name="fallback_menu_item_open_in_browser">เปิดในเบราว์เซอร์</string>
     <string name="fallback_menu_item_share_link">แชร์ลิงก์</string>
-    <string name="fcm_fallback_notification_channel_label">เบ็ดเตล็ด</string>
     <string name="fingerprint_dialog_icon_description">ไอคอนลายนิ้วมือ</string>
     <string name="fingerprint_dialog_touch_sensor">แตะเซ็นเซอร์ลายนิ้วมือ</string>
     <string name="fingerprint_error_hw_not_available">ฮาร์ดแวร์ลายนิ้วมือไม่พร้อมใช้งาน</string>

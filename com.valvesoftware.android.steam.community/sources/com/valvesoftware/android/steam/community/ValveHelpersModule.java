@@ -15,7 +15,7 @@ import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.modules.network.ForwardingCookieHandler;
-import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.gms.common.GoogleApiAvailabilityLight;
 import com.google.android.material.timepicker.TimeModel;
 import java.io.File;
 import java.io.FileInputStream;
@@ -38,20 +38,20 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/* loaded from: classes4.dex */
+/* loaded from: classes3.dex */
 public class ValveHelpersModule extends ReactContextBaseJavaModule {
     private static final String s_strSteamGuardStateFilenameBase = "Steamguard-";
     private ForwardingCookieHandler m_CookieHandler;
-
-    @Override // com.facebook.react.bridge.NativeModule
-    public String getName() {
-        return "ValveHelpersModule";
-    }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public ValveHelpersModule(ReactApplicationContext reactApplicationContext) {
         super(reactApplicationContext);
         this.m_CookieHandler = new ForwardingCookieHandler(reactApplicationContext);
+    }
+
+    @Override // com.facebook.react.bridge.NativeModule
+    public String getName() {
+        return "ValveHelpersModule";
     }
 
     @ReactMethod
@@ -119,7 +119,7 @@ public class ValveHelpersModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void IsGooglePlayServicesAvailable(Promise promise) {
         try {
-            if (GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(getCurrentActivity()) == 0) {
+            if (GoogleApiAvailabilityLight.getInstance().isGooglePlayServicesAvailable(getCurrentActivity()) == 0) {
                 promise.resolve(true);
             }
         } catch (NullPointerException unused) {

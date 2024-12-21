@@ -32,7 +32,7 @@ public abstract class InstallReferrerClient {
         public static final int FEATURE_NOT_SUPPORTED = 2;
 
         /* renamed from: OK */
-        public static final int f126OK = 0;
+        public static final int f117OK = 0;
         public static final int PERMISSION_ERROR = 4;
         public static final int SERVICE_DISCONNECTED = -1;
         public static final int SERVICE_UNAVAILABLE = 1;
