@@ -469,7 +469,7 @@ public class HIDDeviceBLESteamController extends BluetoothGattCallback implement
     public void onCharacteristicWrite(BluetoothGatt bluetoothGatt, BluetoothGattCharacteristic bluetoothGattCharacteristic, int i) {
         if (bluetoothGattCharacteristic.getUuid().equals(reportCharacteristic) && !isRegistered()) {
             Log.v(TAG, "Registering Steam Controller with ID: " + getId());
-            this.mManager.HIDDeviceConnected(getId(), getIdentifier(), getVendorId(), getProductId(), getSerialNumber(), getVersion(), getManufacturerName(), getProductName(), 0, 0, 0, 0);
+            this.mManager.HIDDeviceConnected(getId(), getIdentifier(), getVendorId(), getProductId(), getSerialNumber(), getVersion(), getManufacturerName(), getProductName(), 0, 0, 0, 0, true);
             setRegistered();
         }
         finishCurrentGattOperation();
