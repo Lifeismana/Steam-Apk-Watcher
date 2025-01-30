@@ -1,0 +1,3 @@
+[submodule "tools/DumpStrings"]
+	path = tools/DumpStrings
+	url = https://github.com/xPaw/DumpStrings.git
