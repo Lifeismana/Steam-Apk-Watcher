@@ -47,7 +47,7 @@
 7CThread
 7SVLRoot
 7XrScene
-8455763 
+8587182 
 8SVLAudio
 8SVLCodec
 8SVLCrypt
@@ -177,13 +177,10 @@ analog
 ANativeActivity_finish
 ANativeActivity_onCreate
 ANativeActivity_showSoftInput
-ANativeWindow_getHeight
-ANativeWindow_getWidth
 Android (9352603, based on r450784d1) clang version 14.0.7 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
 Android Activity getExtra sGenInfo = "%s"\n
 Android Activity sArgs length = %d\n
 android/app/Activity
-android/app/NativeActivity
 android/app/PendingIntent
 android_app_post_exec_cmd(android_app*, signed char)
 android_app_pre_exec_cmd(android_app*, signed char)
@@ -225,12 +222,15 @@ __android_log_print
 __android_log_vprint
 __android_log_write
 android_main(android_app*)
+android_main: Android SDK Version: %i
+android_main: Failed to setup OpenGLES context
+android_main: Finishing native activity from termination request
 android_main: reached end of function
+android_main: Unhandled exception caught by catch: %s
+android_main: Unhandled unknown(!) exception caught by catch
 android/media/AudioManager
 android/net/ConnectivityManager
-android/net/NetworkCapabilities
 android/net/Uri
-android/net/wifi/WifiInfo
 android/net/wifi/WifiManager
 android/net/wifi/WifiManager$WifiLock
 android/os/BatteryManager
@@ -244,7 +244,6 @@ android/os/SystemClock
 android.permission.RECORD_AUDIO
 android.permission.WAKE_LOCK
 android_sdk_version
-Android SDK Version: %i
 android_set_abort_message
 android/util/Pair
 android/view/MotionEvent
@@ -261,6 +260,7 @@ APP_CMD_DESTROY
 APP_CMD_INIT_WINDOW
 APP_CMD_PAUSE
 APP_CMD_RESUME
+APP_CMD_START
 APP_CMD_STOP
 APP_CMD_TERM_WINDOW
 AppConfig::~AppConfig()
@@ -271,7 +271,8 @@ AppConfig::LoadConfigToAppPaths()
 AppConfig::LoadConfigToAppPaths: Loading config to app paths
 AppConfig: Saving user config as persisted path was updated: %s
 AppDestroy()
-AppDestroy() on Scene\n
+AppDestroy: On Scene
+AppDestroy: On Scene Completed
 app_dummy()
 AppHandleButton(int, int, int, bool)
 AppHandleMotion(int, int, int)
@@ -282,6 +283,7 @@ App path from webview was not found %s
 app_paths
 AppPaths::~AppPaths()
 AppPaths::AppPaths()
+AppPaths::Clear()
 AppPaths::DeletePath(AppPath)
 AppPaths::GetAllValuesAsFlatJson(Json::Value&)
 AppPaths::Get: Fetching wrong type! %s
@@ -300,16 +302,12 @@ AppPaths::Set: Updating type of %s
 app_path_updated
 AppReadyToSuspend()
 App requested quit
-App restarted without a window.  Cannot progress.  WARNING WARNING WARNING\n
 AppSetup()
 AppSetup: Built from Perforce CL: %s
 AppSetup: Running on: %s
 AppSetup: Setting up VRLink Scene
 appState
 AppTick()
-App transitioned to lobby
-App transitioned to scene: %i
-App transitioned to stream
 April
 ARGB_8888
 armv8_dec_aes_cbc_sha1_128
@@ -428,7 +426,6 @@ ByteLogger::LogFrameEvent(ByteLogger::FrameExceptionEvent)
 ByteLogger::SetRoot(SVLRoot*)
 Calling SVLDataLink::SendPostTeardownShutdown()
 calloc
-Cannot get window\n
 Can't binary search on variable length encoded data.
 cAudBufAvg
 cAudBufMax
@@ -477,8 +474,6 @@ CIE start does not match
 CIE version is not 1 or 3
 cIntToHexDigit(int)
 CLEAR
-Cleared scenes
-Clearing scenes...
 click
 Client requested holdoff
 clock_gettime
@@ -522,7 +517,6 @@ commentStyle
 commentStyle must be 'All' or 'None'
 com.oculus.permission.EYE_TRACKING
 com.oculus.permission.FACE_TRACKING
-Completed XRQ_SHUTDOWN
  complex
 condition_variable timed_wait failed
 condition_variable::timed wait: mutex not locked
@@ -530,7 +524,6 @@ condition_variable wait failed
 condition_variable::wait: mutex not locked
 config/controller_config.json
 config/default_config.json
-Config: %d\n
 config/hmd_config.json
 config/ui_config.json
 connect
@@ -547,7 +540,6 @@ construction vtable for std::__ndk1::basic_ostream<char, std::__ndk1::char_trait
 construction vtable for std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::basic_ostringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 construction vtable for std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 ConstructRenderer::ConstructRenderer: Construct initialized
-Context Created %p
 continue
 copyPixelsToBuffer
 could not bind socket to %s device
@@ -561,7 +553,6 @@ createBitmap
 CreateConnectionInfo failed.  Code %d\n
 CreateConnectionInfo PermanentFailure.  Code %d\n
 Created OpenXR Instance successfully
-Created session successfully
 CreateLaunchActivityIntent() Extras: %s = %s
 CreateSimpleProcess
 CreateSimpleThread(unsigned int (*)(void*), void*, unsigned int*, unsigned int)
@@ -569,7 +560,6 @@ createWebMessageChannel
 createWifiLock
 ---CREATING AAUDIO INPUT STREAM---
 ---CREATING AAUDIO OUTPUT STREAM---
-Creating Context
 CR Flip Frame Start %d
 CR Got Cursor %d
 CR Render Custom5 %d
@@ -799,30 +789,30 @@ DW_OP_piece not implemented
 __dynamic_cast
 dynamic_cast
 Early TX Failure Streak Hit %d; Aborting and reconnecting.\n
-eglChooseConfig
 egl_config
 egl_context
 eglCreateContext
 eglCreateContext failed: 0x%08X
 eglCreateImageKHR
-eglCreateWindowSurface
- eglCreateWindowSurface failed: 0x%08X
+eglCreatePbufferSurface
+eglCreatePbufferSurface failed: 0x%08X
+eglDestroyContext
 eglDestroyImageKHR
 eglDestroyImageKHR( egl_display, image )
+eglDestroySurface
 egl_display
-EGL Extensions: "%s"\n
+eglGetConfigAttrib
+eglGetConfigs
 eglGetDisplay
 eglGetError
 eglGetNativeClientBufferANDROID
 eglGetProcAddress
-eglInitialise failed!
 eglInitialize
 eglMakeCurrent
 eglQueryString
 egl_surface
 eglSwapBuffers
-EGL Vendor: "%s"\n
-EGL Version: "%s"\n
+eglTerminate
 EMPTY
 Empty escape sequence in string
 __emutls_get_address
@@ -847,7 +837,6 @@ Error: Could not bind socket\n
 Error: Could not connect to host connect(%d)\n
 Error: Could not create socket\n
 ERROR: Could not initialize UDP driver; unknown session type requested.
-Error: eglMakeCurrent() failed: 0x%08X
 Error: Failed to generate crypt random data.
 ERROR: Failed to get encryption engine.
 Error from reader: %s
@@ -912,7 +901,6 @@ Failed to get default config file contents
 Failed to get frame metadata for frame
 Failed to get HMD config contents
 Failed to get play area bounds
-Failed to get view configurations
 Failed to initialize hmd device
 Failed to initialize instance
 Failed to initialize scene %d
@@ -930,9 +918,7 @@ Failed to qsvlxr initialize input
 Failed to set play space
 Failed to set thread %p priority: invalid priority %d\n
 Failed to set thread priority: setschedparam failed %d: %d\n
-Failed to setup OpenGLES context
 Failed to suggest interaction profile bindings for %s with error %i. Skipping.
-Failed to transition to next scene
 Failed to write file %s
 failIfExtra
 failure: env->CallObjectMethod( connectivityManager, mActiveGetNetworkInfo )\n
@@ -1047,9 +1033,9 @@ getBytes
 GetCachedFileTime
 getClass
 GetConnectedWiFiFrequencyMHzAndSSID(int*, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&)
+GetConnectedWiFiFrequencyMHzAndSSID: No connection info
+GetConnectedWiFiFrequencyMHzAndSSID: No wifi manager
 GetConnectedWiFiFrequencyMHz: Failed because frequency was invalid!
-GetConnectedWiFiFrequencyMHz: Failed because NetworkCapabilities was null!
-GetConnectedWiFiFrequencyMHz: Failed because TransportInfo was null!
 getConnectionInfo
 GetCurrentLocale()
 GetCurrentTimestamp
@@ -1061,6 +1047,7 @@ getEncodedP
 GetEndOfPacketFromVideoDescriptor(SVLVideoFrameDescriptor_t*)
 getenv
 getExtras
+GetExtrasKey: No extras bundle was present
 GetExtrasKey(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&)
 GetFilenameTimeString()
 getFrequency
@@ -1075,7 +1062,6 @@ GetIPAddresses(std::__ndk1::vector<IPSet, std::__ndk1::allocator<IPSet>>&)
 getLanguage
 getLinkSpeed
 getName
-getNetworkCapabilities
 getNetworkInterfaces
 getNetworkPrefixLength
 GetNextEventId()
@@ -1110,8 +1096,6 @@ GetSystemTimeInTicks()
 getTableEntrySize
 gettimeofday
 GetTimingEventString(timingevent)
-Getting Surface %p\n
-getTransportInfo
 getULEB128
 GetVersionNumber()
 GetVRLog()
@@ -1404,7 +1388,6 @@ glViewport( 0, 0, m_constructLayerSwapchains[ i ].width, m_constructLayerSwapcha
 glViewport( 0, 0, m_unTargetWidthPerGroup, m_unTargetHeightPerGroup )
 glViewport( 0, 0, renderWidth, renderHeight )
 g_nCurThreadSuspendCount
-Got Surface: %p\n
 g_pCurThread
 g_pDriverVRLinkLog
 greek
@@ -1449,6 +1432,16 @@ infos
 Initialized settings panel
 InitLog(char const*, char const*)
 InitMainThread()
+InitOGLESContext: App restarted without a window. Cannot progress.
+InitOGLESContext: Created context %p
+InitOGLESContext: EGL Extensions: %s
+InitOGLESContext: eglGetConfigs failed!
+InitOGLESContext: eglInitialize failed!
+InitOGLESContext: eglMakeCurrent() failed: 0x%08X
+InitOGLESContext: EGL Vendor: %s
+InitOGLESContext: EGL Version: %s
+InitOGLESContext: Failed to find egl config!
+InitOGLESContext: No display found!
 InitSystemBaseTimeTicks(unsigned long)
 in Json::Value::asCString(): requires stringValue
 in Json::Value::clear(): requires complex value
@@ -1918,8 +1911,6 @@ kPanelVertexAttributeLocations
 (Landroid/graphics/Canvas;)V
 Landroid/graphics/PorterDuff$Mode;
 ()Landroid/net/Network;
-(Landroid/net/Network;)Landroid/net/NetworkCapabilities;
-()Landroid/net/TransportInfo;
 Landroid/net/Uri;
 ()Landroid/net/wifi/WifiInfo;
 ()Landroid/os/Bundle;
@@ -2055,6 +2046,10 @@ modf
 Monday
 money_get error
 moneypunct_byname failed to construct for 
+m_pCorrectionShaderFovea->SetUniformL1f( UNIFORM_LOC_GROUP, eye * 2.0f )
+m_pCorrectionShaderFovea->SetUniformL1f( UNIFORM_LOC_MODE, m_atlasMode )
+m_pCorrectionShader->SetUniformL1f( UNIFORM_LOC_GROUP, eye * 2.0f + 1.0f )
+m_pCorrectionShader->SetUniformL1f( UNIFORM_LOC_MODE, m_atlasMode)
 m_pData was null. Not copying data.
 mutex lock failed
 myLooper
@@ -2162,7 +2157,6 @@ N4Json9ExceptionE
 name
 NanosecondsFromSystemTicks(unsigned long)
 nanosleep
-nativeActivity
 NativeActivity
 newlocale
 next
@@ -2170,7 +2164,6 @@ nextElement
 __next_prime overflow
 : no conversion
 No data on command pipe!
-No display found!
 noexcept
 noexcept (
 noexcept(
@@ -2182,7 +2175,6 @@ No pose bindings found for %s
 norwegian
 No static props for %s, hand: %s
 Not creating a new reference space as it was already created
-Not polling for any more events after receiving XR_SESSION_STATE_EXITING
 Not updating interaction profile because xrGetCurrentInteractionProfile returned XR_NULL_PATH
 not visible
 No valid hardware buffer recieved from decoder
@@ -2190,7 +2182,7 @@ November
 NSt6__ndk110ctype_baseE
 NSt6__ndk110__function6__baseIFbcEEE
 NSt6__ndk110__function6__baseIFv10SceneEventEEE
-NSt6__ndk110__function6__baseIFv15QSVLClientEventNS_7variantIJ21QSVLClientStreamStateEEEEEE
+NSt6__ndk110__function6__baseIFv15QSVLClientEventNS_7variantIJ21QSVLClientStreamState25QSVLClientWirelessTimeoutEEEEEE
 NSt6__ndk110__function6__baseIFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__baseIFv20ClientAudioEventTypeEEE
 NSt6__ndk110__function6__baseIFv7AppPathRKNS_7variantIJNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEbfiEEEEEE
@@ -2217,12 +2209,13 @@ NSt6__ndk110__function6__funcIZN11XrUIManager4InitER10XRQContextE3$_0NS_9allocat
 NSt6__ndk110__function6__funcIZN12QSVLClientXR4InitEvE3$_1NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN12QSVLClientXR4InitEvE3$_2NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN12QSVLClientXR4InitEvE3$_3NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
-NSt6__ndk110__function6__funcIZN12QSVLClientXRC1ER10XRQContextR13LaunchOptionsNS_10shared_ptrI9QSVLInputEENS7_I13QSVLDeviceHmdEENS7_I11XrUIManagerEENS_8functionIFv15QSVLClientEventNS_7variantIJ21QSVLClientStreamStateEEEEEEE3$_0NS_9allocatorISL_EEFv20ClientAudioEventTypeEEE
+NSt6__ndk110__function6__funcIZN12QSVLClientXR4InitEvE3$_4NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
+NSt6__ndk110__function6__funcIZN12QSVLClientXRC1ER10XRQContextR13LaunchOptionsNS_10shared_ptrI9QSVLInputEENS7_I13QSVLDeviceHmdEENS7_I11XrUIManagerEENS_8functionIFv15QSVLClientEventNS_7variantIJ21QSVLClientStreamState25QSVLClientWirelessTimeoutEEEEEEE3$_0NS_9allocatorISM_EEFv20ClientAudioEventTypeEEE
 NSt6__ndk110__function6__funcIZN12XrAppManager4InitER6XRQAppE3$_1NS_9allocatorIS5_EEFv8XrqEventNS_7variantIJ38XrEventDataReferenceSpaceChangePendingEEEEEE
 NSt6__ndk110__function6__funcIZN12XrAppManagerC1EvE3$_0NS_9allocatorIS3_EEFv10SceneEventEEE
 NSt6__ndk110__function6__funcIZN12XrSceneLobby7FocusedER10XRQContextE3$_1NS_9allocatorIS5_EEFvRKNS_12basic_stringIcNS_11char_traitsIcEENS6_IcEEEERKN4Json5ValueEEEE
 NSt6__ndk110__function6__funcIZN12XrSceneLobbyC1ENS_8functionIFv10SceneEventEEEE3$_0NS_9allocatorIS7_EEFvRKNS_6vectorI13SeenServers_tNS8_ISB_EEEEEEE
-NSt6__ndk110__function6__funcIZN13XrSceneStream22TransitionToStreamInitER10XRQContextE3$_4NS_9allocatorIS5_EEFv15QSVLClientEventNS_7variantIJ21QSVLClientStreamStateEEEEEE
+NSt6__ndk110__function6__funcIZN13XrSceneStream22TransitionToStreamInitER10XRQContextE3$_4NS_9allocatorIS5_EEFv15QSVLClientEventNS_7variantIJ21QSVLClientStreamState25QSVLClientWirelessTimeoutEEEEEE
 NSt6__ndk110__function6__funcIZN13XrSceneStream22TransitionToStreamInitER10XRQContextE3$_5NS_9allocatorIS5_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN13XrSceneStream22TransitionToStreamInitER10XRQContextE3$_6NS_9allocatorIS5_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN13XrSceneStream4InitER10XRQContextE3$_0NS_9allocatorIS5_EEFv7AppPathRKNS_7variantIJNS_12basic_stringIcNS_11char_traitsIcEENS6_IcEEEEbfiEEEEEE
@@ -2230,6 +2223,7 @@ NSt6__ndk110__function6__funcIZN13XrSceneStream4InitER10XRQContextE3$_1NS_9alloc
 NSt6__ndk110__function6__funcIZN13XrSceneStream4InitER10XRQContextE3$_2NS_9allocatorIS5_EEFvRKNS_12basic_stringIcNS_11char_traitsIcEENS6_IcEEEERKN4Json5ValueEEEE
 NSt6__ndk110__function6__funcIZN13XrSceneStream4InitER10XRQContextE3$_3NS_9allocatorIS5_EEFvRKNS_12basic_stringIcNS_11char_traitsIcEENS6_IcEEEERKN4Json5ValueEEEE
 NSt6__ndk110__function6__funcIZN14QSVLRendererXR4InitERK10XRQContextE3$_0NS_9allocatorIS6_EEFv16ValueTransportIDbEEE
+NSt6__ndk110__function6__funcIZN14QSVLRendererXR4InitERK10XRQContextE3$_1NS_9allocatorIS6_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN14SVLDataLinkUDP26PrepareForPossibleShutdownEvE3$_0NS_9allocatorIS3_EEFvvEEE
 NSt6__ndk110__function6__funcIZN6CVRLog7InitLogEPKcS4_bmE3$_0NS_9allocatorIS5_EEFv9ELogLevelS4_PvEEE
 NSt6__ndk110__function6__funcIZN7SVLRoot4InitEvE3$_0NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
@@ -2412,7 +2406,7 @@ null
 nullptr
 numpunct_byname<char>::numpunct_byname failed to construct for 
 numpunct_byname<wchar_t>::numpunct_byname failed to construct for 
-\n            vec2 placeInSection = fract(realUv * vec2( 1.0, 4.0 ));\n            vec2 distCenter = abs( placeInSection - 0.5 );\n\t\t\tfloat powv = 10.0;\n\t\t\tfloat edgecurve = 3.0;\n\t\t\tcolor.a = pow( 1.0 - (pow( distCenter.y*2.0, powv ) + pow( distCenter.x*2.0, powv )), edgecurve );\n    }\n    
+\n            vec2 placeInSection = fract(uvmask * vec2( 1.0, 4.0 ));\n            vec2 distCenter = abs( placeInSection - 0.5 );\n\t\t\tfloat powv = 10.0;\n\t\t\tfloat edgecurve = 1.5;\n\t\t\tcolor.a = pow( 1.05 - (pow( distCenter.y*2.0, powv ) + pow( distCenter.x*2.0, powv )) * 1.06, edgecurve );\n    }\n    
 objc_object
 obtain
 October
@@ -2425,7 +2419,6 @@ open
 __open_2
 opendir
 OpenGL error %i, %s, at %s:%i - for %s\n
-OpenGLES OpenXR Extension is not available
 openlog
 OpenXR Loader initialized successfully
 Operation not permitted on an object without an associated state.
@@ -2628,7 +2621,6 @@ pthread_setspecific
 Pure virtual function called!
 putchar
 putExtra
-puts
 Qkkbal
 QSVLClient::AdjustPhaseOffset(int)
 QSVLClientAudioNdk: Attempting to close input stream...
@@ -2657,7 +2649,7 @@ QSVLClient::HandleMessagePromptMessageReceived(MessagePrompt_t*)
 QSVLClient::HandleUnrecoverableError(int)
 QSVLClient::Init()
 QSVLClient::OnRenderComplete()
-QSVLClient::OnTopOfFrame()
+QSVLClient::OnTopOfFrame(int, int)
 QSVLClient::PhaseEventControlLoop(int)
 QSVLClient::PhaseEventDecodeComplete()
 QSVLClient::~QSVLClient()
@@ -2713,7 +2705,7 @@ QSVLClientXR::OnMessagePrompt(std::__ndk1::basic_string<char, std::__ndk1::char_
 QSVLClientXR::OnRenderComplete()
 QSVLClientXR::OnUnFocused()
 QSVLClientXR::~QSVLClientXR()
-QSVLClientXR::QSVLClientXR(XRQContext&, LaunchOptions&, std::__ndk1::shared_ptr<QSVLInput>, std::__ndk1::shared_ptr<QSVLDeviceHmd>, std::__ndk1::shared_ptr<XrUIManager>, std::__ndk1::function<void (QSVLClientEvent, std::__ndk1::variant<QSVLClientStreamState>)>)
+QSVLClientXR::QSVLClientXR(XRQContext&, LaunchOptions&, std::__ndk1::shared_ptr<QSVLInput>, std::__ndk1::shared_ptr<QSVLDeviceHmd>, std::__ndk1::shared_ptr<XrUIManager>, std::__ndk1::function<void (QSVLClientEvent, std::__ndk1::variant<QSVLClientStreamState, QSVLClientWirelessTimeout>)>)
 QSVLClientXR::RXReliableStream(dataset*)
 QSVLClientXR::RXUnreliableStream(dataset*, SVLDataLink*)
 QSVLClientXR::SetMaximumFrameQueueLatency: %d us
@@ -2783,10 +2775,11 @@ QSVLRendererXR::~QSVLRendererXR()
 QSVLRendererXR::QSVLRendererXR(SVLRoot*)
 QSVLRendererXR::SetFadeAmount(float, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1l, 1000l>>)
 QSVLRendererXR::SetShouldWaitOnFrames(bool)
-QSVLRendererXR::SetupSwapchains(XRQContext const&, unsigned int, unsigned int)
-QSVLRendererXR::UpdateSwapchainSampler: sampler type set to bilinear
-QSVLRendererXR::UpdateSwapchainSampler: sampler type set to linear
+QSVLRendererXR::SetupSwapchains(XRQContext const&, unsigned int, unsigned int, AtlasMode)
+QSVLRendererXR::UpdateSwapchainSampler: Sampler type set to bilinear
+QSVLRendererXR::UpdateSwapchainSampler: Sampler type set to linear
 QSVLRendererXR::UpdateSwapchainSampler: Unknown sampler type!
+QSVLRendererXR::UpdateSwapchainSampler: Updating swapchain sampler
 QSVLRendererXR::UpdateSwapchainSampler(XRQContext const&)
 QSVLXRInput::GetActiveInteractionProfile(QSVLControllerHand)
 QSVLXRInput::GetControllerStates(std::__ndk1::array<QSVLControllerState, 2ul>&)
@@ -2825,7 +2818,6 @@ Received QSVLClientXR::HandleSidebandEvent(%d)
 Received reference space change pending event
 Received remote dashboard event
 Received SYST_SERVER_SHUTDOWN
-Received XRQ_SHUTDOWN
 recursive_mutex constructor failed
 recursive_mutex lock failed
 recursive_timed_mutex lock limit reached
@@ -2843,14 +2835,13 @@ RenderState::RenderState(Texture const*)
 RepairUTF8(char const*, char const*, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&)
 RepairUTF8(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&)
 request_abort
+RequestAndroidPermissions: Requesting the following permissions in prompt:\n
 RequestAndroidPermissions(std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>> const&)
 request_app_quit
 request_continue
 request_continue: Was not in the right state to request a continue! Not doing anything.
 requestedExtensions
 Requested extension %s was not available!
-Requesting app destroy...
-Requesting the following permissions in prompt:\n
 request_permission
 requestPermissions
  restrict
@@ -2930,6 +2921,7 @@ SE Start Encode %d
 SE Submit Compressed Data %d
 setBackgroundColor
 setComponent
+SetCompositionLayerSettingsFlags: Quality sharpening was enabled
 setContentView
 SetCurrentProcessExplicitAppUserModelID()
 set_errorcode
@@ -3045,7 +3037,6 @@ socket
 Socket bound to port %d\n
 Soft AES PERF: %f MByte/s\n
 sOriginalActivity
-sOriginalActivity: %s   sOriginalPackage: %s\n
 sOriginalPackage
 SoundLogger::CheckStatus()
 SoundLogger::LogSound(short*, int, int)
@@ -3059,7 +3050,7 @@ sResourceRoot
 sRFTXRate
 SRGBCorrectionPass::RenderSpecific(int, bool, unsigned int)
 SRGBCorrectionPass::RenderSpecificPrep()
-SRGBCorrectionPass::SetOutputTextureDimensions(unsigned int, unsigned int)
+SRGBCorrectionPass::SetOutputTextureDimensions(unsigned int, unsigned int, AtlasMode)
 SRGBCorrectionPass::~SRGBCorrectionPass()
 SRGBCorrectionPass::SRGBCorrectionPass(std::__ndk1::shared_ptr<Texture>)
 SRGBCorrectionPass::UpdateShaderUniforms()
@@ -3791,6 +3782,7 @@ std::__ndk1::enable_if<__is_cpp17_forward_iterator<IPSet*>::value && is_construc
 std::__ndk1::enable_if<__is_cpp17_forward_iterator<SeenServers_t*>::value && is_constructible<SeenServers_t, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, void>::type std::__ndk1::vector<SeenServers_t, std::__ndk1::allocator<SeenServers_t>>::assign<SeenServers_t*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
 std::__ndk1::enable_if<__is_cpp17_forward_iterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const*>::value && is_constructible<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, void>::type std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::assign<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
 std::__ndk1::enable_if<__is_cpp17_forward_iterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>*>::value && is_constructible<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, void>::type std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::assign<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
+std::__ndk1::enable_if<__is_cpp17_forward_iterator<std::__ndk1::function<void (AppPath, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)> const*>::value && is_constructible<std::__ndk1::function<void (AppPath, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)>, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, void>::type std::__ndk1::vector<std::__ndk1::function<void (AppPath, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)>, std::__ndk1::allocator<std::__ndk1::function<void (AppPath, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)>>>::assign<std::__ndk1::function<void (AppPath, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)> const*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
 std::__ndk1::enable_if<__is_cpp17_forward_iterator<std::__ndk1::__wrap_iter<XrCompositionLayerBaseHeader**>>::value && is_constructible<XrCompositionLayerBaseHeader*, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, std::__ndk1::__wrap_iter<XrCompositionLayerBaseHeader**>>::type std::__ndk1::vector<XrCompositionLayerBaseHeader*, std::__ndk1::allocator<XrCompositionLayerBaseHeader*>>::insert<std::__ndk1::__wrap_iter<XrCompositionLayerBaseHeader**>>(std::__ndk1::__wrap_iter<XrCompositionLayerBaseHeader* const*>, __is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
 std::__ndk1::enable_if<__is_cpp17_forward_iterator<unsigned long const*>::value && is_constructible<unsigned long, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, void>::type std::__ndk1::vector<unsigned long, std::__ndk1::allocator<unsigned long>>::assign<unsigned long const*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
 std::__ndk1::enable_if<__is_cpp17_forward_iterator<XrActionSuggestedBinding const*>::value && is_constructible<XrActionSuggestedBinding, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, void>::type std::__ndk1::vector<XrActionSuggestedBinding, std::__ndk1::allocator<XrActionSuggestedBinding>>::assign<XrActionSuggestedBinding const*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
@@ -3813,6 +3805,7 @@ std::__ndk1::__function::__func<bool (*)(char), std::__ndk1::allocator<bool (*)(
 std::__ndk1::__function::__func<bool (*)(char), std::__ndk1::allocator<bool (*)(char)>, bool (char)>::target_type() const
 std::__ndk1::function<void (ELogLevel, char const*, void*)>::~function()
 std::__ndk1::function<void ()>::~function()
+std::__ndk1::function<void (QSVLClientEvent, std::__ndk1::variant<QSVLClientStreamState, QSVLClientWirelessTimeout>)>::~function()
 std::__ndk1::function<void (SceneEvent)>::~function()
 std::__ndk1::function<void (std::__ndk1::vector<SeenServers_t, std::__ndk1::allocator<SeenServers_t>> const&)>::~function()
 std::__ndk1::future_category()
@@ -4612,6 +4605,7 @@ SVLAudio::OnPeerAudioDiscontinuity()
 SVLAudio::Stop()
 SVLAudio::~SVLAudio()
 SVLAudio::SVLAudio(SVLRoot*, bool)
+SVLAudio::SyncAudioControls(bool)
 SVLAudio::TransmitAndUpdateFEC()
 SVLAudio::TransmitAudioPacket(dataset*, unsigned short)
 SVLAudio::TransportRXAudioFrames(dataset*)
@@ -4772,6 +4766,7 @@ SVLRoot::ActivateHMDNow()
 SVLRoot::BIsConnectionActive()
 SVLRoot::CreateConnectionInfo(int, int, std::__ndk1::__wrap_iter<char*>, std::__ndk1::vector<char, std::__ndk1::allocator<char>>&, int)
 SVLRoot::DebugRender()
+SVLRoot::DebugRequestReset(EVideoResetType)
 SVLRoot::EventsThread()
 SVLRoot_EventsThread
 SVLRoot::FillInBookend(SVLVideoFrameDescriptor_t*)
@@ -4822,7 +4817,6 @@ SVLStaticProps::operator=(SVLStaticProps&&)
 SVLStaticProps::~SVLStaticProps()
 SVLWebViewThread
 SwapBuffers()
-Swapchain formats supported: %i
 Swapchains were regenerated
 swedish
 swprintf
@@ -4846,6 +4840,8 @@ tanf
 tchinese
 template<
 TerminateApp()
+TerminateApp: app requested to terminate itself
+TerminateApp: not requesting destroy as app was already forcefully exiting
 terminate_handler unexpectedly returned
 terminate_handler unexpectedly threw an exception
 terminating
@@ -5110,7 +5106,7 @@ typeinfo for std::__ndk1::__function::__base<void ()>
 typeinfo for std::__ndk1::__function::__base<void (AppPath, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)>
 typeinfo for std::__ndk1::__function::__base<void (ClientAudioEventType)>
 typeinfo for std::__ndk1::__function::__base<void (ELogLevel, char const*, void*)>
-typeinfo for std::__ndk1::__function::__base<void (QSVLClientEvent, std::__ndk1::variant<QSVLClientStreamState>)>
+typeinfo for std::__ndk1::__function::__base<void (QSVLClientEvent, std::__ndk1::variant<QSVLClientStreamState, QSVLClientWirelessTimeout>)>
 typeinfo for std::__ndk1::__function::__base<void (SceneEvent)>
 typeinfo for std::__ndk1::__function::__base<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>
 typeinfo for std::__ndk1::__function::__base<void (std::__ndk1::vector<SeenServers_t, std::__ndk1::allocator<SeenServers_t>> const&)>
@@ -5406,7 +5402,7 @@ typeinfo name for std::__ndk1::__function::__base<void ()>
 typeinfo name for std::__ndk1::__function::__base<void (AppPath, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)>
 typeinfo name for std::__ndk1::__function::__base<void (ClientAudioEventType)>
 typeinfo name for std::__ndk1::__function::__base<void (ELogLevel, char const*, void*)>
-typeinfo name for std::__ndk1::__function::__base<void (QSVLClientEvent, std::__ndk1::variant<QSVLClientStreamState>)>
+typeinfo name for std::__ndk1::__function::__base<void (QSVLClientEvent, std::__ndk1::variant<QSVLClientStreamState, QSVLClientWirelessTimeout>)>
 typeinfo name for std::__ndk1::__function::__base<void (SceneEvent)>
 typeinfo name for std::__ndk1::__function::__base<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>
 typeinfo name for std::__ndk1::__function::__base<void (std::__ndk1::vector<SeenServers_t, std::__ndk1::allocator<SeenServers_t>> const&)>
@@ -5561,16 +5557,12 @@ ukranian
 Unable to find device static props for "%s". Attempting to load defaults
 Unable to parse token length
 Unable to set UDP socket to SO_BROADCAST\n
-Unable to setup eye tracking
-Unable to setup face tracking
 uncaught
 unexpected
 unexpected_handler unexpectedly returned
-Unhandled exception caught by catch: %s
 Unhandled OpenXR Event: %i
 Unhandled OpenXR Session state: %i
 Unhandled type for webview path set.
-Unhandled unknown(!) exception caught by catch
 union
 unique_lock::unlock: not locked
 universeID
@@ -5660,10 +5652,11 @@ vendor.qti-ext-dec-low-latency.enable
 vendor.qti-ext-dec-picture-order.enable
 VerifyTidIntegrity()
 version
-#version 300 es\n        #extension GL_OES_EGL_image_external_essl3 : enable\n        precision mediump float;\n\n        in vec2 uv;\n        out vec4 color;\n\n        const float DIV12 = 1. / 12.92;\n        const float DIV1 = 1. / 1.055;\n        const float THRESHOLD = 0.04045;\n        const vec3 GAMMA = vec3(2.4);\n\n        layout(location = 2) uniform samplerExternalOES tex0;\n\t\tlayout(location = 3) uniform float fFadeAmount;\n\t\tlayout(location = 4) uniform vec3 UniReserved1;\n\t\tlayout(location = 5) uniform vec4 UniReserved2;\n\t\tlayout(location = 6) uniform vec4 UniDitherOffsets;\n\n        void main()\n        {\n            vec2 realUv = vec2(uv.x, uv.y);\n\n            color = texture(tex0, realUv);\n\t\t\tmat3 _valve1_d2020d709 = mat3(\n\t\t\t\t1.04988847,  0.05442289,  0.00393458,\n\t\t\t\t-0.04433306, 0.96052738, 0.01122383,\n\t\t\t\t-0.005557,   -0.01509698,  0.98628952 );\n\t\t\tcolor.rgb = _valve1_d2020d709 * color.rgb;\n\t\t\t//color.rgb += fract(UniDitherOffsets.a * .43 + UniDitherOffsets.rgb + gl_FragCoord.x * 1.67 + gl_FragCoord.y * 1.127 ) * .00292;\n\t\t\tcolor.rgb *= fFadeAmount;\n
+#version 300 es\n        #extension GL_OES_EGL_image_external_essl3 : enable\n        precision mediump float;\n\n\t\tin vec2 uvmask;\n        in vec2 uv;\n        out vec4 color;\n\n        const float DIV12 = 1. / 12.92;\n        const float DIV1 = 1. / 1.055;\n        const float THRESHOLD = 0.04045;\n        const vec3 GAMMA = vec3(2.4);\n\n        layout(location = 2) uniform samplerExternalOES tex0;\n\t\tlayout(location = 3) uniform float fFadeAmount;\n\t\tlayout(location = 4) uniform vec3 UniReserved1;\n\t\tlayout(location = 5) uniform vec4 UniReserved2;\n\t\tlayout(location = 6) uniform vec4 UniDitherOffsets;\n\n        void main()\n        {\n            vec2 realUv = vec2(uv.x, uv.y);\n\n            color = texture(tex0, realUv);\n\t\t\tmat3 _valve1_d2020d709 = mat3(\n\t\t\t\t1.04988847,  0.05442289,  0.00393458,\n\t\t\t\t-0.04433306, 0.96052738, 0.01122383,\n\t\t\t\t-0.005557,   -0.01509698,  0.98628952 );\n\t\t\tcolor.rgb = _valve1_d2020d709 * color.rgb;\n\t\t\t//color.rgb += fract(UniDitherOffsets.a * .43 + UniDitherOffsets.rgb + gl_FragCoord.x * 1.67 + gl_FragCoord.y * 1.127 ) * .00292;\n\t\t\tcolor.rgb *= fFadeAmount;\n
 #version 300 es\n        layout (location = 0) in vec3 vertexPosition;\n        in vec2 vertexUv;\n\n        out vec2 texCoord;\n        void main() {\n            gl_Position = vec4(vertexPosition, 1.0);\n            texCoord = vertexUv;\n        }\n    
 #version 300 es\n\nconst float gridSize = 100.0;\n\nconst float gridMinPixelsBetweenCells = 2.0;\n\nconst vec3 pos[4] = vec3[4](\n\tvec3(-1.0, 0.0, -1.0),\n\tvec3( 1.0, 0.0, -1.0),\n\tvec3( 1.0, 0.0,  1.0),\n\tvec3(-1.0, 0.0,  1.0)\n);\n\nconst int indices[6] = int[6](\n\t0, 2, 1, 2, 0, 3\n);\n\nlayout(location = 0) uniform mat4 p;\nlayout(location = 1) uniform vec2 cameraPosition;\nlayout(location = 3) uniform mat4 mv;\n\nout vec2 fragUv;\nout vec3 vViewDir;\nout vec4 vPositionWs;\n\nvoid main() {\n\tint idx = indices[gl_VertexID];\n\tvec3 position = pos[idx] * gridSize;\n\n\tposition.x += cameraPosition.x;\n\tposition.z += cameraPosition.y;\n\tvPositionWs = vec4(position, 1.0);\n\n\tvViewDir = vec3( inverse( mv ) * vec4(position.xz, -1.0, 0.0) );\n\tgl_Position = p * vec4( position.xz, -1.0, 1.0 );\n\tfragUv = position.xz;\n}\n   
-#version 300 es\n        out vec2 uv;\n        uniform float group;\n        void main() {\n            uv = vec2(gl_VertexID & 1, gl_VertexID >> 1);\n            // Position based off of 0..1, 0..1\n            vec2 vPos = (uv - 0.5) * 2.;\n            vPos.y *= -1.0; // Flip image.\n            gl_Position = vec4(vPos, 0, 1);\n\n            // Output UV over the actual area used.\n            uv.y = (uv.y + group) * 0.25;\n        }\n    
+#version 300 es\n        out vec2 uv;\n        layout(location = 12) uniform float group;\n        layout(location = 13) uniform float mode;\n        void main() {\n            uv = vec2(gl_VertexID & 1, gl_VertexID >> 1);\n            // Position based off of 0..1, 0..1\n            vec2 vPos = (uv - 0.5) * 2.;\n            vPos.y *= -1.0; // Flip image.\n            gl_Position = vec4(vPos, 0, 1);\n\n\t\t\t// Output UV over the actual area used.\n\t\t\tif( mode > 1.5 )\n\t\t\t{\n\t\t\t\t// Do nothing\n\t\t\t\tuv.y = (uv.y + group * .5) * 0.5 - .25;\n\t\t\t}\n\t\t\telse if( mode > 0.5 )\n\t\t\t{\n\t\t\t\t// 2x2\n\t            uv.y = (uv.y + group*0.5) * 0.5 - 0.25;\n\t\t\t\tuv.x = uv.x * 0.5;\n\t\t\t}\n\t\t\telse\n\t\t\t{\n\t\t\t\t// 4-way\n\t\t\t\tuv.y = (uv.y + group) * 0.25;\n\t\t\t}\n        }\n    
+#version 300 es\n        out vec2 uv;\n\t\tout vec2 uvmask;\n        layout(location = 12) uniform float group;\n        layout(location = 13) uniform float mode;\n        void main() {\n            uv = vec2(gl_VertexID & 1, gl_VertexID >> 1);\n            // Position based off of 0..1, 0..1\n            vec2 vPos = (uv - 0.5) * 2.;\n            vPos.y *= -1.0; // Flip image.\n            gl_Position = vec4(vPos, 0, 1);\n\n\t\t\tuvmask = uv;\n            // Output UV over the actual area used.\n\t\t\tif( mode > 1.5 )\n\t\t\t{\n\t\t\t\tgl_Position = vec4( 0.0, 0.0, 0.0, 1.0 );\n\t\t\t}\n\t\t\telse if( mode > 0.5 )\n\t\t\t{\n\t\t\t\t// Two-by-Two\n\t\t\t\tuvmask = uv * vec2( 1.0, 0.25 );\n\t            uv.y = (uv.y + group*0.5) * 0.5;\n\t\t\t\tuv.x = uv.x * 0.5 + 0.5;\n\t\t\t}\n\t\t\telse\n\t\t\t{\n\t\t\t\t// 4-Square\n\t\t\t\tuvmask = uv * vec2( 1.0, 0.25 );\n\t            uv.y = (uv.y + group) * 0.25;\n\t\t\t}\n        }\n    
 #version 300 es\nprecision highp float;\nout vec4 out_FragColor;\nlayout(location = 2) uniform float flFadeAmount;\n\nlayout(location = 4) uniform float flTime;\n\nin vec3 vViewDir;\n\nfloat osmooth( float t )\n{\n\treturn t * t * (3.0 - 2.0 * t);\n}\n\nfloat oosmooth( float t )\n{\n\treturn osmooth( osmooth( t ) );\n}\n\n// Original code MIT License...\n// Copyright (c)2014 David Hoskins.\nvec3 hash33(vec3 p3)\n{\n\tp3 = fract(p3 * vec3(.1031, .1030, .0973));\n    p3 += dot(p3, p3.yxz+33.33);\n    return fract((p3.xxy + p3.yxx)*p3.zyx);\n}\n\nfloat fclamp( float v )\n{\n\tif( v < 0.0 ) v = 0.0;\n\tif( v > 1.0 ) v = 1.0;\n\treturn v;\n}\n\nvoid main()\n{\n\tvec3 vViewDirNorm = normalize( vViewDir ) ;\n\tfloat azimuth = atan( vViewDirNorm.x, vViewDirNorm.z ) ;\n\tfloat lalt = length( vViewDirNorm.xz );\n\tfloat altitude = atan( vViewDirNorm.y, lalt );\n\n\tfloat vgrad = altitude / 3.14159 + 0.5;\n\n\n\tvec2 vdn2 = normalize( vViewDirNorm.xz );\n\n\tfloat bubbly = sin( cos( vdn2.x * 4.7 + flTime*0.628/2.0 ) +\n\tsin( flTime*0.628/5.0*0.0 + vdn2.y * 5.2 ) ) * 0.01;\n\n\n\tvec3 grad1 = vec3( 0.059, 0.31, 0.643 ) * 0.3 + vec3( 0.05 );\n\tvec3 grad2 = vec3( 0.027, 0.216, 0.486) * 0.2 + vec3( 0.025 );\n\n\tvgrad = oosmooth( oosmooth( oosmooth( vgrad + bubbly + 0.02) ) );\n\tvec3 color = vec3( mix( grad1, grad2, fclamp( vgrad  ) ) );\n\n\t// Dither to get rid of color bands.\n\tvec3 noise = hash33( vec3( gl_FragCoord.xy * 3.2, flTime*2.4 ) ) / 255.0;\n\tout_FragColor.rgb = color + noise;\n\n\tout_FragColor.a = flFadeAmount;\n}\n    
 #version 300 es\n        precision highp float;\n\t\tlayout(location = 2) uniform float renderType;\n        layout(location = 3) uniform mat4 m;\n        layout(location = 4) uniform mat4 v;\n\t\tlayout(location = 1) uniform float length;\n\n\t\t// All of these are in view space.\n\t\tin vec4 vPointerPosDelta;\n\t\tin vec4 vPointerDirDelta;\n\t\tin vec4 vWorld;\n\t\tin vec4 vEyePos;\n\t\tin vec4 vHitPos;\n\n\t\tin float lineZ;\n\n\t\tout vec4 out_FragColor;\n\n        void main()\n        {\n\t\t\tif( renderType < 0.5 )\n\t\t\t{\n\t\t\t\tfloat fAlpha = smoothstep(0.2, 1.0, 1.f-lineZ);\n    \t        out_FragColor = vec4(0.67, 0.84, 0.9, fAlpha);\n\t\t\t}\n\t\t\telse if( renderType < 1.5 )\n\t\t\t{\n\t\t\t\tfloat fAlpha = 0.8;\n    \t        out_FragColor = vec4(0.67, 0.84, 0.9, fAlpha);\n\t\t\t}\n\t\t\telse if( renderType < 2.5 )\n\t\t\t{\n\t\t\t\t// AA Line.\n\t\t\t\t// With base of pointer at "0,0"\n\t\t\t\t//float fDistFromTargetOnSurface = vInternalPos.z + length;\n\n\t\t\t\tvec3 vRayFromEye = normalize( vWorld.xyz - vEyePos.xyz );\n\n\t\t\t\tvec3 n = cross( vRayFromEye, vPointerDirDelta.xyz );\n\t\t\t\tfloat rd = dot( n, vPointerPosDelta.xyz - vEyePos.xyz ) / length ( n );\n\t\t\t\tfloat oAlpha = 1.05-400.0*abs(rd);\n\n\t\t\t\t// From https://mathworld.wolfram.com/Line-LineIntersection.html\n\t\t\t\tvec3 x3 = vWorld.xyz;\n\t\t\t\tvec3 x4 = vEyePos.xyz;\n\t\t\t\tvec3 x1 = vHitPos.xyz;\n\t\t\t\tvec3 x2 = vPointerPosDelta.xyz;\n\n\t\t\t\tvec3 A = x2 - x1;\n\t\t\t\tvec3 B = x4 - x3;\n\t\t\t\tvec3 C = x3 - x1;\n\t\t\t\tvec3 C2 = x3 - x2;\n\t\t\t\tvec3 ABCross = cross( A, B );\n\n\t\t\t\t// Distance along pointer ray.\n\t\t\t\tfloat s = dot( cross( C, B ), ABCross ) / dot( ABCross, ABCross );\n\n\t\t\t\t// Distance from hand to point on ray.\n\t\t\t\tfloat s2 = dot( cross( C2, B ), ABCross ) / dot( ABCross, ABCross );\n\n\t\t\t\t// Distance along headset ray. (unsued)\n\t\t\t\t//float t =-dot( cross( C, A ), ABCross );\n\n\t\t\t\tif( s < 0.0 ) oAlpha = 0.0;\n\t\t\t\tfloat fLength = length( vHitPos.xyz - vPointerPosDelta.xyz );\n\t\t\t\tfloat closenessToNear = -1.0 - s2*80.0;\n\t\t\t\toAlpha = min( oAlpha, closenessToNear );\n\n\t\t\t\t// Compute intersection with "ball" (or really flat circle) at intersection.\n\t\t\t\t// This is faster than a ray-sphere intersection.\n\n\t\t\t\tvec3 vecCircleHit = cross( vHitPos.xyz - vEyePos.xyz, vRayFromEye );\n\t\t\t\tfloat dotAlpha = 4.5 - 600.0*length( vecCircleHit.xyz );\n\t\t\t\toAlpha = max( dotAlpha, oAlpha );\n\n\t\t\t\tvec3 col = vec3( 0.3, 0.8, 0.7 );\n    \t        out_FragColor = vec4(col, max( 0.0, oAlpha ) );\n\t\t\t}\n        }\n
 #version 300 es\n\t\tlayout(location = 0) in vec3 position;\n        layout(location = 0) uniform mat4 mvp;\n        layout(location = 3) uniform mat4 m;\n        layout(location = 4) uniform mat4 v;\n\t\tlayout(location = 1) uniform float length;\n\n\t\tout float lineZ;\n\t\tout vec4  vPointerDirDelta;\n\t\tout vec4  vPointerPosDelta;\n\t\tout vec4  vWorld;\n\t\tout vec4  vEyePos;\n\t\tout vec3  vInternalPos;\n\t\tout vec4  vHitPos;\n\n        void main() {\n\t\t\tvec3 scaledPos = position;\n\t\t\tscaledPos.xy *= 0.01;\n\t\t\tscaledPos.z = scaledPos.z * length;\n\t\t\tvHitPos = m * vec4( 0., 0., -length, 1.0 );\n\t\t\tvPointerDirDelta = m * vec4( 0.0, 0.0, 1.0, 0.0 );\n\t\t\tvPointerPosDelta = m * vec4( 0.0, 0.0, 0.0, 1.0 );\n\t\t\tvInternalPos = scaledPos;\n\t\t\tvWorld = m * vec4(scaledPos,1.0);\n\t\t\tvEyePos = inverse( v ) * vec4( 0.0, 0.0, 0.0, 1.0 );\n            gl_Position = mvp * vec4(scaledPos, 1.0);\n\t\t\tlineZ = abs(position.z);\n        }\n    
@@ -5919,13 +5912,15 @@ vtable for XrSceneNoop
 vtable for XrSceneStatic
 vtable for XrSceneStream
 VTE_CLIENT_AUDIO_STATE %d(%d) %d/%d(%d) - %d(%d) %d/%d(%d)\n
+VTE_COMPOSITION_LAYER_SETTINGS: Update received
 VTE_HOST_REQUESTED_DISPLAY_FREQUENCY: Received display frequency request update
 VTE_PROP_COLOR_CONTROL: Not updating sample type because version is too low.
 VTE_PROP_COLOR_CONTROL: Update received
 VTE_PROP_COLOR_CONTROL: Updating color props
-VTE_PROP_COLOR_CONTROL: Updating texture sampler type to %i
+VTE_PROP_COLOR_CONTROL: Updating swapchain states
 VTE_SERVER_REQUESTED_FRAMETIME_US: Server requested refresh rate %.1f was not available. Using %.1f
 VTE_SERVER_REQUESTED_FRAMETIME_US: VTE_REQ_FRAMETIME_US was set to %i
+VTE_SERVER_TIMEOUT_SECONDS: Timeout updated to %i
 VTT for 
 VTT for std::__ndk1::basic_ifstream<char, std::__ndk1::char_traits<char>>
 VTT for std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>
@@ -5943,6 +5938,7 @@ V_URLEncode(char*, int, char const*, int)
 V_URLEncodeFullPath(char*, int, char const*, int)
 V_URLEncodeInternal(char*, int, char const*, int, bool, std::__ndk1::function<bool (char)>)
 V_URLEncodeNoPlusForSpace(char*, int, char const*, int)
+Waiting for webview to setup...
 waitpid
 Warning: Can't find "gl%s"\n
 WARNING: Corrupt UDP packet went long (%d size, %d left, %d total length)\n
@@ -5989,6 +5985,9 @@ WebView::CopyContentsToTexture(unsigned int)
 WebView::Create(int, int, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>)
 WebView::DispatchTouchEvent(int, int, bool)
 WebViewInfo::~WebViewInfo()
+WebView::OnAppClose()
+WebView::OnAppClose: Clearing root view
+WebView::OnAppClose: Complete
 WebView::RequestDraw()
 WebView::RequestPause()
 WebView::RequestResume()
@@ -6012,14 +6011,14 @@ WebView::UIThread_ThawWebViewGlobal()
 WebView::~WebView()
 WebView::WebView(int, int, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>)
 WebView::WebViewThread()
-WebView::WebViewThread: Closed webview
+WebView::WebViewThread: Attempting to setup webview...
 WebView::WebViewThread: Closing webview
-WebView::WebViewThread: Joined thread
+WebView::WebViewThread: Finished closing webview
+WebView::WebViewThread: Joined WebView thread
 WebView::WebViewThread: WebView finished setup and is running
 WebView::WebViewThread: WebView finished setup. Waiting for message channels to initialize...
-WebView::WebViewThread: WebView Message channels initialized! Sending any queued messaages...
+WebView::WebViewThread: WebView Message channels initialized! Sending any queued messages...
 Wednesday
-Width/Height: %dx%d\n
 wifi
 #WifiCurrentlyConnected{
 WifiLock::Lock: no android.permission.WAKE_LOCK permissions. Not locking.
@@ -6044,12 +6043,21 @@ xrApplyHapticFeedback
 ~XrAppManager()
 XrAppManager::BReadyToSuspend()
 XrAppManager::GetRequestedExtensions()
+XrAppManager::HandleSceneTransition: App transitioned to scene: %i
 XrAppManager::HandleSceneTransition(AppViewType)
+XrAppManager::HandleSceneTransition: Failed to transition to next scene
 XrAppManager::HandleTransitionToDash()
 XrAppManager::HandleTransitionToDash: Attempting to StartActivity back to SteamLink Dashboard (%s, %s)\n
+XrAppManager::HandleTransitionToDash: Transitioning to activity: %s, package: %s
 XrAppManager::HandleTransitionToDash: Transitioning to Dash
 XrAppManager::HandleTransitionToLobby()
+XrAppManager::HandleTransitionToLobby: App transitioned to lobby
 XrAppManager::HandleTransitionToStream()
+XrAppManager::HandleTransitionToStream: App transitioned to stream
+XrAppManager::HandleXREvent: Cleared scenes
+XrAppManager::HandleXREvent: Clearing scenes...
+XrAppManager::HandleXREvent: Completed XRQ_SHUTDOWN
+XrAppManager::HandleXREvent: Received XRQ_SHUTDOWN
 XrAppManager::HandleXREvent(XrqEvent, std::__ndk1::variant<XrEventDataReferenceSpaceChangePending> const&)
 XrAppManager::Init(XRQApp&)
 XrAppManager::OnResume()
@@ -6059,6 +6067,10 @@ XrAppManager::SetupScenes()
 XrAppManager::Tick()
 XrAppManager::~XrAppManager()
 XrAppManager::XrAppManager()
+XrAppManager::~XrAppManager: Cleanup WebViews
+XrAppManager::~XrAppManager: Cleared scenes
+XrAppManager::~XrAppManager: Clearing app paths
+XrAppManager::~XrAppManager: Clearing scenes...
 XrAppManager::XrAppManager: Failed to load config to app paths!
 xrAttachSessionActionSets
 xrAttachSessionActionSets( context.session, &attachInfo )
@@ -6124,6 +6136,7 @@ xrEnumerateViewConfigurationViews
 xrEnumerateViewConfigurationViews( out_context.instance, out_context.systemId, view_type, 0, &out_context.unViewCount, nullptr )
 xrEnumerateViewConfigurationViews( out_context.instance, out_context.systemId, view_type, out_context.unViewCount, &out_context.unViewCount, out_context.vViewConfigViews.data())
 XR_EXT_display_refresh_rate is not available on this runtime
+XR_FB_composition_layer_settings
 XR_FB_display_refresh_rate
 XR_FB_eye_tracking_social
 XR_FB_face_tracking
@@ -6197,6 +6210,11 @@ XRQCreateSwapchain: Created swapchain successfully
 XRQCreateSwapchain: Swapchain Info - magFilter: %#04x, minFilter: %#04x, maxAnisotropy: %.3f
 XRQCreateSwapchain(XRQContext const&, XRQSwapchainInfo const&, XRQSwapchain&)
 XRQCreateXRInstance(XRQApp const&, XRQContext&)
+XRQCreateXRSession: Created session successfully
+XRQCreateXRSession: Failed to get view configurations
+XRQCreateXRSession: OpenGLES OpenXR Extension is not available
+XRQCreateXRSession: Unable to setup face tracking
+XRQCreateXRSession: Unable to setup social eye tracking
 XRQCreateXRSession(XRQContext&)
 XRQDestroyActionSet(XrActionSet_T*&)
 XRQDestroyAction(XRQAction&)
@@ -6266,6 +6284,7 @@ XrSceneNoop::Init(XRQContext&)
 XrSceneNoop::Render(XRQContext&)
 XrSceneNoop::~XrSceneNoop()
 XrSceneNoop::XrSceneNoop()
+XrScene::OnAppWillBeRestarted(XRQContext&)
 XrScene::OnEndOfFrame(XRQContext&)
 XrScene::OnTopOfFrame(XRQContext&)
 XrSceneStatic::Init: Initializing swapchains...
@@ -6310,6 +6329,7 @@ XrSceneStream::Init: Initialized stream loading panel
 XrSceneStream::Init: Initializing stream scene...
 XrSceneStream::Init: Successfully initialized stream scene
 XrSceneStream::Init(XRQContext&)
+XrSceneStream::OnAppWillBeRestarted(XRQContext&)
 XrSceneStream::OnEndOfFrame(XRQContext&)
 XrSceneStream::OnTopOfFrame(XRQContext&)
 XrSceneStream::PreflightCheckThread()
@@ -6349,6 +6369,7 @@ XrSceneStream::TransitionToStreamInitWifi lock failed to acquire
 XrSceneStream::TransitionToStreamInit(XRQContext&)
 XrSceneStream::TransitionToStreamLoadingCanResume
 XrSceneStream::TransitionToStreamLoadingCanResume(XRQContext&)
+XrSceneStream::TransitionToStreamLoading: No frame within %i seconds, requesting exit
 XrSceneStream::TransitionToStreamLoadingResuming
 XrSceneStream::TransitionToStreamLoadingResuming(XRQContext&)
 XrSceneStream::TransitionToStreamLoading: Updating text to loading error because last state was preloading state
@@ -6357,7 +6378,8 @@ XrSceneStream::TransitionToStreamPreloading
 XrSceneStream::TransitionToStreamPreloading(XRQContext&, StreamSceneState)
 XrSceneStream::TransitionToStreamStartOrResume
 XrSceneStream::TransitionToStreamStartOrResume(XRQContext&)
-XrSceneStream::UnFocused: m_pQSVLXRClientManager->Shutdown() complete\n
+XrSceneStream::UnFocused: Finished unfocusing
+XrSceneStream::UnFocused: m_pQSVLXRClientManager->Shutdown() complete
 XrSceneStream::UnFocused: Stream scene was unfocused
 XrSceneStream::UnFocused(XRQContext&)
 XrSceneStream::~XrSceneStream()
@@ -6387,6 +6409,7 @@ XrUIInput::~XrUIInput()
 XrUIInput::XrUIInput: Loading ui input config
 XrUIInput::XrUIInput(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)
 XrUIManager::AddLoadingPanel(unsigned short)
+XrUIManager::AddRenderedUIPanel: Added new UI panel
 XrUIManager::AddRenderedUIPanel: Could not find locale in map. Using english
 XrUIManager::AddRenderedUIPanel: Current locale is %s
 XrUIManager::AddRenderedUIPanel: Failed to find locale in map!
@@ -6404,6 +6427,7 @@ XrUIManager::ChillPanels: No panels to chill!
 XrUIManager::ChillPanels: No panels to thaw!
 XrUIManager::HideLoadingPanel()
 XrUIManager::HideLoadingPanelAfterDelay(float)
+XrUIManager::Init: Begin UI initialization
 XrUIManager::Init(XRQContext&)
 XrUIManager::IsLoadingPanelShowing()
 XrUIManager::LoadLocalization()
@@ -6430,6 +6454,7 @@ XrUIManager::ShowTemporaryDialog: Failed to initialize dialog. Not displaying!
 XrUIManager::ThawPanels()
 XrUIManager::~XrUIManager()
 XrUIManager::XrUIManager(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)
+XrUIManager::~XrUIManager: UI Manager is being destroyed
 XrUIPanel::AddWebViewMessageCallback(std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>)
 XrUIPanel::BDoesPoseRayIntersectPanel(XRQContext&, XrPosef const&, XrVector2f&, XrVector3f&)
 XrUIPanel::Focused()
@@ -6470,7 +6495,8 @@ ZN11XrUIManager4InitER10XRQContextE3$_0
 ZN12QSVLClientXR4InitEvE3$_1
 ZN12QSVLClientXR4InitEvE3$_2
 ZN12QSVLClientXR4InitEvE3$_3
-ZN12QSVLClientXRC1ER10XRQContextR13LaunchOptionsNSt6__ndk110shared_ptrI9QSVLInputEENS5_I13QSVLDeviceHmdEENS5_I11XrUIManagerEENS4_8functionIFv15QSVLClientEventNS4_7variantIJ21QSVLClientStreamStateEEEEEEE3$_0
+ZN12QSVLClientXR4InitEvE3$_4
+ZN12QSVLClientXRC1ER10XRQContextR13LaunchOptionsNSt6__ndk110shared_ptrI9QSVLInputEENS5_I13QSVLDeviceHmdEENS5_I11XrUIManagerEENS4_8functionIFv15QSVLClientEventNS4_7variantIJ21QSVLClientStreamState25QSVLClientWirelessTimeoutEEEEEEE3$_0
 ZN12XrAppManager4InitER6XRQAppE3$_1
 ZN12XrAppManagerC1EvE3$_0
 ZN12XrSceneLobby7FocusedER10XRQContextE3$_1
@@ -6483,6 +6509,7 @@ ZN13XrSceneStream4InitER10XRQContextE3$_1
 ZN13XrSceneStream4InitER10XRQContextE3$_2
 ZN13XrSceneStream4InitER10XRQContextE3$_3
 ZN14QSVLRendererXR4InitERK10XRQContextE3$_0
+ZN14QSVLRendererXR4InitERK10XRQContextE3$_1
 ZN14SVLDataLinkUDP26PrepareForPossibleShutdownEvE3$_0
 ZN6CVRLog7InitLogEPKcS1_bmE3$_0
 ZN7SVLRoot4InitEvE3$_0
