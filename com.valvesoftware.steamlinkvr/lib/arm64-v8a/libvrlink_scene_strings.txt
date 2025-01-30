@@ -47,7 +47,7 @@
 7CThread
 7SVLRoot
 7XrScene
-8785257 
+8810905 
 8SVLAudio
 8SVLCodec
 8SVLCrypt
@@ -2777,13 +2777,14 @@ QSVLCodecNDK::MediaThread: no m_codec
 QSVLCodecNDK::MediaThread: Output buffers did change
 QSVLCodecNDK::~QSVLCodecNDK()
 QSVLCodecNDK::QSVLCodecNDK(std::__ndk1::shared_ptr<QSVLFrameServer>, SVLRenderer*)
-QSVLCodecNDK::ReturnEncodedDataBuffer(unsigned char*, unsigned int)
+QSVLCodecNDK::ReturnEncodedDataBuffer(unsigned char**, unsigned int)
 QSVLCodecNDK::Stop()
+QSVLCodecNDK::Stop: Shutting down decoder
 QSVLCodecNDK::SubmitFrameForDecode called but buffer empty
 QSVLCodecNDK::SubmitFrameForDecode: Codec was not active
 QSVLCodecNDK::SubmitFrameForDecode: Failed to queue input buffer. Resetting stream
 QSVLCodecNDK::SubmitFrameForDecode size overflow
-QSVLCodecNDK::SubmitFrameForDecode(unsigned char const*, int, unsigned int, bool)
+QSVLCodecNDK::SubmitFrameForDecode(unsigned char**, int, unsigned int, bool)
 QSVLDeviceHmd::GetInput(XRQContext&, PackedHmdInput_t&)
 QSVLDeviceHmd::GetInteractionGaze(XRQContext&, XrVector3f*)
 QSVLDeviceHmd::GetPose(XRQContext&, PackedPose_t&)
@@ -2802,7 +2803,7 @@ QSVLFrameServer::EnqueueHardwareBuffer(HardwareBufferInfo&&)
 QSVLFrameServer::FlushHardwareBuffers()
 QSVLFrameServer::QSVLFrameServer()
 QSVLFrameServer::ServeNextHardwareBuffer(HardwareBufferInfo&, int)
-QSVLRendererXR::AcceptDataFrame(unsigned char const*, int, bool, unsigned short)
+QSVLRendererXR::AcceptDataFrame(unsigned char*, int, bool, unsigned short)
 QSVLRendererXR::FlipFrame()
 QSVLRendererXR::FlipFrame(XRQContext const&, long*)
 QSVLRendererXR::FlipFrame: You should be calling the other FlipFrame()!
@@ -6261,7 +6262,7 @@ XR_KHR_convert_timespec_time is not available on this runtime
 XR_KHR_opengl_es_enable
 xrLocateSpace
 xrLocateSpace(locateSpace, baseSpace, time, &outSpaceLocation )
-xrLocateSpace( m_eyeTrackingAction.vecActionSpaces[ 0 ], baseSpace, timeNow, &baseToEyeGazeLocation )
+xrLocateSpace( m_eyeTrackingAction.vecActionSpaces[ 0 ], viewSpace, timeNow, &spaceLocation )
 xrLocateSpace( m_poseAction.vecActionSpaces[ i ], m_refXrqContext->mapReferenceSpaceSpaces[ m_refXrqContext->playSpace ], timeNow, &spaceLocation )
 xrLocateSpace( m_uiActions.pose.action.vecActionSpaces[ i ], xrqContext.mapReferenceSpaceSpaces.at( xrqContext.playSpace ), xrqContext.currentFrameState.predictedDisplayTime, &spaceLocation )
 xrLocateViews
