@@ -23,8 +23,7 @@ public class ReLinkerInstance {
     protected ReLinker.Logger logger;
     protected boolean recursive;
 
-    /* JADX INFO: Access modifiers changed from: protected */
-    public ReLinkerInstance() {
+    protected ReLinkerInstance() {
         this(new SystemLibraryLoader(), new ApkLibraryInstaller());
     }
 

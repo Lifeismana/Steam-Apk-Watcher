@@ -15,6 +15,8 @@
   "StreamPreflight_WifiBandwidthLowDescription": "Migliora la tua connessione WiFi per una migliore esperienza di trasmissione.",
   "StreamCheck_WifiNotConnected": "Wi-Fi non connesso",
   "StreamCheck_WifiNotConnectedDescription": "Il tuo dispositivo non è connesso al Wi-Fi",
+  "StreamCheck_StreamNotPossible": "Connessione non riuscita",
+  "StreamCheck_StreamNotPossibleDescription": "Le trasmissioni in VR richiedono che il visore e il PC siano connessi alla stessa rete. Assicurati di eseguire la trasmissione sulla stessa rete e di non utilizzare una rete mesh o una rete ospite.",
   "StreamSideBand_Title": "Errore di trasmissione",
   "StreamSideBand_Description": "Si è verificato un errore di trasmissione.",
   "StreamSideBand_ConnectionStarted": "Avvio connessione",

@@ -1,11 +1,10 @@
 package com.valvesoftware.steamlink;
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.SurfaceTexture;
+import android.media.AudioManager;
 import android.net.ConnectivityManager;
 import android.net.Network;
 import android.net.NetworkCapabilities;
@@ -15,7 +14,6 @@ import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.util.Log;
 import android.view.Display;
 import android.view.Surface;
@@ -33,6 +31,8 @@ public class SteamLink extends SDLActivity {
     private static final String TAG = "SteamLink";
     VirtualHere mVirtualHere;
     ShellWifiInfo mWifiInfo = null;
+    WifiManager.WifiLock m_WiFiLock;
+    boolean m_bLowLatencyAudio;
     float m_flOverlayScale;
     View m_marginBottom;
     View m_marginLeft;
@@ -67,7 +67,6 @@ public class SteamLink extends SDLActivity {
         return "main";
     }
 
-    /* loaded from: classes.dex */
     public class ShellWifiInfo extends ConnectivityManager.NetworkCallback {
         private Context mContext;
         public int m_nNetworkID = -1;
@@ -117,9 +116,8 @@ public class SteamLink extends SDLActivity {
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // org.libsdl.app.SDLActivity, android.app.Activity
-    public void onCreate(Bundle bundle) {
+    protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setWindowStyle(true);
         if (useVideoSurface()) {
@@ -127,12 +125,14 @@ public class SteamLink extends SDLActivity {
         }
         this.mVirtualHere = VirtualHere.acquire(this);
         this.mWifiInfo = new ShellWifiInfo(this);
+        if (getApplication().checkSelfPermission("android.permission.WAKE_LOCK") == 0) {
+            this.m_WiFiLock = ((WifiManager) getSystemService("wifi")).createWifiLock(4, "Steam Link");
+        }
         nativeSetenv("QT_PLUGIN_PATH", getApplicationInfo().nativeLibraryDir);
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // org.libsdl.app.SDLActivity, android.app.Activity
-    public void onDestroy() {
+    protected void onDestroy() {
         super.onDestroy();
         VirtualHere virtualHere = this.mVirtualHere;
         if (virtualHere != null) {
@@ -141,29 +141,32 @@ public class SteamLink extends SDLActivity {
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // org.libsdl.app.SDLActivity, android.app.Activity
-    public void onPause() {
+    protected void onPause() {
         super.onPause();
+        setLowLatencyAudio(false);
         this.mWifiInfo.Stop();
+        disableWiFiLock();
     }
 
     @Override // org.libsdl.app.SDLActivity, android.app.Activity
     public void onResume() {
         super.onResume();
         this.mWifiInfo.Start();
+        enableWiFiLock();
+        if (SDLActivity.nativeGetHintBoolean("SDL_ANDROID_LOW_LATENCY_AUDIO", true)) {
+            setLowLatencyAudio(true);
+        }
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // org.libsdl.app.SDLActivity, android.app.Activity
-    public void onStart() {
+    protected void onStart() {
         super.onStart();
         thawRendering();
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // org.libsdl.app.SDLActivity, android.app.Activity
-    public void onStop() {
+    protected void onStop() {
         super.onStop();
         freezeRendering();
     }
@@ -185,13 +188,43 @@ public class SteamLink extends SDLActivity {
         return data != null ? new String[]{data.toString()} : new String[0];
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // org.libsdl.app.SDLActivity
-    public boolean sendCommand(int i, Object obj) {
+    protected boolean sendCommand(int i, Object obj) {
         if (i == 2 && ((Integer) obj).intValue() == 0) {
             return true;
         }
         return super.sendCommand(i, obj);
+    }
+
+    private void enableWiFiLock() {
+        if (this.m_WiFiLock != null) {
+            Log.v(TAG, "Enabling low latency WiFi");
+            this.m_WiFiLock.acquire();
+        }
+    }
+
+    private void disableWiFiLock() {
+        WifiManager.WifiLock wifiLock = this.m_WiFiLock;
+        if (wifiLock == null || !wifiLock.isHeld()) {
+            return;
+        }
+        Log.v(TAG, "Disabling low latency WiFi");
+        this.m_WiFiLock.release();
+    }
+
+    private void setLowLatencyAudio(boolean z) {
+        if (z == this.m_bLowLatencyAudio) {
+            return;
+        }
+        AudioManager audioManager = (AudioManager) getApplication().getSystemService("audio");
+        if (z) {
+            Log.v(TAG, "Enabling low latency audio");
+            audioManager.setParameters("set_audio_low_latency=1");
+        } else {
+            Log.v(TAG, "Disabling low latency audio");
+            audioManager.setParameters("set_audio_low_latency=1");
+        }
+        this.m_bLowLatencyAudio = z;
     }
 
     public ShellWifiInfo getWifiInfo() {
@@ -216,13 +249,7 @@ public class SteamLink extends SDLActivity {
             intent.putExtra("sGenInfo", "sArgs Is Empty");
         }
         intent.putExtra("sArgs", str);
-        if (getPackageManager().hasSystemFeature("oculus.software.vr.app.hybrid")) {
-            startActivity(intent);
-        } else {
-            Log.v(TAG, "Hybrid support not found. Launching activity using legacy method.");
-            Intent.makeRestartActivityTask(intent.getComponent()).addCategory("com.oculus.intent.category.VR");
-            ((AlarmManager) getSystemService("alarm")).set(3, SystemClock.elapsedRealtime(), PendingIntent.getActivity(this, 354678, intent, 33554432));
-        }
+        startActivity(intent);
         finishAndRemoveTask();
     }
 
@@ -239,9 +266,7 @@ public class SteamLink extends SDLActivity {
         return getIntent().getStringExtra("displayMessage");
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
-    /* loaded from: classes.dex */
-    public class VideoSurfaceCallback implements SurfaceHolder.Callback {
+    private class VideoSurfaceCallback implements SurfaceHolder.Callback {
         @Override // android.view.SurfaceHolder.Callback
         public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i2, int i3) {
         }
@@ -260,9 +285,7 @@ public class SteamLink extends SDLActivity {
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
-    /* loaded from: classes.dex */
-    public class OverlaySurfaceCallback implements SurfaceHolder.Callback {
+    private class OverlaySurfaceCallback implements SurfaceHolder.Callback {
         @Override // android.view.SurfaceHolder.Callback
         public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i2, int i3) {
         }

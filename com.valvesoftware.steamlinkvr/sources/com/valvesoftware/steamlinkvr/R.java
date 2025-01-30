@@ -4,7 +4,7 @@ package com.valvesoftware.steamlinkvr;
 public final class R {
 
     public static final class drawable {
-        public static final int res_0x7f010000_ic_launcher_background__0 = 0x7f010000;
+        public static final int _ic_launcher_background__0_res_0x7f010000 = 0x7f010000;
         public static final int ic_launcher = 0x7f010001;
         public static final int ic_launcher_background = 0x7f010002;
     }

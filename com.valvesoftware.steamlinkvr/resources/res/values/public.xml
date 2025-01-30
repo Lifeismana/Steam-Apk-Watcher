@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <public type="drawable" name="res_0x7f010000_ic_launcher_background__0" id="0x7f010000" />
+    <public type="drawable" name="_ic_launcher_background__0_res_0x7f010000" id="0x7f010000" />
     <public type="drawable" name="ic_launcher" id="0x7f010001" />
     <public type="drawable" name="ic_launcher_background" id="0x7f010002" />
     <public type="layout" name="main" id="0x7f020000" />

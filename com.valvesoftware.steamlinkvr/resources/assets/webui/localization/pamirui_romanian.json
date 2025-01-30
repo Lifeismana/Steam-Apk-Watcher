@@ -15,6 +15,8 @@
   "StreamPreflight_WifiBandwidthLowDescription": "Te rugăm să-ți îmbunătățești conexiunea Wi-Fi pentru o experiență mai bună de transmisiune.",
   "StreamCheck_WifiNotConnected": "Neconectat la Wi-Fi",
   "StreamCheck_WifiNotConnectedDescription": "Dispozitivul nu este conectat la Wi-Fi.",
+  "StreamCheck_StreamNotPossible": "Conexiunea nu a reușit",
+  "StreamCheck_StreamNotPossibleDescription": "Transmisiunea conținutului RV necesită să ai casca și computerul conectate la aceeași rețea. Te rugăm să te asiguri că realizezi transmisiunea utilizând aceeași rețea și că nu utilizezi o rețea mesh sau o rețea pentru oaspeți.",
   "StreamSideBand_Title": "Eroare de transmisiune",
   "StreamSideBand_Description": "Transmisiunea a întâmpinat o eroare.",
   "StreamSideBand_ConnectionStarted": "Conexiunea este inițiată",

@@ -15,6 +15,8 @@
   "StreamPreflight_WifiBandwidthLowDescription": "A jobb továbbítási élmény érdekében kérjük, javíts Wi-Fi kapcsolatodon.",
   "StreamCheck_WifiNotConnected": "A WiFi nem csatlakozik",
   "StreamCheck_WifiNotConnectedDescription": "Az eszközöd nem csatlakozik a WiFi-hez.",
+  "StreamCheck_StreamNotPossible": "Csatlakozás sikertelen",
+  "StreamCheck_StreamNotPossibleDescription": "A VR-továbbításhoz fejszettednek és PC-dnek ugyanazon a hálózaton kell lennie. Kérjük, győződj meg róla, hogy ugyanazon a hálózaton továbbítasz, és nem használsz mesh- vagy vendéghálózatot.",
   "StreamSideBand_Title": "Továbbítási hiba",
   "StreamSideBand_Description": "Hiba történt a továbbításkor.",
   "StreamSideBand_ConnectionStarted": "Megkezdődik a kapcsolódás",

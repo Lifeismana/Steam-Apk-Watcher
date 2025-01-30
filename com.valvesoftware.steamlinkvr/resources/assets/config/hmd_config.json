@@ -60,7 +60,7 @@
       "sResourceRoot": "vrlink",
       "sInputProfilePath": "{oculus}/input/rift_profile.json",
       "flLaserMouseHmdAngleDegrees": 0,
-      "sControllerType": "rift",
+      "sControllerType": "pico",
       "sDeviceType": "pico/VRLINKHMDPICO4"
     },
     "PICO 4 Enterprise": {
@@ -72,7 +72,7 @@
       "sResourceRoot": "vrlink",
       "sInputProfilePath": "{oculus}/input/rift_profile.json",
       "flLaserMouseHmdAngleDegrees": 0,
-      "sControllerType": "rift",
+      "sControllerType": "pico",
       "sDeviceType": "pico/VRLINKHMDPICO4PROORENTERPRISE"
     },
     "PICO 4 Pro": {
@@ -84,8 +84,20 @@
       "sResourceRoot": "vrlink",
       "sInputProfilePath": "{oculus}/input/rift_profile.json",
       "flLaserMouseHmdAngleDegrees": 0,
-      "sControllerType": "rift",
+      "sControllerType": "pico",
       "sDeviceType": "pico/VRLINKHMDPICO4PROORENTERPRISE"
+    },
+    "PICO 4 Ultra": {
+      "sTrackingSystem": "pico",
+      "sSerialNumber": "VRLINKHMDPICO4ULTRA",
+      "sManufacturerName": "Pico",
+      "sModelNumber": "PICO 4 Ultra",
+      "sRenderModelName": "generic_hmd",
+      "sResourceRoot": "vrlink",
+      "sInputProfilePath": "{oculus}/input/rift_profile.json",
+      "flLaserMouseHmdAngleDegrees": 0,
+      "sControllerType": "pico",
+      "sDeviceType": "pico/VRLINKHMDPICO4ULTRA"
     },
     "unknown": {
       "sTrackingSystem": "oculus",

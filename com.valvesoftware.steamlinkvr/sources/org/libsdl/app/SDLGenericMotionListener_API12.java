@@ -3,10 +3,9 @@ package org.libsdl.app;
 import android.view.MotionEvent;
 import android.view.View;
 
-/* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: SDLControllerManager.java */
 /* loaded from: classes.dex */
-public class SDLGenericMotionListener_API12 implements View.OnGenericMotionListener {
+class SDLGenericMotionListener_API12 implements View.OnGenericMotionListener {
     public boolean inRelativeMode() {
         return false;
     }
@@ -20,6 +19,9 @@ public class SDLGenericMotionListener_API12 implements View.OnGenericMotionListe
 
     public boolean supportsRelativeMouse() {
         return false;
+    }
+
+    SDLGenericMotionListener_API12() {
     }
 
     @Override // android.view.View.OnGenericMotionListener

@@ -15,6 +15,8 @@
   "StreamPreflight_WifiBandwidthLowDescription": "Melhora a ligação à rede Wi-Fi para uma melhor experiência de streaming.",
   "StreamCheck_WifiNotConnected": "Não conectado a rede Wi‑Fi",
   "StreamCheck_WifiNotConnectedDescription": "O dispositivo não está conectado a uma rede Wi‑Fi.",
+  "StreamCheck_StreamNotPossible": "A conexão falhou",
+  "StreamCheck_StreamNotPossibleDescription": "O streaming de R.V. requer que o headset e o PC estejam na mesma rede. Certifica-te de que estás a transmitir na mesma rede e que não estás a usar uma rede mesh ou para visitantes.",
   "StreamSideBand_Title": "Erro de streaming",
   "StreamSideBand_Description": "Ocorreu um erro com o stream.",
   "StreamSideBand_ConnectionStarted": "A conexão está a iniciar.",

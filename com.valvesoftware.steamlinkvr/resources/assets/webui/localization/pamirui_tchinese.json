@@ -15,6 +15,8 @@
   "StreamPreflight_WifiBandwidthLowDescription": "請改善您的 WiFi 連線品質以獲得更好的串流體驗。",
   "StreamCheck_WifiNotConnected": "未連線至 WiFi",
   "StreamCheck_WifiNotConnectedDescription": "您的裝置未連線至 WiFi",
+  "StreamCheck_StreamNotPossible": "連線失敗",
+  "StreamCheck_StreamNotPossibleDescription": "串流 VR 需要您的頭戴顯示器與電腦連上同一個網路。請確保您在同一個網路上串流，而且不是使用網狀網路或訪客網路。",
   "StreamSideBand_Title": "串流錯誤",
   "StreamSideBand_Description": "串流發生了錯誤。",
   "StreamSideBand_ConnectionStarted": "正在開始連線",

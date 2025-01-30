@@ -15,6 +15,8 @@
   "StreamPreflight_WifiBandwidthLowDescription": "Förbättra wifi-anslutningen för en bättre streamingupplevelse.",
   "StreamCheck_WifiNotConnected": "Wifi är inte anslutet",
   "StreamCheck_WifiNotConnectedDescription": "Din enhet är inte ansluten till wifi.",
+  "StreamCheck_StreamNotPossible": "Anslutningen misslyckades",
+  "StreamCheck_StreamNotPossibleDescription": "För att kunna streama VR måste ditt headset och din pc vara uppkopplade till samma nätverk. Se till att du streamar på samma nätverk och att du inte använder ett maskformigt nätverk eller ett gästnätverk.",
   "StreamSideBand_Title": "Streamingfel",
   "StreamSideBand_Description": "Det uppstod ett fel med streamingen.",
   "StreamSideBand_ConnectionStarted": "Anslutningen startar",

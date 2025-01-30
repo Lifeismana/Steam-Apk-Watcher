@@ -15,6 +15,8 @@
   "StreamPreflight_WifiBandwidthLowDescription": "Bitte verbessern Sie Ihre WLAN-Verbindung für ein besseres Streaming-Erlebnis.",
   "StreamCheck_WifiNotConnected": "WLAN nicht verbunden",
   "StreamCheck_WifiNotConnectedDescription": "Ihr Gerät ist nicht mit dem WLAN verbunden",
+  "StreamCheck_StreamNotPossible": "Verbindung fehlgeschlagen",
+  "StreamCheck_StreamNotPossibleDescription": "Für das Streamen von VR müssen sich Ihr Headset und Ihr PC im selben Netzwerk befinden. Bitte stellen Sie sicher, dass Sie kein Mesh- oder Gastnetzwerk beim Streamen verwenden.",
   "StreamSideBand_Title": "Streamingfehler",
   "StreamSideBand_Description": "Bei Ihrem Stream ist ein Fehler aufgetreten.",
   "StreamSideBand_ConnectionStarted": "Verbindung wird gestartet …",

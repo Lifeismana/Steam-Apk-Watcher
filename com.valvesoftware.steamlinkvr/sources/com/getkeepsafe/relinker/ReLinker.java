@@ -6,12 +6,10 @@ import java.io.File;
 /* loaded from: classes.dex */
 public class ReLinker {
 
-    /* loaded from: classes.dex */
     public interface LibraryInstaller {
         void installLibrary(Context context, String[] strArr, String str, File file, ReLinkerInstance reLinkerInstance);
     }
 
-    /* loaded from: classes.dex */
     public interface LibraryLoader {
         void loadLibrary(String str);
 
@@ -24,14 +22,12 @@ public class ReLinker {
         String unmapLibraryName(String str);
     }
 
-    /* loaded from: classes.dex */
     public interface LoadListener {
         void failure(Throwable th);
 
         void success();
     }
 
-    /* loaded from: classes.dex */
     public interface Logger {
         void log(String str);
     }

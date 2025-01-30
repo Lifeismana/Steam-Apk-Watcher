@@ -15,6 +15,8 @@
   "StreamPreflight_WifiBandwidthLowDescription": "Βελτιώστε τη σύνδεσή σας μέσω Wi-Fi για καλύτερη εμπειρία μετάδοσης.",
   "StreamCheck_WifiNotConnected": "Χωρίς σύνδεση σε WiFi",
   "StreamCheck_WifiNotConnectedDescription": "Η συσκευή σας δεν είναι συνδεδεμένη σε WiFi",
+  "StreamCheck_StreamNotPossible": "Αποτυχία σύνδεσης",
+  "StreamCheck_StreamNotPossibleDescription": "Η μετάδοση VR απαιτεί το headset και ο υπολογιστής σας να βρίσκονται στο ίδιο δίκτυο. Βεβαιωθείτε ότι μεταδίδετε στο ίδιο δίκτυο και ότι δεν χρησιμοποιείτε δίκτυο πλέγματος ή επισκεπτών.",
   "StreamSideBand_Title": "Σφάλμα μετάδοσης",
   "StreamSideBand_Description": "Παρουσιάστηκε σφάλμα με τη μετάδοση.",
   "StreamSideBand_ConnectionStarted": "Η σύνδεση ξεκινά",

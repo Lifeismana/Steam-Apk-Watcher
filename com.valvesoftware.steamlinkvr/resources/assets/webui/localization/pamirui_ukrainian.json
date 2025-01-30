@@ -15,6 +15,8 @@
   "StreamPreflight_WifiBandwidthLowDescription": "Для кращої якості трансляції потрібне надійніше підключення до мережі Wi-Fi.",
   "StreamCheck_WifiNotConnected": "Немає підключення до Wi-Fi",
   "StreamCheck_WifiNotConnectedDescription": "Ваш пристрій не підключено до Wi-Fi.",
+  "StreamCheck_StreamNotPossible": "Не вдалося підключитися",
+  "StreamCheck_StreamNotPossibleDescription": "Для транслювання у ВР ваш шолом і ПК мають бути підключені до однієї мережі. Переконайтеся, що це так і ви не використовуєте сітчасту або гостьову мережу.",
   "StreamSideBand_Title": "Помилка трансляції",
   "StreamSideBand_Description": "Сталася помилка з трансляцією.",
   "StreamSideBand_ConnectionStarted": "Починається процес підключення",

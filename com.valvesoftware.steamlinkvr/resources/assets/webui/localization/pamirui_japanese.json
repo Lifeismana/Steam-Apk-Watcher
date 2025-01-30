@@ -15,6 +15,8 @@
   "StreamPreflight_WifiBandwidthLowDescription": "ストリーミング体験を向上させるために、Wi-Fi接続を改善してください。",
   "StreamCheck_WifiNotConnected": "WiFiに接続されていません",
   "StreamCheck_WifiNotConnectedDescription": "デバイスがWiFiに接続されていません",
+  "StreamCheck_StreamNotPossible": "接続に失敗しました",
+  "StreamCheck_StreamNotPossibleDescription": "VRをストリーミングするには、ヘッドセットとPCが同じネットワークに接続されている必要があります。同じネットワークでストリーミングしていて、メッシュネットワークやゲストネットワークを使用していないことを確認してください。",
   "StreamSideBand_Title": "ストリーミングエラー",
   "StreamSideBand_Description": "ストリーミングにエラーが発生しました。",
   "StreamSideBand_ConnectionStarted": "接続を開始しています",

@@ -21,9 +21,7 @@
             <button class="menu-button" onclick="NavigateToPage('ui-content-hosts')">Hosts</button>
             <button class="menu-button" onclick="NavigateToPage('ui-content-advanced')">Advanced</button>
             <button class="menu-button" onclick="NavigateToPage('ui-content-settings')">Dev Settings</button>
-
-            <p><b>CL:</b> <span data-appPath="/info/p4/have_cl">?</span></p>
-            <p><b>Device Name:</b> <span data-appPath="/info/device/product_name">?</span></p>
+            <button class="menu-button" onclick="NavigateToPage('ui-content-info')">Info</button>
         </div>
         <div id="topright" style="position:absolute;top:0;right:0;">
             <button class="close-button" onclick="RequestAppQuit()">❌</button>
@@ -71,6 +69,14 @@
                     <p>Face Tracking: <span class="permission-text"
                                             data-permission="com.oculus.permission.FACE_TRACKING">??</span></p>
                 </div>
+            </div>
+
+            <div id="ui-content-info" hidden>
+                <p><b>CL:</b> <span data-appPath="/info/p4/have_cl">?</span></p>
+                <p><b>Device Name:</b> <span data-appPath="/info/device/product_name">?</span></p>
+                <p><b>Device Manufacturer:</b> <span data-appPath="/info/device/manufacturer">?</span></p>
+                <p><b>WiFi SSID:</b> <span data-appPath="/info/wifi/ssid">?</span> </p>
+                <p><b>WiFi Frequency:</b> <span data-appPath="/info/wifi/frequency">?</span> </p>
             </div>
         </div>
     </div>

@@ -15,6 +15,8 @@
   "StreamPreflight_WifiBandwidthLowDescription": "Suoratoiston laatu riippuu langattoman yhteyden vahvuudesta.",
   "StreamCheck_WifiNotConnected": "Ei wifi-yhteyttä",
   "StreamCheck_WifiNotConnectedDescription": "Laite ei ole yhteydessä wifi-verkkoon.",
+  "StreamCheck_StreamNotPossible": "Yhteys epäonnistui",
+  "StreamCheck_StreamNotPossibleDescription": "VR-striimaus edellyttää, että VR-lasit ja tietokone ovat samassa verkossa. Varmista, että suoratoistat samassa verkossa etkä käytä mesh- tai vierasverkkoa.",
   "StreamSideBand_Title": "Suoratoistovirhe",
   "StreamSideBand_Description": "Suoratoistossa tapahtui virhe.",
   "StreamSideBand_ConnectionStarted": "Yhdistetään",

@@ -15,6 +15,8 @@
   "StreamPreflight_WifiBandwidthLowDescription": "โปรดปรับปรุงการเชื่อมต่อ Wi-Fi ของคุณเพื่อให้มีประสบการณ์การสตรีมที่ดียิ่งขึ้น",
   "StreamCheck_WifiNotConnected": "WiFi ไม่ได้เชื่อมต่ออยู่",
   "StreamCheck_WifiNotConnectedDescription": "อุปกรณ์ของคุณไม่ได้เชื่อมต่ออยู่กับ WiFi",
+  "StreamCheck_StreamNotPossible": "การเชื่อมต่อไม่สำเร็จ",
+  "StreamCheck_StreamNotPossibleDescription": "การสตรีม VR จำเป็นต้องให้เครื่องสวมศีรษะและ PC ของคุณอยู่บนเครือข่ายเดียวกัน โปรดตรวจสอบว่าคุณกำลังสตรีมบนเครือข่ายเดียวกัน และไม่ได้ใช้เครือข่ายแบบเมชหรือเครือข่ายสำหรับผู้มาเยือน",
   "StreamSideBand_Title": "ข้อผิดพลาดในการสตรีม",
   "StreamSideBand_Description": "เกิดข้อผิดพลาดขึ้นกับการสตรีม",
   "StreamSideBand_ConnectionStarted": "กำลังเริ่มเชื่อมต่อ",

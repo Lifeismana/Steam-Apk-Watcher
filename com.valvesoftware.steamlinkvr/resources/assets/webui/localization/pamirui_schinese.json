@@ -15,6 +15,8 @@
   "StreamPreflight_WifiBandwidthLowDescription": "请改善您的 WiFi 连接以获得更好的流式传输体验。",
   "StreamCheck_WifiNotConnected": "WiFi 未连接",
   "StreamCheck_WifiNotConnectedDescription": "您的设备未连接至 WiFi",
+  "StreamCheck_StreamNotPossible": "连接失败",
+  "StreamCheck_StreamNotPossibleDescription": "流式传输 VR 要求您的头戴式显示器与 PC 处于同一网络中。请确保您是在同一网络中进行流式传输，且未使用网状网络或访客网络。",
   "StreamSideBand_Title": "流式传输错误",
   "StreamSideBand_Description": "流式传输出现错误。",
   "StreamSideBand_ConnectionStarted": "正在开始连接",

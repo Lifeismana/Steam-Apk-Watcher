@@ -15,6 +15,8 @@
   "StreamPreflight_WifiBandwidthLowDescription": "Моля, подобрете своята безжична връзка за по-добро преживяване при излъчване.",
   "StreamCheck_WifiNotConnected": "Няма връзка към безжичната мрежа",
   "StreamCheck_WifiNotConnectedDescription": "Устройството Ви не е свързано към безжичната мрежа",
+  "StreamCheck_StreamNotPossible": "Неуспешно свързване",
+  "StreamCheck_StreamNotPossibleDescription": "Излъчването на ВР изисква ВР шлемът и компютърът Ви да са в същата мрежа. Моля, уверете се, че излъчвате в същата мрежа и не използвате решетъчна или мрежа за гости.",
   "StreamSideBand_Title": "Грешка при излъчване",
   "StreamSideBand_Description": "Имаше грешка с излъчването.",
   "StreamSideBand_ConnectionStarted": "Връзката стартира",

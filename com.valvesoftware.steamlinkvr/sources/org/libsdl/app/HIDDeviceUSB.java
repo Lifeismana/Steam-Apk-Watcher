@@ -7,9 +7,8 @@ import android.hardware.usb.UsbInterface;
 import android.util.Log;
 import java.util.Arrays;
 
-/* JADX INFO: Access modifiers changed from: package-private */
 /* loaded from: classes.dex */
-public class HIDDeviceUSB implements HIDDevice {
+class HIDDeviceUSB implements HIDDevice {
     private static final String TAG = "hidapi";
     protected UsbDeviceConnection mConnection;
     protected UsbDevice mDevice;
@@ -126,6 +125,11 @@ public class HIDDeviceUSB implements HIDDevice {
 
     @Override // org.libsdl.app.HIDDevice
     public int writeReport(byte[] bArr, boolean z) {
+        UsbDeviceConnection usbDeviceConnection = this.mConnection;
+        if (usbDeviceConnection == null) {
+            Log.w(TAG, "writeReport() called with no device connection");
+            return -1;
+        }
         if (z) {
             int length = bArr.length;
             int i = 0;
@@ -134,14 +138,15 @@ public class HIDDeviceUSB implements HIDDevice {
                 length--;
                 i = 1;
             }
-            int controlTransfer = this.mConnection.controlTransfer(33, 9, b | 768, this.mInterface, bArr, i, length, 1000);
+            int i2 = i;
+            int controlTransfer = usbDeviceConnection.controlTransfer(33, 9, b | 768, this.mInterface, bArr, i2, length, 1000);
             if (controlTransfer >= 0) {
-                return i != 0 ? length + 1 : length;
+                return i2 != 0 ? length + 1 : length;
             }
             Log.w(TAG, "writeFeatureReport() returned " + controlTransfer + " on device " + getDeviceName());
             return -1;
         }
-        int bulkTransfer = this.mConnection.bulkTransfer(this.mOutputEndpoint, bArr, bArr.length, 1000);
+        int bulkTransfer = usbDeviceConnection.bulkTransfer(this.mOutputEndpoint, bArr, bArr.length, 1000);
         if (bulkTransfer != bArr.length) {
             Log.w(TAG, "writeOutputReport() returned " + bulkTransfer + " on device " + getDeviceName());
         }
@@ -154,6 +159,11 @@ public class HIDDeviceUSB implements HIDDevice {
         int i2;
         int length = bArr.length;
         byte b = bArr[0];
+        UsbDeviceConnection usbDeviceConnection = this.mConnection;
+        if (usbDeviceConnection == null) {
+            Log.w(TAG, "readReport() called with no device connection");
+            return false;
+        }
         if (b == 0) {
             i = length - 1;
             i2 = 1;
@@ -162,7 +172,7 @@ public class HIDDeviceUSB implements HIDDevice {
             i2 = 0;
         }
         int i3 = i2;
-        int controlTransfer = this.mConnection.controlTransfer(161, 1, ((z ? 3 : 1) << 8) | b, this.mInterface, bArr, i2, i, 1000);
+        int controlTransfer = usbDeviceConnection.controlTransfer(161, 1, ((z ? 3 : 1) << 8) | b, this.mInterface, bArr, i2, i, 1000);
         if (controlTransfer < 0) {
             Log.w(TAG, "getFeatureReport() returned " + controlTransfer + " on device " + getDeviceName());
             return false;
@@ -206,9 +216,7 @@ public class HIDDeviceUSB implements HIDDevice {
         this.mFrozen = z;
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
-    /* loaded from: classes.dex */
-    public class InputThread extends Thread {
+    protected class InputThread extends Thread {
         protected InputThread() {
         }
 

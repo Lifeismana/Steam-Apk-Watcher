@@ -15,6 +15,8 @@
   "StreamPreflight_WifiBandwidthLowDescription": "Daha iyi bir deneyim için lütfen Wi-Fi bağlantınızı iyileştirin.",
   "StreamCheck_WifiNotConnected": "Wi-Fi bağlı değil",
   "StreamCheck_WifiNotConnectedDescription": "Cihazınız Wi-Fi'a bağlı değil.",
+  "StreamCheck_StreamNotPossible": "Bağlantı Başarısız",
+  "StreamCheck_StreamNotPossibleDescription": "VR yayını yapmak için başlığınız ve bilgisayarınız aynı ağ üzerinde yer almalıdır. Lütfen aynı ağ üzerinde yayın yaptığınızdan ve mesh ya da misafir ağı kullanmadığınızdan emin olun.",
   "StreamSideBand_Title": "Yayın Hatası",
   "StreamSideBand_Description": "Yayında bir hata oluştu.",
   "StreamSideBand_ConnectionStarted": "Bağlanıyor",

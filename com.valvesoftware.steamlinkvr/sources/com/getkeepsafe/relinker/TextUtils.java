@@ -1,8 +1,7 @@
 package com.getkeepsafe.relinker;
 
-/* JADX INFO: Access modifiers changed from: package-private */
 /* loaded from: classes.dex */
-public final class TextUtils {
+final class TextUtils {
     TextUtils() {
     }
 

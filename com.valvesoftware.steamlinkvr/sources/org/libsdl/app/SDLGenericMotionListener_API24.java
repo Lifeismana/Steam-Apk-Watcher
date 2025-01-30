@@ -13,6 +13,9 @@ class SDLGenericMotionListener_API24 extends SDLGenericMotionListener_API12 {
         return true;
     }
 
+    SDLGenericMotionListener_API24() {
+    }
+
     @Override // org.libsdl.app.SDLGenericMotionListener_API12, android.view.View.OnGenericMotionListener
     public boolean onGenericMotion(View view, MotionEvent motionEvent) {
         int actionMasked;

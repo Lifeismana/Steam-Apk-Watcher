@@ -53,7 +53,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     protected static final int COMMAND_TEXTEDIT_HIDE = 3;
     protected static final int COMMAND_USER = 32768;
     private static final int SDL_MAJOR_VERSION = 3;
-    private static final int SDL_MICRO_VERSION = 2;
+    private static final int SDL_MICRO_VERSION = 7;
     private static final int SDL_MINOR_VERSION = 1;
     protected static final int SDL_ORIENTATION_LANDSCAPE = 1;
     protected static final int SDL_ORIENTATION_LANDSCAPE_FLIPPED = 2;
@@ -113,7 +113,6 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     protected static boolean mActivityCreated = false;
     private static SDLFileDialogState mFileDialogState = null;
 
-    /* loaded from: classes.dex */
     public enum NativeState {
         INIT,
         RESUMED,
@@ -212,16 +211,14 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         return false;
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
-    public static SDLGenericMotionListener_API12 getMotionListener() {
+    protected static SDLGenericMotionListener_API12 getMotionListener() {
         if (mMotionListener == null) {
             mMotionListener = new SDLGenericMotionListener_API26();
         }
         return mMotionListener;
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
-    public void main() {
+    protected void main() {
         String mainSharedObject = mSingleton.getMainSharedObject();
         String mainFunction = mSingleton.getMainFunction();
         String[] arguments = mSingleton.getArguments();
@@ -264,9 +261,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         return new SDLSurface(context);
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // android.app.Activity
-    public void onCreate(Bundle bundle) {
+    protected void onCreate(Bundle bundle) {
         String message;
         String path;
         Log.v(TAG, "Manufacturer: " + Build.MANUFACTURER);
@@ -307,7 +303,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             message = e3.getMessage();
         }
         if (!mBrokenLibraries) {
-            String str = String.valueOf(3) + "." + String.valueOf(1) + "." + String.valueOf(2);
+            String str = String.valueOf(3) + "." + String.valueOf(1) + "." + String.valueOf(7);
             String nativeGetVersion = nativeGetVersion();
             if (!nativeGetVersion.equals(str)) {
                 mBrokenLibraries = true;
@@ -392,9 +388,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         handleNativeState();
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // android.app.Activity
-    public void onPause() {
+    protected void onPause() {
         Log.v(TAG, "onPause()");
         super.onPause();
         HIDDeviceManager hIDDeviceManager = mHIDDeviceManager;
@@ -407,9 +402,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         pauseNativeThread();
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // android.app.Activity
-    public void onResume() {
+    protected void onResume() {
         Log.v(TAG, "onResume()");
         super.onResume();
         HIDDeviceManager hIDDeviceManager = mHIDDeviceManager;
@@ -422,9 +416,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         resumeNativeThread();
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // android.app.Activity
-    public void onStop() {
+    protected void onStop() {
         Log.v(TAG, "onStop()");
         super.onStop();
         if (mHasMultiWindow) {
@@ -432,9 +425,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // android.app.Activity
-    public void onStart() {
+    protected void onStart() {
         Log.v(TAG, "onStart()");
         super.onStart();
         if (mHasMultiWindow) {
@@ -526,9 +518,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // android.app.Activity
-    public void onDestroy() {
+    protected void onDestroy() {
         Log.v(TAG, "onDestroy()");
         HIDDeviceManager hIDDeviceManager = mHIDDeviceManager;
         if (hIDDeviceManager != null) {
@@ -651,7 +642,6 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         }
     }
 
-    /* loaded from: classes.dex */
     protected static class SDLCommandHandler extends Handler {
         protected SDLCommandHandler() {
         }
@@ -726,8 +716,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
-    public boolean sendCommand(int i, Object obj) {
+    protected boolean sendCommand(int i, Object obj) {
         Message obtainMessage = this.commandHandler.obtainMessage();
         obtainMessage.arg1 = i;
         obtainMessage.obj = obj;
@@ -810,7 +799,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             } else if (!z4 || !z3) {
             }
         } else if (!z) {
-            i3 = i > i2 ? SDL_SYSTEM_CURSOR_SIZENESW : SDL_SYSTEM_CURSOR_SIZEWE;
+            i3 = i > i2 ? SDL_SYSTEM_CURSOR_SIZENESW : 7;
             i5 = i3;
         }
         Log.v(TAG, "setOrientation() requestedOrientation=" + i5 + " width=" + i + " height=" + i2 + " resizable=" + z + " hint=" + str);
@@ -929,7 +918,6 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         return mLayout;
     }
 
-    /* loaded from: classes.dex */
     static class ShowTextInputTask implements Runnable {
         static final int HEIGHT_PADDING = 15;
 
@@ -1250,7 +1238,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             case SDL_SYSTEM_CURSOR_WINDOW_BOTTOMLEFT /* 18 */:
                 i2 = 1016;
                 break;
-            case SDL_SYSTEM_CURSOR_SIZEWE /* 7 */:
+            case 7:
             case SDL_SYSTEM_CURSOR_WINDOW_RIGHT /* 15 */:
             case SDL_SYSTEM_CURSOR_WINDOW_LEFT /* 19 */:
                 i2 = 1014;
@@ -1418,7 +1406,6 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         }
     }
 
-    /* loaded from: classes.dex */
     static class SDLFileDialogState {
         boolean multipleChoice;
         int requestCode;

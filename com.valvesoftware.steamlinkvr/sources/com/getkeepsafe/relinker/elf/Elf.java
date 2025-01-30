@@ -5,7 +5,6 @@ import java.io.IOException;
 /* loaded from: classes.dex */
 public interface Elf {
 
-    /* loaded from: classes.dex */
     public static abstract class DynamicStructure {
         public static final int DT_NEEDED = 1;
         public static final int DT_NULL = 0;
@@ -14,7 +13,6 @@ public interface Elf {
         public long val;
     }
 
-    /* loaded from: classes.dex */
     public static abstract class Header {
         public static final int ELFCLASS32 = 1;
         public static final int ELFCLASS64 = 2;
@@ -36,7 +34,6 @@ public interface Elf {
         public abstract SectionHeader getSectionHeader(int i) throws IOException;
     }
 
-    /* loaded from: classes.dex */
     public static abstract class ProgramHeader {
         public static final int PT_DYNAMIC = 2;
         public static final int PT_LOAD = 1;
@@ -46,7 +43,6 @@ public interface Elf {
         public long vaddr;
     }
 
-    /* loaded from: classes.dex */
     public static abstract class SectionHeader {
         public long info;
     }

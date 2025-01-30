@@ -15,6 +15,8 @@
   "StreamPreflight_WifiBandwidthLowDescription": "Verbeter je wifi-verbinding voor een betere streamingervaring.",
   "StreamCheck_WifiNotConnected": "Niet verbonden met wifi",
   "StreamCheck_WifiNotConnectedDescription": "Je apparaat is niet verbonden met wifi",
+  "StreamCheck_StreamNotPossible": "Verbinden mislukt",
+  "StreamCheck_StreamNotPossibleDescription": "Als je VR wilt streamen, moeten je headset en pc op hetzelfde netwerk zitten. Zorg ervoor dat je streamt via hetzelfde netwerk en dat je geen vermaasd netwerk of gastnetwerk gebruikt.",
   "StreamSideBand_Title": "Streamfout",
   "StreamSideBand_Description": "Er is een fout opgetreden bij het streamen.",
   "StreamSideBand_ConnectionStarted": "Verbinding wordt gestart",

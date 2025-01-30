@@ -15,6 +15,8 @@
   "StreamPreflight_WifiBandwidthLowDescription": "Comprueba tu conexión wifi para que la transmisión funcione mejor.",
   "StreamCheck_WifiNotConnected": "Wifi desconectado",
   "StreamCheck_WifiNotConnectedDescription": "Tu dispositivo no está conectado a wifi",
+  "StreamCheck_StreamNotPossible": "Error de conexión",
+  "StreamCheck_StreamNotPossibleDescription": "La retransmisión de RV requiere que el visor y el dispositivo estén en la misma red. Asegúrate de que retransmites en la misma red y de que no utilizas una red en malla o para invitados.",
   "StreamSideBand_Title": "Error de retransmisión",
   "StreamSideBand_Description": "Se produjo un error con la retransmisión.",
   "StreamSideBand_ConnectionStarted": "La conexión se está iniciando",

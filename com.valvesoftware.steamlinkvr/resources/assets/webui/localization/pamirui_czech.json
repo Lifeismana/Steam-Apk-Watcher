@@ -15,6 +15,8 @@
   "StreamPreflight_WifiBandwidthLowDescription": "Pro zkvalitnění zážitku ze streamování zajistěte lepší bezdrátové připojení.",
   "StreamCheck_WifiNotConnected": "Zařízení není připojeno",
   "StreamCheck_WifiNotConnectedDescription": "Vaše zařízení není připojeno k síti Wi-Fi.",
+  "StreamCheck_StreamNotPossible": "Připojení selhalo",
+  "StreamCheck_StreamNotPossibleDescription": "Streamování do VR vyžaduje, aby se headset a počítač nacházely ve stejné síti. Ujistěte se tedy, že streamujete v jedné stejné síti a nepoužíváte síť se smíšenou topologií nebo hostovanou síť.",
   "StreamSideBand_Title": "Chyba streamování",
   "StreamSideBand_Description": "Při streamování došlo k chybě.",
   "StreamSideBand_ConnectionStarted": "Je navazováno spojení",

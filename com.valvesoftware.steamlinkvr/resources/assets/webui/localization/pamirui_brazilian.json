@@ -15,6 +15,8 @@
   "StreamPreflight_WifiBandwidthLowDescription": "Aprimore a sua conexão Wi-Fi para uma melhor experiência de transmissão.",
   "StreamCheck_WifiNotConnected": "Não conectado à rede Wi-Fi",
   "StreamCheck_WifiNotConnectedDescription": "O seu dispositivo não está conectado a uma rede Wi-Fi.",
+  "StreamCheck_StreamNotPossible": "Falha na conexão",
+  "StreamCheck_StreamNotPossibleDescription": "A transmissão de RV requer que o headset e o computador estejam na mesma rede. Certifique-se também de que o headset não esteja usando outro ponto de acesso ou rede de convidados.",
   "StreamSideBand_Title": "Erro de transmissão",
   "StreamSideBand_Description": "Houve um erro com a transmissão.",
   "StreamSideBand_ConnectionStarted": "Inicializando conexão",

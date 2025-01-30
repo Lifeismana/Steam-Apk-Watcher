@@ -15,6 +15,8 @@
   "StreamPreflight_WifiBandwidthLowDescription": "Vui lòng cải thiện kết nối wifi để có trải nghiệm phát sóng tốt hơn.",
   "StreamCheck_WifiNotConnected": "Không kết nối được WiFi",
   "StreamCheck_WifiNotConnectedDescription": "Thiết bị của bạn không kết nối được WiFi",
+  "StreamCheck_StreamNotPossible": "Kết nối không thành công",
+  "StreamCheck_StreamNotPossibleDescription": "Phát sóng VR cần mũ chụp và máy tính của bạn trên cùng hệ thống mạng. Vui lòng đảm bảo bạn đang phát sóng trên cùng mạng và không sử dụng mạng mesh hoặc kết nối dành cho khách.",
   "StreamSideBand_Title": "Lỗi phát sóng",
   "StreamSideBand_Description": "Đã có lỗi xảy ra khi phát sóng.",
   "StreamSideBand_ConnectionStarted": "Đang bắt đầu kết nối",

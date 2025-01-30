@@ -15,6 +15,8 @@
   "StreamPreflight_WifiBandwidthLowDescription": "Comprueba tu conexión wifi para que la transmisión funcione mejor.",
   "StreamCheck_WifiNotConnected": "No hay conexión a la wifi",
   "StreamCheck_WifiNotConnectedDescription": "Tu dispositivo no está conectado a la wifi.",
+  "StreamCheck_StreamNotPossible": "Fallo en la conexión",
+  "StreamCheck_StreamNotPossibleDescription": "La transmisión de RV requiere que el visor y el PC estén en la misma red. Asegúrate de que transmites en la misma red y de que no utilizas una red en malla o para invitados.",
   "StreamSideBand_Title": "Error de transmisión",
   "StreamSideBand_Description": "Se ha producido un error en la transmisión.",
   "StreamSideBand_ConnectionStarted": "La conexión se está iniciando",

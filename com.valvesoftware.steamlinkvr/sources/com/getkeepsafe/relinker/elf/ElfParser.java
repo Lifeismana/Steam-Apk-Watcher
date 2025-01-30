@@ -125,20 +125,17 @@ public class ElfParser implements Closeable, Elf {
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
-    public long readLong(ByteBuffer byteBuffer, long j) throws IOException {
+    protected long readLong(ByteBuffer byteBuffer, long j) throws IOException {
         read(byteBuffer, j, 8);
         return byteBuffer.getLong();
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
-    public long readWord(ByteBuffer byteBuffer, long j) throws IOException {
+    protected long readWord(ByteBuffer byteBuffer, long j) throws IOException {
         read(byteBuffer, j, 4);
         return byteBuffer.getInt() & 4294967295L;
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
-    public int readHalf(ByteBuffer byteBuffer, long j) throws IOException {
+    protected int readHalf(ByteBuffer byteBuffer, long j) throws IOException {
         read(byteBuffer, j, 2);
         return byteBuffer.getShort() & 65535;
     }
