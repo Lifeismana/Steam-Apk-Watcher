@@ -173,6 +173,10 @@ if [[ "$SOURCE" == "manual" ]]; then
 
         for APK in ${APKS[@]};
         do
+            if [[ -n "$APK_VERSION_TO_PROCESS" && "$APK" != *"$APK_VERSION_TO_PROCESS"* ]]; then
+                echo "Skipping $APK"
+                continue
+            fi
             echo "Processing $APK"
             ProcessApp $(basename $APP) $APK
         done
