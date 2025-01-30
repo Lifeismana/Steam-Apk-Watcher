@@ -47,7 +47,7 @@
 7CThread
 7SVLRoot
 7XrScene
-8726427 
+8785257 
 8SVLAudio
 8SVLCodec
 8SVLCrypt
@@ -167,7 +167,6 @@ AMEDIAFORMAT_KEY_COLOR_RANGE
 AMEDIAFORMAT_KEY_COLOR_STANDARD
 AMEDIAFORMAT_KEY_COLOR_TRANSFER
 AMEDIAFORMAT_KEY_HEIGHT
-AMEDIAFORMAT_KEY_LOW_LATENCY
 AMEDIAFORMAT_KEY_MAX_HEIGHT
 AMEDIAFORMAT_KEY_MAX_WIDTH
 AMEDIAFORMAT_KEY_MIME
@@ -245,6 +244,7 @@ android/net/wifi/WifiManager
 android/net/wifi/WifiManager$WifiLock
 android/os/BatteryManager
 android/os/Build
+android/os/Build$VERSION
 android/os/Bundle
 android/os/Handler
 android/os/Looper
@@ -378,6 +378,7 @@ bool XRQCreateXRInstance(const XRQApp &, XRQContext &)
 bool XRQCreateXRSession(XRQContext &)
 bool XRQDestroyActionSet(XrActionSet &)
 bool XRQDestroyAction(XRQAction &)
+bool XRQEnumerateColorSpaces(const XRQContext &, std::vector<XrColorSpaceFB> &)
 bool XRQEnumerateSupportedRefreshRates(XRQContext &, std::vector<float> &)
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(const XrLoaderInitInfoBaseHeaderKHR *)]
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrEyeTrackerFB_T *, const XrEyeGazesInfoFB *, XrEyeGazesFB *)]
@@ -388,6 +389,8 @@ bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSession_T *, const XrFaceTrackerCreateInfo2FB *, XrFaceTracker2FB_T **)]
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSession_T *, float)]
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSession_T *, unsigned int, unsigned int *, float *)]
+bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSession_T *, unsigned int, unsigned int *, XrColorSpaceFB *)]
+bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSession_T *, XrColorSpaceFB)]
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSwapchain_T *, const XrSwapchainStateBaseHeaderFB *)]
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSwapchain_T *, XrSwapchainStateBaseHeaderFB *)]
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrEyeTrackerFB_T*, XrEyeGazesInfoFB const*, XrEyeGazesFB*)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrEyeTrackerFB_T*, XrEyeGazesInfoFB const*, XrEyeGazesFB*))
@@ -397,6 +400,8 @@ bool XRQGetExtensionFromProcAddr<XrResult (*)(XrInstance_T*, unsigned long, XrGr
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrLoaderInitInfoBaseHeaderKHR const*)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrLoaderInitInfoBaseHeaderKHR const*))
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSession_T*, float)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSession_T*, float))
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSession_T*, unsigned int, unsigned int*, float*)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSession_T*, unsigned int, unsigned int*, float*))
+bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSession_T*, unsigned int, unsigned int*, XrColorSpaceFB*)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSession_T*, unsigned int, unsigned int*, XrColorSpaceFB*))
+bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSession_T*, XrColorSpaceFB)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSession_T*, XrColorSpaceFB))
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSession_T*, XrEyeTrackerCreateInfoFB const*, XrEyeTrackerFB_T**)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSession_T*, XrEyeTrackerCreateInfoFB const*, XrEyeTrackerFB_T**))
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSession_T*, XrFaceTrackerCreateInfo2FB const*, XrFaceTracker2FB_T**)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSession_T*, XrFaceTrackerCreateInfo2FB const*, XrFaceTracker2FB_T**))
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSwapchain_T*, XrSwapchainStateBaseHeaderFB const*)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSwapchain_T*, XrSwapchainStateBaseHeaderFB const*))
@@ -415,6 +420,7 @@ bool XRQReleaseSwapchain(XrSwapchain)
 bool XRQRequestExitSession(XRQContext &)
 bool XRQRequestRefreshRate(XRQContext &, float)
 bool XRQSetAvailableExtensions(XRQContext &, const std::set<std::string> &)
+bool XRQSetColorSpace(const XRQContext &, XrColorSpaceFB)
 bool XRQSetReferencePlaySpace(XRQContext &, const XrReferenceSpaceType)
 bool XRQSyncRegisteredActiveActionSets(const XRQContext &)
 bool XRQTeardown(XRQContext &)
@@ -960,6 +966,7 @@ FDE is really a CIE
 fDelay
 February
 FEC decode failure %d %d %d\n
+ff$510QSVLClient
 fflush
 fgets
 %F-%H-%M-%S
@@ -1069,6 +1076,7 @@ GetCurrentTimestamp
 GetCurrentTimeUS
 getDefault
 GetDeviceProductName()
+GetDeviceSDKVersion()
 getEncodedP
 GetEndOfPacketFromVideoDescriptor(SVLVideoFrameDescriptor_t*)
 getenv
@@ -1976,7 +1984,6 @@ LIBC
 libc++abi
 LIBC_N
 LIBC_O
-LIBC_R
 libc.so
 libdl.so
 libEGL.so
@@ -2052,6 +2059,7 @@ Log(ELogLevel, char const*, ...)
 long
 long double
 long long
+low-latency
 lpHP
 MAJOR FAULT IN FEC ALGORITHM: Packet A missing, Packet B is less than 1024 bytes.  Something went wrong.  %d %d %d %d\n
 MakeFilePathAbsolute
@@ -2440,7 +2448,6 @@ objc_object
 obtain
 October
 offset
-Offset was not specified in bindings. Using identity
 OnInputEvent(android_app*, AInputEvent*)
 onPause
 onResume
@@ -2615,7 +2622,6 @@ pthread_attr_setdetachstate
 pthread_attr_setstacksize
 pthread_cancel(long)
 pthread_cond_broadcast
-pthread_cond_clockwait
 pthread_cond_destroy
 pthread_cond_init
 pthread_cond_signal
@@ -2802,6 +2808,10 @@ QSVLRendererXR::FlipFrame(XRQContext const&, long*)
 QSVLRendererXR::FlipFrame: You should be calling the other FlipFrame()!
 QSVLRendererXR::GetProjectionLayers(std::__ndk1::vector<XrCompositionLayerBaseHeader*, std::__ndk1::allocator<XrCompositionLayerBaseHeader*>>&)
 QSVLRendererXR::Init()
+QSVLRendererXR::Init: Didn't set color space as it wasn't available
+QSVLRendererXR::Init: Failed to find requested color space %i
+QSVLRendererXR::Init: Failed to set color space to %i
+QSVLRendererXR::Init: Set Color Space to %i
 QSVLRendererXR::Init(XRQContext const&)
 QSVLRendererXR::Init: You should be calling the other Init()!
 QSVLRendererXR::~QSVLRendererXR()
@@ -2810,16 +2820,20 @@ QSVLRendererXR::SetFadeAmount(float, std::__ndk1::chrono::duration<long long, st
 QSVLRendererXR::SetShouldWaitOnFrames(bool)
 QSVLRendererXR::SetupSwapchains(XRQContext const&, unsigned int, unsigned int, AtlasMode)
 QSVLRendererXR::Stop()
+QSVLRendererXR::UpdateSwapchainSampler: Not updating sampler as it was not supported
+QSVLRendererXR::UpdateSwapchainSampler: Not updating swapchain sampler as it was empty
 QSVLRendererXR::UpdateSwapchainSampler: Sampler type set to bilinear
 QSVLRendererXR::UpdateSwapchainSampler: Sampler type set to linear
 QSVLRendererXR::UpdateSwapchainSampler: Unknown sampler type!
 QSVLRendererXR::UpdateSwapchainSampler: Updating swapchain sampler
+QSVLRendererXR::UpdateSwapchainSampler: Updating swapchain sampler as it appears valid
 QSVLRendererXR::UpdateSwapchainSampler(XRQContext const&)
 QSVLXRInput::GetActiveInteractionProfile(QSVLControllerHand)
 QSVLXRInput::GetControllerStates(std::__ndk1::array<QSVLControllerState, 2ul>&)
 QSVLXRInput::GetPowerProps(QSVLControllerHand, SVLPowerProps&)
 QSVLXRInput::GetRequestedExtensions() const
 QSVLXRInput::GetStaticProps(QSVLControllerHand, SVLStaticProps&)
+QSVLXRInput::Init: Offset was not specified in bindings. Using identity
 QSVLXRInput::Init(XRQContext*)
 QSVLXRInput::OnHapticFeedbackBookend(QSVLControllerHand, HapticRespData_t&)
 QSVLXRInput::OnHapticFeedback(QSVLControllerHand, float, float, float)
@@ -2921,6 +2935,7 @@ sDelayedDescription
 sDelayedTitle
 sDescription
 sDeviceType
+SDK_INT
 %s dtime=%d begin_ctx=%lu
 %s dtime=%d end_ctx=%lu
 seated
@@ -4514,6 +4529,7 @@ std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char>>::assig
 std::__ndk1::vector<unsigned int, std::__ndk1::allocator<unsigned int>>::__append(unsigned long, unsigned int const&)
 std::__ndk1::vector<ValueTransportID, std::__ndk1::allocator<ValueTransportID>>::__append(unsigned long)
 std::__ndk1::vector<VTEAckPacket, std::__ndk1::allocator<VTEAckPacket>>::__append(unsigned long)
+std::__ndk1::vector<XrColorSpaceFB, std::__ndk1::allocator<XrColorSpaceFB>>::__append(unsigned long)
 std::__ndk1::vector<XrSpace_T*, std::__ndk1::allocator<XrSpace_T*>>::__append(unsigned long)
 std::__ndk1::weak_ptr<SVLRenderer>::~weak_ptr()
 std::__ndk1::__widen_from_utf8<16ul>::~__widen_from_utf8()
@@ -5606,7 +5622,6 @@ typeinfo name for XrSceneStream
 typename 
 UDP BIND: %d CONN: %d\n
 UDP Driver\n
-Uf10QSVLClient
 ui_actions_
 UI config did not contain input object
 UI config did not contain output object
@@ -5708,7 +5723,7 @@ ValueTransportSystem::RXMessage(unsigned char*, unsigned int)
 ValueTransportSystem::SendEvent(ValueTransportID)
 ValueTransportSystem::SendEvent(ValueTransportID, void const*, unsigned int)
 ValueTransportSystem::TickUpdate(unsigned char*, int)
-ValueTransportSystem::UpdateValue(ValueTransportID, void const*, unsigned int)
+ValueTransportSystem::UpdateValue(ValueTransportID, void const*, unsigned int, bool)
 ValueTransportSystem::~ValueTransportSystem()
 ValueTransportSystem::ValueTransportSystem()
 vasprintf
@@ -6183,6 +6198,9 @@ xrEndFrame
 xrEndFrame( xrqContext.session, &frame_end_info )
 xrEndSession
 xrEndSession( context.session )
+xrEnumerateColorSpacesFB
+xrEnumerateColorSpacesFB( context.session, 0, &unColorSpaceCount, nullptr )
+xrEnumerateColorSpacesFB( context.session, vOutColorSpaces.size(), &unColorSpaceCount, vOutColorSpaces.data() )
 xrEnumerateDisplayRefreshRatesFB
 xrEnumerateDisplayRefreshRatesFB( context.session, 0, &count, nullptr )
 xrEnumerateDisplayRefreshRatesFB( context.session, count, &count, out_supported_refresh_rates.data())
@@ -6199,6 +6217,7 @@ xrEnumerateViewConfigurationViews
 xrEnumerateViewConfigurationViews( out_context.instance, out_context.systemId, view_type, 0, &out_context.unViewCount, nullptr )
 xrEnumerateViewConfigurationViews( out_context.instance, out_context.systemId, view_type, out_context.unViewCount, &out_context.unViewCount, out_context.vViewConfigViews.data())
 XR_EXT_display_refresh_rate is not available on this runtime
+XR_FB_color_space
 XR_FB_composition_layer_settings
 XR_FB_display_refresh_rate
 XR_FB_eye_tracking_social
@@ -6242,7 +6261,7 @@ XR_KHR_convert_timespec_time is not available on this runtime
 XR_KHR_opengl_es_enable
 xrLocateSpace
 xrLocateSpace(locateSpace, baseSpace, time, &outSpaceLocation )
-xrLocateSpace( m_eyeTrackingAction.vecActionSpaces[ 0 ], viewSpace, timeNow, &spaceLocation )
+xrLocateSpace( m_eyeTrackingAction.vecActionSpaces[ 0 ], baseSpace, timeNow, &baseToEyeGazeLocation )
 xrLocateSpace( m_poseAction.vecActionSpaces[ i ], m_refXrqContext->mapReferenceSpaceSpaces[ m_refXrqContext->playSpace ], timeNow, &spaceLocation )
 xrLocateSpace( m_uiActions.pose.action.vecActionSpaces[ i ], xrqContext.mapReferenceSpaceSpaces.at( xrqContext.playSpace ), xrqContext.currentFrameState.predictedDisplayTime, &spaceLocation )
 xrLocateViews
@@ -6282,6 +6301,7 @@ XRQCreateXRSession: Unable to setup social eye tracking
 XRQCreateXRSession(XRQContext&)
 XRQDestroyActionSet(XrActionSet_T*&)
 XRQDestroyAction(XRQAction&)
+XRQEnumerateColorSpaces(XRQContext const&, std::__ndk1::vector<XrColorSpaceFB, std::__ndk1::allocator<XrColorSpaceFB>>&)
 XRQEnumerateSupportedRefreshRates(XRQContext&, std::__ndk1::vector<float, std::__ndk1::allocator<float>>&)
 XRQGetEyeTracking(XRQContext&, XRQEyeVector&)
 XRQGetFaceTracking(XRQContext&, XrFaceExpressionWeights2FB&)
@@ -6317,6 +6337,8 @@ XRQ_SESSION_STATE_READY: Host is locked parsed: %i
 XRQ_SESSION_STATE_READY: Host on Wireless: %i,Locked: %i
 XRQ_SESSION_STATE_READY: Host on wireless parsed: %i
 XRQ_SESSION_STATE_READY: Session Ready
+XRQSetColorSpace: Did not set color space as XR_FB_color_space was not available
+XRQSetColorSpace(XRQContext const&, XrColorSpaceFB)
 XRQSetProjectionViewsFromCurrentFrameViews(XRQContext const&, std::__ndk1::array<XrCompositionLayerProjectionView, 2ul>&)
 XRQSetReferencePlaySpace(XRQContext&, XrReferenceSpaceType)
 XRQStringToXrPath(XrInstance_T*, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
@@ -6457,6 +6479,8 @@ XrSceneStream::XrSceneStream(std::__ndk1::function<void (SceneEvent)>)
 XrSceneStream::~XrSceneStream() Threads Joined
 XrScene::UnFocused(XRQContext&, bool)
 XrScene::~XrScene()
+xrSetColorSpaceFB
+xrSetColorSpaceFB(context.session, colorSpace)
 xrStopHapticFeedback
 xrStopHapticFeedback(m_refXrqContext->session, &actionInfo)
 xrStringToPath
