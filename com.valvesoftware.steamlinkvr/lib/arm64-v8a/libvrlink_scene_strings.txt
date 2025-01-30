@@ -8,7 +8,6 @@
 10QSVLClient
 11QSVLXRInput
 11SVLDataLink
-11SVLFECRAID5
 11SVLFECRAID6
 11SVLRenderer
 11XrSceneNoop
@@ -30,14 +29,12 @@
 18AndroidAssetLoader
 18PanelPositionerHUD
 18QSVLClientAudioNdk
-18SVLFECRAID5RXFrame
-18SVLFECRAID5TXFrame
 18SVLFECRAID6RXFrame
 18SVLFECRAID6TXFrame
 -1e+9999
 1e+9999
 %1\f0123456789abcdefABCDEFxX+-pPiInN
-1X`i
+1_gp
 20PanelPositionerPoint
 20StreamBehavior_Empty
 222222
@@ -56,7 +53,7 @@
 7CThread
 7SVLRoot
 7XrScene
-8886148 
+8928590 
 8SVLAudio
 8SVLCodec
 8SVLCrypt
@@ -765,6 +762,7 @@ dbgEncTimeMS
 dbgPhaFault
 dbgStartEnc
 dbgTXWaitMS
+dd"3
 %d.%d.%d.%d
 %d.%d.%d.%d:%u
 debug_capture_thread
@@ -979,7 +977,6 @@ FDE is really a CIE
 fDelay
 February
 FEC decode failure %d %d %d\n
-ff$5
 fflush
 fgets
 %F-%H-%M-%S
@@ -2078,7 +2075,6 @@ long double
 long long
 low-latency
 lpHP
-MAJOR FAULT IN FEC ALGORITHM: Packet A missing, Packet B is less than 1024 bytes.  Something went wrong.  %d %d %d %d\n
 MakeFilePathAbsolute
 MakeFilePathAbsoluteStr(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 malformed uleb128 expression
@@ -2267,7 +2263,6 @@ NSt6__ndk110__function6__funcIPFbcENS_9allocatorIS3_EES2_EE
 NSt6__ndk110__function6__funcIZN10ByteLogger7SetRootEP7SVLRootE3$_0NS_9allocatorIS5_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN10QSVLClient4InitEvE3$_0NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN10QSVLClient4InitEvE3$_1NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
-NSt6__ndk110__function6__funcIZN10QSVLClient4InitEvE3$_2NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN11XrUIManager18AddRenderedUIPanelENS_10unique_ptrI9XrUIPanelNS_14default_deleteIS4_EEEEbNS_6chrono10time_pointINS8_12steady_clockENS8_8durationIxNS_5ratioILl1ELl1000000000EEEEEEEE3$_1NS_9allocatorISG_EEFvRKNS_12basic_stringIcNS_11char_traitsIcEENSH_IcEEEERKN4Json5ValueEEEE
 NSt6__ndk110__function6__funcIZN11XrUIManager18AddTemporaryDialogERK10XRQContextRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEESD_jbE3$_2NS9_ISE_EEFvSD_RKN4Json5ValueEEEE
 NSt6__ndk110__function6__funcIZN11XrUIManager4InitER10XRQContextE3$_0NS_9allocatorIS5_EEFv7AppPathRKNS_7variantIJNS_12basic_stringIcNS_11char_traitsIcEENS6_IcEEEEbfiEEEEEE
@@ -2740,7 +2735,9 @@ QSVLClient::UpdateFrameVariables: VTE_AVAILABLE_FRAMETIMES_US is updated
 QSVLClient::UpdateFrameVariables: VTE_CLIENT_CHAPERONE is updated
 QSVLClient::UpdateFrameVariables: VTE_EYE_TO_HEAD is updated
 QSVLClient::UpdateFrameVariables: VTE_HOST_DEFAULTS is updated
+QSVLClient::UpdateFrameVariables: VTE_POWER_PROPS_* is updated
 QSVLClient::UpdateFrameVariables: VTE_PROJECTION_RAW_PRAMS is updated
+QSVLClient::UpdateFrameVariables: VTE_STATIC_PROPS_* is updated
 QSVLClient::UpdatePowerProps()
 QSVLClient::UpdateStaticProps()
 QSVLClient::VSyncEvent(int)
@@ -3034,7 +3031,7 @@ set_spinner
 setStreamMute
 setStreamVolume
 Set thread %p priority to: %d\n
-Setting active interaction profile for %s hand to %s
+Setting active interaction profile for %s hand to: %s
 /settings/preflight/ignore_microphone_muted
 /settings/stream/args
 /settings/stream/enable_frame_bins
@@ -4675,6 +4672,7 @@ streamactions
 streamanimation: Trying to abort.
 streamanimation: Trying to go to lobby.
 StreamBehavior::callbacks
+StreamBehavior::Clear()
 StreamBehavior_Empty::OnBehaviorEntered()
 StreamBehavior_Empty::OnBehaviorLeft()
 StreamBehavior_Empty::OverlayStream(XRQContext&, bool, std::__ndk1::vector<XrCompositionLayerBaseHeader*, std::__ndk1::allocator<XrCompositionLayerBaseHeader*>>&)
@@ -4720,6 +4718,7 @@ StreamBehavior_Streaming: Timeout exceeded for rendering a valid frame, transiti
 StreamBehavior::streamState
 #StreamCheck_WifiNotConnected
 #StreamCheck_WifiNotConnectedDescription
+StreamContext::operator=(StreamContext&&)
 StreamContext::~StreamContext()
 #StreamError_CanResumeDescription
 #StreamError_CanResumeTitle
@@ -4923,16 +4922,6 @@ SVLFEC::InternalAcceptFrameFromRX: Failed to acquire pRender
 SVLFEC::InternalAcceptFrameFromRX(unsigned int, unsigned char*, unsigned short)
 SVLFEC::ProcessTXVideoFrameThreadFunction()
 SVLFEC::ProcessVideoReply(dataset*)
-SVLFECRAID5::Deactivate()
-SVLFECRAID5RXFrame::CheckRXComplete()
-SVLFECRAID5RXFrame::ReceivedVideoPacket(unsigned short, int)
-SVLFECRAID5RXFrame::~SVLFECRAID5RXFrame()
-SVLFECRAID5RXFrame::SVLFECRAID5RXFrame(SVLFECRAID5*)
-SVLFECRAID5::~SVLFECRAID5()
-SVLFECRAID5::SVLFECRAID5(SVLRoot*, unsigned char)
-SVLFECRAID5TXFrame::InitializeAndSend(unsigned short, unsigned char const*, int, TransportFrameMetadata_t const&, bool)
-SVLFECRAID5TXFrame::~SVLFECRAID5TXFrame()
-SVLFECRAID5TXFrame::SVLFECRAID5TXFrame(SVLFECRAID5*)
 SVLFECRAID6::Deactivate()
 SVLFECRAID6RXFrame::CheckRXComplete()
 SVLFECRAID6RXFrame::ReceivedVideoPacket(unsigned short, int)
@@ -5440,9 +5429,6 @@ typeinfo for SVLCryptSoft
 typeinfo for SVLDataLink
 typeinfo for SVLDataLinkUDP
 typeinfo for SVLFEC
-typeinfo for SVLFECRAID5
-typeinfo for SVLFECRAID5RXFrame
-typeinfo for SVLFECRAID5TXFrame
 typeinfo for SVLFECRAID6
 typeinfo for SVLFECRAID6RXFrame
 typeinfo for SVLFECRAID6TXFrame
@@ -5759,9 +5745,6 @@ typeinfo name for SVLCryptSoft
 typeinfo name for SVLDataLink
 typeinfo name for SVLDataLinkUDP
 typeinfo name for SVLFEC
-typeinfo name for SVLFECRAID5
-typeinfo name for SVLFECRAID5RXFrame
-typeinfo name for SVLFECRAID5TXFrame
 typeinfo name for SVLFECRAID6
 typeinfo name for SVLFECRAID6RXFrame
 typeinfo name for SVLFECRAID6TXFrame
@@ -6189,9 +6172,6 @@ vtable for SVLCryptSoft
 vtable for SVLDataLink
 vtable for SVLDataLinkUDP
 vtable for SVLFEC
-vtable for SVLFECRAID5
-vtable for SVLFECRAID5RXFrame
-vtable for SVLFECRAID5TXFrame
 vtable for SVLFECRAID6
 vtable for SVLFECRAID6RXFrame
 vtable for SVLFECRAID6TXFrame
@@ -6343,19 +6323,19 @@ XrAppManager::HandleTransitionToDash()
 XrAppManager::HandleTransitionToDash: Attempting to StartActivity back to SteamLink Dashboard (%s, %s)
 XrAppManager::HandleTransitionToDash: Transitioning to activity: %s, package: %s
 XrAppManager::HandleTransitionToDash: Transitioning to Dash
-XrAppManager::HandleXREvent: Cleared scenes
-XrAppManager::HandleXREvent: Clearing scenes...
 XrAppManager::HandleXREvent: Completed XRQ_SHUTDOWN
 XrAppManager::HandleXREvent: Received XRQ_SHUTDOWN
 XrAppManager::HandleXREvent(XrqEvent, std::__ndk1::variant<XrEventDataReferenceSpaceChangePending> const&)
 XrAppManager::Init(XRQApp&)
 XrAppManager::OnResume()
+XrAppManager::OnSuspend
 XrAppManager::OnSuspend()
 XrAppManager::RequestNextScene(AppViewType)
 XrAppManager::SetupScenes()
 XrAppManager::Tick()
 XrAppManager::~XrAppManager()
 XrAppManager::XrAppManager()
+XrAppManager::XrAppManager: Began initialization
 XrAppManager::~XrAppManager: Cleanup WebViews
 XrAppManager::~XrAppManager: Cleared scenes
 XrAppManager::~XrAppManager: Clearing app paths
@@ -6490,6 +6470,7 @@ XRQAction::~XRQAction()
 XRQAction::XRQAction(XRQAction const&)
 XRQApp::~XRQApp()
 XRQAttachRegisteredActionSets(XRQContext&)
+XRQContext::operator=(XRQContext&&)
 XRQContext::~XRQContext()
 XRQCreateActionAndRegisterSuggestedBindings(XRQContext&, XrActionSet_T*, XRQActionCreateInfo const&, XRQAction&)
 XRQCreateAndRegisterActionSetForAttach(XRQContext&, XRQActionSetCreateInfo const&, XrActionSet_T*&)
@@ -6617,8 +6598,10 @@ XrSceneStream::GetRequestedExtensions()
 XrSceneStream::GetStreamChecks: Host has quit
 XrSceneStream::GetStreamChecks: WiFi connection test failed
 XrSceneStream::HandleXREvent(XRQContext&, XrqEvent, std::__ndk1::variant<XrEventDataReferenceSpaceChangePending> const&)
+XrSceneStream::Init: Failed to initialize construct
 XrSceneStream::Init: Failed to initialize preflight panel. Not displaying.
 XrSceneStream::Init: Failed to initialize stream loading panel. Not displaying.
+XrSceneStream::Init: Failed to initialize ui manager
 XrSceneStream::Init: Initialized preflight panel
 XrSceneStream::Init: Initialized stream loading panel
 XrSceneStream::Init: Initializing stream scene...
@@ -6639,12 +6622,13 @@ XrSceneStream::TransitionToStreamInit: Launching stream with TCP IP: %s
 XrSceneStream::TransitionToStreamInit: Launching stream with UDP IP: %s
 XrSceneStream::TransitionToStreamInit: Loading shader ID: %d (%d %d)\n
 XrSceneStream::TransitionToStreamInit: QSVL_CLIENT_REQUEST_QUIT: Received quit event
-XrSceneStream::TransitionToStreamInit: QSVL_CLIENT_REQUEST_QUIT: Received switch desktops event
+XrSceneStream::TransitionToStreamInit: QSVL_CLIENT_SWITCH_DESKTOP_CLICK: Received switch desktops event
 XrSceneStream::TransitionToStreamInit: REALLY BAD: Unknown launch options for SVLClient!
 XrSceneStream::TransitionToStreamInit: Wifi lock acquired
 XrSceneStream::TransitionToStreamInitWifi lock failed to acquire
 XrSceneStream::UnFocused: Finished unfocusing
 XrSceneStream::UnFocused(XRQContext&, bool)
+XrSceneStream::XRQ_INTERACTION_PROFILE_CHANGED: Could not inform client of interaction profile change as there was no client
 XrSceneStream::~XrSceneStream()
 XrSceneStream::~XrSceneStream() Complete
 XrSceneStream::~XrSceneStream() Start
@@ -6731,7 +6715,6 @@ Zjz\v
 ZN10ByteLogger7SetRootEP7SVLRootE3$_0
 ZN10QSVLClient4InitEvE3$_0
 ZN10QSVLClient4InitEvE3$_1
-ZN10QSVLClient4InitEvE3$_2
 ZN11XrUIManager18AddRenderedUIPanelENSt6__ndk110unique_ptrI9XrUIPanelNS0_14default_deleteIS2_EEEEbNS0_6chrono10time_pointINS6_12steady_clockENS6_8durationIxNS0_5ratioILl1ELl1000000000EEEEEEEE3$_1
 ZN11XrUIManager18AddTemporaryDialogERK10XRQContextRKNSt6__ndk112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEESB_jbE3$_2
 ZN11XrUIManager4InitER10XRQContextE3$_0

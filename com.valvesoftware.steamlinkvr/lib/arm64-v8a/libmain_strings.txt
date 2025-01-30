@@ -3873,6 +3873,7 @@ Afterglow AX.1 Gamepad for Xbox 360
 Afterglow Gamepad for Xbox 360
 Afterglow Prismatic Wired Controller
 Af te spelen invoer opnemen
+&<AFYl
 |afzd*
 ag00a
 a|G2
@@ -4099,6 +4100,7 @@ Amlogic X96-W
 AM/n
 "am\nj
 >Amo4\v
+amount
 &amp;
 amp2Log2
 a.m_pServer == nullptr
@@ -4642,7 +4644,6 @@ ATd<
 At e
 A tela do computador remoto est
 ATG0
-&<ATgz
 a\thI
 &atilde;
 &Atilde;
@@ -12286,6 +12287,7 @@ Couldn't create renderer: %s
 Couldn't create %s hardware decoder\n
 Couldn't create socket: %s\n
 Couldn't create window: %s\n
+Couldn't extract internal font %d\n
 Couldn't find a streaming game for your account on the local network.
 Couldn't find avatar_url in profile\n
 Couldn't find host %s in the %s file; using defaults
@@ -12297,6 +12299,7 @@ Couldn't find string '%s'\n
 Couldn't get Steam Link activity functions
 Couldn't initialize CURL: %d\n
 Couldn't initialize SDL: %s\n
+Couldn't load %s\n
 Couldn't locate Remote Play invitation, please request a new one
 Couldn't lock overlay window
 Couldn't open audio device: format=%d, channels=%u, frequency=%u. Audio is disabled: %s\n
@@ -12308,6 +12311,8 @@ Couldn't parse color '%s'\n
 Couldn't parse colorspace %s\n
 Couldn't parse CURLOPT_RESOLVE entry '%s'
 Couldn't parse default value "
+Couldn't parse internal font %d\n
+Couldn't parse internal fonts\n
 Couldn't parse IP address '%s'\n
 Couldn't parse profile data: %s\n
 Couldn't parse settings from %s\n
@@ -13856,6 +13861,7 @@ _CRemoteClient_Task_default_instance_
 CRemoteClient_Task::default_instance()
 CRemoteClient_Task::GetCachedSize() const
 CRemoteClient_Task::GetMetadata() const
+.CRemoteClient_Task"g\n&CRemoteClient_MarkTaskComplete_Request
 CRemoteClient_Task* google::protobuf::Arena::CreateMaybeMessage<CRemoteClient_Task>(google::protobuf::Arena*)
 CRemoteClient_Task::InitAsDefaultInstance()
 CRemoteClient_Task::_InternalParse(char const*, google::protobuf::internal::ParseContext*)
@@ -13890,7 +13896,6 @@ CRemoteClient_Task::MergeFrom(google::protobuf::Message const&)
 CRemoteClient_Task::New() const
 CRemoteClient_Task::New(google::protobuf::Arena*) const
 CRemoteClient_Task::SetCachedSize(int) const
-.CRemoteClient_Task"S\n&CRemoteClient_MarkTaskComplete_Request
 CRemoteClient_UnregisterStatusUpdate_Notification::ByteSizeLong() const
 CRemoteClient_UnregisterStatusUpdate_Notification::Clear()
 CRemoteClient_UnregisterStatusUpdate_Notification::CopyFrom(CRemoteClient_UnregisterStatusUpdate_Notification const&)
@@ -15618,7 +15623,7 @@ CStreamClient::SendMouseDown(unsigned int, EStreamMouseButton)
 CStreamClient::SendMouseMotion(unsigned int, float, float, int, int)
 CStreamClient::SendMouseMotion(unsigned int, int, int)
 CStreamClient::SendMouseUp(unsigned int, EStreamMouseButton)
-CStreamClient::SendMouseWheel(unsigned int, EStreamMouseWheelDirection)
+CStreamClient::SendMouseWheel(unsigned int, EStreamMouseWheelDirection, float)
 CStreamClient::SendPendingLogMessages()
 CStreamClient::SendQuitRequest()
 CStreamClient::SendRemoteHIDMessage(CHIDMessageFromRemote const*, bool)
@@ -16167,7 +16172,7 @@ CStreamPlayer::ConvertNormalizedVideoToWindow(float, float, float*, float*)
 CStreamPlayer::ConvertWindowToNormalizedVideo(float, float, float*, float*)
 CStreamPlayer::ConvertWindowToOverlay(int*, int*)
 CStreamPlayer::CreateLocalCursor(SDL_Surface*, int, int)
-CStreamPlayer::CreateRenderer(unsigned int)
+CStreamPlayer::CreateRenderer(char const*)
 CStreamPlayer::CreateTip()
 CStreamPlayer::CreateTip(int)
 CStreamPlayer::CreateWindow(unsigned int, unsigned int, unsigned int)
@@ -16280,7 +16285,7 @@ CStreamPlayer::SaveRecordedInput()
 CStreamPlayer::SendMouseDown(EStreamMouseButton)
 CStreamPlayer::SendMouseMotion(int, int)
 CStreamPlayer::SendMouseUp(EStreamMouseButton)
-CStreamPlayer::SendMouseWheel(EStreamMouseWheelDirection)
+CStreamPlayer::SendMouseWheel(EStreamMouseWheelDirection, float)
 CStreamPlayer::SendPendingMouseMotion()
 CStreamPlayer::SendQuitRequest()
 CStreamPlayer::SendStopRequest()
@@ -20483,6 +20488,7 @@ enable_unreliable_fec
 --enable-video
 enable_video_hevc
 enable_video_streaming
+Enabling headset low latency options\n
 En appuyant avec 4
 encapContentInfo
 enc_data
@@ -20925,10 +20931,10 @@ EStreamMouseButton
 EStreamMouseButton_descriptor()
 EStreamMouseButton_IsValid(int)
 .EStreamMouseButton"K\n
+.EStreamMouseWheelDirection
 EStreamMouseWheelDirection
 EStreamMouseWheelDirection_descriptor()
 EStreamMouseWheelDirection_IsValid(int)
-.EStreamMouseWheelDirection"M\n
 .EStreamP2PScope:
 EStreamP2PScope
 EStreamP2PScope_descriptor()
@@ -22488,6 +22494,7 @@ GetEnumValue
 getenv
 geteuid
 GetEventName(EStreamFrameEvent)
+GetExpectedIMUPollingDeltaUS(EControllerType)
 get f
 GetFileSHA(char const*, unsigned char (&) [20])
 GetFloat
@@ -22522,6 +22529,7 @@ GetNormalizedHeight(float, int, int)
 GetNormalizedWidth(float, int, int)
 getNumDevices
 GetOSType
+GetOverrideControllerArray(int*)
 GetPacketType() == k_EStreamPacketTypeUnconnected || GetPacketType() == k_EStreamPacketTypeConnect
 getpeername
 getpeername() failed with errno %d: %s
@@ -29617,7 +29625,7 @@ k_EControllerElementTypeTrackpadRight
 k_EControllerLEDSettingCustomk_EControllerLEDSettingDefaultk_EControllerLEDSettingType_Countk_EControllerLEDSettingXinputSlot
 k_EControllerModeInput_Button_Ak_EControllerModeInput_Button_Bk_EControllerModeInput_Button_Xk_EControllerModeInput_Button_Yk_EControllerModeInput_Clickk_EControllerModeInput_Clockwisek_EControllerModeInput_Countk_EControllerModeInput_CounterClockwisek_EControllerModeInput_DoubleTapk_EControllerModeInput_Dpad_Ek_EControllerModeInput_Dpad_Nk_EControllerModeInput_Dpad_NEk_EControllerModeInput_Dpad_NWk_EControllerModeInput_Dpad_Sk_EControllerModeInput_Dpad_SEk_EControllerModeInput_Dpad_SWk_EControllerModeInput_Dpad_Wk_EControllerModeInput_Edgek_EControllerModeInput_Nonek_EControllerModeInput_ScrollWheel_List0k_EControllerModeInput_ScrollWheel_List1k_EControllerModeInput_ScrollWheel_List2k_EControllerModeInput_ScrollWheel_List3k_EControllerModeInput_ScrollWheel_List4k_EControllerModeInput_ScrollWheel_List5k_EControllerModeInput_ScrollWheel_List6k_EControllerModeInput_ScrollWheel_List7k_EControllerModeInput_ScrollWheel_List8k_EControllerModeInput_ScrollWheel_List9k_EControllerModeInput_Switch_ActionSetAlwaysOnk_EControllerModeInput_Switch_CaptureButtonk_EControllerModeInput_Switch_JoystickClickk_EControllerModeInput_Switch_LeftAuxCapSensek_EControllerModeInput_Switch_LeftBumperk_EControllerModeInput_Switch_LeftGripk_EControllerModeInput_Switch_LeftGrip_Upperk_EControllerModeInput_Switch_LeftTrackPadClickk_EControllerModeInput_Switch_LeftTriggerk_EControllerModeInput_Switch_LeftTriggerThresholdk_EControllerModeInput_Switch_Macro0k_EControllerModeInput_Switch_Macro1k_EControllerModeInput_Switch_Macro1Fingerk_EControllerModeInput_Switch_Macro2k_EControllerModeInput_Switch_Macro2Fingerk_EControllerModeInput_Switch_Macro3k_EControllerModeInput_Switch_Macro4k_EControllerModeInput_Switch_Macro5k_EControllerModeInput_Switch_Macro6k_EControllerModeInput_Switch_Macro7k_EControllerModeInput_Switch_RightAuxCapSensek_EControllerModeInput_Switch_RightBumperk_EControllerModeInput_Switch_RightGripk_EControllerModeInput_Switch_RightGrip_Upperk_EControllerModeInput_Switch_RightTrackPadClickk_EControllerModeInput_Switch_RightTriggerk_EControllerModeInput_Switch_RightTriggerThresholdk_EControllerModeInput_Switch_Selectk_EControllerModeInput_Switch_Startk_EControllerModeInput_Switch_Steamk_EControllerModeInput_Touchk_EControllerModeInput_TouchMenu_Button0k_EControllerModeInput_TouchMenu_Button1k_EControllerModeInput_TouchMenu_Button10k_EControllerModeInput_TouchMenu_Button11k_EControllerModeInput_TouchMenu_Button12k_EControllerModeInput_TouchMenu_Button13k_EControllerModeInput_TouchMenu_Button14k_EControllerModeInput_TouchMenu_Button15k_EControllerModeInput_TouchMenu_Button16k_EControllerModeInput_TouchMenu_Button17k_EControllerModeInput_TouchMenu_Button18k_EControllerModeInput_TouchMenu_Button19k_EControllerModeInput_TouchMenu_Button2k_EControllerModeInput_TouchMenu_Button20k_EControllerModeInput_TouchMenu_Button3k_EControllerModeInput_TouchMenu_Button4k_EControllerModeInput_TouchMenu_Button5k_EControllerModeInput_TouchMenu_Button6k_EControllerModeInput_TouchMenu_Button7k_EControllerModeInput_TouchMenu_Button8k_EControllerModeInput_TouchMenu_Button9k_EControllerModeInput_TriggerAnalog
 k_EControllerPresetType_Nextk_EControllerPresetType_Nonek_EControllerPresetType_Previous
-k_EControllerSettingAccelerationk_EControllerSettingActionSetTriggerCursorHidek_EControllerSettingActionSetTriggerCursorShowk_EControllerSettingActivatorActivateStickOrTrackpadk_EControllerSettingActivatorAnalogOutputValuek_EControllerSettingActivatorChordk_EControllerSettingActivatorCyclek_EControllerSettingActivatorDoubleTapTimek_EControllerSettingActivatorEndDelayk_EControllerSettingActivatorInterruptablek_EControllerSettingActivatorLongPressTimek_EControllerSettingActivatorMouseWarpXk_EControllerSettingActivatorMouseWarpYk_EControllerSettingActivatorOutputAxisk_EControllerSettingActivatorRepeatRatek_EControllerSettingActivatorSoftPressStylek_EControllerSettingActivatorStartDelayk_EControllerSettingActivatorThresholdk_EControllerSettingActivatorTogglek_EControllerSettingAdaptiveCenteringk_EControllerSettingAdaptiveThresholdk_EControllerSettingAnalogEmulationDutyCyclePctk_EControllerSettingAnalogEmulationPeriodk_EControllerSettingAntiDeadZonek_EControllerSettingAntiDeadZoneBufferk_EControllerSettingCountk_EControllerSettingCurveExponentk_EControllerSettingCustomCurveExponentk_EControllerSettingDeadZoneEnabledk_EControllerSettingDeadZoneInnerRadiusk_EControllerSettingDeadZoneOuterRadiusk_EControllerSettingDeadZoneShapek_EControllerSettingDeadzonek_EControllerSettingDeadzoneAdvancedSettingsk_EControllerSettingDotsPer360k_EControllerSettingDoubleTapk_EControllerSettingDoubleTapBeepk_EControllerSettingDoubleTapMaxDistk_EControllerSettingDoubleTapMaxDurationk_EControllerSettingDoubleTapMinDurationk_EControllerSettingDynamicModek_EControllerSettingEdgeBindingInvertk_EControllerSettingEdgeBindingRadiusk_EControllerSettingEdgeSpinRadiusk_EControllerSettingEdgeSpinVelocityk_EControllerSettingFlickStickDepressionSpeedk_EControllerSettingFlickStickEdgeBindingRadiusk_EControllerSettingFlickStickForwardDeadZonek_EControllerSettingFlickStickFrameTimek_EControllerSettingFlickStickHapticBumpPerAnglek_EControllerSettingFlickStickSnapModek_EControllerSettingFlickStickSnapTightnessk_EControllerSettingFlickStickSweepSensitivityk_EControllerSettingFlickStickSweepTightnessk_EControllerSettingFlickStickTransitionTimek_EControllerSettingFourButtonDistk_EControllerSettingFourButtonSizek_EControllerSettingFrictionk_EControllerSettingFrictionVertScalek_EControllerSettingGyroAxisk_EControllerSettingGyroButtonk_EControllerSettingGyroButtonHapticEffectk_EControllerSettingGyroButtonInvertk_EControllerSettingGyroButtonMaskk_EControllerSettingGyroDeflectionAngleMaxk_EControllerSettingGyroDeflectionAngleMink_EControllerSettingGyroDeflectionNeutralAnglek_EControllerSettingGyroDeflectionUseGravityk_EControllerSettingGyroEnableAngleCatchUpk_EControllerSettingGyroJoystickOutputMaxk_EControllerSettingGyroJoystickOutputMink_EControllerSettingGyroJoystickPowerCurvek_EControllerSettingGyroLockExtentsk_EControllerSettingGyroModek_EControllerSettingGyroNaturalSensitivityk_EControllerSettingGyroNeutralAnglek_EControllerSettingGyroPointerk_EControllerSettingGyroPrecisionSpeedk_EControllerSettingGyroRollScalek_EControllerSettingGyroSampleAngleOffsetXk_EControllerSettingGyroSensitivityScalek_EControllerSettingGyroSpeedDeadzonek_EControllerSettingGyroSpeedMaxAnglePerSecondk_EControllerSettingGyroSpeedMinAnglePerSecondk_EControllerSettingGyroTo2DConversionStylek_EControllerSettingGyroUsePerControllerGyroPreferencesk_EControllerSettingGyroXYRatiok_EControllerSettingGyroYawScalek_EControllerSettingHapticIntensityk_EControllerSettingHapticIntensityOverridek_EControllerSettingHoldRepeatIntervalk_EControllerSettingHoldRepeatsk_EControllerSettingInvertXk_EControllerSettingInvertYk_EControllerSettingLayerModek_EControllerSettingLayoutk_EControllerSettingLeftTrackpadModek_EControllerSettingMouseMoveThresholdk_EControllerSettingMouseRegionPositionXk_EControllerSettingMouseRegionPositionYk_EControllerSettingMouseRegionScalek_EControllerSettingMouseSmoothingk_EControllerSettingOutputAxisk_EControllerSettingOutputJoystickk_EControllerSettingOutputToJoystickk_EControllerSettingOutputToJoystickDeadzoneXk_EControllerSettingOutputToJoystickDeadzoneYk_EControllerSettingOutputToJoystickPrecisionk_EControllerSettingOutputTriggerk_EControllerSettingOverlapRegionk_EControllerSettingPressureJoystickEnablek_EControllerSettingPressureJoystickMaxPressurek_EControllerSettingPressureJoystickMinPressurek_EControllerSettingReferencedModek_EControllerSettingRequiresClickk_EControllerSettingRightTrackpadModek_EControllerSettingRotationk_EControllerSettingRotationOldk_EControllerSettingRumbleIntensityk_EControllerSettingRumbleTypek_EControllerSettingScrollAnglek_EControllerSettingScrollInvertk_EControllerSettingScrollMomentumk_EControllerSettingScrollTypek_EControllerSettingScrollWrapk_EControllerSettingSensitivityk_EControllerSettingSensitivityHorizScalek_EControllerSettingSensitivityVertScalek_EControllerSettingSmoothJoystickk_EControllerSettingSwipeDurationk_EControllerSettingTeleportMouseStartk_EControllerSettingTeleportMouseStopk_EControllerSettingTestParam0k_EControllerSettingTestParam1k_EControllerSettingTestParam2k_EControllerSettingTestParam3k_EControllerSettingTestParam4k_EControllerSettingTestParam5k_EControllerSettingTestParam6k_EControllerSettingTestParam7k_EControllerSettingTestParam8k_EControllerSettingTestParam9k_EControllerSettingTouchMenuActivateButtonk_EControllerSettingTouchMenuButtonCountk_EControllerSettingTouchMenuButtonTypek_EControllerSettingTouchMenuInnerDeadzonek_EControllerSettingTouchMenuLabelsk_EControllerSettingTouchMenuOpacityk_EControllerSettingTouchMenuOuterDeadzonek_EControllerSettingTouchMenuPosXk_EControllerSettingTouchMenuPosYk_EControllerSettingTouchMenuScalek_EControllerSettingTrackballk_EControllerSettingTrackpadTriggerDatak_EControllerSettingTriggerMouseClampingk_EControllerSettingTriggerMouseClampingAmountk_EControllerSettingVirtualCapSizek_EControllerSettingVirtualMenuCenterBoundk_EControllerSettingVirtualModek_EControllerSettingVirtualStickThrow
+k_EControllerSettingAccelerationk_EControllerSettingActionSetTriggerCursorHidek_EControllerSettingActionSetTriggerCursorShowk_EControllerSettingActivatorActivateStickOrTrackpadk_EControllerSettingActivatorAnalogOutputValuek_EControllerSettingActivatorChordk_EControllerSettingActivatorCyclek_EControllerSettingActivatorDoubleTapTimek_EControllerSettingActivatorEndDelayk_EControllerSettingActivatorInterruptablek_EControllerSettingActivatorLongPressTimek_EControllerSettingActivatorMouseWarpXk_EControllerSettingActivatorMouseWarpYk_EControllerSettingActivatorOutputAxisk_EControllerSettingActivatorRepeatRatek_EControllerSettingActivatorSoftPressStylek_EControllerSettingActivatorStartDelayk_EControllerSettingActivatorThresholdk_EControllerSettingActivatorTogglek_EControllerSettingAdaptiveCenteringk_EControllerSettingAdaptiveThresholdk_EControllerSettingAnalogEmulationDutyCyclePctk_EControllerSettingAnalogEmulationPeriodk_EControllerSettingAntiDeadZonek_EControllerSettingAntiDeadZoneBufferk_EControllerSettingCountk_EControllerSettingCurveExponentk_EControllerSettingCustomCurveExponentk_EControllerSettingDeadZoneEnabledk_EControllerSettingDeadZoneInnerRadiusk_EControllerSettingDeadZoneOuterRadiusk_EControllerSettingDeadZoneShapek_EControllerSettingDeadzonek_EControllerSettingDeadzoneAdvancedSettingsk_EControllerSettingDotsPer360k_EControllerSettingDoubleTapk_EControllerSettingDoubleTapBeepk_EControllerSettingDoubleTapMaxDistk_EControllerSettingDoubleTapMaxDurationk_EControllerSettingDoubleTapMinDurationk_EControllerSettingDynamicModek_EControllerSettingEdgeBindingInvertk_EControllerSettingEdgeBindingRadiusk_EControllerSettingEdgeSpinRadiusk_EControllerSettingEdgeSpinVelocityk_EControllerSettingFlickStickAllowFlickOnAwakek_EControllerSettingFlickStickDepressionSpeedk_EControllerSettingFlickStickEdgeBindingRadiusk_EControllerSettingFlickStickForwardDeadZonek_EControllerSettingFlickStickFrameTimek_EControllerSettingFlickStickHapticBumpPerAnglek_EControllerSettingFlickStickSnapModek_EControllerSettingFlickStickSnapTightnessk_EControllerSettingFlickStickSweepSensitivityk_EControllerSettingFlickStickSweepTightnessk_EControllerSettingFlickStickTransitionTimek_EControllerSettingFourButtonDistk_EControllerSettingFourButtonSizek_EControllerSettingFrictionk_EControllerSettingFrictionVertScalek_EControllerSettingGyroAxisk_EControllerSettingGyroButtonk_EControllerSettingGyroButtonHapticEffectk_EControllerSettingGyroButtonInvertk_EControllerSettingGyroButtonMaskk_EControllerSettingGyroDeflectionAngleMaxk_EControllerSettingGyroDeflectionAngleMink_EControllerSettingGyroDeflectionNeutralAnglek_EControllerSettingGyroDeflectionUseGravityk_EControllerSettingGyroEnableAngleCatchUpk_EControllerSettingGyroJoystickOutputMaxk_EControllerSettingGyroJoystickOutputMink_EControllerSettingGyroJoystickPowerCurvek_EControllerSettingGyroLockExtentsk_EControllerSettingGyroModek_EControllerSettingGyroNaturalSensitivityk_EControllerSettingGyroNeutralAnglek_EControllerSettingGyroPointerk_EControllerSettingGyroPrecisionSpeedk_EControllerSettingGyroRollScalek_EControllerSettingGyroSampleAngleOffsetXk_EControllerSettingGyroSensitivityScalek_EControllerSettingGyroSpeedDeadzonek_EControllerSettingGyroSpeedMaxAnglePerSecondk_EControllerSettingGyroSpeedMinAnglePerSecondk_EControllerSettingGyroTo2DConversionStylek_EControllerSettingGyroUsePerControllerGyroPreferencesk_EControllerSettingGyroXYRatiok_EControllerSettingGyroYawScalek_EControllerSettingHapticIntensityk_EControllerSettingHapticIntensityOverridek_EControllerSettingHoldRepeatIntervalk_EControllerSettingHoldRepeatsk_EControllerSettingInvertXk_EControllerSettingInvertYk_EControllerSettingLayerModek_EControllerSettingLayoutk_EControllerSettingLeftTrackpadModek_EControllerSettingMouseMoveThresholdk_EControllerSettingMouseRegionPositionXk_EControllerSettingMouseRegionPositionYk_EControllerSettingMouseRegionScalek_EControllerSettingMouseSmoothingk_EControllerSettingOutputAxisk_EControllerSettingOutputJoystickk_EControllerSettingOutputToJoystickk_EControllerSettingOutputToJoystickDeadzoneXk_EControllerSettingOutputToJoystickDeadzoneYk_EControllerSettingOutputToJoystickPrecisionk_EControllerSettingOutputTriggerk_EControllerSettingOverlapRegionk_EControllerSettingPressureJoystickEnablek_EControllerSettingPressureJoystickMaxPressurek_EControllerSettingPressureJoystickMinPressurek_EControllerSettingReferencedModek_EControllerSettingRequiresClickk_EControllerSettingRightTrackpadModek_EControllerSettingRotationk_EControllerSettingRotationOldk_EControllerSettingRumbleIntensityk_EControllerSettingRumbleTypek_EControllerSettingScrollAnglek_EControllerSettingScrollInvertk_EControllerSettingScrollMomentumk_EControllerSettingScrollTypek_EControllerSettingScrollWrapk_EControllerSettingSensitivityk_EControllerSettingSensitivityHorizScalek_EControllerSettingSensitivityVertScalek_EControllerSettingSmoothJoystickk_EControllerSettingSwipeDurationk_EControllerSettingTeleportMouseStartk_EControllerSettingTeleportMouseStopk_EControllerSettingTestParam0k_EControllerSettingTestParam1k_EControllerSettingTestParam2k_EControllerSettingTestParam3k_EControllerSettingTestParam4k_EControllerSettingTestParam5k_EControllerSettingTestParam6k_EControllerSettingTestParam7k_EControllerSettingTestParam8k_EControllerSettingTestParam9k_EControllerSettingTouchMenuActivateButtonk_EControllerSettingTouchMenuButtonCountk_EControllerSettingTouchMenuButtonTypek_EControllerSettingTouchMenuInnerDeadzonek_EControllerSettingTouchMenuLabelsk_EControllerSettingTouchMenuOpacityk_EControllerSettingTouchMenuOuterDeadzonek_EControllerSettingTouchMenuPosXk_EControllerSettingTouchMenuPosYk_EControllerSettingTouchMenuScalek_EControllerSettingTrackballk_EControllerSettingTrackpadTriggerDatak_EControllerSettingTriggerMouseClampingk_EControllerSettingTriggerMouseClampingAmountk_EControllerSettingVirtualCapSizek_EControllerSettingVirtualMenuCenterBoundk_EControllerSettingVirtualModek_EControllerSettingVirtualStickThrow
 k_EControllerSource_ABXYk_EControllerSource_CapJoystickLeftk_EControllerSource_CapJoystickRightk_EControllerSource_CenterTrackpadk_EControllerSource_Countk_EControllerSource_DPadk_EControllerSource_Gyrok_EControllerSource_Joystickk_EControllerSource_Keyk_EControllerSource_LeftBumperk_EControllerSource_LeftGyrok_EControllerSource_LeftTrackpadk_EControllerSource_LeftTriggerk_EControllerSource_Mousek_EControllerSource_Nonek_EControllerSource_RightBumperk_EControllerSource_RightJoystickk_EControllerSource_RightTrackpadk_EControllerSource_RightTriggerk_EControllerSource_Switch
 k_EControllerSourceMode_2DScrollwheelk_EControllerSourceMode_AbsoluteMousek_EControllerSourceMode_Buttonsk_EControllerSourceMode_Countk_EControllerSourceMode_Disabledk_EControllerSourceMode_Dpadk_EControllerSourceMode_FlickStickk_EControllerSourceMode_FourButtonsk_EControllerSourceMode_GyroToJoystickCamerak_EControllerSourceMode_GyroToJoystickDeflectionk_EControllerSourceMode_GyroToMousek_EControllerSourceMode_Hotbark_EControllerSourceMode_JoystickCamerak_EControllerSourceMode_JoystickMousek_EControllerSourceMode_JoystickMovek_EControllerSourceMode_MouseJoystickk_EControllerSourceMode_MouseRegionk_EControllerSourceMode_Nonek_EControllerSourceMode_RadialMenuk_EControllerSourceMode_Referencek_EControllerSourceMode_RelativeMousek_EControllerSourceMode_ScrollWheelk_EControllerSourceMode_SingleButtonk_EControllerSourceMode_Switchesk_EControllerSourceMode_TouchMenuk_EControllerSourceMode_Trigger
 k_EDeviceLocationAny
@@ -30833,7 +30841,7 @@ libhevcbitstream.so
 liblog.so
 lib(%lu)
 libmain.so
-lib May 10 2024 17:11:03
+lib May 26 2024 06:59:05
 libmediandk.so
 libm.so
 libOpenMAXAL.so
@@ -31076,6 +31084,7 @@ LoadFileIntoBuffer(StringView, CUtlBuffer&, bool, EFioModifiers)
 Load file into cache
 loading cert dir
 loading defaults
+Loading font family %s\n
 loading started
 load_iv
 %~LoB
@@ -33208,7 +33217,6 @@ NCONF_new
 @\n!ControllerPersonalizationResponse
 n?CP
 ">\n(CRemoteClient_DeleteSession_Notification
-")\n'CRemoteClient_MarkTaskComplete_Response"_\n'CRemoteClient_RemotePacket_Notification
 \n!CRemoteClient_Online_Notification
 \n'CRemoteClient_SteamToSteam_Notification
 \n"CRemotePlay_SessionStarted_Request
@@ -33861,6 +33869,7 @@ N+N:"=b~@#B}b<
 \n\nclient_ids
 \n\ncodec_data
 ?\n\nconnect_ok
+\n\ncontent_id
 \n\nCSetQoSMsg
 \n\nCURVE25519
 \n\ndependency
@@ -35119,6 +35128,7 @@ OCTWRAP
 oC:U
 Ocultar teclado virtual
 Oculte os controles por toque no menu de configura
+Oculus
 Oculus Quest
  ocupado.
 :oc\ve
@@ -35483,6 +35493,7 @@ OpenSSL X25519 algorithm
 OpenSSL X448 algorithm
 OpenSSL X9.42 DH method
 opentype_font_data
+operating-rate
 operation aborted by callback
 operation aborted by pre-request callback
 operation aborted by trailing headers callback
@@ -36451,6 +36462,8 @@ P.I7
 PIb{4-
 Pibau
 Pick a color for touch controls
+Pico
+Pico 
 picojson::default_parse_context::set_number(double)
 picojson::input<std::__ndk1::__wrap_iter<char const*>>::expect(int)
 picojson::parse(picojson::value&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
@@ -37272,34 +37285,34 @@ professionOIDs
 programok telep
 progress
 Project-Id-Version: 1.1.10\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2018-08-23 17:03-0700\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: English\nLanguage: en_US\nMIME-Version: 1.0\nContent-Type: text/plain; charset=ASCII\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-23 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Bulgarian\nLanguage: bg_BG\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: bg\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-23 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Chinese Simplified\nLanguage: zh_CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: zh-CN\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-23 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Chinese Traditional\nLanguage: zh_TW\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: zh-TW\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-23 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Danish\nLanguage: da_DK\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: da\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-23 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Dutch\nLanguage: nl_NL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: nl\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-23 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Finnish\nLanguage: fi_FI\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: fi\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-23 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: French\nLanguage: fr_FR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n > 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: fr\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-23 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: German\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: de\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-23 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Greek\nLanguage: el_GR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: el\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-23 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Hungarian\nLanguage: hu_HU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: hu\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-23 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Indonesian\nLanguage: id_ID\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: id\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-23 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Italian\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: it\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-23 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Japanese\nLanguage: ja_JP\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ja\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-23 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Korean\nLanguage: ko_KR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ko\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-23 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Norwegian Bokmal\nLanguage: nb_NO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: nb\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-23 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Portuguese\nLanguage: pt_PT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pt\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-23 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Russian\nLanguage: ru_RU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ru\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-23 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Spanish, Mexico\nLanguage: es_MX\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: es-MX\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-23 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Spanish\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: es\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-23 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Swedish\nLanguage: sv_SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: sv\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-23 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Turkish\nLanguage: tr_TR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: tr\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-23 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Ukrainian\nLanguage: uk_UA\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: uk\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-23 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Vietnamese\nLanguage: vi_VN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: vi\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-30 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Polish\nLanguage: pl_PL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pl\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-30 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Portuguese, Brazilian\nLanguage: pt_BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pt-BR\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-30 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Romanian\nLanguage: ro_RO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100>0 && n%100<20)) ? 1 : 2);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ro\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-04-30 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Thai\nLanguage: th_TH\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: th\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-06 16:33\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Czech\nLanguage: cs_CZ\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 3;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: cs\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Dutch\nLanguage: nl_NL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: nl\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-14 14:40\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: French\nLanguage: fr_FR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n > 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: fr\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Bulgarian\nLanguage: bg_BG\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: bg\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Chinese Simplified\nLanguage: zh_CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: zh-CN\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Chinese Traditional\nLanguage: zh_TW\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: zh-TW\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Czech\nLanguage: cs_CZ\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 3;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: cs\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Danish\nLanguage: da_DK\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: da\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Finnish\nLanguage: fi_FI\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: fi\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: German\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: de\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Greek\nLanguage: el_GR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: el\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Hungarian\nLanguage: hu_HU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: hu\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Italian\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: it\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Japanese\nLanguage: ja_JP\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ja\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Korean\nLanguage: ko_KR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ko\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Polish\nLanguage: pl_PL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pl\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Portuguese, Brazilian\nLanguage: pt_BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pt-BR\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Portuguese\nLanguage: pt_PT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pt\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Romanian\nLanguage: ro_RO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100>0 && n%100<20)) ? 1 : 2);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ro\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Russian\nLanguage: ru_RU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ru\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Spanish, Mexico\nLanguage: es_MX\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: es-MX\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Spanish\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: es\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Swedish\nLanguage: sv_SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: sv\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Thai\nLanguage: th_TH\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: th\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Turkish\nLanguage: tr_TR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: tr\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Ukrainian\nLanguage: uk_UA\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: uk\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Vietnamese\nLanguage: vi_VN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: vi\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:01\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Indonesian\nLanguage: id_ID\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: id\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:01\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Norwegian Bokmal\nLanguage: nb_NO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: nb\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
 PrOO;SO
 Prossimo set/layer di azioni
 Prost
@@ -40522,7 +40535,6 @@ SDL_RaiseWindow
 SDL_ReadIO
 SDL_realloc
 SDL_RenderClear
-SDL_RENDER_DRIVER
 SDL_RenderFillRect
 SDL_RenderLine
 SDL_RenderPresent
@@ -46032,6 +46044,7 @@ tN.3
 t Nagy K
 t nahran
 \t\n CMsgSteamNetworkingP2PRendezvous
+(\t")\n'CRemoteClient_MarkTaskComplete_Response"_\n'CRemoteClient_RemotePacket_Notification
 '=TnDTui
 t ng
 \tNGW
@@ -49880,7 +49893,9 @@ vel se conectar, servidor off-line
 vel usar o controle como um mouse ao ativar esta op
 VEM SPELAR?
 Vend
+vendor.qti-ext-dec-heif-mode.value
 vendor.qti-ext-dec-low-latency.enable
+vendor.qti-ext-dec-picture-order.enable
 venli Masa
 Venstre
 Venstre aftr
@@ -51910,7 +51925,7 @@ Warning: Couldn't find actionset %d in config for app %d, defaulting to the firs
 Warning: Couldn't initialize JPG image loading\n
 Warning: Couldn't initialize PNG and JPG image loading\n
 Warning: Couldn't initialize TTF font loading\n
-Warning: Couldn't load font at size %d\n
+Warning: Couldn't load font %s: %s\n
 Warning: Couldn't load image: %s\n
 Warning: Couldn't parse SVG image
 Warning: Couldn't set IPV6_ADD_MEMBERSHIP on discovery network socket\n
