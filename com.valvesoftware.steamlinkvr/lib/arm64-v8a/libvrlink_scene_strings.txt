@@ -47,7 +47,7 @@
 7CThread
 7SVLRoot
 7XrScene
-8663214 
+8704061 
 8SVLAudio
 8SVLCodec
 8SVLCrypt
@@ -484,6 +484,7 @@ CIE ID is not zero
 CIE start does not match
 CIE version is not 1 or 3
 cIntToHexDigit(int)
+Class Name: %s\n
 CLEAR
 click
 Client QoS Enable: %d
@@ -793,6 +794,7 @@ draw
 drawColor
 dropNullPlaceholders
  # dtime=%d
+DumpObjectClassProperties(_jobject*)
 dup2
 Duplicate key: '
 during phase1 personality function said it would stop here, but now in phase2 it did not stop here
@@ -961,6 +963,7 @@ FEC decode failure %d %d %d\n
 fflush
 fgets
 %F-%H-%M-%S
+Fields:
 file:///android_asset/webui/dash/index.html
 file:///android_asset/webui/dialog/index.html
 file:///android_asset/webui/streamanimation/index.html
@@ -1072,8 +1075,12 @@ getenv
 getExtras
 GetExtrasKey: No extras bundle was present
 GetExtrasKey(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&)
+getFields
 GetFilenameTimeString()
 getFrequency
+getGenericParameterTypes
+getGenericReturnType
+getGenericType
 GetGMUnixTime()
 GetGMUnixTimeAtNextLocalTime(unsigned long, int, int, int)
 GetHmdBatteryLevel()
@@ -1084,6 +1091,7 @@ getIntProperty
 GetIPAddresses(std::__ndk1::vector<IPSet, std::__ndk1::allocator<IPSet>>&)
 getLanguage
 getLinkSpeed
+getMethods
 getName
 getNetworkInterfaces
 getNetworkPrefixLength
@@ -1118,6 +1126,7 @@ GetSystemTimeInTicks()
 getTableEntrySize
 gettimeofday
 GetTimingEventString(timingevent)
+getTypeName
 getULEB128
 GetVersionNumber()
 GetVRLog()
@@ -1532,6 +1541,9 @@ i]Wb
 (IZ)V
 January
 japanese
+java/lang/Class
+java/lang/reflect/Method
+java/lang/reflect/Type
 java/lang/String
 java/net/InetAddress
 java/net/InterfaceAddress
@@ -1970,7 +1982,6 @@ libdl.so
 libEGL.so
 liber8tion_coding_bitmatrix
 liberation_coding_bitmatrix
-libGLESv2.so
 libGLESv3.so
 liblog.so
 libmediandk.so
@@ -1999,6 +2010,10 @@ Linker: LLD 14.0.7
 ()Ljava/lang/Class;
 ()Ljava/lang/Object;
 Ljava/lang/Object;
+()[Ljava/lang/reflect/Field;
+()[Ljava/lang/reflect/Method;
+()[Ljava/lang/reflect/Type;
+()Ljava/lang/reflect/Type;
 ()Ljava/lang/String;
 Ljava/lang/String;
 (Ljava/lang/String;)[B
@@ -2045,7 +2060,6 @@ malformed uleb128 expression
 malloc
 map::at:  key not found
 March
-MBI-
 mbrlen
 mbrtowc
 mbsnrtowcs
@@ -2059,6 +2073,7 @@ memmove
 __memmove_chk
 memset
 MergeJsonValues(Json::Value&, Json::Value&)
+Methods:
 MGiI
 MillisecondsFromNanoseconds(unsigned long)
 Missing ':' after object member name
@@ -2634,6 +2649,8 @@ pthread_setspecific
 Pure virtual function called!
 putchar
 putExtra
+puts
+QBM-
 Qkkbal
 QSVLClient::AdjustPhaseOffset(int)
 QSVLClientAudioNdk: Attempting to close input stream...
@@ -2727,12 +2744,12 @@ QSVLClientXR::SetMaximumFrameQueueLatency: %d us
 QSVLClientXR::SetMaximumFrameQueueLatency(int)
 QSVLClientXR::SetShouldWaitOnFrames(bool)
 QSVLClientXR::SetupSwapchains: Initializing swapchains...
-QSVLClientXR::TrySetPrefferedDisplayFrequency: %.1f Failed! Attempting 72Hz
-QSVLClientXR::TrySetPrefferedDisplayFrequency: Attempting fallback of %.1f
-QSVLClientXR::TrySetPrefferedDisplayFrequency(float)
-QSVLClientXR::TrySetPrefferedDisplayFrequency: Setting fallback of 72.0Hz succeeded
-QSVLClientXR::TrySetPrefferedDisplayFrequency: Setting fallback of 72Hz failed! Hoping for the best setting the refresh rate to 72Hz
-QSVLClientXR::TrySetPrefferedDisplayFrequency: Setting refresh rate to %.1f failed.
+QSVLClientXR::TrySetPreferredDisplayFrequency: %.1f Failed! Attempting 72Hz
+QSVLClientXR::TrySetPreferredDisplayFrequency: Attempting fallback of %.1f
+QSVLClientXR::TrySetPreferredDisplayFrequency(float)
+QSVLClientXR::TrySetPreferredDisplayFrequency: Setting fallback of 72.0Hz succeeded
+QSVLClientXR::TrySetPreferredDisplayFrequency: Setting fallback of 72Hz failed! Hoping for the best setting the refresh rate to 72Hz
+QSVLClientXR::TrySetPreferredDisplayFrequency: Setting refresh rate to %.1f failed.
 QSVLCodecNDK::AcquireEncodedDataBuffer: Unable to acquire input buffer! Error: %zd. Resetting stream...
 QSVLCodecNDK::AcquireEncodedDataBuffer(unsigned int)
 QSVLCodecNDK::HandleOnImageAvailable(AImageReader*)
@@ -3097,6 +3114,7 @@ sRXpass
 sRXpps
 sscanf
 sSerialNumber
+  %s -> %s\n
 sStartInfo
 St10bad_typeid
 St11logic_error
@@ -4551,6 +4569,7 @@ StreamCheckInfo::~StreamCheckInfo()
 #StreamError_ConnectionToHostLost
 #StreamError_HostNotRespondingDescription
 #StreamError_HostNotRespondingTitle
+StreamErrorListenerThread
 /stream/host_is_locked
 /stream/host_is_on_wireless
 streamloading: Got continue, next state init.
@@ -6417,7 +6436,10 @@ XrSceneStream::TransitionToStreamPreloading(XRQContext&, StreamSceneState)
 XrSceneStream::TransitionToStreamStartOrResume
 XrSceneStream::TransitionToStreamStartOrResume(XRQContext&)
 XrSceneStream::UnFocused: Finished unfocusing
-XrSceneStream::UnFocused: m_pQSVLXRClientManager->Shutdown() complete
+XrSceneStream::UnFocused: m_pQSVLXRClientManager destroyed
+XrSceneStream::UnFocused: m_pQSVLXRClientManager::Shutdown complete
+XrSceneStream::UnFocused: PreFlightCheckThread stopped
+XrSceneStream::UnFocused: StreamErrorListenerThread stopped
 XrSceneStream::UnFocused: Stream scene was unfocused
 XrSceneStream::UnFocused: Stream scene was unfocused with intention of exit
 XrSceneStream::UnFocused(XRQContext&, bool)
