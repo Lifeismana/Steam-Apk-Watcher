@@ -53,10 +53,10 @@
 7CThread
 7SVLRoot
 7XrScene
-8928590 
 8SVLAudio
 8SVLCodec
 8SVLCrypt
+9002732 
 9a&g
 9JLX
 9QSVLInput
@@ -91,8 +91,11 @@ AAudioStream_getFramesPerBurst
 AAudioStream_requestStart
 AAudioStream_requestStart( m_pAAudioInputStream )
 AAudioStream_requestStop
-AAudioStream_requestStop( m_pAAudioInputStream )
-AAudioStream_requestStop( m_pAAudioOutputStream )
+AAudioStream_requestStop( pStream )
+AAudioStream_waitForStateChange
+AAudioStream_waitForStateChange( m_pAAudioInputStream, inputState, &nextState, timeoutNanos )
+AAudioStream_waitForStateChange( m_pAAudioOutputStream, inputState, &nextState, timeoutNanos )
+AAudioStream_waitForStateChange( pStream, inputState, &nextState, nsTimeout )
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 %a %b %d %H:%M:%S %Y
 %a %b %d %Y %H:%M:%S.%%06u
@@ -584,8 +587,6 @@ CreateSimpleProcess
 CreateSimpleThread(unsigned int (*)(void*), void*, unsigned int*, unsigned int)
 createWebMessageChannel
 createWifiLock
----CREATING AAUDIO INPUT STREAM---
----CREATING AAUDIO OUTPUT STREAM---
 CR Flip Frame Start %d
 CR Got Cursor %d
 CR Render Custom5 %d
@@ -2689,7 +2690,13 @@ QSVLClient::AdjustPhaseOffset(int)
 QSVLClientAudioNdk: Attempting to close input stream...
 QSVLClientAudioNdk: Attempting to close output stream...
 QSVLClientAudioNdk::Init: AAudioStream_getFramesPerBurst = %d
+QSVLClientAudioNdk::Init: Creating input stream...
+QSVLClientAudioNdk::Init: Creating output stream...
+QSVLClientAudioNdk::Init: Input stream creation finished
 QSVLClientAudioNdk::Init(int)
+QSVLClientAudioNdk::Init: Output stream creation finished
+QSVLClientAudioNdk::Init: Waiting for input stream state change...
+QSVLClientAudioNdk::Init: Waiting for output stream state change...
 QSVLClientAudioNdk: Input stream stopped
 QSVLClientAudioNdk::OnInputAudioReady(AAudioStreamStruct*, void*, int)
 QSVLClientAudioNdk::OnInputAudioReadyProc(AAudioStreamStruct*, void*, void*, int)
@@ -2703,6 +2710,7 @@ QSVLClientAudioNdk: Output stream stopped
 QSVLClientAudioNdk::~QSVLClientAudioNdk()
 QSVLClientAudioNdk::QSVLClientAudioNdk(std::__ndk1::function<void (ClientAudioEventType)>, SVLRoot*, bool)
 QSVLClientAudioNdk::Stop()
+QSVLClientAudioNdk::Stop: Attempting to stop streams...
 QSVLClient::FrameSwap()
 QSVLClient::GotDecodedFrame()
 QSVLClient::GotNetworkFrame()
@@ -6506,6 +6514,7 @@ XRQGetSwapchainSamplerStateGLES(XRQContext const&, XRQSwapchain&, XrSwapchainSta
 XRQGetTimeNow(XRQContext const&, long&)
 XRQGetXRViewConfiguration(XrViewConfigurationType, XRQContext&)
 XRQHandleEvents(XRQContext&)
+XRQ_INTERACTION_PROFILE_CHANGED: Setting bShouldPassInputEvents to %s
 XRQIsExtensionAvailable(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 XRQLocateReferenceSpaceAtFrameTime(XRQContext&, XrReferenceSpaceType, XrSpaceLocation&)
 XRQLocateReferenceSpace: Failed to locate base reference space type: %i
