@@ -6,6 +6,7 @@
 %02x\t
 032AndroidInternalStorageFileLoader
 %.0Lf
+10.35.78
 10QSVLClient
 11QSVLXRInput
 11SVLDataLink
@@ -58,7 +59,7 @@
 8SVLAudio
 8SVLCodec
 8SVLCrypt
-9152362 
+9434851 
 9a&g
 9JLX
 9QSVLInput
@@ -147,6 +148,7 @@ allowDroppedNullPlaceholders
 allowNumericKeys
 allowSingleQuotes
 allowSpecialFloats
+All VTEs Invalidated.
 ALooper_acquire
 ALooper_addFd
 ALooper_forThread
@@ -274,6 +276,7 @@ android/os/Looper
 android/os/Message
 android/os/MessageQueue
 android/os/SystemClock
+android.permission.ACCESS_FINE_LOCATION
 android.permission.RECORD_AUDIO
 android.permission.WAKE_LOCK
 [Android] Requesting the following permissions in prompt:
@@ -404,13 +407,13 @@ bool HandleSessionStateChangedEvent(XRQContext &, const XrEventDataBaseHeader *)
 bool QSVLDeviceHmd::GetInteractionGaze(XRQContext &, XrVector3f *)
 bool QSVLXRInput::GetControllerState_Controller(QSVLControllerState &, int)
 bool SetupFaceTracking(XRQContext &)
-bool SetupHandTracking(XRQContext &)
 bool SetupSocialEyeTracking(XRQContext &)
 bool std::__ndk1::__lexicographical_compare<std::__ndk1::__less<std::__ndk1::pair<Json::Value::CZString const, Json::Value>, std::__ndk1::pair<Json::Value::CZString const, Json::Value>>&, std::__ndk1::__map_const_iterator<std::__ndk1::__tree_const_iterator<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, std::__ndk1::__tree_node<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, void*>*, long>>, std::__ndk1::__map_const_iterator<std::__ndk1::__tree_const_iterator<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, std::__ndk1::__tree_node<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, void*>*, long>>>(std::__ndk1::__map_const_iterator<std::__ndk1::__tree_const_iterator<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, std::__ndk1::__tree_node<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, void*>*, long>>, std::__ndk1::__map_const_iterator<std::__ndk1::__tree_const_iterator<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, std::__ndk1::__tree_node<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, void*>*, long>>, std::__ndk1::__map_const_iterator<std::__ndk1::__tree_const_iterator<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, std::__ndk1::__tree_node<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, void*>*, long>>, std::__ndk1::__map_const_iterator<std::__ndk1::__tree_const_iterator<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, std::__ndk1::__tree_node<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, void*>*, long>>, std::__ndk1::__less<std::__ndk1::pair<Json::Value::CZString const, Json::Value>, std::__ndk1::pair<Json::Value::CZString const, Json::Value>>&)
 bool XRQAcquireSwapchainImage(XrSwapchain, uint32_t &)
 bool XRQAttachRegisteredActionSets(XRQContext &)
 bool XRQCreateActionAndRegisterSuggestedBindings(XRQContext &, const XrActionSet, const XRQActionCreateInfo &, XRQAction &)
 bool XRQCreateAndRegisterActionSetForAttach(XRQContext &, const XRQActionSetCreateInfo &, XrActionSet &)
+bool XRQCreateHandTrackers(XRQContext &)
 bool XRQCreateReferenceSpace(XRQContext &, XrReferenceSpaceType)
 bool XRQCreateSwapchain(const XRQContext &, const XRQSwapchainInfo &, XRQSwapchain &)
 bool XRQCreateXRInstance(const XRQApp &, XRQContext &)
@@ -1093,6 +1096,8 @@ GetCurrentTimestamp
 GetCurrentTimeUS
 getDefault
 GetDegreesBetweenJoints(XrHandJointLocationEXT&, XrHandJointLocationEXT&)
+GetDeviceManufacturer()
+GetDeviceManufacturerRaw()
 GetDeviceProductName()
 GetDeviceSDKVersion()
 getEncodedP
@@ -1503,9 +1508,12 @@ inet_ntop
 inet_pton
 -Infinity
 Infinity
+/info/device/manufacturer
 /info/device/product_name
 /info/p4/have_cl
 infos
+/info/wifi/frequency
+/info/wifi/ssid
 <init>
 InitLog(char const*, char const*)
 InitMainThread()
@@ -2019,6 +2027,7 @@ laser_intersection
 latam
 LaunchOptions::~LaunchOptions()
 LaunchOptions::LaunchOptions(LaunchOptions const&)
+LaunchOptions::operator=(LaunchOptions const&)
 left
 libaaudio.so
 libandroid.so
@@ -2116,13 +2125,16 @@ lpHP
 [Main] Application failed to initialize successfully. Exiting
 [Main] Built from Perforce CL: %s
 [Main] Complete
+[Main] Known Device Manufacturer: %i
 [Main] Running on: %s
 [Main] Setting up VRLink Scene
 [Main] -----Setup Info----
+[Main] Unknown Device Manufacturer: %s
 MakeFilePathAbsolute
 MakeFilePathAbsoluteStr(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 malformed uleb128 expression
 malloc
+MANUFACTURER
 map::at:  key not found
 March
 mbrlen
@@ -2138,6 +2150,7 @@ memmove
 __memmove_chk
 memset
 MergeJsonValues(Json::Value&, Json::Value&)
+Meta
 Methods:
 MGiI
 MillisecondsFromNanoseconds(unsigned long)
@@ -2271,6 +2284,7 @@ No data on command pipe!
 noexcept
 noexcept (
 noexcept(
+No links? Server-as-client Mode?
 None
 non-virtual thunk to 
 non-virtual thunk to std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>::~basic_iostream()
@@ -2316,6 +2330,7 @@ NSt6__ndk110__function6__funcIZN12QSVLClientXR4InitEvE3$_3NS_9allocatorIS3_EEFv1
 NSt6__ndk110__function6__funcIZN12QSVLClientXR4InitEvE3$_4NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN12QSVLClientXR4InitEvE3$_5NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN12QSVLClientXR4InitEvE3$_6NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
+NSt6__ndk110__function6__funcIZN12QSVLClientXR4InitEvE3$_7NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN12QSVLClientXRC1ER10XRQContextR13LaunchOptionsNS_10shared_ptrI9QSVLInputEENS7_I13QSVLDeviceHmdEENS7_I11XrUIManagerEENS_8functionIFv15QSVLClientEventNS_7variantIJ21QSVLClientStreamState25QSVLClientWirelessTimeoutEEEEEEE3$_0NS_9allocatorISM_EEFv20ClientAudioEventTypeEEE
 NSt6__ndk110__function6__funcIZN12XrAppManager4InitER6XRQAppE3$_1NS_9allocatorIS5_EEFv8XrqEventNS_7variantIJ38XrEventDataReferenceSpaceChangePendingEEEEEE
 NSt6__ndk110__function6__funcIZN12XrAppManagerC1EvE3$_0NS_9allocatorIS3_EEFv10SceneEventEEE
@@ -2516,6 +2531,7 @@ numpunct_byname<wchar_t>::numpunct_byname failed to construct for
 objc_object
 obtain
 October
+Oculus
 offset
 OnInputEvent(android_app*, AInputEvent*)
 onPause
@@ -2654,6 +2670,7 @@ PanelRenderer::RenderToTexture(glm::mat<4, 4, float, (glm::qualifier)0> const&, 
 <Pcjv
 permissions_state
 PFbcE
+Pico
 pipe
 pixel vector[
 PKDh
@@ -3899,7 +3916,10 @@ std::__ndk1::enable_if<__is_cpp17_forward_iterator<std::__ndk1::basic_string<cha
 std::__ndk1::enable_if<__is_cpp17_forward_iterator<std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)> const*>::value && is_constructible<std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)>, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, void>::type std::__ndk1::vector<std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)>, std::__ndk1::allocator<std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)>>>::assign<std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)> const*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
 std::__ndk1::enable_if<__is_cpp17_forward_iterator<std::__ndk1::__wrap_iter<XrCompositionLayerBaseHeader**>>::value && is_constructible<XrCompositionLayerBaseHeader*, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, std::__ndk1::__wrap_iter<XrCompositionLayerBaseHeader**>>::type std::__ndk1::vector<XrCompositionLayerBaseHeader*, std::__ndk1::allocator<XrCompositionLayerBaseHeader*>>::insert<std::__ndk1::__wrap_iter<XrCompositionLayerBaseHeader**>>(std::__ndk1::__wrap_iter<XrCompositionLayerBaseHeader* const*>, __is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
 std::__ndk1::enable_if<__is_cpp17_forward_iterator<unsigned long const*>::value && is_constructible<unsigned long, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, void>::type std::__ndk1::vector<unsigned long, std::__ndk1::allocator<unsigned long>>::assign<unsigned long const*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
+std::__ndk1::enable_if<__is_cpp17_forward_iterator<XrActionSet_T* const*>::value && is_constructible<XrActionSet_T*, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, void>::type std::__ndk1::vector<XrActionSet_T*, std::__ndk1::allocator<XrActionSet_T*>>::assign<XrActionSet_T* const*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
 std::__ndk1::enable_if<__is_cpp17_forward_iterator<XrActionSuggestedBinding const*>::value && is_constructible<XrActionSuggestedBinding, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, void>::type std::__ndk1::vector<XrActionSuggestedBinding, std::__ndk1::allocator<XrActionSuggestedBinding>>::assign<XrActionSuggestedBinding const*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
+std::__ndk1::enable_if<__is_cpp17_forward_iterator<XrActionSuggestedBinding*>::value && is_constructible<XrActionSuggestedBinding, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, void>::type std::__ndk1::vector<XrActionSuggestedBinding, std::__ndk1::allocator<XrActionSuggestedBinding>>::assign<XrActionSuggestedBinding*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
+std::__ndk1::enable_if<__is_cpp17_forward_iterator<XrActiveActionSet const*>::value && is_constructible<XrActiveActionSet, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, void>::type std::__ndk1::vector<XrActiveActionSet, std::__ndk1::allocator<XrActiveActionSet>>::assign<XrActiveActionSet const*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
 std::__ndk1::enable_if<__is_cpp17_forward_iterator<XrCompositionLayerBaseHeader* const*>::value && is_constructible<XrCompositionLayerBaseHeader*, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, void>::type std::__ndk1::vector<XrCompositionLayerBaseHeader*, std::__ndk1::allocator<XrCompositionLayerBaseHeader*>>::assign<XrCompositionLayerBaseHeader* const*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
 std::__ndk1::enable_if<__is_cpp17_forward_iterator<XrSwapchainImageOpenGLESKHR*>::value && is_constructible<XrSwapchainImageOpenGLESKHR, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, void>::type std::__ndk1::vector<XrSwapchainImageOpenGLESKHR, std::__ndk1::allocator<XrSwapchainImageOpenGLESKHR>>::assign<XrSwapchainImageOpenGLESKHR*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
 std::__ndk1::error_category::default_error_condition(int) const
@@ -4301,6 +4321,8 @@ std::__ndk1::pair<std::__ndk1::__tree_iterator<std::__ndk1::__value_type<Json::V
 std::__ndk1::pair<std::__ndk1::__tree_iterator<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, double>, std::__ndk1::__tree_node<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, double>, void*>*, long>, bool> std::__ndk1::__tree<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, double>, std::__ndk1::__map_value_compare<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, double>, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, double>>>::__emplace_unique_key_args<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&>, std::__ndk1::tuple<>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&>&&, std::__ndk1::tuple<>&&)
 std::__ndk1::pair<std::__ndk1::__tree_iterator<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::__tree_node<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, void*>*, long>, bool> std::__ndk1::__tree<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::__map_value_compare<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>>>::__emplace_unique_key_args<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&>, std::__ndk1::tuple<>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&>&&, std::__ndk1::tuple<>&&)
 std::__ndk1::pair<std::__ndk1::__tree_iterator<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>>, std::__ndk1::__tree_node<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>>, void*>*, long>, bool> std::__ndk1::__tree<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>>, std::__ndk1::__map_value_compare<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>>, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>>>>::__emplace_unique_key_args<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&>, std::__ndk1::tuple<>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&>&&, std::__ndk1::tuple<>&&)
+std::__ndk1::pair<std::__ndk1::__tree_iterator<std::__ndk1::__value_type<unsigned long, std::__ndk1::vector<XrActionSuggestedBinding, std::__ndk1::allocator<XrActionSuggestedBinding>>>, std::__ndk1::__tree_node<std::__ndk1::__value_type<unsigned long, std::__ndk1::vector<XrActionSuggestedBinding, std::__ndk1::allocator<XrActionSuggestedBinding>>>, void*>*, long>, bool> std::__ndk1::__tree<std::__ndk1::__value_type<unsigned long, std::__ndk1::vector<XrActionSuggestedBinding, std::__ndk1::allocator<XrActionSuggestedBinding>>>, std::__ndk1::__map_value_compare<unsigned long, std::__ndk1::__value_type<unsigned long, std::__ndk1::vector<XrActionSuggestedBinding, std::__ndk1::allocator<XrActionSuggestedBinding>>>, std::__ndk1::less<unsigned long>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<unsigned long, std::__ndk1::vector<XrActionSuggestedBinding, std::__ndk1::allocator<XrActionSuggestedBinding>>>>>::__emplace_unique_key_args<unsigned long, std::__ndk1::pair<unsigned long const, std::__ndk1::vector<XrActionSuggestedBinding, std::__ndk1::allocator<XrActionSuggestedBinding>>> const&>(unsigned long const&, std::__ndk1::pair<unsigned long const, std::__ndk1::vector<XrActionSuggestedBinding, std::__ndk1::allocator<XrActionSuggestedBinding>>> const&)
+std::__ndk1::pair<unsigned long const, std::__ndk1::vector<XrActionSuggestedBinding, std::__ndk1::allocator<XrActionSuggestedBinding>>>::pair(std::__ndk1::pair<unsigned long const, std::__ndk1::vector<XrActionSuggestedBinding, std::__ndk1::allocator<XrActionSuggestedBinding>>> const&)
 std::__ndk1::promise<bool>::~promise()
 std::__ndk1::promise<void>::get_future()
 std::__ndk1::promise<void>::~promise()
@@ -4863,6 +4885,8 @@ SVLAudio::UpdateStats()
 [SVLClientXR] %.1f Failed! Attempting 72Hz
 [SVLClientXR] All supported Refresh Rates:
 [SVLClientXR] Attempting fallback of %.1f
+[SVLClientXR] Creating hand trackers
+[SVLClientXR] Destroying hand trackers
 [SVLClientXR] Generated chaperone json
 [SVLClientXR] Invalid shader push (%d, %d, %d) ... %d
 [SVLClientXR] Loading shader ID: %d (%d %d)
@@ -5109,7 +5133,7 @@ SVLRoot::VideoFrameDoneSend(unsigned int, int)
 SVLRoot::WasValueSet(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 SVLRXThreadUDP
 SVL_ScanThread
-SVLSpinlock
+SVLSpinwait
 SVLStaticProps::operator=(SVLStaticProps&&)
 SVLStaticProps::~SVLStaticProps()
 SVLWebViewThread
@@ -5890,6 +5914,7 @@ typename
 ubDriverType
 UDP BIND: %d CONN: %d\n
 UDP Driver\n
+UDPServerAddresses:\n
 ui_actions_
 [UIAssetCache] Could not find locale in map. Using english
 [UIAssetCache] Current locale is %s
@@ -5984,7 +6009,7 @@ ValueTransportSystem::GetRemoteValueSize(ValueTransportID)
 ValueTransportSystem::GetRemoteValue(ValueTransportID, void*, unsigned int)
 ValueTransportSystem::GetRemoteValueVersion(ValueTransportID)
 ValueTransportSystem::InternalUpdateValue(ValueTransportID, void const*, unsigned int, VariableUpdateInternalMode)
-ValueTransportSystem::InvalidateTXAll()
+ValueTransportSystem::InvalidateAll()
 ValueTransportSystem::RemoveWatch(ValueTransportID, void*)
 ValueTransportSystem::RXMessage(unsigned char*, unsigned int)
 ValueTransportSystem::SendEvent(ValueTransportID)
@@ -6042,10 +6067,13 @@ void AppPaths::Set<float>(std::__ndk1::basic_string<char, std::__ndk1::char_trai
 void AppPaths::Set<int>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, int, bool)
 void AppPaths::Set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>(AppPath, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool)
 void AppPaths::Set<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool)
+void QSVLRendererXR::SetupSwapchains(const XRQContext &, uint32_t, uint32_t, AtlasMode)
 void std::__ndk1::allocator_traits<std::__ndk1::allocator<std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)>>>::__construct<std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)>, std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)>&>(std::__ndk1::integral_constant<bool, false>, std::__ndk1::allocator<std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)>>&, std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)>*, std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)>&)
 void std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int>>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int>>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int>>>>::__assign_unique<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int>> const*>(std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int>> const*, std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int>> const*)
 void std::__ndk1::__tree_balance_after_insert<std::__ndk1::__tree_node_base<void*>*>(std::__ndk1::__tree_node_base<void*>*, std::__ndk1::__tree_node_base<void*>*)
 void std::__ndk1::__tree_remove<std::__ndk1::__tree_node_base<void*>*>(std::__ndk1::__tree_node_base<void*>*, std::__ndk1::__tree_node_base<void*>*)
+void std::__ndk1::__tree<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__assign_unique<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const*>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const*, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const*)
+void std::__ndk1::__tree<std::__ndk1::__value_type<unsigned long, std::__ndk1::vector<XrActionSuggestedBinding, std::__ndk1::allocator<XrActionSuggestedBinding>>>, std::__ndk1::__map_value_compare<unsigned long, std::__ndk1::__value_type<unsigned long, std::__ndk1::vector<XrActionSuggestedBinding, std::__ndk1::allocator<XrActionSuggestedBinding>>>, std::__ndk1::less<unsigned long>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<unsigned long, std::__ndk1::vector<XrActionSuggestedBinding, std::__ndk1::allocator<XrActionSuggestedBinding>>>>>::__assign_unique<std::__ndk1::pair<unsigned long const, std::__ndk1::vector<XrActionSuggestedBinding, std::__ndk1::allocator<XrActionSuggestedBinding>>> const*>(std::__ndk1::pair<unsigned long const, std::__ndk1::vector<XrActionSuggestedBinding, std::__ndk1::allocator<XrActionSuggestedBinding>>> const*, std::__ndk1::pair<unsigned long const, std::__ndk1::vector<XrActionSuggestedBinding, std::__ndk1::allocator<XrActionSuggestedBinding>>> const*)
 void std::__ndk1::vector<InputActionInfo, std::__ndk1::allocator<InputActionInfo>>::__emplace_back_slow_path<InputActionInfo const&>(InputActionInfo const&)
 void std::__ndk1::vector<IPSet, std::__ndk1::allocator<IPSet>>::__push_back_slow_path<IPSet const&>(IPSet const&)
 void std::__ndk1::vector<Json::OurReader::StructuredError, std::__ndk1::allocator<Json::OurReader::StructuredError>>::__push_back_slow_path<Json::OurReader::StructuredError const&>(Json::OurReader::StructuredError const&)
@@ -6056,6 +6084,7 @@ void std::__ndk1::vector<SeenServers_t, std::__ndk1::allocator<SeenServers_t>>::
 void std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__emplace_back_slow_path<char const (&) [32]>(char const (&) [32])
 void std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__emplace_back_slow_path<char const (&) [35]>(char const (&) [35])
 void std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__emplace_back_slow_path<char const (&) [36]>(char const (&) [36])
+void std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__emplace_back_slow_path<char const (&) [40]>(char const (&) [40])
 void std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__emplace_back_slow_path<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 void std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__push_back_slow_path<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 void std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__push_back_slow_path<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&&)
@@ -6416,16 +6445,18 @@ XrAppManager::BReadyToSuspend()
 [XrAppManager] Clearing app paths
 [XrAppManager] Clearing scenes...
 [XrAppManager] Completed XRQ_SHUTDOWN
+[XrAppManager] Could not find previous or new scene: %i %i. Forcing transition to dash.
 [XrAppManager] Could not find valid args, udp or tcp ip in extras
 [XrAppManager] End Suspend
 [XrAppManager] Failed to attach action sets
 [XrAppManager] Failed to attach interaction profile bindings
+[XrAppManager] Failed to find current scene! %i
+[XrAppManager] Failed to find new scene! %i
 [XrAppManager] Failed to initialize instance
 [XrAppManager] Failed to initialize scene %d
 [XrAppManager] Failed to initialize session
 [XrAppManager] Failed to load stored config to app paths!
 [XrAppManager] Failed to set play space
-[XrAppManager] Failed to transition to next scene
 XrAppManager::GetRequestedExtensions()
 XrAppManager::HandleSceneTransition(AppViewType, bool)
 XrAppManager::HandleTransitionToDash()
@@ -6450,6 +6481,7 @@ XrAppManager::SetupScenes()
 XrAppManager::Tick()
 [XrAppManager] Transitioning to activity: %s, package: %s
 [XrAppManager] Transitioning to Dash
+[XrAppManager] Will transition back to previous scene: %i
 XrAppManager::~XrAppManager()
 XrAppManager::XrAppManager()
 [XrAppManager] ~XrAppManager Complete
@@ -6507,6 +6539,8 @@ xrDestroySession
 xrDestroySession( context.session )
 xrDestroySpace
 xrDestroySwapchain
+xrDestroySwapchain( m_baseLayerSwapchains[ i ].swapchain )
+xrDestroySwapchain( m_foveatedLayerSwapchains[ i ].swapchain )
 xrEndFrame
 xrEndFrame( xrqContext.session, &frame_end_info )
 xrEndSession
@@ -6574,7 +6608,7 @@ xrInitializeLoaderKHR((XrLoaderInitInfoBaseHeaderKHR *) &init_data )
 [XRInput] Failed to get controller config file contents
 [XRInput] Failed to parse input config
 [XRInput] Loading controller config
-[XRInput] No interaction profile for %s hand specified, but hand tracking is supported so using that.
+[XRInput] No interaction profile for %s hand specified, but hand tracking is setup so using that.
 [XRInput] No static props for %s, hand: %s
 [XRInput] Offset was not specified in bindings. Using identity
 [XRInput] Unknown input type! %i
@@ -6607,14 +6641,15 @@ XRQAction::~XRQAction()
 XRQAction::XRQAction(XRQAction const&)
 XRQApp::~XRQApp()
 XRQAttachRegisteredActionSets(XRQContext&)
-XRQContext::operator=(XRQContext&&)
 XRQContext::~XRQContext()
+[XRQ] Could not setup hand tracking as hand tracking was not supported
 XRQCreateActionAndRegisterSuggestedBindings(XRQContext&, XrActionSet_T*, XRQActionCreateInfo const&, XRQAction&)
 XRQCreateAndRegisterActionSetForAttach(XRQContext&, XRQActionSetCreateInfo const&, XrActionSet_T*&)
 XRQCreateBasicQuadLayer(XRQContext const&, XRQSwapchain const&, XrCompositionLayerQuad&)
 XRQCreateBasicQuadLayer(XRQContext const&, XRQSwapchain const&, XrReferenceSpaceType, XrCompositionLayerQuad&)
 [XRQ] Created OpenXR Instance successfully
 [XRQ] Created session successfully
+XRQCreateHandTrackers(XRQContext&)
 XRQCreateProjectionViewLayer(XRQContext const&, XRQSwapchain const&, XrCompositionLayerProjectionView&)
 XRQCreateSwapchain(XRQContext const&, XRQSwapchainInfo const&, XRQSwapchain&)
 XRQCreateXRInstance(XRQApp const&, XRQContext&)
@@ -6622,6 +6657,7 @@ XRQCreateXRSession(XRQContext&)
 [XRQ] Creating hand trackers as hand tracking was supported
 XRQDestroyActionSet(XrActionSet_T*&)
 XRQDestroyAction(XRQAction&)
+XRQDestroyHandTrackers(XRQContext&)
 [XRQ] %d OpenXR Events lost before this event in queue!
 [XRQ] Enabled extensions:
 XRQEnumerateColorSpaces(XRQContext const&, std::__ndk1::vector<XrColorSpaceFB, std::__ndk1::allocator<XrColorSpaceFB>>&)
@@ -6629,6 +6665,7 @@ XRQEnumerateSupportedRefreshRates(XRQContext&, std::__ndk1::vector<float, std::_
 [XRQ] Extension %s is available and was requested
 [XRQ] Eye gaze interaction supported: %s
 [XRQ] Face tracking supported: %s
+[XRQ] Failed to destroy hand tracker (%s): %i
 [XRQ] Failed to suggest interaction profile bindings for %s with error %i. Skipping.
 [XRQ] FB Eye tracking Social supported: %s
 XRQGetEyeTracking(XRQContext&, XRQEyeVector&)
@@ -6642,7 +6679,10 @@ XRQGetSwapchainSamplerStateGLES(XRQContext const&, XRQSwapchain&, XrSwapchainSta
 XRQGetTimeNow(XRQContext const&, long&)
 XRQGetXRViewConfiguration(XrViewConfigurationType, XRQContext&)
 XRQHandleEvents(XRQContext&)
+[XRQ] Hand tracking status updated: %s
 [XRQ] Hand tracking supported: %s
+[XRQ] Hand tracking was already setup, not re-creating.
+[XRQ] Hand tracking was not setup, not destroying
 XRQIsExtensionAvailable(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 XRQIsLocationValid(unsigned long)
 XRQIsVelocityValid(unsigned long)
@@ -6682,7 +6722,6 @@ XRQSuggestRegisteredInteractionProfileBindings(XRQContext&)
 XRQSwapchain::~XRQSwapchain()
 XRQSyncRegisteredActiveActionSets(XRQContext const&)
 XRQTeardown(XRQContext&)
-[XRQ] Unable to setup hand tracking
 [XRQ] Unhandled OpenXR Event: %i
 [XRQ] Unhandled OpenXR Session state: %i
 [XRQ] Unknown xrPollEvent return: %i
@@ -6899,6 +6938,7 @@ ZN12QSVLClientXR4InitEvE3$_3
 ZN12QSVLClientXR4InitEvE3$_4
 ZN12QSVLClientXR4InitEvE3$_5
 ZN12QSVLClientXR4InitEvE3$_6
+ZN12QSVLClientXR4InitEvE3$_7
 ZN12QSVLClientXRC1ER10XRQContextR13LaunchOptionsNSt6__ndk110shared_ptrI9QSVLInputEENS5_I13QSVLDeviceHmdEENS5_I11XrUIManagerEENS4_8functionIFv15QSVLClientEventNS4_7variantIJ21QSVLClientStreamState25QSVLClientWirelessTimeoutEEEEEEE3$_0
 ZN12XrAppManager4InitER6XRQAppE3$_1
 ZN12XrAppManagerC1EvE3$_0
