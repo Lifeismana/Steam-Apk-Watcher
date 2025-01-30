@@ -5,7 +5,6 @@
 %02x\t
 032AndroidInternalStorageFileLoader
 %.0Lf
-10QSVLClient
 11QSVLXRInput
 11SVLDataLink
 11SVLFECRAID5
@@ -35,6 +34,7 @@
 -1e+9999
 1e+9999
 %1\f0123456789abcdefABCDEFxX+-pPiInN
+1X`i
 20PanelPositionerPoint
 222222
 22222\n22222
@@ -47,7 +47,7 @@
 7CThread
 7SVLRoot
 7XrScene
-8587182 
+8599876 
 8SVLAudio
 8SVLCodec
 8SVLCrypt
@@ -370,28 +370,28 @@ bool XRQDestroyAction(XRQAction &)
 bool XRQEnumerateSupportedRefreshRates(XRQContext &, std::vector<float> &)
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(const XrLoaderInitInfoBaseHeaderKHR *)]
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrEyeTrackerFB_T *, const XrEyeGazesInfoFB *, XrEyeGazesFB *)]
-bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrFaceTrackerFB_T *, const XrFaceExpressionInfoFB *, XrFaceExpressionWeightsFB *)]
+bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrFaceTracker2FB_T *, const XrFaceExpressionInfo2FB *, XrFaceExpressionWeights2FB *)]
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrInstance_T *, const timespec *, long *)]
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrInstance_T *, unsigned long, XrGraphicsRequirementsOpenGLESKHR *)]
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSession_T *, const XrEyeTrackerCreateInfoFB *, XrEyeTrackerFB_T **)]
-bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSession_T *, const XrFaceTrackerCreateInfoFB *, XrFaceTrackerFB_T **)]
+bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSession_T *, const XrFaceTrackerCreateInfo2FB *, XrFaceTracker2FB_T **)]
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSession_T *, float)]
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSession_T *, unsigned int, unsigned int *, float *)]
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSwapchain_T *, const XrSwapchainStateBaseHeaderFB *)]
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSwapchain_T *, XrSwapchainStateBaseHeaderFB *)]
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrEyeTrackerFB_T*, XrEyeGazesInfoFB const*, XrEyeGazesFB*)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrEyeTrackerFB_T*, XrEyeGazesInfoFB const*, XrEyeGazesFB*))
-bool XRQGetExtensionFromProcAddr<XrResult (*)(XrFaceTrackerFB_T*, XrFaceExpressionInfoFB const*, XrFaceExpressionWeightsFB*)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrFaceTrackerFB_T*, XrFaceExpressionInfoFB const*, XrFaceExpressionWeightsFB*))
+bool XRQGetExtensionFromProcAddr<XrResult (*)(XrFaceTracker2FB_T*, XrFaceExpressionInfo2FB const*, XrFaceExpressionWeights2FB*)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrFaceTracker2FB_T*, XrFaceExpressionInfo2FB const*, XrFaceExpressionWeights2FB*))
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrInstance_T*, timespec const*, long*)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrInstance_T*, timespec const*, long*))
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrInstance_T*, unsigned long, XrGraphicsRequirementsOpenGLESKHR*)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrInstance_T*, unsigned long, XrGraphicsRequirementsOpenGLESKHR*))
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrLoaderInitInfoBaseHeaderKHR const*)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrLoaderInitInfoBaseHeaderKHR const*))
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSession_T*, float)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSession_T*, float))
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSession_T*, unsigned int, unsigned int*, float*)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSession_T*, unsigned int, unsigned int*, float*))
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSession_T*, XrEyeTrackerCreateInfoFB const*, XrEyeTrackerFB_T**)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSession_T*, XrEyeTrackerCreateInfoFB const*, XrEyeTrackerFB_T**))
-bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSession_T*, XrFaceTrackerCreateInfoFB const*, XrFaceTrackerFB_T**)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSession_T*, XrFaceTrackerCreateInfoFB const*, XrFaceTrackerFB_T**))
+bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSession_T*, XrFaceTrackerCreateInfo2FB const*, XrFaceTracker2FB_T**)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSession_T*, XrFaceTrackerCreateInfo2FB const*, XrFaceTracker2FB_T**))
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSwapchain_T*, XrSwapchainStateBaseHeaderFB const*)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSwapchain_T*, XrSwapchainStateBaseHeaderFB const*))
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSwapchain_T*, XrSwapchainStateBaseHeaderFB*)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSwapchain_T*, XrSwapchainStateBaseHeaderFB*))
 bool XRQGetEyeTracking(XRQContext &, XRQEyeVector &)
-bool XRQGetFaceTracking(XRQContext &, XrFaceExpressionWeightsFB &)
+bool XRQGetFaceTracking(XRQContext &, XrFaceExpressionWeights2FB &)
 bool XRQGetPlayAreaBoundsRect(const XRQContext &, XrExtent2Df &)
 bool XRQGetSupportedSwapchainFormat(const XRQContext &, const int64_t, int64_t &)
 bool XRQGetSwapchainSamplerStateGLES(const XRQContext &, XRQSwapchain &, XrSwapchainStateSamplerOpenGLESFB &)
@@ -922,6 +922,7 @@ Failed to suggest interaction profile bindings for %s with error %i. Skipping.
 Failed to write file %s
 failIfExtra
 failure: env->CallObjectMethod( connectivityManager, mActiveGetNetworkInfo )\n
+failure: env->FindClass( "android/net/ConnectivityManager" )\n
 failure: env->GetMethodID( cConnectivityManager, "getActiveNetwork", "()Landroid/net/Network;" )\n
 failure: GetServiceFromSystemService( env, "connectivity" )\n
 Failure writing android_app cmd: %s\n
@@ -1033,7 +1034,10 @@ getBytes
 GetCachedFileTime
 getClass
 GetConnectedWiFiFrequencyMHzAndSSID(int*, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&)
+GetConnectedWiFiFrequencyMHzAndSSID: No cConnectionInfo
 GetConnectedWiFiFrequencyMHzAndSSID: No connection info
+GetConnectedWiFiFrequencyMHzAndSSID: No mGetFrequency
+GetConnectedWiFiFrequencyMHzAndSSID: No mGetLinkSpeed
 GetConnectedWiFiFrequencyMHzAndSSID: No wifi manager
 GetConnectedWiFiFrequencyMHz: Failed because frequency was invalid!
 getConnectionInfo
@@ -2666,6 +2670,7 @@ QSVLClient::SendPoses(int, int)
 QSVLClient::Shutdown()
 QSVLClient::Shutdown() End\n
 QSVLClient::Shutdown() Start\n
+QSVLClient::StoreAndPostHapticEvent(HapticsPacketData_t const&, bool)
 QSVLClient::UpdateFrameVariables()
 QSVLClient::UpdateFrameVariables: VTE_AVAILABLE_FRAMETIMES_US is updated
 QSVLClient::UpdateFrameVariables: VTE_CLIENT_CHAPERONE is updated
@@ -2737,6 +2742,7 @@ QSVLCodecNDK::Init: Failed to set up image reader: %i
 QSVLCodecNDK::MediaThread()
 QSVLCodecNDK::MediaThread > 300ms between frame decodes.
 QSVLCodecNDK::MediaThread: Media codec error: %zu
+QSVLCodecNDK::MediaThread: no m_codec
 QSVLCodecNDK::MediaThread: Output buffers did change
 QSVLCodecNDK::~QSVLCodecNDK()
 QSVLCodecNDK::QSVLCodecNDK(std::__ndk1::shared_ptr<QSVLFrameServer>, SVLRenderer*)
@@ -2787,11 +2793,13 @@ QSVLXRInput::GetPowerProps(QSVLControllerHand, SVLPowerProps&)
 QSVLXRInput::GetRequestedExtensions() const
 QSVLXRInput::GetStaticProps(QSVLControllerHand, SVLStaticProps&)
 QSVLXRInput::Init(XRQContext*)
-QSVLXRInput::OnHapticFeedback(QSVLControllerHand, HapticRespData_t&)
+QSVLXRInput::OnHapticFeedbackBookend(QSVLControllerHand, HapticRespData_t&)
+QSVLXRInput::OnHapticFeedback(QSVLControllerHand, float, float, float)
 QSVLXRInput::~QSVLXRInput()
 QSVLXRInput::QSVLXRInput()
 QSVLXRInput::QSVLXRInput: Loading controller config
 QSVLXRInput::SetActiveInteractionProfiles(std::__ndk1::array<unsigned long, 2ul>)
+QSVLXRInput::StopHapticFeedback(QSVLControllerHand)
 quit
 qvlclient;
 QVLLog(char const*, ...)
@@ -2857,6 +2865,7 @@ ro.arch
 ro.build.version.sdk
 romanian
 rotation
+RoundToNearestMultiple(float, int)
 RoundToPrecision(float, float)
 rrrr
 rrrrrrrrrrrr
@@ -2921,7 +2930,10 @@ SE Start Encode %d
 SE Submit Compressed Data %d
 setBackgroundColor
 setComponent
+SetCompositionLayerSettingsFlags: Normal sharpening was enabled
+SetCompositionLayerSettingsFlags: Normal super sampling was enabled
 SetCompositionLayerSettingsFlags: Quality sharpening was enabled
+SetCompositionLayerSettingsFlags: Quality Super sampling was enabled
 setContentView
 SetCurrentProcessExplicitAppUserModelID()
 set_errorcode
@@ -4702,6 +4714,7 @@ SVLDataLinkUDP::SVLDataLinkUDP(SVLRoot*, bool, std::__ndk1::basic_string<char, s
 SVLDataLinkUDP::Tick()
 SVLDataLinkUDP::XMITData(dataset*, bool, bool)
 SVLDriverLog
+SVLDriverLogVerboseOnly
 SVLEventWriteString
 SVLFEC::AcceptVideoPacket(dataset*)
 SVLFEC::ExperiencedAnUnrecoverableError()
@@ -4816,6 +4829,7 @@ SVLSpinlock
 SVLStaticProps::operator=(SVLStaticProps&&)
 SVLStaticProps::~SVLStaticProps()
 SVLWebViewThread
+SVST_HAPTICS_PACKET: Haptic event was dropped but we are restoring it
 SwapBuffers()
 Swapchains were regenerated
 swedish
@@ -5542,6 +5556,7 @@ typeinfo name for XrSceneStream
 typename 
 UDP BIND: %d CONN: %d\n
 UDP Driver\n
+Uf10QSVLClient
 ui_actions_
 UI config did not contain input object
 UI config did not contain output object
@@ -5668,6 +5683,8 @@ vfprintf
 VideoDataTXBuffer
 video/hevc
 vietnamese
+virtual bool QSVLXRInput::OnHapticFeedback(QSVLControllerHand, float, float, float)
+virtual bool QSVLXRInput::StopHapticFeedback(QSVLControllerHand)
 virtual bool XrSceneLobby::Render(XRQContext &)
 virtual bool XrSceneNoop::Render(XRQContext &)
 virtual bool XrSceneStatic::Render(XRQContext &)
@@ -5955,7 +5972,10 @@ Warning: packet received with wrong identifier. Expected 0x02...... got: %08x
 WARNING: Packet was XMITTed that was too big. [%d %d %d %d / %d]\n
 Warning: received packet ID %d in frame %d, but packet id exceeded max frame size\n
 Warning: received packet with invalid session ID (%08x/%08x/%08x)\n
-WARNING: Received SVLFECRXFrame while renderer/codec not valid.\n
+WARNING: Received SVLFECRXFrame while m_pParent->m_pRoot->m_pRender->m_pCodec not valid.\n
+WARNING: Received SVLFECRXFrame while m_pParent->m_pRoot->m_pRender not valid.\n
+WARNING: Received SVLFECRXFrame while m_pParent->m_pRoot not valid.\n
+WARNING: Received SVLFECRXFrame while m_pParent not valid.\n
 WARNING: Requested return to dash on release product, without proper launch activity, exiting.\n
 Warning: res field incorrect [clear mode] %04x\n
 Warning: res field incorrect [encryption mode] %08x on packet size %d\n
@@ -6040,6 +6060,7 @@ wwwwwwwwww#wwwwwwwwDwwwwwwwwwww
 ]xEc
 xrAcquireSwapchainImage
 xrApplyHapticFeedback
+xrApplyHapticFeedback( m_refXrqContext->session, &actionInfo, ( const XrHapticBaseHeader* ) &hapticVibration )
 ~XrAppManager()
 XrAppManager::BReadyToSuspend()
 XrAppManager::GetRequestedExtensions()
@@ -6096,8 +6117,8 @@ xrCreateActionSpace( context.session, &actionSpaceCreateInfo, &outAction.vecActi
 xrCreateActionSpace( context.session, &actionSpaceCreateInfo, &space )
 xrCreateEyeTrackerFB
 xrCreateEyeTrackerFB( context.session, &eyeTrackerCreateInfoFb, &context.eyeTracker )
-xrCreateFaceTrackerFB
-xrCreateFaceTrackerFB( context.session, &faceTrackerCreateInfoFb, &context.faceTracker )
+xrCreateFaceTracker2FB
+xrCreateFaceTracker2FB( context.session, &faceTrackerCreateInfo2Fb, &context.faceTracker )
 xrCreateInstance
 xrCreateInstance( &instance_create_info, &outContext.instance )
 xrCreateReferenceSpace
@@ -6140,6 +6161,7 @@ XR_FB_composition_layer_settings
 XR_FB_display_refresh_rate
 XR_FB_eye_tracking_social
 XR_FB_face_tracking
+XR_FB_face_tracking2
 XR_FB_render_model
 XR_FB_swapchain_update_state
 XR_FB_swapchain_update_state_opengl_es
@@ -6157,8 +6179,8 @@ xrGetCurrentInteractionProfile
 xrGetCurrentInteractionProfile( xrqContext.session, vHandSubactionPaths[ i ], &interactionProfileState )
 xrGetEyeGazesFB
 xrGetEyeGazesFB( context.eyeTracker, &gazesInfoFb, &eyeGazesFb )
-xrGetFaceExpressionWeightsFB
-xrGetFaceExpressionWeightsFB( context.faceTracker, &expressionInfoFB, &outFaceExpressionWeights )
+xrGetFaceExpressionWeights2FB
+xrGetFaceExpressionWeights2FB( context.faceTracker, &expressionInfo2FB, &outFaceExpressionWeights )
 xrGetInstanceProcAddr
 xrGetInstanceProcAddr( context.instance, proc_addr.c_str(), (PFN_xrVoidFunction *) &out )
 xrGetOpenGLESGraphicsRequirementsKHR
@@ -6220,7 +6242,7 @@ XRQDestroyActionSet(XrActionSet_T*&)
 XRQDestroyAction(XRQAction&)
 XRQEnumerateSupportedRefreshRates(XRQContext&, std::__ndk1::vector<float, std::__ndk1::allocator<float>>&)
 XRQGetEyeTracking(XRQContext&, XRQEyeVector&)
-XRQGetFaceTracking(XRQContext&, XrFaceExpressionWeightsFB&)
+XRQGetFaceTracking(XRQContext&, XrFaceExpressionWeights2FB&)
 XRQGetHandSubactionPaths(XRQContext const&, XRQHand, std::__ndk1::vector<unsigned long, std::__ndk1::allocator<unsigned long>>&)
 XRQGetPlayAreaBoundsRect(XRQContext const&, XrExtent2Df&)
 XRQGetReferenceSpace(XRQContext const&, XrReferenceSpaceType, XrSpace_T*&)
@@ -6389,6 +6411,8 @@ XrSceneStream::XrSceneStream(std::__ndk1::function<void (SceneEvent)>)
 XrSceneStream::~XrSceneStream() Threads Joined
 XrScene::UnFocused(XRQContext&)
 XrScene::~XrScene()
+xrStopHapticFeedback
+xrStopHapticFeedback(m_refXrqContext->session, &actionInfo)
 xrStringToPath
 xrStringToPath( context.instance, "/user/hand/left", &result )
 xrStringToPath( context.instance, "/user/hand/right", &result )
