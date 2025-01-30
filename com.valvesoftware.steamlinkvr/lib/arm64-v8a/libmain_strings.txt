@@ -468,6 +468,7 @@ _1-0jX
 %10s %512s %u %10s %512s %u "%64[^"]" %u %u
 1!1'1-191C1E1K1]1a1g1m1s1
   ##%%&&))**,,//1122447788;;==>>@@CCEEFFIIJJLLOOQQRRTTWWXX[[]]^^aabbddgghhkkmmnnppssuuvvyyzz||
+1161111
 11CAudioChunk
 11CAudioFrame
 11CDummyFrame
@@ -500,15 +501,18 @@ _1-0jX
 12CDynamicFuncIPF27SDL_JoystickConnectionStateP11SDL_GamepadEE
 12CDynamicFuncIPF8SDL_GUIDjEE
 12CDynamicFuncIPF8SDL_GUIDP12SDL_JoystickEE
-12CDynamicFuncIPFijEE
-12CDynamicFuncIPFijPKciEE
-12CDynamicFuncIPFiP11SDL_Gamepad14SDL_SensorTypeEE
-12CDynamicFuncIPFiP11SDL_Gamepad14SDL_SensorTypeiEE
-12CDynamicFuncIPFiP11SDL_GamepadEE
-12CDynamicFuncIPFiP11SDL_GamepadhhhEE
-12CDynamicFuncIPFiP11SDL_GamepadiEE
-12CDynamicFuncIPFiP11SDL_GamepadPKviEE
-12CDynamicFuncIPFiP11SDL_GamepadttjEE
+12CDynamicFuncIPFbjEE
+12CDynamicFuncIPFbjPKcbEE
+12CDynamicFuncIPFbP11SDL_Gamepad14SDL_SensorTypebEE
+12CDynamicFuncIPFbP11SDL_Gamepad14SDL_SensorTypeEE
+12CDynamicFuncIPFbP11SDL_GamepadEE
+12CDynamicFuncIPFbP11SDL_GamepadhhhEE
+12CDynamicFuncIPFbP11SDL_GamepadiEE
+12CDynamicFuncIPFbP11SDL_GamepadPKviEE
+12CDynamicFuncIPFbP11SDL_GamepadttjEE
+12CDynamicFuncIPFbP12SDL_JoystickEE
+12CDynamicFuncIPFbPFbPvP9SDL_EventES0_EE
+12CDynamicFuncIPFbPKcS1_EE
 12CDynamicFuncIPFiP12SDL_JoystickEE
 12CDynamicFuncIPFiP14SDL_hid_deviceEE
 12CDynamicFuncIPFiP14SDL_hid_deviceiEE
@@ -516,8 +520,6 @@ _1-0jX
 12CDynamicFuncIPFiP14SDL_hid_devicePhmiEE
 12CDynamicFuncIPFiP14SDL_hid_devicePKhmEE
 12CDynamicFuncIPFiP14SDL_hid_devicePwmEE
-12CDynamicFuncIPFiPFiPvP9SDL_EventES0_EE
-12CDynamicFuncIPFiPKcS1_EE
 12CDynamicFuncIPFivEE
 12CDynamicFuncIPFjP11SDL_GamepadEE
 12CDynamicFuncIPFjP12SDL_JoystickEE
@@ -542,7 +544,7 @@ _1-0jX
 12CDynamicFuncIPFvP11SDL_GamepadEE
 12CDynamicFuncIPFvP12SDL_JoystickEE
 12CDynamicFuncIPFvP19SDL_hid_device_infoEE
-12CDynamicFuncIPFvPFiPvP9SDL_EventES0_EE
+12CDynamicFuncIPFvPFbPvP9SDL_EventES0_EE
 12CDynamicFuncIPFvPvEE
 12CDynamicFuncIPFvvEE
 12CMiniProfile
@@ -614,6 +616,7 @@ _13zi
 16CInputKeyDownMsg
 16CInputMouseUpMsg
 16CMsgICECandidate
+16CMsgTOSTreatment
 16COverlayKeyboard
 16COverlayRenderer
 16CSetGammaRampMsg
@@ -765,6 +768,7 @@ _13zi
 1+JH
 ((1Jh
 1}JK
+1JQ"20CHIDDeviceSDLGamepad
 1j\ri
 &1j@U
 1jY:
@@ -1742,6 +1746,7 @@ _3zB
 (3zg
 3zmd\v
 3ZX1
+&<<<<<<<<<<<4
 %4$32
 4&'$54632
 4&$'&546632
@@ -2745,7 +2750,6 @@ _7)APNB
 7g~ED
 7]Gg
 7,gm;
-)7?GOW_gx
 7Gwu
 7G/Y
 7;hC
@@ -4126,7 +4130,6 @@ anchor
 anchor_x
 anchor_y
 "A\n+CMsgRemoteClientBroadcastClientIDDeconflict
-"A\n(CMsgSteamDatagramClientPingSampleRequest
 an conectar un control.
 android
 Android (5900059 based on r365631c) clang version 9.0.8 (https://android.googlesource.com/toolchain/llvm-project 207d7abc1a2abf3ef8d4301736d6a7ebc224a290) (based on LLVM 9.0.8svn)
@@ -4916,7 +4919,6 @@ b1Ne}
 (b,1nI
 -B1#UY
 `B1Y
-;B20CHIDDeviceSDLGamepad
 B-233
 b26n
 B-283
@@ -6210,27 +6212,29 @@ cancel_pairing_response
 candidate:
 candidate:%u 0 udp %u %s %d typ %s
 canDisplay4KVideo
+canDisplayHDRVideo
 CAndroidAccel::BDecodeFrame(unsigned short, unsigned int, IStreamDataBuffers*, IVideoFrame**, EStreamFrameResult*)
 CAndroidAccel::BInit()
+CAndroidAccel::BIsAV1Available()
 CAndroidAccel::BIsHEVCAvailable()
 CAndroidAccel::~CAndroidAccel()
-CAndroidAccel::CAndroidAccel(CStreamClient*, int, int, bool)
+CAndroidAccel::CAndroidAccel(CStreamClient*, int, int, EStreamVideoCodec)
 CAndroidAccel::GetInfo(CUtlString*)
 CAndroidAccel::Quit()
 CAndroidAccel::ReleaseFrame(IVideoFrame*)
 CAndroidAccel::RenderFrame(IVideoFrame*, int, int, int, int, int, int, int, int)
 CAndroidFrame::~CAndroidFrame()
 CAndroidVideoDecoder::BCreateDecoder()
-CAndroidVideoDecoder::BCreateDecoder(int, int, char const*)
+CAndroidVideoDecoder::BCreateDecoder(int, int, EStreamVideoCodec)
 CAndroidVideoDecoder::BGetLowLatencyOptions(AMediaCodec*, AMediaFormat*, int)
 CAndroidVideoDecoder::BHandleOutputBuffer(long, bool)
-CAndroidVideoDecoder::BInit(IVideoAccel*, int, int, char const*)
+CAndroidVideoDecoder::BInit(IVideoAccel*, int, int, EStreamVideoCodec)
 CAndroidVideoDecoder::BInitJNI()
 CAndroidVideoDecoder::BRenderFrame(IVideoFrame*, int, int, int, int, int, int, int, int)
 CAndroidVideoDecoder::BRenderFrameTexture(IVideoFrame*, int, int, int, int, int, int, int, int)
 CAndroidVideoDecoder::BRenderFrameVideoSurface(IVideoFrame*, int, int, int, int, int, int, int, int)
 CAndroidVideoDecoder::BSubmitFrame(IStreamDataBuffers*, CAndroidFrame*)
-CAndroidVideoDecoder::BUpdateDecoder(AMediaCodec*, char const*, int, int)
+CAndroidVideoDecoder::BUpdateDecoder(AMediaCodec*, int, int)
 CAndroidVideoDecoder::BUpdateParams(CUtlBuffer&)
 CAndroidVideoDecoder::~CAndroidVideoDecoder()
 CAndroidVideoDecoder::CAndroidVideoDecoder(CStreamClient*)
@@ -6462,7 +6466,6 @@ cbNewSize > len( lane.m_bufReliableStream )
 CbnW
 cbPending > 0
 cbPendingReliable == m_cbPendingReliable
-cbPkt >= 1
 cbPkt == int( sizeof(*hdr) + nMsgLength )
 cbPkt == pEnd - pkt
 cbPkt <= sizeof(m_pkt)
@@ -7081,6 +7084,54 @@ CDummyFrame::GetFrameDataSize() const
 CDummyFrame::GetFrameID()
 CDummyFrame::GetFrameTimestamp()
 CDummyFrame::SetFrame(unsigned short, unsigned int)
+CDynamicFunc<bool (*)(bool (*)(void*, SDL_Event*), void*)>::GetNextPointer()
+CDynamicFunc<bool (*)(bool (*)(void*, SDL_Event*), void*)>::Init(CSysModule*)
+CDynamicFunc<bool (*)(bool (*)(void*, SDL_Event*), void*)>::Release()
+CDynamicFunc<bool (*)(bool (*)(void*, SDL_Event*), void*)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<bool (*)(char const*, char const*)>::GetNextPointer()
+CDynamicFunc<bool (*)(char const*, char const*)>::Init(CSysModule*)
+CDynamicFunc<bool (*)(char const*, char const*)>::Release()
+CDynamicFunc<bool (*)(char const*, char const*)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<bool (*)(SDL_Gamepad*)>::GetNextPointer()
+CDynamicFunc<bool (*)(SDL_Gamepad*)>::Init(CSysModule*)
+CDynamicFunc<bool (*)(SDL_Gamepad*, int)>::GetNextPointer()
+CDynamicFunc<bool (*)(SDL_Gamepad*, int)>::Init(CSysModule*)
+CDynamicFunc<bool (*)(SDL_Gamepad*, int)>::Release()
+CDynamicFunc<bool (*)(SDL_Gamepad*, int)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<bool (*)(SDL_Gamepad*)>::Release()
+CDynamicFunc<bool (*)(SDL_Gamepad*, SDL_SensorType, bool)>::GetNextPointer()
+CDynamicFunc<bool (*)(SDL_Gamepad*, SDL_SensorType, bool)>::Init(CSysModule*)
+CDynamicFunc<bool (*)(SDL_Gamepad*, SDL_SensorType, bool)>::Release()
+CDynamicFunc<bool (*)(SDL_Gamepad*, SDL_SensorType, bool)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<bool (*)(SDL_Gamepad*, SDL_SensorType)>::GetNextPointer()
+CDynamicFunc<bool (*)(SDL_Gamepad*, SDL_SensorType)>::Init(CSysModule*)
+CDynamicFunc<bool (*)(SDL_Gamepad*, SDL_SensorType)>::Release()
+CDynamicFunc<bool (*)(SDL_Gamepad*, SDL_SensorType)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<bool (*)(SDL_Gamepad*)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<bool (*)(SDL_Gamepad*, unsigned char, unsigned char, unsigned char)>::GetNextPointer()
+CDynamicFunc<bool (*)(SDL_Gamepad*, unsigned char, unsigned char, unsigned char)>::Init(CSysModule*)
+CDynamicFunc<bool (*)(SDL_Gamepad*, unsigned char, unsigned char, unsigned char)>::Release()
+CDynamicFunc<bool (*)(SDL_Gamepad*, unsigned char, unsigned char, unsigned char)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<bool (*)(SDL_Gamepad*, unsigned short, unsigned short, unsigned int)>::GetNextPointer()
+CDynamicFunc<bool (*)(SDL_Gamepad*, unsigned short, unsigned short, unsigned int)>::Init(CSysModule*)
+CDynamicFunc<bool (*)(SDL_Gamepad*, unsigned short, unsigned short, unsigned int)>::Release()
+CDynamicFunc<bool (*)(SDL_Gamepad*, unsigned short, unsigned short, unsigned int)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<bool (*)(SDL_Gamepad*, void const*, int)>::GetNextPointer()
+CDynamicFunc<bool (*)(SDL_Gamepad*, void const*, int)>::Init(CSysModule*)
+CDynamicFunc<bool (*)(SDL_Gamepad*, void const*, int)>::Release()
+CDynamicFunc<bool (*)(SDL_Gamepad*, void const*, int)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<bool (*)(SDL_Joystick*)>::GetNextPointer()
+CDynamicFunc<bool (*)(SDL_Joystick*)>::Init(CSysModule*)
+CDynamicFunc<bool (*)(SDL_Joystick*)>::Release()
+CDynamicFunc<bool (*)(SDL_Joystick*)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<bool (*)(unsigned int, char const*, bool)>::GetNextPointer()
+CDynamicFunc<bool (*)(unsigned int, char const*, bool)>::Init(CSysModule*)
+CDynamicFunc<bool (*)(unsigned int, char const*, bool)>::Release()
+CDynamicFunc<bool (*)(unsigned int, char const*, bool)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<bool (*)(unsigned int)>::GetNextPointer()
+CDynamicFunc<bool (*)(unsigned int)>::Init(CSysModule*)
+CDynamicFunc<bool (*)(unsigned int)>::Release()
+CDynamicFunc<bool (*)(unsigned int)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunc<char const* (*)()>::GetNextPointer()
 CDynamicFunc<char const* (*)()>::Init(CSysModule*)
 CDynamicFunc<char const* (*)()>::Release()
@@ -7113,45 +7164,9 @@ CDynamicFunc<char* (*)(unsigned int)>::GetNextPointer()
 CDynamicFunc<char* (*)(unsigned int)>::Init(CSysModule*)
 CDynamicFunc<char* (*)(unsigned int)>::Release()
 CDynamicFunc<char* (*)(unsigned int)>::SetNextPointer(IDynamicFunction*)
-CDynamicFunc<int (*)(char const*, char const*)>::GetNextPointer()
-CDynamicFunc<int (*)(char const*, char const*)>::Init(CSysModule*)
-CDynamicFunc<int (*)(char const*, char const*)>::Release()
-CDynamicFunc<int (*)(char const*, char const*)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunc<int (*)()>::GetNextPointer()
 CDynamicFunc<int (*)()>::Init(CSysModule*)
-CDynamicFunc<int (*)(int (*)(void*, SDL_Event*), void*)>::GetNextPointer()
-CDynamicFunc<int (*)(int (*)(void*, SDL_Event*), void*)>::Init(CSysModule*)
-CDynamicFunc<int (*)(int (*)(void*, SDL_Event*), void*)>::Release()
-CDynamicFunc<int (*)(int (*)(void*, SDL_Event*), void*)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunc<int (*)()>::Release()
-CDynamicFunc<int (*)(SDL_Gamepad*)>::GetNextPointer()
-CDynamicFunc<int (*)(SDL_Gamepad*)>::Init(CSysModule*)
-CDynamicFunc<int (*)(SDL_Gamepad*, int)>::GetNextPointer()
-CDynamicFunc<int (*)(SDL_Gamepad*, int)>::Init(CSysModule*)
-CDynamicFunc<int (*)(SDL_Gamepad*, int)>::Release()
-CDynamicFunc<int (*)(SDL_Gamepad*, int)>::SetNextPointer(IDynamicFunction*)
-CDynamicFunc<int (*)(SDL_Gamepad*)>::Release()
-CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType)>::GetNextPointer()
-CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType)>::Init(CSysModule*)
-CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType, int)>::GetNextPointer()
-CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType, int)>::Init(CSysModule*)
-CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType, int)>::Release()
-CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType, int)>::SetNextPointer(IDynamicFunction*)
-CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType)>::Release()
-CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType)>::SetNextPointer(IDynamicFunction*)
-CDynamicFunc<int (*)(SDL_Gamepad*)>::SetNextPointer(IDynamicFunction*)
-CDynamicFunc<int (*)(SDL_Gamepad*, unsigned char, unsigned char, unsigned char)>::GetNextPointer()
-CDynamicFunc<int (*)(SDL_Gamepad*, unsigned char, unsigned char, unsigned char)>::Init(CSysModule*)
-CDynamicFunc<int (*)(SDL_Gamepad*, unsigned char, unsigned char, unsigned char)>::Release()
-CDynamicFunc<int (*)(SDL_Gamepad*, unsigned char, unsigned char, unsigned char)>::SetNextPointer(IDynamicFunction*)
-CDynamicFunc<int (*)(SDL_Gamepad*, unsigned short, unsigned short, unsigned int)>::GetNextPointer()
-CDynamicFunc<int (*)(SDL_Gamepad*, unsigned short, unsigned short, unsigned int)>::Init(CSysModule*)
-CDynamicFunc<int (*)(SDL_Gamepad*, unsigned short, unsigned short, unsigned int)>::Release()
-CDynamicFunc<int (*)(SDL_Gamepad*, unsigned short, unsigned short, unsigned int)>::SetNextPointer(IDynamicFunction*)
-CDynamicFunc<int (*)(SDL_Gamepad*, void const*, int)>::GetNextPointer()
-CDynamicFunc<int (*)(SDL_Gamepad*, void const*, int)>::Init(CSysModule*)
-CDynamicFunc<int (*)(SDL_Gamepad*, void const*, int)>::Release()
-CDynamicFunc<int (*)(SDL_Gamepad*, void const*, int)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunc<int (*)(SDL_hid_device*)>::GetNextPointer()
 CDynamicFunc<int (*)(SDL_hid_device*)>::Init(CSysModule*)
 CDynamicFunc<int (*)(SDL_hid_device*, int)>::GetNextPointer()
@@ -7181,14 +7196,6 @@ CDynamicFunc<int (*)(SDL_Joystick*)>::Init(CSysModule*)
 CDynamicFunc<int (*)(SDL_Joystick*)>::Release()
 CDynamicFunc<int (*)(SDL_Joystick*)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunc<int (*)()>::SetNextPointer(IDynamicFunction*)
-CDynamicFunc<int (*)(unsigned int, char const*, int)>::GetNextPointer()
-CDynamicFunc<int (*)(unsigned int, char const*, int)>::Init(CSysModule*)
-CDynamicFunc<int (*)(unsigned int, char const*, int)>::Release()
-CDynamicFunc<int (*)(unsigned int, char const*, int)>::SetNextPointer(IDynamicFunction*)
-CDynamicFunc<int (*)(unsigned int)>::GetNextPointer()
-CDynamicFunc<int (*)(unsigned int)>::Init(CSysModule*)
-CDynamicFunc<int (*)(unsigned int)>::Release()
-CDynamicFunc<int (*)(unsigned int)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunc<SDL_GamepadButtonLabel (*)(SDL_GamepadType, SDL_GamepadButton)>::GetNextPointer()
 CDynamicFunc<SDL_GamepadButtonLabel (*)(SDL_GamepadType, SDL_GamepadButton)>::Init(CSysModule*)
 CDynamicFunc<SDL_GamepadButtonLabel (*)(SDL_GamepadType, SDL_GamepadButton)>::Release()
@@ -7270,12 +7277,12 @@ CDynamicFunc<unsigned short (*)(unsigned int)>::GetNextPointer()
 CDynamicFunc<unsigned short (*)(unsigned int)>::Init(CSysModule*)
 CDynamicFunc<unsigned short (*)(unsigned int)>::Release()
 CDynamicFunc<unsigned short (*)(unsigned int)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<void (*)(bool (*)(void*, SDL_Event*), void*)>::GetNextPointer()
+CDynamicFunc<void (*)(bool (*)(void*, SDL_Event*), void*)>::Init(CSysModule*)
+CDynamicFunc<void (*)(bool (*)(void*, SDL_Event*), void*)>::Release()
+CDynamicFunc<void (*)(bool (*)(void*, SDL_Event*), void*)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunc<void (*)()>::GetNextPointer()
 CDynamicFunc<void (*)()>::Init(CSysModule*)
-CDynamicFunc<void (*)(int (*)(void*, SDL_Event*), void*)>::GetNextPointer()
-CDynamicFunc<void (*)(int (*)(void*, SDL_Event*), void*)>::Init(CSysModule*)
-CDynamicFunc<void (*)(int (*)(void*, SDL_Event*), void*)>::Release()
-CDynamicFunc<void (*)(int (*)(void*, SDL_Event*), void*)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunc<void (*)()>::Release()
 CDynamicFunc<void (*)(SDL_Gamepad*)>::GetNextPointer()
 CDynamicFunc<void (*)(SDL_Gamepad*)>::Init(CSysModule*)
@@ -8993,6 +9000,7 @@ ckojR
 C\kR
 {cKS
 cKsC
+-;CKS[ck|
 cksetzen
 .c-kT
 CK-Taste gedr
@@ -9383,6 +9391,7 @@ CMsgICERendezvous::MergeFrom(google::protobuf::Message const&)
 CMsgICERendezvous::New() const
 CMsgICERendezvous::New(google::protobuf::Arena*) const
 CMsgICERendezvous::SetCachedSize(int) const
+__cmsg_nxthdr
 CMsgRemoteClientBroadcastClientIDDeconflict::ByteSizeLong() const
 CMsgRemoteClientBroadcastClientIDDeconflict::Clear()
 CMsgRemoteClientBroadcastClientIDDeconflict::~CMsgRemoteClientBroadcastClientIDDeconflict()
@@ -9929,6 +9938,7 @@ CMsgSteamDatagramClientPingSampleReply::InitAsDefaultInstance()
 CMsgSteamDatagramClientPingSampleReply::_InternalParse(char const*, google::protobuf::internal::ParseContext*)
 CMsgSteamDatagramClientPingSampleReply::_InternalSerialize(unsigned char*, google::protobuf::io::EpsCopyOutputStream*) const
 CMsgSteamDatagramClientPingSampleReply::InternalSwap(CMsgSteamDatagramClientPingSampleReply*)
+CMsgSteamDatagramClientPingSampleReply::_Internal::tos(CMsgSteamDatagramClientPingSampleReply const*)
 CMsgSteamDatagramClientPingSampleReply::IsInitialized() const
 CMsgSteamDatagramClientPingSampleReply_LegacyDataCenter::ByteSizeLong() const
 CMsgSteamDatagramClientPingSampleReply_LegacyDataCenter::Clear()
@@ -11267,7 +11277,6 @@ CMsgSteamNetworkingIdentityLegacyBinary::New(google::protobuf::Arena*) const
 CMsgSteamNetworkingIdentityLegacyBinary::SetCachedSize(int) const
 CMsgSteamNetworkingIdentityLegacyBinary::set_generic_bytes(void const*, unsigned long)
 CMsgSteamNetworkingIdentityLegacyBinary::set_generic_string(char const*)
-CMsgSteamNetworkingIdentityLegacyBinary::set_xbox_pairwise_id(char const*)
 CMsgSteamNetworkingIdentityLegacyBinary::SharedDtor()
 .CMsgSteamNetworkingIPAddress
 CMsgSteamNetworkingIPAddress
@@ -11646,6 +11655,31 @@ CMsgSteamSockets_UDP_Stats::New() const
 CMsgSteamSockets_UDP_Stats::New(google::protobuf::Arena*) const
 CMsgSteamSockets_UDP_Stats::NOT_PRIMARY_TRANSPORT_E2E
 CMsgSteamSockets_UDP_Stats::SetCachedSize(int) const
+.CMsgTOSTreatment
+CMsgTOSTreatment
+CMsgTOSTreatment::ByteSizeLong() const
+CMsgTOSTreatment::Clear()
+CMsgTOSTreatment::~CMsgTOSTreatment()
+CMsgTOSTreatment::CMsgTOSTreatment()
+CMsgTOSTreatment::CMsgTOSTreatment(CMsgTOSTreatment const&)
+CMsgTOSTreatment::CopyFrom(CMsgTOSTreatment const&)
+CMsgTOSTreatment::CopyFrom(google::protobuf::Message const&)
+_CMsgTOSTreatment_default_instance_
+CMsgTOSTreatment::default_instance()
+CMsgTOSTreatment::GetCachedSize() const
+CMsgTOSTreatment::GetMetadata() const
+CMsgTOSTreatment* google::protobuf::Arena::CreateMaybeMessage<CMsgTOSTreatment>(google::protobuf::Arena*)
+CMsgTOSTreatment::InitAsDefaultInstance()
+CMsgTOSTreatment::_InternalParse(char const*, google::protobuf::internal::ParseContext*)
+CMsgTOSTreatment::_InternalSerialize(unsigned char*, google::protobuf::io::EpsCopyOutputStream*) const
+CMsgTOSTreatment::InternalSwap(CMsgTOSTreatment*)
+CMsgTOSTreatment::IsInitialized() const
+CMsgTOSTreatment::MergeFrom(CMsgTOSTreatment const&)
+CMsgTOSTreatment::MergeFrom(google::protobuf::Message const&)
+CMsgTOSTreatment::New() const
+CMsgTOSTreatment::New(google::protobuf::Arena*) const
+CMsgTOSTreatment::SetCachedSize(int) const
+CMsgTOSTreatment::SharedDtor()
 CMS_IssuerAndSerialNumber
 CMS_KEKIdentifier
 CMS_KEKRecipientInfo
@@ -12765,7 +12799,6 @@ CPauseMsg::New(google::protobuf::Arena*) const
 CPauseMsg::SetCachedSize(int) const
 cP&[B
 cPCGff
-CPercentileGenerator<int, 1000>::GetPercentile(float) const
 CPercentileGenerator<unsigned char, 1000>::GetPercentile(float) const
 CPercentileGenerator<unsigned short, 1000>::GetPercentile(float) const
 cpEV
@@ -15593,9 +15626,6 @@ CStreamClient::OnStreamUnconnectedPacket(CStreamConnection*, CStreamPacket*)
 CStreamClient::OnSystemSuspend(CStreamFrame&)
 CStreamClient::OnThink()
 CStreamClient::OnToggleMagnification(CStreamFrame&)
-CStreamClient::OnTouchActionSetActive(CStreamFrame&)
-CStreamClient::OnTouchActionSetLayerAdded(CStreamFrame&)
-CStreamClient::OnTouchActionSetLayerRemoved(CStreamFrame&)
 CStreamClient::OnTouchConfigActive(CStreamFrame&)
 CStreamClient::OnVideoEncoderInfo(CStreamFrame&)
 CStreamClient::OnVirtualHereReady(CStreamFrame&)
@@ -15758,9 +15788,9 @@ CStreamDecoderH264::AppendBuffer(CStreamDecoderVideo::PartialFrame_t&)
 CStreamDecoderH264::~CStreamDecoderH264()
 CStreamDecoderH264::CStreamDecoderH264(CStreamClient*, IStreamPlayer*)
 CStreamDecoderH264Standalone
-CStreamDecoderH264Standalone::BAvailable(bool)
+CStreamDecoderH264Standalone::BAvailable(EStreamVideoCodec)
 CStreamDecoderH264Standalone::~CStreamDecoderH264Standalone()
-CStreamDecoderH264Standalone::CStreamDecoderH264Standalone(CStreamClient*, IStreamPlayer*, bool)
+CStreamDecoderH264Standalone::CStreamDecoderH264Standalone(CStreamClient*, IStreamPlayer*, EStreamVideoCodec)
 CStreamDecoderH264Standalone::DisableProtectedContent()
 CStreamDecoderH264Standalone::EnableProtectedContent()
 CStreamDecoderH264Standalone::FinalDecode(unsigned short, unsigned int, IStreamDataBuffers*)
@@ -15788,6 +15818,7 @@ CStreamDecoderRawVideo::CStreamDecoderRawVideo(CStreamClient*, IStreamPlayer*)
 CStreamDecoderRawVideo::DecodeFrame(CStreamFrame&)
 CStreamDecoderRawVideo::GetName()
 CStreamDecoderVideo::AppendBuffer(CStreamDecoderVideo::PartialFrame_t&)
+CStreamDecoderVideo::CheckContentMode(bool)
 CStreamDecoderVideo::CheckOverflow()
 CStreamDecoderVideo::~CStreamDecoderVideo()
 CStreamDecoderVideo::CStreamDecoderVideo(CStreamClient*, IStreamPlayer*)
@@ -16325,9 +16356,6 @@ CStreamPlayer::SetTargetBitrate(int)
 CStreamPlayer::SetTargetFramerate(unsigned int, unsigned int, int)
 CStreamPlayer::SetTextColor(unsigned char, unsigned char, unsigned char)
 CStreamPlayer::SetTitle(char const*)
-CStreamPlayer::SetTouchActionSetLayerAdded(unsigned int, int)
-CStreamPlayer::SetTouchActionSetLayerRemoved(unsigned int, int)
-CStreamPlayer::SetTouchActionSet(unsigned int, int)
 CStreamPlayer::SetTouchActionState(CStreamPlayer::ETouchActionState)
 CStreamPlayer::SetTouchConfigData(unsigned int, unsigned long long, unsigned int, CUtlBuffer const&, CUtlBuffer const&)
 CStreamPlayer::SetTouchConfig(unsigned int, unsigned long long, unsigned int)
@@ -17080,11 +17108,11 @@ CUtlHashMap<CUtlString, std::__ndk1::function<COverlayElement* (IOverlayRenderer
 CUtlHashMap<CUtlString, std::__ndk1::function<COverlayElement* (IOverlayRenderer*, COverlayElement*)>, CDefCaselessStringEquals, HashFunctorUtlStringCaseless, CUtlString>::Find(CUtlString const&) const
 CUtlHashMap<CUtlString, std::__ndk1::function<COverlayElement* (IOverlayRenderer*, COverlayElement*)>, CDefCaselessStringEquals, HashFunctorUtlStringCaseless, CUtlString>::IncrementalRehash()
 CUtlHashMap<CUtlString, std::__ndk1::function<COverlayElement* (IOverlayRenderer*, COverlayElement*)>, CDefCaselessStringEquals, HashFunctorUtlStringCaseless, CUtlString>::Purge()
-CUtlHashMap<CUtlString, _TTF_Font*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::~CUtlHashMap()
-CUtlHashMap<CUtlString, _TTF_Font*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::EnsureCapacity(int)
-CUtlHashMap<CUtlString, _TTF_Font*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::Find(StringView const&) const
-CUtlHashMap<CUtlString, _TTF_Font*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::IncrementalRehash()
-CUtlHashMap<CUtlString, _TTF_Font*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::Purge()
+CUtlHashMap<CUtlString, TTF_Font*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::~CUtlHashMap()
+CUtlHashMap<CUtlString, TTF_Font*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::EnsureCapacity(int)
+CUtlHashMap<CUtlString, TTF_Font*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::Find(StringView const&) const
+CUtlHashMap<CUtlString, TTF_Font*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::IncrementalRehash()
+CUtlHashMap<CUtlString, TTF_Font*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::Purge()
 CUtlHashMap<int, COverlayElement::ImageData_t*, CDefEquals<int>, HashFunctor<int>, int>::~CUtlHashMap()
 CUtlHashMap<int, COverlayElement::ImageData_t*, CDefEquals<int>, HashFunctor<int>, int>::EnsureCapacity(int)
 CUtlHashMap<int, COverlayElement::ImageData_t*, CDefEquals<int>, HashFunctor<int>, int>::IncrementalRehash()
@@ -17266,10 +17294,10 @@ CUtlMemory<CUtlHashMap<CUtlString, std::__ndk1::function<COverlayElement* (IOver
 CUtlMemory<CUtlHashMap<CUtlString, std::__ndk1::function<COverlayElement* (IOverlayRenderer*, COverlayElement*)>, CDefCaselessStringEquals, HashFunctorUtlStringCaseless, CUtlString>::Node_t>::~CUtlMemory()
 CUtlMemory<CUtlHashMap<CUtlString, std::__ndk1::function<COverlayElement* (IOverlayRenderer*, COverlayElement*)>, CDefCaselessStringEquals, HashFunctorUtlStringCaseless, CUtlString>::Node_t>::EnsureCapacity(int)
 CUtlMemory<CUtlHashMap<CUtlString, std::__ndk1::function<COverlayElement* (IOverlayRenderer*, COverlayElement*)>, CDefCaselessStringEquals, HashFunctorUtlStringCaseless, CUtlString>::Node_t>::Grow(int)
-CUtlMemory<CUtlHashMap<CUtlString, _TTF_Font*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::HashBucket_t>::Grow(int)
-CUtlMemory<CUtlHashMap<CUtlString, _TTF_Font*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::Node_t>::~CUtlMemory()
-CUtlMemory<CUtlHashMap<CUtlString, _TTF_Font*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::Node_t>::EnsureCapacity(int)
-CUtlMemory<CUtlHashMap<CUtlString, _TTF_Font*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::Node_t>::Grow(int)
+CUtlMemory<CUtlHashMap<CUtlString, TTF_Font*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::HashBucket_t>::Grow(int)
+CUtlMemory<CUtlHashMap<CUtlString, TTF_Font*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::Node_t>::~CUtlMemory()
+CUtlMemory<CUtlHashMap<CUtlString, TTF_Font*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::Node_t>::EnsureCapacity(int)
+CUtlMemory<CUtlHashMap<CUtlString, TTF_Font*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::Node_t>::Grow(int)
 CUtlMemory<CUtlHashMap<int, COverlayElement::ImageData_t*, CDefEquals<int>, HashFunctor<int>, int>::HashBucket_t>::Grow(int)
 CUtlMemory<CUtlHashMap<int, COverlayElement::ImageData_t*, CDefEquals<int>, HashFunctor<int>, int>::Node_t>::~CUtlMemory()
 CUtlMemory<CUtlHashMap<int, COverlayElement::ImageData_t*, CDefEquals<int>, HashFunctor<int>, int>::Node_t>::EnsureCapacity(int)
@@ -17529,7 +17557,7 @@ CUtlVector<CUtlHashMap<CUtlString, COverlayElementFactory::OverlayElementTemplat
 CUtlVector<CUtlHashMap<CUtlString, CUtlBuffer*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, CUtlBuffer*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::HashBucket_t>>::~CUtlVector()
 CUtlVector<CUtlHashMap<CUtlString, CUtlString, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, CUtlString, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::HashBucket_t>>::~CUtlVector()
 CUtlVector<CUtlHashMap<CUtlString, std::__ndk1::function<COverlayElement* (IOverlayRenderer*, COverlayElement*)>, CDefCaselessStringEquals, HashFunctorUtlStringCaseless, CUtlString>::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, std::__ndk1::function<COverlayElement* (IOverlayRenderer*, COverlayElement*)>, CDefCaselessStringEquals, HashFunctorUtlStringCaseless, CUtlString>::HashBucket_t>>::~CUtlVector()
-CUtlVector<CUtlHashMap<CUtlString, _TTF_Font*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, _TTF_Font*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::HashBucket_t>>::~CUtlVector()
+CUtlVector<CUtlHashMap<CUtlString, TTF_Font*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, TTF_Font*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::HashBucket_t>>::~CUtlVector()
 CUtlVector<CUtlHashMap<int, COverlayElement::ImageData_t*, CDefEquals<int>, HashFunctor<int>, int>::HashBucket_t, CUtlMemory<CUtlHashMap<int, COverlayElement::ImageData_t*, CDefEquals<int>, HashFunctor<int>, int>::HashBucket_t>>::~CUtlVector()
 CUtlVector<CUtlHashMap<int, COverlayImage*, CDefEquals<int>, HashFunctor<int>, int>::HashBucket_t, CUtlMemory<CUtlHashMap<int, COverlayImage*, CDefEquals<int>, HashFunctor<int>, int>::HashBucket_t>>::~CUtlVector()
 CUtlVector<CUtlHashMap<int, COverlayKeyButton*, CDefEquals<int>, HashFunctor<int>, int>::HashBucket_t, CUtlMemory<CUtlHashMap<int, COverlayKeyButton*, CDefEquals<int>, HashFunctor<int>, int>::HashBucket_t>>::~CUtlVector()
@@ -20023,6 +20051,7 @@ EC_GROUP_set_seed
 echo
 echo_console
 echo_relay_unix_time
+echo_request_reply_tos
 ecI\
 &ecirc;
 &Ecirc;
@@ -20224,7 +20253,7 @@ E<EcE
 EE certificate key too weak
 EeCj
 EEEE AAAAGAIN
->EEEEEEEEEEEMQUY
+>EEEEEEEEEEEMQU
 E(E>EHE^EhE~E
 Ee"f
 EE\fl~5
@@ -20498,6 +20527,7 @@ enable_touch_input
 enable_traffic_priority
 enable_unreliable_fec
 --enable-video
+enable_video_av1
 enable_video_hevc
 enable_video_streaming
 Enabling headset low latency options\n
@@ -20893,7 +20923,7 @@ EStreamBitrate_IsValid(int)
 EStreamChannel
 EStreamChannel_descriptor()
 EStreamChannel_IsValid(int)
-.EStreamColorspace"
+.EStreamColorspace
 EStreamColorspace
 EStreamColorspace_descriptor()
 EStreamColorspace_IsValid(int)
@@ -20970,6 +21000,7 @@ EStreamVersion
 EStreamVersion_descriptor()
 EStreamVersion_IsValid(int)
 .EStreamVideoCodec
+.EStreamVideoCodec"
 EStreamVideoCodec
 EStreamVideoCodec_descriptor()
 EStreamVideoCodec_IsValid(int)
@@ -21318,6 +21349,7 @@ extension value error
 EXTERNAL
 :EXTERNAL TYPE %s\n
 ext length mismatch
+Extra control data returned besides TOS?  0x%x/0x%x
 EXTRACT_AND_EXPAND
 EXTRACT_ONLY
 extra data in message
@@ -21554,6 +21586,12 @@ FakeIP system requires Steam
 FakePacketDup_Recv
 FakePacketDup_Send
 FakePacketDup_TimeMax
+FakePacketJitter_Recv_Avg
+FakePacketJitter_Recv_Max
+FakePacketJitter_Recv_Pct
+FakePacketJitter_Send_Avg
+FakePacketJitter_Send_Max
+FakePacketJitter_Send_Pct
 FakePacketLag_Recv
 FakePacketLag_Send
 FakePacketLoss_Recv
@@ -21915,6 +21953,7 @@ FLAG_MAYBE_MORE_ALT_ADDRESSES
 FLAG_MAYBE_MORE_DATA_CENTERS
 flags
 Flags
+Flags indicate presence of TimeSincePrev, but no room for it.  Stats message size %d, packet size %d
 fl:F1
 \fliga
 FlK'@t
@@ -27300,11 +27339,9 @@ identity
 Identity is blank
 identity.m_cbSize > 1
 identity.m_cbSize == (int)V_strlen( identity.m_szGenericString ) + 1
-identity.m_cbSize == (int)V_strlen( identity.m_szXboxPairwiseID ) + 1
 identity.m_cbSize <= sizeof( identity.m_genericBytes )
 identity.m_cbSize == sizeof(identity.m_steamID64)
 identity.m_cbSize <= sizeof( identity.m_szGenericString )
-identity.m_cbSize <= sizeof( identity.m_szXboxPairwiseID )
 identity.m_cbSize == sizeof( SteamNetworkingIPAddr )
 !identityRemote.IsInvalid()
 identity_string
@@ -28039,6 +28076,7 @@ int32
 INT32
 int64
 INT64
+(int64)usecTimeSinceSentLast >= 0
 (int)cbEncrypted >= cbPlainText
 (int)cbEncrypted <= k_cbSteamNetworkingSocketsMaxEncryptedPayloadSend
 int const& google::protobuf::Reflection::GetRaw<int>(google::protobuf::Message const&, google::protobuf::FieldDescriptor const*) const
@@ -28051,7 +28089,7 @@ int CUtlHashMap<CUtlString, CUtlBuffer*, CDefEquals<CUtlString>, HashFunctor<CUt
 int CUtlHashMap<CUtlString, CUtlString, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::InsertUnconstructed<CUtlString>(CUtlString&&, int*, bool)
 int CUtlHashMap<CUtlString, std::__ndk1::function<COverlayElement* (IOverlayRenderer*, COverlayElement*)>, CDefCaselessStringEquals, HashFunctorUtlStringCaseless, CUtlString>::FindOrInsert_Internal<CUtlString, std::__ndk1::function<COverlayElement* (IOverlayRenderer*, COverlayElement*)> const&>(CUtlString&&, std::__ndk1::function<COverlayElement* (IOverlayRenderer*, COverlayElement*)> const&, CUtlHashMap<CUtlString, std::__ndk1::function<COverlayElement* (IOverlayRenderer*, COverlayElement*)>, CDefCaselessStringEquals, HashFunctorUtlStringCaseless, CUtlString>::ReplaceExisting)
 int CUtlHashMap<CUtlString, std::__ndk1::function<COverlayElement* (IOverlayRenderer*, COverlayElement*)>, CDefCaselessStringEquals, HashFunctorUtlStringCaseless, CUtlString>::InsertUnconstructed<CUtlString>(CUtlString&&, int*, bool)
-int CUtlHashMap<CUtlString, _TTF_Font*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::InsertUnconstructed<CUtlString const&>(CUtlString const&, int*, bool)
+int CUtlHashMap<CUtlString, TTF_Font*, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::InsertUnconstructed<CUtlString const&>(CUtlString const&, int*, bool)
 int CUtlHashMap<int, COverlayElement::ImageData_t*, CDefEquals<int>, HashFunctor<int>, int>::InsertUnconstructed<int const&>(int const&, int*, bool)
 int CUtlHashMap<int, COverlayImage*, CDefEquals<int>, HashFunctor<int>, int>::InsertUnconstructed<int>(int&&, int*, bool)
 int CUtlHashMap<int, COverlayKeyButton*, CDefEquals<int>, HashFunctor<int>, int>::InsertUnconstructed<int const&>(int const&, int*, bool)
@@ -28336,7 +28374,6 @@ Invalid wire type for CPPTYPE_MESSAGE:
 Invalid wire type for CPPTYPE_UINT32: 
 Invalid wire type for CPPTYPE_UINT64: 
 invalid x931 digest
-Invalid Xbox pairwise ID '%s'
 Invalid zoneid: %s; %s
 in VIEW butonuna bas
 Invit
@@ -29605,7 +29642,7 @@ k_EChooseModeElementToggleMouseOffscreenButtonIcon
 k_EChooseModeElementTrackpadSensitivityButton
 k_EChooseModeElementTrackpadSensitivityButtonIcon
 k_EClientTask_DownloadClip
-k_EControllerAction_Add_ActionSet_Layerk_EControllerAction_BigPicture_Minimizek_EControllerAction_BigPicture_Openk_EControllerAction_BigPicture_Quitk_EControllerAction_Camera_DotsPer360_CalibrationSpink_EControllerAction_Camera_Horizon_Resetk_EControllerAction_Camera_Turn_To_Face_Directionk_EControllerAction_Change_Player_Numberk_EControllerAction_Change_Presetk_EControllerAction_Change_TouchscreenMode_Hoverk_EControllerAction_Change_TouchscreenMode_LeftClickk_EControllerAction_Change_TouchscreenMode_MiddleClickk_EControllerAction_Change_TouchscreenMode_Nativek_EControllerAction_Change_TouchscreenMode_Nonek_EControllerAction_Change_TouchscreenMode_RightClickk_EControllerAction_Chord_Hint_Dismissk_EControllerAction_Chord_Hint_Displayk_EControllerAction_Controller_PowerOffk_EControllerAction_Countk_EControllerAction_Empty_Sub_Commandk_EControllerAction_Force_Guide_Upk_EControllerAction_GR_Markerk_EControllerAction_GR_Togglek_EControllerAction_Hold_ActionSet_Layerk_EControllerAction_Host_PowerOffk_EControllerAction_Host_Restartk_EControllerAction_Host_Suspendk_EControllerAction_Layer_Empty_Bindingk_EControllerAction_Mouse_Deltak_EControllerAction_Mouse_Positionk_EControllerAction_Notify_ActionSetLayer_Changek_EControllerAction_Notify_ActionSet_Changek_EControllerAction_Notify_Close_Touch_Menuk_EControllerAction_Notify_InputGeneratedk_EControllerAction_Notify_Open_Touch_Menuk_EControllerAction_Notify_XInput_Slot_Changek_EControllerAction_Open_Configuratork_EControllerAction_Open_QuickMenuk_EControllerAction_Quit_Applicationk_EControllerAction_Remove_ActionSet_Layerk_EControllerAction_RequestConfigActivationk_EControllerAction_Screen_Brightness_Downk_EControllerAction_Screen_Brightness_Upk_EControllerAction_Screenshotk_EControllerAction_Set_LEDk_EControllerAction_Show_Keyboardk_EControllerAction_SteamMusic_Nextk_EControllerAction_SteamMusic_PlayPausek_EControllerAction_SteamMusic_Prevk_EControllerAction_SteamMusic_VolDownk_EControllerAction_SteamMusic_VolMutek_EControllerAction_SteamMusic_VolUpk_EControllerAction_System_Key_0k_EControllerAction_System_Key_1k_EControllerAction_Toggle_Hapticsk_EControllerAction_Toggle_Hudk_EControllerAction_Toggle_Lizard_Modek_EControllerAction_Toggle_Magnifierk_EControllerAction_Toggle_Rumble
+k_EControllerAction_Add_ActionSet_Layerk_EControllerAction_BigPicture_Minimizek_EControllerAction_BigPicture_Openk_EControllerAction_BigPicture_Quitk_EControllerAction_Camera_DotsPer360_CalibrationSpink_EControllerAction_Camera_Horizon_Resetk_EControllerAction_Camera_Turn_To_Face_Directionk_EControllerAction_Change_Player_Numberk_EControllerAction_Change_Presetk_EControllerAction_Change_TouchscreenMode_Hoverk_EControllerAction_Change_TouchscreenMode_LeftClickk_EControllerAction_Change_TouchscreenMode_MiddleClickk_EControllerAction_Change_TouchscreenMode_Nativek_EControllerAction_Change_TouchscreenMode_Nonek_EControllerAction_Change_TouchscreenMode_RightClickk_EControllerAction_Chord_Hint_Dismissk_EControllerAction_Chord_Hint_Displayk_EControllerAction_Controller_PowerOffk_EControllerAction_Countk_EControllerAction_Empty_Sub_Commandk_EControllerAction_Force_Guide_Upk_EControllerAction_GR_Clipk_EControllerAction_GR_Markerk_EControllerAction_GR_Togglek_EControllerAction_Hold_ActionSet_Layerk_EControllerAction_Host_PowerOffk_EControllerAction_Host_Restartk_EControllerAction_Host_Suspendk_EControllerAction_Layer_Empty_Bindingk_EControllerAction_Mouse_Deltak_EControllerAction_Mouse_Positionk_EControllerAction_Notify_ActionSetLayer_Changek_EControllerAction_Notify_ActionSet_Changek_EControllerAction_Notify_Close_Touch_Menuk_EControllerAction_Notify_InputGeneratedk_EControllerAction_Notify_Open_Touch_Menuk_EControllerAction_Notify_XInput_Slot_Changek_EControllerAction_Open_Configuratork_EControllerAction_Open_QuickMenuk_EControllerAction_Quit_Applicationk_EControllerAction_Remove_ActionSet_Layerk_EControllerAction_RequestConfigActivationk_EControllerAction_RequestCursorVisibilityChecksk_EControllerAction_Screen_Brightness_Downk_EControllerAction_Screen_Brightness_Upk_EControllerAction_Screenshotk_EControllerAction_Set_LEDk_EControllerAction_Show_Keyboardk_EControllerAction_SteamMusic_Nextk_EControllerAction_SteamMusic_PlayPausek_EControllerAction_SteamMusic_Prevk_EControllerAction_SteamMusic_VolDownk_EControllerAction_SteamMusic_VolMutek_EControllerAction_SteamMusic_VolUpk_EControllerAction_System_Key_0k_EControllerAction_System_Key_1k_EControllerAction_Toggle_Hapticsk_EControllerAction_Toggle_Hudk_EControllerAction_Toggle_Lizard_Modek_EControllerAction_Toggle_Magnifierk_EControllerAction_Toggle_Rumble
 k_EControllerActivationType_Analogk_EControllerActivationType_Chordk_EControllerActivationType_Countk_EControllerActivationType_DoublePressk_EControllerActivationType_FullPressk_EControllerActivationType_LongPressk_EControllerActivationType_Nonek_EControllerActivationType_Releasek_EControllerActivationType_SoftPressk_EControllerActivationType_StartPress
 k_EControllerDigitalInput_BatteryLowk_EControllerDigitalInput_Button1k_EControllerDigitalInput_Button2k_EControllerDigitalInput_Button3k_EControllerDigitalInput_Button4k_EControllerDigitalInput_ButtonAk_EControllerDigitalInput_ButtonAlwaysOnk_EControllerDigitalInput_ButtonAncillary1k_EControllerDigitalInput_ButtonBk_EControllerDigitalInput_ButtonBackLeftk_EControllerDigitalInput_ButtonBackLeft2k_EControllerDigitalInput_ButtonBackRightk_EControllerDigitalInput_ButtonBackRight2k_EControllerDigitalInput_ButtonDownk_EControllerDigitalInput_ButtonEscapek_EControllerDigitalInput_ButtonLeftk_EControllerDigitalInput_ButtonLeftBumperk_EControllerDigitalInput_ButtonLeftJoystickClickk_EControllerDigitalInput_ButtonLeftTriggerk_EControllerDigitalInput_ButtonMacro0k_EControllerDigitalInput_ButtonMacro1k_EControllerDigitalInput_ButtonMacro1Fingerk_EControllerDigitalInput_ButtonMacro2k_EControllerDigitalInput_ButtonMacro2Fingerk_EControllerDigitalInput_ButtonMacro3k_EControllerDigitalInput_ButtonMacro4k_EControllerDigitalInput_ButtonMacro5k_EControllerDigitalInput_ButtonMacro6k_EControllerDigitalInput_ButtonMacro7k_EControllerDigitalInput_ButtonMenuk_EControllerDigitalInput_ButtonNonek_EControllerDigitalInput_ButtonRightk_EControllerDigitalInput_ButtonRightBumperk_EControllerDigitalInput_ButtonRightTriggerk_EControllerDigitalInput_ButtonSteamk_EControllerDigitalInput_ButtonUpk_EControllerDigitalInput_ButtonXk_EControllerDigitalInput_ButtonYk_EControllerDigitalInput_Countk_EControllerDigitalInput_LeftAuxCapSensek_EControllerDigitalInput_LeftTrackpadClickk_EControllerDigitalInput_LeftTrackpadDoubleTapk_EControllerDigitalInput_LeftTrackpadEk_EControllerDigitalInput_LeftTrackpadNk_EControllerDigitalInput_LeftTrackpadNek_EControllerDigitalInput_LeftTrackpadNwk_EControllerDigitalInput_LeftTrackpadOuterRadiusk_EControllerDigitalInput_LeftTrackpadSk_EControllerDigitalInput_LeftTrackpadSek_EControllerDigitalInput_LeftTrackpadSwk_EControllerDigitalInput_LeftTrackpadWk_EControllerDigitalInput_LeftTriggerThresholdk_EControllerDigitalInput_RightAuxCapSensek_EControllerDigitalInput_RightTrackpadClickk_EControllerDigitalInput_RightTrackpadDoubleTapk_EControllerDigitalInput_RightTrackpadEk_EControllerDigitalInput_RightTrackpadNk_EControllerDigitalInput_RightTrackpadNek_EControllerDigitalInput_RightTrackpadNwk_EControllerDigitalInput_RightTrackpadOuterRadiusk_EControllerDigitalInput_RightTrackpadSk_EControllerDigitalInput_RightTrackpadSek_EControllerDigitalInput_RightTrackpadSwk_EControllerDigitalInput_RightTrackpadWk_EControllerDigitalInput_RightTriggerThresholdk_EControllerDigitalInput_StickDownk_EControllerDigitalInput_StickLeftk_EControllerDigitalInput_StickRightk_EControllerDigitalInput_StickUpk_EControllerDigitalInput_Touch1k_EControllerDigitalInput_Touch2k_EControllerDigitalInput_Touch3k_EControllerDigitalInput_Touch4
 k_EControllerElementTypeButtonA
@@ -29650,7 +29687,7 @@ k_EControllerModeInput_Button_Ak_EControllerModeInput_Button_Bk_EControllerModeI
 k_EControllerPresetType_Nextk_EControllerPresetType_Nonek_EControllerPresetType_Previous
 k_EControllerSettingAccelerationk_EControllerSettingActionSetTriggerCursorHidek_EControllerSettingActionSetTriggerCursorShowk_EControllerSettingActivatorActivateStickOrTrackpadk_EControllerSettingActivatorAnalogOutputValuek_EControllerSettingActivatorChordk_EControllerSettingActivatorCyclek_EControllerSettingActivatorDoubleTapTimek_EControllerSettingActivatorEndDelayk_EControllerSettingActivatorInterruptablek_EControllerSettingActivatorLongPressTimek_EControllerSettingActivatorMouseWarpXk_EControllerSettingActivatorMouseWarpYk_EControllerSettingActivatorOutputAxisk_EControllerSettingActivatorRepeatRatek_EControllerSettingActivatorSoftPressStylek_EControllerSettingActivatorStartDelayk_EControllerSettingActivatorThresholdk_EControllerSettingActivatorTogglek_EControllerSettingAdaptiveCenteringk_EControllerSettingAdaptiveThresholdk_EControllerSettingAnalogEmulationDutyCyclePctk_EControllerSettingAnalogEmulationPeriodk_EControllerSettingAntiDeadZonek_EControllerSettingAntiDeadZoneBufferk_EControllerSettingCountk_EControllerSettingCurveExponentk_EControllerSettingCustomCurveExponentk_EControllerSettingDeadZoneEnabledk_EControllerSettingDeadZoneInnerRadiusk_EControllerSettingDeadZoneOuterRadiusk_EControllerSettingDeadZoneShapek_EControllerSettingDeadzonek_EControllerSettingDeadzoneAdvancedSettingsk_EControllerSettingDotsPer360k_EControllerSettingDoubleTapk_EControllerSettingDoubleTapBeepk_EControllerSettingDoubleTapMaxDistk_EControllerSettingDoubleTapMaxDurationk_EControllerSettingDoubleTapMinDurationk_EControllerSettingDynamicModek_EControllerSettingEdgeBindingInvertk_EControllerSettingEdgeBindingRadiusk_EControllerSettingEdgeSpinRadiusk_EControllerSettingEdgeSpinVelocityk_EControllerSettingFlickStickAllowFlickOnAwakek_EControllerSettingFlickStickDepressionSpeedk_EControllerSettingFlickStickEdgeBindingRadiusk_EControllerSettingFlickStickForwardDeadZonek_EControllerSettingFlickStickFrameTimek_EControllerSettingFlickStickHapticBumpPerAnglek_EControllerSettingFlickStickSnapModek_EControllerSettingFlickStickSnapTightnessk_EControllerSettingFlickStickSweepSensitivityk_EControllerSettingFlickStickSweepTightnessk_EControllerSettingFlickStickTransitionTimek_EControllerSettingFourButtonDistk_EControllerSettingFourButtonSizek_EControllerSettingFrictionk_EControllerSettingFrictionVertScalek_EControllerSettingGyroAxisk_EControllerSettingGyroButtonk_EControllerSettingGyroButtonHapticEffectk_EControllerSettingGyroButtonInvertk_EControllerSettingGyroButtonMaskk_EControllerSettingGyroDeflectionAngleMaxk_EControllerSettingGyroDeflectionAngleMink_EControllerSettingGyroDeflectionNeutralAnglek_EControllerSettingGyroDeflectionUseGravityk_EControllerSettingGyroEnableAngleCatchUpk_EControllerSettingGyroJoystickOutputMaxk_EControllerSettingGyroJoystickOutputMink_EControllerSettingGyroJoystickPowerCurvek_EControllerSettingGyroLockExtentsk_EControllerSettingGyroModek_EControllerSettingGyroNaturalSensitivityk_EControllerSettingGyroNeutralAnglek_EControllerSettingGyroPointerk_EControllerSettingGyroPrecisionSpeedk_EControllerSettingGyroRollScalek_EControllerSettingGyroSampleAngleOffsetXk_EControllerSettingGyroSensitivityScalek_EControllerSettingGyroSpeedDeadzonek_EControllerSettingGyroSpeedMaxAnglePerSecondk_EControllerSettingGyroSpeedMinAnglePerSecondk_EControllerSettingGyroTo2DConversionStylek_EControllerSettingGyroUsePerControllerGyroPreferencesk_EControllerSettingGyroXYRatiok_EControllerSettingGyroYawScalek_EControllerSettingHapticIntensityk_EControllerSettingHapticIntensityOverridek_EControllerSettingHoldRepeatIntervalk_EControllerSettingHoldRepeatsk_EControllerSettingInvertXk_EControllerSettingInvertYk_EControllerSettingLayerModek_EControllerSettingLayoutk_EControllerSettingLeftTrackpadModek_EControllerSettingMouseMoveThresholdk_EControllerSettingMouseRegionPositionXk_EControllerSettingMouseRegionPositionYk_EControllerSettingMouseRegionScalek_EControllerSettingMouseSmoothingk_EControllerSettingOutputAxisk_EControllerSettingOutputJoystickk_EControllerSettingOutputToJoystickk_EControllerSettingOutputToJoystickDeadzoneXk_EControllerSettingOutputToJoystickDeadzoneYk_EControllerSettingOutputToJoystickPrecisionk_EControllerSettingOutputTriggerk_EControllerSettingOverlapRegionk_EControllerSettingPressureJoystickEnablek_EControllerSettingPressureJoystickMaxPressurek_EControllerSettingPressureJoystickMinPressurek_EControllerSettingReferencedModek_EControllerSettingRequiresClickk_EControllerSettingRightTrackpadModek_EControllerSettingRotationk_EControllerSettingRotationOldk_EControllerSettingRumbleIntensityk_EControllerSettingRumbleTypek_EControllerSettingScrollAnglek_EControllerSettingScrollInvertk_EControllerSettingScrollMomentumk_EControllerSettingScrollTypek_EControllerSettingScrollWrapk_EControllerSettingSensitivityk_EControllerSettingSensitivityHorizScalek_EControllerSettingSensitivityVertScalek_EControllerSettingSmoothJoystickk_EControllerSettingSwipeDurationk_EControllerSettingTeleportMouseStartk_EControllerSettingTeleportMouseStopk_EControllerSettingTestParam0k_EControllerSettingTestParam1k_EControllerSettingTestParam2k_EControllerSettingTestParam3k_EControllerSettingTestParam4k_EControllerSettingTestParam5k_EControllerSettingTestParam6k_EControllerSettingTestParam7k_EControllerSettingTestParam8k_EControllerSettingTestParam9k_EControllerSettingTouchMenuActivateButtonk_EControllerSettingTouchMenuButtonCountk_EControllerSettingTouchMenuButtonTypek_EControllerSettingTouchMenuInnerDeadzonek_EControllerSettingTouchMenuLabelsk_EControllerSettingTouchMenuOpacityk_EControllerSettingTouchMenuOuterDeadzonek_EControllerSettingTouchMenuPosXk_EControllerSettingTouchMenuPosYk_EControllerSettingTouchMenuScalek_EControllerSettingTrackballk_EControllerSettingTrackpadTriggerDatak_EControllerSettingTriggerMouseClampingk_EControllerSettingTriggerMouseClampingAmountk_EControllerSettingVirtualCapSizek_EControllerSettingVirtualMenuCenterBoundk_EControllerSettingVirtualModek_EControllerSettingVirtualStickThrow
 k_EControllerSource_ABXYk_EControllerSource_CapJoystickLeftk_EControllerSource_CapJoystickRightk_EControllerSource_CenterTrackpadk_EControllerSource_Countk_EControllerSource_DPadk_EControllerSource_Gyrok_EControllerSource_Joystickk_EControllerSource_Keyk_EControllerSource_LeftBumperk_EControllerSource_LeftGyrok_EControllerSource_LeftTrackpadk_EControllerSource_LeftTriggerk_EControllerSource_Mousek_EControllerSource_Nonek_EControllerSource_RightBumperk_EControllerSource_RightJoystickk_EControllerSource_RightTrackpadk_EControllerSource_RightTriggerk_EControllerSource_Switch
-k_EControllerSourceMode_2DScrollwheelk_EControllerSourceMode_AbsoluteMousek_EControllerSourceMode_Buttonsk_EControllerSourceMode_Countk_EControllerSourceMode_Disabledk_EControllerSourceMode_Dpadk_EControllerSourceMode_FlickStickk_EControllerSourceMode_FourButtonsk_EControllerSourceMode_GyroToJoystickCamerak_EControllerSourceMode_GyroToJoystickDeflectionk_EControllerSourceMode_GyroToMousek_EControllerSourceMode_Hotbark_EControllerSourceMode_JoystickCamerak_EControllerSourceMode_JoystickMousek_EControllerSourceMode_JoystickMovek_EControllerSourceMode_MouseJoystickk_EControllerSourceMode_MouseRegionk_EControllerSourceMode_Nonek_EControllerSourceMode_RadialMenuk_EControllerSourceMode_Referencek_EControllerSourceMode_RelativeMousek_EControllerSourceMode_ScrollWheelk_EControllerSourceMode_SingleButtonk_EControllerSourceMode_Switchesk_EControllerSourceMode_TouchMenuk_EControllerSourceMode_Trigger
+k_EControllerSourceMode_2DScrollwheelk_EControllerSourceMode_AbsoluteMousek_EControllerSourceMode_Buttonsk_EControllerSourceMode_Countk_EControllerSourceMode_Disabledk_EControllerSourceMode_Dpadk_EControllerSourceMode_FlickStickk_EControllerSourceMode_FlickStickToCameraAnglesk_EControllerSourceMode_FourButtonsk_EControllerSourceMode_GyroToCameraAnglesk_EControllerSourceMode_GyroToJoystickCamerak_EControllerSourceMode_GyroToJoystickDeflectionk_EControllerSourceMode_GyroToMousek_EControllerSourceMode_Hotbark_EControllerSourceMode_JoystickCamerak_EControllerSourceMode_JoystickMousek_EControllerSourceMode_JoystickMovek_EControllerSourceMode_JoystickToCameraAnglesk_EControllerSourceMode_MouseJoystickk_EControllerSourceMode_MouseRegionk_EControllerSourceMode_Nonek_EControllerSourceMode_RadialMenuk_EControllerSourceMode_Referencek_EControllerSourceMode_RelativeMousek_EControllerSourceMode_ScrollWheelk_EControllerSourceMode_SingleButtonk_EControllerSourceMode_Switchesk_EControllerSourceMode_TouchMenuk_EControllerSourceMode_TrackPadToCameraAnglesk_EControllerSourceMode_Trigger
 k_EDeviceLocationAny
 k_EDeviceLocationLocal
 k_EDeviceLocationRemote
@@ -29865,6 +29902,7 @@ k_EStreamTransportUDPRelay_SNS
 k_EStreamTransportUDP_SNS
 k_EStreamVersionCurrent
 k_EStreamVersionNone
+k_EStreamVideoCodecAV1
 k_EStreamVideoCodecH264
 k_EStreamVideoCodecHEVC
 k_EStreamVideoCodecNone
@@ -30853,7 +30891,6 @@ lhUT,
 l@!HuT
 LHzlIP/
 libandroid.so
-lib Aug 15 2024 20:47:16
 LIBC
 libc++_shared.so
 libc.so
@@ -30878,6 +30915,7 @@ library has no ciphers
 libSDL3_image.so
 libSDL3.so
 libSDL3_ttf.so
+lib Sep 27 2024 13:21:36
 libsteamwebrtc.so
 libunwind: malformed DW_CFA_def_cfa DWARF unwind, reg too big\n
 libunwind: malformed DW_CFA_def_cfa_register DWARF unwind, reg too big\n
@@ -31149,6 +31187,7 @@ log conf invalid
 log conf invalid key
 log conf missing description
 log conf missing key
+logf
 Logic3 Controller
 Logic problem? szsrc = 
 login
@@ -32365,6 +32404,7 @@ m posuvn
 m_pOuter && m_method
 m_pOuter == pOuter
 m_pOut <= m_pMaxOut
+m_pOutputTexture->w == nInitialWidth && m_pOutputTexture->h == nInitialHeight
 m_pOwner->m_pPossibleOutOfOrderPacket == this
 m_pOwner == nullptr
 !m_pPacket
@@ -33209,7 +33249,6 @@ n}cl
 \n)CMsgSteamDatagramGameserverSessionRequest
 \n-CMsgSteamDatagramHostedServerAddressPlaintext
 \n'CMsgSteamDatagramLinkInstantaneousStats
-\n"CMsgSteamDatagramLinkLifetimeStats
 \n'CMsgSteamDatagramNoSessionRelayToClient
 \n%CMsgSteamDatagramNoSessionRelayToPeer
 \n*CMsgSteamDatagramP2PBadRouteRouterToClient
@@ -33468,6 +33507,7 @@ Nf.A
 \n\fdevice_token
 \n\fdouble_value
 \n\fdst_clientid
+\n\fdummy_varint
 \nfdzb
 *^\n\fELogFileType
 n fereastra de dialog pentru asociere
@@ -33894,6 +33934,7 @@ nnaWUo
 N+N:"=b~@#B}b<
 \n\nbest_score
 \n\nclient_ids
+\n\n"CMsgSteamDatagramLinkLifetimeStats
 \n\ncodec_data
 ?\n\nconnect_ok
 \n\ncontent_id
@@ -33942,6 +33983,7 @@ n ngo
 \n\ninput_type
 \n\nkludge_pad
 NN%L
+\n\nl4s_detect
 )\n\nmouse_down
 N_nn
 n\nNKF
@@ -34045,6 +34087,7 @@ No connections available in cache
 no content
 No content
 no content type
+No control data returned even though we asked for TOS?
 no cookie callback set
 nocr
 no crl found
@@ -34453,6 +34496,7 @@ nrcOK
 )\n\rdisplay_limit
 Nrdy
 n re
+\n\recho_sent_tos
 nRefCount >= 0
 nref_nos
 nregistrare
@@ -34819,6 +34863,7 @@ N_VcRg
 \n\vDeviceClose
 \n\vdevice_name
 +\n\vDeviceWrite
+\n\vdown_dscp45
 n\vDsv
 \n\vEnumOptions
 \n    Version: %lu (0x%lx)\n
@@ -34850,7 +34895,6 @@ nVirtTimeElapsed >= 0
 n v re
 \n\vreason_code
 \n\vrelay_popid
-\n\vrxspeed_max
 n+vs
 nV_S
 \nVSA5
@@ -34867,7 +34911,6 @@ NVSN
 \n\vsystem_info
 \n\vtime_expiry
 \n\vto_identity
-\n\vtxspeed_max
 \n\vTYPE_DOUBLE
 \n\vTYPE_SINT32
 \n\vTYPE_SINT64
@@ -35995,7 +36038,7 @@ packed
 pAckEnd <= helper.m_pPayloadEnd
 packet
 Packet is %d bytes, must be padded to at least %d bytes.
-Packet lag time must be positive!
+Packet is too small
 packet length too long
 Packet loss: %2.2f%% (%2.2f%% frame loss)
 Packet of size %d is too small.
@@ -37314,34 +37357,34 @@ professionOIDs
 programok telep
 progress
 Project-Id-Version: 1.1.10\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2018-08-23 17:03-0700\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: English\nLanguage: en_US\nMIME-Version: 1.0\nContent-Type: text/plain; charset=ASCII\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Bulgarian\nLanguage: bg_BG\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: bg\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Danish\nLanguage: da_DK\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: da\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Dutch\nLanguage: nl_NL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: nl\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: French\nLanguage: fr_FR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n > 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: fr\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Indonesian\nLanguage: id_ID\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: id\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Italian\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: it\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Japanese\nLanguage: ja_JP\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ja\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Norwegian Bokmal\nLanguage: nb_NO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: nb\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Portuguese\nLanguage: pt_PT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pt\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Russian\nLanguage: ru_RU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ru\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Spanish, Mexico\nLanguage: es_MX\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: es-MX\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Turkish\nLanguage: tr_TR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: tr\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Ukrainian\nLanguage: uk_UA\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: uk\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Vietnamese\nLanguage: vi_VN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: vi\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Chinese Traditional\nLanguage: zh_TW\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: zh-TW\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Czech\nLanguage: cs_CZ\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 3;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: cs\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Finnish\nLanguage: fi_FI\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: fi\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: German\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: de\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Greek\nLanguage: el_GR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: el\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Hungarian\nLanguage: hu_HU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: hu\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Korean\nLanguage: ko_KR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ko\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Polish\nLanguage: pl_PL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pl\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Portuguese, Brazilian\nLanguage: pt_BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pt-BR\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Romanian\nLanguage: ro_RO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100>0 && n%100<20)) ? 1 : 2);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ro\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Spanish\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: es\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Swedish\nLanguage: sv_SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: sv\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Thai\nLanguage: th_TH\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: th\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-07-02 15:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Chinese Simplified\nLanguage: zh_CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: zh-CN\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Bulgarian\nLanguage: bg_BG\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: bg\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Chinese Simplified\nLanguage: zh_CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: zh-CN\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Czech\nLanguage: cs_CZ\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 3;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: cs\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Dutch\nLanguage: nl_NL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: nl\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: French\nLanguage: fr_FR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n > 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: fr\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Greek\nLanguage: el_GR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: el\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Hungarian\nLanguage: hu_HU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: hu\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Indonesian\nLanguage: id_ID\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: id\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Italian\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: it\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Norwegian Bokmal\nLanguage: nb_NO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: nb\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Portuguese, Brazilian\nLanguage: pt_BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pt-BR\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Portuguese\nLanguage: pt_PT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pt\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Romanian\nLanguage: ro_RO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100>0 && n%100<20)) ? 1 : 2);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ro\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Vietnamese\nLanguage: vi_VN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: vi\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 17:36\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Chinese Traditional\nLanguage: zh_TW\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: zh-TW\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 17:36\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Danish\nLanguage: da_DK\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: da\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 17:36\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Finnish\nLanguage: fi_FI\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: fi\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 17:36\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: German\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: de\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 17:36\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Japanese\nLanguage: ja_JP\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ja\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 17:36\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Korean\nLanguage: ko_KR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ko\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 17:36\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Polish\nLanguage: pl_PL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pl\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 17:36\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Russian\nLanguage: ru_RU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ru\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 17:36\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Spanish, Mexico\nLanguage: es_MX\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: es-MX\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 17:36\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Spanish\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: es\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 17:36\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Swedish\nLanguage: sv_SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: sv\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 17:36\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Thai\nLanguage: th_TH\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: th\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 17:36\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Turkish\nLanguage: tr_TR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: tr\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-09-24 17:36\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Ukrainian\nLanguage: uk_UA\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: uk\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
 PrOO;SO
 Prossimo set/layer di azioni
 Prost
@@ -37626,6 +37669,7 @@ Puedes activar los botones que no est
 Puedes activar los controles t
 Puedes activar y desactivar el micr
 Puedes activar y desactivar el modo rat
+Puedes Agregar un bot
 Puedes ajustar el color y la transparencia de los controles t
 Puedes ajustar el volumen en el men
 Puedes ajustar el volumen en la interfaz del control.
@@ -37642,6 +37686,7 @@ Puedes desactivar el giroscopio en el men
 Puedes desactivar la vibraci
 Puedes invocar un men
 Puedes mover, a
+Puedes mover, Agregar y ocultar controles en el men
 Puedes mover el cursor del mouse dentro y fuera de la pantalla desde la interfaz del control.
 Puedes mover el cursor del rat
 Puedes ocultar los controles t
@@ -38097,7 +38142,6 @@ Q,qQ?
 Q|Q)Q
 qqqqqq
 %qqqqqq'-P^qqqqqqqqqqqqqqqd
-&QQQQQQQQQQQ:B
 Qq\ro9]r
 QqtxT
 Q\r02l
@@ -38668,8 +38712,10 @@ Recv failure: %s
 recvfrom
 RecvMaxMessageSize
 RecvMaxSegmentsPerPacket
+recvmsg
 RecvP2PBadRoute
 RecvPeerRoutes
+recv_tos
 rede
 Redefinir disposi
 Redigera layout
@@ -38931,6 +38977,7 @@ Retransmitiendo m
 Retransmitiendo %s
 Retransmitiendo Steam
  retransmitiendo un video actualmente
+Retro-bit Controller
 Retry-After:
 Retrying
 Retrying ping measurements
@@ -39644,19 +39691,6 @@ RX>q
 RX\r
 Rx{R7
 R=;Xs
-rxspeed_histogram_1024
-rxspeed_histogram_128
-rxspeed_histogram_16
-rxspeed_histogram_256
-rxspeed_histogram_32
-rxspeed_histogram_512
-rxspeed_histogram_64
-rxspeed_histogram_max
-rxspeed_ntile_50th
-rxspeed_ntile_5th
-rxspeed_ntile_75th
-rxspeed_ntile_95th
-rxspeed_ntile_98th
 \rxVK
 RxW!
 RXW)
@@ -40084,6 +40118,7 @@ scc_info_CMsgSteamSockets_UDP_ConnectOK_steamnetworkingsockets_5fmessages_5fudp_
 scc_info_CMsgSteamSockets_UDP_ConnectRequest_steamnetworkingsockets_5fmessages_5fudp_2eproto
 scc_info_CMsgSteamSockets_UDP_NoConnection_steamnetworkingsockets_5fmessages_5fudp_2eproto
 scc_info_CMsgSteamSockets_UDP_Stats_steamnetworkingsockets_5fmessages_5fudp_2eproto
+scc_info_CMsgTOSTreatment_steamdatagram_5fmessages_5fsdr_2eproto
 scc_info_CNegotiatedConfig_steammessages_5fremoteplay_2eproto
 scc_info_CNegotiationCompleteMsg_steammessages_5fremoteplay_2eproto
 scc_info_CNegotiationInitMsg_steammessages_5fremoteplay_2eproto
@@ -40394,7 +40429,6 @@ SDL_CreateTexture
 SDL_CreateTextureFromSurface
 SDL_CreateTextureWithProperties
 SDL_CreateWindowWithProperties
-SDL_DelEventWatch
 SDL_DestroyAudioStream
 SDL_DestroyCursor
 SDL_DestroyProperties
@@ -40514,7 +40548,6 @@ SDL_hid_read_timeout
 SDL_hid_send_feature_report
 SDL_hid_set_nonblocking
 SDL_hid_write
-SDL_HINT_ANDROID_BLOCK_ON_PAUSE
 SDL_iconv_string
 SDL_InitHapticRumble
 SDL_InitSubSystem
@@ -40566,6 +40599,7 @@ SDL_QuitSubSystem
 SDL_RaiseWindow
 SDL_ReadIO
 SDL_realloc
+SDL_RemoveEventWatch
 SDL_RenderClear
 SDL_RenderCoordinatesFromWindow
 SDL.renderer.create.name
@@ -40898,12 +40932,14 @@ sendRoute.m_nSortScoreLocal < 9999
 sendRoute.m_pRoute == &m_routeSelector.m_vecRoutes[ idxRoute ]
 sendRouter
 Send Router
+SendTimeSincePreviousPacket
 sendto
 [%s] End-to-end sequence number is duplicate or old, or fails to decrypt, but relay sequence number from %s is OK?  Dropping.\n
 Send to %s with size %d failed (%d): %s
 Sent ack %u not pending.  %d: %u %u %u %u %u
 %*sEntry %0d:\n
 sents sur votre contr
+sent_tos
 seq_num
 sequence
 SEQUENCE
@@ -41881,6 +41917,7 @@ socket() call failed.  Error code 0x%08x.
 Socket not ready for send/recv
 socketpair
 socketpair() call failed.  Error code 0x%08x.
+sockopt(IPPROTO_IP, IP_RECVTOS, 1) failed (0x%x), will not be able to read TOS\n
 socks
 socks4
 socks4a
@@ -42608,8 +42645,6 @@ sta
 st a Be
 stable_get
 __stack_chk_fail
-stadia:
-stadia:%llu
 Sta giocando con %s
 stale
 standalone
@@ -43283,7 +43318,7 @@ SteamNetworkingSocketsLib::CP2PRouteSelector::MarkRemoteRelaysAndRoutes(CMsgStea
 SteamNetworkingSocketsLib::CP2PRouteSelector::MessageToPeerBuilder::~MessageToPeerBuilder()
 SteamNetworkingSocketsLib::CP2PRouteSelector::MessageToPeerBuilder::TruncateLists()
 SteamNetworkingSocketsLib::CPacketLagger::~CPacketLagger()
-SteamNetworkingSocketsLib::CPacketLagger::LagPacket(SteamNetworkingSocketsLib::CRawUDPSocketImpl*, CIPAndPort const&, int, int, iovec const*)
+SteamNetworkingSocketsLib::CPacketLagger::LagPacket(SteamNetworkingSocketsLib::CRawUDPSocketImpl*, CIPAndPort const&, long long, int, iovec const*, unsigned char)
 SteamNetworkingSocketsLib::CPacketLagger::QueueNearFront(SteamNetworkingSocketsLib::CLaggedPacket*)
 SteamNetworkingSocketsLib::CPacketLaggerRecv::~CPacketLaggerRecv()
 SteamNetworkingSocketsLib::CPacketLaggerRecv::ProcessPacket(SteamNetworkingSocketsLib::CLaggedPacket const&)
@@ -43300,8 +43335,8 @@ SteamNetworkingSocketsLib::CQueuedTask::QueueToRunInBackground()
 SteamNetworkingSocketsLib::CQueuedTask::QueueToRunWithGlobalLock(char const*)
 SteamNetworkingSocketsLib::CQueuedTask::RunWithGlobalLockOrQueue(char const*)
 SteamNetworkingSocketsLib::CQueuedTask::SetTarget(SteamNetworkingSocketsLib::CTaskTarget*)
-SteamNetworkingSocketsLib::CRawUDPSocketImpl::BReallySendRawPacket(int, iovec const*, CIPAndPort const&) const
-SteamNetworkingSocketsLib::CRawUDPSocketImpl::BSendRawPacketGather(int, iovec const*, CIPAndPort const&) const
+SteamNetworkingSocketsLib::CRawUDPSocketImpl::BReallySendRawPacket(int, iovec const*, CIPAndPort const&, int) const
+SteamNetworkingSocketsLib::CRawUDPSocketImpl::BSendRawPacketGather(int, iovec const*, CIPAndPort const&, int) const
 SteamNetworkingSocketsLib::CRawUDPSocketImpl::Close()
 SteamNetworkingSocketsLib::CRawUDPSocketImpl::~CRawUDPSocketImpl()
 SteamNetworkingSocketsLib::CRawUDPSocketImpl::InternalAddToCleanupQueue()
@@ -43789,6 +43824,12 @@ SteamNetworkingSocketsLib::GlobalConfig::ConnectionUserData
 SteamNetworkingSocketsLib::GlobalConfig::FakePacketDup_Recv
 SteamNetworkingSocketsLib::GlobalConfig::FakePacketDup_Send
 SteamNetworkingSocketsLib::GlobalConfig::FakePacketDup_TimeMax
+SteamNetworkingSocketsLib::GlobalConfig::FakePacketJitter_Recv_Avg
+SteamNetworkingSocketsLib::GlobalConfig::FakePacketJitter_Recv_Max
+SteamNetworkingSocketsLib::GlobalConfig::FakePacketJitter_Recv_Pct
+SteamNetworkingSocketsLib::GlobalConfig::FakePacketJitter_Send_Avg
+SteamNetworkingSocketsLib::GlobalConfig::FakePacketJitter_Send_Max
+SteamNetworkingSocketsLib::GlobalConfig::FakePacketJitter_Send_Pct
 SteamNetworkingSocketsLib::GlobalConfig::FakePacketLag_Recv
 SteamNetworkingSocketsLib::GlobalConfig::FakePacketLag_Send
 SteamNetworkingSocketsLib::GlobalConfig::FakePacketLoss_Recv
@@ -43837,6 +43878,7 @@ SteamNetworkingSocketsLib::GlobalConfig::SDRClient_SingleSocket
 SteamNetworkingSocketsLib::GlobalConfig::SendBufferSize
 SteamNetworkingSocketsLib::GlobalConfig::SendRateMax
 SteamNetworkingSocketsLib::GlobalConfig::SendRateMin
+SteamNetworkingSocketsLib::GlobalConfig::SendTimeSincePreviousPacket
 SteamNetworkingSocketsLib::GlobalConfig::SymmetricConnect
 SteamNetworkingSocketsLib::GlobalConfig::TimeoutConnected
 SteamNetworkingSocketsLib::GlobalConfig::TimeoutInitial
@@ -43959,7 +44001,7 @@ SteamNetworkingSocketsLib::ReallyReportBadUDPPacket(char const*, char const*, ch
 SteamNetworkingSocketsLib::ReallySpewTypeFmt(int, char const*, ...)
 SteamNetworkingSocketsLib::RelayServer::ApplyPingOverride(int) const
 SteamNetworkingSocketsLib::RelayServer::BCreateSocket()
-SteamNetworkingSocketsLib::RelayServer::BSendPacketGather(int, iovec const*, int, SteamNetworkingSocketsLib::RelaySession*)
+SteamNetworkingSocketsLib::RelayServer::BSendPacketGather(int, iovec const*, int, SteamNetworkingSocketsLib::RelaySession*, int)
 SteamNetworkingSocketsLib::RelayServer::CalculatePingMSFromWireSendTime(unsigned int, long long, char const*) const
 SteamNetworkingSocketsLib::RelayServer::CheckCreatedAltTransportByIndex(int, long long)
 SteamNetworkingSocketsLib::RelayServer::CloseSocket()
@@ -44564,7 +44606,7 @@ supported_transport
 supported_video_codecs
 supports_remote_hid
 supports_touch_input
-supports_video_hevc
+supports_video_hevc_OBSOLETE
 suppPubInfo
 surface
 surname
@@ -44856,6 +44898,7 @@ Tambah kecepatan mouse kontroler
 tampilan
 Tampilkan keyboard virtual
 Tamu %d
+(\t"A\n(CMsgSteamDatagramClientPingSampleRequest
 tanf
 Tangentbord
 Tangentbord: 
@@ -46635,9 +46678,9 @@ TTF_Init
 \tTFj
 TTF_OpenFontIO
 TTF_Quit
-TTF_RenderUTF8_Blended
-TTF_RenderUTF8_Blended_Wrapped
-TTF_SetFontWrappedAlign
+TTF_RenderText_Blended
+TTF_RenderText_Blended_Wrapped
+TTF_SetFontWrapAlignment
 t th
 t thanh 
 \tTjg
@@ -46774,19 +46817,6 @@ TXL@dh|p
 (\t"x\n"CMsgSteamDatagramP2PSessionRequest
 T'xOM
 T>Xq0M
-txspeed_histogram_1024
-txspeed_histogram_128
-txspeed_histogram_16
-txspeed_histogram_256
-txspeed_histogram_32
-txspeed_histogram_512
-txspeed_histogram_64
-txspeed_histogram_max
-txspeed_ntile_50th
-txspeed_ntile_5th
-txspeed_ntile_75th
-txspeed_ntile_95th
-txspeed_ntile_98th
 .txt
 TXtkH
 tX\vd$
@@ -46845,6 +46875,18 @@ typeinfo for CDisableNeptuneDataMsg
 typeinfo for CDiscoveryPingRequest
 typeinfo for CDiscoveryPingResponse
 typeinfo for CDummyFrame
+typeinfo for CDynamicFunc<bool (*)(bool (*)(void*, SDL_Event*), void*)>
+typeinfo for CDynamicFunc<bool (*)(char const*, char const*)>
+typeinfo for CDynamicFunc<bool (*)(SDL_Gamepad*)>
+typeinfo for CDynamicFunc<bool (*)(SDL_Gamepad*, int)>
+typeinfo for CDynamicFunc<bool (*)(SDL_Gamepad*, SDL_SensorType)>
+typeinfo for CDynamicFunc<bool (*)(SDL_Gamepad*, SDL_SensorType, bool)>
+typeinfo for CDynamicFunc<bool (*)(SDL_Gamepad*, unsigned char, unsigned char, unsigned char)>
+typeinfo for CDynamicFunc<bool (*)(SDL_Gamepad*, unsigned short, unsigned short, unsigned int)>
+typeinfo for CDynamicFunc<bool (*)(SDL_Gamepad*, void const*, int)>
+typeinfo for CDynamicFunc<bool (*)(SDL_Joystick*)>
+typeinfo for CDynamicFunc<bool (*)(unsigned int)>
+typeinfo for CDynamicFunc<bool (*)(unsigned int, char const*, bool)>
 typeinfo for CDynamicFunc<char const* (*)()>
 typeinfo for CDynamicFunc<char const* (*)(SDL_Gamepad*)>
 typeinfo for CDynamicFunc<char const* (*)(SDL_GamepadButton)>
@@ -46854,15 +46896,6 @@ typeinfo for CDynamicFunc<char* (*)(SDL_Gamepad*)>
 typeinfo for CDynamicFunc<char* (*)(SDL_GUID)>
 typeinfo for CDynamicFunc<char* (*)(unsigned int)>
 typeinfo for CDynamicFunc<int (*)()>
-typeinfo for CDynamicFunc<int (*)(char const*, char const*)>
-typeinfo for CDynamicFunc<int (*)(int (*)(void*, SDL_Event*), void*)>
-typeinfo for CDynamicFunc<int (*)(SDL_Gamepad*)>
-typeinfo for CDynamicFunc<int (*)(SDL_Gamepad*, int)>
-typeinfo for CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType)>
-typeinfo for CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType, int)>
-typeinfo for CDynamicFunc<int (*)(SDL_Gamepad*, unsigned char, unsigned char, unsigned char)>
-typeinfo for CDynamicFunc<int (*)(SDL_Gamepad*, unsigned short, unsigned short, unsigned int)>
-typeinfo for CDynamicFunc<int (*)(SDL_Gamepad*, void const*, int)>
 typeinfo for CDynamicFunc<int (*)(SDL_hid_device*)>
 typeinfo for CDynamicFunc<int (*)(SDL_hid_device*, int)>
 typeinfo for CDynamicFunc<int (*)(SDL_hid_device*, unsigned char const*, unsigned long)>
@@ -46870,8 +46903,6 @@ typeinfo for CDynamicFunc<int (*)(SDL_hid_device*, unsigned char*, unsigned long
 typeinfo for CDynamicFunc<int (*)(SDL_hid_device*, unsigned char*, unsigned long, int)>
 typeinfo for CDynamicFunc<int (*)(SDL_hid_device*, wchar_t*, unsigned long)>
 typeinfo for CDynamicFunc<int (*)(SDL_Joystick*)>
-typeinfo for CDynamicFunc<int (*)(unsigned int)>
-typeinfo for CDynamicFunc<int (*)(unsigned int, char const*, int)>
 typeinfo for CDynamicFunc<SDL_GamepadButtonLabel (*)(SDL_GamepadType, SDL_GamepadButton)>
 typeinfo for CDynamicFunc<SDL_GamepadType (*)(SDL_Gamepad*)>
 typeinfo for CDynamicFunc<SDL_GamepadType (*)(unsigned int)>
@@ -46893,7 +46924,7 @@ typeinfo for CDynamicFunc<unsigned int (*)(SDL_Joystick*)>
 typeinfo for CDynamicFunc<unsigned short (*)(SDL_Gamepad*)>
 typeinfo for CDynamicFunc<unsigned short (*)(unsigned int)>
 typeinfo for CDynamicFunc<void (*)()>
-typeinfo for CDynamicFunc<void (*)(int (*)(void*, SDL_Event*), void*)>
+typeinfo for CDynamicFunc<void (*)(bool (*)(void*, SDL_Event*), void*)>
 typeinfo for CDynamicFunc<void (*)(SDL_Gamepad*)>
 typeinfo for CDynamicFunc<void (*)(SDL_hid_device_info*)>
 typeinfo for CDynamicFunc<void (*)(SDL_Joystick*)>
@@ -47053,6 +47084,7 @@ typeinfo for CMsgSteamSockets_UDP_ConnectOK
 typeinfo for CMsgSteamSockets_UDP_ConnectRequest
 typeinfo for CMsgSteamSockets_UDP_NoConnection
 typeinfo for CMsgSteamSockets_UDP_Stats
+typeinfo for CMsgTOSTreatment
 typeinfo for CNegotiatedConfig
 typeinfo for CNegotiationCompleteMsg
 typeinfo for CNegotiationInitMsg
@@ -47504,6 +47536,18 @@ typeinfo name for CDisableNeptuneDataMsg
 typeinfo name for CDiscoveryPingRequest
 typeinfo name for CDiscoveryPingResponse
 typeinfo name for CDummyFrame
+typeinfo name for CDynamicFunc<bool (*)(bool (*)(void*, SDL_Event*), void*)>
+typeinfo name for CDynamicFunc<bool (*)(char const*, char const*)>
+typeinfo name for CDynamicFunc<bool (*)(SDL_Gamepad*)>
+typeinfo name for CDynamicFunc<bool (*)(SDL_Gamepad*, int)>
+typeinfo name for CDynamicFunc<bool (*)(SDL_Gamepad*, SDL_SensorType)>
+typeinfo name for CDynamicFunc<bool (*)(SDL_Gamepad*, SDL_SensorType, bool)>
+typeinfo name for CDynamicFunc<bool (*)(SDL_Gamepad*, unsigned char, unsigned char, unsigned char)>
+typeinfo name for CDynamicFunc<bool (*)(SDL_Gamepad*, unsigned short, unsigned short, unsigned int)>
+typeinfo name for CDynamicFunc<bool (*)(SDL_Gamepad*, void const*, int)>
+typeinfo name for CDynamicFunc<bool (*)(SDL_Joystick*)>
+typeinfo name for CDynamicFunc<bool (*)(unsigned int)>
+typeinfo name for CDynamicFunc<bool (*)(unsigned int, char const*, bool)>
 typeinfo name for CDynamicFunc<char const* (*)()>
 typeinfo name for CDynamicFunc<char const* (*)(SDL_Gamepad*)>
 typeinfo name for CDynamicFunc<char const* (*)(SDL_GamepadButton)>
@@ -47513,15 +47557,6 @@ typeinfo name for CDynamicFunc<char* (*)(SDL_Gamepad*)>
 typeinfo name for CDynamicFunc<char* (*)(SDL_GUID)>
 typeinfo name for CDynamicFunc<char* (*)(unsigned int)>
 typeinfo name for CDynamicFunc<int (*)()>
-typeinfo name for CDynamicFunc<int (*)(char const*, char const*)>
-typeinfo name for CDynamicFunc<int (*)(int (*)(void*, SDL_Event*), void*)>
-typeinfo name for CDynamicFunc<int (*)(SDL_Gamepad*)>
-typeinfo name for CDynamicFunc<int (*)(SDL_Gamepad*, int)>
-typeinfo name for CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType)>
-typeinfo name for CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType, int)>
-typeinfo name for CDynamicFunc<int (*)(SDL_Gamepad*, unsigned char, unsigned char, unsigned char)>
-typeinfo name for CDynamicFunc<int (*)(SDL_Gamepad*, unsigned short, unsigned short, unsigned int)>
-typeinfo name for CDynamicFunc<int (*)(SDL_Gamepad*, void const*, int)>
 typeinfo name for CDynamicFunc<int (*)(SDL_hid_device*)>
 typeinfo name for CDynamicFunc<int (*)(SDL_hid_device*, int)>
 typeinfo name for CDynamicFunc<int (*)(SDL_hid_device*, unsigned char const*, unsigned long)>
@@ -47529,8 +47564,6 @@ typeinfo name for CDynamicFunc<int (*)(SDL_hid_device*, unsigned char*, unsigned
 typeinfo name for CDynamicFunc<int (*)(SDL_hid_device*, unsigned char*, unsigned long, int)>
 typeinfo name for CDynamicFunc<int (*)(SDL_hid_device*, wchar_t*, unsigned long)>
 typeinfo name for CDynamicFunc<int (*)(SDL_Joystick*)>
-typeinfo name for CDynamicFunc<int (*)(unsigned int)>
-typeinfo name for CDynamicFunc<int (*)(unsigned int, char const*, int)>
 typeinfo name for CDynamicFunc<SDL_GamepadButtonLabel (*)(SDL_GamepadType, SDL_GamepadButton)>
 typeinfo name for CDynamicFunc<SDL_GamepadType (*)(SDL_Gamepad*)>
 typeinfo name for CDynamicFunc<SDL_GamepadType (*)(unsigned int)>
@@ -47552,7 +47585,7 @@ typeinfo name for CDynamicFunc<unsigned int (*)(SDL_Joystick*)>
 typeinfo name for CDynamicFunc<unsigned short (*)(SDL_Gamepad*)>
 typeinfo name for CDynamicFunc<unsigned short (*)(unsigned int)>
 typeinfo name for CDynamicFunc<void (*)()>
-typeinfo name for CDynamicFunc<void (*)(int (*)(void*, SDL_Event*), void*)>
+typeinfo name for CDynamicFunc<void (*)(bool (*)(void*, SDL_Event*), void*)>
 typeinfo name for CDynamicFunc<void (*)(SDL_Gamepad*)>
 typeinfo name for CDynamicFunc<void (*)(SDL_hid_device_info*)>
 typeinfo name for CDynamicFunc<void (*)(SDL_Joystick*)>
@@ -47712,6 +47745,7 @@ typeinfo name for CMsgSteamSockets_UDP_ConnectOK
 typeinfo name for CMsgSteamSockets_UDP_ConnectRequest
 typeinfo name for CMsgSteamSockets_UDP_NoConnection
 typeinfo name for CMsgSteamSockets_UDP_Stats
+typeinfo name for CMsgTOSTreatment
 typeinfo name for CNegotiatedConfig
 typeinfo name for CNegotiationCompleteMsg
 typeinfo name for CNegotiationInitMsg
@@ -48602,6 +48636,7 @@ Unexpected error
 Unexpected failure while serializing option submessage 
 Unexpected g_eAvailAnyRelay %d while ping measurement in progress
 Unexpected g_eAvailNetworkConfig %d
+Unexpected IP_TOS cmsg_len %lld
 unexpected message
 unexpected_message
 Unexpected no-CRC message received from %s, dropping\n
@@ -49333,6 +49368,7 @@ UpdateHostIPFamilies(EHostIPFamilies, ipadrtype_t)
 UpdateSDLEventLoop()
 updateVideoTexture
 Updating params
+up_ecn1
 Upewnij si
 Upgrade
 Upgrade:
@@ -49403,6 +49439,7 @@ usecNextCheck > usecNow
 usecNextThinkSession > usecNow
 usecNow > 0x20000*k_usecAckDelayPrecision
 ( usecNow & ~k_nTimestampMask ) == 0
+usecRecvTimeSincePrev >= 0
 ( usecRef & ~k_nTimestampMask ) == 0
 usecReliableRTO <= usecNow
 usecTimeoutDuration > 0
@@ -50131,6 +50168,7 @@ VIBRATOR_SERVICE
 ^V<iC
 Victrix Gambit Tournament Controller
 Video
+video/av01
 video/avc
 video/hevc
 Video overflow (%2.2fms queued), requesting keyframe synchronization\n
@@ -50139,6 +50177,7 @@ Video size: %dx%d, output size: %dx%d, overlay size: %dx%d\n
 videoSurfaceCreated
 videoSurfaceDestroyed
 VIDEOTEXSTRING
+video/unknown
 Vieras %d
 vietnamese
  VIEW 
@@ -50590,6 +50629,7 @@ void google::protobuf::internal::arena_destruct_object<CMsgSteamSockets_UDP_Conn
 void google::protobuf::internal::arena_destruct_object<CMsgSteamSockets_UDP_ConnectRequest>(void*)
 void google::protobuf::internal::arena_destruct_object<CMsgSteamSockets_UDP_NoConnection>(void*)
 void google::protobuf::internal::arena_destruct_object<CMsgSteamSockets_UDP_Stats>(void*)
+void google::protobuf::internal::arena_destruct_object<CMsgTOSTreatment>(void*)
 void google::protobuf::internal::arena_destruct_object<CNegotiatedConfig>(void*)
 void google::protobuf::internal::arena_destruct_object<CNegotiationCompleteMsg>(void*)
 void google::protobuf::internal::arena_destruct_object<CNegotiationInitMsg>(void*)
@@ -50851,7 +50891,6 @@ void std::__ndk1::__insertion_sort_3<void CUtlVector<ServerWithSessionSort, CUtl
 void std::__ndk1::__sort<google::protobuf::internal::MapKeySorter::MapKeyComparator&, google::protobuf::MapKey*>(google::protobuf::MapKey*, google::protobuf::MapKey*, google::protobuf::internal::MapKeySorter::MapKeyComparator&)
 void std::__ndk1::__sort<std::__ndk1::__less<CServerManager::AddressInfo_t, CServerManager::AddressInfo_t>&, CServerManager::AddressInfo_t*>(CServerManager::AddressInfo_t*, CServerManager::AddressInfo_t*, std::__ndk1::__less<CServerManager::AddressInfo_t, CServerManager::AddressInfo_t>&)
 void std::__ndk1::__sort<std::__ndk1::__less<CUtlString, CUtlString>&, CUtlString*>(CUtlString*, CUtlString*, std::__ndk1::__less<CUtlString, CUtlString>&)
-void std::__ndk1::__sort<std::__ndk1::__less<int, int>&, int*>(int*, int*, std::__ndk1::__less<int, int>&)
 void std::__ndk1::__sort<std::__ndk1::__less<SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress, SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress>&, SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress*>(SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress*, SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress*, std::__ndk1::__less<SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress, SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress>&)
 void std::__ndk1::__sort<std::__ndk1::__less<SteamNetworkingSocketsLib::SteamDatagramNetwork::RouterAddressLookup, SteamNetworkingSocketsLib::SteamDatagramNetwork::RouterAddressLookup>&, SteamNetworkingSocketsLib::SteamDatagramNetwork::RouterAddressLookup*>(SteamNetworkingSocketsLib::SteamDatagramNetwork::RouterAddressLookup*, SteamNetworkingSocketsLib::SteamDatagramNetwork::RouterAddressLookup*, std::__ndk1::__less<SteamNetworkingSocketsLib::SteamDatagramNetwork::RouterAddressLookup, SteamNetworkingSocketsLib::SteamDatagramNetwork::RouterAddressLookup>&)
 void std::__ndk1::__sort<std::__ndk1::__less<unsigned char, unsigned char>&, unsigned char*>(unsigned char*, unsigned char*, std::__ndk1::__less<unsigned char, unsigned char>&)
@@ -51140,6 +51179,18 @@ vtable for CDisableNeptuneDataMsg
 vtable for CDiscoveryPingRequest
 vtable for CDiscoveryPingResponse
 vtable for CDummyFrame
+vtable for CDynamicFunc<bool (*)(bool (*)(void*, SDL_Event*), void*)>
+vtable for CDynamicFunc<bool (*)(char const*, char const*)>
+vtable for CDynamicFunc<bool (*)(SDL_Gamepad*)>
+vtable for CDynamicFunc<bool (*)(SDL_Gamepad*, int)>
+vtable for CDynamicFunc<bool (*)(SDL_Gamepad*, SDL_SensorType)>
+vtable for CDynamicFunc<bool (*)(SDL_Gamepad*, SDL_SensorType, bool)>
+vtable for CDynamicFunc<bool (*)(SDL_Gamepad*, unsigned char, unsigned char, unsigned char)>
+vtable for CDynamicFunc<bool (*)(SDL_Gamepad*, unsigned short, unsigned short, unsigned int)>
+vtable for CDynamicFunc<bool (*)(SDL_Gamepad*, void const*, int)>
+vtable for CDynamicFunc<bool (*)(SDL_Joystick*)>
+vtable for CDynamicFunc<bool (*)(unsigned int)>
+vtable for CDynamicFunc<bool (*)(unsigned int, char const*, bool)>
 vtable for CDynamicFunc<char const* (*)()>
 vtable for CDynamicFunc<char const* (*)(SDL_Gamepad*)>
 vtable for CDynamicFunc<char const* (*)(SDL_GamepadButton)>
@@ -51149,15 +51200,6 @@ vtable for CDynamicFunc<char* (*)(SDL_Gamepad*)>
 vtable for CDynamicFunc<char* (*)(SDL_GUID)>
 vtable for CDynamicFunc<char* (*)(unsigned int)>
 vtable for CDynamicFunc<int (*)()>
-vtable for CDynamicFunc<int (*)(char const*, char const*)>
-vtable for CDynamicFunc<int (*)(int (*)(void*, SDL_Event*), void*)>
-vtable for CDynamicFunc<int (*)(SDL_Gamepad*)>
-vtable for CDynamicFunc<int (*)(SDL_Gamepad*, int)>
-vtable for CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType)>
-vtable for CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType, int)>
-vtable for CDynamicFunc<int (*)(SDL_Gamepad*, unsigned char, unsigned char, unsigned char)>
-vtable for CDynamicFunc<int (*)(SDL_Gamepad*, unsigned short, unsigned short, unsigned int)>
-vtable for CDynamicFunc<int (*)(SDL_Gamepad*, void const*, int)>
 vtable for CDynamicFunc<int (*)(SDL_hid_device*)>
 vtable for CDynamicFunc<int (*)(SDL_hid_device*, int)>
 vtable for CDynamicFunc<int (*)(SDL_hid_device*, unsigned char const*, unsigned long)>
@@ -51165,8 +51207,6 @@ vtable for CDynamicFunc<int (*)(SDL_hid_device*, unsigned char*, unsigned long)>
 vtable for CDynamicFunc<int (*)(SDL_hid_device*, unsigned char*, unsigned long, int)>
 vtable for CDynamicFunc<int (*)(SDL_hid_device*, wchar_t*, unsigned long)>
 vtable for CDynamicFunc<int (*)(SDL_Joystick*)>
-vtable for CDynamicFunc<int (*)(unsigned int)>
-vtable for CDynamicFunc<int (*)(unsigned int, char const*, int)>
 vtable for CDynamicFunc<SDL_GamepadButtonLabel (*)(SDL_GamepadType, SDL_GamepadButton)>
 vtable for CDynamicFunc<SDL_GamepadType (*)(SDL_Gamepad*)>
 vtable for CDynamicFunc<SDL_GamepadType (*)(unsigned int)>
@@ -51188,7 +51228,7 @@ vtable for CDynamicFunc<unsigned int (*)(SDL_Joystick*)>
 vtable for CDynamicFunc<unsigned short (*)(SDL_Gamepad*)>
 vtable for CDynamicFunc<unsigned short (*)(unsigned int)>
 vtable for CDynamicFunc<void (*)()>
-vtable for CDynamicFunc<void (*)(int (*)(void*, SDL_Event*), void*)>
+vtable for CDynamicFunc<void (*)(bool (*)(void*, SDL_Event*), void*)>
 vtable for CDynamicFunc<void (*)(SDL_Gamepad*)>
 vtable for CDynamicFunc<void (*)(SDL_hid_device_info*)>
 vtable for CDynamicFunc<void (*)(SDL_Joystick*)>
@@ -51348,6 +51388,7 @@ vtable for CMsgSteamSockets_UDP_ConnectOK
 vtable for CMsgSteamSockets_UDP_ConnectRequest
 vtable for CMsgSteamSockets_UDP_NoConnection
 vtable for CMsgSteamSockets_UDP_Stats
+vtable for CMsgTOSTreatment
 vtable for CNegotiatedConfig
 vtable for CNegotiationCompleteMsg
 vtable for CNegotiationInitMsg
@@ -52756,7 +52797,6 @@ Xbox One Elite 2 Controller
 Xbox One Elite Controller
 Xbox One S Controller
 Xbox ONE spectra
-xbox_pairwise_id
 xboxpwid:
 xboxpwid:%s
 Xbox Series X Controller
@@ -54268,5 +54308,6 @@ Zz?TW
 z#ZUk
 zZVR
 zzx,
+(ZZ)Z
 Z,Z~Z
 z"z.z:zFzRz^zjzvz

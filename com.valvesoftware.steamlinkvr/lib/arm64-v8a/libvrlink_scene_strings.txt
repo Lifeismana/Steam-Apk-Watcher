@@ -1,4 +1,5 @@
 ++++++++++++++++++++
+0.0.0.0
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899NSt6__ndk112system_errorE
 0123456789
 0123456789ABCDEF
@@ -57,7 +58,7 @@
 8SVLAudio
 8SVLCodec
 8SVLCrypt
-9116979 
+9152362 
 9a&g
 9JLX
 9QSVLInput
@@ -371,7 +372,7 @@ audio
 [Audio] Waiting for output stream state change...
 August
 auto
-AuxJointsToBoneTransform(XrHandJointLocationsEXT const&, std::__ndk1::array<vr::VRBoneTransform_t, 31ul>&, XRQHand)
+AuxJointsToBoneTransform(std::__ndk1::array<XrHandJointLocationEXT, 26ul> const&, std::__ndk1::array<vr::VRBoneTransform_t, 31ul>&, XRQHand)
 A valid JSON document must be either an array or an object value.
 bad_array_new_length
 Bad escape sequence in string
@@ -390,7 +391,7 @@ bindings
 Binding UDP socket to %s\n
 bIs2g
 BIsCurled(float, bool)
-BIsJointFacingUp(XrHandJointLocationEXT&)
+BIsJointFacingUp(XrHandJointLocationEXT const&)
 BIsStraight(float, bool)
 BIsWiFiConnected()
 blaum_roth_coding_bitmatrix
@@ -612,7 +613,7 @@ construction vtable for std::__ndk1::basic_ostream<char, std::__ndk1::char_trait
 construction vtable for std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::basic_ostringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 construction vtable for std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 continue
-ConvertJointsToSkeleton(XrHandJointLocationsEXT const&, XRQHand, XrPosef const&, std::__ndk1::array<vr::VRBoneTransform_t, 31ul>&)
+ConvertJointsToSkeleton(std::__ndk1::array<XrHandJointLocationEXT, 26ul> const&, XRQHand, XrPosef const&, std::__ndk1::array<vr::VRBoneTransform_t, 31ul>&)
 copyPixelsToBuffer
 could not bind socket to %s device
 Could not log to disk.\n
@@ -996,7 +997,7 @@ finishAndRemoveTask
 FinishAndRemoveTask()
 finnish
 first
-FlexionJointsToBoneTransforms(XrHandJointLocationsEXT const&, std::__ndk1::array<vr::VRBoneTransform_t, 31ul>&, XRQHand)
+FlexionJointsToBoneTransforms(std::__ndk1::array<XrHandJointLocationEXT, 26ul> const&, std::__ndk1::array<vr::VRBoneTransform_t, 31ul>&, XRQHand)
 flLaserMouseHmdAngleDegrees
 float
 __float128
@@ -1078,6 +1079,7 @@ getBSSID
 getBytes
 GetCachedFileTime
 getClass
+GetClockRealtime()
 GetConnectedWiFiFrequencyMHzAndSSID: No cConnectionInfo
 GetConnectedWiFiFrequencyMHzAndSSID: No connection info
 GetConnectedWiFiFrequencyMHzAndSSID: No mGetFrequency
@@ -1100,7 +1102,7 @@ getExtras
 GetExtrasKey(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&)
 getFields
 GetFilenameTimeString()
-GetFingerCurlDegrees(std::__ndk1::array<XrHandJointLocationEXT, 26ul>&, int)
+GetFingerCurlDegrees(std::__ndk1::array<XrHandJointLocationEXT, 26ul> const&, int)
 getFrequency
 getGenericParameterTypes
 getGenericReturnType
@@ -2863,14 +2865,16 @@ QSVLRendererXR::SetShouldWaitOnFrames(bool)
 QSVLRendererXR::SetupSwapchains(XRQContext const&, unsigned int, unsigned int, AtlasMode)
 QSVLRendererXR::Stop()
 QSVLRendererXR::UpdateSwapchainSampler(XRQContext const&)
+QSVLXRInput::BIsHandTrackingActive(XRQHand)
 QSVLXRInput::GetActiveInteractionProfile(QSVLControllerHand)
 QSVLXRInput::GetControllerState_Controller(QSVLControllerState&, int)
 QSVLXRInput::GetControllerState_HandTracking(QSVLControllerState&, int)
 QSVLXRInput::GetControllerStates(std::__ndk1::array<QSVLControllerState, 2ul>&, unsigned int)
-QSVLXRInput::GetHandTracking(SVLHandTrackingPacket_t*, int)
+QSVLXRInput::GetHandTracking(SVLHandTrackingPacket_t*)
 QSVLXRInput::GetPowerProps(QSVLControllerHand, SVLPowerProps&)
 QSVLXRInput::GetRequestedExtensions() const
 QSVLXRInput::GetStaticProps(QSVLControllerHand, SVLStaticProps&, unsigned int)
+QSVLXRInput::HandleUpdateHandTracking(XRQHand)
 QSVLXRInput::Init(XRQContext*)
 QSVLXRInput::OnHapticFeedback(QSVLControllerHand, float, float, float)
 QSVLXRInput::~QSVLXRInput()
@@ -3108,7 +3112,7 @@ size
 sizeof (
 sizeof... (
 sizeof...(
-SkeletalGestures::Compute(std::__ndk1::array<XrHandJointLocationEXT, 26ul>&, XrHandTrackingAimStateFB&, SkeletalGestureInfo&, int)
+SkeletalGestures::Compute(std::__ndk1::array<XrHandJointLocationEXT, 26ul> const&, XrHandTrackingAimStateFB&, SkeletalGestureInfo&, int)
 SkeletalGestures::SkeletalGestures()
 sManufacturerName
 sModelNumber
@@ -4634,6 +4638,8 @@ std::__ndk1::vector<char, std::__ndk1::allocator<char>>::__append(unsigned long)
 std::__ndk1::vector<char, std::__ndk1::allocator<char>>::assign(unsigned long, char const&)
 std::__ndk1::vector<float, std::__ndk1::allocator<float>>::__append(unsigned long)
 std::__ndk1::vector<QSVLControllerInputState, std::__ndk1::allocator<QSVLControllerInputState>>::__append(unsigned long)
+std::__ndk1::vector<std::__ndk1::array<std::__ndk1::array<XrHandJointLocationEXT, 26ul>, 2ul>, std::__ndk1::allocator<std::__ndk1::array<std::__ndk1::array<XrHandJointLocationEXT, 26ul>, 2ul>>>::__append(unsigned long)
+std::__ndk1::vector<std::__ndk1::array<std::__ndk1::array<XrHandJointVelocityEXT, 26ul>, 2ul>, std::__ndk1::allocator<std::__ndk1::array<std::__ndk1::array<XrHandJointVelocityEXT, 26ul>, 2ul>>>::__append(unsigned long)
 std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::reserve(unsigned long)
 std::__ndk1::vector<std::__ndk1::shared_ptr<VariableTransportHolder>, std::__ndk1::allocator<std::__ndk1::shared_ptr<VariableTransportHolder>>>::__append(unsigned long)
 std::__ndk1::vector<std::__ndk1::vector<std::__ndk1::pair<void*, std::__ndk1::function<void (ValueTransportID, bool)>>, std::__ndk1::allocator<std::__ndk1::pair<void*, std::__ndk1::function<void (ValueTransportID, bool)>>>>, std::__ndk1::allocator<std::__ndk1::vector<std::__ndk1::pair<void*, std::__ndk1::function<void (ValueTransportID, bool)>>, std::__ndk1::allocator<std::__ndk1::pair<void*, std::__ndk1::function<void (ValueTransportID, bool)>>>>>>::__append(unsigned long)
@@ -4729,6 +4735,8 @@ StreamBehavior_Streaming::OnBehaviorLeft()
 StreamBehavior_Streaming::OverlayStream(XRQContext&, bool, std::__ndk1::vector<XrCompositionLayerBaseHeader*, std::__ndk1::allocator<XrCompositionLayerBaseHeader*>>&)
 StreamBehavior_Streaming::~StreamBehavior_Streaming()
 StreamBehavior::streamState
+#StreamCheck_StreamNotPossible
+#StreamCheck_StreamNotPossibleDescription
 #StreamCheck_WifiNotConnected
 #StreamCheck_WifiNotConnectedDescription
 StreamContext::operator=(StreamContext&&)
@@ -4871,6 +4879,8 @@ SVLAudio::UpdateStats()
 [SVLClientXR] VTE_CLIENT_AUDIO_STATE %d(%d) %d/%d(%d) - %d(%d) %d/%d(%d)\n
 [SVLClientXR] VTE_SHADER_SCENE_BACKGROUND not implemented!
 [SVLClientXR] Wireless timeout updated to: %i
+SVLCodec::HardReset()
+SVLCodec::SoftReset()
 SVLCodec::Stop()
 SVLCodec::~SVLCodec()
 SVLCodec::SVLCodec(SVLRenderer*)
@@ -4896,6 +4906,7 @@ SVLCrypt::TestAES()
 [SVLC] SendPoses lnFrameID=%d(%d)
 [SVLC] SendPoses: lnFrameID=%d(%d) (mod64=%d) (mod256=%d) rst=%d toff=%d
 SVLDataLink::BIsLinkActiveCheck()
+SVLDataLink::BIsLinkPossible()
 SVLDataLink::ChangeQoSState(bool)
 SVLDataLink::CheckUpdateCounters()
 SVLDataLink::EncModeFromString(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
@@ -4937,6 +4948,7 @@ SVLDataLink::SubmitMessage(dataset*, bool, bool)
 SVLDataLink::~SVLDataLink()
 SVLDataLink::SVLDataLink(SVLRoot*, bool)
 SVLDataLink::Tick()
+SVLDataLinkUDP::BIsLinkPossible()
 SVLDataLinkUDP::BIsStreamActive()
 SVLDataLinkUDP::ChangeQoSState(bool)
 SVLDataLinkUDP::Disconnect()
@@ -5119,7 +5131,6 @@ SystemTicksFromNanoseconds(unsigned long)
 SystemTicksToSeconds(unsigned long)
 SystemTimeSleep(unsigned int)
 SystemTimeSleepUntil(double)
-\t$\t\t\t\t\t\t\t\t\t\t\t\t-
 \t6\t\t\t\t\t\t\t\t\t\t\t\t
 tanf
 tchinese
@@ -5228,7 +5239,6 @@ Trying to submit frames out-of-order.  Only possible on catastrophic network fai
 tsFrameTimeAbsolute\tWire\tEncode\tFEC\tXPort\tSound\tRetry\tLogic\tNote\tExceptions\tMCS\tDbgWait\tQThrottle\tTimeSinceLastWGPMS\tEstimatedPingMS\tExpectedPingMS\tX\tY\tZ\tW\tX\tY\tZ\ttEncodeTimeMS\nFramesToThrottle\nRemapTimeMS\nStartEncMS\n
 tsLastWGP
 tssprintf(char const*, ...)
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 Tuesday
 turkish
 TX Failure Streak Hit %d; Aborting and reconnecting.\n
