@@ -657,6 +657,7 @@ BD
 BDI
 BDO
 BDataRequestContainsOtherDataRequest
+BDeepEqual
 BDoesLocaleUse24Hourclock
 BDoesSaleItemTypeHaveParent
 BE
@@ -1916,6 +1917,7 @@ CStorePageFilter_ContentHubFilter_OptInInfo
 CStorePageFilter_SalePageFilter
 CStorePageFilter_StoreFilter
 CStoreQueryFilters
+CStoreQueryFilters_PredefinedFilter
 CStoreQueryFilters_PriceFilters
 CStoreQueryFilters_TagFilter
 CStoreQueryFilters_TypeFilters
@@ -3213,6 +3215,7 @@ EAppUpdateError_6
 EAppUpdateError_7
 EAppUpdateError_8
 EAppUpdateError_9
+EAppUpdateProgressType
 EAsyncGameSessionUserState
 EAsyncGameSessionUserStateToString
 EAsyncGameSessionUserState_0
@@ -3458,6 +3461,19 @@ EChatFlashMode
 EChatFlashMode_Always
 EChatFlashMode_Minimized
 EChatFlashMode_Never
+EChildProcessQueryCommand
+EChildProcessQueryCommandToString
+EChildProcessQueryCommand_0
+EChildProcessQueryCommand_1
+EChildProcessQueryCommand_2
+EChildProcessQueryExitCode
+EChildProcessQueryExitCodeToString
+EChildProcessQueryExitCode_0
+EChildProcessQueryExitCode_1
+EChildProcessQueryExitCode_2
+EChildProcessQueryExitCode_3
+EChildProcessQueryExitCode_4
+EChildProcessQueryExitCode_5
 EClanAccountFlags
 EClanAccountFlagsToString
 EClanAccountFlags_0
@@ -3704,6 +3720,7 @@ ECommunityWordFilterType_5
 ECommunityWordFilterType_6
 ECommunityWordFilterType_7
 ECommunityWordFilterType_8
+ECommunityWordFilterType_9
 ECompatPriority
 ECompromiseDetectionType
 ECompromiseDetectionTypeToString
@@ -4502,6 +4519,7 @@ ELibraryAssetType_3
 ELibraryAssetType_4
 ELibraryAssetType_5
 ELibraryAssetType_6
+ELibraryAssetType_7
 ELibraryDisplaySize
 ELibraryDisplaySize_Automatic
 ELibraryDisplaySize_Large
@@ -4651,6 +4669,7 @@ EMarketingMessageClickLocation_0
 EMarketingMessageClickLocation_1
 EMarketingMessageClickLocation_2
 EMarketingMessageClickLocation_3
+EMarketingMessageClickLocation_4
 EMarketingMessageFilterType
 EMarketingMessageFilterTypeToString
 EMarketingMessageFilterType_0
@@ -4681,6 +4700,8 @@ EMarketingMessageTemplateType_3
 EMarketingMessageTemplateType_4
 EMarketingMessageTemplateType_5
 EMarketingMessageTemplateType_6
+EMarketingMessageTemplateType_7
+EMarketingMessageTemplateType_8
 EMarketingMessageType
 EMarketingMessageTypeToString
 EMarketingMessageType_0
@@ -5259,6 +5280,8 @@ EMsg_1440
 EMsg_1441
 EMsg_1442
 EMsg_1443
+EMsg_1444
+EMsg_1445
 EMsg_145
 EMsg_146
 EMsg_147
@@ -6433,6 +6456,19 @@ EPlaytestInviteStatus_1
 EPlaytestInviteStatus_2
 EPlaytestInviteStatus_3
 EPlaytestInviteStatus_4
+EPlaytestLicenseChangeType
+EPlaytestLicenseChangeTypeToString
+EPlaytestLicenseChangeType_0
+EPlaytestLicenseChangeType_1
+EPlaytestLicenseChangeType_2
+EPlaytestLicenseChangeType_3
+EPlaytestMembershipSource
+EPlaytestMembershipSourceToString
+EPlaytestMembershipSource_0
+EPlaytestMembershipSource_1
+EPlaytestMembershipSource_2
+EPlaytestMembershipSource_3
+EPlaytestMembershipSource_4
 EPlaytestStatus
 EPlaytestStatusToString
 EPlaytestStatus_0
@@ -6788,18 +6824,6 @@ ERiskLevelToString
 ERiskLevel_0
 ERiskLevel_1
 ERiskLevel_2
-ERobustQueryCommand
-ERobustQueryCommandToString
-ERobustQueryCommand_0
-ERobustQueryCommand_1
-ERobustQueryCommand_2
-ERobustQueryExitCode
-ERobustQueryExitCodeToString
-ERobustQueryExitCode_0
-ERobustQueryExitCode_1
-ERobustQueryExitCode_2
-ERobustQueryExitCode_3
-ERobustQueryExitCode_4
 ES
 ES6
 ESDCardFormatStage
@@ -7036,6 +7060,7 @@ EStartupMovieVariantToString
 EStartupMovieVariant_0
 EStartupMovieVariant_1
 EStartupMovieVariant_2
+EStartupMovieVariant_3
 ESteamControllerStateFeedType
 ESteamDeckCompatibilityCategory
 ESteamDeckCompatibilityCategoryToString
@@ -7314,6 +7339,11 @@ EStoreQueryExcludeFrom_0
 EStoreQueryExcludeFrom_1
 EStoreQueryExcludeFrom_2
 EStoreQueryExcludeFrom_3
+EStoreQueryPredefinedFilter
+EStoreQueryPredefinedFilterToString
+EStoreQueryPredefinedFilter_0
+EStoreQueryPredefinedFilter_1
+EStoreQueryPredefinedFilter_2
 EStoreQuerySort
 EStoreQuerySortToString
 EStoreQuerySort_0
@@ -7399,6 +7429,7 @@ ESupportPermissions_29
 ESupportPermissions_3
 ESupportPermissions_30
 ESupportPermissions_31
+ESupportPermissions_32
 ESupportPermissions_4
 ESupportPermissions_5
 ESupportPermissions_6
@@ -8112,6 +8143,7 @@ EventDisplay_CallToAction_PlayNowForFree
 EventDisplay_CallToAction_Prepurchase_Short
 EventDisplay_CallToAction_ShowPurchaseOptions_Button
 EventDisplay_CallToAction_VisitStore
+EventDisplay_CategoryEditor
 EventDisplay_DeleteEvent
 EventDisplay_DeleteEvent_Comment
 EventDisplay_DeleteEvent_Error
@@ -8232,6 +8264,7 @@ EventEditor_ConvertHTML_Error
 EventEditor_ConvertHTML_Error_Desc
 EventEditor_DownVotes
 EventEditor_Edit
+EventEditor_EditVideo_Title
 EventEditor_FailedToLoadApp
 EventEditor_FormattingHelp_GetHelpLink
 EventEditor_ImportFromHTML
@@ -8252,6 +8285,11 @@ EventEditor_InsertImage_URL
 EventEditor_InsertLinkURL
 EventEditor_InsertTrailer
 EventEditor_InsertTrailer_SearchApp
+EventEditor_InsertVideo_InputAutoplay
+EventEditor_InsertVideo_InputMP4
+EventEditor_InsertVideo_InputPoster
+EventEditor_InsertVideo_InputShowControls
+EventEditor_InsertVideo_InputWebM
 EventEditor_InsertYouTube
 EventEditor_InsertYouTube_Full
 EventEditor_InsertYouTube_Left
@@ -8294,6 +8332,8 @@ EventEditor_UpVotes
 EventEditor_YouTubeVideoTitle
 EventEditor_YouTubeVideoViews
 EventEmail_Button_BuyNow
+EventEmail_Button_BuyWithoutPSU
+EventEmail_Button_BuyWithoutPSUOutOfStock
 EventEmail_Button_ClickForMoreDetails
 EventEmail_Button_PlayNow
 EventEmail_Button_PrepurchaseNow
@@ -8400,6 +8440,7 @@ ExtensionFieldInfo
 ExternalCachesDirectoryPath
 ExternalDirectoryPath
 ExternalStorageDirectoryPath
+ExtractHashFromBBCodeURL
 ExtractTrailerFormats
 Extrapolate
 Extrapolation
@@ -8732,6 +8773,7 @@ Font
 FontDisplay
 FontFace
 Foo4_0
+FooterComponent
 For
 ForceAcceptInvite
 ForceTouch
@@ -8749,6 +8791,7 @@ FormattingToolbar_Bold
 FormattingToolbar_BulletedList
 FormattingToolbar_CodeBlock
 FormattingToolbar_DisableSpellcheck
+FormattingToolbar_EditLink
 FormattingToolbar_EnableSpellcheck
 FormattingToolbar_ExpandOptions
 FormattingToolbar_HeadingLevel1
@@ -8768,6 +8811,18 @@ FormattingToolbar_OutdentList
 FormattingToolbar_Paragraph
 FormattingToolbar_Redo
 FormattingToolbar_Strike
+FormattingToolbar_Tables_AddColumnAfter
+FormattingToolbar_Tables_AddColumnBefore
+FormattingToolbar_Tables_AddRowAfter
+FormattingToolbar_Tables_AddRowBefore
+FormattingToolbar_Tables_DeleteColumn
+FormattingToolbar_Tables_DeleteRow
+FormattingToolbar_Tables_HeaderCell
+FormattingToolbar_Tables_HeaderColumn
+FormattingToolbar_Tables_HeaderRow
+FormattingToolbar_Tables_InsertTable
+FormattingToolbar_Tables_MergeCells
+FormattingToolbar_Tables_SplitCells
 FormattingToolbar_Underline
 FormattingToolbar_Undo
 ForwardRef
@@ -9359,6 +9414,9 @@ GuardAndConfirmations
 GuardScreen
 Guard_AddAccount
 Guard_Approve_Question
+Guard_AuthTokenAppType_0
+Guard_AuthTokenAppType_1
+Guard_AuthTokenAppType_2
 Guard_AuthTokenPlatformType_1
 Guard_AuthTokenPlatformType_2
 Guard_Button_Approve
@@ -10800,6 +10858,7 @@ MeetSteam_Reg_Email
 MeetSteam_Reg_Game
 MeetSteam_Reg_GuestCount
 MeetSteam_Reg_GuestCount_ttip
+MeetSteam_Reg_Intro
 MeetSteam_Reg_Name
 MeetSteam_Reg_Others
 MeetSteam_Reg_Others_name
@@ -10809,10 +10868,13 @@ MeetSteam_Register_title
 MeetSteam_Registered
 MeetSteam_Registering
 MeetSteam_RegistrationFailed
+MeetSteam_SoldOut
 MeetSteam_Spot
 MeetSteam_Spot_Plural
 MeetSteam_Unegistering
 MeetSteam_Unregister_title
+MeetSteam_UpdateRegistration
+MeetSteam_UpdateRegistration_Desc
 Megabits
 Megabits_PerSecond
 Megabytes
@@ -10879,6 +10941,7 @@ MobileLogin_SteamguardCode
 MobileLogin_SteamguardSubmit
 MobilePage_LoadFail
 MobilePerAccountService
+Mobile_UploadLogs
 Modal
 ModalPresentationIOS
 ModalScreen
@@ -10999,7 +11062,6 @@ NavEventContext
 NavLink
 NavLinkFallback
 NavLinkSNRFallback
-NavLinkSteamURL
 NavReady
 NavigationContainer
 NavigationContent
@@ -11806,6 +11868,7 @@ RawPerformanceEntryTypeValues
 ReactCurrentBatchConfig
 ReactCurrentDispatcher
 ReactCurrentOwner
+ReactDebugCurrentFrame
 ReactFiberErrorDialog
 ReactNativeBridgeEventPlugin
 ReactNativeViewConfigRegistry
@@ -12451,6 +12514,8 @@ Sale_ReserveEditor_EditPostTitle
 Sale_ReserveEditor_EditTitle
 Sale_ReserveEditor_ReservePack
 Sale_ReserveEditor_ReservePack_ttip
+Sale_ReserveEditor_SanPowerSupplyPackage
+Sale_ReserveEditor_SanPowerSupplyPackage_ttip
 Sale_ReserveExhausted
 Sale_ReserveNow
 Sale_ReserveNow_NoDeposit
@@ -12710,6 +12775,8 @@ Sale_default_label_273
 Sale_default_label_274
 Sale_default_label_275
 Sale_default_label_276
+Sale_default_label_278
+Sale_default_label_279
 Sale_default_label_28
 Sale_default_label_29
 Sale_default_label_3
@@ -12964,9 +13031,11 @@ SerializeBody
 SerializeToCacheObject
 ServerBrowser_AddByIP
 ServerBrowser_AddFavoriteServerByIP
+ServerBrowser_AddServerByIP
 ServerBrowser_AddServerToFavorites
 ServerBrowser_All
 ServerBrowser_AntiCheat
+ServerBrowser_AnyGame
 ServerBrowser_Bots
 ServerBrowser_ChangeFilters
 ServerBrowser_Connect
@@ -13021,6 +13090,7 @@ ServerBrowser_RemoveServerFromHistory
 ServerBrowser_Search
 ServerBrowser_Secure
 ServerBrowser_SecureOnly
+ServerBrowser_SelectGame
 ServerBrowser_ServerName
 ServerBrowser_ServerNotFull
 ServerBrowser_ServerSideFiltersChanged
@@ -13127,6 +13197,8 @@ Settings_GameRecording_AudioRecording_MicMono_Description
 Settings_GameRecording_AudioRecording_Mic_Description
 Settings_GameRecording_AudioRecording_UnknownProcess
 Settings_GameRecording_AudioSelection_AllSystem
+Settings_GameRecording_AudioSelection_Explainer_SystemOnly
+Settings_GameRecording_AudioSelection_Explainer_SystemOnly_Windows
 Settings_GameRecording_AudioSelection_GameOnly
 Settings_GameRecording_AudioSelection_SelectProcesses
 Settings_GameRecording_AudioSelection_Title
@@ -13626,6 +13698,7 @@ StoreItem_Trailers_VideoSource
 StoreLink_Label
 StoreNavEventContextFromSNR
 StoreNavEventParamsToNavData
+StoreNavLink
 StoreObject
 StoreQueryService
 StoreScreen_Title
@@ -13893,6 +13966,7 @@ TapToCopy
 TaskAttributionTiming
 Telegram
 TellGet
+Template_Block
 TemporaryDirectoryPath
 TemporaryWebViewScreen
 TenMinutes
@@ -14837,6 +14911,7 @@ _WORKLET
 __
 __BUNDLE_START_TIME__
 __CANCEL__
+__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE
 __DEV__
 __E
 __EXAV_setOnAudioSampleReceivedCallback
@@ -17002,12 +17077,14 @@ bytes_PerSecond
 bytes_available
 bytes_download_rate
 bytes_downloaded
+bytes_in_progress
 bytes_received
 bytes_required
 bytes_scanned
 bytes_staged
 bytes_to_download
 bytes_to_stage
+bytes_total
 bytes_uploaded
 b̌
 b̧
@@ -19202,6 +19279,7 @@ filter_match_any_category_tags
 filter_relationship
 filter_to_appid
 filter_to_played_within_days
+filter_type
 filter_user_uploaded_only
 filters
 filtersContainer
@@ -19779,6 +19857,7 @@ getCurrentQuery
 getCurrentResult
 getCurrentRoute
 getCurrentScope
+getCurrentStack
 getCurrentState
 getCurrentTimestamp
 getCursor
@@ -21148,6 +21227,7 @@ invite_token
 inviter_steamid
 invites
 invites_remaining
+invites_sent
 invites_updated
 invoke
 invokeCallbackAndReturnFlushedQueue
@@ -21871,6 +21951,14 @@ k_EAppUpdateContentType_Content
 k_EAppUpdateContentType_Max
 k_EAppUpdateContentType_Shader
 k_EAppUpdateContentType_Workshop
+k_EAppUpdateProgress_Committing
+k_EAppUpdateProgress_Copying
+k_EAppUpdateProgress_Download
+k_EAppUpdateProgress_Max
+k_EAppUpdateProgress_Preallocating
+k_EAppUpdateProgress_Staging
+k_EAppUpdateProgress_VerifyingInstalledFiles
+k_EAppUpdateProgress_VerifyingStagedFiles
 k_EButton_A
 k_EButton_ApplicationMenu
 k_EButton_Axis0
@@ -22657,6 +22745,7 @@ lane
 lanes
 language
 language_preference
+language_preferences
 language_selection_arabic
 language_selection_brazilian
 language_selection_bulgarian
@@ -22709,7 +22798,6 @@ lastAccessedBy_
 lastActive
 lastActiveSpan
 lastActivity
-lastArgs
 lastBaseUpdate
 lastChild
 lastComponent
@@ -22727,9 +22815,7 @@ lastPosition
 lastProgressValue
 lastRenderedReducer
 lastRenderedState
-lastResult
 lastSelectedKey
-lastThis
 lastTime
 lastTimestamp
 lastToValue
@@ -23759,6 +23845,7 @@ mixin
 mixins
 mkdir
 mkdirp
+mm_auto_render
 mobile
 mobile_app
 mobileapp
@@ -25212,6 +25299,7 @@ potentials
 pow
 powderblue
 pre_context
+predefined_filter
 predicate
 preferCurrentTab
 preferences
@@ -25668,7 +25756,7 @@ react-devtools-core
 react-native
 react-native-bundle-scale
 react-native-maps@1.18.0
-react-native-screens@4.1.0
+react-native-screens@4.3.0
 react-native-share@11.1.0
 react-native-web@0.19.13
 react-refresh
@@ -26967,6 +27055,7 @@ sessionAndApp
 sessionData
 sessionIdleExpire
 sessionIdlePause
+sessionInfo
 sessionSampleRate
 sessionStorage
 sessionTimingIntegration
@@ -27469,6 +27558,7 @@ shouldFetchOnReconnect
 shouldFetchOnWindowFocus
 shouldFetchWiFiSSID
 shouldFocusWrap
+shouldFreeze
 shouldIgnoreOnError
 shouldMatchAllProps
 shouldNotifyLoadEvents
@@ -28004,6 +28094,7 @@ strArtworkURL
 strBodyLoc
 strButtonText
 strCaptchaText
+strComponentStack
 strConfirmationAssociatedMessage
 strContextHint
 strCountryCode
@@ -29023,6 +29114,7 @@ unstable_setEnableSyncOnScroll
 unstable_setExceptionDecorator
 unstable_setImageComponentDecorator
 unstable_setLogListeners
+unstable_sheetFooter
 unstable_shouldYield
 unstable_subscribeToOnScroll
 unstable_unregisterImageAttachedCallback
@@ -29083,16 +29175,6 @@ updateValue_
 updateView
 updateWith
 update_appid
-update_bytes_copied
-update_bytes_downloaded
-update_bytes_processed
-update_bytes_staged
-update_bytes_to_copy
-update_bytes_to_download
-update_bytes_to_process
-update_bytes_to_stage
-update_bytes_to_verify
-update_bytes_verified
 update_disc_bytes_per_second
 update_is_install
 update_is_prefetch_estimate
@@ -29242,6 +29324,7 @@ useDerivedValue
 useDetectorUpdater
 useDisableParentalSettings
 useDisjointedValue
+useDocumentVisibilityStateListener
 useDropdownPicker
 useDuration
 useEUIModeForLocalContext
@@ -29364,6 +29447,7 @@ useNativeControls
 useNativeDriver
 useNativeReachability
 useNativeViewConfigsInBridgelessMode
+useNavLinkForSteamURLs
 useNavigateToGuard
 useNavigateToTabBarItem
 useNavigateWithParentalCheck

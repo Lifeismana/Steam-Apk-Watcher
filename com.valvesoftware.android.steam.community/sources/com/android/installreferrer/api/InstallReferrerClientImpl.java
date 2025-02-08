@@ -14,9 +14,8 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.List;
 
-/* JADX INFO: Access modifiers changed from: package-private */
 /* loaded from: classes.dex */
-public class InstallReferrerClientImpl extends InstallReferrerClient {
+class InstallReferrerClientImpl extends InstallReferrerClient {
     private static final int PLAY_STORE_MIN_APP_VER = 80837300;
     private static final String SERVICE_ACTION_NAME = "com.google.android.finsky.BIND_GET_INSTALL_REFERRER_SERVICE";
     private static final String SERVICE_NAME = "com.google.android.finsky.externalreferrer.GetInstallReferrerService";
@@ -28,7 +27,6 @@ public class InstallReferrerClientImpl extends InstallReferrerClient {
     private ServiceConnection serviceConnection;
 
     @Retention(RetentionPolicy.SOURCE)
-    /* loaded from: classes.dex */
     public @interface ClientState {
         public static final int CLOSED = 3;
         public static final int CONNECTED = 2;
@@ -36,16 +34,14 @@ public class InstallReferrerClientImpl extends InstallReferrerClient {
         public static final int DISCONNECTED = 0;
     }
 
-    /* loaded from: classes.dex */
     private final class InstallReferrerServiceConnection implements ServiceConnection {
         private final InstallReferrerStateListener mListener;
 
         private InstallReferrerServiceConnection(InstallReferrerStateListener installReferrerStateListener) {
-            if (installReferrerStateListener != null) {
-                this.mListener = installReferrerStateListener;
-                return;
+            if (installReferrerStateListener == null) {
+                throw new RuntimeException("Please specify a listener to know when setup is done.");
             }
-            throw new RuntimeException("Please specify a listener to know when setup is done.");
+            this.mListener = installReferrerStateListener;
         }
 
         @Override // android.content.ServiceConnection

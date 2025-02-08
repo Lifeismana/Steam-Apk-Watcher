@@ -12,7 +12,6 @@ public final class ApiStatus {
     @Target({ElementType.TYPE, ElementType.ANNOTATION_TYPE, ElementType.METHOD, ElementType.CONSTRUCTOR, ElementType.FIELD, ElementType.PACKAGE})
     @Documented
     @Retention(RetentionPolicy.CLASS)
-    /* loaded from: classes4.dex */
     public @interface AvailableSince {
         String value();
     }
@@ -20,35 +19,30 @@ public final class ApiStatus {
     @Target({ElementType.TYPE, ElementType.ANNOTATION_TYPE, ElementType.METHOD, ElementType.CONSTRUCTOR, ElementType.FIELD, ElementType.PACKAGE})
     @Documented
     @Retention(RetentionPolicy.CLASS)
-    /* loaded from: classes4.dex */
     public @interface Experimental {
     }
 
     @Target({ElementType.TYPE, ElementType.ANNOTATION_TYPE, ElementType.METHOD, ElementType.CONSTRUCTOR, ElementType.FIELD, ElementType.PACKAGE})
     @Documented
     @Retention(RetentionPolicy.CLASS)
-    /* loaded from: classes4.dex */
     public @interface Internal {
     }
 
     @Target({ElementType.TYPE, ElementType.METHOD})
     @Documented
     @Retention(RetentionPolicy.CLASS)
-    /* loaded from: classes4.dex */
     public @interface NonExtendable {
     }
 
     @Target({ElementType.TYPE, ElementType.METHOD})
     @Documented
     @Retention(RetentionPolicy.CLASS)
-    /* loaded from: classes4.dex */
     public @interface OverrideOnly {
     }
 
     @Target({ElementType.TYPE, ElementType.ANNOTATION_TYPE, ElementType.METHOD, ElementType.CONSTRUCTOR, ElementType.FIELD, ElementType.PACKAGE})
     @Documented
     @Retention(RetentionPolicy.CLASS)
-    /* loaded from: classes4.dex */
     public @interface ScheduledForRemoval {
         String inVersion() default "";
     }

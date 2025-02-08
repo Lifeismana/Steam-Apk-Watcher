@@ -16,9 +16,8 @@ import kotlin.jvm.internal.Intrinsics;
 @Metadata(m868d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J\u000e\u0010\u0003\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u0006J\b\u0010\u0007\u001a\u00020\bH\u0014J\b\u0010\t\u001a\u00020\nH\u0014J\u0012\u0010\u000b\u001a\u00020\u00042\b\u0010\f\u001a\u0004\u0018\u00010\rH\u0014J\u0010\u0010\u000e\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u0006H\u0016¨\u0006\u000f"}, m869d2 = {"Lcom/valvesoftware/android/steam/community/MainActivity;", "Lcom/facebook/react/ReactActivity;", "()V", "ProcessIntentFCMMessage", "", "intent", "Landroid/content/Intent;", "createReactActivityDelegate", "Lcom/facebook/react/ReactActivityDelegate;", "getMainComponentName", "", "onCreate", "savedInstanceState", "Landroid/os/Bundle;", "onNewIntent", "app_release"}, m870k = 1, m871mv = {1, 9, 0}, m873xi = 48)
 /* loaded from: classes3.dex */
 public final class MainActivity extends ReactActivity {
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // com.facebook.react.ReactActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(null);
         Intent intent = getIntent();
         Intrinsics.checkNotNullExpressionValue(intent, "getIntent(...)");
@@ -35,7 +34,6 @@ public final class MainActivity extends ReactActivity {
         final String mainComponentName = getMainComponentName();
         final boolean fabricEnabled = DefaultNewArchitectureEntryPoint.getFabricEnabled();
         return new ReactActivityDelegateWrapper(this, false, new DefaultReactActivityDelegate(this, mainComponentName, fabricEnabled) { // from class: com.valvesoftware.android.steam.community.MainActivity$createReactActivityDelegate$1
-            /* JADX INFO: Access modifiers changed from: package-private */
             {
                 MainActivity mainActivity = this;
             }

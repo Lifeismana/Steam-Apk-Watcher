@@ -12,7 +12,6 @@ import java.lang.annotation.Target;
 /* loaded from: classes4.dex */
 public @interface Nls {
 
-    /* loaded from: classes4.dex */
     public enum Capitalization {
         NotSpecified,
         Title,

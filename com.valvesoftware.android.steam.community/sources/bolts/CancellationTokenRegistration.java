@@ -9,8 +9,7 @@ public class CancellationTokenRegistration implements Closeable {
     private final Object lock = new Object();
     private CancellationTokenSource tokenSource;
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    public CancellationTokenRegistration(CancellationTokenSource cancellationTokenSource, Runnable runnable) {
+    CancellationTokenRegistration(CancellationTokenSource cancellationTokenSource, Runnable runnable) {
         this.tokenSource = cancellationTokenSource;
         this.action = runnable;
     }
@@ -28,8 +27,7 @@ public class CancellationTokenRegistration implements Closeable {
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    public void runAction() {
+    void runAction() {
         synchronized (this.lock) {
             throwIfClosed();
             this.action.run();

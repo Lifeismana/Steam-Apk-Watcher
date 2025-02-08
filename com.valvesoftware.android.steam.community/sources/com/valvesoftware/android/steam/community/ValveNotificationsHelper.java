@@ -12,7 +12,6 @@ public class ValveNotificationsHelper {
     private ArrayList<Pair<RemoteMessage, ENotificationAppState>> m_mapPendingNotifications = new ArrayList<>();
     private OnMessageReceivedListener m_listener = null;
 
-    /* loaded from: classes3.dex */
     public interface OnMessageReceivedListener {
         void onMessageReceived(RemoteMessage remoteMessage);
     }
@@ -42,7 +41,6 @@ public class ValveNotificationsHelper {
         return null;
     }
 
-    /* loaded from: classes3.dex */
     public enum ENotificationAppState {
         Invalid(0),
         Pressed(1),

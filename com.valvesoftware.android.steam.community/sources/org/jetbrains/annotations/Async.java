@@ -10,13 +10,11 @@ public final class Async {
 
     @Target({ElementType.METHOD, ElementType.CONSTRUCTOR, ElementType.PARAMETER})
     @Retention(RetentionPolicy.CLASS)
-    /* loaded from: classes4.dex */
     public @interface Execute {
     }
 
     @Target({ElementType.METHOD, ElementType.CONSTRUCTOR, ElementType.PARAMETER})
     @Retention(RetentionPolicy.CLASS)
-    /* loaded from: classes4.dex */
     public @interface Schedule {
     }
 

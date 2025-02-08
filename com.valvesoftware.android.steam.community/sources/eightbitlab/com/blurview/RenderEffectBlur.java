@@ -69,8 +69,7 @@ public class RenderEffectBlur implements BlurAlgorithm {
         this.fallbackAlgorithm.render(canvas, bitmap);
     }
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    public void setContext(Context context) {
+    void setContext(Context context) {
         this.context = context;
     }
 }

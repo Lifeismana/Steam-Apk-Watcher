@@ -31,24 +31,21 @@ public final class MainApplication extends Application implements ReactApplicati
             return false;
         }
 
-        /* JADX INFO: Access modifiers changed from: package-private */
         {
             super(this);
             this.isHermesEnabled = true;
         }
 
-        /* JADX INFO: Access modifiers changed from: protected */
         @Override // com.facebook.react.ReactNativeHost
-        public List<ReactPackage> getPackages() {
+        protected List<ReactPackage> getPackages() {
             ArrayList<ReactPackage> packages = new PackageList(this).getPackages();
             packages.add(new ValvePackage());
             Intrinsics.checkNotNull(packages);
             return packages;
         }
 
-        /* JADX INFO: Access modifiers changed from: protected */
         @Override // com.facebook.react.ReactNativeHost
-        public String getJSMainModuleName() {
+        protected String getJSMainModuleName() {
             return ".expo/.virtual-metro-entry";
         }
 

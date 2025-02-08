@@ -14,7 +14,6 @@ public class AvifDecoder {
     private int repetitionCount;
     private int width;
 
-    /* loaded from: classes4.dex */
     public static class Info {
         public boolean alphaPresent;
         public int depth;

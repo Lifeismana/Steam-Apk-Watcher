@@ -10,7 +10,6 @@ public final class Debug {
 
     @Target({ElementType.TYPE})
     @Retention(RetentionPolicy.CLASS)
-    /* loaded from: classes4.dex */
     public @interface Renderer {
         String childrenArray() default "";
 

@@ -30,8 +30,7 @@ final class PreDrawBlurController implements BlurController {
     };
     private boolean blurEnabled = true;
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    public PreDrawBlurController(BlurView blurView, ViewGroup viewGroup, int i, BlurAlgorithm blurAlgorithm) {
+    PreDrawBlurController(BlurView blurView, ViewGroup viewGroup, int i, BlurAlgorithm blurAlgorithm) {
         this.rootView = viewGroup;
         this.blurView = blurView;
         this.overlayColor = i;

@@ -2,9 +2,8 @@ package bolts;
 
 import bolts.Task;
 
-/* JADX INFO: Access modifiers changed from: package-private */
 /* loaded from: classes.dex */
-public class UnobservedErrorNotifier {
+class UnobservedErrorNotifier {
     private Task<?> task;
 
     public UnobservedErrorNotifier(Task<?> task) {

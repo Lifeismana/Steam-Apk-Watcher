@@ -5,7 +5,6 @@ package com.valvesoftware.android.steam.community;
 public final class C2687R {
 
     /* renamed from: com.valvesoftware.android.steam.community.R$bool */
-    /* loaded from: classes3.dex */
     public static final class bool {
         public static int portrait_only = 2131034118;
 
@@ -35,7 +34,6 @@ public final class C2687R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.community.R$color */
-    /* loaded from: classes3.dex */
     public static final class color {
         public static int navigation_bar = 2131100252;
         public static int splashscreen_background = 2131100271;
@@ -1944,7 +1942,6 @@ public final class C2687R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.community.R$drawable */
-    /* loaded from: classes3.dex */
     public static final class drawable {
         public static int __node_modules_reactnavigation_stack_src_views_assets_backicon = 2131230731;
 
@@ -1963,22 +1960,22 @@ public final class C2687R {
         public static int src_screens_modals_steamlogo_bg = 2131231066;
 
         /* JADX INFO: Added by JADX */
-        public static final int res_0x7f080000_avd_hide_password__0 = 2131230720;
+        public static final int _avd_hide_password__0_res_0x7f080000 = 2131230720;
 
         /* JADX INFO: Added by JADX */
-        public static final int res_0x7f080001_avd_hide_password__1 = 2131230721;
+        public static final int _avd_hide_password__1_res_0x7f080001 = 2131230721;
 
         /* JADX INFO: Added by JADX */
-        public static final int res_0x7f080002_avd_hide_password__2 = 2131230722;
+        public static final int _avd_hide_password__2_res_0x7f080002 = 2131230722;
 
         /* JADX INFO: Added by JADX */
-        public static final int res_0x7f080003_avd_show_password__0 = 2131230723;
+        public static final int _avd_show_password__0_res_0x7f080003 = 2131230723;
 
         /* JADX INFO: Added by JADX */
-        public static final int res_0x7f080004_avd_show_password__1 = 2131230724;
+        public static final int _avd_show_password__1_res_0x7f080004 = 2131230724;
 
         /* JADX INFO: Added by JADX */
-        public static final int res_0x7f080005_avd_show_password__2 = 2131230725;
+        public static final int _avd_show_password__2_res_0x7f080005 = 2131230725;
 
         /* JADX INFO: Added by JADX */
         public static final int __node_modules_reactnative_libraries_logbox_ui_logboximages_alerttriangle = 2131230726;
@@ -2981,7 +2978,6 @@ public final class C2687R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.community.R$integer */
-    /* loaded from: classes3.dex */
     public static final class integer {
         public static int react_native_dev_server_port = 2131427385;
 
@@ -3167,7 +3163,6 @@ public final class C2687R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.community.R$mipmap */
-    /* loaded from: classes3.dex */
     public static final class mipmap {
         public static int ic_launcher = 2131623936;
         public static int ic_launcher_round = 2131623937;
@@ -3178,7 +3173,6 @@ public final class C2687R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.community.R$raw */
-    /* loaded from: classes3.dex */
     public static final class raw {
         public static int __packages_sharedmobileui_src_fonts_motivasansbold = 2131755008;
         public static int __packages_sharedmobileui_src_fonts_motivasansbolditalic = 2131755009;
@@ -3201,7 +3195,6 @@ public final class C2687R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.community.R$string */
-    /* loaded from: classes3.dex */
     public static final class string {
         public static int app_name = 2131820573;
         public static int default_web_client_id = 2131820640;
@@ -4094,7 +4087,6 @@ public final class C2687R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.community.R$style */
-    /* loaded from: classes3.dex */
     public static final class style {
         public static int AppTheme = 2131886090;
         public static int Theme_App_SplashScreen = 2131886639;
@@ -4486,9 +4478,8 @@ public final class C2687R {
         /* JADX INFO: Added by JADX */
         public static final int Base_ThemeOverlay_MaterialComponents_Dialog_Alert_Framework = 2131886209;
 
-        /* renamed from: Base_ThemeOverlay_MaterialComponents_Light_Dialog_Alert_Framework */
         /* JADX INFO: Added by JADX */
-        public static final int f579x519bcd25 = 2131886210;
+        public static final int Base_ThemeOverlay_MaterialComponents_Light_Dialog_Alert_Framework = 2131886210;
 
         /* JADX INFO: Added by JADX */
         public static final int Base_ThemeOverlay_MaterialComponents_MaterialAlertDialog = 2131886211;
@@ -4889,9 +4880,8 @@ public final class C2687R {
         /* JADX INFO: Added by JADX */
         public static final int Base_Widget_MaterialComponents_Chip = 2131886343;
 
-        /* renamed from: Base_Widget_MaterialComponents_MaterialCalendar_HeaderToggleButton */
         /* JADX INFO: Added by JADX */
-        public static final int f580xe99957b8 = 2131886344;
+        public static final int Base_Widget_MaterialComponents_MaterialCalendar_HeaderToggleButton = 2131886344;
 
         /* JADX INFO: Added by JADX */
         public static final int Base_Widget_MaterialComponents_MaterialCalendar_NavigationButton = 2131886345;
@@ -5334,9 +5324,8 @@ public final class C2687R {
         /* JADX INFO: Added by JADX */
         public static final int ShapeAppearanceOverlay_MaterialComponents_Chip = 2131886491;
 
-        /* renamed from: ShapeAppearanceOverlay_MaterialComponents_ExtendedFloatingActionButton */
         /* JADX INFO: Added by JADX */
-        public static final int f581x7c26e1f5 = 2131886492;
+        public static final int ShapeAppearanceOverlay_MaterialComponents_ExtendedFloatingActionButton = 2131886492;
 
         /* JADX INFO: Added by JADX */
         public static final int ShapeAppearanceOverlay_MaterialComponents_FloatingActionButton = 2131886493;
@@ -5344,16 +5333,14 @@ public final class C2687R {
         /* JADX INFO: Added by JADX */
         public static final int ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day = 2131886494;
 
-        /* renamed from: ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Window_Fullscreen */
         /* JADX INFO: Added by JADX */
-        public static final int f582x121af39e = 2131886495;
+        public static final int ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Window_Fullscreen = 2131886495;
 
         /* JADX INFO: Added by JADX */
         public static final int ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year = 2131886496;
 
-        /* renamed from: ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox */
         /* JADX INFO: Added by JADX */
-        public static final int f583xaf44c2a3 = 2131886497;
+        public static final int ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox = 2131886497;
 
         /* JADX INFO: Added by JADX */
         public static final int ShapeAppearanceOverlay_TopLeftCut = 2131886498;
@@ -5367,9 +5354,8 @@ public final class C2687R {
         /* JADX INFO: Added by JADX */
         public static final int SpinnerDatePickerStyle = 2131886501;
 
-        /* renamed from: Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day */
         /* JADX INFO: Added by JADX */
-        public static final int f584x774f7bdd = 2131886502;
+        public static final int Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day = 2131886502;
 
         /* JADX INFO: Added by JADX */
         public static final int Test_Theme_MaterialComponents_MaterialCalendar = 2131886503;
@@ -6277,9 +6263,8 @@ public final class C2687R {
         /* JADX INFO: Added by JADX */
         public static final int ThemeOverlay_Material3_MaterialTimePicker = 2131886805;
 
-        /* renamed from: ThemeOverlay_Material3_MaterialTimePicker_Display_TextInputEditText */
         /* JADX INFO: Added by JADX */
-        public static final int f585xcb07865 = 2131886806;
+        public static final int ThemeOverlay_Material3_MaterialTimePicker_Display_TextInputEditText = 2131886806;
 
         /* JADX INFO: Added by JADX */
         public static final int ThemeOverlay_Material3_NavigationView = 2131886807;
@@ -6326,16 +6311,14 @@ public final class C2687R {
         /* JADX INFO: Added by JADX */
         public static final int ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox = 2131886821;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox_Dense */
         /* JADX INFO: Added by JADX */
-        public static final int f586x3194dd0e = 2131886822;
+        public static final int ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox_Dense = 2131886822;
 
         /* JADX INFO: Added by JADX */
         public static final int ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox = 2131886823;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox_Dense */
         /* JADX INFO: Added by JADX */
-        public static final int f587x2469ccce = 2131886824;
+        public static final int ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox_Dense = 2131886824;
 
         /* JADX INFO: Added by JADX */
         public static final int ThemeOverlay_MaterialComponents_BottomAppBar_Primary = 2131886825;
@@ -6379,21 +6362,17 @@ public final class C2687R {
         /* JADX INFO: Added by JADX */
         public static final int ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date = 2131886838;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Calendar */
         /* JADX INFO: Added by JADX */
-        public static final int f588x8886184a = 2131886839;
+        public static final int ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Calendar = 2131886839;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text */
         /* JADX INFO: Added by JADX */
-        public static final int f589x9b335733 = 2131886840;
+        public static final int ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text = 2131886840;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text_Day */
         /* JADX INFO: Added by JADX */
-        public static final int f590x96aac070 = 2131886841;
+        public static final int ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text_Day = 2131886841;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Spinner */
         /* JADX INFO: Added by JADX */
-        public static final int f591x7cc1c38d = 2131886842;
+        public static final int ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Spinner = 2131886842;
 
         /* JADX INFO: Added by JADX */
         public static final int ThemeOverlay_MaterialComponents_MaterialCalendar = 2131886843;
@@ -6407,16 +6386,14 @@ public final class C2687R {
         /* JADX INFO: Added by JADX */
         public static final int ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = 2131886846;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense */
         /* JADX INFO: Added by JADX */
-        public static final int f592xb44864b4 = 2131886847;
+        public static final int ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = 2131886847;
 
         /* JADX INFO: Added by JADX */
         public static final int ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = 2131886848;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense */
         /* JADX INFO: Added by JADX */
-        public static final int f593xc85a02f4 = 2131886849;
+        public static final int ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = 2131886849;
 
         /* JADX INFO: Added by JADX */
         public static final int ThemeOverlay_MaterialComponents_TimePicker = 2131886850;
@@ -6424,9 +6401,8 @@ public final class C2687R {
         /* JADX INFO: Added by JADX */
         public static final int ThemeOverlay_MaterialComponents_TimePicker_Display = 2131886851;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_TimePicker_Display_TextInputEditText */
         /* JADX INFO: Added by JADX */
-        public static final int f594xeac9d19d = 2131886852;
+        public static final int ThemeOverlay_MaterialComponents_TimePicker_Display_TextInputEditText = 2131886852;
 
         /* JADX INFO: Added by JADX */
         public static final int ThemeOverlay_MaterialComponents_Toolbar_Popup_Primary = 2131886853;
@@ -7094,9 +7070,8 @@ public final class C2687R {
         /* JADX INFO: Added by JADX */
         public static final int Widget_Material3_TextInputLayout_FilledBox_Dense = 2131887074;
 
-        /* renamed from: Widget_Material3_TextInputLayout_FilledBox_Dense_ExposedDropdownMenu */
         /* JADX INFO: Added by JADX */
-        public static final int f595xee200b54 = 2131887075;
+        public static final int Widget_Material3_TextInputLayout_FilledBox_Dense_ExposedDropdownMenu = 2131887075;
 
         /* JADX INFO: Added by JADX */
         public static final int Widget_Material3_TextInputLayout_FilledBox_ExposedDropdownMenu = 2131887076;
@@ -7107,9 +7082,8 @@ public final class C2687R {
         /* JADX INFO: Added by JADX */
         public static final int Widget_Material3_TextInputLayout_OutlinedBox_Dense = 2131887078;
 
-        /* renamed from: Widget_Material3_TextInputLayout_OutlinedBox_Dense_ExposedDropdownMenu */
         /* JADX INFO: Added by JADX */
-        public static final int f596x33d579d4 = 2131887079;
+        public static final int Widget_Material3_TextInputLayout_OutlinedBox_Dense_ExposedDropdownMenu = 2131887079;
 
         /* JADX INFO: Added by JADX */
         public static final int Widget_Material3_TextInputLayout_OutlinedBox_ExposedDropdownMenu = 2131887080;
@@ -7327,9 +7301,8 @@ public final class C2687R {
         /* JADX INFO: Added by JADX */
         public static final int Widget_MaterialComponents_MaterialCalendar_HeaderSelection = 2131887151;
 
-        /* renamed from: Widget_MaterialComponents_MaterialCalendar_HeaderSelection_Fullscreen */
         /* JADX INFO: Added by JADX */
-        public static final int f597x77b19d4e = 2131887152;
+        public static final int Widget_MaterialComponents_MaterialCalendar_HeaderSelection_Fullscreen = 2131887152;
 
         /* JADX INFO: Added by JADX */
         public static final int Widget_MaterialComponents_MaterialCalendar_HeaderTitle = 2131887153;
@@ -7436,13 +7409,11 @@ public final class C2687R {
         /* JADX INFO: Added by JADX */
         public static final int Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = 2131887187;
 
-        /* renamed from: Widget_MaterialComponents_TextInputLayout_FilledBox_Dense_ExposedDropdownMenu */
         /* JADX INFO: Added by JADX */
-        public static final int f598x5c070b9b = 2131887188;
+        public static final int Widget_MaterialComponents_TextInputLayout_FilledBox_Dense_ExposedDropdownMenu = 2131887188;
 
-        /* renamed from: Widget_MaterialComponents_TextInputLayout_FilledBox_ExposedDropdownMenu */
         /* JADX INFO: Added by JADX */
-        public static final int f599x22b53d1b = 2131887189;
+        public static final int Widget_MaterialComponents_TextInputLayout_FilledBox_ExposedDropdownMenu = 2131887189;
 
         /* JADX INFO: Added by JADX */
         public static final int Widget_MaterialComponents_TextInputLayout_OutlinedBox = 2131887190;
@@ -7450,13 +7421,11 @@ public final class C2687R {
         /* JADX INFO: Added by JADX */
         public static final int Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = 2131887191;
 
-        /* renamed from: Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense_ExposedDropdownMenu */
         /* JADX INFO: Added by JADX */
-        public static final int f600xc3fd845b = 2131887192;
+        public static final int Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense_ExposedDropdownMenu = 2131887192;
 
-        /* renamed from: Widget_MaterialComponents_TextInputLayout_OutlinedBox_ExposedDropdownMenu */
         /* JADX INFO: Added by JADX */
-        public static final int f601x802545db = 2131887193;
+        public static final int Widget_MaterialComponents_TextInputLayout_OutlinedBox_ExposedDropdownMenu = 2131887193;
 
         /* JADX INFO: Added by JADX */
         public static final int Widget_MaterialComponents_TextView = 2131887194;
@@ -7526,7 +7495,6 @@ public final class C2687R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.community.R$xml */
-    /* loaded from: classes3.dex */
     public static final class xml {
         public static int network_security_config = 2132017155;
 

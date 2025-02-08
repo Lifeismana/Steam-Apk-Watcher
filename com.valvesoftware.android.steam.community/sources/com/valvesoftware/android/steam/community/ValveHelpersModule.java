@@ -43,8 +43,7 @@ public class ValveHelpersModule extends ReactContextBaseJavaModule {
     private static final String s_strSteamGuardStateFilenameBase = "Steamguard-";
     private ForwardingCookieHandler m_CookieHandler;
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    public ValveHelpersModule(ReactApplicationContext reactApplicationContext) {
+    ValveHelpersModule(ReactApplicationContext reactApplicationContext) {
         super(reactApplicationContext);
         this.m_CookieHandler = new ForwardingCookieHandler(reactApplicationContext);
     }

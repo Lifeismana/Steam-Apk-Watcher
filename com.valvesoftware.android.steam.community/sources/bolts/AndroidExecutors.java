@@ -48,7 +48,6 @@ final class AndroidExecutors {
         return INSTANCE.uiThread;
     }
 
-    /* loaded from: classes.dex */
     private static class UIThreadExecutor implements Executor {
         private UIThreadExecutor() {
         }

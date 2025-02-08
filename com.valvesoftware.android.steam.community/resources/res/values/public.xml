@@ -2522,12 +2522,12 @@
     <public type="dimen" name="tooltip_vertical_padding" id="0x7f070277" />
     <public type="dimen" name="tooltip_y_offset_non_touch" id="0x7f070278" />
     <public type="dimen" name="tooltip_y_offset_touch" id="0x7f070279" />
-    <public type="drawable" name="res_0x7f080000_avd_hide_password__0" id="0x7f080000" />
-    <public type="drawable" name="res_0x7f080001_avd_hide_password__1" id="0x7f080001" />
-    <public type="drawable" name="res_0x7f080002_avd_hide_password__2" id="0x7f080002" />
-    <public type="drawable" name="res_0x7f080003_avd_show_password__0" id="0x7f080003" />
-    <public type="drawable" name="res_0x7f080004_avd_show_password__1" id="0x7f080004" />
-    <public type="drawable" name="res_0x7f080005_avd_show_password__2" id="0x7f080005" />
+    <public type="drawable" name="_avd_hide_password__0_res_0x7f080000" id="0x7f080000" />
+    <public type="drawable" name="_avd_hide_password__1_res_0x7f080001" id="0x7f080001" />
+    <public type="drawable" name="_avd_hide_password__2_res_0x7f080002" id="0x7f080002" />
+    <public type="drawable" name="_avd_show_password__0_res_0x7f080003" id="0x7f080003" />
+    <public type="drawable" name="_avd_show_password__1_res_0x7f080004" id="0x7f080004" />
+    <public type="drawable" name="_avd_show_password__2_res_0x7f080005" id="0x7f080005" />
     <public type="drawable" name="__node_modules_reactnative_libraries_logbox_ui_logboximages_alerttriangle" id="0x7f080006" />
     <public type="drawable" name="__node_modules_reactnative_libraries_logbox_ui_logboximages_chevronleft" id="0x7f080007" />
     <public type="drawable" name="__node_modules_reactnative_libraries_logbox_ui_logboximages_chevronright" id="0x7f080008" />

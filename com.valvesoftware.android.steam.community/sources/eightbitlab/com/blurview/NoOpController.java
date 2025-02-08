@@ -42,4 +42,7 @@ class NoOpController implements BlurController {
     @Override // eightbitlab.com.blurview.BlurController
     public void updateBlurViewSize() {
     }
+
+    NoOpController() {
+    }
 }

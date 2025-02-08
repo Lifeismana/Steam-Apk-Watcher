@@ -159,6 +159,7 @@ BCommentShowPosterDisplayName
 BConfigContextInGamepadUI
 BContainDataRequest
 BDataRequestContainsOtherDataRequest
+BDeepEqual
 BDoesLocaleUse24Hourclock
 BDoesSaleItemTypeHaveParent
 BElementContainsSelection
@@ -1164,6 +1165,7 @@ CStorePageFilter_ContentHubFilter_OptInInfo
 CStorePageFilter_SalePageFilter
 CStorePageFilter_StoreFilter
 CStoreQueryFilters
+CStoreQueryFilters_PredefinedFilter
 CStoreQueryFilters_PriceFilters
 CStoreQueryFilters_TagFilter
 CStoreQueryFilters_TypeFilters
@@ -1596,6 +1598,8 @@ ECaptchaTypeToString
 ECaptchaUsageToString
 ECarrierPhoneIdentityPolicyToString
 ECarrierStatusToString
+EChildProcessQueryCommandToString
+EChildProcessQueryExitCodeToString
 EClanAccountFlagsToString
 EClanImageFileTypeToString
 EClanImageGroupToString
@@ -1693,6 +1697,8 @@ EPhoneStatusToString
 EPhoneTOSPolicyToString
 EPhoneVACPolicyToString
 EPlaytestInviteStatusToString
+EPlaytestLicenseChangeTypeToString
+EPlaytestMembershipSourceToString
 EPlaytestStatusToString
 EPreapprovalResolutionToString
 EProfileColorStyleToString
@@ -1723,8 +1729,6 @@ EPushUpdatesToCrowdInToString
 ERefundSupportActionToString
 EResult
 ERiskLevelToString
-ERobustQueryCommandToString
-ERobustQueryExitCodeToString
 ESDCardFormatStageToString
 ESLSHelperToString
 EScalingFilterToString
@@ -1755,6 +1759,7 @@ EStoreDiscoveryQueueTypeToString
 EStoreItemTypeToString
 EStoreLinkTypeToString
 EStoreQueryExcludeFromToString
+EStoreQueryPredefinedFilterToString
 EStoreQuerySortToString
 EStoreUsabilityEventToString
 EStoreUsabilityFrontPageScrollToString
@@ -1834,6 +1839,7 @@ Expander
 ExpanderButton
 Explorer
 ExpoImage
+ExtractHashFromBBCodeURL
 ExtractTrailerFormats
 ExtractUniqueCreatorClanIDSet
 F
@@ -1949,6 +1955,7 @@ FocusManager
 FocusedTabBarMarker
 FontFace
 Footer
+FooterComponent
 FooterIcon
 For
 ForceAcceptInvite
@@ -2352,6 +2359,7 @@ GetPushDeviceID
 GetQueryErrorString
 GetQuizQuestions
 GetRandomElementArray
+GetReactComponentStack
 GetReactionConfig
 GetReactions
 GetReactionsSummaryForUser
@@ -2978,7 +2986,6 @@ NavEventContext
 NavLink
 NavLinkFallback
 NavLinkSNRFallback
-NavLinkSteamURL
 NavMenuRow
 NavReady
 NavigationContainer
@@ -3766,6 +3773,7 @@ StoreItem_Trailers_VideoSource
 StoreNavEventContext
 StoreNavEventContextFromSNR
 StoreNavEventParamsToNavData
+StoreNavLink
 StoreObject
 StoreString
 StoreWebviewHeader
@@ -7813,6 +7821,7 @@ includes
 includesCredentials
 increment
 incrementSessionStatusCount
+index
 indexArray
 indexOf
 infiniteQueryBehavior
@@ -8630,7 +8639,6 @@ mediaInteractionCb
 memoBuilder
 memoize
 memoizeCapped
-memoizeOne
 memoized
 merge
 mergeAndOverwriteScopeData
@@ -9314,7 +9322,6 @@ poly
 polyfill
 polyfillGlobal
 polyfillObjectProperty
-ponyfill
 pop
 popHiddenContext
 popHostContainer
@@ -10941,6 +10948,7 @@ useDetectorUpdater
 useDisableParentalSettings
 useDisjointedValue
 useDocumentTitle
+useDocumentVisibilityStateListener
 useDomCollectionContext
 useDropdownPicker
 useDurationAnimation
@@ -11088,6 +11096,7 @@ useMutationParentalUnlock
 useMutationPauseResumeDownload
 useMutationState
 useMutationUninstall
+useNavLinkForSteamURLs
 useNavigateToGuard
 useNavigateToShortLink
 useNavigateToTabBarItem
@@ -11425,6 +11434,7 @@ wrappedAdoptedStyleSheetEmit
 wrappedCanvasMutationEmit
 wrappedEmit
 wrappedFn
+wrappedListener
 wrappedMutationEmit
 wrappedOnChange
 wrappedScrollEmit
