@@ -9,15 +9,13 @@ public class SizeScaler {
         this.scaleFactor = f;
     }
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    public Size scale(int i, int i2) {
+    Size scale(int i, int i2) {
         float f = i;
         int roundSize = roundSize(downscaleSize(f));
         return new Size(roundSize, (int) Math.ceil(i2 / r4), f / roundSize);
     }
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    public boolean isZeroSized(int i, int i2) {
+    boolean isZeroSized(int i, int i2) {
         return downscaleSize((float) i2) == 0 || downscaleSize((float) i) == 0;
     }
 
@@ -30,7 +28,6 @@ public class SizeScaler {
         return (int) Math.ceil(f / this.scaleFactor);
     }
 
-    /* loaded from: classes2.dex */
     static class Size {
         final int height;
         final float scaleFactor;

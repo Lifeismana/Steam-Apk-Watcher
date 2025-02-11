@@ -96,8 +96,7 @@ public class CancellationTokenSource implements Closeable {
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    public CancellationTokenRegistration register(Runnable runnable) {
+    CancellationTokenRegistration register(Runnable runnable) {
         CancellationTokenRegistration cancellationTokenRegistration;
         synchronized (this.lock) {
             throwIfClosed();
@@ -111,8 +110,7 @@ public class CancellationTokenSource implements Closeable {
         return cancellationTokenRegistration;
     }
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    public void throwIfCancellationRequested() throws CancellationException {
+    void throwIfCancellationRequested() throws CancellationException {
         synchronized (this.lock) {
             throwIfClosed();
             if (this.cancellationRequested) {
@@ -121,8 +119,7 @@ public class CancellationTokenSource implements Closeable {
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    public void unregister(CancellationTokenRegistration cancellationTokenRegistration) {
+    void unregister(CancellationTokenRegistration cancellationTokenRegistration) {
         synchronized (this.lock) {
             throwIfClosed();
             this.registrations.remove(cancellationTokenRegistration);

@@ -15,9 +15,8 @@ public class MainActivity extends ReactActivity {
         return "main";
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // com.facebook.react.ReactActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
-    public void onCreate(Bundle bundle) {
+    protected void onCreate(Bundle bundle) {
         setTheme(C2285R.style.AppTheme);
         super.onCreate(null);
     }

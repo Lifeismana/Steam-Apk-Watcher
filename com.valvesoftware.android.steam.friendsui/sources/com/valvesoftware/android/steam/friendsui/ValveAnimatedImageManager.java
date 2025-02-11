@@ -6,7 +6,7 @@ import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
 import com.facebook.react.views.image.ReactImageView;
-import expo.modules.p006av.player.PlayerData;
+import expo.modules.p008av.player.PlayerData;
 
 /* loaded from: classes2.dex */
 public class ValveAnimatedImageManager extends SimpleViewManager<ReactImageView> {

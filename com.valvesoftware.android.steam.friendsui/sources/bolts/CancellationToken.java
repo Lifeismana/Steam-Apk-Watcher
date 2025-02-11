@@ -7,8 +7,7 @@ import java.util.concurrent.CancellationException;
 public class CancellationToken {
     private final CancellationTokenSource tokenSource;
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    public CancellationToken(CancellationTokenSource cancellationTokenSource) {
+    CancellationToken(CancellationTokenSource cancellationTokenSource) {
         this.tokenSource = cancellationTokenSource;
     }
 

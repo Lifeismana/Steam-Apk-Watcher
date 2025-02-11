@@ -7,7 +7,6 @@ import com.valvesoftware.android.steam.friendsui.C2285R;
 public final class C3341R {
 
     /* renamed from: org.unimodules.apploader.R$anim */
-    /* loaded from: classes4.dex */
     public static final class anim {
         public static final int abc_fade_in = 2130771968;
         public static final int abc_fade_out = 2130771969;
@@ -46,7 +45,6 @@ public final class C3341R {
     }
 
     /* renamed from: org.unimodules.apploader.R$animator */
-    /* loaded from: classes4.dex */
     public static final class animator {
         public static final int fragment_close_enter = 2130837507;
         public static final int fragment_close_exit = 2130837508;
@@ -60,7 +58,6 @@ public final class C3341R {
     }
 
     /* renamed from: org.unimodules.apploader.R$attr */
-    /* loaded from: classes4.dex */
     public static final class attr {
         public static final int actionBarDivider = 2130968576;
         public static final int actionBarItemBackground = 2130968577;
@@ -394,7 +391,6 @@ public final class C3341R {
     }
 
     /* renamed from: org.unimodules.apploader.R$bool */
-    /* loaded from: classes4.dex */
     public static final class bool {
         public static final int abc_action_bar_embed_tabs = 2131034112;
         public static final int abc_config_actionMenuItemAllCaps = 2131034113;
@@ -404,7 +400,6 @@ public final class C3341R {
     }
 
     /* renamed from: org.unimodules.apploader.R$color */
-    /* loaded from: classes4.dex */
     public static final class color {
         public static final int abc_background_cache_hint_selector_material_dark = 2131099648;
         public static final int abc_background_cache_hint_selector_material_light = 2131099649;
@@ -501,7 +496,6 @@ public final class C3341R {
     }
 
     /* renamed from: org.unimodules.apploader.R$dimen */
-    /* loaded from: classes4.dex */
     public static final class dimen {
         public static final int abc_action_bar_content_inset_material = 2131165184;
         public static final int abc_action_bar_content_inset_with_nav = 2131165185;
@@ -630,7 +624,6 @@ public final class C3341R {
     }
 
     /* renamed from: org.unimodules.apploader.R$drawable */
-    /* loaded from: classes4.dex */
     public static final class drawable {
         public static final int abc_ab_share_pack_mtrl_alpha = 2131230783;
         public static final int abc_action_bar_item_background_material = 2131230784;
@@ -742,7 +735,6 @@ public final class C3341R {
     }
 
     /* renamed from: org.unimodules.apploader.R$id */
-    /* loaded from: classes4.dex */
     public static final class id {
         public static final int accessibility_action_clickable_span = 2131361805;
         public static final int accessibility_actions = 2131361806;
@@ -948,7 +940,6 @@ public final class C3341R {
     }
 
     /* renamed from: org.unimodules.apploader.R$integer */
-    /* loaded from: classes4.dex */
     public static final class integer {
         public static final int abc_config_activityDefaultDur = 2131427328;
         public static final int abc_config_activityShortDur = 2131427329;
@@ -963,7 +954,6 @@ public final class C3341R {
     }
 
     /* renamed from: org.unimodules.apploader.R$interpolator */
-    /* loaded from: classes4.dex */
     public static final class interpolator {
         public static final int btn_checkbox_checked_mtrl_animation_interpolator_0 = 2131492864;
         public static final int btn_checkbox_checked_mtrl_animation_interpolator_1 = 2131492865;
@@ -978,7 +968,6 @@ public final class C3341R {
     }
 
     /* renamed from: org.unimodules.apploader.R$layout */
-    /* loaded from: classes4.dex */
     public static final class layout {
         public static final int abc_action_bar_title_item = 2131558400;
         public static final int abc_action_bar_up_container = 2131558401;
@@ -1031,7 +1020,6 @@ public final class C3341R {
     }
 
     /* renamed from: org.unimodules.apploader.R$string */
-    /* loaded from: classes4.dex */
     public static final class string {
         public static final int abc_action_bar_home_description = 2131886081;
         public static final int abc_action_bar_up_description = 2131886082;
@@ -1123,7 +1111,6 @@ public final class C3341R {
     }
 
     /* renamed from: org.unimodules.apploader.R$style */
-    /* loaded from: classes4.dex */
     public static final class style {
         public static final int AlertDialog_AppCompat = 2131951616;
         public static final int AlertDialog_AppCompat_Light = 2131951617;
@@ -1506,7 +1493,6 @@ public final class C3341R {
     }
 
     /* renamed from: org.unimodules.apploader.R$styleable */
-    /* loaded from: classes4.dex */
     public static final class styleable {
         public static final int ActionBarLayout_android_layout_gravity = 0;
         public static final int ActionBar_background = 0;
@@ -2036,7 +2022,7 @@ public final class C3341R {
         public static final int[] ButtonBarLayout = {C2285R.attr.allowStacking};
         public static final int[] Capability = {C2285R.attr.queryPatterns, C2285R.attr.shortcutMatchRequired};
         public static final int[] CheckedTextView = {android.R.attr.checkMark, C2285R.attr.checkMarkCompat, C2285R.attr.checkMarkTint, C2285R.attr.checkMarkTintMode};
-        public static final int[] ColorStateListItem = {android.R.attr.color, android.R.attr.alpha, 16844359, C2285R.attr.alpha, C2285R.attr.lStar};
+        public static final int[] ColorStateListItem = {android.R.attr.color, android.R.attr.alpha, android.R.attr.lStar, C2285R.attr.alpha, C2285R.attr.lStar};
         public static final int[] CompoundButton = {android.R.attr.button, C2285R.attr.buttonCompat, C2285R.attr.buttonTint, C2285R.attr.buttonTintMode};
         public static final int[] DrawerArrowToggle = {C2285R.attr.arrowHeadLength, C2285R.attr.arrowShaftLength, C2285R.attr.barLength, C2285R.attr.color, C2285R.attr.drawableSize, C2285R.attr.gapBetweenBars, C2285R.attr.spinBars, C2285R.attr.thickness};
         public static final int[] FontFamily = {C2285R.attr.fontProviderAuthority, C2285R.attr.fontProviderCerts, C2285R.attr.fontProviderFetchStrategy, C2285R.attr.fontProviderFetchTimeout, C2285R.attr.fontProviderPackage, C2285R.attr.fontProviderQuery, C2285R.attr.fontProviderSystemFontFamily};
@@ -2072,7 +2058,6 @@ public final class C3341R {
     }
 
     /* renamed from: org.unimodules.apploader.R$xml */
-    /* loaded from: classes4.dex */
     public static final class xml {
         public static final int rn_dev_preferences = 2132082694;
 

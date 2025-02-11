@@ -31,8 +31,7 @@ public class DefaultBadger implements Badger {
         return Arrays.asList("fr.neamar.kiss", "com.quaap.launchtime", "com.quaap.launchtime_official");
     }
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    public boolean isSupported(Context context) {
+    boolean isSupported(Context context) {
         return BroadcastHelper.resolveBroadcast(context, new Intent("android.intent.action.BADGE_COUNT_UPDATE")).size() > 0 || (Build.VERSION.SDK_INT >= 26 && BroadcastHelper.resolveBroadcast(context, new Intent(IntentConstants.DEFAULT_OREO_INTENT_ACTION)).size() > 0);
     }
 }

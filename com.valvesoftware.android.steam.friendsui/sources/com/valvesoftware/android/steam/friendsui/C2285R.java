@@ -5,7 +5,6 @@ package com.valvesoftware.android.steam.friendsui;
 public final class C2285R {
 
     /* renamed from: com.valvesoftware.android.steam.friendsui.R$anim */
-    /* loaded from: classes2.dex */
     public static final class anim {
         public static final int abc_fade_in = 2130771968;
         public static final int abc_fade_out = 2130771969;
@@ -70,7 +69,6 @@ public final class C2285R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.friendsui.R$animator */
-    /* loaded from: classes2.dex */
     public static final class animator {
         public static final int design_appbar_state_list_animator = 2130837504;
         public static final int design_fab_hide_motion_spec = 2130837505;
@@ -99,7 +97,6 @@ public final class C2285R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.friendsui.R$array */
-    /* loaded from: classes2.dex */
     public static final class array {
         public static final int exo_controls_playback_speeds = 2130903040;
 
@@ -108,7 +105,6 @@ public final class C2285R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.friendsui.R$attr */
-    /* loaded from: classes2.dex */
     public static final class attr {
         public static final int actionBarDivider = 2130968576;
         public static final int actionBarItemBackground = 2130968577;
@@ -897,7 +893,6 @@ public final class C2285R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.friendsui.R$bool */
-    /* loaded from: classes2.dex */
     public static final class bool {
         public static final int abc_action_bar_embed_tabs = 2131034112;
         public static final int abc_config_actionMenuItemAllCaps = 2131034113;
@@ -908,7 +903,6 @@ public final class C2285R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.friendsui.R$color */
-    /* loaded from: classes2.dex */
     public static final class color {
         public static final int abc_background_cache_hint_selector_material_dark = 2131099648;
         public static final int abc_background_cache_hint_selector_material_light = 2131099649;
@@ -1141,7 +1135,6 @@ public final class C2285R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.friendsui.R$dimen */
-    /* loaded from: classes2.dex */
     public static final class dimen {
         public static final int abc_action_bar_content_inset_material = 2131165184;
         public static final int abc_action_bar_content_inset_with_nav = 2131165185;
@@ -1534,7 +1527,6 @@ public final class C2285R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.friendsui.R$drawable */
-    /* loaded from: classes2.dex */
     public static final class drawable {
 
         /* renamed from: __node_modules_reactnative_libraries_logbox_ui_logboximages_alerttriangle */
@@ -1874,29 +1866,28 @@ public final class C2285R {
         public static final int tooltip_frame_light = 2131231039;
 
         /* JADX INFO: Added by JADX */
-        public static final int res_0x7f080000_avd_hide_password__0 = 2131230720;
+        public static final int _avd_hide_password__0_res_0x7f080000 = 2131230720;
 
         /* JADX INFO: Added by JADX */
-        public static final int res_0x7f080001_avd_hide_password__1 = 2131230721;
+        public static final int _avd_hide_password__1_res_0x7f080001 = 2131230721;
 
         /* JADX INFO: Added by JADX */
-        public static final int res_0x7f080002_avd_hide_password__2 = 2131230722;
+        public static final int _avd_hide_password__2_res_0x7f080002 = 2131230722;
 
         /* JADX INFO: Added by JADX */
-        public static final int res_0x7f080003_avd_show_password__0 = 2131230723;
+        public static final int _avd_show_password__0_res_0x7f080003 = 2131230723;
 
         /* JADX INFO: Added by JADX */
-        public static final int res_0x7f080004_avd_show_password__1 = 2131230724;
+        public static final int _avd_show_password__1_res_0x7f080004 = 2131230724;
 
         /* JADX INFO: Added by JADX */
-        public static final int res_0x7f080005_avd_show_password__2 = 2131230725;
+        public static final int _avd_show_password__2_res_0x7f080005 = 2131230725;
 
         private drawable() {
         }
     }
 
     /* renamed from: com.valvesoftware.android.steam.friendsui.R$font */
-    /* loaded from: classes2.dex */
     public static final class font {
         public static final int roboto_medium_numbers = 2131296256;
 
@@ -1905,7 +1896,6 @@ public final class C2285R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.friendsui.R$id */
-    /* loaded from: classes2.dex */
     public static final class id {
         public static final int ALT = 2131361792;
         public static final int BOTTOM_END = 2131361793;
@@ -2367,7 +2357,6 @@ public final class C2285R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.friendsui.R$integer */
-    /* loaded from: classes2.dex */
     public static final class integer {
         public static final int abc_config_activityDefaultDur = 2131427328;
         public static final int abc_config_activityShortDur = 2131427329;
@@ -2401,7 +2390,6 @@ public final class C2285R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.friendsui.R$interpolator */
-    /* loaded from: classes2.dex */
     public static final class interpolator {
         public static final int btn_checkbox_checked_mtrl_animation_interpolator_0 = 2131492864;
         public static final int btn_checkbox_checked_mtrl_animation_interpolator_1 = 2131492865;
@@ -2420,7 +2408,6 @@ public final class C2285R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.friendsui.R$layout */
-    /* loaded from: classes2.dex */
     public static final class layout {
         public static final int abc_action_bar_title_item = 2131558400;
         public static final int abc_action_bar_up_container = 2131558401;
@@ -2560,7 +2547,6 @@ public final class C2285R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.friendsui.R$menu */
-    /* loaded from: classes2.dex */
     public static final class menu {
         public static final int crop_image_menu = 2131623936;
 
@@ -2569,7 +2555,6 @@ public final class C2285R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.friendsui.R$mipmap */
-    /* loaded from: classes2.dex */
     public static final class mipmap {
         public static final int ic_launcher = 2131689472;
         public static final int ic_launcher_background = 2131689473;
@@ -2582,7 +2567,6 @@ public final class C2285R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.friendsui.R$plurals */
-    /* loaded from: classes2.dex */
     public static final class plurals {
         public static final int exo_controls_fastforward_by_amount_description = 2131755008;
         public static final int exo_controls_rewind_by_amount_description = 2131755009;
@@ -2593,7 +2577,6 @@ public final class C2285R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.friendsui.R$raw */
-    /* loaded from: classes2.dex */
     public static final class raw {
         public static final int fonts_motivasansblack = 2131820544;
         public static final int fonts_motivasansblackitalic = 2131820545;
@@ -2644,7 +2627,6 @@ public final class C2285R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.friendsui.R$string */
-    /* loaded from: classes2.dex */
     public static final class string {
         public static final int ExpoLocalization_supportsRTL = 2131886080;
         public static final int abc_action_bar_home_description = 2131886081;
@@ -2884,7 +2866,6 @@ public final class C2285R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.friendsui.R$style */
-    /* loaded from: classes2.dex */
     public static final class style {
         public static final int AlertDialog_AppCompat = 2131951616;
         public static final int AlertDialog_AppCompat_Light = 2131951617;
@@ -3687,7 +3668,6 @@ public final class C2285R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.friendsui.R$styleable */
-    /* loaded from: classes2.dex */
     public static final class styleable {
         public static final int ActionBarLayout_android_layout_gravity = 0;
         public static final int ActionBar_background = 0;
@@ -4836,7 +4816,7 @@ public final class C2285R {
         public static final int[] ChipGroup = {C2285R.attr.checkedChip, C2285R.attr.chipSpacing, C2285R.attr.chipSpacingHorizontal, C2285R.attr.chipSpacingVertical, C2285R.attr.selectionRequired, C2285R.attr.singleLine, C2285R.attr.singleSelection};
         public static final int[] CollapsingToolbarLayout = {C2285R.attr.collapsedTitleGravity, C2285R.attr.collapsedTitleTextAppearance, C2285R.attr.contentScrim, C2285R.attr.expandedTitleGravity, C2285R.attr.expandedTitleMargin, C2285R.attr.expandedTitleMarginBottom, C2285R.attr.expandedTitleMarginEnd, C2285R.attr.expandedTitleMarginStart, C2285R.attr.expandedTitleMarginTop, C2285R.attr.expandedTitleTextAppearance, C2285R.attr.maxLines, C2285R.attr.scrimAnimationDuration, C2285R.attr.scrimVisibleHeightTrigger, C2285R.attr.statusBarScrim, C2285R.attr.title, C2285R.attr.titleEnabled, C2285R.attr.toolbarId};
         public static final int[] CollapsingToolbarLayout_Layout = {C2285R.attr.layout_collapseMode, C2285R.attr.layout_collapseParallaxMultiplier};
-        public static final int[] ColorStateListItem = {android.R.attr.color, android.R.attr.alpha, 16844359, C2285R.attr.alpha, C2285R.attr.lStar};
+        public static final int[] ColorStateListItem = {android.R.attr.color, android.R.attr.alpha, android.R.attr.lStar, C2285R.attr.alpha, C2285R.attr.lStar};
         public static final int[] CompoundButton = {android.R.attr.button, C2285R.attr.buttonCompat, C2285R.attr.buttonTint, C2285R.attr.buttonTintMode};
         public static final int[] CoordinatorLayout = {C2285R.attr.keylines, C2285R.attr.statusBarBackground};
         public static final int[] CoordinatorLayout_Layout = {android.R.attr.layout_gravity, C2285R.attr.layout_anchor, C2285R.attr.layout_anchorGravity, C2285R.attr.layout_behavior, C2285R.attr.layout_dodgeInsetEdges, C2285R.attr.layout_insetEdge, C2285R.attr.layout_keyline};
@@ -4918,7 +4898,6 @@ public final class C2285R {
     }
 
     /* renamed from: com.valvesoftware.android.steam.friendsui.R$xml */
-    /* loaded from: classes2.dex */
     public static final class xml {
         public static final int file_provider_paths = 2132082688;
         public static final int file_system_provider_paths = 2132082689;

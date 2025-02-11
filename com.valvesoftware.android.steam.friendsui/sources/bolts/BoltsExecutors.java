@@ -31,17 +31,14 @@ final class BoltsExecutors {
         return INSTANCE.background;
     }
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    public static ScheduledExecutorService scheduled() {
+    static ScheduledExecutorService scheduled() {
         return INSTANCE.scheduled;
     }
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    public static Executor immediate() {
+    static Executor immediate() {
         return INSTANCE.immediate;
     }
 
-    /* loaded from: classes.dex */
     private static class ImmediateExecutor implements Executor {
         private static final int MAX_DEPTH = 15;
         private ThreadLocal<Integer> executionDepth;

@@ -34,7 +34,6 @@ public class Task<TResult> {
     private final Object lock = new Object();
     private List<Continuation<TResult, Void>> continuations = new ArrayList();
 
-    /* loaded from: classes.dex */
     public interface UnobservedExceptionHandler {
         void unobservedException(Task<?> task, UnobservedTaskException unobservedTaskException);
     }
@@ -52,8 +51,7 @@ public class Task<TResult> {
         unobservedExceptionHandler = unobservedExceptionHandler2;
     }
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    public Task() {
+    Task() {
     }
 
     private Task(TResult tresult) {
@@ -611,8 +609,7 @@ public class Task<TResult> {
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    public boolean trySetCancelled() {
+    boolean trySetCancelled() {
         synchronized (this.lock) {
             if (this.complete) {
                 return false;
@@ -625,8 +622,7 @@ public class Task<TResult> {
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    public boolean trySetResult(TResult tresult) {
+    boolean trySetResult(TResult tresult) {
         synchronized (this.lock) {
             if (this.complete) {
                 return false;
@@ -639,8 +635,7 @@ public class Task<TResult> {
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    public boolean trySetError(Exception exc) {
+    boolean trySetError(Exception exc) {
         synchronized (this.lock) {
             if (this.complete) {
                 return false;
@@ -657,7 +652,6 @@ public class Task<TResult> {
         }
     }
 
-    /* loaded from: classes.dex */
     public class TaskCompletionSource extends bolts.TaskCompletionSource<TResult> {
         TaskCompletionSource() {
         }

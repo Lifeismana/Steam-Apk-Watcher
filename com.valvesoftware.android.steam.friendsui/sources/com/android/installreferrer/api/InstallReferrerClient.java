@@ -9,7 +9,6 @@ import java.lang.annotation.RetentionPolicy;
 public abstract class InstallReferrerClient {
 
     @Retention(RetentionPolicy.SOURCE)
-    /* loaded from: classes.dex */
     public @interface InstallReferrerResponse {
         public static final int DEVELOPER_ERROR = 3;
         public static final int FEATURE_NOT_SUPPORTED = 2;
@@ -28,7 +27,6 @@ public abstract class InstallReferrerClient {
 
     public abstract void startConnection(InstallReferrerStateListener installReferrerStateListener);
 
-    /* loaded from: classes.dex */
     public static final class Builder {
         private final Context mContext;
 
