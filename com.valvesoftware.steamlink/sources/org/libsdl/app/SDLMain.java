@@ -3,10 +3,12 @@ package org.libsdl.app;
 import android.os.Process;
 import android.util.Log;
 
-/* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: SDLActivity.java */
 /* loaded from: classes.dex */
-public class SDLMain implements Runnable {
+class SDLMain implements Runnable {
+    SDLMain() {
+    }
+
     @Override // java.lang.Runnable
     public void run() {
         try {

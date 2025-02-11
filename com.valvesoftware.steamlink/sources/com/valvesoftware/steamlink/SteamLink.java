@@ -58,9 +58,8 @@ public class SteamLink extends SDLActivity {
     /* JADX INFO: Access modifiers changed from: private */
     public native void videoSurfaceDestroyed();
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // org.libsdl.app.SDLActivity, android.app.Activity
-    public void onCreate(Bundle bundle) {
+    protected void onCreate(Bundle bundle) {
         int checkSelfPermission;
         super.onCreate(bundle);
         setWindowStyle(true);
@@ -76,9 +75,8 @@ public class SteamLink extends SDLActivity {
         this.mVirtualHere = VirtualHere.acquire(this);
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // org.libsdl.app.SDLActivity, android.app.Activity
-    public void onDestroy() {
+    protected void onDestroy() {
         super.onDestroy();
         VirtualHere virtualHere = this.mVirtualHere;
         if (virtualHere != null) {
@@ -91,30 +89,26 @@ public class SteamLink extends SDLActivity {
         finish();
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // org.libsdl.app.SDLActivity, android.app.Activity
-    public void onStart() {
+    protected void onStart() {
         super.onStart();
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // org.libsdl.app.SDLActivity, android.app.Activity
-    public void onStop() {
+    protected void onStop() {
         super.onStop();
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // org.libsdl.app.SDLActivity, android.app.Activity
-    public void onPause() {
+    protected void onPause() {
         super.onPause();
         setLowLatencyAudio(false);
         disableWiFiLock();
         freezeRendering();
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // org.libsdl.app.SDLActivity, android.app.Activity
-    public void onResume() {
+    protected void onResume() {
         super.onResume();
         enableWiFiLock();
         if (SDLActivity.nativeGetHintBoolean("SDL_ANDROID_LOW_LATENCY_AUDIO", true)) {
@@ -172,9 +166,7 @@ public class SteamLink extends SDLActivity {
         this.m_bLowLatencyAudio = z;
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
-    /* loaded from: classes.dex */
-    public class VideoSurfaceCallback implements SurfaceHolder.Callback {
+    private class VideoSurfaceCallback implements SurfaceHolder.Callback {
         @Override // android.view.SurfaceHolder.Callback
         public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i2, int i3) {
         }
@@ -193,9 +185,7 @@ public class SteamLink extends SDLActivity {
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
-    /* loaded from: classes.dex */
-    public class OverlaySurfaceCallback implements SurfaceHolder.Callback {
+    private class OverlaySurfaceCallback implements SurfaceHolder.Callback {
         @Override // android.view.SurfaceHolder.Callback
         public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i2, int i3) {
         }

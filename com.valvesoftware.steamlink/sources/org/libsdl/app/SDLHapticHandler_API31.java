@@ -6,10 +6,12 @@ import android.os.VibratorManager;
 import android.view.InputDevice;
 import org.libsdl.app.SDLHapticHandler;
 
-/* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: SDLControllerManager.java */
 /* loaded from: classes.dex */
-public class SDLHapticHandler_API31 extends SDLHapticHandler {
+class SDLHapticHandler_API31 extends SDLHapticHandler {
+    SDLHapticHandler_API31() {
+    }
+
     @Override // org.libsdl.app.SDLHapticHandler
     public void run(int i, float f, int i2) {
         SDLHapticHandler.SDLHaptic haptic = getHaptic(i);

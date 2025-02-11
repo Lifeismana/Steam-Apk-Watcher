@@ -11,4 +11,7 @@ class SDLJoystickHandler {
 
     public void pollInputDevices() {
     }
+
+    SDLJoystickHandler() {
+    }
 }

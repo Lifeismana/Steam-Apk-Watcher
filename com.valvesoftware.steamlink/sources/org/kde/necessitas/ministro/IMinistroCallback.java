@@ -12,7 +12,6 @@ import android.os.RemoteException;
 public interface IMinistroCallback extends IInterface {
     public static final String DESCRIPTOR = "org.kde.necessitas.ministro.IMinistroCallback";
 
-    /* loaded from: classes.dex */
     public static class Default implements IMinistroCallback {
         @Override // android.os.IInterface
         public IBinder asBinder() {
@@ -26,7 +25,6 @@ public interface IMinistroCallback extends IInterface {
 
     void loaderReady(Bundle bundle) throws RemoteException;
 
-    /* loaded from: classes.dex */
     public static abstract class Stub extends Binder implements IMinistroCallback {
         static final int TRANSACTION_loaderReady = 1;
 
@@ -66,7 +64,6 @@ public interface IMinistroCallback extends IInterface {
             return super.onTransact(i, parcel, parcel2, i2);
         }
 
-        /* loaded from: classes.dex */
         private static class Proxy implements IMinistroCallback {
             private IBinder mRemote;
 
@@ -97,7 +94,6 @@ public interface IMinistroCallback extends IInterface {
         }
     }
 
-    /* loaded from: classes.dex */
     public static class _Parcel {
         /* JADX INFO: Access modifiers changed from: private */
         public static <T> T readTypedObject(Parcel parcel, Parcelable.Creator<T> creator) {

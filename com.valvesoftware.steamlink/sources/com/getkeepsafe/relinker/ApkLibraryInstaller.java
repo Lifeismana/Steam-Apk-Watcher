@@ -33,9 +33,7 @@ public class ApkLibraryInstaller implements ReLinker.LibraryInstaller {
         return new String[]{applicationInfo.sourceDir};
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
-    /* loaded from: classes.dex */
-    public static class ZipFileInZipEntry {
+    private static class ZipFileInZipEntry {
         public ZipEntry zipEntry;
         public ZipFile zipFile;
 

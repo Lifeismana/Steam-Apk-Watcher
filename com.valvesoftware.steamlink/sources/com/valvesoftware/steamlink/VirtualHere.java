@@ -58,9 +58,7 @@ public class VirtualHere {
         }
     };
 
-    /* JADX INFO: Access modifiers changed from: private */
-    /* loaded from: classes.dex */
-    public enum VHDAEMON_MSGS {
+    private enum VHDAEMON_MSGS {
         REGISTER_CLIENT,
         UNREGISTER_CLIENT,
         GET_DAEMON_STATE,
@@ -119,7 +117,6 @@ public class VirtualHere {
         }
     }
 
-    /* loaded from: classes.dex */
     private class VirtualHereDevice {
         public int mAddress;
         public int mPID;
@@ -131,7 +128,6 @@ public class VirtualHere {
         }
     }
 
-    /* loaded from: classes.dex */
     class IncomingHandler extends Handler {
         IncomingHandler() {
         }
@@ -238,29 +234,31 @@ public class VirtualHere {
     public void startSharing(int i) {
         this.mIsSharing = true;
         this.mNumLicensedDevices = i;
-        if (isConnected() && this.mService != null) {
-            try {
-                Bundle bundle = new Bundle();
-                bundle.putString("client", getClass().getName());
-                bundle.putString("licensed_devices", Integer.toString(this.mNumLicensedDevices));
-                Message obtain = Message.obtain((Handler) null, VHDAEMON_MSGS.SET_STEAM_LICENSE.ordinal());
-                obtain.replyTo = this.mMessenger;
-                obtain.setData(bundle);
-                this.mService.send(obtain);
-            } catch (RemoteException unused) {
-            }
+        if (!isConnected() || this.mService == null) {
+            return;
+        }
+        try {
+            Bundle bundle = new Bundle();
+            bundle.putString("client", getClass().getName());
+            bundle.putString("licensed_devices", Integer.toString(this.mNumLicensedDevices));
+            Message obtain = Message.obtain((Handler) null, VHDAEMON_MSGS.SET_STEAM_LICENSE.ordinal());
+            obtain.replyTo = this.mMessenger;
+            obtain.setData(bundle);
+            this.mService.send(obtain);
+        } catch (RemoteException unused) {
         }
     }
 
     public void stopSharing() {
         this.mIsSharing = false;
-        if (isConnected() && this.mService != null) {
-            try {
-                Message obtain = Message.obtain((Handler) null, VHDAEMON_MSGS.SET_STEAM_LICENSE.ordinal());
-                obtain.replyTo = this.mMessenger;
-                this.mService.send(obtain);
-            } catch (RemoteException unused) {
-            }
+        if (!isConnected() || this.mService == null) {
+            return;
+        }
+        try {
+            Message obtain = Message.obtain((Handler) null, VHDAEMON_MSGS.SET_STEAM_LICENSE.ordinal());
+            obtain.replyTo = this.mMessenger;
+            this.mService.send(obtain);
+        } catch (RemoteException unused) {
         }
     }
 

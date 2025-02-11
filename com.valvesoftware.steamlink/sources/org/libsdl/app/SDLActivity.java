@@ -114,7 +114,6 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         }
     };
 
-    /* loaded from: classes.dex */
     public enum NativeState {
         INIT,
         RESUMED,
@@ -221,8 +220,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         mFileDialogState = null;
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
-    public static SDLGenericMotionListener_API12 getMotionListener() {
+    protected static SDLGenericMotionListener_API12 getMotionListener() {
         if (mMotionListener == null) {
             if (Build.VERSION.SDK_INT >= 26) {
                 mMotionListener = new SDLGenericMotionListener_API26();
@@ -235,8 +233,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         return mMotionListener;
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
-    public void main() {
+    protected void main() {
         String mainSharedObject = mSingleton.getMainSharedObject();
         String mainFunction = mSingleton.getMainFunction();
         String[] arguments = mSingleton.getArguments();
@@ -285,9 +282,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         return new SDLSurface(context);
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // android.app.Activity
-    public void onCreate(Bundle bundle) {
+    protected void onCreate(Bundle bundle) {
         String message;
         String path;
         LocaleList locales;
@@ -421,9 +417,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         handleNativeState();
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // android.app.Activity
-    public void onPause() {
+    protected void onPause() {
         Log.v(TAG, "onPause()");
         super.onPause();
         HIDDeviceManager hIDDeviceManager = mHIDDeviceManager;
@@ -436,9 +431,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         pauseNativeThread();
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // android.app.Activity
-    public void onResume() {
+    protected void onResume() {
         Log.v(TAG, "onResume()");
         super.onResume();
         HIDDeviceManager hIDDeviceManager = mHIDDeviceManager;
@@ -451,9 +445,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         resumeNativeThread();
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // android.app.Activity
-    public void onStop() {
+    protected void onStop() {
         Log.v(TAG, "onStop()");
         super.onStop();
         if (mHasMultiWindow) {
@@ -461,9 +454,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // android.app.Activity
-    public void onStart() {
+    protected void onStart() {
         Log.v(TAG, "onStart()");
         super.onStart();
         if (mHasMultiWindow) {
@@ -555,9 +547,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // android.app.Activity
-    public void onDestroy() {
+    protected void onDestroy() {
         Log.v(TAG, "onDestroy()");
         HIDDeviceManager hIDDeviceManager = mHIDDeviceManager;
         if (hIDDeviceManager != null) {
@@ -680,7 +671,6 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         }
     }
 
-    /* loaded from: classes.dex */
     protected static class SDLCommandHandler extends Handler {
         protected SDLCommandHandler() {
         }
@@ -965,7 +955,6 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         return mLayout;
     }
 
-    /* loaded from: classes.dex */
     static class ShowTextInputTask implements Runnable {
         static final int HEIGHT_PADDING = 15;
 
@@ -1476,7 +1465,6 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         }
     }
 
-    /* loaded from: classes.dex */
     static class SDLFileDialogState {
         boolean multipleChoice;
         int requestCode;

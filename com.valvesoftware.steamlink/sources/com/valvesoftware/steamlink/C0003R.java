@@ -5,7 +5,6 @@ package com.valvesoftware.steamlink;
 public final class C0003R {
 
     /* renamed from: com.valvesoftware.steamlink.R$array */
-    /* loaded from: classes.dex */
     public static final class array {
         public static final int bundled_in_assets = 2130771968;
         public static final int bundled_libs = 2130771969;
@@ -18,7 +17,6 @@ public final class C0003R {
     }
 
     /* renamed from: com.valvesoftware.steamlink.R$layout */
-    /* loaded from: classes.dex */
     public static final class layout {
         public static final int main = 2130837504;
 
@@ -27,7 +25,6 @@ public final class C0003R {
     }
 
     /* renamed from: com.valvesoftware.steamlink.R$mipmap */
-    /* loaded from: classes.dex */
     public static final class mipmap {
         public static final int ic_banner = 2130903040;
         public static final int ic_launcher = 2130903041;

@@ -3,9 +3,11 @@ package com.getkeepsafe.relinker;
 import android.os.Build;
 import com.getkeepsafe.relinker.ReLinker;
 
-/* JADX INFO: Access modifiers changed from: package-private */
 /* loaded from: classes.dex */
-public final class SystemLibraryLoader implements ReLinker.LibraryLoader {
+final class SystemLibraryLoader implements ReLinker.LibraryLoader {
+    SystemLibraryLoader() {
+    }
+
     @Override // com.getkeepsafe.relinker.ReLinker.LibraryLoader
     public void loadLibrary(String str) {
         System.loadLibrary(str);

@@ -17,9 +17,8 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.UUID;
 
-/* JADX INFO: Access modifiers changed from: package-private */
 /* loaded from: classes.dex */
-public class HIDDeviceBLESteamController extends BluetoothGattCallback implements HIDDevice {
+class HIDDeviceBLESteamController extends BluetoothGattCallback implements HIDDevice {
     private static final int CHROMEBOOK_CONNECTION_CHECK_INTERVAL = 10000;
     private static final String TAG = "hidapi";
     private static final int TRANSPORT_AUTO = 0;
@@ -102,18 +101,14 @@ public class HIDDeviceBLESteamController extends BluetoothGattCallback implement
         return true;
     }
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    /* loaded from: classes.dex */
-    public static class GattOperation {
+    static class GattOperation {
         BluetoothGatt mGatt;
         Operation mOp;
         boolean mResult = true;
         UUID mUuid;
         byte[] mValue;
 
-        /* JADX INFO: Access modifiers changed from: private */
-        /* loaded from: classes.dex */
-        public enum Operation {
+        private enum Operation {
             CHR_READ,
             CHR_WRITE,
             ENABLE_NOTIFICATION
@@ -205,10 +200,8 @@ public class HIDDeviceBLESteamController extends BluetoothGattCallback implement
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: package-private */
     /* renamed from: org.libsdl.app.HIDDeviceBLESteamController$4 */
-    /* loaded from: classes.dex */
-    public static /* synthetic */ class C00154 {
+    static /* synthetic */ class C00154 {
 
         /* renamed from: $SwitchMap$org$libsdl$app$HIDDeviceBLESteamController$GattOperation$Operation */
         static final /* synthetic */ int[] f0xa1f10085;

@@ -31,10 +31,8 @@ class SDLJoystickHandler_API16 extends SDLJoystickHandler {
         return 0;
     }
 
-    /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: SDLControllerManager.java */
-    /* loaded from: classes.dex */
-    public static class SDLJoystick {
+    static class SDLJoystick {
         public ArrayList<InputDevice.MotionRange> axes;
         public String desc;
         public int device_id;
@@ -46,7 +44,6 @@ class SDLJoystickHandler_API16 extends SDLJoystickHandler {
     }
 
     /* compiled from: SDLControllerManager.java */
-    /* loaded from: classes.dex */
     static class RangeComparator implements Comparator<InputDevice.MotionRange> {
         RangeComparator() {
         }

@@ -73,20 +73,17 @@ public class HIDDeviceManager {
 
     private native void HIDDeviceReleaseCallback();
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    public native void HIDDeviceConnected(int i, String str, int i2, int i3, String str2, int i4, String str3, String str4, int i5, int i6, int i7, int i8, boolean z);
+    native void HIDDeviceConnected(int i, String str, int i2, int i3, String str2, int i4, String str3, String str4, int i5, int i6, int i7, int i8, boolean z);
 
     native void HIDDeviceDisconnected(int i);
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    public native void HIDDeviceInputReport(int i, byte[] bArr);
+    native void HIDDeviceInputReport(int i, byte[] bArr);
 
     native void HIDDeviceOpenPending(int i);
 
     native void HIDDeviceOpenResult(int i, boolean z);
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    public native void HIDDeviceReportResponse(int i, byte[] bArr);
+    native void HIDDeviceReportResponse(int i, byte[] bArr);
 
     public static HIDDeviceManager acquire(Context context) {
         if (sManagerRefCount == 0) {
@@ -158,8 +155,7 @@ public class HIDDeviceManager {
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    public UsbManager getUSBManager() {
+    UsbManager getUSBManager() {
         return this.mUsbManager;
     }
 

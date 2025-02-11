@@ -49,9 +49,8 @@ public class SteamShellActivity extends QtActivity {
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // org.qtproject.qt5.android.bindings.QtActivity, android.app.Activity
-    public void onPause() {
+    protected void onPause() {
         super.onPause();
         HIDDeviceManager hIDDeviceManager = this.mHIDDeviceManager;
         if (hIDDeviceManager != null) {
@@ -70,9 +69,8 @@ public class SteamShellActivity extends QtActivity {
         getWindow().addFlags(128);
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
     @Override // org.qtproject.qt5.android.bindings.QtActivity, android.app.Activity
-    public void onDestroy() {
+    protected void onDestroy() {
         super.onDestroy();
         stopActivity();
         HIDDeviceManager hIDDeviceManager = this.mHIDDeviceManager;

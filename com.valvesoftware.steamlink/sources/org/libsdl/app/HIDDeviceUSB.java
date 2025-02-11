@@ -222,9 +222,7 @@ class HIDDeviceUSB implements HIDDevice {
         this.mFrozen = z;
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
-    /* loaded from: classes.dex */
-    public class InputThread extends Thread {
+    protected class InputThread extends Thread {
         protected InputThread() {
         }
 

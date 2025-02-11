@@ -4,10 +4,12 @@ import android.view.InputDevice;
 import java.util.Iterator;
 import java.util.List;
 
-/* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: SDLControllerManager.java */
 /* loaded from: classes.dex */
-public class SDLJoystickHandler_API19 extends SDLJoystickHandler_API16 {
+class SDLJoystickHandler_API19 extends SDLJoystickHandler_API16 {
+    SDLJoystickHandler_API19() {
+    }
+
     @Override // org.libsdl.app.SDLJoystickHandler_API16
     public int getProductId(InputDevice inputDevice) {
         return inputDevice.getProductId();
