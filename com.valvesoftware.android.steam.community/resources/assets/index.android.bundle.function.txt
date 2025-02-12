@@ -974,6 +974,9 @@ CPlayer_TextFilterWords
 CPlayer_TextFilterWordsChanged_Notification
 CPlayer_UpdateSteamAnnouncementLastRead_Request
 CPlayer_UpdateSteamAnnouncementLastRead_Response
+CPlaytest_GetInviteHistory_Request
+CPlaytest_GetInviteHistory_Response
+CPlaytest_GetInviteHistory_Response_Invite
 CPlaytest_GetInviteOptions_Request
 CPlaytest_GetInviteOptions_Response
 CPlaytest_GetInvites_Request
@@ -1731,7 +1734,6 @@ EResult
 ERiskLevelToString
 ESDCardFormatStageToString
 ESLSHelperToString
-EScalingFilterToString
 ESessionPersistenceToString
 ESetUserCountryErrorToString
 ESharedLibraryExcludeReasonToString
@@ -2142,6 +2144,7 @@ GetCreatorStoreURL
 GetCurrentGameIconURL
 GetCurrentGameName
 GetCurrentGameRichPresence
+GetCurrentGameStatus
 GetCurrentState
 GetCurrentSteamGuardCode
 GetCustomNotificationData
@@ -2241,6 +2244,7 @@ GetIntrinsic
 GetInventoryItemsWithDescriptions
 GetInviteCheckResults
 GetInviteCheckResultsKey
+GetInviteHistory
 GetInviteOptions
 GetInvites
 GetItemByUserCombinedTagsPriority

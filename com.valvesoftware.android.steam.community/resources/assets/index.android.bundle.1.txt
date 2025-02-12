@@ -1727,6 +1727,9 @@ CPlayer_TextFilterWords
 CPlayer_TextFilterWordsChanged_Notification
 CPlayer_UpdateSteamAnnouncementLastRead_Request
 CPlayer_UpdateSteamAnnouncementLastRead_Response
+CPlaytest_GetInviteHistory_Request
+CPlaytest_GetInviteHistory_Response
+CPlaytest_GetInviteHistory_Response_Invite
 CPlaytest_GetInviteOptions_Request
 CPlaytest_GetInviteOptions_Response
 CPlaytest_GetInvites_Request
@@ -6843,14 +6846,6 @@ ESLSHelper_3
 ESLSHelper_4
 ESLSHelper_5
 ESWGyroCalibrationWizardState
-EScalingFilter
-EScalingFilterToString
-EScalingFilter_0
-EScalingFilter_1
-EScalingFilter_2
-EScalingFilter_3
-EScalingFilter_4
-EScalingFilter_5
 EScreenshotSortOrder
 EServerType
 EServerType_0
@@ -9091,6 +9086,7 @@ GetCountryRestrictions
 GetCreatorHome
 GetCreatorHomeURL
 GetCurrentCode
+GetCurrentGameRichPresence
 GetCurrentState
 GetCurrentSteamGuardCode
 GetCustomNotificationData
@@ -9168,6 +9164,7 @@ GetInteractionZooScreens
 GetInventoryItemsWithDescriptions
 GetInviteCheckResults
 GetInviteCheckResultsKey
+GetInviteHistory
 GetInviteOptions
 GetInvites
 GetItemByUserCombinedTagsPriority
@@ -12520,6 +12517,7 @@ Sale_ReserveExhausted
 Sale_ReserveNow
 Sale_ReserveNow_NoDeposit
 Sale_ReserveUnavailable
+Sale_SaleEditor_JumpTo_ttip
 Sale_SaleEvent_Section
 Sale_SectionDisabled
 Sale_SectionLink_BrowseAll
@@ -23845,7 +23843,7 @@ mixin
 mixins
 mkdir
 mkdirp
-mm_auto_render
+mm-auto-render
 mobile
 mobile_app
 mobileapp
@@ -26513,6 +26511,7 @@ role
 roll
 rollup_count
 rollup_field
+rollup_key
 romanian
 root
 rootBoundary
@@ -26734,6 +26733,7 @@ saleeventsection
 salefacetbrowse
 saleitembrowse
 saleitemsearch
+salequiz
 sales-event-enhanced
 salesection
 salesectioneventschedule
@@ -28016,6 +28016,7 @@ steamid
 steamidAttribute
 steamidDest
 steamidSrc
+steamid_invited
 steamid_inviter
 steamid_requester
 steamid_responder
@@ -28423,6 +28424,9 @@ templateSettings
 template_type
 template_vars
 template_vars_json
+templatefaq
+templatemediacontent
+templatetechspec
 temporarily_owned
 temporary_enabled_features
 temporary_playtime_restrictions
@@ -28517,6 +28521,7 @@ timeSincePreviousFrame
 timeStamp
 timeUntilStale
 time_available
+time_before
 time_chinassa_accepted
 time_created
 time_end
