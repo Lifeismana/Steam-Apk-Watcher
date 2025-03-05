@@ -2005,14 +2005,11 @@ GameWorkshop
 GaugeMetric
 GenerateAccessTokenForApp
 GenerateAvatarURLForChannel
-GenerateBackgroundURLForGame
-GenerateImageURLForApp
-GenerateImageURLForGame
 GenerateNewSessionID
+GenerateSHA
 GenerateSessionID
 GenerateShortHash
 GenerateSteamGuardCodeForTime
-GenerateUnfilteredBackgroundURLForGame
 Generator
 GeneratorFunction
 GeneratorFunctionPrototype
@@ -2363,6 +2360,7 @@ GetPushDeviceID
 GetQueryErrorString
 GetQuizQuestions
 GetRandomElementArray
+GetRawPageBackgroundURL
 GetReactComponentStack
 GetReactionConfig
 GetReactions
@@ -2647,6 +2645,7 @@ InitSteamEngineLanguages
 Initialize
 Inline
 InlinePropManager
+InlineReact
 InlineZoo
 InnerBaseButton
 InnerBorderlessButton
@@ -3990,6 +3989,7 @@ VirtualizedListContextResetter
 VirtualizedSectionList
 VisitUsScreen
 Vote
+WaitForConfigLoad
 WaitForNextEvent
 WaitForSocketOpen
 WaitUntilLoggedOn
@@ -4077,6 +4077,7 @@ _FetchOwnedApps
 _FetchPersona
 _FetchPushNotificationsSettings
 _FlushBuffer
+_GenerateSHA
 _GenerateShortHash
 _GenerateSteamGuardCodeForTime
 _GetActiveLanguage
@@ -5400,6 +5401,7 @@ calculateStartEndPointsFromAngle
 calculateStartEndPointsFromDirection
 call
 callBind
+callBindBasic
 callBoundIntrinsic
 callCallback
 callComponentWillReceiveProps
@@ -7131,6 +7133,7 @@ getDocumentRect
 getDomElement
 getDomTarget
 getDsn
+getDunder
 getDuration
 getDurationFromConfig
 getDynamicSamplingContextFromClient
@@ -7425,6 +7428,7 @@ getProgressFromGesture
 getPropAlias
 getPropType
 getPropagationContext
+getProto
 getPublicInstance
 getPublicInstanceFromInternalInstanceHandle
 getPublicKey
@@ -7750,7 +7754,6 @@ hasProp
 hasProperty
 hasPropertyDescriptors
 hasProps
-hasProto
 hasSessionStorage
 hasShadowRoot
 hasSymbols

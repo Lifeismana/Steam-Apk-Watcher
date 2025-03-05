@@ -76,6 +76,8 @@ $window
 %Float64Array%
 %Float64ArrayPrototype%
 %Function%
+%Function.prototype.apply%
+%Function.prototype.call%
 %FunctionPrototype%
 %Generator%
 %GeneratorFunction%
@@ -94,11 +96,21 @@ $window
 %MapIteratorPrototype%
 %MapPrototype%
 %Math%
+%Math.abs%
+%Math.floor%
+%Math.max%
+%Math.min%
+%Math.pow%
+%Math.round%
+%Math.sign%
 %Number%
 %NumberPrototype%
 %ObjProto_toString%
 %ObjProto_valueOf%
 %Object%
+%Object.defineProperty%
+%Object.getOwnPropertyDescriptor%
+%Object.getPrototypeOf%
 %ObjectPrototype%
 %Promise%
 %PromiseProto_then%
@@ -112,6 +124,7 @@ $window
 %ReferenceError%
 %ReferenceErrorPrototype%
 %Reflect%
+%Reflect.getPrototypeOf%
 %RegExp%
 %RegExpPrototype%
 %Set%
@@ -215,7 +228,7 @@ $window
 @@iterator
 @@nativeEmitterSubscription@@
 @@toStringTag
-@expo/metro-config@0.19.8
+@expo/metro-config@0.19.11
 @jest/create-cache-key-function
 @react-native-community/eslint-config
 @react-native-picker/picker@2.9.0
@@ -2669,6 +2682,7 @@ CreatorHome_InFranchise
 CreatorHome_JustFollowers
 CreatorHome_PublishedBy
 CreatorHome_ThisGame
+CryptoUtils
 CurrentRenderContext
 CurrentUniverseId_Uint64
 CurrentUserProfile
@@ -3488,7 +3502,6 @@ EClanAccountFlags_5
 EClanAccountFlags_6
 EClanAccountFlags_7
 EClanAccountFlags_8
-EClanAccountFlags_9
 EClanEventType
 EClanEventTypeArray
 EClanEventType_0
@@ -8139,6 +8152,7 @@ EventDisplay_CallToAction_Prepurchase_Short
 EventDisplay_CallToAction_ShowPurchaseOptions_Button
 EventDisplay_CallToAction_VisitStore
 EventDisplay_CategoryEditor
+EventDisplay_DateAndTimeCombiner
 EventDisplay_DeleteEvent
 EventDisplay_DeleteEvent_Comment
 EventDisplay_DeleteEvent_Error
@@ -8986,13 +9000,10 @@ GamepadOverlay_GameRecording_ToggleRecordingExplainer
 GaugeMetric
 GenerateAccessTokenForApp
 GenerateAvatarURLForChannel
-GenerateBackgroundURLForGame
-GenerateImageURLForApp
-GenerateImageURLForGame
 GenerateNewSessionID
+GenerateSHA
 GenerateShortHash
 GenerateSteamGuardCodeForTime
-GenerateUnfilteredBackgroundURLForGame
 Generic
 Generic_Done
 Generic_Help
@@ -9815,6 +9826,7 @@ InitSteamEngineLanguages
 Initialize
 Inline
 InlinePropManager
+InlineReact
 InnerNativeModule
 InnerScreen
 Input
@@ -11623,6 +11635,7 @@ Properties
 PropsAllowlists
 PropsFilter
 Prosemirror_FileUpload_DropFile
+Prosemirror_FileUpload_Uploading
 Provider
 ProviderContext
 Proxy
@@ -12362,6 +12375,8 @@ Sale_BrowserSortOption_Price_ttip
 Sale_BrowserSortOption_RecentlyReleased
 Sale_BrowserSortOption_RecentlyReleased_ttip
 Sale_BrowserSortOption_Soundtrack
+Sale_BrowserSortOption_TagRecommender
+Sale_BrowserSortOption_TagRecommender_ttip
 Sale_BrowserSortOption_TopWishlisted
 Sale_BrowserSortOption_TopWishlisted_ttip
 Sale_BrowserSortOption_TrendingWishlisted
@@ -14312,6 +14327,7 @@ UserGameBadge
 UserGameNotes_ClickToOpenLink
 UserGameNotes_DeleteNote
 UserGameNotes_Edit
+UserGameNotes_ErrorSavingNotes
 UserGameNotes_FlipWindow
 UserGameNotes_ImageTooLarge
 UserGameNotes_NewNote
@@ -14696,6 +14712,8 @@ WRITE_CONTACTS
 WRITE_EXTERNAL_STORAGE
 WRITE_VOICEMAIL
 WS
+WaitForConfigLoad
+WaitForConfigReady
 WaitForNextEvent
 WaitForSocketOpen
 WaitUntilLoggedOn
@@ -22419,6 +22437,7 @@ k_PrimaryDomainFail
 k_QueueWaitUntilRequestMS
 k_RTime32Infinite
 k_RTime32Nil
+k_RejectAO
 k_RejectAlreadyDisplayed
 k_RejectCreatorClan
 k_RejectDLC
@@ -22430,6 +22449,7 @@ k_RejectInLibrary
 k_RejectNoComingSoon
 k_RejectNoDiscount
 k_RejectNoMainCap
+k_RejectNoTrailer
 k_RejectNoVR
 k_RejectNotInLibrary
 k_RejectNotLoaded
@@ -23409,6 +23429,7 @@ m_strPlayerName
 m_strProduct
 m_strProfanityWords
 m_strProfileURL
+m_strRawPageBackgroundURL
 m_strRemoteClientID
 m_strScreenshotFull
 m_strScreenshotMedium
@@ -24949,6 +24970,7 @@ pageXOffset
 pageY
 pageYOffset
 page_background
+page_background_path
 pages
 pagingEnabled
 paint
@@ -25740,6 +25762,7 @@ rawInput
 rawToPerformanceEntry
 rawToPerformanceEntryType
 rawValue
+raw_page_background
 raw_version
 reachabilityHeaders
 reachabilityLongTimeout
