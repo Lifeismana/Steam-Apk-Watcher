@@ -10280,6 +10280,7 @@ Library_Menu_Guides
 Library_Menu_MyAchievements
 Library_Menu_MyFriendsWhoPlay
 Library_Menu_MyGameContent
+Library_Menu_MyNotes
 Library_Menu_MyReview
 Library_Menu_MyScreenshots
 Library_Menu_MyTradingCards
@@ -14324,6 +14325,7 @@ UserContentDescriptorPreferences
 UserContentDescriptorPreferences_ContentDescriptor
 UserFriendsWhoPlayGame
 UserGameBadge
+UserGameNotes
 UserGameNotes_ClickToOpenLink
 UserGameNotes_DeleteNote
 UserGameNotes_Edit

@@ -3965,6 +3965,7 @@ UserContentDescriptorPreferences
 UserContentDescriptorPreferences_ContentDescriptor
 UserFriendsWhoPlayGame
 UserGameBadge
+UserGameNotes
 UserGameReview
 UserGameScreenshots
 UserPersonaPreloader
