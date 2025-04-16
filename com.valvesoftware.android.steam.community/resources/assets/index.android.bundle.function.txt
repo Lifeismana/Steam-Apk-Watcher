@@ -275,6 +275,7 @@ BIsValidStoredAuthContext
 BIsVisible
 BIsWindowsPC
 BLightColor
+BLimitedLaunchActive
 BLocStringExists
 BLoggingEnabled
 BLooksLikeToken
@@ -500,6 +501,8 @@ CClientMetrics_ContentValidation_Notification
 CClientMetrics_DownloadRates_Notification
 CClientMetrics_DownloadRates_Notification_StatsInfo
 CClientMetrics_EndGameRecording_Notification
+CClientMetrics_GamePerformance_Notification
+CClientMetrics_GamePerformance_Notification_FrameRateReport
 CClientMetrics_IPv6Connectivity_Notification
 CClientMetrics_IPv6Connectivity_Result
 CClientMetrics_ReportClientArgs_Notification
@@ -1134,6 +1137,9 @@ CSteamNotification_PreferencesUpdated_Notification
 CSteamNotification_SetPreferences_Request
 CSteamNotification_SetPreferences_Response
 CStorageWebLocalStore
+CStoreBrowse_GetContentHubConfig_Request
+CStoreBrowse_GetContentHubConfig_Response
+CStoreBrowse_GetContentHubConfig_Response_ContentHubConfig
 CStoreBrowse_GetDLCForAppsSolr_Request
 CStoreBrowse_GetDLCForAppsSolr_Response
 CStoreBrowse_GetDLCForAppsSolr_Response_DLCList
@@ -1201,6 +1207,9 @@ CStore_GetLocalizedNameForTags_Response_Tag
 CStore_GetMostPopularTags_Request
 CStore_GetMostPopularTags_Response
 CStore_GetMostPopularTags_Response_Tag
+CStore_GetRecommendedTagsForUser_Request
+CStore_GetRecommendedTagsForUser_Response
+CStore_GetRecommendedTagsForUser_Response_Tag
 CStore_GetStorePreferences_Request
 CStore_GetStorePreferences_Response
 CStore_GetTagList_Request
@@ -1624,6 +1633,7 @@ ECommunityWordFilterTypeToString
 ECompromiseDetectionTypeToString
 EConfirmationStateToString
 EContentCheckProviderToString
+EContentDescriptorIDToString
 EContentHubDiscountFilterTypeToString
 EDiscoveryQueueExperimentalCohortToString
 EExportCodecToString
@@ -2128,6 +2138,7 @@ GetConfirmationAssociatedMessage
 GetConnectionDetails
 GetContentDescriptorIDs
 GetContentDescriptors
+GetContentHubConfig
 GetCookie
 GetCountBytesRemaining
 GetCountryRestrictions
@@ -2327,6 +2338,7 @@ GetPartnerReadyToPublishMessages
 GetPasswordRSAPublicKey
 GetPastMarketingMessages
 GetPerFriendPreferences
+GetPercentComplete
 GetPersonaClass
 GetPersonaNotificationProps
 GetPlatforms
@@ -2367,6 +2379,7 @@ GetReactions
 GetReactionsSummaryForUser
 GetRecentPlaytimeSessionsForChild
 GetRecentPlaytimeSessionsKey
+GetRecommendedTagsForUser
 GetRegionFromRequest
 GetReleaseDateRTime
 GetReplacementAuthenticator
@@ -2680,6 +2693,7 @@ IsDateTheDayBefore
 IsDebugEnabled
 IsDebugLogEnabled
 IsDesktopClientProtocol
+IsDigits
 IsELanguageValidInRealm
 IsEmojiOnly
 IsEmulator
@@ -3305,6 +3319,7 @@ RandomInt
 RateClanAnnouncement
 RateCommentThread
 RateLimitError
+RateLimitedTextLink
 ReactFabricHostComponent
 ReactNativeElement
 ReactNativeFiberHostComponent
@@ -3411,6 +3426,7 @@ ReportClipRange
 ReportClipShare
 ReportEndGameRecording
 ReportError
+ReportGamePerformance
 ReportLinuxStats
 ReportPlaytimeAndNotify
 ReportReactUsage
@@ -3590,6 +3606,7 @@ SetCookies
 SetDebugLogEnabled
 SetDefaultHandlerRegistry
 SetDefaultTransport
+SetDownloading
 SetEMsg
 SetEquippedProfileItemFlags
 SetErrorReportingStore
@@ -3614,6 +3631,7 @@ SetOnLoginComplete
 SetOverlayEscapeKeyHandling
 SetParent
 SetParentalSettings
+SetPaused
 SetPerFriendPreferences
 SetPlaytimeForControllerConfigs
 SetPreferences
@@ -3994,9 +4012,9 @@ WaitForConfigLoad
 WaitForNextEvent
 WaitForSocketOpen
 WaitUntilLoggedOn
+WaitingForAuthenticatorSMSCode
 WaitingForCode
 WaitingForConfirmation
-WaitingForMoveCode
 Warning
 WebModal
 WebScreen
@@ -9016,6 +9034,7 @@ onRequestCancel
 onRequestClose
 onRequestEmailConfirmation
 onResendCode
+onResendPress
 onResolveLogin
 onResponderEnd
 onResponderGrant
@@ -10992,6 +11011,7 @@ useForceUpdateOnResizeObserved
 useFormControlContext
 useFormFactor
 useFrameCallback
+useFullscreen
 useGestureBottomSheetAnimation
 useGestureHandlerRef
 useGetInviteCheckResults
@@ -11049,7 +11069,6 @@ useIsAppBlocked
 useIsCurrentUserParentalLocked
 useIsFetching
 useIsFocused
-useIsFullscreen
 useIsGameListFetching
 useIsKeyboardShown
 useIsMutating
@@ -11445,6 +11464,9 @@ wrappedFn
 wrappedListener
 wrappedMutationEmit
 wrappedOnChange
+wrappedOnExecute
+wrappedOnPress
+wrappedOnResendPress
 wrappedScrollEmit
 wrapper
 wrapperChain

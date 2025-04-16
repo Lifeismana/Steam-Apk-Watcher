@@ -446,6 +446,7 @@ AddGuard_RecoveryCode_DoNotShare
 AddGuard_RecoveryCode_Intro
 AddGuard_RecoveryCode_Title
 AddGuard_ResendPhoneCode
+AddGuard_ResendingPhoneCode
 AddGuard_SignInWithNewAccount
 AddGuard_UnknownError
 AddGuard_VerifyPhoneCode
@@ -1042,6 +1043,7 @@ Button_DeleteAll
 Button_Discuss
 Button_Dismiss
 Button_Done
+Button_Download
 Button_Edit
 Button_Follow
 Button_Followed
@@ -1058,6 +1060,9 @@ Button_NotInterested
 Button_NotifyMe
 Button_OK
 Button_Overwrite
+Button_Paste
+Button_PasteClipboard
+Button_Pasted
 Button_Post
 Button_Preview
 Button_Publish
@@ -1072,6 +1077,7 @@ Button_SaveAndClose
 Button_SaveAndContinue
 Button_Saved
 Button_Share
+Button_StartDownload
 Button_Submit
 Button_TryAgain
 Button_Update
@@ -1207,6 +1213,8 @@ CClientMetrics_ContentValidation_Notification
 CClientMetrics_DownloadRates_Notification
 CClientMetrics_DownloadRates_Notification_StatsInfo
 CClientMetrics_EndGameRecording_Notification
+CClientMetrics_GamePerformance_Notification
+CClientMetrics_GamePerformance_Notification_FrameRateReport
 CClientMetrics_IPv6Connectivity_Notification
 CClientMetrics_IPv6Connectivity_Result
 CClientMetrics_ReportClientArgs_Notification
@@ -1905,6 +1913,9 @@ CSteamNotification_NotificationsReceived_Notification
 CSteamNotification_PreferencesUpdated_Notification
 CSteamNotification_SetPreferences_Request
 CSteamNotification_SetPreferences_Response
+CStoreBrowse_GetContentHubConfig_Request
+CStoreBrowse_GetContentHubConfig_Response
+CStoreBrowse_GetContentHubConfig_Response_ContentHubConfig
 CStoreBrowse_GetDLCForAppsSolr_Request
 CStoreBrowse_GetDLCForAppsSolr_Response
 CStoreBrowse_GetDLCForAppsSolr_Response_DLCList
@@ -1966,6 +1977,9 @@ CStore_GetLocalizedNameForTags_Response_Tag
 CStore_GetMostPopularTags_Request
 CStore_GetMostPopularTags_Response
 CStore_GetMostPopularTags_Response_Tag
+CStore_GetRecommendedTagsForUser_Request
+CStore_GetRecommendedTagsForUser_Response
+CStore_GetRecommendedTagsForUser_Response_Tag
 CStore_GetStorePreferences_Request
 CStore_GetStorePreferences_Response
 CStore_GetTagList_Request
@@ -3746,6 +3760,7 @@ ECompromiseDetectionType_2
 ECompromiseDetectionType_3
 ECompromiseDetectionType_4
 ECompromiseDetectionType_5
+ECompromiseDetectionType_6
 EComputerActiveState
 EConfiguratorSupportTypes
 EConfirmationState
@@ -3767,6 +3782,14 @@ EContentCheckProvider_3
 EContentCheckProvider_4
 EContentCheckProvider_5
 EContentCheckProvider_6
+EContentDescriptorID
+EContentDescriptorIDToString
+EContentDescriptorID_0
+EContentDescriptorID_1
+EContentDescriptorID_2
+EContentDescriptorID_3
+EContentDescriptorID_4
+EContentDescriptorID_5
 EContentHubDiscountFilterType
 EContentHubDiscountFilterTypeToString
 EContentHubDiscountFilterType_0
@@ -4035,6 +4058,12 @@ EHDRVisualization_2
 EHDRVisualization_3
 EHDRVisualization_4
 EHTTPProxyMode
+EHardwareVariant
+EHardwareVariant_0
+EHardwareVariant_1
+EHardwareVariant_2
+EHardwareVariant_3
+EHardwareVariant_4
 EHelpIssue
 EHelpIssueToString
 EHelpIssue_0
@@ -4344,6 +4373,7 @@ EHelpRequestType_0
 EHelpRequestType_1
 EHelpRequestType_10
 EHelpRequestType_100
+EHelpRequestType_101
 EHelpRequestType_11
 EHelpRequestType_12
 EHelpRequestType_13
@@ -5288,16 +5318,7 @@ EMsg_1433
 EMsg_1434
 EMsg_1435
 EMsg_1436
-EMsg_1437
-EMsg_1438
-EMsg_1439
 EMsg_144
-EMsg_1440
-EMsg_1441
-EMsg_1442
-EMsg_1443
-EMsg_1444
-EMsg_1445
 EMsg_145
 EMsg_146
 EMsg_147
@@ -6491,6 +6512,7 @@ EPlaytestStatus_0
 EPlaytestStatus_1
 EPlaytestStatus_2
 EPlaytestStatus_3
+EPlaytestStatus_4
 EPostGameSummaryType
 EPostGameSummaryType_0
 EPostGameSummaryType_1
@@ -6645,6 +6667,7 @@ EProtoPrivilege_11
 EProtoPrivilege_12
 EProtoPrivilege_13
 EProtoPrivilege_14
+EProtoPrivilege_15
 EProtoPrivilege_2
 EProtoPrivilege_3
 EProtoPrivilege_4
@@ -7438,6 +7461,7 @@ ESupportPermissions_3
 ESupportPermissions_30
 ESupportPermissions_31
 ESupportPermissions_32
+ESupportPermissions_33
 ESupportPermissions_4
 ESupportPermissions_5
 ESupportPermissions_6
@@ -8135,7 +8159,9 @@ EventDashBoard_Summary_StoreAppPage_Read
 EventDashBoard_Summary_StoreAppPage_Shown
 EventDidplay_Reminder_EventNotVisible
 EventDisplay_Admin
+EventDisplay_Admin_Close_ttip
 EventDisplay_Admin_ExtraShort
+EventDisplay_Admin_Reopen_ttip
 EventDisplay_Admin_Title
 EventDisplay_AreYouSure
 EventDisplay_AreYouSure_Visible
@@ -8997,6 +9023,7 @@ GamepadOverlay_GameRecording_RecordingStateExplainer
 GamepadOverlay_GameRecording_StartManualRecording
 GamepadOverlay_GameRecording_StopManualRecording
 GamepadOverlay_GameRecording_ToggleRecordingExplainer
+GamesList_Client_Indicator
 GaugeMetric
 GenerateAccessTokenForApp
 GenerateAvatarURLForChannel
@@ -9091,6 +9118,7 @@ GetConfiguredLocale
 GetConfirmationAssociatedMessage
 GetConnectionDetails
 GetContentDescriptors
+GetContentHubConfig
 GetCookie
 GetCountBytesRemaining
 GetCountryRestrictions
@@ -9235,6 +9263,7 @@ GetPartnerReadyToPublishMessages
 GetPasswordRSAPublicKey
 GetPastMarketingMessages
 GetPerFriendPreferences
+GetPercentComplete
 GetPersonaClass
 GetPersonaNotificationProps
 GetPlayNext
@@ -9267,6 +9296,7 @@ GetReactions
 GetReactionsSummaryForUser
 GetRecentPlaytimeSessionsForChild
 GetRecentPlaytimeSessionsKey
+GetRecommendedTagsForUser
 GetReleaseDateRTime
 GetReplacementAuthenticator
 GetRequestParam
@@ -9912,6 +9942,7 @@ IsDateSameYear
 IsDateTheDayBefore
 IsDebugLogEnabled
 IsDesktopClientProtocol
+IsDigits
 IsELanguageValidInRealm
 IsEmojiOnly
 IsEmulator
@@ -10268,6 +10299,7 @@ Library_Empty_RedeemLink
 Library_Empty_RedeemOuter
 Library_Empty_Title
 Library_GetOwnedGames_Failed
+Library_Header_DownloadBytes
 Library_Header_Downloading
 Library_Header_DownloadingTo
 Library_Header_Paused
@@ -11897,6 +11929,7 @@ ReadableDuration_LessThanOneMinute
 ReadableDuration_Minutes
 ReadableDuration_Months
 ReadableDuration_OneMinute
+ReadableDuration_OneMonth
 ReaderProto
 Reanimated
 ReanimatedFlatList
@@ -12012,6 +12045,7 @@ ReportClipRange
 ReportClipShare
 ReportEndGameRecording
 ReportError
+ReportGamePerformance
 ReportLinuxStats
 ReportPlaytimeAndNotify
 ReportReactUsage
@@ -12323,7 +12357,15 @@ SaleTrailerCarousel_RemoveFromWishlist
 SaleTrailerCarousel_Undo
 SaleTrailerCarousel_ViewStorePage
 Sale_AddToLibrary
+Sale_AddToLibrary_DialogDesc
+Sale_AddToLibrary_DialogDesc2
+Sale_AddToLibrary_DownloadStarted
+Sale_AddToLibrary_NoPlus
+Sale_AddToLibrary_RemoteDownload
+Sale_AddToLibrary_RemoteDownload_Device
+Sale_AddToLibrary_SeeDownloadProgress
 Sale_AddToWishlist
+Sale_AddedToLibrary
 Sale_AlreadyReserved
 Sale_BroadcastSchedule
 Sale_BrowserSortOption_All
@@ -12792,6 +12834,7 @@ Sale_default_label_276
 Sale_default_label_278
 Sale_default_label_279
 Sale_default_label_28
+Sale_default_label_280
 Sale_default_label_29
 Sale_default_label_3
 Sale_default_label_30
@@ -13136,6 +13179,7 @@ SetCookies
 SetDebugLogEnabled
 SetDefaultHandlerRegistry
 SetDefaultTransport
+SetDownloading
 SetEMsg
 SetEquippedProfileItemFlags
 SetErrorReportingStore
@@ -13156,6 +13200,7 @@ SetOnLoginComplete
 SetOverlayEscapeKeyHandling
 SetOverlayEscapeKeyHandlingHandler
 SetParentalSettings
+SetPaused
 SetPerFriendPreferences
 SetPlaytimeForControllerConfigs
 SetPreferences
@@ -13309,6 +13354,7 @@ Settings_HomeScreen_News
 Settings_HomeScreen_Notifications
 Settings_HomeScreen_Store
 Settings_Hotkey_Button_NotBound
+Settings_Hotkey_Modal_NotBound
 Settings_Hotkey_TakeInstantClip
 Settings_Hotkey_TakeScreenshot
 Settings_Hotkey_ToggleOverlay
@@ -13659,6 +13705,37 @@ StopPlaytimeTrackingForAllAppItems
 StopPolling
 Stopped
 StorageAccessFramework
+StoreAdmin_SocialMedia_Add
+StoreAdmin_SocialMedia_EnterLink
+StoreAdmin_SocialMedia_EnterName
+StoreAdmin_SocialMedia_EnterNumber
+StoreAdmin_SocialMedia_Type_bilibili
+StoreAdmin_SocialMedia_Type_bluesky
+StoreAdmin_SocialMedia_Type_discord_server
+StoreAdmin_SocialMedia_Type_douyin
+StoreAdmin_SocialMedia_Type_facebook
+StoreAdmin_SocialMedia_Type_instagram
+StoreAdmin_SocialMedia_Type_linkedin
+StoreAdmin_SocialMedia_Type_mastodon
+StoreAdmin_SocialMedia_Type_qq
+StoreAdmin_SocialMedia_Type_qqlink
+StoreAdmin_SocialMedia_Type_reddit
+StoreAdmin_SocialMedia_Type_telegram
+StoreAdmin_SocialMedia_Type_threads
+StoreAdmin_SocialMedia_Type_tieba
+StoreAdmin_SocialMedia_Type_tiktok
+StoreAdmin_SocialMedia_Type_tumblr
+StoreAdmin_SocialMedia_Type_twitch
+StoreAdmin_SocialMedia_Type_twitter
+StoreAdmin_SocialMedia_Type_vk
+StoreAdmin_SocialMedia_Type_wechat
+StoreAdmin_SocialMedia_Type_weibo
+StoreAdmin_SocialMedia_Type_youtube
+StoreAdmin_SocialMedia_ValidationMastodon
+StoreAdmin_SocialMedia_ValidationNumber
+StoreAdmin_SocialMedia_ValidationPrefix
+StoreAdmin_SocialMedia_ValidationText
+StoreAdmin_SocialMedia_ValidationTumblr
 StoreAppLink
 StoreApp_FollowCreator
 StoreApp_FollowCreatorSubtitle
@@ -13718,6 +13795,8 @@ StoreQueryService
 StoreScreen_Title
 StoreService
 StoreString
+StoreTrailer_AOWarning_1
+StoreTrailer_AOWarning_2
 StoreTrailer_AutoPlayVideos
 StoreTrailer_Title_Category_Accolades
 StoreTrailer_Title_Category_Cinematic
@@ -14180,8 +14259,16 @@ TrackingRangeMaximumMeters_Float
 TrackingRangeMinimumMeters_Float
 TrackingSystemName_String
 TrailerPlayer_CouldNotLoad
+TrailerPlayer_ExitFullScreen_Tooltip
+TrailerPlayer_FullScreen_Tooltip
 TrailerPlayer_ID_NotProvided
 TrailerPlayer_LoadingError
+TrailerPlayer_Mute_Tooltip
+TrailerPlayer_Pause_Tooltip
+TrailerPlayer_Play_Tooltip
+TrailerPlayer_Quality_Auto
+TrailerPlayer_Settings_Tooltip
+TrailerPlayer_Unmute_Tooltip
 TransitionGenerator
 TransitionIOSSpec
 TransitionPresets
@@ -14333,6 +14420,7 @@ UserGameNotes_ErrorSavingNotes
 UserGameNotes_FlipWindow
 UserGameNotes_ImageTooLarge
 UserGameNotes_NewNote
+UserGameNotes_NotesForGame
 UserGameNotes_NotesList
 UserGameNotes_NotesListView
 UserGameNotes_PinWindow
@@ -14719,6 +14807,7 @@ WaitForConfigReady
 WaitForNextEvent
 WaitForSocketOpen
 WaitUntilLoggedOn
+WaitingForAuthenticatorSMSCode
 WaitingForDeviceCode
 WaitingForDeviceConfirmation
 WaitingForEmailCode
@@ -16625,6 +16714,7 @@ bConstMethod
 bDisableEmbedInlining
 bDisableRoomEffects
 bDisableSpellcheck
+bDisabled
 bDoNotDisturbMode
 bEnabled
 bEnrolled
@@ -16635,6 +16725,7 @@ bFirst
 bForce24HourClock
 bForceAlphabeticFriendSorting
 bForceSingleUnits
+bFullscreen
 bGranularFutureTime
 bGranularPast
 bGranularToday
@@ -16653,6 +16744,7 @@ bIncludeExcluded
 bIncludeMessageInIdentifier
 bIncludeNonGames
 bIncludeOwn
+bInitialDelay
 bIsBroadcasting
 bIsExpectedToReconnect
 bIsLeft
@@ -18648,6 +18740,9 @@ durationV
 duration_seconds
 dutch
 dx
+dx_deviceid
+dx_vendorid
+dx_video_card
 dy
 dynamicRequire
 dynamicSamplingContext
@@ -18943,6 +19038,7 @@ estimateDirection
 estimated_delivery_latest_business_days
 estimated_delivery_soonest_business_days
 estimated_seconds_remaining
+estimated_time_remaining_sec
 ethernet
 eulerToQuaternion
 eval
@@ -19178,6 +19274,7 @@ family_purchase_requests
 familyid
 fastMode
 fatal
+favor_rarer_tags
 favorite
 favorited
 fcp
@@ -19447,6 +19544,7 @@ fnOnReconnectStartHandler
 fnRestartTimer
 fnSort
 fnStopTimer
+fnToggleFullscreen
 focus
 focusContent
 focusField
@@ -19569,6 +19667,7 @@ frameCallbackRegistry
 frameContextLines
 frameElement
 frameId
+frame_rate
 frames
 framesToPop
 franchise-home-link
@@ -20811,6 +20910,7 @@ hub_category
 hub_tagid
 hub_type
 hubcategoryid
+hubconfigs
 hue
 hue2rgb
 hungarian
@@ -21767,6 +21867,7 @@ is_site_license_lock
 is_steamchina_account
 is_support
 is_valid
+is_valveds
 is_visible_in_steam_china
 ismap
 isolateGlobalState
@@ -22486,9 +22587,12 @@ k_eButtonBits_LPadClick
 k_eButtonBits_RPadClick
 k_eControllerType_AndroidController
 k_eControllerType_AppleController
+k_eControllerType_AsusRogAlly
 k_eControllerType_FrontPanelBoard
 k_eControllerType_HoriSteamController
 k_eControllerType_LastController
+k_eControllerType_LenovoLegionGo
+k_eControllerType_LenovoLegionGoS
 k_eControllerType_MobileTouch
 k_eControllerType_None
 k_eControllerType_PS3Controller
@@ -22512,6 +22616,7 @@ k_eControllerType_XBoxEliteController
 k_eControllerType_XBoxOneController
 k_eControllerType_XInputPS4Controller
 k_eControllerType_XInputSwitchController
+k_eControllerType_ZotacZone
 k_eControllertype_GenericKeyboard
 k_eControllertype_GenericMouse
 k_eDropTypeAnnouncement
@@ -22962,6 +23067,7 @@ lightyellow
 lime
 limegreen
 limit
+limited_launch_active
 limiter
 limitsNavigationsToAppBoundDomains
 line
@@ -23688,6 +23794,7 @@ max_runtime
 max_slots_per_type
 max_upgradable_level
 max_use_count
+max_version
 maximize
 maximumFractionDigits
 maxlevel
@@ -23970,6 +24077,7 @@ msExitFullscreen
 msFullscreenElement
 msInitialRemaining
 msInterval
+msMinInterval
 msRequestFullscreen
 msToSec
 msb
@@ -24309,10 +24417,10 @@ num_children
 num_comments_developer
 num_comments_public
 num_downloading
+num_gpu
 num_items_max
 num_levels
 num_ops
-num_paused
 num_reports
 num_retries
 num_sessions
@@ -24431,6 +24539,7 @@ onCaughtError
 onCellFocusCapture
 onCellLayout
 onChange
+onChangePhoneNumberPress
 onChangeSync
 onChangeText
 onChangeUrl
@@ -24442,6 +24551,7 @@ onClickCapture
 onClose
 onCloseAutoFocus
 onCloseRoute
+onCodeEntered
 onCommentsClicked
 onCommitFiberRoot
 onCommitFiberUnmount
@@ -24479,6 +24589,7 @@ onEndReachedThresholdOrDefault
 onEnter
 onError
 onEscapeKeyDown
+onExecute
 onExit
 onFCP
 onFID
@@ -24653,6 +24764,7 @@ onRequestCancel
 onRequestClose
 onRequestScroll
 onResendCode
+onResendPress
 onReset
 onResponderEnd
 onResponderGrant
@@ -24876,6 +24988,8 @@ overArgs
 overEvery
 overScrollMode
 overSome
+overall_estimated_time_remaining_sec
+overall_percent_complete
 overflow
 overflowPadding
 overflowQueryContainer
@@ -26295,6 +26409,7 @@ reported
 reporteddiscussions
 reportingObserverIntegration
 reporting_enabled
+reports
 repository
 reps
 request
@@ -27087,6 +27202,7 @@ sessionTimingIntegration
 sessionType
 session_disposition
 session_length_seconds
+session_seconds
 session_time_start
 sessionid
 sessions
@@ -28141,6 +28257,7 @@ strNewGuardData
 strNextLevelName
 strNotes
 strPassword
+strPhoneHint
 strRefreshToken
 strSource
 strTitle
@@ -28342,6 +28459,7 @@ synthetic
 syntheticException
 sysid
 systemId
+system_ram
 t
 tOwned
 tState
@@ -28545,6 +28663,7 @@ timeSinceFirstFrame
 timeSincePreviousFrame
 timeStamp
 timeUntilStale
+timeZone
 time_available
 time_before
 time_chinassa_accepted
@@ -29213,8 +29332,8 @@ update_is_upload
 update_is_workshop
 update_network_bytes_per_second
 update_peak_network_bytes_per_second
+update_percentage
 update_publishedfileid
-update_seconds_remaining
 update_start_time
 update_state
 update_state_flags
@@ -29253,6 +29372,7 @@ url.same_origin
 url.scheme
 urlDecode
 urlEncode
+url_path
 urls
 us_state
 usable_duration
@@ -29385,6 +29505,7 @@ useForceUpdateOnResizeObserved
 useForeground
 useFormFactor
 useFrameCallback
+useFullscreen
 useGetInviteCheckResults
 useGetUserCountry
 useGlobalEventListener
@@ -29430,7 +29551,6 @@ useIsAppBlocked
 useIsCurrentUserParentalLocked
 useIsFetching
 useIsFocused
-useIsFullscreen
 useIsMutating
 useIsParentalFeatureBlocked
 useIsParentalSettingsFetching
