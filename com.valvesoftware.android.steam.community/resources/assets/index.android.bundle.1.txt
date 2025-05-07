@@ -394,6 +394,28 @@ Accept
 AcceptSSA
 Access-Control-Allow-Credentials
 AccessibilityEventTypes
+AccessibilityFeatures
+AccessibilityFeaturesWithCount
+Accessibility_Feature_AdjustableDifficulty
+Accessibility_Feature_AdjustableTextSize
+Accessibility_Feature_CameraComfort
+Accessibility_Feature_ColorAlternatives
+Accessibility_Feature_CustomVolumeControls
+Accessibility_Feature_KeyboardOnlyOption
+Accessibility_Feature_MouseOnlyOption
+Accessibility_Feature_NarratedMenus
+Accessibility_Feature_SaveAnytime
+Accessibility_Feature_SpeechToText
+Accessibility_Feature_StereoSound
+Accessibility_Feature_SubtitleOptions
+Accessibility_Feature_SurroundSound
+Accessibility_Feature_TextToSpeech
+Accessibility_Feature_TouchOnlyOption
+Accessibility_Feature_WithoutQuickTimeEvents
+Accessibility_Group_Audio
+Accessibility_Group_Gameplay
+Accessibility_Group_Input
+Accessibility_Group_Visual
 AccountDetails
 AccountPhoneStatus
 AccountSelector
@@ -701,6 +723,7 @@ BIOMETRIC_STRONG
 BIOMETRIC_WEAK
 BIRTHDAYS
 BInsertBeforeElement
+BIsAllAges
 BIsAndroid
 BIsAppBlocked
 BIsAppMissing
@@ -1033,6 +1056,7 @@ Button_Close
 Button_Color
 Button_Confirm
 Button_Continue
+Button_Convert
 Button_Copied
 Button_Copy
 Button_CopyClipboard
@@ -1053,6 +1077,7 @@ Button_Hide
 Button_Ignore
 Button_Ignored
 Button_Learn
+Button_Link
 Button_Load
 Button_Manage
 Button_Next
@@ -1080,6 +1105,7 @@ Button_Share
 Button_StartDownload
 Button_Submit
 Button_TryAgain
+Button_Unlink
 Button_Update
 Button_Upload
 Button_View
@@ -1935,6 +1961,13 @@ CStoreBrowse_GetStoreCategories_Response
 CStoreBrowse_GetStoreCategories_Response_Category
 CStoreCatalog_GetDevPageAllAppsLinked_Request
 CStoreCatalog_GetDevPageAllAppsLinked_Response
+CStoreCatalog_GetDevPageLinks_Request
+CStoreCatalog_GetDevPageLinks_Response
+CStoreCatalog_GetDevPagesForPartner_Request
+CStoreCatalog_GetDevPagesForPartner_Response
+CStoreCatalog_GetDevPagesForPartner_Response_CDevPageInfo
+CStoreCatalog_SetDevPageLink_Request
+CStoreCatalog_SetDevPageLink_Response
 CStoreDiscoveryQueueSettings
 CStoreItemAllTrailers
 CStoreItemTrailer
@@ -2032,14 +2065,13 @@ CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request
 CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response
 CTwoFactor_RemoveAuthenticator_Request
 CTwoFactor_RemoveAuthenticator_Response
-CTwoFactor_SendEmail_Request
-CTwoFactor_SendEmail_Response
 CTwoFactor_Status_Request
 CTwoFactor_Status_Response
 CTwoFactor_Time_Request
 CTwoFactor_Time_Response
 CTwoFactor_UpdateTokenVersion_Request
 CTwoFactor_UpdateTokenVersion_Response
+CTwoFactor_UsageEvent
 CU
 CUnregisterList
 CUserAccount_CancelLicenseForApp_Request
@@ -3795,6 +3827,15 @@ EContentHubDiscountFilterTypeToString
 EContentHubDiscountFilterType_0
 EContentHubDiscountFilterType_1
 EContentHubDiscountFilterType_2
+EContentReportReason
+EContentReportReasonToString
+EContentReportReason_0
+EContentReportReason_1
+EContentReportReason_2
+EContentReportReason_3
+EContentReportReason_4
+EContentReportReason_5
+EContentReportReason_6
 EControllerAttribCapabilityBits
 EControllerBindingType
 EControllerConfigExportType
@@ -4160,6 +4201,7 @@ EHelpIssue_18
 EHelpIssue_180
 EHelpIssue_181
 EHelpIssue_182
+EHelpIssue_183
 EHelpIssue_19
 EHelpIssue_2
 EHelpIssue_20
@@ -4716,6 +4758,8 @@ EMarketingMessageClickLocation_1
 EMarketingMessageClickLocation_2
 EMarketingMessageClickLocation_3
 EMarketingMessageClickLocation_4
+EMarketingMessageClickLocation_5
+EMarketingMessageClickLocation_6
 EMarketingMessageFilterType
 EMarketingMessageFilterTypeToString
 EMarketingMessageFilterType_0
@@ -4787,6 +4831,11 @@ EMobileApp
 EMobileAppToString
 EMobileApp_0
 EMobileApp_1
+EMobileConfirmationAction
+EMobileConfirmationActionToString
+EMobileConfirmationAction_0
+EMobileConfirmationAction_1
+EMobileConfirmationAction_2
 EMobileConfirmationType
 EMobileConfirmationTypeToString
 EMobileConfirmationType_0
@@ -5302,22 +5351,7 @@ EMsg_1419
 EMsg_142
 EMsg_1420
 EMsg_1421
-EMsg_1422
-EMsg_1423
-EMsg_1424
-EMsg_1425
-EMsg_1426
-EMsg_1427
-EMsg_1428
-EMsg_1429
 EMsg_143
-EMsg_1430
-EMsg_1431
-EMsg_1432
-EMsg_1433
-EMsg_1434
-EMsg_1435
-EMsg_1436
 EMsg_144
 EMsg_145
 EMsg_146
@@ -6411,6 +6445,8 @@ EPhoneMessageReason_12
 EPhoneMessageReason_13
 EPhoneMessageReason_14
 EPhoneMessageReason_15
+EPhoneMessageReason_16
+EPhoneMessageReason_17
 EPhoneMessageReason_2
 EPhoneMessageReason_3
 EPhoneMessageReason_4
@@ -6881,6 +6917,7 @@ ESLSHelper_2
 ESLSHelper_3
 ESLSHelper_4
 ESLSHelper_5
+ESLSHelper_6
 ESWGyroCalibrationWizardState
 EScreenshotSortOrder
 EServerType
@@ -7162,6 +7199,17 @@ ESteamNotificationType_6
 ESteamNotificationType_7
 ESteamNotificationType_8
 ESteamNotificationType_9
+ESteamOSCompatibilityCategory
+ESteamOSCompatibilityCategoryToString
+ESteamOSCompatibilityCategory_0
+ESteamOSCompatibilityCategory_1
+ESteamOSCompatibilityCategory_2
+ESteamOSCompatibilityResultDisplayType
+ESteamOSCompatibilityResultDisplayTypeToString
+ESteamOSCompatibilityResultDisplayType_0
+ESteamOSCompatibilityResultDisplayType_1
+ESteamOSCompatibilityResultDisplayType_2
+ESteamOSCompatibilityResultDisplayType_3
 ESteamPipeOperationType
 ESteamPipeOperationTypeToString
 ESteamPipeOperationType_0
@@ -7357,6 +7405,7 @@ EStoreLinkType_20
 EStoreLinkType_21
 EStoreLinkType_22
 EStoreLinkType_23
+EStoreLinkType_24
 EStoreLinkType_3
 EStoreLinkType_4
 EStoreLinkType_5
@@ -7599,6 +7648,16 @@ ETransportError_5
 ETransportError_6
 ETransportError_7
 ETransportError_8
+ETwoFactorStatusFieldFlag
+ETwoFactorStatusFieldFlagToString
+ETwoFactorStatusFieldFlag_0
+ETwoFactorStatusFieldFlag_1
+ETwoFactorUsageType
+ETwoFactorUsageTypeToString
+ETwoFactorUsageType_0
+ETwoFactorUsageType_1
+ETwoFactorUsageType_2
+ETwoFactorUsageType_3
 EUCMFilePrivacyState
 EUCMFilePrivacyState_0
 EUCMFilePrivacyState_1
@@ -8138,10 +8197,12 @@ EventDashBoard_Location_PopUpViews
 EventDashBoard_Location_StoreDetail
 EventDashBoard_Location_WaitingModeraion
 EventDashBoard_ModerationQueueWarning
+EventDashBoard_SummaryStats_AboutStats
 EventDashBoard_SummaryStats_Admin_Title
 EventDashBoard_SummaryStats_Dec2020Note
 EventDashBoard_SummaryStats_Desc
-EventDashBoard_SummaryStats_Link
+EventDashBoard_SummaryStats_Details
+EventDashBoard_SummaryStats_Export
 EventDashBoard_SummaryStats_Title
 EventDashBoard_SummaryStats_TotalImpressions
 EventDashBoard_SummaryStats_TotalViews
@@ -8231,6 +8292,7 @@ EventDisplay_RightColumnTitle_DateAndTime
 EventDisplay_RightColumnTitle_EventType
 EventDisplay_RightColumnTitle_Game
 EventDisplay_RunsForDuration
+EventDisplay_Sale_SocialTitle
 EventDisplay_SalesPage
 EventDisplay_SeeOldVersion
 EventDisplay_Share_Announcement
@@ -9028,6 +9090,7 @@ GaugeMetric
 GenerateAccessTokenForApp
 GenerateAvatarURLForChannel
 GenerateNewSessionID
+GenerateRandomSeed
 GenerateSHA
 GenerateShortHash
 GenerateSteamGuardCodeForTime
@@ -9054,6 +9117,7 @@ GetActivePurchaseBonuses
 GetAllAgesAndMatureScreenshots
 GetAllClientLogonInfo
 GetAllReservationPositionMessages
+GetAllTrailers
 GetAnimatedAvatar
 GetAnonymousServiceTransport
 GetApp
@@ -9145,6 +9209,8 @@ GetDemoStandaloneStorePageAppIDs
 GetDesktopClientProtocol
 GetDetails
 GetDevPageAllAppsLinked
+GetDevPageLinks
+GetDevPagesForPartner
 GetDeveloperNames
 GetDeviceDetails
 GetDeviceIdentifier
@@ -9244,7 +9310,6 @@ GetOSVersion
 GetObject
 GetOfflineStatusTime
 GetOfflineStatusUpdateRate
-GetOnlyAllAgesSafeScreenshots
 GetOnlyAllAgesScreenshots
 GetOptionalConfigJSON
 GetOtherTrailers
@@ -9303,6 +9368,7 @@ GetRequestParam
 GetRequests
 GetResponsivePersonaImageSize
 GetRichPresenceLoc
+GetScreenshots
 GetServerRTime32
 GetServiceTransport
 GetSessionID
@@ -11103,6 +11169,7 @@ NativeVirtualText
 NavEventContext
 NavLink
 NavLinkFallback
+NavLinkFallbackUTM
 NavLinkSNRFallback
 NavReady
 NavigationContainer
@@ -11294,6 +11361,7 @@ OpenSourceLicense_FieldLabel
 OpenSource_Explanation
 OpenUrl
 OpenWebModal
+OptionalPromise
 OriginatingNavEventContextRoot
 Output
 OutputDeviceLoading...
@@ -11901,6 +11969,7 @@ RadioGroup
 RadioItem
 RadioVersion_Uint64
 RandomInt
+RandomUtils
 RangeError
 RateClanAnnouncement
 RateCommentThread
@@ -11921,8 +11990,6 @@ ReactQueryRoot
 Reaction
 ReadBodyFromBuffer
 ReadItem
-ReadOldSessionInfo
-ReadOldSteamGuardStates
 ReadableDuration_Days
 ReadableDuration_Hours
 ReadableDuration_LessThanOneMinute
@@ -13017,6 +13084,7 @@ SectionSeparatorComponent
 Section_Maximize_Tooltip
 Section_Minimize_Tooltip
 SecurityLevel
+SeededRandom
 SeekGetCurrent
 SeekGetHead
 SegmentedButton
@@ -13039,7 +13107,6 @@ SendClip_SelectTarget
 SendClip_Title
 SendClip_Upload
 SendClip_Uploading
-SendEmail
 SendErrorReport
 SendErrorReports
 SendLocalNotification
@@ -13179,6 +13246,7 @@ SetCookies
 SetDebugLogEnabled
 SetDefaultHandlerRegistry
 SetDefaultTransport
+SetDevPageLink
 SetDownloading
 SetEMsg
 SetEquippedProfileItemFlags
@@ -13718,6 +13786,7 @@ StoreAdmin_SocialMedia_Type_instagram
 StoreAdmin_SocialMedia_Type_linkedin
 StoreAdmin_SocialMedia_Type_mastodon
 StoreAdmin_SocialMedia_Type_qq
+StoreAdmin_SocialMedia_Type_qqchannel
 StoreAdmin_SocialMedia_Type_qqlink
 StoreAdmin_SocialMedia_Type_reddit
 StoreAdmin_SocialMedia_Type_telegram
@@ -13788,6 +13857,7 @@ StoreItem_Trailers_Trailer
 StoreItem_Trailers_VideoSource
 StoreLink_Label
 StoreNavEventContextFromSNR
+StoreNavEventContextFromUTM
 StoreNavEventParamsToNavData
 StoreNavLink
 StoreObject
@@ -13807,6 +13877,7 @@ StoreTrailer_Title_Category_Unknown
 StoreTrailer_Title_Category_Update
 StoreTrailer_Title_Combiner
 StoreTrailer_Title_TrailerPreview
+StoreUTMContext
 StoreWebviewHeader
 StoreWebviewPaths
 Store_AddToCart
@@ -14383,7 +14454,6 @@ UpdateTextFilterDictionary
 UpdateTextFilterDictionaryHandler
 UpdateTextFilterWords
 UpdateTokenVersion
-UpdateTwoFactorVersion
 UpdateUserAuth
 Updating
 UpgradeImageURLToHTTPS
@@ -16259,6 +16329,7 @@ alignmentOffset
 all
 allSettled
 allTouches
+all_ages
 all_ages_screenshots
 all_unlocked
 allnews
@@ -16711,6 +16782,7 @@ bComplete
 bConfigReady
 bConnected
 bConstMethod
+bConstructed
 bDisableEmbedInlining
 bDisableRoomEffects
 bDisableSpellcheck
@@ -16732,7 +16804,6 @@ bGranularToday
 bGranularTodayTimeOnly
 bGranularWeek
 bGranularYesterday
-bHadDataToMigrate
 bHardware
 bHideCategorizedFriends
 bHideOfflineFriendsInTagGroups
@@ -16758,9 +16829,6 @@ bLoggedIn
 bMakeActiveAccount
 bMargin
 bMaxed
-bMigrated
-bMigratedNow
-bMigrationFailed
 bNewUser
 bNotifications_EventsAndAnnouncements
 bNotifications_ShowChatRoomNotification
@@ -17741,6 +17809,7 @@ confirmButtonLabel
 confirmLabel
 confirm_type
 confirmation
+confirmation_action
 confirmation_count
 confirmation_email_address
 confirmation_type
@@ -17814,6 +17883,7 @@ content_country_restricted
 content_descriptor_preferences
 content_descriptorid
 content_descriptorids
+content_descriptorids_including_dlc
 content_descriptors
 content_descriptors_excluded
 content_descriptors_must_match
@@ -18423,6 +18493,7 @@ deltaY
 delta_ms
 demo
 demo-newrelease
+demo-parent-app-link
 demo_appid
 demo_for_owned_game
 demo_release_date
@@ -18824,7 +18895,6 @@ emailAddr
 emailLabel
 emailPlaceholder
 emailSteamID
-email_type
 email_validated
 embed
 emit
@@ -21041,7 +21111,6 @@ includeRender
 includeReplay
 includeTransform
 includeUpdates
-include_activation_code
 include_all_purchase_options
 include_appinfo
 include_apps
@@ -22610,6 +22679,7 @@ k_eControllerType_SwitchProController
 k_eControllerType_Unknown
 k_eControllerType_UnknownNonSteamController
 k_eControllerType_UnknownSteamController
+k_eControllerType_UnknownSteamOSHandheld
 k_eControllerType_WiiController
 k_eControllerType_XBox360Controller
 k_eControllerType_XBoxEliteController
@@ -22958,6 +23028,7 @@ last_playtime
 last_post
 last_read_time
 last_seen
+last_seen_auth_token_id
 last_seen_online
 last_shown_time
 last_time_updated
@@ -23097,6 +23168,7 @@ link_type
 linkedErrorsIntegration
 linking
 linkname
+linknames
 links
 lint
 lint-staged
@@ -23284,6 +23356,7 @@ m_bDisconnectRequested
 m_bEnabled
 m_bIncludeBacktraceInLog
 m_bInitialized
+m_bIsAllAges
 m_bIsComingSoon
 m_bIsEarlyAccess
 m_bIsFree
@@ -23360,7 +23433,8 @@ m_freeWeekend
 m_game_lobby_id
 m_gameid
 m_header
-m_higherTrailers
+m_highlightTrailers
+m_highlightTrailersAllAges
 m_iGet
 m_iMsgSeq
 m_iPut
@@ -23433,6 +23507,7 @@ m_onShowAgreement
 m_openUrl
 m_originalSubscribableValue
 m_otherTrailers
+m_otherTrailersAllAges
 m_pauseTimer
 m_pendingAcessTokenRefreshes
 m_promise
@@ -24150,6 +24225,7 @@ nConnectAttemptsMax
 nDigitsAfterDecimal
 nLevel
 nMaxLevel
+nMaxTimeoutExtensions
 nMaximumMsgSizeBytes
 nMinimumDigitsAfterDecimal
 nNextLevelXP
@@ -24159,7 +24235,9 @@ nReconnectAttemptTimeoutMs
 nReconnectAttemptsMax
 nRequests
 nSize
+nTimeoutExtensionMS
 nTimeoutHandle
+nTimeoutMS
 nTotal
 nUnviewed
 nViewers
@@ -25196,6 +25274,7 @@ partition
 partner-events
 partner.steamgames.com
 partner_events_enabled
+partner_id
 partnerid
 partnerweb-partner-events
 parts
@@ -27826,6 +27905,7 @@ skipNull
 skipToken
 skipVarint
 skipVarintField
+skip_clan_permissions
 skip_unvetted_apps
 skipped
 skyblue
@@ -28902,6 +28982,7 @@ topWillDisappear
 topchartlist
 topic_id
 topicsearch
+topnewreleases
 topsellers
 topsellers-onsale
 total
@@ -29097,6 +29178,8 @@ tryLoc
 tryWrapperForImpl
 try_again_seconds
 tsEnd
+tsLastChange
+tsScheduledTimeout
 tsStart
 tspan
 ttfb
@@ -29330,6 +29413,7 @@ update_is_prefetch_estimate
 update_is_shader
 update_is_upload
 update_is_workshop
+update_json_only
 update_network_bytes_per_second
 update_peak_network_bytes_per_second
 update_percentage
@@ -29377,6 +29461,8 @@ urls
 us_state
 usable_duration
 usage
+usage_type
+usages
 use
 useAcceptFamilyInvite
 useAccountAuth
@@ -29465,6 +29551,7 @@ useCreateHomeLinkedApps
 useCreatorHome
 useCustomNotificationPropsForSteamNotification
 useDebouncedState
+useDebouncedValue
 useDebugAuthState
 useDebugValue
 useDeferredValue
@@ -29496,6 +29583,7 @@ useFamilyGroupForAccount
 useFamilyGroupForActiveAccount
 useFamilyHistory
 useFamilyPlaytimeSummary
+useFirstRun
 useFocusEffect
 useFonts
 useForceAcceptInvite
@@ -29574,7 +29662,6 @@ useLocation
 useMediaThumbnail
 useMemo
 useMicrophonePermissions
-useMigrateSteamGuardAndAuth
 useMobileSummaryQuery
 useMobileWindowSize
 useModalState
@@ -29722,6 +29809,7 @@ useShoppingCartContents
 useShowToast
 useSortedFilteredApps
 useSpacingValue
+useStableInstance
 useState
 useStateAlignmentMechanism
 useStaticRendering
@@ -29745,6 +29833,7 @@ useStoreNavEventContext
 useStoreNavEventContextAsNavData
 useStoreNavLink
 useStoreNavParam
+useStoreUTMContext
 useSubscribableValue
 useSubscribableValueCallback
 useSuspenseInfiniteQuery

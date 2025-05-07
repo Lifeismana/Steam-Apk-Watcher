@@ -195,6 +195,8 @@ BHasUserAuthContext
 BHasWebLink
 BHavePendingAppInfoRequests
 BInsertBeforeElement
+BIsAgeSafeScreenshot
+BIsAllAges
 BIsAndroid
 BIsAppBlocked
 BIsAppInfoReady
@@ -1159,6 +1161,13 @@ CStoreBrowse_GetStoreCategories_Response
 CStoreBrowse_GetStoreCategories_Response_Category
 CStoreCatalog_GetDevPageAllAppsLinked_Request
 CStoreCatalog_GetDevPageAllAppsLinked_Response
+CStoreCatalog_GetDevPageLinks_Request
+CStoreCatalog_GetDevPageLinks_Response
+CStoreCatalog_GetDevPagesForPartner_Request
+CStoreCatalog_GetDevPagesForPartner_Response
+CStoreCatalog_GetDevPagesForPartner_Response_CDevPageInfo
+CStoreCatalog_SetDevPageLink_Request
+CStoreCatalog_SetDevPageLink_Response
 CStoreDiscoveryQueueSettings
 CStoreItem
 CStoreItemAllTrailers
@@ -1263,14 +1272,13 @@ CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request
 CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response
 CTwoFactor_RemoveAuthenticator_Request
 CTwoFactor_RemoveAuthenticator_Response
-CTwoFactor_SendEmail_Request
-CTwoFactor_SendEmail_Response
 CTwoFactor_Status_Request
 CTwoFactor_Status_Response
 CTwoFactor_Time_Request
 CTwoFactor_Time_Response
 CTwoFactor_UpdateTokenVersion_Request
 CTwoFactor_UpdateTokenVersion_Response
+CTwoFactor_UsageEvent
 CUnregisterList
 CUserAccount_CancelLicenseForApp_Request
 CUserAccount_CancelLicenseForApp_Response
@@ -1635,6 +1643,7 @@ EConfirmationStateToString
 EContentCheckProviderToString
 EContentDescriptorIDToString
 EContentHubDiscountFilterTypeToString
+EContentReportReasonToString
 EDiscoveryQueueExperimentalCohortToString
 EExportCodecToString
 EExternalSaleEventTypeToString
@@ -1688,6 +1697,7 @@ EMarketingMessageValidRealmsToString
 EMarketingMessageVisibilityToString
 EMessageQueueAlertPolicyToString
 EMobileAppToString
+EMobileConfirmationActionToString
 EMobileConfirmationTypeToString
 EModeratorActionToString
 EMsgClanAccountFlagsToString
@@ -1757,6 +1767,8 @@ ESteamDeckCompatibilityTestResultToString
 ESteamNotificationTargetClientTypeToString
 ESteamNotificationTargetToString
 ESteamNotificationTypeToString
+ESteamOSCompatibilityCategoryToString
+ESteamOSCompatibilityResultDisplayTypeToString
 ESteamPipeOperationTypeToString
 ESteamPipeWorkTypeToString
 ESteamReviewScoreToString
@@ -1793,6 +1805,8 @@ ETouchGestureToString
 ETradeOfferConfirmationMethodToString
 ETradeOfferStateToString
 ETrailerCategoryToString
+ETwoFactorStatusFieldFlagToString
+ETwoFactorUsageTypeToString
 EUIModeToString
 EUpdaterStateToString
 EUpdaterTypeToString
@@ -2016,6 +2030,7 @@ GaugeMetric
 GenerateAccessTokenForApp
 GenerateAvatarURLForChannel
 GenerateNewSessionID
+GenerateRandomSeed
 GenerateSHA
 GenerateSessionID
 GenerateShortHash
@@ -2090,7 +2105,6 @@ GetBiometricFeatureName
 GetBoolFromJSONValue
 GetBorderRadiusStyleName
 GetBorderStyleName
-GetBothAllAgesSafeAndMatureScreenshots
 GetBuiltinTabInfo
 GetBundle
 GetCacheKeyForAppID
@@ -2175,6 +2189,8 @@ GetDemoStandaloneStorePageAppIDs
 GetDesktopClientProtocol
 GetDetails
 GetDevPageAllAppsLinked
+GetDevPageLinks
+GetDevPagesForPartner
 GetDeveloperNames
 GetDeviceDetails
 GetDeviceIdentifier
@@ -2313,7 +2329,6 @@ GetObject
 GetOfflineStatusTime
 GetOfflineStatusUpdateRate
 GetOffsetFromValue
-GetOnlyAllAgesSafeScreenshots
 GetOnlyAllAgesScreenshots
 GetOptionalConfigJSON
 GetOriginalReleaseDateRTime
@@ -2394,6 +2409,7 @@ GetRotationFromDirection
 GetSalePageVanityURL
 GetScreenshot
 GetScreenshotTransferPath
+GetScreenshots
 GetSecureCookieName
 GetSelfPurchaseOption
 GetServerRTime32
@@ -3002,6 +3018,7 @@ NativeReanimated
 NavEventContext
 NavLink
 NavLinkFallback
+NavLinkFallbackUTM
 NavLinkSNRFallback
 NavMenuRow
 NavReady
@@ -3086,6 +3103,7 @@ OpenSource
 OpenSourceScreen
 OpenUrl
 OpenWebModal
+OptionalPromise
 OrDivider
 OriginatingNavEventContextRoot
 Overlay
@@ -3144,7 +3162,6 @@ PendingQRRequest
 PendingRequest
 PendingRequestDetails
 PerFriendPreferences
-PerformSteamGuardMigration
 Performance
 PerformanceEntry
 PerformanceEventTiming
@@ -3537,6 +3554,7 @@ SecsToDuration
 SectionHeader
 SectionList
 SecurityScreen
+SeededRandom
 SeekGetCurrent
 SeekGetHead
 SeekPut
@@ -3547,7 +3565,6 @@ SelectionManager
 SelectorRow
 Send
 SendAuthMessage
-SendEmail
 SendErrorReport
 SendErrorReports
 SendLocalNotification
@@ -3606,6 +3623,7 @@ SetCookies
 SetDebugLogEnabled
 SetDefaultHandlerRegistry
 SetDefaultTransport
+SetDevPageLink
 SetDownloading
 SetEMsg
 SetEquippedProfileItemFlags
@@ -3793,10 +3811,12 @@ StoreItem_Trailers_Trailer
 StoreItem_Trailers_VideoSource
 StoreNavEventContext
 StoreNavEventContextFromSNR
+StoreNavEventContextFromUTM
 StoreNavEventParamsToNavData
 StoreNavLink
 StoreObject
 StoreString
+StoreUTMContext
 StoreWebviewHeader
 Stream
 StreamListener
@@ -3968,7 +3988,6 @@ UpdateStylesheetsInDocument
 UpdateTextFilterDictionary
 UpdateTextFilterWords
 UpdateTokenVersion
-UpdateTwoFactorVersion
 UpdateUserAuth
 UpgradeImageURLToHTTPS
 UploadLogsIfDemanded
@@ -4121,7 +4140,7 @@ _NormalizeV8LikeStack
 _NormalizeWebkitLikeStack
 _OnWebAPIRequestNewAT
 _OpenLinkInExternalBrowser
-_PerformSteamGuardMigration
+_OptionalPromise
 _PersistToStorage
 _PromiseObj
 _RefreshCaptcha
@@ -4140,7 +4159,6 @@ _SetNativeCookies
 _SetParentalSettings
 _SetServerLanguageForAccount
 _TransferEmbeddedWebLogin
-_UpdateTwoFactorVersion
 _WaitForNextEvent
 _WriteAuthContextToStorage
 __
@@ -6635,6 +6653,7 @@ flushValue
 flushWithBackOff
 flushedQueue
 fn
+fnBuildURL
 fnCallCurrent
 fnCallback
 fnCheckBio
@@ -10965,6 +10984,7 @@ useCreatorHome
 useCurrentRender
 useCustomNotificationPropsForSteamNotification
 useDebouncedState
+useDebouncedValue
 useDebugAuthState
 useDeferredValue
 useDeleteFamilyGroup
@@ -10999,6 +11019,7 @@ useFamilyPlaytimeSummary
 useFiber
 useFilteredAndSortedGames
 useFinalizeAddAuthenticator
+useFirstRun
 useFloatingBottomTabBarHeight
 useFloatingHeaderHeight
 useFocusEffect
@@ -11044,7 +11065,6 @@ useInitConfig
 useInitFonts
 useInitHasPlatformServices
 useInitLanguageForActiveAccount
-useInitLegacyAppMigration
 useInitLocalization
 useInitLogs
 useInitNotifications
@@ -11104,8 +11124,6 @@ useMenuRadioGroupContext
 useMenuRootContext
 useMergeRefs
 useMigrateBrowserID
-useMigrateSteamGuard
-useMigrateSteamGuardAndAuth
 useMobilePasswordAuthSession
 useMobileSummaryQuery
 useMobileWindowSize
@@ -11275,6 +11293,7 @@ useShowToast
 useSimpleSteamMobileProtocolHandler
 useSortedFilteredApps
 useSpacingValue
+useStableInstance
 useState
 useStaticFonts
 useStaticRendering
@@ -11300,6 +11319,7 @@ useStoreNavEventContext
 useStoreNavEventContextAsNavData
 useStoreNavLink
 useStoreNavParam
+useStoreUTMContext
 useSubscribableValue
 useSubscribableValueCallback
 useSuspenseInfiniteQuery
