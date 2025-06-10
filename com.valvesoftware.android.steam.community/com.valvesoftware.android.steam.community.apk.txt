@@ -1,4 +1,4 @@
-40360     b24d61a5  AndroidManifest.xml
+40360     ca6614ee  AndroidManifest.xml
 1738      d5ac4dc2  DebugProbesKt.bin
 6         529ff253  META-INF/androidx.activity_activity-ktx.version
 6         529ff253  META-INF/androidx.activity_activity.version
@@ -83,12 +83,12 @@
 54        8f594b50  META-INF/services/kotlinx.coroutines.CoroutineExceptionHandler
 52        4b95597f  META-INF/services/kotlinx.coroutines.internal.MainDispatcherFactory
 46        b8ff6554  META-INF/version-control-info.textproto
-206       a29896bf  assets/app.config
-7061      2d8eae74  assets/app.manifest
-2954      e91d7e8a  assets/dexopt/baseline.prof
+206       24cf41fe  assets/app.config
+7061      02641a24  assets/app.manifest
+2955      8dbda238  assets/dexopt/baseline.prof
 253       79756163  assets/dexopt/baseline.profm
 1310      5fb87ac4  assets/expo-root.pem
-12441672  06e4c396  assets/index.android.bundle
+12441404  0eecb80a  assets/index.android.bundle
 390456    317efcad  assets/mlkit_barcode_models/barcode_ssd_mobilenet_v1_dmp25_quant.tflite
 213880    1010bfa9  assets/mlkit_barcode_models/oned_auto_regressor_mobile.tflite
 276552    74dac6b0  assets/mlkit_barcode_models/oned_feature_extractor_mobile.tflite
@@ -96,7 +96,7 @@
 70        fd82d2b1  barcode-scanning.properties
 9009576   3e49343f  classes.dex
 7882772   b007f5dc  classes2.dex
-8511144   a5c04b88  classes3.dex
+8511144   b85888bc  classes3.dex
 10392056  f29c1dfa  classes4.dex
 2982      c4566455  client_analytics.proto
 50        69ae72d9  common.properties

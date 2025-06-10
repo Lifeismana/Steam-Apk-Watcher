@@ -16847,7 +16847,6 @@ bSelected
 bSendAuth
 bSendToCallbackAsNew
 bShow
-bShowOOBE
 bShowWarning
 bSignIntoFriends
 bSounds_EventsAndAnnouncements
@@ -27828,7 +27827,6 @@ showHideTransition
 showLabel
 showLeftAction
 showName
-showOOBE
 showPoster
 showProxy
 showReportDialog
@@ -29583,7 +29581,6 @@ useFamilyGroupForAccount
 useFamilyGroupForActiveAccount
 useFamilyHistory
 useFamilyPlaytimeSummary
-useFirstRun
 useFocusEffect
 useFonts
 useForceAcceptInvite
