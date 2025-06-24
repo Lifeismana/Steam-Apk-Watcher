@@ -9,9 +9,7 @@
     <androidx.appcompat.widget.ButtonBarLayout
         android:gravity="bottom"
         android:orientation="horizontal"
-        android:paddingLeft="8dp"
         android:paddingTop="2dp"
-        android:paddingRight="8dp"
         android:paddingBottom="2dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -241,7 +241,7 @@
     </style>
     <style name="Base.TextAppearance.Widget.AppCompat.Toolbar.Title" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title">
     </style>
-    <style name="Base.Theme.AppCompat" parent="@style/Base.V23.Theme.AppCompat">
+    <style name="Base.Theme.AppCompat" parent="@style/Base.V26.Theme.AppCompat">
     </style>
     <style name="Base.Theme.AppCompat.CompactMenu" parent="">
         <item name="android:listViewStyle">@style/Widget.AppCompat.ListView.Menu</item>
@@ -266,7 +266,7 @@
     </style>
     <style name="Base.Theme.AppCompat.DialogWhenLarge" parent="@style/Theme.AppCompat">
     </style>
-    <style name="Base.Theme.AppCompat.Light" parent="@style/Base.V23.Theme.AppCompat.Light">
+    <style name="Base.Theme.AppCompat.Light" parent="@style/Base.V26.Theme.AppCompat.Light">
     </style>
     <style name="Base.Theme.AppCompat.Light.DarkActionBar" parent="@style/Base.Theme.AppCompat.Light">
         <item name="actionBarPopupTheme">@style/ThemeOverlay.AppCompat.Light</item>
@@ -1768,6 +1768,16 @@
     <style name="Base.V24.Theme.Material3.Light.Dialog" parent="@style/Base.V14.Theme.Material3.Light.Dialog">
         <item name="android:contextPopupMenuStyle">@style/Widget.Material3.PopupMenu.ContextMenu</item>
     </style>
+    <style name="Base.V26.Theme.AppCompat" parent="@style/Base.V23.Theme.AppCompat">
+        <item name="colorError">?android:attr/colorError</item>
+    </style>
+    <style name="Base.V26.Theme.AppCompat.Light" parent="@style/Base.V23.Theme.AppCompat.Light">
+        <item name="colorError">?android:attr/colorError</item>
+    </style>
+    <style name="Base.V26.Widget.AppCompat.Toolbar" parent="@style/Base.V7.Widget.AppCompat.Toolbar">
+        <item name="android:touchscreenBlocksFocus">true</item>
+        <item name="android:keyboardNavigationCluster">true</item>
+    </style>
     <style name="Base.V7.Theme.AppCompat" parent="@style/Platform.AppCompat">
         <item name="android:panelBackground">@android:color/transparent</item>
         <item name="android:dropDownListViewStyle">@style/Widget.AppCompat.ListView.DropDown</item>
@@ -2319,7 +2329,7 @@
     </style>
     <style name="Base.Widget.AppCompat.TextView.SpinnerItem" parent="@android:style/Widget.Material.TextView.SpinnerItem">
     </style>
-    <style name="Base.Widget.AppCompat.Toolbar" parent="@style/Base.V7.Widget.AppCompat.Toolbar">
+    <style name="Base.Widget.AppCompat.Toolbar" parent="@style/Base.V26.Widget.AppCompat.Toolbar">
     </style>
     <style name="Base.Widget.AppCompat.Toolbar.Button.Navigation" parent="@android:style/Widget.Material.Toolbar.Button.Navigation">
     </style>
@@ -2918,9 +2928,9 @@
         <item name="android:windowEnterAnimation">@null</item>
         <item name="android:windowExitAnimation">@null</item>
     </style>
-    <style name="Platform.AppCompat" parent="@style/Platform.V21.AppCompat">
+    <style name="Platform.AppCompat" parent="@style/Platform.V25.AppCompat">
     </style>
-    <style name="Platform.AppCompat.Light" parent="@style/Platform.V21.AppCompat.Light">
+    <style name="Platform.AppCompat.Light" parent="@style/Platform.V25.AppCompat.Light">
     </style>
     <style name="Platform.MaterialComponents" parent="@style/Theme.AppCompat">
     </style>
@@ -2958,6 +2968,10 @@
         <item name="android:buttonBarStyle">?attr/buttonBarStyle</item>
         <item name="android:buttonBarButtonStyle">?attr/buttonBarButtonStyle</item>
         <item name="android:textColorLinkInverse">?android:attr/colorAccent</item>
+    </style>
+    <style name="Platform.V25.AppCompat" parent="@android:style/Theme.Material.NoActionBar">
+    </style>
+    <style name="Platform.V25.AppCompat.Light" parent="@android:style/Theme.Material.Light.NoActionBar">
     </style>
     <style name="Platform.Widget.AppCompat.Spinner" parent="@android:style/Widget.Holo.Spinner">
     </style>
@@ -4681,6 +4695,7 @@
         <item name="android:background">?attr/colorPrimary</item>
         <item name="android:stateListAnimator">@animator/design_appbar_state_list_animator</item>
         <item name="android:touchscreenBlocksFocus">true</item>
+        <item name="android:keyboardNavigationCluster">true</item>
     </style>
     <style name="Widget.Design.BottomNavigationView" parent="">
         <item name="android:minHeight">@dimen/design_bottom_navigation_height</item>

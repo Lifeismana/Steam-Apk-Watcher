@@ -3,7 +3,6 @@ package me.leolin.shortcutbadger.impl;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import java.util.Arrays;
 import java.util.List;
 import me.leolin.shortcutbadger.Badger;
@@ -32,6 +31,6 @@ public class DefaultBadger implements Badger {
     }
 
     boolean isSupported(Context context) {
-        return BroadcastHelper.resolveBroadcast(context, new Intent("android.intent.action.BADGE_COUNT_UPDATE")).size() > 0 || (Build.VERSION.SDK_INT >= 26 && BroadcastHelper.resolveBroadcast(context, new Intent(IntentConstants.DEFAULT_OREO_INTENT_ACTION)).size() > 0);
+        return BroadcastHelper.resolveBroadcast(context, new Intent("android.intent.action.BADGE_COUNT_UPDATE")).size() > 0 || BroadcastHelper.resolveBroadcast(context, new Intent(IntentConstants.DEFAULT_OREO_INTENT_ACTION)).size() > 0;
     }
 }

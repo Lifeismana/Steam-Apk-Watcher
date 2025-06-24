@@ -5,7 +5,8 @@
     android:addStatesFromChildren="false"
     android:descendantFocusability="afterDescendants"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:listSelector="@android:color/transparent"
     android:horizontalSpacing="@dimen/mtrl_calendar_month_horizontal_padding"
-    android:verticalSpacing="@dimen/mtrl_calendar_month_vertical_padding"/>
+    android:verticalSpacing="@dimen/mtrl_calendar_month_vertical_padding"
+    android:defaultFocusHighlightEnabled="false"/>

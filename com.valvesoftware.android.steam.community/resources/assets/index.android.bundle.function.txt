@@ -113,6 +113,7 @@ ArrowLeft
 ArrowRight
 ArrowUp
 Assert
+AssertFatal
 AssertMsg
 AssertNever
 AssertionError
@@ -523,6 +524,7 @@ CCloudGaming_GetTimeRemaining_Request
 CCloudGaming_GetTimeRemaining_Response
 CCloudGaming_TimeRemaining
 CCommunity_ClanAnnouncementInfo
+CCommunity_ClanLocGroupImage
 CCommunity_ClearSinglePartnerEventsAppPriority_Request
 CCommunity_ClearSinglePartnerEventsAppPriority_Response
 CCommunity_ClearUserPartnerEventsAppPriorities_Request
@@ -544,12 +546,17 @@ CCommunity_GetAvatarHistory_Response
 CCommunity_GetAvatarHistory_Response_AvatarData
 CCommunity_GetBestEventsForUser_Request
 CCommunity_GetBestEventsForUser_Response
+CCommunity_GetBotReviewScoreForRecommendation_Request
+CCommunity_GetBotReviewScoreForRecommendation_Response
+CCommunity_GetBotReviewScoreForRecommendation_Response_BotReviewScoreEntry
 CCommunity_GetClanAnnouncementVoteForUser_Request
 CCommunity_GetClanAnnouncementVoteForUser_Response
 CCommunity_GetClanCrowdInMetadata_Request
 CCommunity_GetClanCrowdInMetadata_Response
 CCommunity_GetClanEventCrowdInMetadata_Request
 CCommunity_GetClanEventCrowdInMetadata_Response
+CCommunity_GetClanLocGroupImages_Request
+CCommunity_GetClanLocGroupImages_Response
 CCommunity_GetCommentThreadRatings_Request
 CCommunity_GetCommentThreadRatings_Response
 CCommunity_GetCommentThread_Request
@@ -561,6 +568,8 @@ CCommunity_GetUserPartnerEventViewStatus_Response
 CCommunity_GetUserPartnerEventViewStatus_Response_PartnerEvent
 CCommunity_GetUserPartnerEventsAppPriorities_Request
 CCommunity_GetUserPartnerEventsAppPriorities_Response
+CCommunity_HideAndReportComment_Request
+CCommunity_HideAndReportComment_Response
 CCommunity_MarkPartnerEventsForUser_Request
 CCommunity_MarkPartnerEventsForUser_Request_PartnerEventMarking
 CCommunity_MarkPartnerEventsForUser_Response
@@ -576,6 +585,9 @@ CCommunity_RateClanAnnouncement_Request
 CCommunity_RateClanAnnouncement_Response
 CCommunity_RateCommentThread_Request
 CCommunity_RateCommentThread_Response
+CCommunity_SetRecommendationBotReviewStatus_Request
+CCommunity_SetRecommendationBotReviewStatus_Request_ReviewLabel
+CCommunity_SetRecommendationBotReviewStatus_Response
 CConfirmEmailTokenStore
 CCreatorHomeStore
 CCuratorPreferences
@@ -583,6 +595,8 @@ CDeveloperPageLink
 CDeveloperPageToApps
 CDisplayMarketingMessage
 CEconItem_Action
+CEconItem_AssetProperties
+CEconItem_AssetProperty
 CEconItem_Description
 CEconItem_DescriptionLine
 CEconItem_Tag
@@ -1441,6 +1455,7 @@ Context
 ContinousBaseGesture
 ConvertAssociationTypeToEStoreItemType
 ConvertConsoleParams
+ConvertControllerDetailItem
 ConvertEStoreItemAndEStoreAppTypeToSaleAppType
 ConvertEStoreItemToSimpleAppType
 ConvertEStoreItemTypeToAssociationType
@@ -1592,6 +1607,7 @@ EAnnouncementPlacementToString
 EAnswerActorRankToString
 EAppDevsRelationshipToString
 EAppReportTypeToString
+EAssetPropertyTypeToString
 EAsyncGameSessionUserStateToString
 EAsyncGameSessionUserVisibilityToString
 EAuctionBadgeLevelToString
@@ -1620,6 +1636,7 @@ ECarrierPhoneIdentityPolicyToString
 ECarrierStatusToString
 EChildProcessQueryCommandToString
 EChildProcessQueryExitCodeToString
+EClaimPressKeyResultToString
 EClanAccountFlagsToString
 EClanImageFileTypeToString
 EClanImageGroupToString
@@ -1631,6 +1648,7 @@ ECloudGamingPlatformToString
 ECloudStoragePersistStateToString
 ECodecUsagePlatformToString
 ECodecUsageReasonToString
+EColorFilterToString
 EColorGamutLabelSetToString
 ECommentDeleteReasonToString
 ECommentReportActionToString
@@ -1643,7 +1661,12 @@ EConfirmationStateToString
 EContentCheckProviderToString
 EContentDescriptorIDToString
 EContentHubDiscountFilterTypeToString
+EContentModeratedReasonToString
+EContentModeratorLevelToString
 EContentReportReasonToString
+EContentReportResolutionToString
+EContentReportSubjectTypeToString
+EControlledLegalCategoryStatusToString
 EDiscoveryQueueExperimentalCohortToString
 EExportCodecToString
 EExternalSaleEventTypeToString
@@ -1722,6 +1745,7 @@ EPhoneVACPolicyToString
 EPlaytestInviteStatusToString
 EPlaytestLicenseChangeTypeToString
 EPlaytestMembershipSourceToString
+EPlaytestResetStatusToString
 EPlaytestStatusToString
 EPreapprovalResolutionToString
 EProfileColorStyleToString
@@ -1865,7 +1889,6 @@ Expander
 ExpanderButton
 Explorer
 ExpoImage
-ExtractHashFromBBCodeURL
 ExtractTrailerFormats
 ExtractUniqueCreatorClanIDSet
 F
@@ -2105,6 +2128,7 @@ GetBiometricFeatureName
 GetBoolFromJSONValue
 GetBorderRadiusStyleName
 GetBorderStyleName
+GetBotReviewScoreForRecommendation
 GetBuiltinTabInfo
 GetBundle
 GetCacheKeyForAppID
@@ -2118,8 +2142,8 @@ GetClanAccountID
 GetClanAnnouncementVoteForUser
 GetClanCrowdInMetadata
 GetClanEventCrowdInMetadata
-GetClanImageBaseURL
 GetClanInfoByClanAccountID
+GetClanLocGroupImages
 GetClanMemberCount
 GetClanSteamID
 GetClanSteamIDForAppID
@@ -2230,6 +2254,7 @@ GetFamilyGroupKey
 GetFamilyHistoryKey
 GetFavoriteBadge
 GetFileFromPasteEvent
+GetFilteredBBCodeList
 GetFilteredReviewSummary
 GetForegroundStyleName
 GetFormattedComingSoonDisplay
@@ -2311,6 +2336,7 @@ GetMobileSummary
 GetMostPopularTags
 GetMsgAndErrorCodeFromResponse
 GetMutualFriendsForIncomingInvites
+GetNRandomElements
 GetName
 GetNameFromOSType
 GetNameFromPlatformType
@@ -2505,6 +2531,7 @@ GetUserAuthContext
 GetUserCountry
 GetUserFileCount
 GetUserFiles
+GetUserFilterFailure
 GetUserGameInterestState
 GetUserLanguageFromDevice
 GetUserPartnerEventNews
@@ -2569,6 +2596,7 @@ HeadingZoo
 HeadlessJsTaskError
 HexFromBuffer
 HexToBinary
+HideAndReportComment
 HideNotification
 HintLoadStoreApps
 HintLoadStoreBundles
@@ -2586,6 +2614,7 @@ HydrationBoundary
 I
 IAppStore
 IDENTITY
+IPv4NumberToString
 IReadonlySubscribableValue
 IStorage
 ISubscribableValue
@@ -2829,6 +2858,7 @@ LocalizeCalendarTime
 LocalizeCalendarTimeLessGranular
 LocalizeCalendarWeekday
 LocalizeCalendarWeekdayAndDayMonth
+LocalizeCalendarWeekdayAndDayMonthYear
 LocalizeCalendarYear
 LocalizeDateHumanReadable
 LocalizeDeviceType
@@ -3134,6 +3164,7 @@ ParseBBCodeToNodes
 ParseClientUserAgent
 ParseConfirmToken
 ParseHeaderData
+ParseIPv4ToNumber
 ParseQRData
 ParseSNR
 ParseSteamMobileUrl
@@ -3246,6 +3277,7 @@ ProgressBarAndroid
 ProgressDialog
 ProgressTransitionManager
 Promise
+PromiseFromAny
 PromiseObj
 PromiseWithResolvers
 PropsFilter
@@ -3332,6 +3364,7 @@ RadioGroupItemLabel
 RadioGroupLabel
 RadioGroupRoot
 RadioItem
+RandomElement
 RandomInt
 RateClanAnnouncement
 RateCommentThread
@@ -3433,7 +3466,6 @@ RenderLeftAction
 RenderRightAction
 ReplaceArgumentsInString
 ReplaceBestPurchaseOption
-ReplacementTokenToClanImageURL
 Replay
 ReplayContainer
 ReportApp
@@ -3510,6 +3542,7 @@ SaveSettings
 SaveSteamGuardStateToStorage
 SaveTextFilterPreferences
 SaveTextFilterWords
+ScalePreserveAspectRatio
 ScanTarget
 ScannerLoading
 ScannerNotch
@@ -3658,6 +3691,7 @@ SetPreferredLocales
 SetProfileBackground
 SetProfilePreferences
 SetProfileTheme
+SetRecommendationBotReviewStatus
 SetReconnectErrorHandler
 SetReservationPositionMessage
 SetReturnUnavailableItems
@@ -3715,6 +3749,7 @@ SortGamesByInstalledOnClient
 SortGamesByName
 SortGamesByPlaytime
 SortGamesByRecent
+SortLocaleIndependent
 SortStatusComparator
 SortStoreItems
 SortedFindLessOrEqual
@@ -3909,6 +3944,7 @@ ThreeColumnHeader
 Throbber
 TimerBasedFinalizationRegistry
 TimingAnimation
+ToLookup
 ToObject
 ToStorageManagerBlockDeviceId
 ToStorageManagerDriveId
@@ -3974,6 +4010,7 @@ UpdateCommunityPreferences
 UpdateContentDescriptors
 UpdateGroupFlagsFeature
 UpdateInvites
+UpdateMappedValue
 UpdateMarketingMessage
 UpdateNotificationCount
 UpdateOverrideLanguage
@@ -4067,6 +4104,7 @@ XMLHttpRequest
 XMLHttpRequestEventTarget
 YellowBox
 Z
+Zip
 ZooHome
 ZooLink
 ZooLinkSection
@@ -4478,7 +4516,6 @@ _getRemindersAsync
 _getRemindersPermissionsAsync
 _getRequest
 _getRequestInfo
-_getRequireWildcardCache
 _getResponder
 _getResponseInfo
 _getResponseInfo2
@@ -5131,6 +5168,7 @@ assertAnnotable
 assertArray
 assertComputedDescriptor
 assertCustomScreenTransitionsProps
+assertDetentsArrayIsSorted
 assertEasingIsWorklet
 assertFlowDescriptor
 assertGHProvider
@@ -5769,6 +5807,7 @@ continueFn
 continueRetry
 continueTrace
 contrast
+controlEdgeToEdgeValues
 convert
 convertAnimationObjectToKeyframes
 convertCallbackFunction
@@ -6661,10 +6700,12 @@ fnCompareWrapper
 fnExecuteLatestCallback
 fnLoadAppInfoFromCache
 fnNumberFormatter
+fnPointerMove
 fnPoll
 fnRefetchClientsOnError
 fnReply
 fnReplyWithEResult
+fnResolve
 fnSetDebugLogEnabled
 fnSort
 fnSortHistory
@@ -8096,6 +8137,7 @@ isDrawerOpen
 isES6ClassFunction
 isES6Map
 isES6Set
+isEdgeToEdge
 isElectronNodeRenderer
 isElement
 isElement$1
@@ -10676,6 +10718,7 @@ transformAttribute
 transformCrossOriginEvent
 transformData
 transformDataType
+transformEdgeToEdgeProps
 transformIntoHandlerTags
 transformPanGestureHandlerProps
 transformRequest
@@ -11089,6 +11132,7 @@ useIsCurrentUserParentalLocked
 useIsFetching
 useIsFocused
 useIsGameListFetching
+useIsHovered
 useIsKeyboardShown
 useIsMutating
 useIsParentalFeatureBlocked
@@ -11283,6 +11327,7 @@ useSetErrorMessage
 useSetFamilyCooldownOverrides
 useSetParentalSettings
 useSetRef
+useShallowMemo
 useSharedLibraryApps
 useSharedValue
 useShoppingCartContents

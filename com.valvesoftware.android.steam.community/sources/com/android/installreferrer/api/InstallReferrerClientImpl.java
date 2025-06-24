@@ -47,7 +47,7 @@ class InstallReferrerClientImpl extends InstallReferrerClient {
         @Override // android.content.ServiceConnection
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
             InstallReferrerCommons.logVerbose(InstallReferrerClientImpl.TAG, "Install Referrer service connected.");
-            InstallReferrerClientImpl.this.service = IGetInstallReferrerService.Stub.m595b(iBinder);
+            InstallReferrerClientImpl.this.service = IGetInstallReferrerService.Stub.m619b(iBinder);
             InstallReferrerClientImpl.this.clientState = 2;
             this.mListener.onInstallReferrerSetupFinished(0);
         }
@@ -88,7 +88,7 @@ class InstallReferrerClientImpl extends InstallReferrerClient {
         Bundle bundle = new Bundle();
         bundle.putString("package_name", this.mApplicationContext.getPackageName());
         try {
-            return new ReferrerDetails(this.service.mo594c(bundle));
+            return new ReferrerDetails(this.service.mo618c(bundle));
         } catch (RemoteException e) {
             InstallReferrerCommons.logWarn(TAG, "RemoteException getting install referrer information");
             this.clientState = 0;

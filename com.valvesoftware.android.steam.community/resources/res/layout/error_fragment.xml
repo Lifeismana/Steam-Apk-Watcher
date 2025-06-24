@@ -52,10 +52,6 @@
         <LinearLayout
             android:orientation="vertical"
             android:background="@color/dev_launcher_white"
-            android:paddingLeft="16dp"
-            android:paddingTop="16dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingHorizontal="16dp"
