@@ -1,4 +1,4 @@
-40360     0fa5b229  AndroidManifest.xml
+40360     07d296f0  AndroidManifest.xml
 1738      d5ac4dc2  DebugProbesKt.bin
 6         529ff253  META-INF/androidx.activity_activity-ktx.version
 6         529ff253  META-INF/androidx.activity_activity.version
@@ -84,8 +84,8 @@
 52        4b95597f  META-INF/services/kotlinx.coroutines.internal.MainDispatcherFactory
 46        b8ff6554  META-INF/version-control-info.textproto
 206       59020cc1  assets/app.config
-7061      9e088a0f  assets/app.manifest
-2958      af6fcfa4  assets/dexopt/baseline.prof
+7061      3ae19b13  assets/app.manifest
+2956      1d4079c4  assets/dexopt/baseline.prof
 255       4504935c  assets/dexopt/baseline.profm
 1310      5fb87ac4  assets/expo-root.pem
 12555868  679ee85f  assets/index.android.bundle
@@ -96,7 +96,7 @@
 70        fd82d2b1  barcode-scanning.properties
 8905772   96644a09  classes.dex
 8066500   2ebeaa4c  classes2.dex
-8521480   f2e02fc0  classes3.dex
+8521540   0307de52  classes3.dex
 10391912  5549e646  classes4.dex
 2982      c4566455  client_analytics.proto
 50        69ae72d9  common.properties
