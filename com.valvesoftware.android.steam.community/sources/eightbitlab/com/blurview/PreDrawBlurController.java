@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import eightbitlab.com.blurview.SizeScaler;
 
-/* loaded from: classes3.dex */
+/* loaded from: classes4.dex */
 final class PreDrawBlurController implements BlurController {
     static final int TRANSPARENT = 0;
     private final BlurAlgorithm blurAlgorithm;

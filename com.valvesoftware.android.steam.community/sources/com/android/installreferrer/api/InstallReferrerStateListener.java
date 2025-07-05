@@ -1,6 +1,6 @@
 package com.android.installreferrer.api;
 
-/* loaded from: classes.dex */
+/* loaded from: classes2.dex */
 public interface InstallReferrerStateListener {
     void onInstallReferrerServiceDisconnected();
 

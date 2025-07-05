@@ -5,7 +5,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-/* loaded from: classes4.dex */
+/* loaded from: classes5.dex */
 public final class Debug {
 
     @Target({ElementType.TYPE})

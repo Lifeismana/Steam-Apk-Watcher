@@ -1,7 +1,7 @@
 package org.intellij.lang.annotations;
 
 @Deprecated
-/* loaded from: classes4.dex */
+/* loaded from: classes5.dex */
 public final class JdkConstants {
 
     public @interface AdjustableOrientation {

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/* loaded from: classes3.dex */
+/* loaded from: classes4.dex */
 public class ValvePackage implements ReactPackage {
     @Override // com.facebook.react.ReactPackage
     public List<ViewManager> createViewManagers(ReactApplicationContext reactApplicationContext) {

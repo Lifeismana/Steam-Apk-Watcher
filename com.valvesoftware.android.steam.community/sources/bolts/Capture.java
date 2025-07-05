@@ -1,6 +1,6 @@
 package bolts;
 
-/* loaded from: classes.dex */
+/* loaded from: classes2.dex */
 public class Capture<T> {
     private T value;
 

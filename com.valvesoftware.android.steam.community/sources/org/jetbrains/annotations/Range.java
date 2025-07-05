@@ -9,10 +9,10 @@ import java.lang.annotation.Target;
 @Target({ElementType.TYPE_USE})
 @Documented
 @Retention(RetentionPolicy.CLASS)
-/* loaded from: classes4.dex */
+/* loaded from: classes5.dex */
 public @interface Range {
     long from();
 
     /* renamed from: to */
-    long m1144to();
+    long m1099to();
 }

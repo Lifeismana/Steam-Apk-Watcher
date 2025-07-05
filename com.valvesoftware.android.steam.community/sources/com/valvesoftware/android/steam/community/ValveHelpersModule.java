@@ -38,7 +38,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/* loaded from: classes3.dex */
+/* loaded from: classes4.dex */
 public class ValveHelpersModule extends ReactContextBaseJavaModule {
     private static final String s_strSteamGuardStateFilenameBase = "Steamguard-";
     private ForwardingCookieHandler m_CookieHandler;

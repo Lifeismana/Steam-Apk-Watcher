@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.google.android.exoplayer2.p014ui.AspectRatioFrameLayout
+    <com.google.android.exoplayer2.p016ui.AspectRatioFrameLayout
         android:layout_gravity="center"
         android:id="@+id/exo_content_frame"
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"/>
-        <com.google.android.exoplayer2.p014ui.SubtitleView
+        <com.google.android.exoplayer2.p016ui.SubtitleView
             android:id="@+id/exo_subtitles"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
@@ -33,7 +33,7 @@
             android:padding="16dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
-    </com.google.android.exoplayer2.p014ui.AspectRatioFrameLayout>
+    </com.google.android.exoplayer2.p016ui.AspectRatioFrameLayout>
     <FrameLayout
         android:id="@+id/exo_ad_overlay"
         android:layout_width="match_parent"

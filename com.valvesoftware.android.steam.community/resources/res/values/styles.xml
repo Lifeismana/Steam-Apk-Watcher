@@ -2665,6 +2665,9 @@
         <item name="android:windowEnterAnimation">@anim/catalyst_slide_up</item>
         <item name="android:windowExitAnimation">@anim/catalyst_slide_down</item>
     </style>
+    <style name="DialogWindowTheme" parent="">
+        <item name="android:windowClipToOutline">false</item>
+    </style>
     <style name="EmptyTheme" parent="">
     </style>
     <style name="ExoMediaButton" parent="">
@@ -2828,6 +2831,13 @@
     <style name="ExoStyledControls.TimeText.Separator" parent="@style/ExoStyledControls.TimeText">
         <item name="android:textColor">@color/exo_white_opacity_70</item>
         <item name="android:text">·</item>
+    </style>
+    <style name="FloatingDialogTheme" parent="">
+        <item name="android:windowIsFloating">false</item>
+    </style>
+    <style name="FloatingDialogWindowTheme" parent="">
+        <item name="android:dialogTheme">@style/FloatingDialogTheme</item>
+        <item name="android:windowClipToOutline">false</item>
     </style>
     <style name="MaterialAlertDialog.Material3" parent="@style/MaterialAlertDialog.MaterialComponents">
         <item name="android:layout">@layout/m3_alert_dialog</item>

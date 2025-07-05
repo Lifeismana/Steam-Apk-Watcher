@@ -10,7 +10,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
-/* loaded from: classes.dex */
+/* loaded from: classes2.dex */
 public class CancellationTokenSource implements Closeable {
     private boolean cancellationRequested;
     private boolean closed;

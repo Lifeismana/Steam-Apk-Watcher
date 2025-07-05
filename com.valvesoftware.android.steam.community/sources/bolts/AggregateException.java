@@ -1,6 +1,5 @@
 package bolts;
 
-import com.facebook.react.views.textinput.ReactEditTextInputConnectionWrapper;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -8,7 +7,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* loaded from: classes2.dex */
 public class AggregateException extends Exception {
     private static final String DEFAULT_MESSAGE = "There were multiple errors.";
     private static final long serialVersionUID = 1;
@@ -36,13 +35,13 @@ public class AggregateException extends Exception {
         super.printStackTrace(printStream);
         int i = -1;
         for (Throwable th : this.innerThrowables) {
-            printStream.append(ReactEditTextInputConnectionWrapper.NEWLINE_RAW_VALUE);
+            printStream.append("\n");
             printStream.append("  Inner throwable #");
             i++;
             printStream.append((CharSequence) Integer.toString(i));
             printStream.append(": ");
             th.printStackTrace(printStream);
-            printStream.append(ReactEditTextInputConnectionWrapper.NEWLINE_RAW_VALUE);
+            printStream.append("\n");
         }
     }
 
@@ -51,13 +50,13 @@ public class AggregateException extends Exception {
         super.printStackTrace(printWriter);
         int i = -1;
         for (Throwable th : this.innerThrowables) {
-            printWriter.append(ReactEditTextInputConnectionWrapper.NEWLINE_RAW_VALUE);
+            printWriter.append("\n");
             printWriter.append("  Inner throwable #");
             i++;
             printWriter.append((CharSequence) Integer.toString(i));
             printWriter.append(": ");
             th.printStackTrace(printWriter);
-            printWriter.append(ReactEditTextInputConnectionWrapper.NEWLINE_RAW_VALUE);
+            printWriter.append("\n");
         }
     }
 

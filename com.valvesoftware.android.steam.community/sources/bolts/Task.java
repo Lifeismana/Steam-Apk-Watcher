@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
-/* loaded from: classes.dex */
+/* loaded from: classes2.dex */
 public class Task<TResult> {
     private static volatile UnobservedExceptionHandler unobservedExceptionHandler;
     private boolean cancelled;

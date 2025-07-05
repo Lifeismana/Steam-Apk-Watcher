@@ -1,8 +1,8 @@
 package com.android.installreferrer;
 
 /* renamed from: com.android.installreferrer.R */
-/* loaded from: classes.dex */
-public final class C0934R {
-    private C0934R() {
+/* loaded from: classes2.dex */
+public final class C1425R {
+    private C1425R() {
     }
 }

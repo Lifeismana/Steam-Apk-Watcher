@@ -20,7 +20,7 @@ import java.util.Iterator;
 import java.util.Map;
 import org.bouncycastle.i18n.MessageBundle;
 
-/* loaded from: classes3.dex */
+/* loaded from: classes4.dex */
 public class ValveNotificationsModule extends ReactContextBaseJavaModule {
     public static String MessageEventName = "NewNotification";
     public static String Name = "ValveNotifications";
