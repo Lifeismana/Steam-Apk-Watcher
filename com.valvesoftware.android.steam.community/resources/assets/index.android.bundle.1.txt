@@ -20214,6 +20214,7 @@ gradient
 gradientTransform
 gradientUnits
 grammarSource
+granted
 granted_profile_modifier
 gray
 grayscale
