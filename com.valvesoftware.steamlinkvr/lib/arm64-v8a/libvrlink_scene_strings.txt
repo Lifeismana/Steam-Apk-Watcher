@@ -59,7 +59,7 @@
 8SVLAudio
 8SVLCodec
 8SVLCrypt
-9434851 
+9557386 
 9a&g
 9JLX
 9QSVLInput
@@ -366,6 +366,8 @@ audio
 [Audio] Attempting to stop streams...
 [Audio] Creating input stream...
 [Audio] Creating output stream...
+[Audio] Failed to stop audio input stream!
+[Audio] Failed to stop audio output stream!
 [Audio] Input stream creation finished
 [Audio] Input stream stopped
 [Audio] Output stream creation finished
@@ -2948,9 +2950,9 @@ rexmitReq
 rexmitSent
 right
 ro.arch
-ro.board.platform
 ro.build.version.sdk
 romanian
+ro.steam.running_in_app_container
 rotation
 RoundToNearestMultiple(float, int)
 RoundToPrecision(float, float)

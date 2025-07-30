@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 ROOT_DIR="$(dirname "$(realpath -s "${BASH_SOURCE[0]}")")"
@@ -38,7 +37,7 @@ ProcessApp()
 
 BuildReqs
 
-for APP in "./.storage/*";
+for APP in ./.storage/*;
 do
     # untested, future-proofing
     if [[ -n "$APP_TO_PROCESS" && "$APP" != *"$APP_TO_PROCESS"* ]]; then
