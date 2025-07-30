@@ -123,6 +123,18 @@
       "sControllerType": "vive_focus",
       "sDeviceType": "htc/VRLINKHMDVIVEFOCUSVISION"
     },
+    "A7P10": {
+      "sTrackingSystem": "pico",
+      "sSerialNumber": "VRLINKHMDPICONEO3",
+      "sManufacturerName": "Pico",
+      "sModelNumber": "PICO Neo 3",
+      "sRenderModelName": "generic_hmd",
+      "sResourceRoot": "vrlink",
+      "sInputProfilePath": "{oculus}/input/rift_profile.json",
+      "flLaserMouseHmdAngleDegrees": 0,
+      "sControllerType": "pico",
+      "sDeviceType": "pico/VRLINKHMDPICONEO3"
+    },
     "unknown": {
       "sTrackingSystem": "oculus",
       "sSerialNumber": "VRLINKHMDUNKNOWN",
