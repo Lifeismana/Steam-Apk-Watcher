@@ -184,10 +184,10 @@ public class HIDDeviceManager {
     }
 
     private boolean isXboxOneController(UsbDevice usbDevice, UsbInterface usbInterface) {
-        int[] iArr = {1008, 1103, 1118, 1848, 2821, 3695, 3853, 4341, 5426, 8406, 9414, 11720, 11812, 13623};
+        int[] iArr = {1008, 1103, 1118, 1848, 2821, 3695, 3853, 4341, 5426, 8406, 9414, 10571, 11720, 11812, 11925, 12933, 13623, 13932};
         if (usbInterface.getId() == 0 && usbInterface.getInterfaceClass() == 255 && usbInterface.getInterfaceSubclass() == 71 && usbInterface.getInterfaceProtocol() == 208) {
             int vendorId = usbDevice.getVendorId();
-            for (int i = 0; i < 14; i++) {
+            for (int i = 0; i < 18; i++) {
                 if (vendorId == iArr[i]) {
                     return true;
                 }
