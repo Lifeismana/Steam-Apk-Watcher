@@ -1,6 +1,6 @@
-6c60832f3bad61403d300c833655d44f  com.valvesoftware.steamlinkvr/com.valvesoftware.steamlinkvr.apk
-96346b32a232fdc0b7f8d316b98597aa  com.valvesoftware.steamlinkvr/com.valvesoftware.steamlinkvr.apk.jadx.txt
-cd14fd23142d61d2ea5b9bed59825368  com.valvesoftware.steamlinkvr/resources/AndroidManifest.xml
+b63496c29614751df83416dc10edcc94  com.valvesoftware.steamlinkvr/com.valvesoftware.steamlinkvr.apk
+f04c5a4d80fae880af7e620770b12ea6  com.valvesoftware.steamlinkvr/com.valvesoftware.steamlinkvr.apk.jadx.txt
+360128c572885e2a016dfaf3812eda4a  com.valvesoftware.steamlinkvr/resources/AndroidManifest.xml
 d2e3158f212b53eceb3052f77bd6c29a  com.valvesoftware.steamlinkvr/resources/assets/config/controller_config.json
 8439c0a414d2159391724996b1b45240  com.valvesoftware.steamlinkvr/resources/assets/config/default_config.json
 21c730594942b6e6217c09e506135d1f  com.valvesoftware.steamlinkvr/resources/assets/config/hmd_config.json
@@ -77,11 +77,11 @@ d90a73a9a583260854a922b694a674e9  com.valvesoftware.steamlinkvr/resources/assets
 aa477e1282bba422da80ea957875d15d  com.valvesoftware.steamlinkvr/resources/assets/webui/styles/fonts.css
 d540213e38a992e4e8de56fe3b924f42  com.valvesoftware.steamlinkvr/resources/assets/webui/styles/spinner.css
 b8e7e7e0e36a12a88b8dc4324875910b  com.valvesoftware.steamlinkvr/resources/assets/webui/styles/style.css
-fd04caf75fe3442e0a301eb6ea737af1  com.valvesoftware.steamlinkvr/resources/classes.dex
+d9e45de4b2d3455ad9e40861ffcd7fb1  com.valvesoftware.steamlinkvr/resources/classes.dex
 cd848a444f515595be765930c8cd3841  com.valvesoftware.steamlinkvr/resources/lib/arm64-v8a/libc++_shared.so
 30205f36def4dfde2b0e0dc659dca97d  com.valvesoftware.steamlinkvr/resources/lib/arm64-v8a/libh264bitstream.so
 3c0aed3737a218ae583691e913b455b9  com.valvesoftware.steamlinkvr/resources/lib/arm64-v8a/libhevcbitstream.so
-30fabc931bfdd06fac94a2d472d97d14  com.valvesoftware.steamlinkvr/resources/lib/arm64-v8a/libmain.so
+596febc0233230768e7858e95da11046  com.valvesoftware.steamlinkvr/resources/lib/arm64-v8a/libmain.so
 87242c535eed0593eee4776100257a02  com.valvesoftware.steamlinkvr/resources/lib/arm64-v8a/libopenxr_loader.so
 c299aa9bb0d7a7eba24c542268034832  com.valvesoftware.steamlinkvr/resources/lib/arm64-v8a/libplugins_iconengines_qsvgicon_arm64-v8a.so
 700e34b09af4339c08c11535fef7a71a  com.valvesoftware.steamlinkvr/resources/lib/arm64-v8a/libplugins_imageformats_qgif_arm64-v8a.so
@@ -98,10 +98,10 @@ b50ce0b29f41e69e6f5aecf7725c7455  com.valvesoftware.steamlinkvr/resources/lib/ar
 1c9a4e9399a2f39428b22e2abb7b0944  com.valvesoftware.steamlinkvr/resources/lib/arm64-v8a/libSDL3_mixer.so
 9d0f271243033f625824d989f74efe91  com.valvesoftware.steamlinkvr/resources/lib/arm64-v8a/libSDL3.so
 f1c464c090395ed5d4adae725391eb49  com.valvesoftware.steamlinkvr/resources/lib/arm64-v8a/libSDL3_ttf.so
-ffd9240a70c610e77f2530d56df1ac09  com.valvesoftware.steamlinkvr/resources/lib/arm64-v8a/libshell_arm64-v8a.so
+59d4a37e8b9d4c5de68bc9925fc3f58d  com.valvesoftware.steamlinkvr/resources/lib/arm64-v8a/libshell_arm64-v8a.so
 d082d32a54f799379954213ba36a1347  com.valvesoftware.steamlinkvr/resources/lib/arm64-v8a/libshell.so
 79c5bc3b17656a451ca99ac8f0b521eb  com.valvesoftware.steamlinkvr/resources/lib/arm64-v8a/libsteamwebrtc.so
-9afad10f53b576deac006ad0e938bba3  com.valvesoftware.steamlinkvr/resources/lib/arm64-v8a/libvrlink_scene.so
+f3d68926045c077d4bad5e1b7c67037b  com.valvesoftware.steamlinkvr/resources/lib/arm64-v8a/libvrlink_scene.so
 20ad31de31317f8149944888dc4c71bc  com.valvesoftware.steamlinkvr/resources/META-INF/com/android/build/gradle/app-metadata.properties
 6e4c205b0514417cb06c7b2e2cb37738  com.valvesoftware.steamlinkvr/resources/META-INF/version-control-info.textproto
 4c2562930cc1e4b13ca932427b54a2af  com.valvesoftware.steamlinkvr/resources/res/drawable-anydpi/_ic_launcher_background__0_res_0x7f010000.xml
@@ -134,7 +134,7 @@ f63e2791022c1679007ea8cdfe83869d  com.valvesoftware.steamlinkvr/sources/com/getk
 c333447bcb2c83bc33c694a9a2405fbf  com.valvesoftware.steamlinkvr/sources/com/getkeepsafe/relinker/ReLinker.java
 c3af8b45d2f4bc49fc13d3ff26a0b447  com.valvesoftware.steamlinkvr/sources/com/getkeepsafe/relinker/SystemLibraryLoader.java
 ab3d5dbb5d308b507721bc7b48a3a7aa  com.valvesoftware.steamlinkvr/sources/com/getkeepsafe/relinker/TextUtils.java
-80760ac83e580b35414adb4e2eb9fd74  com.valvesoftware.steamlinkvr/sources/com/valvesoftware/steamlink/BuildConfig.java
+dace9b7d9f1680c00b86ceb5570cc222  com.valvesoftware.steamlinkvr/sources/com/valvesoftware/steamlink/BuildConfig.java
 412493115815754d4537db20132079cd  com.valvesoftware.steamlinkvr/sources/com/valvesoftware/steamlink/C0003R.java
 379aedc609eabf455672d1fd3d879c39  com.valvesoftware.steamlinkvr/sources/com/valvesoftware/steamlink/SteamLink.java
 eaaf44c4a024eda2f63321a66204ecd8  com.valvesoftware.steamlinkvr/sources/com/valvesoftware/steamlink/SteamLinkUtils.java
