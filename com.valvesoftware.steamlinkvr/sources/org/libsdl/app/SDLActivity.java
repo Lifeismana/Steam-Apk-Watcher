@@ -16,6 +16,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.LocaleList;
 import android.os.Message;
 import android.os.ParcelFileDescriptor;
 import android.util.DisplayMetrics;
@@ -1430,5 +1431,29 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
 
         SDLFileDialogState() {
         }
+    }
+
+    public static String getPreferredLocales() {
+        LocaleList adjustedDefault = LocaleList.getAdjustedDefault();
+        String str = "";
+        for (int i = 0; i < adjustedDefault.size(); i++) {
+            if (i != 0) {
+                str = str + ",";
+            }
+            str = str + formatLocale(adjustedDefault.get(i));
+        }
+        return str;
+    }
+
+    public static String formatLocale(Locale locale) {
+        String language;
+        if (locale.getLanguage() == "in") {
+            language = "id";
+        } else if (locale.getLanguage() == "") {
+            language = "und";
+        } else {
+            language = locale.getLanguage();
+        }
+        return locale.getCountry() == "" ? language : language + "_" + locale.getCountry();
     }
 }
