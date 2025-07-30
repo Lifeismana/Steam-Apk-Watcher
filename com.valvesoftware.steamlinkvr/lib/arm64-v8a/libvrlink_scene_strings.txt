@@ -59,7 +59,7 @@
 8SVLAudio
 8SVLCodec
 8SVLCrypt
-9809981 
+9870905 
 9a&g
 9JLX
 9QSVLInput
@@ -503,27 +503,18 @@ cAudBufAvg
 cAudBufMax
 cAudBufMin
 cAudBufVar
-CAudioJitterBuffer::ApplyCrossfade(CAudioJitterBuffer::Frame_t*)
-CAudioJitterBuffer::ApplyFade(CAudioJitterBuffer::Frame_t*)
-CAudioJitterBuffer::BasicPop(CAudioJitterBuffer::Frame_t*, int)
-CAudioJitterBuffer::~CAudioJitterBuffer()
-CAudioJitterBuffer::CAudioJitterBuffer()
-CAudioJitterBuffer::Clear()
 CAudioJitterBuffer fade in %d %d\n
-CAudioJitterBuffer::FadeIn(int)
 CAudioJitterBuffer fade out %d %d\n
-CAudioJitterBuffer::FadeOut(int)
-CAudioJitterBuffer::FindBestCrossfadeEndpoint(int, int)
-CAudioJitterBuffer::GenerateWindowFunction()
-CAudioJitterBuffer::GetWindowScale(float)
 CAudioJitterBuffer init: %d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d\n
-CAudioJitterBuffer::Pop(CAudioJitterBuffer::Frame_t*, int)
-CAudioJitterBuffer::Push(CAudioJitterBuffer::Frame_t const*, int)
-CAudioJitterBuffer::PushDiscontinuity()
+CAudioJitterBuffer<short>::BasicPop(short*, int)
+CAudioJitterBuffer<short>::FadeOut(int)
+CAudioJitterBuffer<short>::FindBestCrossfadeEndpoint(int, int)
+CAudioJitterBuffer<short>::Pop(short*, int)
+CAudioJitterBuffer<short>::Push(short const*, int)
+CAudioJitterBuffer<short>::UpdateStats(int, int)
 CAudioJitterBuffer underflow %d %d\n
-CAudioJitterBuffer::UpdateStats(int, int)
-CAudioJitterBuffer::WarpBack(int)
-CAudioJitterBuffer::WarpForward(int)
+CConditionalScopedEventDuration::~CConditionalScopedEventDuration()
+CConditionalScopedEventDuration::CConditionalScopedEventDuration(char const*, ...)
 cFramePhase
 Changing tos opt = %d\n
 Channel: %d\n
@@ -2783,7 +2774,7 @@ QSVLClient::FrameSwap()
 QSVLClient::GotDecodedFrame()
 QSVLClient::GotNetworkFrame()
 QSVLClient::GotNoteFromServerThatFrameWasGenerated(int)
-QSVLClient::HandleEvent(VRLinkPostedEvent_t, int, unsigned long)
+QSVLClient::HandleEvent(VRLinkPostedEvent_t const&)
 QSVLClient::HandleMessagePromptMessageReceived(MessagePrompt_t*)
 QSVLClient::HandleUnrecoverableError(int)
 QSVLClient::Init()
@@ -2822,7 +2813,7 @@ QSVLClientXR::GetPowerProp(ValueTransportID, SVLPowerProps&)
 QSVLClientXR::GetStaticProp(ValueTransportID, SVLStaticProps&)
 QSVLClientXR::GetStreamProjectionLayers(std::__ndk1::vector<XrCompositionLayerBaseHeader*, std::__ndk1::allocator<XrCompositionLayerBaseHeader*>>&)
 QSVLClientXR::GetTargetRenderSize(std::__ndk1::array<unsigned int, 2ul>&)
-QSVLClientXR::HandleEvent(VRLinkPostedEvent_t, int, unsigned long)
+QSVLClientXR::HandleEvent(VRLinkPostedEvent_t const&)
 QSVLClientXR::HandleEyeInput()
 QSVLClientXR::HandleHandTracking()
 QSVLClientXR::HandleSidebandEvent(SVLRoot::SidebandEventType)
@@ -2875,7 +2866,6 @@ QSVLHapticsXR::HapticsThread()
 QSVLHapticsXR::ProcessHapticsEvents()
 QSVLHapticsXR::~QSVLHapticsXR()
 QSVLHapticsXR::QSVLHapticsXR(std::__ndk1::shared_ptr<QSVLInput>)
-QSVLRendererXR::AcceptDataFrame(unsigned char*, int, bool, unsigned short)
 QSVLRendererXR::BSwapchainsSetup()
 QSVLRendererXR::FlipFrame()
 QSVLRendererXR::FlipFrame(XRQContext const&, long*)
@@ -4066,7 +4056,7 @@ std::__ndk1::__libcpp_atomic_wait(void const volatile*, int)
 std::__ndk1::__libcpp_snprintf_l(char*, unsigned long, __locale_t*, char const*, ...)
 std::__ndk1::__libcpp_sscanf_l(char const*, __locale_t*, char const*, ...)
 std::__ndk1::__libcpp_unique_locale::~__libcpp_unique_locale()
-std::__ndk1::__list_imp<std::__ndk1::tuple<VRLinkPostedEvent_t, int, unsigned long>, std::__ndk1::allocator<std::__ndk1::tuple<VRLinkPostedEvent_t, int, unsigned long>>>::~__list_imp()
+std::__ndk1::__list_imp<VRLinkPostedEvent_t, std::__ndk1::allocator<VRLinkPostedEvent_t>>::~__list_imp()
 std::__ndk1::locale::all
 std::__ndk1::locale::classic()
 std::__ndk1::locale::collate
@@ -4663,6 +4653,7 @@ std::__ndk1::vector<char, std::__ndk1::allocator<char>>::__append(unsigned long)
 std::__ndk1::vector<char, std::__ndk1::allocator<char>>::assign(unsigned long, char const&)
 std::__ndk1::vector<float, std::__ndk1::allocator<float>>::__append(unsigned long)
 std::__ndk1::vector<QSVLControllerInputState, std::__ndk1::allocator<QSVLControllerInputState>>::__append(unsigned long)
+std::__ndk1::vector<short, std::__ndk1::allocator<short>>::__append(unsigned long)
 std::__ndk1::vector<std::__ndk1::array<std::__ndk1::array<XrHandJointLocationEXT, 26ul>, 2ul>, std::__ndk1::allocator<std::__ndk1::array<std::__ndk1::array<XrHandJointLocationEXT, 26ul>, 2ul>>>::__append(unsigned long)
 std::__ndk1::vector<std::__ndk1::array<std::__ndk1::array<XrHandJointVelocityEXT, 26ul>, 2ul>, std::__ndk1::allocator<std::__ndk1::array<std::__ndk1::array<XrHandJointVelocityEXT, 26ul>, 2ul>>>::__append(unsigned long)
 std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::reserve(unsigned long)
@@ -5102,7 +5093,7 @@ SVLRoot::GetSystemTimeInTicksFromSVLTimestamp(int)
 SVLRoot::GetValueS(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, char const*)
 SVLRoot::HandleConnectionLostEvent()
 SVLRoot::HandleConnectionRegained()
-SVLRoot::HandleEvent(VRLinkPostedEvent_t, int, unsigned long)
+SVLRoot::HandleEvent(VRLinkPostedEvent_t const&)
 SVLRoot::HandleSidebandEvent(SVLRoot::SidebandEventType)
 SVLRoot::HandleSystemTicksTimeUpdateEvent(unsigned long, int)
 SVLRoot::HandleUpdatedRemotePacket()
@@ -5111,7 +5102,8 @@ SVLRoot::Init()
 SVLRoot::InitDebugCanvas()
 SVLRoot::ParsePeerValueSettings(TransportValue_t const*, int)
 SVLRoot::PopulatePeerValueSettings(TransportValue_t*, int)
-SVLRoot::PostEvent(VRLinkPostedEvent_t, int, unsigned long)
+SVLRoot::PostEvent(VRLinkPostedEvent_t const&)
+SVLRoot::PostMultipleEvents(VRLinkPostedEvent_t const*, int)
 SVLRoot::ReceivedBookend(SVLVideoFrameDescriptor_t*)
 SVLRoot::ReportTimingEvent(timingevent, int, int)
 SVLRoot::RXBroadcast(dataset*, SVLDataLink*)
@@ -6757,7 +6749,6 @@ XRQXrPathToString(XRQContext const&, unsigned long, std::__ndk1::basic_string<ch
 [XRQ] XRQTeardown: Destroyed session
 [XRQ] XRQUpdateSwapchainSamplerStateGLES: XR_FB_swapchain_update_state extension or derivatives are not available
 xrReleaseSwapchainImage
-[XRRenderer] **************Accepting data frame******************
 [XRRenderer] Didn't set color space as it wasn't available
 [XRRenderer] Failed to create base layer swapchain for eye: %d
 [XRRenderer] Failed to create EGLImageKHR from decoded image hardware buffer
@@ -6782,7 +6773,6 @@ xrReleaseSwapchainImage
 [XRRenderer] Sampling: Updating swapchain sampler
 [XRRenderer] Sampling: Updating swapchain sampler as it appears valid
 [XRRenderer] Set color space to: %i
-[XRRenderer] STUBSTUBACCEPTDATAFRAME
 [XRRenderer] Swapchains were regenerated
 [XRRenderer] Updating color props
 [XRRenderer] Updating swapchain states
