@@ -51,6 +51,18 @@
       "sControllerType": "rift",
       "sDeviceType": "oculus/VRLINKHMDQUEST3"
     },
+    "panther": {
+      "sTrackingSystem": "oculus",
+      "sSerialNumber": "VRLINKHMDQUEST3S",
+      "sManufacturerName": "Oculus",
+      "sModelNumber": "Oculus Quest3S",
+      "sRenderModelName": "generic_hmd",
+      "sResourceRoot": "vrlink",
+      "sInputProfilePath": "{oculus}/input/rift_profile.json",
+      "flLaserMouseHmdAngleDegrees": 0,
+      "sControllerType": "rift",
+      "sDeviceType": "oculus/VRLINKHMDQUEST3S"
+    },
     "PICO 4": {
       "sTrackingSystem": "pico",
       "sSerialNumber": "VRLINKHMDPICO4",
