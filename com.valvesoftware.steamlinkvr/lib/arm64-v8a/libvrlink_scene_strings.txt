@@ -59,7 +59,7 @@
 8SVLAudio
 8SVLCodec
 8SVLCrypt
-9557386 
+9658287 
 9a&g
 9JLX
 9QSVLInput
@@ -163,6 +163,8 @@ AMediaCodec_delete
 AMediaCodec_delete( m_codec )
 AMediaCodec_dequeueInputBuffer
 AMediaCodec_dequeueOutputBuffer
+AMediaCodec_flush
+AMediaCodec_flush(m_codec )
 AMediaCodec_getInputBuffer
 AMediaCodec_queueInputBuffer
 AMediaCodec_releaseOutputBuffer
@@ -846,6 +848,7 @@ DeviceInput::DeviceInput()
 DeviceInput::GetInput(int)
 DeviceInput::GetInstance()::instance
 DeviceInput::SetInput(int, bool)
+/dev/random
 /dev/urandom
 dialog_info
 DiffJsonValues(Json::Value&, Json::Value&)
@@ -5096,11 +5099,14 @@ SVLRoot::GetControllerDriver(vr::ETrackedControllerRole)
 SVLRoot::GetHmdDriver()
 SVLRoot::GetNextDisplayIlluminationTime(int) const
 SVLRoot::GetRequestedConnectionInfo(std::__ndk1::vector<char, std::__ndk1::allocator<char>>&, LaunchOptions const&)
+SVLRoot::GetSVLTimestampFromSystemTimeInTicks(unsigned long)
+SVLRoot::GetSystemTimeInTicksFromSVLTimestamp(int)
 SVLRoot::GetValueS(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, char const*)
 SVLRoot::HandleConnectionLostEvent()
 SVLRoot::HandleConnectionRegained()
 SVLRoot::HandleEvent(VRLinkPostedEvent_t, int, unsigned long)
 SVLRoot::HandleSidebandEvent(SVLRoot::SidebandEventType)
+SVLRoot::HandleSystemTicksTimeUpdateEvent(unsigned long, int)
 SVLRoot::HandleUpdatedRemotePacket()
 SVLRoot::HandleVideoAcceptedPacket(LastVideoPacket_t*)
 SVLRoot::Init()
@@ -6461,7 +6467,7 @@ XrAppManager::BReadyToSuspend()
 [XrAppManager] Failed to set play space
 XrAppManager::GetRequestedExtensions()
 XrAppManager::HandleSceneTransition(AppViewType, bool)
-XrAppManager::HandleTransitionToDash()
+XrAppManager::HandleTransitionToDash(bool)
 XrAppManager::HandleXREvent(XrqEvent, std::__ndk1::variant<XrEventDataReferenceSpaceChangePending> const&)
 XrAppManager::Init(XRQApp&)
 [XrAppManager] No sArgs and release build panic. Aborting back to SteamLink.
