@@ -59,7 +59,7 @@
 8SVLAudio
 8SVLCodec
 8SVLCrypt
-9698967 
+9726239 
 9a&g
 9JLX
 9QSVLInput
@@ -485,6 +485,7 @@ bool XRQWaitFrame(XRQContext &)
 bool XRQXrPathToString(XrInstance, const XrPath, std::string &)
 bool XrUIInput::GetInputState_Controller(XRQContext &, XrUIInputState &)
 brazilian
+B=rE
 bShouldNotShowContinue
 bShow
 btowc
