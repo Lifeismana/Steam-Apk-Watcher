@@ -59,7 +59,7 @@
 8SVLAudio
 8SVLCodec
 8SVLCrypt
-9870905 
+9888492 
 9a&g
 9JLX
 9QSVLInput
@@ -308,7 +308,6 @@ app_dummy()
 [AppGlue] Failure writing android_app cmd: %s\n
 AppHandleButton(int, int, int, bool)
 AppHandleMotion(int, int, int)
-AppHandleStateEvent(AppStateEvent)
 [AppPath] Path updated: %s: %.2f
 [AppPath] Path updated: %s: %i
 [AppPath] Path updated: %s: %s
@@ -6433,8 +6432,8 @@ xrApplyHapticFeedback( m_refXrqContext->session, &actionInfo, (const XrHapticBas
 [XrAppManager] Attempting to StartActivity back to SteamLink Dashboard (%s, %s)
 [XrAppManager] Began construction
 [XrAppManager] Began initialization
-[XrAppManager] Began Suspend
 XrAppManager::BReadyToSuspend()
+[XrAppManager] Built from: %s
 [XrAppManager] Cleanup WebViews
 [XrAppManager] Cleared scenes
 [XrAppManager] Clearing app paths
@@ -6442,7 +6441,6 @@ XrAppManager::BReadyToSuspend()
 [XrAppManager] Completed XRQ_SHUTDOWN
 [XrAppManager] Could not find previous or new scene: %i %i. Forcing transition to dash.
 [XrAppManager] Could not find valid args, udp or tcp ip in extras
-[XrAppManager] End Suspend
 [XrAppManager] Failed to attach action sets
 [XrAppManager] Failed to attach interaction profile bindings
 [XrAppManager] Failed to find current scene! %i
@@ -6458,11 +6456,10 @@ XrAppManager::HandleTransitionToDash(bool)
 XrAppManager::HandleXREvent(XrqEvent, std::__ndk1::variant<XrEventDataReferenceSpaceChangePending> const&)
 XrAppManager::Init(XRQApp&)
 [XrAppManager] No sArgs and release build panic. Aborting back to SteamLink.
-XrAppManager::OnResume()
-XrAppManager::OnSuspend()
 [XrAppManager] Received XRQ_SHUTDOWN
 [XrAppManager] Requested return to dash on release product, without proper launch activity, exiting.
 XrAppManager::RequestNextScene(AppViewType)
+[XrAppManager] Running on hmd: %s
 [XrAppManager]SCENE_EVENT_REQUEST_PREFLIGHT Requesting preflight
 [XrAppManager] SCENE_EVENT_REQUEST_PREFLIGHT Stream requested start
 [XrAppManager] SCENE_EVENT_REQUEST_QUIT Requesting next scene
