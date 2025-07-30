@@ -157,13 +157,15 @@ ProcessApp()
         fi
     else
         echo "Skipping staging changes: apk version didn't change"
+        # we like living dangerously
+        git reset --hard HEAD
     fi
 }
 
 VerifyRequirements
 
 if [[ "$SOURCE" == "manual" ]]; then
-    for APP in "./.storage/*";
+    for APP in ./.storage/*;
     do
         # untested, future-proofing
         if [[ -n "$APP_TO_PROCESS" && "$APP" != *"$APP_TO_PROCESS"* ]]; then
