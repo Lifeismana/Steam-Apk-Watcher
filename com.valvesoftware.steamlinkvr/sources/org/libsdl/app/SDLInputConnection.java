@@ -96,16 +96,18 @@ public class SDLInputConnection extends BaseInputConnection {
         }
         if (i < obj.length()) {
             String obj2 = obj.subSequence(i, obj.length()).toString();
-            int i3 = 0;
-            while (i3 < obj2.length()) {
-                int codePointAt3 = obj2.codePointAt(i3);
-                if (codePointAt3 == 10 && SDLActivity.onNativeSoftReturnKey()) {
-                    return;
+            if (!SDLActivity.dispatchingKeyEvent()) {
+                int i3 = 0;
+                while (i3 < obj2.length()) {
+                    int codePointAt3 = obj2.codePointAt(i3);
+                    if (codePointAt3 == 10 && SDLActivity.onNativeSoftReturnKey()) {
+                        return;
+                    }
+                    if (codePointAt3 > 0 && codePointAt3 < 128) {
+                        nativeGenerateScancodeForUnichar((char) codePointAt3);
+                    }
+                    i3 += Character.charCount(codePointAt3);
                 }
-                if (codePointAt3 < 128) {
-                    nativeGenerateScancodeForUnichar((char) codePointAt3);
-                }
-                i3 += Character.charCount(codePointAt3);
             }
             nativeCommitText(obj2, 0);
         }

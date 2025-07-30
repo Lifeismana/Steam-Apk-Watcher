@@ -190,56 +190,37 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
 
     @Override // android.view.View.OnTouchListener
     public boolean onTouch(View view, MotionEvent motionEvent) {
-        int i;
-        Object invoke;
         int deviceId = motionEvent.getDeviceId();
         int pointerCount = motionEvent.getPointerCount();
         int actionMasked = motionEvent.getActionMasked();
-        int i2 = 0;
-        if (motionEvent.getSource() == 8194 || motionEvent.getSource() == 12290) {
-            try {
-                invoke = motionEvent.getClass().getMethod("getButtonState", new Class[0]).invoke(motionEvent, new Object[0]);
-            } catch (Exception unused) {
-            }
-            if (invoke != null) {
-                i = ((Integer) invoke).intValue();
-                SDLGenericMotionListener_API12 motionListener = SDLActivity.getMotionListener();
-                SDLActivity.onNativeMouse(i, actionMasked, motionListener.getEventX(motionEvent), motionListener.getEventY(motionEvent), motionListener.inRelativeMode());
-            }
-            i = 1;
-            SDLGenericMotionListener_API12 motionListener2 = SDLActivity.getMotionListener();
-            SDLActivity.onNativeMouse(i, actionMasked, motionListener2.getEventX(motionEvent), motionListener2.getEventY(motionEvent), motionListener2.inRelativeMode());
-        } else {
-            if (actionMasked != 0 && actionMasked != 1) {
-                if (actionMasked == 2) {
-                    for (int i3 = 0; i3 < pointerCount; i3++) {
-                        int pointerId = motionEvent.getPointerId(i3);
-                        float normalizedX = getNormalizedX(motionEvent.getX(i3));
-                        float normalizedY = getNormalizedY(motionEvent.getY(i3));
-                        float pressure = motionEvent.getPressure(i3);
-                        SDLActivity.onNativeTouch(deviceId, pointerId, actionMasked, normalizedX, normalizedY, pressure > 1.0f ? 1.0f : pressure);
-                    }
-                } else if (actionMasked == 3) {
-                    for (int i4 = 0; i4 < pointerCount; i4++) {
-                        int pointerId2 = motionEvent.getPointerId(i4);
-                        float normalizedX2 = getNormalizedX(motionEvent.getX(i4));
-                        float normalizedY2 = getNormalizedY(motionEvent.getY(i4));
-                        float pressure2 = motionEvent.getPressure(i4);
-                        SDLActivity.onNativeTouch(deviceId, pointerId2, 1, normalizedX2, normalizedY2, pressure2 > 1.0f ? 1.0f : pressure2);
-                    }
-                } else if (actionMasked == 5 || actionMasked == 6) {
-                    i2 = -1;
+        int actionIndex = (actionMasked == 6 || actionMasked == 5) ? motionEvent.getActionIndex() : 0;
+        do {
+            int toolType = motionEvent.getToolType(actionIndex);
+            if (toolType == 3) {
+                int buttonState = motionEvent.getButtonState();
+                SDLGenericMotionListener_API14 motionListener = SDLActivity.getMotionListener();
+                SDLActivity.onNativeMouse(buttonState, actionMasked, motionListener.getEventX(motionEvent, actionIndex), motionListener.getEventY(motionEvent, actionIndex), motionListener.inRelativeMode());
+            } else if (toolType == 2 || toolType == 4) {
+                int pointerId = motionEvent.getPointerId(actionIndex);
+                float x = motionEvent.getX(actionIndex);
+                float y = motionEvent.getY(actionIndex);
+                float pressure = motionEvent.getPressure(actionIndex);
+                if (pressure > 1.0f) {
+                    pressure = 1.0f;
                 }
+                SDLActivity.onNativePen(pointerId, (motionEvent.getButtonState() >> 4) | (1 << (toolType == 2 ? 0 : 30)), actionMasked, x, y, pressure);
+            } else {
+                int pointerId2 = motionEvent.getPointerId(actionIndex);
+                float normalizedX = getNormalizedX(motionEvent.getX(actionIndex));
+                float normalizedY = getNormalizedY(motionEvent.getY(actionIndex));
+                float pressure2 = motionEvent.getPressure(actionIndex);
+                SDLActivity.onNativeTouch(deviceId, pointerId2, actionMasked, normalizedX, normalizedY, pressure2 > 1.0f ? 1.0f : pressure2);
             }
-            if (i2 == -1) {
-                i2 = motionEvent.getActionIndex();
+            if (actionMasked == 6 || actionMasked == 5) {
+                break;
             }
-            int pointerId3 = motionEvent.getPointerId(i2);
-            float normalizedX3 = getNormalizedX(motionEvent.getX(i2));
-            float normalizedY3 = getNormalizedY(motionEvent.getY(i2));
-            float pressure3 = motionEvent.getPressure(i2);
-            SDLActivity.onNativeTouch(deviceId, pointerId3, actionMasked, normalizedX3, normalizedY3, pressure3 > 1.0f ? 1.0f : pressure3);
-        }
+            actionIndex++;
+        } while (actionIndex < pointerCount);
         return true;
     }
 
@@ -287,18 +268,21 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
     @Override // android.view.View
     public boolean onCapturedPointerEvent(MotionEvent motionEvent) {
         int actionMasked = motionEvent.getActionMasked();
-        if (actionMasked == 2 || actionMasked == 7) {
-            SDLActivity.onNativeMouse(0, actionMasked, motionEvent.getX(0), motionEvent.getY(0), true);
-            return true;
+        int pointerCount = motionEvent.getPointerCount();
+        for (int i = 0; i < pointerCount; i++) {
+            if (actionMasked == 2 || actionMasked == 7) {
+                SDLActivity.onNativeMouse(0, actionMasked, motionEvent.getX(i), motionEvent.getY(i), true);
+                return true;
+            }
+            if (actionMasked == 8) {
+                SDLActivity.onNativeMouse(0, actionMasked, motionEvent.getAxisValue(10, i), motionEvent.getAxisValue(9, i), false);
+                return true;
+            }
+            if (actionMasked == 11 || actionMasked == 12) {
+                SDLActivity.onNativeMouse(motionEvent.getButtonState(), actionMasked != 11 ? 1 : 0, motionEvent.getX(i), motionEvent.getY(i), true);
+                return true;
+            }
         }
-        if (actionMasked == 8) {
-            SDLActivity.onNativeMouse(0, actionMasked, motionEvent.getAxisValue(10, 0), motionEvent.getAxisValue(9, 0), false);
-            return true;
-        }
-        if (actionMasked != 11 && actionMasked != 12) {
-            return false;
-        }
-        SDLActivity.onNativeMouse(motionEvent.getButtonState(), actionMasked == 11 ? 0 : 1, motionEvent.getX(0), motionEvent.getY(0), true);
-        return true;
+        return false;
     }
 }

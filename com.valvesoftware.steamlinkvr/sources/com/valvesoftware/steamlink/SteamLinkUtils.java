@@ -21,23 +21,25 @@ public class SteamLinkUtils {
     }
 
     public static boolean canDisplayHDRVideo(boolean z, boolean z2) {
-        boolean z3;
         Display.HdrCapabilities hdrCapabilities = ((Activity) SDL.getContext()).getWindowManager().getDefaultDisplay().getHdrCapabilities();
         if (hdrCapabilities != null) {
-            for (int i : hdrCapabilities.getSupportedHdrTypes()) {
-                if (i == 2) {
-                    z3 = true;
+            int[] supportedHdrTypes = hdrCapabilities.getSupportedHdrTypes();
+            int length = supportedHdrTypes.length;
+            int i = 0;
+            while (true) {
+                if (i >= length) {
                     break;
                 }
-            }
-        }
-        z3 = false;
-        if (z3) {
-            if (z && supportsHDRHEVC()) {
-                return true;
-            }
-            if (z2 && supportsHDRAV1()) {
-                return true;
+                if (supportedHdrTypes[i] == 2) {
+                    if (z && supportsHDRHEVC()) {
+                        return true;
+                    }
+                    if (!z2 || !supportsHDRAV1()) {
+                        break;
+                    }
+                    return true;
+                }
+                i++;
             }
         }
         return false;

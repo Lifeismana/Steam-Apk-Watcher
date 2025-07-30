@@ -1,7 +1,6 @@
 package org.libsdl.app;
 
 import android.view.MotionEvent;
-import android.view.View;
 
 /* compiled from: SDLControllerManager.java */
 /* loaded from: classes.dex */
@@ -11,47 +10,18 @@ class SDLGenericMotionListener_API26 extends SDLGenericMotionListener_API24 {
     SDLGenericMotionListener_API26() {
     }
 
-    @Override // org.libsdl.app.SDLGenericMotionListener_API24, org.libsdl.app.SDLGenericMotionListener_API12, android.view.View.OnGenericMotionListener
-    public boolean onGenericMotion(View view, MotionEvent motionEvent) {
-        int source = motionEvent.getSource();
-        if (source == 8194 || source == 12290) {
-            int actionMasked = motionEvent.getActionMasked();
-            if (actionMasked == 7) {
-                SDLActivity.onNativeMouse(0, actionMasked, motionEvent.getX(0), motionEvent.getY(0), false);
-                return true;
-            }
-            if (actionMasked == 8) {
-                SDLActivity.onNativeMouse(0, actionMasked, motionEvent.getAxisValue(10, 0), motionEvent.getAxisValue(9, 0), false);
-                return true;
-            }
-        } else if (source == 131076) {
-            int actionMasked2 = motionEvent.getActionMasked();
-            if (actionMasked2 == 7) {
-                SDLActivity.onNativeMouse(0, actionMasked2, motionEvent.getX(0), motionEvent.getY(0), true);
-                return true;
-            }
-            if (actionMasked2 == 8) {
-                SDLActivity.onNativeMouse(0, actionMasked2, motionEvent.getAxisValue(10, 0), motionEvent.getAxisValue(9, 0), false);
-                return true;
-            }
-        } else if (source == 16777232) {
-            return SDLControllerManager.handleJoystickMotionEvent(motionEvent);
-        }
-        return false;
-    }
-
-    @Override // org.libsdl.app.SDLGenericMotionListener_API24, org.libsdl.app.SDLGenericMotionListener_API12
+    @Override // org.libsdl.app.SDLGenericMotionListener_API24, org.libsdl.app.SDLGenericMotionListener_API14
     public boolean supportsRelativeMouse() {
         SDLActivity.isDeXMode();
         return true;
     }
 
-    @Override // org.libsdl.app.SDLGenericMotionListener_API24, org.libsdl.app.SDLGenericMotionListener_API12
+    @Override // org.libsdl.app.SDLGenericMotionListener_API24, org.libsdl.app.SDLGenericMotionListener_API14
     public boolean inRelativeMode() {
         return this.mRelativeModeEnabled;
     }
 
-    @Override // org.libsdl.app.SDLGenericMotionListener_API24, org.libsdl.app.SDLGenericMotionListener_API12
+    @Override // org.libsdl.app.SDLGenericMotionListener_API24, org.libsdl.app.SDLGenericMotionListener_API14
     public boolean setRelativeMouseEnabled(boolean z) {
         SDLActivity.isDeXMode();
         if (z) {
@@ -63,7 +33,7 @@ class SDLGenericMotionListener_API26 extends SDLGenericMotionListener_API24 {
         return true;
     }
 
-    @Override // org.libsdl.app.SDLGenericMotionListener_API12
+    @Override // org.libsdl.app.SDLGenericMotionListener_API14
     public void reclaimRelativeMouseModeIfNeeded() {
         if (!this.mRelativeModeEnabled || SDLActivity.isDeXMode()) {
             return;
@@ -71,13 +41,18 @@ class SDLGenericMotionListener_API26 extends SDLGenericMotionListener_API24 {
         SDLActivity.getContentView().requestPointerCapture();
     }
 
-    @Override // org.libsdl.app.SDLGenericMotionListener_API24, org.libsdl.app.SDLGenericMotionListener_API12
-    public float getEventX(MotionEvent motionEvent) {
-        return motionEvent.getX(0);
+    @Override // org.libsdl.app.SDLGenericMotionListener_API14
+    public boolean checkRelativeEvent(MotionEvent motionEvent) {
+        return motionEvent.getSource() == 131076;
     }
 
-    @Override // org.libsdl.app.SDLGenericMotionListener_API24, org.libsdl.app.SDLGenericMotionListener_API12
-    public float getEventY(MotionEvent motionEvent) {
-        return motionEvent.getY(0);
+    @Override // org.libsdl.app.SDLGenericMotionListener_API24, org.libsdl.app.SDLGenericMotionListener_API14
+    public float getEventX(MotionEvent motionEvent, int i) {
+        return motionEvent.getX(i);
+    }
+
+    @Override // org.libsdl.app.SDLGenericMotionListener_API24, org.libsdl.app.SDLGenericMotionListener_API14
+    public float getEventY(MotionEvent motionEvent, int i) {
+        return motionEvent.getY(i);
     }
 }

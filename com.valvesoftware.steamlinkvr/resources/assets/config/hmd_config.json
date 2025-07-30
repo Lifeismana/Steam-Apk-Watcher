@@ -99,6 +99,18 @@
       "sControllerType": "pico",
       "sDeviceType": "pico/VRLINKHMDPICO4ULTRA"
     },
+    "kona": {
+      "sTrackingSystem": "htc",
+      "sSerialNumber": "VRLINKHMDVIVEFOCUSVISION",
+      "sManufacturerName": "HTC",
+      "sModelNumber": "Vive Focus Vision",
+      "sRenderModelName": "generic_hmd",
+      "sResourceRoot": "vrlink",
+      "sInputProfilePath": "{htc}/input/vive_controller_profile.json",
+      "flLaserMouseHmdAngleDegrees": 0,
+      "sControllerType": "vive_focus",
+      "sDeviceType": "htc/VRLINKHMDVIVEFOCUSVISION"
+    },
     "unknown": {
       "sTrackingSystem": "oculus",
       "sSerialNumber": "VRLINKHMDUNKNOWN",

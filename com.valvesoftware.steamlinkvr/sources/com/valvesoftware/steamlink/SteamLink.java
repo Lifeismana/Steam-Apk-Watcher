@@ -62,11 +62,6 @@ public class SteamLink extends SDLActivity {
     /* JADX INFO: Access modifiers changed from: private */
     public native void videoSurfaceDestroyed();
 
-    @Override // org.libsdl.app.SDLActivity
-    protected String getMainFunction() {
-        return "main";
-    }
-
     public class ShellWifiInfo extends ConnectivityManager.NetworkCallback {
         private Context mContext;
         public int m_nNetworkID = -1;
@@ -172,6 +167,11 @@ public class SteamLink extends SDLActivity {
     }
 
     @Override // org.libsdl.app.SDLActivity
+    protected String getMainFunction() {
+        return "main";
+    }
+
+    @Override // org.libsdl.app.SDLActivity
     protected String getMainSharedObject() {
         return "libshell_" + Build.SUPPORTED_ABIS[0] + ".so";
     }
@@ -185,7 +185,10 @@ public class SteamLink extends SDLActivity {
     @Override // org.libsdl.app.SDLActivity
     protected String[] getArguments() {
         Uri data = getIntent().getData();
-        return data != null ? new String[]{data.toString()} : new String[0];
+        if (data != null) {
+            return new String[]{data.toString()};
+        }
+        return new String[0];
     }
 
     @Override // org.libsdl.app.SDLActivity

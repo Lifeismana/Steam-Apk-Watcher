@@ -50,23 +50,8 @@ class HIDDeviceBLESteamController extends BluetoothGattCallback implements HIDDe
     }
 
     @Override // org.libsdl.app.HIDDevice
-    public String getManufacturerName() {
-        return "Valve Corporation";
-    }
-
-    @Override // org.libsdl.app.HIDDevice
     public int getProductId() {
         return 4358;
-    }
-
-    @Override // org.libsdl.app.HIDDevice
-    public String getProductName() {
-        return "Steam Controller";
-    }
-
-    @Override // org.libsdl.app.HIDDevice
-    public String getSerialNumber() {
-        return "12345";
     }
 
     @Override // org.libsdl.app.HIDDevice
@@ -130,8 +115,8 @@ class HIDDeviceBLESteamController extends BluetoothGattCallback implements HIDDe
             BluetoothGattCharacteristic characteristic;
             BluetoothGattDescriptor descriptor;
             byte[] bArr;
-            int i = C00134.f0xa1f10085[this.mOp.ordinal()];
-            if (i == 1) {
+            int ordinal = this.mOp.ordinal();
+            if (ordinal == 0) {
                 if (!this.mGatt.readCharacteristic(getCharacteristic(this.mUuid))) {
                     Log.e(HIDDeviceBLESteamController.TAG, "Unable to read characteristic " + this.mUuid.toString());
                     this.mResult = false;
@@ -141,7 +126,7 @@ class HIDDeviceBLESteamController extends BluetoothGattCallback implements HIDDe
                     return;
                 }
             }
-            if (i == 2) {
+            if (ordinal == 1) {
                 BluetoothGattCharacteristic characteristic2 = getCharacteristic(this.mUuid);
                 characteristic2.setValue(this.mValue);
                 if (!this.mGatt.writeCharacteristic(characteristic2)) {
@@ -153,7 +138,7 @@ class HIDDeviceBLESteamController extends BluetoothGattCallback implements HIDDe
                     return;
                 }
             }
-            if (i != 3 || (characteristic = getCharacteristic(this.mUuid)) == null || (descriptor = characteristic.getDescriptor(UUID.fromString("00002902-0000-1000-8000-00805f9b34fb"))) == null) {
+            if (ordinal != 2 || (characteristic = getCharacteristic(this.mUuid)) == null || (descriptor = characteristic.getDescriptor(UUID.fromString("00002902-0000-1000-8000-00805f9b34fb"))) == null) {
                 return;
             }
             int properties = characteristic.getProperties();
@@ -198,30 +183,6 @@ class HIDDeviceBLESteamController extends BluetoothGattCallback implements HIDDe
 
         public static GattOperation enableNotification(BluetoothGatt bluetoothGatt, UUID uuid) {
             return new GattOperation(bluetoothGatt, Operation.ENABLE_NOTIFICATION, uuid);
-        }
-    }
-
-    /* renamed from: org.libsdl.app.HIDDeviceBLESteamController$4 */
-    static /* synthetic */ class C00134 {
-
-        /* renamed from: $SwitchMap$org$libsdl$app$HIDDeviceBLESteamController$GattOperation$Operation */
-        static final /* synthetic */ int[] f0xa1f10085;
-
-        static {
-            int[] iArr = new int[GattOperation.Operation.values().length];
-            f0xa1f10085 = iArr;
-            try {
-                iArr[GattOperation.Operation.CHR_READ.ordinal()] = 1;
-            } catch (NoSuchFieldError unused) {
-            }
-            try {
-                f0xa1f10085[GattOperation.Operation.CHR_WRITE.ordinal()] = 2;
-            } catch (NoSuchFieldError unused2) {
-            }
-            try {
-                f0xa1f10085[GattOperation.Operation.ENABLE_NOTIFICATION.ordinal()] = 3;
-            } catch (NoSuchFieldError unused3) {
-            }
         }
     }
 
@@ -287,19 +248,17 @@ class HIDDeviceBLESteamController extends BluetoothGattCallback implements HIDDe
                     this.mIsReconnecting = true;
                     this.mGatt.disconnect();
                     this.mGatt = connectGatt(false);
-                } else if (!isRegistered()) {
-                    if (this.mGatt.getServices().size() > 0) {
-                        Log.v(TAG, "Chromebook: We are connected to a controller, but never got our registration.  Trying to recover.");
-                        probeService(this);
-                    } else {
-                        Log.v(TAG, "Chromebook: We are connected to a controller, but never discovered services.  Trying to recover.");
-                        this.mIsReconnecting = true;
-                        this.mGatt.disconnect();
-                        this.mGatt = connectGatt(false);
-                    }
-                } else {
+                } else if (isRegistered()) {
                     Log.v(TAG, "Chromebook: We are connected, and registered.  Everything's good!");
                     return;
+                } else if (this.mGatt.getServices().size() > 0) {
+                    Log.v(TAG, "Chromebook: We are connected to a controller, but never got our registration.  Trying to recover.");
+                    probeService(this);
+                } else {
+                    Log.v(TAG, "Chromebook: We are connected to a controller, but never discovered services.  Trying to recover.");
+                    this.mIsReconnecting = true;
+                    this.mGatt.disconnect();
+                    this.mGatt = connectGatt(false);
                 }
             }
             this.mHandler.postDelayed(new Runnable() { // from class: org.libsdl.app.HIDDeviceBLESteamController.1
@@ -487,6 +446,21 @@ class HIDDeviceBLESteamController extends BluetoothGattCallback implements HIDDe
     @Override // org.libsdl.app.HIDDevice
     public int getId() {
         return this.mDeviceId;
+    }
+
+    @Override // org.libsdl.app.HIDDevice
+    public String getSerialNumber() {
+        return "12345";
+    }
+
+    @Override // org.libsdl.app.HIDDevice
+    public String getManufacturerName() {
+        return "Valve Corporation";
+    }
+
+    @Override // org.libsdl.app.HIDDevice
+    public String getProductName() {
+        return "Steam Controller";
     }
 
     @Override // org.libsdl.app.HIDDevice

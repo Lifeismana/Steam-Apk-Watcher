@@ -2,7 +2,8 @@
   "requestedExtensions": [
     "XR_FB_touch_controller_pro",
     "XR_META_touch_controller_plus",
-    "XR_BD_controller_interaction"
+    "XR_BD_controller_interaction",
+    "XR_HTC_vive_focus3_controller_interaction"
   ],
   "staticProps": {
     "/interaction_profiles/oculus/touch_controller": {
@@ -116,6 +117,34 @@
         "sDeviceType": "PICO/VRLINKP4_Controller_Right",
         "ubDriverType": 0
       }
+    },
+    "/interaction_profiles/htc/vive_focus3_controller": {
+      "left": {
+        "sTrackingSystem": "htc",
+        "sSerialNumber": "VRLINKVIVEFOCUS3_Controller_Left",
+        "sManufacturerName": "HTC",
+        "sModelNumber": "Vive Focus 3 (Left Controller)",
+        "sRenderModelName": "vive_focus3_controller_left",
+        "sResourceRoot": "vrlink",
+        "sInputProfilePath": "{vrlink}/input/vive_focus3_controller_profile.json",
+        "flLaserMouseHmdAngleDegrees": 0,
+        "sControllerType": "vive_focus3_controller",
+        "sDeviceType": "HTC/VRLINKVIVE_FOCUS3_Controller_Left",
+        "ubDriverType": 0
+      },
+      "right": {
+        "sTrackingSystem": "htc",
+        "sSerialNumber": "VRLINKVIVEFOCUS3_Controller_Right",
+        "sManufacturerName": "HTC",
+        "sModelNumber": "Vive Focus 3 (Right Controller)",
+        "sRenderModelName": "vive_focus3_controller_right",
+        "sResourceRoot": "vrlink",
+        "sInputProfilePath": "{vrlink}/input/vive_focus3_controller_profile.json",
+        "flLaserMouseHmdAngleDegrees": 0,
+        "sControllerType": "vive_focus3_controller",
+        "sDeviceType": "HTC/VRLINKVIVE_FOCUS3_Controller_Right",
+        "ubDriverType": 0
+      }
     }
   },
   "poseAction": {
@@ -181,7 +210,25 @@
       "offset": {
         "position": {
           "x": -0.007,
-          "y": -0.03416,
+          "y": -0.0512,
+          "z": -0.09607
+        },
+        "rotation": {
+          "x": -10.0,
+          "y": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    "/interaction_profiles/htc/vive_focus3_controller": {
+      "bindings": [
+        "/user/hand/left/input/grip/pose",
+        "/user/hand/right/input/grip/pose"
+      ],
+      "offset": {
+        "position": {
+          "x": -0.007,
+          "y": -0.0512,
           "z": -0.09607
         },
         "rotation": {
@@ -213,6 +260,10 @@
           "/interaction_profiles/bytedance/pico4_controller": [
             "/user/hand/left/input/x/touch",
             "/user/hand/right/input/a/touch"
+          ],
+          "/interaction_profiles/htc/vive_focus3_controller": [
+            "/user/hand/left/input/x/touch",
+            "/user/hand/right/input/a/touch"
           ]
         }
       },
@@ -239,6 +290,10 @@
             "/user/hand/right/input/b/touch"
           ],
           "/interaction_profiles/bytedance/pico4_controller": [
+            "/user/hand/left/input/y/touch",
+            "/user/hand/right/input/b/touch"
+          ],
+          "/interaction_profiles/htc/vive_focus3_controller": [
             "/user/hand/left/input/y/touch",
             "/user/hand/right/input/b/touch"
           ]
@@ -269,6 +324,10 @@
           "/interaction_profiles/bytedance/pico4_controller": [
             "/user/hand/left/input/trigger/touch",
             "/user/hand/right/input/trigger/touch"
+          ],
+          "/interaction_profiles/htc/vive_focus3_controller": [
+            "/user/hand/left/input/trigger/touch",
+            "/user/hand/right/input/trigger/touch"
           ]
         }
       },
@@ -297,6 +356,10 @@
           "/interaction_profiles/bytedance/pico4_controller": [
             "/user/hand/left/input/thumbstick/touch",
             "/user/hand/right/input/thumbstick/touch"
+          ],
+          "/interaction_profiles/htc/vive_focus3_controller": [
+            "/user/hand/left/input/thumbstick/touch",
+            "/user/hand/right/input/thumbstick/touch"
           ]
         }
       },
@@ -319,6 +382,10 @@
             "/user/hand/right/input/thumbrest/touch"
           ],
           "/interaction_profiles/meta/touch_controller_plus": [
+            "/user/hand/left/input/thumbrest/touch",
+            "/user/hand/right/input/thumbrest/touch"
+          ],
+          "/interaction_profiles/htc/vive_focus3_controller": [
             "/user/hand/left/input/thumbrest/touch",
             "/user/hand/right/input/thumbrest/touch"
           ]
@@ -349,6 +416,10 @@
           "/interaction_profiles/bytedance/pico4_controller": [
             "/user/hand/left/input/x/click",
             "/user/hand/right/input/a/click"
+          ],
+          "/interaction_profiles/htc/vive_focus3_controller": [
+            "/user/hand/left/input/x/click",
+            "/user/hand/right/input/a/click"
           ]
         }
       },
@@ -375,6 +446,10 @@
             "/user/hand/right/input/b/click"
           ],
           "/interaction_profiles/bytedance/pico4_controller": [
+            "/user/hand/left/input/y/click",
+            "/user/hand/right/input/b/click"
+          ],
+          "/interaction_profiles/htc/vive_focus3_controller": [
             "/user/hand/left/input/y/click",
             "/user/hand/right/input/b/click"
           ]
@@ -401,6 +476,9 @@
           ],
           "/interaction_profiles/bytedance/pico4_controller": [
             "/user/hand/left/input/menu/click"
+          ],
+          "/interaction_profiles/htc/vive_focus3_controller": [
+            "/user/hand/left/input/menu/click"
           ]
         }
       },
@@ -429,12 +507,48 @@
           "/interaction_profiles/bytedance/pico4_controller": [
             "/user/hand/left/input/thumbstick/click",
             "/user/hand/right/input/thumbstick/click"
+          ],
+          "/interaction_profiles/htc/vive_focus3_controller": [
+            "/user/hand/left/input/thumbstick/click",
+            "/user/hand/right/input/thumbstick/click"
           ]
         }
       },
       "inputInfo": {
         "inputType": 0,
         "inputTypeIndex": 3
+      }
+    },
+    {
+      "actionInfo": {
+        "actionType": 1,
+        "subActionPathHand": 2,
+        "bindings": {
+          "/interaction_profiles/htc/vive_focus3_controller": [
+            "/user/hand/left/input/squeeze/click",
+            "/user/hand/right/input/squeeze/click"
+          ]
+        }
+      },
+      "inputInfo": {
+        "inputType": 0,
+        "inputTypeIndex": 4
+      }
+    },
+    {
+      "actionInfo": {
+        "actionType": 1,
+        "subActionPathHand": 2,
+        "bindings": {
+          "/interaction_profiles/htc/vive_focus3_controller": [
+            "/user/hand/left/input/trigger/click",
+            "/user/hand/right/input/trigger/click"
+          ]
+        }
+      },
+      "inputInfo": {
+        "inputType": 0,
+        "inputTypeIndex": 5
       }
     },
     {
@@ -455,6 +569,10 @@
             "/user/hand/right/input/trigger/value"
           ],
           "/interaction_profiles/bytedance/pico4_controller": [
+            "/user/hand/left/input/trigger/value",
+            "/user/hand/right/input/trigger/value"
+          ],
+          "/interaction_profiles/htc/vive_focus3_controller": [
             "/user/hand/left/input/trigger/value",
             "/user/hand/right/input/trigger/value"
           ]
@@ -485,6 +603,10 @@
           "/interaction_profiles/bytedance/pico4_controller": [
             "/user/hand/left/input/thumbstick/x",
             "/user/hand/right/input/thumbstick/x"
+          ],
+          "/interaction_profiles/htc/vive_focus3_controller": [
+            "/user/hand/left/input/thumbstick/x",
+            "/user/hand/right/input/thumbstick/x"
           ]
         }
       },
@@ -511,6 +633,10 @@
             "/user/hand/right/input/thumbstick/y"
           ],
           "/interaction_profiles/bytedance/pico4_controller": [
+            "/user/hand/left/input/thumbstick/y",
+            "/user/hand/right/input/thumbstick/y"
+          ],
+          "/interaction_profiles/htc/vive_focus3_controller": [
             "/user/hand/left/input/thumbstick/y",
             "/user/hand/right/input/thumbstick/y"
           ]
@@ -541,6 +667,10 @@
           "/interaction_profiles/bytedance/pico4_controller": [
             "/user/hand/left/input/squeeze/value",
             "/user/hand/right/input/squeeze/value"
+          ],
+          "/interaction_profiles/htc/vive_focus3_controller": [
+            "/user/hand/left/input/squeeze/value",
+            "/user/hand/right/input/squeeze/value"
           ]
         }
       },
@@ -565,6 +695,10 @@
         "/user/hand/right/output/haptic"
       ],
       "/interaction_profiles/bytedance/pico4_controller": [
+        "/user/hand/left/output/haptic",
+        "/user/hand/right/output/haptic"
+      ],
+      "/interaction_profiles/htc/vive_focus3_controller": [
         "/user/hand/left/output/haptic",
         "/user/hand/right/output/haptic"
       ]
