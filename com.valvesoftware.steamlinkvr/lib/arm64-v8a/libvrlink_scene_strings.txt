@@ -59,7 +59,7 @@
 8SVLAudio
 8SVLCodec
 8SVLCrypt
-9726239 
+9809981 
 9a&g
 9JLX
 9QSVLInput
@@ -485,7 +485,6 @@ bool XRQWaitFrame(XRQContext &)
 bool XRQXrPathToString(XrInstance, const XrPath, std::string &)
 bool XrUIInput::GetInputState_Controller(XRQContext &, XrUIInputState &)
 brazilian
-B=rE
 bShouldNotShowContinue
 bShow
 btowc
@@ -1068,6 +1067,7 @@ galois_w08_region_multiply
 galois_w16_region_multiply
 galois_w32_region_multiply
 gapp
+g_bNoCacheThreadIds
 g_bSetSuspendHandlers
 g_bSuspendResumeAck
 g_bSVLQuitting
@@ -2449,7 +2449,6 @@ NSt6__ndk120__codecvt_utf8_utf16IDsEE
 NSt6__ndk120__codecvt_utf8_utf16IwEE
 NSt6__ndk120__shared_ptr_emplaceI11QSVLXRInputNS_9allocatorIS1_EEEE
 NSt6__ndk120__shared_ptr_emplaceI13QSVLDeviceHmdNS_9allocatorIS1_EEEE
-NSt6__ndk120__shared_ptr_emplaceI14QSVLRendererXRNS_9allocatorIS1_EEEE
 NSt6__ndk120__shared_ptr_emplaceI15QSVLFrameServerNS_9allocatorIS1_EEEE
 NSt6__ndk120__shared_ptr_emplaceI18SRGBCorrectionPassNS_9allocatorIS1_EEEE
 NSt6__ndk120__shared_ptr_emplaceI20StreamBehavior_EmptyNS_9allocatorIS1_EEEE
@@ -2833,6 +2832,8 @@ QSVLClientXR::OnMessagePrompt(std::__ndk1::basic_string<char, std::__ndk1::char_
 QSVLClientXR::OnRenderComplete()
 QSVLClientXR::OnUnFocused()
 QSVLClientXR::~QSVLClientXR()
+QSVLClientXR::~QSVLClientXR() Complete
+QSVLClientXR::~QSVLClientXR() Start
 QSVLClientXR::QSVLClientXR(XRQContext&, LaunchOptions&, std::__ndk1::shared_ptr<QSVLInput>, std::__ndk1::shared_ptr<QSVLDeviceHmd>, std::__ndk1::shared_ptr<XrUIManager>, std::__ndk1::function<void (QSVLClientEvent, std::__ndk1::variant<QSVLClientStreamState, QSVLClientWirelessTimeout>)>)
 QSVLClientXR::ReadyForInputSync()
 QSVLClientXR::RXReliableStream(dataset*)
@@ -4364,9 +4365,6 @@ std::__ndk1::__shared_ptr_emplace<QSVLDeviceHmd, std::__ndk1::allocator<QSVLDevi
 std::__ndk1::__shared_ptr_emplace<QSVLFrameServer, std::__ndk1::allocator<QSVLFrameServer>>::__on_zero_shared()
 std::__ndk1::__shared_ptr_emplace<QSVLFrameServer, std::__ndk1::allocator<QSVLFrameServer>>::__on_zero_shared_weak()
 std::__ndk1::__shared_ptr_emplace<QSVLFrameServer, std::__ndk1::allocator<QSVLFrameServer>>::~__shared_ptr_emplace()
-std::__ndk1::__shared_ptr_emplace<QSVLRendererXR, std::__ndk1::allocator<QSVLRendererXR>>::__on_zero_shared()
-std::__ndk1::__shared_ptr_emplace<QSVLRendererXR, std::__ndk1::allocator<QSVLRendererXR>>::__on_zero_shared_weak()
-std::__ndk1::__shared_ptr_emplace<QSVLRendererXR, std::__ndk1::allocator<QSVLRendererXR>>::~__shared_ptr_emplace()
 std::__ndk1::__shared_ptr_emplace<QSVLXRInput, std::__ndk1::allocator<QSVLXRInput>>::__on_zero_shared()
 std::__ndk1::__shared_ptr_emplace<QSVLXRInput, std::__ndk1::allocator<QSVLXRInput>>::__on_zero_shared_weak()
 std::__ndk1::__shared_ptr_emplace<QSVLXRInput, std::__ndk1::allocator<QSVLXRInput>>::~__shared_ptr_emplace()
@@ -4418,7 +4416,6 @@ std::__ndk1::shared_ptr<StreamBehavior_Resuming>::~shared_ptr()
 std::__ndk1::shared_ptr<StreamBehavior>::~shared_ptr()
 std::__ndk1::shared_ptr<StreamBehavior_Spinner>::~shared_ptr()
 std::__ndk1::shared_ptr<StreamBehavior_Streaming>::~shared_ptr()
-std::__ndk1::shared_ptr<SVLRenderer>::~shared_ptr()
 std::__ndk1::shared_ptr<Texture>::~shared_ptr()
 std::__ndk1::shared_ptr<VariableTransportHolder>::~shared_ptr()
 std::__ndk1::shared_ptr<WebView>::~shared_ptr()
@@ -5498,7 +5495,6 @@ typeinfo for std::__ndk1::num_put<wchar_t, std::__ndk1::ostreambuf_iterator<wcha
 typeinfo for std::__ndk1::__shared_count
 typeinfo for std::__ndk1::__shared_ptr_emplace<QSVLDeviceHmd, std::__ndk1::allocator<QSVLDeviceHmd>>
 typeinfo for std::__ndk1::__shared_ptr_emplace<QSVLFrameServer, std::__ndk1::allocator<QSVLFrameServer>>
-typeinfo for std::__ndk1::__shared_ptr_emplace<QSVLRendererXR, std::__ndk1::allocator<QSVLRendererXR>>
 typeinfo for std::__ndk1::__shared_ptr_emplace<QSVLXRInput, std::__ndk1::allocator<QSVLXRInput>>
 typeinfo for std::__ndk1::__shared_ptr_emplace<SRGBCorrectionPass, std::__ndk1::allocator<SRGBCorrectionPass>>
 typeinfo for std::__ndk1::__shared_ptr_emplace<StreamBehavior_Empty, std::__ndk1::allocator<StreamBehavior_Empty>>
@@ -5820,7 +5816,6 @@ typeinfo name for std::__ndk1::num_put<wchar_t, std::__ndk1::ostreambuf_iterator
 typeinfo name for std::__ndk1::__shared_count
 typeinfo name for std::__ndk1::__shared_ptr_emplace<QSVLDeviceHmd, std::__ndk1::allocator<QSVLDeviceHmd>>
 typeinfo name for std::__ndk1::__shared_ptr_emplace<QSVLFrameServer, std::__ndk1::allocator<QSVLFrameServer>>
-typeinfo name for std::__ndk1::__shared_ptr_emplace<QSVLRendererXR, std::__ndk1::allocator<QSVLRendererXR>>
 typeinfo name for std::__ndk1::__shared_ptr_emplace<QSVLXRInput, std::__ndk1::allocator<QSVLXRInput>>
 typeinfo name for std::__ndk1::__shared_ptr_emplace<SRGBCorrectionPass, std::__ndk1::allocator<SRGBCorrectionPass>>
 typeinfo name for std::__ndk1::__shared_ptr_emplace<StreamBehavior_Empty, std::__ndk1::allocator<StreamBehavior_Empty>>
@@ -6267,7 +6262,6 @@ vtable for std::__ndk1::num_put<wchar_t, std::__ndk1::ostreambuf_iterator<wchar_
 vtable for std::__ndk1::__shared_count
 vtable for std::__ndk1::__shared_ptr_emplace<QSVLDeviceHmd, std::__ndk1::allocator<QSVLDeviceHmd>>
 vtable for std::__ndk1::__shared_ptr_emplace<QSVLFrameServer, std::__ndk1::allocator<QSVLFrameServer>>
-vtable for std::__ndk1::__shared_ptr_emplace<QSVLRendererXR, std::__ndk1::allocator<QSVLRendererXR>>
 vtable for std::__ndk1::__shared_ptr_emplace<QSVLXRInput, std::__ndk1::allocator<QSVLXRInput>>
 vtable for std::__ndk1::__shared_ptr_emplace<SRGBCorrectionPass, std::__ndk1::allocator<SRGBCorrectionPass>>
 vtable for std::__ndk1::__shared_ptr_emplace<StreamBehavior_Empty, std::__ndk1::allocator<StreamBehavior_Empty>>
