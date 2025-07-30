@@ -6,18 +6,18 @@ import android.view.View;
 /* compiled from: SDLControllerManager.java */
 /* loaded from: classes.dex */
 class SDLGenericMotionListener_API14 implements View.OnGenericMotionListener {
-    public boolean inRelativeMode() {
+    boolean inRelativeMode() {
         return false;
     }
 
-    public void reclaimRelativeMouseModeIfNeeded() {
+    void reclaimRelativeMouseModeIfNeeded() {
     }
 
-    public boolean setRelativeMouseEnabled(boolean z) {
+    boolean setRelativeMouseEnabled(boolean z) {
         return false;
     }
 
-    public boolean supportsRelativeMouse() {
+    boolean supportsRelativeMouse() {
         return false;
     }
 
@@ -54,15 +54,15 @@ class SDLGenericMotionListener_API14 implements View.OnGenericMotionListener {
         return z;
     }
 
-    public boolean checkRelativeEvent(MotionEvent motionEvent) {
+    boolean checkRelativeEvent(MotionEvent motionEvent) {
         return inRelativeMode();
     }
 
-    public float getEventX(MotionEvent motionEvent, int i) {
+    float getEventX(MotionEvent motionEvent, int i) {
         return motionEvent.getX(i);
     }
 
-    public float getEventY(MotionEvent motionEvent, int i) {
+    float getEventY(MotionEvent motionEvent, int i) {
         return motionEvent.getY(i);
     }
 }

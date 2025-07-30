@@ -28,11 +28,11 @@ public class SDL {
         return mContext;
     }
 
-    public static void loadLibrary(String str) throws UnsatisfiedLinkError, SecurityException, NullPointerException {
+    static void loadLibrary(String str) throws UnsatisfiedLinkError, SecurityException, NullPointerException {
         loadLibrary(str, mContext);
     }
 
-    public static void loadLibrary(String str, Context context) throws UnsatisfiedLinkError, SecurityException, NullPointerException {
+    static void loadLibrary(String str, Context context) throws UnsatisfiedLinkError, SecurityException, NullPointerException {
         if (str == null) {
             throw new NullPointerException("No library name provided.");
         }

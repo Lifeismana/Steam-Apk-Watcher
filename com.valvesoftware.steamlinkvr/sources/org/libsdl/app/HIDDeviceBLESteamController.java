@@ -28,9 +28,9 @@ class HIDDeviceBLESteamController extends BluetoothGattCallback implements HIDDe
     private boolean mIsChromebook;
     private boolean mIsRegistered;
     private HIDDeviceManager mManager;
-    public static final UUID steamControllerService = UUID.fromString("100F6C32-1735-4313-B402-38567131E5F3");
-    public static final UUID inputCharacteristic = UUID.fromString("100F6C33-1735-4313-B402-38567131E5F3");
-    public static final UUID reportCharacteristic = UUID.fromString("100F6C34-1735-4313-B402-38567131E5F3");
+    static final UUID steamControllerService = UUID.fromString("100F6C32-1735-4313-B402-38567131E5F3");
+    static final UUID inputCharacteristic = UUID.fromString("100F6C33-1735-4313-B402-38567131E5F3");
+    static final UUID reportCharacteristic = UUID.fromString("100F6C34-1735-4313-B402-38567131E5F3");
     private static final byte[] enterValveMode = {-64, -121, 3, 8, 7, 0};
     private boolean mIsConnected = false;
     private boolean mIsReconnecting = false;
@@ -186,7 +186,7 @@ class HIDDeviceBLESteamController extends BluetoothGattCallback implements HIDDe
         }
     }
 
-    public HIDDeviceBLESteamController(HIDDeviceManager hIDDeviceManager, BluetoothDevice bluetoothDevice) {
+    HIDDeviceBLESteamController(HIDDeviceManager hIDDeviceManager, BluetoothDevice bluetoothDevice) {
         this.mIsRegistered = false;
         this.mIsChromebook = false;
         this.mManager = hIDDeviceManager;
@@ -196,11 +196,11 @@ class HIDDeviceBLESteamController extends BluetoothGattCallback implements HIDDe
         this.mIsChromebook = this.mManager.getContext().getPackageManager().hasSystemFeature("org.chromium.arc.device_management");
     }
 
-    public String getIdentifier() {
+    String getIdentifier() {
         return String.format("SteamController.%s", this.mDevice.getAddress());
     }
 
-    public BluetoothGatt getGatt() {
+    BluetoothGatt getGatt() {
         return this.mGatt;
     }
 
@@ -225,7 +225,7 @@ class HIDDeviceBLESteamController extends BluetoothGattCallback implements HIDDe
         return bluetoothManager.getConnectionState(this.mDevice, 7);
     }
 
-    public void reconnect() {
+    void reconnect() {
         if (getConnectionState() != 2) {
             this.mGatt.disconnect();
             this.mGatt = connectGatt();
@@ -361,11 +361,11 @@ class HIDDeviceBLESteamController extends BluetoothGattCallback implements HIDDe
         queueGattOperation(GattOperation.enableNotification(this.mGatt, uuid));
     }
 
-    public void writeCharacteristic(UUID uuid, byte[] bArr) {
+    void writeCharacteristic(UUID uuid, byte[] bArr) {
         queueGattOperation(GattOperation.writeCharacteristic(this.mGatt, uuid, bArr));
     }
 
-    public void readCharacteristic(UUID uuid) {
+    void readCharacteristic(UUID uuid) {
         queueGattOperation(GattOperation.readCharacteristic(this.mGatt, uuid));
     }
 

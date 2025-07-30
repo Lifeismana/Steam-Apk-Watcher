@@ -8,7 +8,7 @@ import android.view.inputmethod.BaseInputConnection;
 import android.widget.EditText;
 
 /* loaded from: classes.dex */
-public class SDLInputConnection extends BaseInputConnection {
+class SDLInputConnection extends BaseInputConnection {
     protected String mCommittedText;
     protected EditText mEditText;
 
@@ -16,7 +16,7 @@ public class SDLInputConnection extends BaseInputConnection {
 
     public static native void nativeGenerateScancodeForUnichar(char c);
 
-    public SDLInputConnection(View view, boolean z) {
+    SDLInputConnection(View view, boolean z) {
         super(view, z);
         this.mCommittedText = "";
         this.mEditText = new EditText(SDL.getContext());

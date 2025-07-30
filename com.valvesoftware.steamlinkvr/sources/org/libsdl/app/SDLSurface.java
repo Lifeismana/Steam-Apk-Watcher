@@ -25,7 +25,7 @@ import org.libsdl.app.SDLActivity;
 public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, View.OnApplyWindowInsetsListener, View.OnKeyListener, View.OnTouchListener, SensorEventListener {
     protected Display mDisplay;
     protected float mHeight;
-    public boolean mIsSurfaceReady;
+    protected boolean mIsSurfaceReady;
     protected SensorManager mSensorManager;
     protected float mWidth;
 
@@ -33,7 +33,7 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
     public void onAccuracyChanged(Sensor sensor, int i) {
     }
 
-    public SDLSurface(Context context) {
+    protected SDLSurface(Context context) {
         super(context);
         getHolder().addCallback(this);
         setFocusable(true);
@@ -50,11 +50,11 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
         this.mIsSurfaceReady = false;
     }
 
-    public void handlePause() {
+    protected void handlePause() {
         enableSensor(1, false);
     }
 
-    public void handleResume() {
+    protected void handleResume() {
         setFocusable(true);
         setFocusableInTouchMode(true);
         requestFocus();
@@ -64,7 +64,7 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
         enableSensor(1, true);
     }
 
-    public Surface getNativeSurface() {
+    protected Surface getNativeSurface() {
         return getHolder().getSurface();
     }
 
@@ -224,7 +224,7 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
         return true;
     }
 
-    public void enableSensor(int i, boolean z) {
+    protected void enableSensor(int i, boolean z) {
         if (z) {
             SensorManager sensorManager = this.mSensorManager;
             sensorManager.registerListener(this, sensorManager.getDefaultSensor(i), 1, (Handler) null);

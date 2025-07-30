@@ -14,29 +14,29 @@ import java.util.List;
 class SDLJoystickHandler_API16 extends SDLJoystickHandler {
     private final ArrayList<SDLJoystick> mJoysticks = new ArrayList<>();
 
-    public int getAxisMask(List<InputDevice.MotionRange> list) {
+    int getAxisMask(List<InputDevice.MotionRange> list) {
         return -1;
     }
 
-    public int getButtonMask(InputDevice inputDevice) {
+    int getButtonMask(InputDevice inputDevice) {
         return -1;
     }
 
-    public int getProductId(InputDevice inputDevice) {
+    int getProductId(InputDevice inputDevice) {
         return 0;
     }
 
-    public int getVendorId(InputDevice inputDevice) {
+    int getVendorId(InputDevice inputDevice) {
         return 0;
     }
 
     /* compiled from: SDLControllerManager.java */
     static class SDLJoystick {
-        public ArrayList<InputDevice.MotionRange> axes;
-        public String desc;
-        public int device_id;
-        public ArrayList<InputDevice.MotionRange> hats;
-        public String name;
+        ArrayList<InputDevice.MotionRange> axes;
+        String desc;
+        int device_id;
+        ArrayList<InputDevice.MotionRange> hats;
+        String name;
 
         SDLJoystick() {
         }
@@ -75,8 +75,11 @@ class SDLJoystickHandler_API16 extends SDLJoystickHandler {
         }
     }
 
+    SDLJoystickHandler_API16() {
+    }
+
     @Override // org.libsdl.app.SDLJoystickHandler
-    public void pollInputDevices() {
+    void pollInputDevices() {
         int[] deviceIds = InputDevice.getDeviceIds();
         for (int i : deviceIds) {
             if (SDLControllerManager.isDeviceSDLJoystick(i) && getJoystick(i) == null) {
@@ -150,7 +153,7 @@ class SDLJoystickHandler_API16 extends SDLJoystickHandler {
     }
 
     @Override // org.libsdl.app.SDLJoystickHandler
-    public boolean handleMotionEvent(MotionEvent motionEvent) {
+    boolean handleMotionEvent(MotionEvent motionEvent) {
         SDLJoystick joystick;
         int actionIndex = motionEvent.getActionIndex();
         if (motionEvent.getActionMasked() == 2 && (joystick = getJoystick(motionEvent.getDeviceId())) != null) {
@@ -166,7 +169,7 @@ class SDLJoystickHandler_API16 extends SDLJoystickHandler {
         return true;
     }
 
-    public String getJoystickDescriptor(InputDevice inputDevice) {
+    String getJoystickDescriptor(InputDevice inputDevice) {
         String descriptor = inputDevice.getDescriptor();
         return (descriptor == null || descriptor.isEmpty()) ? inputDevice.getName() : descriptor;
     }

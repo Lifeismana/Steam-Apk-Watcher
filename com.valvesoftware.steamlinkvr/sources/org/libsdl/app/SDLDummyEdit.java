@@ -18,14 +18,14 @@ public class SDLDummyEdit extends View implements View.OnKeyListener {
         return true;
     }
 
-    public SDLDummyEdit(Context context) {
+    SDLDummyEdit(Context context) {
         super(context);
         setFocusableInTouchMode(true);
         setFocusable(true);
         setOnKeyListener(this);
     }
 
-    public void setInputType(int i) {
+    void setInputType(int i) {
         this.input_type = i;
     }
 

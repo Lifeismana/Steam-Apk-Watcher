@@ -8,7 +8,7 @@ class SDLGenericMotionListener_API24 extends SDLGenericMotionListener_API14 {
     private boolean mRelativeModeEnabled;
 
     @Override // org.libsdl.app.SDLGenericMotionListener_API14
-    public boolean supportsRelativeMouse() {
+    boolean supportsRelativeMouse() {
         return true;
     }
 
@@ -16,18 +16,18 @@ class SDLGenericMotionListener_API24 extends SDLGenericMotionListener_API14 {
     }
 
     @Override // org.libsdl.app.SDLGenericMotionListener_API14
-    public boolean inRelativeMode() {
+    boolean inRelativeMode() {
         return this.mRelativeModeEnabled;
     }
 
     @Override // org.libsdl.app.SDLGenericMotionListener_API14
-    public boolean setRelativeMouseEnabled(boolean z) {
+    boolean setRelativeMouseEnabled(boolean z) {
         this.mRelativeModeEnabled = z;
         return true;
     }
 
     @Override // org.libsdl.app.SDLGenericMotionListener_API14
-    public float getEventX(MotionEvent motionEvent, int i) {
+    float getEventX(MotionEvent motionEvent, int i) {
         if (this.mRelativeModeEnabled && motionEvent.getToolType(i) == 3) {
             return motionEvent.getAxisValue(27, i);
         }
@@ -35,7 +35,7 @@ class SDLGenericMotionListener_API24 extends SDLGenericMotionListener_API14 {
     }
 
     @Override // org.libsdl.app.SDLGenericMotionListener_API14
-    public float getEventY(MotionEvent motionEvent, int i) {
+    float getEventY(MotionEvent motionEvent, int i) {
         if (this.mRelativeModeEnabled && motionEvent.getToolType(i) == 3) {
             return motionEvent.getAxisValue(28, i);
         }

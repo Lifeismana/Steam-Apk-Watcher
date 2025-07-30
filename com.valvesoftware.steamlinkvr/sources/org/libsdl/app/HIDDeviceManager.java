@@ -116,11 +116,11 @@ public class HIDDeviceManager {
         this.mNextDeviceId = this.mSharedPreferences.getInt("next_device_id", 0);
     }
 
-    public Context getContext() {
+    Context getContext() {
         return this.mContext;
     }
 
-    public int getDeviceIDForIdentifier(String str) {
+    int getDeviceIDForIdentifier(String str) {
         SharedPreferences.Editor edit = this.mSharedPreferences.edit();
         int i = this.mSharedPreferences.getInt(str, 0);
         if (i == 0) {
@@ -301,7 +301,7 @@ public class HIDDeviceManager {
         }
     }
 
-    public void chromebookConnectionHandler() {
+    void chromebookConnectionHandler() {
         if (this.mIsChromebook) {
             ArrayList arrayList = new ArrayList();
             ArrayList arrayList2 = new ArrayList();
@@ -334,7 +334,7 @@ public class HIDDeviceManager {
         }
     }
 
-    public boolean connectBluetoothDevice(BluetoothDevice bluetoothDevice) {
+    boolean connectBluetoothDevice(BluetoothDevice bluetoothDevice) {
         Log.v(TAG, "connectBluetoothDevice device=" + bluetoothDevice);
         synchronized (this) {
             if (this.mBluetoothDevices.containsKey(bluetoothDevice)) {
@@ -350,7 +350,7 @@ public class HIDDeviceManager {
         }
     }
 
-    public void disconnectBluetoothDevice(BluetoothDevice bluetoothDevice) {
+    void disconnectBluetoothDevice(BluetoothDevice bluetoothDevice) {
         synchronized (this) {
             HIDDeviceBLESteamController hIDDeviceBLESteamController = this.mBluetoothDevices.get(bluetoothDevice);
             if (hIDDeviceBLESteamController == null) {
@@ -364,7 +364,7 @@ public class HIDDeviceManager {
         }
     }
 
-    public boolean isSteamController(BluetoothDevice bluetoothDevice) {
+    boolean isSteamController(BluetoothDevice bluetoothDevice) {
         return (bluetoothDevice == null || bluetoothDevice.getName() == null || !bluetoothDevice.getName().equals("SteamController") || (bluetoothDevice.getType() & 2) == 0) ? false : true;
     }
 
@@ -403,7 +403,7 @@ public class HIDDeviceManager {
         return hIDDevice;
     }
 
-    public boolean initialize(boolean z, boolean z2) {
+    boolean initialize(boolean z, boolean z2) {
         Log.v(TAG, "initialize(" + z + ", " + z2 + ")");
         if (z) {
             initializeUSB();
@@ -415,7 +415,7 @@ public class HIDDeviceManager {
         return true;
     }
 
-    public boolean openDevice(int i) {
+    boolean openDevice(int i) {
         Log.v(TAG, "openDevice deviceID=" + i);
         HIDDevice device = getDevice(i);
         if (device == null) {
@@ -448,7 +448,7 @@ public class HIDDeviceManager {
         }
     }
 
-    public int writeReport(int i, byte[] bArr, boolean z) {
+    int writeReport(int i, byte[] bArr, boolean z) {
         try {
             HIDDevice device = getDevice(i);
             if (device == null) {
@@ -462,7 +462,7 @@ public class HIDDeviceManager {
         }
     }
 
-    public boolean readReport(int i, byte[] bArr, boolean z) {
+    boolean readReport(int i, byte[] bArr, boolean z) {
         try {
             HIDDevice device = getDevice(i);
             if (device == null) {
@@ -476,7 +476,7 @@ public class HIDDeviceManager {
         }
     }
 
-    public void closeDevice(int i) {
+    void closeDevice(int i) {
         try {
             Log.v(TAG, "closeDevice deviceID=" + i);
             HIDDevice device = getDevice(i);

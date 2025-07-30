@@ -53,8 +53,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     protected static final int COMMAND_TEXTEDIT_HIDE = 3;
     protected static final int COMMAND_USER = 32768;
     private static final int SDL_MAJOR_VERSION = 3;
-    private static final int SDL_MICRO_VERSION = 5;
-    private static final int SDL_MINOR_VERSION = 2;
+    private static final int SDL_MICRO_VERSION = 0;
+    private static final int SDL_MINOR_VERSION = 3;
     protected static final int SDL_ORIENTATION_LANDSCAPE = 1;
     protected static final int SDL_ORIENTATION_LANDSCAPE_FLIPPED = 2;
     protected static final int SDL_ORIENTATION_PORTRAIT = 3;
@@ -312,7 +312,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             message = e3.getMessage();
         }
         if (!mBrokenLibraries) {
-            String str = String.valueOf(3) + "." + String.valueOf(2) + "." + String.valueOf(5);
+            String str = String.valueOf(3) + "." + String.valueOf(3) + "." + String.valueOf(0);
             String nativeGetVersion = nativeGetVersion();
             if (!nativeGetVersion.equals(str)) {
                 mBrokenLibraries = true;

@@ -9,34 +9,37 @@ import java.util.Iterator;
 class SDLHapticHandler {
     private final ArrayList<SDLHaptic> mHaptics = new ArrayList<>();
 
-    public void rumble(int i, float f, float f2, int i2) {
+    void rumble(int i, float f, float f2, int i2) {
     }
 
     /* compiled from: SDLControllerManager.java */
     static class SDLHaptic {
-        public int device_id;
-        public String name;
-        public Vibrator vib;
+        int device_id;
+        String name;
+        Vibrator vib;
 
         SDLHaptic() {
         }
     }
 
-    public void run(int i, float f, int i2) {
+    SDLHapticHandler() {
+    }
+
+    void run(int i, float f, int i2) {
         SDLHaptic haptic = getHaptic(i);
         if (haptic != null) {
             haptic.vib.vibrate(i2);
         }
     }
 
-    public void stop(int i) {
+    void stop(int i) {
         SDLHaptic haptic = getHaptic(i);
         if (haptic != null) {
             haptic.vib.cancel();
         }
     }
 
-    public void pollHapticDevices() {
+    void pollHapticDevices() {
         boolean z;
         Vibrator vibrator = (Vibrator) SDL.getContext().getSystemService("vibrator");
         if (vibrator != null) {
