@@ -59,7 +59,7 @@
 8SVLAudio
 8SVLCodec
 8SVLCrypt
-9888492 
+9902050 
 9a&g
 9JLX
 9QSVLInput
@@ -612,6 +612,7 @@ construction vtable for std::__ndk1::basic_ostream<char, std::__ndk1::char_trait
 continue
 ConvertJointsToSkeleton(std::__ndk1::array<XrHandJointLocationEXT, 26ul> const&, XRQHand, XrPosef const&, std::__ndk1::array<vr::VRBoneTransform_t, 31ul>&)
 copyPixelsToBuffer
+Could not acquire encoded data buffer from codec for frame: %i\n
 could not bind socket to %s device
 Could not log to disk.\n
 covariant return thunk to 
@@ -830,6 +831,7 @@ dEstLinkBW
 [DeviceHMD] Failed to locate reference space
 [DeviceHMD] Failed to register action set for sync!
 [DeviceHMD] Failed to register hmd device actions!
+[DeviceHMD] Found device static props for: %s
 [DeviceHMD] Loading HMD config
 [DeviceHMD] Unable to find device static props for "%s". Attempting to load defaults
 DeviceInput::Clear()
@@ -2662,6 +2664,7 @@ PanelRenderer::GetPanelConfig()
 PanelRenderer::PanelRenderer(PanelConfig)
 PanelRenderer::RenderToScreen(std::__ndk1::unique_ptr<Texture, std::__ndk1::default_delete<Texture>> const&, int, int)
 PanelRenderer::RenderToTexture(glm::mat<4, 4, float, (glm::qualifier)0> const&, glm::mat<4, 4, float, (glm::qualifier)0> const&, std::__ndk1::unique_ptr<Texture, std::__ndk1::default_delete<Texture>> const&, unsigned int, int, int)
+Panic! Overwriting vCompleteFramePointer
 <Pcjv
 permissions_state
 PFbcE
@@ -2834,6 +2837,7 @@ QSVLClientXR::SetShouldWaitOnFrames(bool)
 QSVLClientXR::TrySetPreferredDisplayFrequency(float)
 QSVLCodecNDK::AcquireEncodedDataBuffer(unsigned int, unsigned long*)
 QSVLCodecNDK::BIsStuck()
+QSVLCodecNDK::Flush()
 QSVLCodecNDK::HandleOnImageAvailable(AImageReader*)
 QSVLCodecNDK::HandleOnImageAvailableProc(void*, AImageReader*)
 QSVLCodecNDK::HandleUnrecoverableError()
@@ -2841,7 +2845,6 @@ QSVLCodecNDK::Init()
 QSVLCodecNDK::MediaThread()
 QSVLCodecNDK::~QSVLCodecNDK()
 QSVLCodecNDK::QSVLCodecNDK(std::__ndk1::shared_ptr<QSVLFrameServer>, SVLRenderer*)
-QSVLCodecNDK::ReturnEncodedDataBuffer(unsigned char**, unsigned int)
 QSVLCodecNDK::Stop()
 QSVLCodecNDK::SubmitFrameForDecode(unsigned char**, int, unsigned int, bool)
 QSVLDeviceHmd::GetInput(XRQContext&, PackedHmdInput_t&)
@@ -4896,6 +4899,7 @@ SVLAudio::UpdateStats()
 [SVLClientXR] VTE_CLIENT_AUDIO_STATE %d(%d) %d/%d(%d) - %d(%d) %d/%d(%d)\n
 [SVLClientXR] VTE_SHADER_SCENE_BACKGROUND not implemented!
 [SVLClientXR] Wireless timeout updated to: %i
+SVLCodec::Flush()
 SVLCodec::HardReset()
 SVLCodec::SoftReset()
 SVLCodec::Stop()
@@ -5029,7 +5033,7 @@ SVLFEC: frame %d was entirely dropped, initializing and re-requesting\n
 SVLFEC::GetInFlightAndPendingQueueDepth()
 SVLFEC::GetMetadataForFrameId(unsigned short)
 SVLFEC::InternalAcceptFrameFromRX: Failed to acquire pRender
-SVLFEC::InternalAcceptFrameFromRX(unsigned int, unsigned char*, unsigned short)
+SVLFEC::InternalAcceptFrameFromRX(unsigned int, unsigned char**, unsigned short)
 SVLFEC::ProcessTXVideoFrameThreadFunction()
 SVLFEC::ProcessVideoReply(dataset*)
 SVLFECRAID6::Deactivate()
@@ -5134,6 +5138,8 @@ SVLSpinwait
 SVLStaticProps::operator=(SVLStaticProps&&)
 SVLStaticProps::~SVLStaticProps()
 SVLWebViewThread
+SVST_VIDEO_TRANSPORT_DESCRIPTION: WARNING: Could not initialize frame on hardware.\n
+SVST_VIDEO_TRANSPORT: WARNING: Could not initialize frame on hardware.\n
 sVTXFailFuzz
 SwapBuffers()
 swedish
@@ -6333,8 +6339,6 @@ V_URLEncodeNoPlusForSpace(char*, int, char const*, int)
 waitpid
 Warning: Can't find "gl%s"\n
 WARNING: Corrupt UDP packet went long (%d size, %d left, %d total length)\n
-WARNING: Could not acquire encoded data buffer from codec.\n
-WARNING: Could not initialize frame on hardware.\n
 WARNING: Could not set IP_TOS on data link
 warning: could not set socket buffer size\n
 WARNING: Error to get option on IP_TOS
@@ -6746,6 +6750,7 @@ XRQXrPathToString(XRQContext const&, unsigned long, std::__ndk1::basic_string<ch
 [XRQ] XRQTeardown: Destroyed session
 [XRQ] XRQUpdateSwapchainSamplerStateGLES: XR_FB_swapchain_update_state extension or derivatives are not available
 xrReleaseSwapchainImage
+[XRRenderer] Constructing renderer... %p
 [XRRenderer] Didn't set color space as it wasn't available
 [XRRenderer] Failed to create base layer swapchain for eye: %d
 [XRRenderer] Failed to create EGLImageKHR from decoded image hardware buffer
@@ -6770,6 +6775,7 @@ xrReleaseSwapchainImage
 [XRRenderer] Sampling: Updating swapchain sampler
 [XRRenderer] Sampling: Updating swapchain sampler as it appears valid
 [XRRenderer] Set color space to: %i
+[XRRenderer] Shutting down renderer...
 [XRRenderer] Swapchains were regenerated
 [XRRenderer] Updating color props
 [XRRenderer] Updating swapchain states
