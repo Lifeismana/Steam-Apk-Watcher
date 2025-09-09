@@ -28,11 +28,11 @@ public class SDL {
         return mContext;
     }
 
-    public static void loadLibrary(String str) throws UnsatisfiedLinkError, SecurityException, NullPointerException {
+    static void loadLibrary(String str) throws UnsatisfiedLinkError, SecurityException, NullPointerException {
         loadLibrary(str, mContext);
     }
 
-    public static void loadLibrary(String str, Context context) throws UnsatisfiedLinkError, SecurityException, NullPointerException {
+    static void loadLibrary(String str, Context context) throws UnsatisfiedLinkError, SecurityException, NullPointerException {
         if (str == null) {
             throw new NullPointerException("No library name provided.");
         }
@@ -41,7 +41,7 @@ public class SDL {
             Class<?> loadClass2 = context.getClassLoader().loadClass("com.getkeepsafe.relinker.ReLinker$LoadListener");
             Class<?> loadClass3 = context.getClassLoader().loadClass("android.content.Context");
             Class<?> loadClass4 = context.getClassLoader().loadClass("java.lang.String");
-            Object invoke = loadClass.getDeclaredMethod("force", new Class[0]).invoke(null, new Object[0]);
+            Object invoke = loadClass.getDeclaredMethod("force", null).invoke(null, null);
             invoke.getClass().getDeclaredMethod("loadLibrary", loadClass3, loadClass4, loadClass4, loadClass2).invoke(invoke, context, str, null, null);
         } catch (Throwable unused) {
             System.loadLibrary(str);

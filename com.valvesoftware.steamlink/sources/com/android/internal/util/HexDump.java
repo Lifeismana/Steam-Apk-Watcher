@@ -4,14 +4,6 @@ package com.android.internal.util;
 public class HexDump {
     private static final char[] HEX_DIGITS = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
 
-    public static byte[] toByteArray(byte b) {
-        return new byte[]{b};
-    }
-
-    public static byte[] toByteArray(int i) {
-        return new byte[]{(byte) ((i >> 24) & 255), (byte) ((i >> 16) & 255), (byte) ((i >> 8) & 255), (byte) (i & 255)};
-    }
-
     public static String dumpHexString(byte[] bArr) {
         return dumpHexString(bArr, 0, bArr.length);
     }
@@ -79,7 +71,7 @@ public class HexDump {
             int i5 = i3 + 1;
             char[] cArr2 = HEX_DIGITS;
             cArr[i3] = cArr2[(b >>> 4) & 15];
-            i3 = i5 + 1;
+            i3 += 2;
             cArr[i5] = cArr2[b & 15];
         }
         return new String(cArr);
@@ -89,18 +81,25 @@ public class HexDump {
         return toHexString(toByteArray(i));
     }
 
+    public static byte[] toByteArray(byte b) {
+        return new byte[]{b};
+    }
+
+    public static byte[] toByteArray(int i) {
+        return new byte[]{(byte) ((i >> 24) & 255), (byte) ((i >> 16) & 255), (byte) ((i >> 8) & 255), (byte) (i & 255)};
+    }
+
     private static int toByte(char c) {
         if (c >= '0' && c <= '9') {
             return c - '0';
         }
-        char c2 = 'A';
-        if (c < 'A' || c > 'F') {
-            c2 = 'a';
-            if (c < 'a' || c > 'f') {
-                throw new RuntimeException("Invalid hex char '" + c + "'");
-            }
+        if (c >= 'A' && c <= 'F') {
+            return c - '7';
         }
-        return (c - c2) + 10;
+        if (c >= 'a' && c <= 'f') {
+            return c - 'W';
+        }
+        throw new RuntimeException("Invalid hex char '" + c + "'");
     }
 
     public static byte[] hexStringToByteArray(String str) {

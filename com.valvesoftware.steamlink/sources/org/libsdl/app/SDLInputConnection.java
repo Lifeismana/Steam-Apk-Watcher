@@ -8,7 +8,7 @@ import android.view.inputmethod.BaseInputConnection;
 import android.widget.EditText;
 
 /* loaded from: classes.dex */
-public class SDLInputConnection extends BaseInputConnection {
+class SDLInputConnection extends BaseInputConnection {
     protected String mCommittedText;
     protected EditText mEditText;
 
@@ -16,7 +16,7 @@ public class SDLInputConnection extends BaseInputConnection {
 
     public static native void nativeGenerateScancodeForUnichar(char c);
 
-    public SDLInputConnection(View view, boolean z) {
+    SDLInputConnection(View view, boolean z) {
         super(view, z);
         this.mCommittedText = "";
         this.mEditText = new EditText(SDL.getContext());
@@ -96,16 +96,18 @@ public class SDLInputConnection extends BaseInputConnection {
         }
         if (i < obj.length()) {
             String charSequence = obj.subSequence(i, obj.length()).toString();
-            int i3 = 0;
-            while (i3 < charSequence.length()) {
-                int codePointAt3 = charSequence.codePointAt(i3);
-                if (codePointAt3 == 10 && SDLActivity.onNativeSoftReturnKey()) {
-                    return;
+            if (!SDLActivity.dispatchingKeyEvent()) {
+                int i3 = 0;
+                while (i3 < charSequence.length()) {
+                    int codePointAt3 = charSequence.codePointAt(i3);
+                    if (codePointAt3 == 10 && SDLActivity.onNativeSoftReturnKey()) {
+                        return;
+                    }
+                    if (codePointAt3 > 0 && codePointAt3 < 128) {
+                        nativeGenerateScancodeForUnichar((char) codePointAt3);
+                    }
+                    i3 += Character.charCount(codePointAt3);
                 }
-                if (codePointAt3 < 128) {
-                    nativeGenerateScancodeForUnichar((char) codePointAt3);
-                }
-                i3 += Character.charCount(codePointAt3);
             }
             nativeCommitText(charSequence, 0);
         }

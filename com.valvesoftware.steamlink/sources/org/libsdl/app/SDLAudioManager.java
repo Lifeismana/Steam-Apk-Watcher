@@ -9,21 +9,24 @@ import android.os.Process;
 import android.util.Log;
 
 /* loaded from: classes.dex */
-public class SDLAudioManager {
+class SDLAudioManager {
     protected static final String TAG = "SDLAudio";
     private static AudioDeviceCallback mAudioDeviceCallback;
     protected static Context mContext;
 
-    public static native void addAudioDevice(boolean z, String str, int i);
+    static native void nativeAddAudioDevice(boolean z, String str, int i);
 
-    public static native int nativeSetupJNI();
+    static native void nativeRemoveAudioDevice(boolean z, int i);
 
-    public static void release(Context context) {
+    static native int nativeSetupJNI();
+
+    static void release(Context context) {
     }
 
-    public static native void removeAudioDevice(boolean z, int i);
+    SDLAudioManager() {
+    }
 
-    public static void initialize() {
+    static void initialize() {
         mAudioDeviceCallback = null;
         if (Build.VERSION.SDK_INT >= 24) {
             mAudioDeviceCallback = new AudioDeviceCallback() { // from class: org.libsdl.app.SDLAudioManager.1
@@ -37,7 +40,7 @@ public class SDLAudioManager {
                         productName = audioDeviceInfo.getProductName();
                         String charSequence = productName.toString();
                         id = audioDeviceInfo.getId();
-                        SDLAudioManager.addAudioDevice(isSink, charSequence, id);
+                        SDLAudioManager.nativeAddAudioDevice(isSink, charSequence, id);
                     }
                 }
 
@@ -48,14 +51,14 @@ public class SDLAudioManager {
                     for (AudioDeviceInfo audioDeviceInfo : audioDeviceInfoArr) {
                         isSink = audioDeviceInfo.isSink();
                         id = audioDeviceInfo.getId();
-                        SDLAudioManager.removeAudioDevice(isSink, id);
+                        SDLAudioManager.nativeRemoveAudioDevice(isSink, id);
                     }
                 }
             };
         }
     }
 
-    public static void setContext(Context context) {
+    static void setContext(Context context) {
         mContext = context;
     }
 
@@ -91,7 +94,7 @@ public class SDLAudioManager {
         return null;
     }
 
-    public static void registerAudioDeviceCallback() {
+    static void registerAudioDeviceCallback() {
         AudioDeviceInfo[] devices;
         AudioDeviceInfo[] devices2;
         boolean isSink;
@@ -111,7 +114,7 @@ public class SDLAudioManager {
                     productName2 = audioDeviceInfo.getProductName();
                     String charSequence = productName2.toString();
                     id2 = audioDeviceInfo.getId();
-                    addAudioDevice(isSink2, charSequence, id2);
+                    nativeAddAudioDevice(isSink2, charSequence, id2);
                 }
             }
             devices2 = audioManager.getDevices(1);
@@ -120,19 +123,19 @@ public class SDLAudioManager {
                 productName = audioDeviceInfo2.getProductName();
                 String charSequence2 = productName.toString();
                 id = audioDeviceInfo2.getId();
-                addAudioDevice(isSink, charSequence2, id);
+                nativeAddAudioDevice(isSink, charSequence2, id);
             }
             audioManager.registerAudioDeviceCallback(mAudioDeviceCallback, null);
         }
     }
 
-    public static void unregisterAudioDeviceCallback() {
+    static void unregisterAudioDeviceCallback() {
         if (Build.VERSION.SDK_INT >= 24) {
             ((AudioManager) mContext.getSystemService("audio")).unregisterAudioDeviceCallback(mAudioDeviceCallback);
         }
     }
 
-    public static void audioSetThreadPriority(boolean z, int i) {
+    static void audioSetThreadPriority(boolean z, int i) {
         try {
             if (z) {
                 Thread.currentThread().setName("SDLAudioC" + i);

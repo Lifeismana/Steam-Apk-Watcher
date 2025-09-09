@@ -132,7 +132,10 @@ public class SteamLink extends SDLActivity {
             return strArr;
         }
         ArrayList<String> stringArrayList = extras.getStringArrayList(ARGS_KEY);
-        return stringArrayList != null ? (String[]) stringArrayList.toArray(new String[stringArrayList.size()]) : new String[0];
+        if (stringArrayList != null) {
+            return (String[]) stringArrayList.toArray(new String[stringArrayList.size()]);
+        }
+        return new String[0];
     }
 
     private void enableWiFiLock() {

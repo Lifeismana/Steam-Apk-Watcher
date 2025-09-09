@@ -121,127 +121,118 @@ public class ApkLibraryInstaller implements ReLinker.LibraryInstaller {
         return (String[]) hashSet.toArray(new String[hashSet.size()]);
     }
 
+    /* JADX WARN: Code restructure failed: missing block: B:36:0x0060, code lost:
+    
+        r1.zipFile.close();
+     */
+    /* JADX WARN: Code restructure failed: missing block: B:38:?, code lost:
+    
+        return;
+     */
     @Override // com.getkeepsafe.relinker.ReLinker.LibraryInstaller
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
     public void installLibrary(Context context, String[] strArr, String str, File file, ReLinkerInstance reLinkerInstance) {
+        ZipFileInZipEntry findAPKWithLibrary;
         String[] strArr2;
         FileOutputStream fileOutputStream;
         InputStream inputStream;
-        long copy;
         ZipFileInZipEntry zipFileInZipEntry = null;
         Closeable closeable = null;
         try {
-            ZipFileInZipEntry findAPKWithLibrary = findAPKWithLibrary(context, strArr, str, reLinkerInstance);
-            try {
-                if (findAPKWithLibrary == null) {
-                    try {
-                        strArr2 = getSupportedABIs(context, str);
-                    } catch (Exception e) {
-                        strArr2 = new String[]{e.toString()};
-                    }
-                    throw new MissingLibraryException(str, strArr, strArr2);
+            findAPKWithLibrary = findAPKWithLibrary(context, strArr, str, reLinkerInstance);
+        } catch (Throwable th) {
+            th = th;
+        }
+        try {
+            if (findAPKWithLibrary == null) {
+                try {
+                    strArr2 = getSupportedABIs(context, str);
+                } catch (Exception e) {
+                    strArr2 = new String[]{e.toString()};
                 }
-                int i = 0;
-                while (true) {
-                    int i2 = i + 1;
-                    if (i >= 5) {
-                        reLinkerInstance.log("FATAL! Couldn't extract the library from the APK!");
-                        if (findAPKWithLibrary != null) {
-                            try {
-                                if (findAPKWithLibrary.zipFile != null) {
-                                    findAPKWithLibrary.zipFile.close();
-                                    return;
-                                }
-                                return;
-                            } catch (IOException unused) {
-                                return;
-                            }
-                        }
-                        return;
-                    }
-                    reLinkerInstance.log("Found %s! Extracting...", str);
-                    try {
-                        if (file.exists() || file.createNewFile()) {
-                            try {
-                                inputStream = findAPKWithLibrary.zipFile.getInputStream(findAPKWithLibrary.zipEntry);
+                throw new MissingLibraryException(str, strArr, strArr2);
+            }
+            int i = 0;
+            while (true) {
+                int i2 = i + 1;
+                try {
+                    if (i < 5) {
+                        reLinkerInstance.log("Found %s! Extracting...", str);
+                        try {
+                            if (file.exists() || file.createNewFile()) {
                                 try {
-                                    fileOutputStream = new FileOutputStream(file);
-                                } catch (FileNotFoundException unused2) {
-                                    fileOutputStream = null;
-                                } catch (IOException unused3) {
-                                    fileOutputStream = null;
-                                } catch (Throwable th) {
-                                    th = th;
-                                    fileOutputStream = null;
-                                }
-                                try {
-                                    copy = copy(inputStream, fileOutputStream);
-                                    fileOutputStream.getFD().sync();
+                                    inputStream = findAPKWithLibrary.zipFile.getInputStream(findAPKWithLibrary.zipEntry);
+                                    try {
+                                        fileOutputStream = new FileOutputStream(file);
+                                        try {
+                                            long copy = copy(inputStream, fileOutputStream);
+                                            fileOutputStream.getFD().sync();
+                                            if (copy == file.length()) {
+                                                closeSilently(inputStream);
+                                                closeSilently(fileOutputStream);
+                                                file.setReadable(true, false);
+                                                file.setExecutable(true, false);
+                                                file.setWritable(true);
+                                                if (findAPKWithLibrary == null || findAPKWithLibrary.zipFile == null) {
+                                                    return;
+                                                }
+                                            }
+                                        } catch (FileNotFoundException | IOException unused) {
+                                        } catch (Throwable th2) {
+                                            th = th2;
+                                            closeable = inputStream;
+                                            closeSilently(closeable);
+                                            closeSilently(fileOutputStream);
+                                            throw th;
+                                        }
+                                    } catch (FileNotFoundException unused2) {
+                                        fileOutputStream = null;
+                                    } catch (IOException unused3) {
+                                        fileOutputStream = null;
+                                    } catch (Throwable th3) {
+                                        th = th3;
+                                        fileOutputStream = null;
+                                    }
                                 } catch (FileNotFoundException unused4) {
-                                    closeSilently(inputStream);
-                                    closeSilently(fileOutputStream);
-                                    i = i2;
+                                    inputStream = null;
+                                    fileOutputStream = null;
                                 } catch (IOException unused5) {
-                                    closeSilently(inputStream);
-                                    closeSilently(fileOutputStream);
-                                    i = i2;
-                                } catch (Throwable th2) {
-                                    th = th2;
-                                    closeable = inputStream;
-                                    closeSilently(closeable);
-                                    closeSilently(fileOutputStream);
-                                    throw th;
+                                    inputStream = null;
+                                    fileOutputStream = null;
+                                } catch (Throwable th4) {
+                                    th = th4;
+                                    fileOutputStream = null;
                                 }
-                            } catch (FileNotFoundException unused6) {
-                                inputStream = null;
-                                fileOutputStream = null;
-                            } catch (IOException unused7) {
-                                inputStream = null;
-                                fileOutputStream = null;
-                            } catch (Throwable th3) {
-                                th = th3;
-                                fileOutputStream = null;
-                            }
-                            if (copy == file.length()) {
                                 closeSilently(inputStream);
                                 closeSilently(fileOutputStream);
-                                file.setReadable(true, false);
-                                file.setExecutable(true, false);
-                                file.setWritable(true);
-                                if (findAPKWithLibrary != null) {
-                                    try {
-                                        if (findAPKWithLibrary.zipFile != null) {
-                                            findAPKWithLibrary.zipFile.close();
-                                            return;
-                                        }
-                                        return;
-                                    } catch (IOException unused8) {
-                                        return;
-                                    }
-                                }
-                                return;
                             }
-                            closeSilently(inputStream);
-                            closeSilently(fileOutputStream);
+                        } catch (IOException unused6) {
                         }
-                    } catch (IOException unused9) {
-                    }
-                    i = i2;
-                }
-            } catch (Throwable th4) {
-                th = th4;
-                zipFileInZipEntry = findAPKWithLibrary;
-                if (zipFileInZipEntry != null) {
-                    try {
-                        if (zipFileInZipEntry.zipFile != null) {
-                            zipFileInZipEntry.zipFile.close();
+                        i = i2;
+                    } else {
+                        reLinkerInstance.log("FATAL! Couldn't extract the library from the APK!");
+                        if (findAPKWithLibrary == null || findAPKWithLibrary.zipFile == null) {
+                            return;
                         }
-                    } catch (IOException unused10) {
                     }
+                } catch (IOException unused7) {
+                    return;
                 }
-                throw th;
             }
         } catch (Throwable th5) {
             th = th5;
+            zipFileInZipEntry = findAPKWithLibrary;
+            if (zipFileInZipEntry != null) {
+                try {
+                    if (zipFileInZipEntry.zipFile != null) {
+                        zipFileInZipEntry.zipFile.close();
+                    }
+                } catch (IOException unused8) {
+                }
+            }
+            throw th;
         }
     }
 

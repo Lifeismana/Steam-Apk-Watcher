@@ -112,15 +112,15 @@ public class HIDDeviceManager {
         this.mContext = context;
         HIDDeviceRegisterCallback();
         this.mSharedPreferences = this.mContext.getSharedPreferences(TAG, 0);
-        this.mIsChromebook = this.mContext.getPackageManager().hasSystemFeature("org.chromium.arc.device_management");
+        this.mIsChromebook = SDLActivity.isChromebook();
         this.mNextDeviceId = this.mSharedPreferences.getInt("next_device_id", 0);
     }
 
-    public Context getContext() {
+    Context getContext() {
         return this.mContext;
     }
 
-    public int getDeviceIDForIdentifier(String str) {
+    int getDeviceIDForIdentifier(String str) {
         SharedPreferences.Editor edit = this.mSharedPreferences.edit();
         int i = this.mSharedPreferences.getInt(str, 0);
         if (i == 0) {
@@ -184,10 +184,10 @@ public class HIDDeviceManager {
     }
 
     private boolean isXboxOneController(UsbDevice usbDevice, UsbInterface usbInterface) {
-        int[] iArr = {1008, 1103, 1118, 1848, 2821, 3695, 3853, 4341, 5426, 8406, 9414, 11720, 11812, 13623};
+        int[] iArr = {1008, 1103, 1118, 1848, 2821, 3695, 3853, 4341, 5426, 8406, 9414, 10571, 11720, 11812, 11925, 12933, 13623, 13932};
         if (usbInterface.getId() == 0 && usbInterface.getInterfaceClass() == 255 && usbInterface.getInterfaceSubclass() == 71 && usbInterface.getInterfaceProtocol() == 208) {
             int vendorId = usbDevice.getVendorId();
-            for (int i = 0; i < 14; i++) {
+            for (int i = 0; i < 18; i++) {
                 if (vendorId == iArr[i]) {
                     return true;
                 }
@@ -203,17 +203,16 @@ public class HIDDeviceManager {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void handleUsbDeviceDetached(UsbDevice usbDevice) {
-        ArrayList arrayList = new ArrayList();
+        ArrayList<Integer> arrayList = new ArrayList();
         for (HIDDevice hIDDevice : this.mDevicesById.values()) {
             if (usbDevice.equals(hIDDevice.getDevice())) {
                 arrayList.add(Integer.valueOf(hIDDevice.getId()));
             }
         }
-        Iterator it = arrayList.iterator();
-        while (it.hasNext()) {
-            int intValue = ((Integer) it.next()).intValue();
-            HIDDevice hIDDevice2 = this.mDevicesById.get(Integer.valueOf(intValue));
-            this.mDevicesById.remove(Integer.valueOf(intValue));
+        for (Integer num : arrayList) {
+            int intValue = num.intValue();
+            HIDDevice hIDDevice2 = this.mDevicesById.get(num);
+            this.mDevicesById.remove(num);
             hIDDevice2.shutdown();
             HIDDeviceDisconnected(intValue);
         }
@@ -229,27 +228,25 @@ public class HIDDeviceManager {
     }
 
     private void connectHIDDeviceUSB(UsbDevice usbDevice) {
-        int i;
+        HIDDeviceManager hIDDeviceManager = this;
         synchronized (this) {
+            int i = 0;
             int i2 = 0;
-            int i3 = 0;
-            while (i3 < usbDevice.getInterfaceCount()) {
-                UsbInterface usbInterface = usbDevice.getInterface(i3);
-                if (isHIDDeviceInterface(usbDevice, usbInterface)) {
+            while (i2 < usbDevice.getInterfaceCount()) {
+                UsbInterface usbInterface = usbDevice.getInterface(i2);
+                if (hIDDeviceManager.isHIDDeviceInterface(usbDevice, usbInterface)) {
                     int id = 1 << usbInterface.getId();
-                    if ((i2 & id) == 0) {
-                        int i4 = i2 | id;
-                        HIDDeviceUSB hIDDeviceUSB = new HIDDeviceUSB(this, usbDevice, i3);
+                    if ((i & id) == 0) {
+                        int i3 = i | id;
+                        HIDDeviceUSB hIDDeviceUSB = new HIDDeviceUSB(hIDDeviceManager, usbDevice, i2);
                         int id2 = hIDDeviceUSB.getId();
-                        this.mDevicesById.put(Integer.valueOf(id2), hIDDeviceUSB);
+                        hIDDeviceManager.mDevicesById.put(Integer.valueOf(id2), hIDDeviceUSB);
+                        hIDDeviceManager.HIDDeviceConnected(id2, hIDDeviceUSB.getIdentifier(), hIDDeviceUSB.getVendorId(), hIDDeviceUSB.getProductId(), hIDDeviceUSB.getSerialNumber(), hIDDeviceUSB.getVersion(), hIDDeviceUSB.getManufacturerName(), hIDDeviceUSB.getProductName(), usbInterface.getId(), usbInterface.getInterfaceClass(), usbInterface.getInterfaceSubclass(), usbInterface.getInterfaceProtocol(), false);
                         i = i3;
-                        HIDDeviceConnected(id2, hIDDeviceUSB.getIdentifier(), hIDDeviceUSB.getVendorId(), hIDDeviceUSB.getProductId(), hIDDeviceUSB.getSerialNumber(), hIDDeviceUSB.getVersion(), hIDDeviceUSB.getManufacturerName(), hIDDeviceUSB.getProductName(), usbInterface.getId(), usbInterface.getInterfaceClass(), usbInterface.getInterfaceSubclass(), usbInterface.getInterfaceProtocol(), false);
-                        i2 = i4;
-                        i3 = i + 1;
                     }
                 }
-                i = i3;
-                i3 = i + 1;
+                i2++;
+                hIDDeviceManager = this;
             }
         }
     }
@@ -301,7 +298,7 @@ public class HIDDeviceManager {
         }
     }
 
-    public void chromebookConnectionHandler() {
+    void chromebookConnectionHandler() {
         if (this.mIsChromebook) {
             ArrayList arrayList = new ArrayList();
             ArrayList arrayList2 = new ArrayList();
@@ -334,7 +331,7 @@ public class HIDDeviceManager {
         }
     }
 
-    public boolean connectBluetoothDevice(BluetoothDevice bluetoothDevice) {
+    boolean connectBluetoothDevice(BluetoothDevice bluetoothDevice) {
         Log.v(TAG, "connectBluetoothDevice device=" + bluetoothDevice);
         synchronized (this) {
             if (this.mBluetoothDevices.containsKey(bluetoothDevice)) {
@@ -350,7 +347,7 @@ public class HIDDeviceManager {
         }
     }
 
-    public void disconnectBluetoothDevice(BluetoothDevice bluetoothDevice) {
+    void disconnectBluetoothDevice(BluetoothDevice bluetoothDevice) {
         synchronized (this) {
             HIDDeviceBLESteamController hIDDeviceBLESteamController = this.mBluetoothDevices.get(bluetoothDevice);
             if (hIDDeviceBLESteamController == null) {
@@ -364,7 +361,7 @@ public class HIDDeviceManager {
         }
     }
 
-    public boolean isSteamController(BluetoothDevice bluetoothDevice) {
+    boolean isSteamController(BluetoothDevice bluetoothDevice) {
         return (bluetoothDevice == null || bluetoothDevice.getName() == null || !bluetoothDevice.getName().equals("SteamController") || (bluetoothDevice.getType() & 2) == 0) ? false : true;
     }
 
@@ -403,7 +400,7 @@ public class HIDDeviceManager {
         return hIDDevice;
     }
 
-    public boolean initialize(boolean z, boolean z2) {
+    boolean initialize(boolean z, boolean z2) {
         Log.v(TAG, "initialize(" + z + ", " + z2 + ")");
         if (z) {
             initializeUSB();
@@ -415,7 +412,7 @@ public class HIDDeviceManager {
         return true;
     }
 
-    public boolean openDevice(int i) {
+    boolean openDevice(int i) {
         Log.v(TAG, "openDevice deviceID=" + i);
         HIDDevice device = getDevice(i);
         if (device == null) {
@@ -427,13 +424,9 @@ public class HIDDeviceManager {
             HIDDeviceOpenPending(i);
             try {
                 int i2 = Build.VERSION.SDK_INT >= 31 ? 33554432 : 0;
-                if (Build.VERSION.SDK_INT >= 33) {
-                    Intent intent = new Intent(ACTION_USB_PERMISSION);
-                    intent.setPackage(this.mContext.getPackageName());
-                    this.mUsbManager.requestPermission(device2, PendingIntent.getBroadcast(this.mContext, 0, intent, i2));
-                } else {
-                    this.mUsbManager.requestPermission(device2, PendingIntent.getBroadcast(this.mContext, 0, new Intent(ACTION_USB_PERMISSION), i2));
-                }
+                Intent intent = new Intent(ACTION_USB_PERMISSION);
+                intent.setPackage(this.mContext.getPackageName());
+                this.mUsbManager.requestPermission(device2, PendingIntent.getBroadcast(this.mContext, 0, intent, i2));
             } catch (Exception unused) {
                 Log.v(TAG, "Couldn't request permission for USB device " + device2);
                 HIDDeviceOpenResult(i, false);
@@ -448,7 +441,7 @@ public class HIDDeviceManager {
         }
     }
 
-    public int writeReport(int i, byte[] bArr, boolean z) {
+    int writeReport(int i, byte[] bArr, boolean z) {
         try {
             HIDDevice device = getDevice(i);
             if (device == null) {
@@ -462,7 +455,7 @@ public class HIDDeviceManager {
         }
     }
 
-    public boolean readReport(int i, byte[] bArr, boolean z) {
+    boolean readReport(int i, byte[] bArr, boolean z) {
         try {
             HIDDevice device = getDevice(i);
             if (device == null) {
@@ -476,7 +469,7 @@ public class HIDDeviceManager {
         }
     }
 
-    public void closeDevice(int i) {
+    void closeDevice(int i) {
         try {
             Log.v(TAG, "closeDevice deviceID=" + i);
             HIDDevice device = getDevice(i);

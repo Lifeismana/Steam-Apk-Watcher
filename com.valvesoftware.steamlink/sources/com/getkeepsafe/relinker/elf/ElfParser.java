@@ -47,52 +47,55 @@ public class ElfParser implements Closeable, Elf {
 
     public List<String> parseNeededDependencies() throws IOException {
         long j;
+        long j2;
         this.channel.position(0L);
         ArrayList arrayList = new ArrayList();
         Elf.Header parseHeader = parseHeader();
         ByteBuffer allocate = ByteBuffer.allocate(8);
         allocate.order(parseHeader.bigEndian ? ByteOrder.BIG_ENDIAN : ByteOrder.LITTLE_ENDIAN);
-        long j2 = parseHeader.phnum;
+        long j3 = parseHeader.phnum;
         int i = 0;
-        if (j2 == 65535) {
-            j2 = parseHeader.getSectionHeader(0).info;
+        if (j3 == 65535) {
+            j3 = parseHeader.getSectionHeader(0).info;
         }
-        long j3 = 0;
+        long j4 = 0;
         while (true) {
-            if (j3 >= j2) {
-                j = 0;
+            j = 1;
+            if (j4 >= j3) {
+                j2 = 0;
                 break;
             }
-            Elf.ProgramHeader programHeader = parseHeader.getProgramHeader(j3);
+            Elf.ProgramHeader programHeader = parseHeader.getProgramHeader(j4);
             if (programHeader.type == 2) {
-                j = programHeader.offset;
+                j2 = programHeader.offset;
                 break;
             }
-            j3++;
+            j4++;
         }
-        if (j == 0) {
+        if (j2 == 0) {
             return Collections.unmodifiableList(arrayList);
         }
         ArrayList arrayList2 = new ArrayList();
-        long j4 = 0;
+        long j5 = 0;
         while (true) {
-            Elf.DynamicStructure dynamicStructure = parseHeader.getDynamicStructure(j, i);
-            long j5 = j;
-            if (dynamicStructure.tag == 1) {
+            Elf.DynamicStructure dynamicStructure = parseHeader.getDynamicStructure(j2, i);
+            long j6 = j;
+            if (dynamicStructure.tag == j6) {
                 arrayList2.add(Long.valueOf(dynamicStructure.val));
             } else if (dynamicStructure.tag == 5) {
-                j4 = dynamicStructure.val;
+                j5 = dynamicStructure.val;
             }
             i++;
             if (dynamicStructure.tag == 0) {
                 break;
             }
-            j = j5;
+            j = j6;
+            j3 = j3;
         }
-        if (j4 == 0) {
+        if (j5 == 0) {
             throw new IllegalStateException("String table offset not found!");
         }
-        long offsetFromVma = offsetFromVma(parseHeader, j2, j4);
+        long offsetFromVma = offsetFromVma(parseHeader, j3, j5);
         Iterator it = arrayList2.iterator();
         while (it.hasNext()) {
             arrayList.add(readString(allocate, ((Long) it.next()).longValue() + offsetFromVma));

@@ -54,8 +54,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     protected static final int COMMAND_TEXTEDIT_HIDE = 3;
     protected static final int COMMAND_USER = 32768;
     private static final int SDL_MAJOR_VERSION = 3;
-    private static final int SDL_MICRO_VERSION = 7;
-    private static final int SDL_MINOR_VERSION = 1;
+    private static final int SDL_MICRO_VERSION = 0;
+    private static final int SDL_MINOR_VERSION = 3;
     protected static final int SDL_ORIENTATION_LANDSCAPE = 1;
     protected static final int SDL_ORIENTATION_LANDSCAPE_FLIPPED = 2;
     protected static final int SDL_ORIENTATION_PORTRAIT = 3;
@@ -89,6 +89,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     public static NativeState mCurrentNativeState;
     protected static int mCurrentRotation;
     protected static Hashtable<Integer, PointerIcon> mCursors;
+    protected static boolean mDispatchingKeyEvent;
     private static SDLFileDialogState mFileDialogState;
     protected static boolean mFullscreenModeActive;
     protected static HIDDeviceManager mHIDDeviceManager;
@@ -97,7 +98,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     public static boolean mIsResumedCalled;
     protected static int mLastCursorID;
     protected static ViewGroup mLayout;
-    protected static SDLGenericMotionListener_API12 mMotionListener;
+    protected static SDLGenericMotionListener_API14 mMotionListener;
     public static NativeState mNextNativeState;
     protected static boolean mSDLMainFinished;
     protected static Thread mSDLThread;
@@ -182,6 +183,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
 
     public static native void onNativeMouse(int i, int i2, float f, float f2, boolean z);
 
+    public static native void onNativePen(int i, int i2, int i3, float f, float f2, float f3);
+
     public static native void onNativeResize();
 
     public static native void onNativeRotationChanged(int i);
@@ -200,14 +203,6 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         return false;
     }
 
-    protected String[] getArguments() {
-        return new String[0];
-    }
-
-    protected String getMainFunction() {
-        return "SDL_main";
-    }
-
     protected boolean onUnhandledMessage(int i, Object obj) {
         return false;
     }
@@ -218,16 +213,17 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         mSDLMainFinished = false;
         mActivityCreated = false;
         mFileDialogState = null;
+        mDispatchingKeyEvent = false;
     }
 
-    protected static SDLGenericMotionListener_API12 getMotionListener() {
+    protected static SDLGenericMotionListener_API14 getMotionListener() {
         if (mMotionListener == null) {
             if (Build.VERSION.SDK_INT >= 26) {
                 mMotionListener = new SDLGenericMotionListener_API26();
             } else if (Build.VERSION.SDK_INT >= 24) {
                 mMotionListener = new SDLGenericMotionListener_API24();
             } else {
-                mMotionListener = new SDLGenericMotionListener_API12();
+                mMotionListener = new SDLGenericMotionListener_API14();
             }
         }
         return mMotionListener;
@@ -253,6 +249,10 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         return getContext().getApplicationInfo().nativeLibraryDir + "/" + str;
     }
 
+    protected String getMainFunction() {
+        return "SDL_main";
+    }
+
     protected String[] getLibraries() {
         return new String[]{"SDL3", "main"};
     }
@@ -261,6 +261,10 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         for (String str : getLibraries()) {
             SDL.loadLibrary(str, this);
         }
+    }
+
+    protected String[] getArguments() {
+        return new String[0];
     }
 
     public static void initialize() {
@@ -326,7 +330,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             message = e3.getMessage();
         }
         if (!mBrokenLibraries) {
-            String str = String.valueOf(3) + "." + String.valueOf(1) + "." + String.valueOf(7);
+            String str = String.valueOf(3) + "." + String.valueOf(3) + "." + String.valueOf(0);
             String nativeGetVersion = nativeGetVersion();
             if (!nativeGetVersion.equals(str)) {
                 mBrokenLibraries = true;
@@ -470,25 +474,24 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         }
         Configuration configuration = activity.getResources().getConfiguration();
         int rotation = activity.getWindowManager().getDefaultDisplay().getRotation();
-        if ((rotation == 0 || rotation == 2) && configuration.orientation == 2) {
-            return 1;
-        }
-        return ((rotation == 1 || rotation == 3) && configuration.orientation == 1) ? 1 : 3;
+        return (((rotation == 0 || rotation == 2) && configuration.orientation == 2) || ((rotation == 1 || rotation == 3) && configuration.orientation == 1)) ? 1 : 3;
     }
 
     public static int getCurrentRotation() {
         int rotation;
         Activity activity = (Activity) getContext();
-        if (activity == null || (rotation = activity.getWindowManager().getDefaultDisplay().getRotation()) == 0) {
-            return 0;
+        if (activity != null && (rotation = activity.getWindowManager().getDefaultDisplay().getRotation()) != 0) {
+            if (rotation == 1) {
+                return 90;
+            }
+            if (rotation == 2) {
+                return 180;
+            }
+            if (rotation == 3) {
+                return 270;
+            }
         }
-        if (rotation == 1) {
-            return 90;
-        }
-        if (rotation != 2) {
-            return rotation != 3 ? 0 : 270;
-        }
-        return 180;
+        return 0;
     }
 
     @Override // android.app.Activity, android.view.Window.Callback
@@ -633,7 +636,14 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         if (mBrokenLibraries || (keyCode = keyEvent.getKeyCode()) == 25 || keyCode == 24 || keyCode == 27 || keyCode == 168 || keyCode == 169) {
             return false;
         }
-        return super.dispatchKeyEvent(keyEvent);
+        mDispatchingKeyEvent = true;
+        boolean dispatchKeyEvent = super.dispatchKeyEvent(keyEvent);
+        mDispatchingKeyEvent = false;
+        return dispatchKeyEvent;
+    }
+
+    public static boolean dispatchingKeyEvent() {
+        return mDispatchingKeyEvent;
     }
 
     public static void handleNativeState() {
@@ -710,8 +720,11 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
                         }
                         if (Build.VERSION.SDK_INT >= 28) {
                             window2.getAttributes().layoutInDisplayCutoutMode = 3;
+                        }
+                        if (Build.VERSION.SDK_INT < 30 || Build.VERSION.SDK_INT >= 35) {
                             return;
                         }
+                        SDLActivity.onNativeInsetsChanged(0, 0, 0, 0);
                         return;
                     }
                     return;
@@ -831,7 +844,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             } else if (!z4 || !z3) {
             }
         } else if (!z) {
-            i5 = i > i2 ? SDL_SYSTEM_CURSOR_SIZENESW : 7;
+            i5 = i > i2 ? SDL_SYSTEM_CURSOR_SIZENESW : SDL_SYSTEM_CURSOR_SIZEWE;
         }
         Log.v(TAG, "setOrientation() requestedOrientation=" + i5 + " width=" + i + " height=" + i2 + " resizable=" + z + " hint=" + str);
         mSingleton.setRequestedOrientation(i5);
@@ -914,23 +927,24 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     }
 
     public static boolean isChromebook() {
-        if (getContext() == null) {
-            return false;
+        if (getContext() == null || !(getContext().getPackageManager().hasSystemFeature("org.chromium.arc") || getContext().getPackageManager().hasSystemFeature("org.chromium.arc.device_management"))) {
+            return Build.MODEL != null && Build.MODEL.startsWith("sdk_gpc_");
         }
-        return getContext().getPackageManager().hasSystemFeature("org.chromium.arc.device_management");
+        return true;
     }
 
     public static boolean isDeXMode() {
+        Configuration configuration;
+        Class<?> cls;
         if (Build.VERSION.SDK_INT < 24) {
             return false;
         }
         try {
-            Configuration configuration = getContext().getResources().getConfiguration();
-            Class<?> cls = configuration.getClass();
-            return cls.getField("SEM_DESKTOP_MODE_ENABLED").getInt(cls) == cls.getField("semDesktopModeEnabled").getInt(configuration);
+            configuration = getContext().getResources().getConfiguration();
+            cls = configuration.getClass();
         } catch (Exception unused) {
-            return false;
         }
+        return cls.getField("SEM_DESKTOP_MODE_ENABLED").getInt(cls) == cls.getField("semDesktopModeEnabled").getInt(configuration);
     }
 
     public static boolean getManifestEnvironmentVariables() {
@@ -959,37 +973,37 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         static final int HEIGHT_PADDING = 15;
 
         /* renamed from: h */
-        public int f1h;
+        public int f0h;
         public int input_type;
 
         /* renamed from: w */
-        public int f2w;
+        public int f1w;
 
         /* renamed from: x */
-        public int f3x;
+        public int f2x;
 
         /* renamed from: y */
-        public int f4y;
+        public int f3y;
 
         public ShowTextInputTask(int i, int i2, int i3, int i4, int i5) {
             this.input_type = i;
-            this.f3x = i2;
-            this.f4y = i3;
-            this.f2w = i4;
-            this.f1h = i5;
+            this.f2x = i2;
+            this.f3y = i3;
+            this.f1w = i4;
+            this.f0h = i5;
             if (i4 <= 0) {
-                this.f2w = 1;
+                this.f1w = 1;
             }
             if (i5 + HEIGHT_PADDING <= 0) {
-                this.f1h = -14;
+                this.f0h = -14;
             }
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(this.f2w, this.f1h + HEIGHT_PADDING);
-            layoutParams.leftMargin = this.f3x;
-            layoutParams.topMargin = this.f4y;
+            RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(this.f1w, this.f0h + HEIGHT_PADDING);
+            layoutParams.leftMargin = this.f2x;
+            layoutParams.topMargin = this.f3y;
             if (SDLActivity.mTextEdit == null) {
                 SDLActivity.mTextEdit = new SDLDummyEdit(SDL.getContext());
                 SDLActivity.mLayout.addView(SDLActivity.mTextEdit, layoutParams);
@@ -1016,6 +1030,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     }
 
     public static boolean handleKeyEvent(View view, int i, KeyEvent keyEvent, InputConnection inputConnection) {
+        int action;
         InputDevice device;
         int deviceId = keyEvent.getDeviceId();
         int source = keyEvent.getSource();
@@ -1031,14 +1046,11 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
                 return true;
             }
         }
-        if ((source & 8194) == 8194 && !isVRHeadset() && (i == 4 || i == 125)) {
-            Log.v(TAG, "keycode is back or forward");
-            int action = keyEvent.getAction();
-            if (action == 0 || action == 1) {
-                return true;
-            }
+        if ((source & 8194) == 8194 && !isVRHeadset() && ((i == 4 || i == 125) && ((action = keyEvent.getAction()) == 0 || action == 1))) {
+            return true;
         }
         if (keyEvent.getAction() == 0) {
+            onNativeKeyDown(i);
             if (isTextInputEvent(keyEvent)) {
                 if (inputConnection != null) {
                     inputConnection.commitText(String.valueOf((char) keyEvent.getUnicodeChar()), 1);
@@ -1046,7 +1058,6 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
                     SDLInputConnection.nativeCommitText(String.valueOf((char) keyEvent.getUnicodeChar()), 1);
                 }
             }
-            onNativeKeyDown(i);
             return true;
         }
         if (keyEvent.getAction() != 1) {
@@ -1252,7 +1263,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     public static boolean setCustomCursor(int i) {
         if (Build.VERSION.SDK_INT >= 24) {
             try {
-                mSurface.setPointerIcon(SDLSurface$$ExternalSyntheticApiModelOutline0.m17m(mCursors.get(Integer.valueOf(i))));
+                mSurface.setPointerIcon(SDLSurface$$ExternalSyntheticApiModelOutline0.m19m(mCursors.get(Integer.valueOf(i))));
                 return true;
             } catch (Exception unused) {
             }
@@ -1286,7 +1297,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             case SDL_SYSTEM_CURSOR_WINDOW_BOTTOMLEFT /* 18 */:
                 i2 = 1016;
                 break;
-            case 7:
+            case SDL_SYSTEM_CURSOR_SIZEWE /* 7 */:
             case SDL_SYSTEM_CURSOR_WINDOW_RIGHT /* 15 */:
             case SDL_SYSTEM_CURSOR_WINDOW_LEFT /* 19 */:
                 i2 = 1014;
@@ -1471,5 +1482,47 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
 
         SDLFileDialogState() {
         }
+    }
+
+    /* JADX WARN: Incorrect condition in loop: B:5:0x0011 */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
+    public static String getPreferredLocales() {
+        LocaleList adjustedDefault;
+        int size;
+        Locale locale;
+        String str = "";
+        if (Build.VERSION.SDK_INT >= 24) {
+            adjustedDefault = LocaleList.getAdjustedDefault();
+            for (int i = 0; i < size; i++) {
+                if (i != 0) {
+                    str = str + ",";
+                }
+                StringBuilder sb = new StringBuilder();
+                sb.append(str);
+                locale = adjustedDefault.get(i);
+                sb.append(formatLocale(locale));
+                str = sb.toString();
+            }
+            return str;
+        }
+        Locale locale2 = mCurrentLocale;
+        return locale2 != null ? formatLocale(locale2) : "";
+    }
+
+    public static String formatLocale(Locale locale) {
+        String language;
+        if (locale.getLanguage() == "in") {
+            language = "id";
+        } else if (locale.getLanguage() == "") {
+            language = "und";
+        } else {
+            language = locale.getLanguage();
+        }
+        if (locale.getCountry() == "") {
+            return language;
+        }
+        return language + "_" + locale.getCountry();
     }
 }

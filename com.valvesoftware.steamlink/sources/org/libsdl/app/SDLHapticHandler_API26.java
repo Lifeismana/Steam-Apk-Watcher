@@ -11,7 +11,7 @@ class SDLHapticHandler_API26 extends SDLHapticHandler {
     }
 
     @Override // org.libsdl.app.SDLHapticHandler
-    public void run(int i, float f, int i2) {
+    void run(int i, float f, int i2) {
         VibrationEffect createOneShot;
         SDLHapticHandler.SDLHaptic haptic = getHaptic(i);
         if (haptic != null) {

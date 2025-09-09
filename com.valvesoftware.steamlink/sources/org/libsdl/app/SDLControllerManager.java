@@ -10,27 +10,27 @@ public class SDLControllerManager {
     protected static SDLHapticHandler mHapticHandler;
     protected static SDLJoystickHandler mJoystickHandler;
 
-    public static native void nativeAddHaptic(int i, String str);
+    static native void nativeAddHaptic(int i, String str);
 
-    public static native void nativeAddJoystick(int i, String str, String str2, int i2, int i3, int i4, int i5, int i6, int i7, boolean z);
+    static native void nativeAddJoystick(int i, String str, String str2, int i2, int i3, int i4, int i5, int i6, int i7, boolean z);
 
-    public static native void nativeRemoveHaptic(int i);
+    static native void nativeRemoveHaptic(int i);
 
-    public static native void nativeRemoveJoystick(int i);
+    static native void nativeRemoveJoystick(int i);
 
-    public static native int nativeSetupJNI();
+    static native int nativeSetupJNI();
 
-    public static native void onNativeHat(int i, int i2, int i3, int i4);
+    static native void onNativeHat(int i, int i2, int i3, int i4);
 
-    public static native void onNativeJoy(int i, int i2, float f);
+    static native void onNativeJoy(int i, int i2, float f);
 
     public static native boolean onNativePadDown(int i, int i2);
 
     public static native boolean onNativePadUp(int i, int i2);
 
-    public static void initialize() {
+    static void initialize() {
         if (mJoystickHandler == null) {
-            mJoystickHandler = new SDLJoystickHandler_API19();
+            mJoystickHandler = new SDLJoystickHandler();
         }
         if (mHapticHandler == null) {
             if (Build.VERSION.SDK_INT >= 31) {
@@ -47,23 +47,23 @@ public class SDLControllerManager {
         return mJoystickHandler.handleMotionEvent(motionEvent);
     }
 
-    public static void pollInputDevices() {
+    static void pollInputDevices() {
         mJoystickHandler.pollInputDevices();
     }
 
-    public static void pollHapticDevices() {
+    static void pollHapticDevices() {
         mHapticHandler.pollHapticDevices();
     }
 
-    public static void hapticRun(int i, float f, int i2) {
+    static void hapticRun(int i, float f, int i2) {
         mHapticHandler.run(i, f, i2);
     }
 
-    public static void hapticRumble(int i, float f, float f2, int i2) {
+    static void hapticRumble(int i, float f, float f2, int i2) {
         mHapticHandler.rumble(i, f, f2, i2);
     }
 
-    public static void hapticStop(int i) {
+    static void hapticStop(int i) {
         mHapticHandler.stop(i);
     }
 

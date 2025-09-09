@@ -67,10 +67,6 @@ public interface IMinistroCallback extends IInterface {
         private static class Proxy implements IMinistroCallback {
             private IBinder mRemote;
 
-            public String getInterfaceDescriptor() {
-                return IMinistroCallback.DESCRIPTOR;
-            }
-
             Proxy(IBinder iBinder) {
                 this.mRemote = iBinder;
             }
@@ -78,6 +74,10 @@ public interface IMinistroCallback extends IInterface {
             @Override // android.os.IInterface
             public IBinder asBinder() {
                 return this.mRemote;
+            }
+
+            public String getInterfaceDescriptor() {
+                return IMinistroCallback.DESCRIPTOR;
             }
 
             @Override // org.kde.necessitas.ministro.IMinistroCallback

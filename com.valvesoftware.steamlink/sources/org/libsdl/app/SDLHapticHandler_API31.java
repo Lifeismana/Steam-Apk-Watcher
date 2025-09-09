@@ -13,7 +13,7 @@ class SDLHapticHandler_API31 extends SDLHapticHandler {
     }
 
     @Override // org.libsdl.app.SDLHapticHandler
-    public void run(int i, float f, int i2) {
+    void run(int i, float f, int i2) {
         SDLHapticHandler.SDLHaptic haptic = getHaptic(i);
         if (haptic != null) {
             vibrate(haptic.vib, f, i2);
@@ -21,7 +21,7 @@ class SDLHapticHandler_API31 extends SDLHapticHandler {
     }
 
     @Override // org.libsdl.app.SDLHapticHandler
-    public void rumble(int i, float f, float f2, int i2) {
+    void rumble(int i, float f, float f2, int i2) {
         VibratorManager vibratorManager;
         int[] vibratorIds;
         Vibrator vibrator;

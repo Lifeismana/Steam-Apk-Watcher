@@ -31,30 +31,35 @@ public class SteamLinkUtils {
         return physicalHeight >= 2160;
     }
 
+    /* JADX WARN: Code restructure failed: missing block: B:3:0x000d, code lost:
+    
+        r0 = r0.getWindowManager().getDefaultDisplay().getHdrCapabilities();
+     */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
     public static boolean canDisplayHDRVideo(boolean z, boolean z2) {
         Display.HdrCapabilities hdrCapabilities;
-        boolean z3;
         int[] supportedHdrTypes;
         Activity activity = (Activity) SDL.getContext();
-        if (Build.VERSION.SDK_INT >= 24) {
-            hdrCapabilities = activity.getWindowManager().getDefaultDisplay().getHdrCapabilities();
-            if (hdrCapabilities != null) {
-                supportedHdrTypes = hdrCapabilities.getSupportedHdrTypes();
-                for (int i : supportedHdrTypes) {
-                    if (i == 2) {
-                        z3 = true;
+        if (Build.VERSION.SDK_INT >= 24 && hdrCapabilities != null) {
+            supportedHdrTypes = hdrCapabilities.getSupportedHdrTypes();
+            int length = supportedHdrTypes.length;
+            int i = 0;
+            while (true) {
+                if (i >= length) {
+                    break;
+                }
+                if (supportedHdrTypes[i] == 2) {
+                    if (z && supportsHDRHEVC()) {
+                        return true;
+                    }
+                    if (!z2 || !supportsHDRAV1()) {
                         break;
                     }
-                }
-            }
-            z3 = false;
-            if (z3) {
-                if (z && supportsHDRHEVC()) {
                     return true;
                 }
-                if (z2 && supportsHDRAV1()) {
-                    return true;
-                }
+                i++;
             }
         }
         return false;

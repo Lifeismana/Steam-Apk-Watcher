@@ -95,6 +95,9 @@ public class ReLinkerInstance {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void loadLibraryInternal(Context context, String str, String str2) {
+        ReLinkerInstance reLinkerInstance;
+        Context context2;
+        ElfParser elfParser;
         if (this.loadedLibraries.contains(str) && !this.force) {
             log("%s already loaded previously!", str);
             return;
@@ -112,34 +115,39 @@ public class ReLinkerInstance {
                     log("Forcing a re-link of %s (%s)...", str, str2);
                 }
                 cleanupOldLibFiles(context, str, str2);
-                this.libraryInstaller.installLibrary(context, this.libraryLoader.supportedAbis(), this.libraryLoader.mapLibraryName(str), workaroundLibFile, this);
+                reLinkerInstance = this;
+                context2 = context;
+                this.libraryInstaller.installLibrary(context2, this.libraryLoader.supportedAbis(), this.libraryLoader.mapLibraryName(str), workaroundLibFile, reLinkerInstance);
+            } else {
+                reLinkerInstance = this;
+                context2 = context;
             }
             try {
-                if (this.recursive) {
-                    ElfParser elfParser = null;
+                if (reLinkerInstance.recursive) {
                     try {
-                        ElfParser elfParser2 = new ElfParser(workaroundLibFile);
+                        elfParser = new ElfParser(workaroundLibFile);
                         try {
-                            List<String> parseNeededDependencies = elfParser2.parseNeededDependencies();
-                            elfParser2.close();
+                            List<String> parseNeededDependencies = elfParser.parseNeededDependencies();
+                            elfParser.close();
                             Iterator<String> it = parseNeededDependencies.iterator();
                             while (it.hasNext()) {
-                                loadLibrary(context, this.libraryLoader.unmapLibraryName(it.next()));
+                                loadLibrary(context2, reLinkerInstance.libraryLoader.unmapLibraryName(it.next()));
                             }
                         } catch (Throwable th) {
                             th = th;
-                            elfParser = elfParser2;
+                            Throwable th2 = th;
                             elfParser.close();
-                            throw th;
+                            throw th2;
                         }
-                    } catch (Throwable th2) {
-                        th = th2;
+                    } catch (Throwable th3) {
+                        th = th3;
+                        elfParser = null;
                     }
                 }
             } catch (IOException unused) {
             }
-            this.libraryLoader.loadPath(workaroundLibFile.getAbsolutePath());
-            this.loadedLibraries.add(str);
+            reLinkerInstance.libraryLoader.loadPath(workaroundLibFile.getAbsolutePath());
+            reLinkerInstance.loadedLibraries.add(str);
             log("%s (%s) was re-linked!", str, str2);
         }
     }

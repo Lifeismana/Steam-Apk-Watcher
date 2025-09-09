@@ -10,7 +10,7 @@ import android.view.inputmethod.InputConnection;
 public class SDLDummyEdit extends View implements View.OnKeyListener {
 
     /* renamed from: ic */
-    InputConnection f5ic;
+    InputConnection f4ic;
     int input_type;
 
     @Override // android.view.View
@@ -18,20 +18,20 @@ public class SDLDummyEdit extends View implements View.OnKeyListener {
         return true;
     }
 
-    public SDLDummyEdit(Context context) {
+    SDLDummyEdit(Context context) {
         super(context);
         setFocusableInTouchMode(true);
         setFocusable(true);
         setOnKeyListener(this);
     }
 
-    public void setInputType(int i) {
+    void setInputType(int i) {
         this.input_type = i;
     }
 
     @Override // android.view.View.OnKeyListener
     public boolean onKey(View view, int i, KeyEvent keyEvent) {
-        return SDLActivity.handleKeyEvent(view, i, keyEvent, this.f5ic);
+        return SDLActivity.handleKeyEvent(view, i, keyEvent, this.f4ic);
     }
 
     @Override // android.view.View
@@ -44,9 +44,9 @@ public class SDLDummyEdit extends View implements View.OnKeyListener {
 
     @Override // android.view.View
     public InputConnection onCreateInputConnection(EditorInfo editorInfo) {
-        this.f5ic = new SDLInputConnection(this, true);
+        this.f4ic = new SDLInputConnection(this, true);
         editorInfo.inputType = this.input_type;
         editorInfo.imeOptions = 301989888;
-        return this.f5ic;
+        return this.f4ic;
     }
 }
