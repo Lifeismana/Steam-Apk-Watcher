@@ -1,10 +1,10 @@
 Signature-Version: 1.0
 Created-By: 1.0 (Android)
-SHA-256-Digest-Manifest: XcHLRC88H0EzTW2gJ44rm+GKQiUr7pC8vCGmJ6MbSJ4=
+SHA-256-Digest-Manifest: qZWBbVMIrWkixCpJAunjf58po0xcnTJCaoLtZNXoCgo=
 X-Android-APK-Signed: 2, 3
 
 Name: AndroidManifest.xml
-SHA-256-Digest: OaGA8Ez3pq30QhmUXuEfZzx4H/NLzdL45mmGJkn9yZs=
+SHA-256-Digest: KErgPr4iu8lbYPTTj6XfTVHRtuXeqV8v47Oouuh+9wQ=
 
 Name: META-INF/com/android/build/gradle/app-metadata.properties
 SHA-256-Digest: dAXgdwBkfU4wODx4yAbUhM+qqLyKkh52PS7WdHpgfv0=
@@ -13,7 +13,7 @@ Name: META-INF/version-control-info.textproto
 SHA-256-Digest: bGPYrKSsmb5tpmtltqs82gWayRJtXwCM3VXJFk8mnb8=
 
 Name: classes.dex
-SHA-256-Digest: xGPRxVFgpSlbPFBOh9WOggCSXlSy0GWbvo33g+uw6vY=
+SHA-256-Digest: +3y+jq5Vs+rfWJzQ45WOuyj8K85A6Z6upxmVKYtqPmg=
 
 Name: org/kde/necessitas/ministro/IMinistro.aidl
 SHA-256-Digest: a2CFfzExb1qZyR03IKJOZB9hASZLSt2FFqf/yXSyGpk=
