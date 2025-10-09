@@ -6,6 +6,7 @@
 %02x\t
 032AndroidInternalStorageFileLoader
 %.0Lf
+10018851 
 10.35.78
 10QSVLClient
 11QSVLXRInput
@@ -59,7 +60,6 @@
 8SVLAudio
 8SVLCodec
 8SVLCrypt
-9964251 
 9a&g
 9JLX
 9QSVLInput
@@ -516,6 +516,7 @@ CAudioJitterBuffer fade in %d %d\n
 CAudioJitterBuffer fade out %d %d\n
 CAudioJitterBuffer init: %d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d\n
 CAudioJitterBuffer<short>::BasicPop(short*, int)
+CAudioJitterBuffer<short>::CAudioJitterBuffer(int, int)
 CAudioJitterBuffer<short>::FadeOut(int)
 CAudioJitterBuffer<short>::FindBestCrossfadeEndpoint(int, int)
 CAudioJitterBuffer<short>::Pop(short*, int)
@@ -2360,9 +2361,9 @@ NSt6__ndk110__function6__funcIZN22StreamBehavior_SpinnerC1ER10XRQContextEUlRKNS_
 NSt6__ndk110__function6__funcIZN6CVRLog7InitLogEPKcS4_bmE3$_0NS_9allocatorIS5_EEFv9ELogLevelS4_PvEEE
 NSt6__ndk110__function6__funcIZN7SVLRoot4InitEvE3$_0NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN7SVLRoot4InitEvE3$_1NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
-NSt6__ndk110__function6__funcIZN8SVLAudioC1EP7SVLRootbE3$_0NS_9allocatorIS5_EEFv16ValueTransportIDbEEE
-NSt6__ndk110__function6__funcIZN8SVLAudioC1EP7SVLRootbE3$_1NS_9allocatorIS5_EEFv16ValueTransportIDbEEE
-NSt6__ndk110__function6__funcIZN8SVLAudioC1EP7SVLRootbE3$_2NS_9allocatorIS5_EEFv16ValueTransportIDbEEE
+NSt6__ndk110__function6__funcIZN8SVLAudioC1EP7SVLRootE3$_0NS_9allocatorIS5_EEFv16ValueTransportIDbEEE
+NSt6__ndk110__function6__funcIZN8SVLAudioC1EP7SVLRootE3$_1NS_9allocatorIS5_EEFv16ValueTransportIDbEEE
+NSt6__ndk110__function6__funcIZN8SVLAudioC1EP7SVLRootE3$_2NS_9allocatorIS5_EEFv16ValueTransportIDbEEE
 NSt6__ndk110money_baseE
 NSt6__ndk110moneypunctIcLb0EEE
 NSt6__ndk110moneypunctIcLb1EEE
@@ -2786,7 +2787,7 @@ QSVLClientAudioNdk::OnOutputAudioErrorProc(AAudioStreamStruct*, void*, int)
 QSVLClientAudioNdk::OnOutputAudioReady(AAudioStreamStruct*, void*, int)
 QSVLClientAudioNdk::OnOutputAudioReadyProc(AAudioStreamStruct*, void*, void*, int)
 QSVLClientAudioNdk::~QSVLClientAudioNdk()
-QSVLClientAudioNdk::QSVLClientAudioNdk(SVLRoot*, bool)
+QSVLClientAudioNdk::QSVLClientAudioNdk(SVLRoot*)
 QSVLClientAudioNdk::Stop()
 QSVLClientAudioNdk::Tick()
 QSVLClient::FrameSwap()
@@ -3306,6 +3307,7 @@ std::logic_error::what() const
 std::__ndk1::adopt_lock
 std::__ndk1::align(unsigned long, unsigned long, void*&, unsigned long&)
 std::__ndk1::allocator_arg
+std::__ndk1::array<std::__ndk1::unique_ptr<XrScene, std::__ndk1::default_delete<XrScene>>, 5ul>::~array()
 std::__ndk1::array<SVLStaticProps, 2ul>::operator=(std::__ndk1::array<SVLStaticProps, 2ul> const&)
 std::__ndk1::array<XRQSwapchain, 2ul>::~array()
 std::__ndk1::__assoc_sub_state::~__assoc_sub_state()
@@ -4664,7 +4666,6 @@ std::__ndk1::__tree_node_base<void*>*& std::__ndk1::__tree<std::__ndk1::__value_
 std::__ndk1::__tree_node_base<void*>*& std::__ndk1::__tree<std::__ndk1::__value_type<VertexAttributeLocation, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::__map_value_compare<VertexAttributeLocation, std::__ndk1::__value_type<VertexAttributeLocation, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::less<VertexAttributeLocation>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<VertexAttributeLocation, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>>::__find_equal<VertexAttributeLocation>(std::__ndk1::__tree_const_iterator<std::__ndk1::__value_type<VertexAttributeLocation, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::__tree_node<std::__ndk1::__value_type<VertexAttributeLocation, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, void*>*, long>, std::__ndk1::__tree_end_node<std::__ndk1::__tree_node_base<void*>*>*&, std::__ndk1::__tree_node_base<void*>*&, VertexAttributeLocation const&)
 std::__ndk1::__tree<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::destroy(std::__ndk1::__tree_node<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void*>*)
 std::__ndk1::__tree<std::__ndk1::__value_type<AppPath, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::__map_value_compare<AppPath, std::__ndk1::__value_type<AppPath, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::less<AppPath>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<AppPath, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>>::destroy(std::__ndk1::__tree_node<std::__ndk1::__value_type<AppPath, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, void*>*)
-std::__ndk1::__tree<std::__ndk1::__value_type<AppViewType, std::__ndk1::unique_ptr<XrScene, std::__ndk1::default_delete<XrScene>>>, std::__ndk1::__map_value_compare<AppViewType, std::__ndk1::__value_type<AppViewType, std::__ndk1::unique_ptr<XrScene, std::__ndk1::default_delete<XrScene>>>, std::__ndk1::less<AppViewType>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<AppViewType, std::__ndk1::unique_ptr<XrScene, std::__ndk1::default_delete<XrScene>>>>>::destroy(std::__ndk1::__tree_node<std::__ndk1::__value_type<AppViewType, std::__ndk1::unique_ptr<XrScene, std::__ndk1::default_delete<XrScene>>>, void*>*)
 std::__ndk1::__tree<std::__ndk1::__value_type<EPanelMailboxes, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::__map_value_compare<EPanelMailboxes, std::__ndk1::__value_type<EPanelMailboxes, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::less<EPanelMailboxes>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<EPanelMailboxes, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>>::destroy(std::__ndk1::__tree_node<std::__ndk1::__value_type<EPanelMailboxes, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, void*>*)
 std::__ndk1::__tree<std::__ndk1::__value_type<EStreamSceneState, std::__ndk1::shared_ptr<StreamBehavior>>, std::__ndk1::__map_value_compare<EStreamSceneState, std::__ndk1::__value_type<EStreamSceneState, std::__ndk1::shared_ptr<StreamBehavior>>, std::__ndk1::less<EStreamSceneState>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<EStreamSceneState, std::__ndk1::shared_ptr<StreamBehavior>>>>::destroy(std::__ndk1::__tree_node<std::__ndk1::__value_type<EStreamSceneState, std::__ndk1::shared_ptr<StreamBehavior>>, void*>*)
 std::__ndk1::__tree<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, std::__ndk1::__map_value_compare<Json::Value::CZString, std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, std::__ndk1::less<Json::Value::CZString>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>>>::destroy(std::__ndk1::__tree_node<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, void*>*)
@@ -4888,7 +4889,7 @@ SVLAudio::FlushAudioPacket()
 SVLAudio::InitJitterBuffer(int)
 SVLAudio::OnPeerAudioDiscontinuity()
 SVLAudio::~SVLAudio()
-SVLAudio::SVLAudio(SVLRoot*, bool)
+SVLAudio::SVLAudio(SVLRoot*)
 SVLAudio::SyncAudioControls(bool)
 SVLAudio::Tick()
 SVLAudio::TransmitAndUpdateFEC()
@@ -5053,7 +5054,7 @@ SVLDataLinkUDP::XMITData(dataset*, bool, bool)
 [SVLDecoder] Flush requested with no valid codec.
 [SVLDecoder] In HandleOnImageAvailable with image reader mismatch.
 [SVLDecoder] In HandleOnImageAvailable without valid codec.
-[SVLDecoder] Invalid frame metadata for frame! Dropping
+[SVLDecoder] Invalid frame metadata for frame [ %d ], dropping.
 [SVLDecoder] Joined media thread
 [SVLDecoder] No available renderer or link.
 [SVLDecoder] No codec!
@@ -5065,6 +5066,7 @@ SVLDecompressSkeleton(unsigned char const*, int)
 SVLDriverLog
 SVLDriverLogVerboseOnly
 SVLEventWriteString
+[SVLFEC] accepting a frame for submission without metadata [ %d ]
 SVLFEC::AcceptVideoPacket(dataset*)
 SVLFEC::ExperiencedAnUnrecoverableError()
 SVLFEC: frame %d was entirely dropped, initializing and re-requesting\n
@@ -5087,6 +5089,7 @@ SVLFECRAID6TXFrame::InitializeAndSend(unsigned short, unsigned char const*, int,
 SVLFECRAID6TXFrame::PopulateFecBlocks(int, int, int)
 SVLFECRAID6TXFrame::~SVLFECRAID6TXFrame()
 SVLFECRAID6TXFrame::SVLFECRAID6TXFrame(SVLFECRAID6*)
+[SVLFEC] received late metadata for frame [ %d ]
 SVLFEC::ReportStreamReset()
 SVLFEC::ReportStreamReset() (m_iLastAcknowledgeFrameNumber = %d)
 SVLFEC::RerequestBookend(unsigned short)
@@ -5101,8 +5104,9 @@ SVLFECRXFrame::MarkBlockReceived(unsigned short, int)
 SVLFECRXFrame::~SVLFECRXFrame()
 SVLFECRXFrame::SVLFECRXFrame(SVLFEC*)
 SVLFECRXFrame::UnguidedCheckRetry()
+[SVLFEC] Saw a re-accept in InternalAcceptFrameFromRX.
 SVLFEC::SendData(unsigned char*, int, TransportFrameMetadata_t const&, bool)
-SVLFEC: substantive retry (%d packets) due to frame skip (skipped %d, last sub %d, group %d, bookend %d)\n
+SVLFEC: substantive retry (%d packets) due to frame skip (skipped %d, last sub %d, group %d, expected size %d)\n
 SVLFEC::~SVLFEC()
 SVLFEC::SVLFEC(SVLRoot*, unsigned char)
 SVLFEC::Tick()
@@ -6997,9 +7001,9 @@ ZN22StreamBehavior_SpinnerC1ER10XRQContextEUlRKNSt6__ndk112basic_stringIcNS2_11c
 ZN6CVRLog7InitLogEPKcS1_bmE3$_0
 ZN7SVLRoot4InitEvE3$_0
 ZN7SVLRoot4InitEvE3$_1
-ZN8SVLAudioC1EP7SVLRootbE3$_0
-ZN8SVLAudioC1EP7SVLRootbE3$_1
-ZN8SVLAudioC1EP7SVLRootbE3$_2
+ZN8SVLAudioC1EP7SVLRootE3$_0
+ZN8SVLAudioC1EP7SVLRootE3$_1
+ZN8SVLAudioC1EP7SVLRootE3$_2
 zzzEzzzzzzz
 zzz>zL
 zzzzzzzzzzzz
