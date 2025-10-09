@@ -1,7 +1,8 @@
 {
   "requestedExtensions": [
     "XR_FB_touch_controller_pro",
-    "XR_BD_controller_interaction"
+    "XR_BD_controller_interaction",
+    "XR_HTC_vive_focus3_controller_interaction"
   ],
   "input": {
     "select": {
@@ -23,6 +24,10 @@
           "/user/hand/right/input/trigger/value"
         ],
         "/interaction_profiles/bytedance/pico_neo3_controller": [
+          "/user/hand/left/input/trigger/value",
+          "/user/hand/right/input/trigger/value"
+        ],
+        "/interaction_profiles/htc/vive_focus3_controller": [
           "/user/hand/left/input/trigger/value",
           "/user/hand/right/input/trigger/value"
         ]
@@ -58,6 +63,12 @@
           "/user/hand/left/input/aim/pose",
           "/user/hand/right/input/aim/pose"
         ]
+      },
+      "/interaction_profiles/htc/vive_focus3_controller": {
+        "bindings": [
+          "/user/hand/left/input/aim/pose",
+          "/user/hand/right/input/aim/pose"
+        ]
       }
     }
   },
@@ -81,6 +92,10 @@
           "/user/hand/right/output/haptic"
         ],
         "/interaction_profiles/bytedance/pico_neo3_controller": [
+          "/user/hand/left/output/haptic",
+          "/user/hand/right/output/haptic"
+        ],
+        "/interaction_profiles/htc/vive_focus3_controller": [
           "/user/hand/left/output/haptic",
           "/user/hand/right/output/haptic"
         ]
