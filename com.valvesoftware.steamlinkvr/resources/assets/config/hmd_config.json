@@ -1,7 +1,10 @@
 {
-  "requestedExtensions": [
-    "XR_EXT_eye_gaze_interaction"
-  ],
+  "requestedExtensions": {
+    "seacliff": ["XR_EXT_eye_gaze_interaction"],
+    "PICO 4 Enterprise":  ["XR_EXT_eye_gaze_interaction", "XR_PICO_eye_tracker"],
+    "PICO 4 Pro": ["XR_EXT_eye_gaze_interaction", "XR_PICO_eye_tracker"],
+    "kona": ["XR_EXT_eye_gaze_interaction"]
+  },
   "staticProps": {
     "hollywood": {
       "sTrackingSystem": "oculus",
