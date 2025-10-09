@@ -911,6 +911,7 @@ _13zi
 2+0L$0$N
 214P&
 2168
+21AES_ECB_CipherContext
 21AES_GCM_CipherContext
 21CDiscoveryPingRequest
 21CEC25519PublicKeyBase
@@ -925,6 +926,8 @@ _13zi
 21\oi
 2>1y)
 2)252Y2]2c2k2o2u2w2{2
+22AES_ECB_DecryptContext
+22AES_ECB_EncryptContext
 22AES_GCM_DecryptContext
 22AES_GCM_EncryptContext
 22CDisableNeptuneDataMsg
@@ -2906,6 +2909,11 @@ _7)APNB
 8]aYD
 \8b}6
 8bit
+8Bitdo Pro 2 Controller
+8Bitdo Pro 3 Controller
+8Bitdo SF30 Controller
+8Bitdo SN30 Controller
+8Bitdo Ultimate 2 Wireless Controller
 8BKz
 8,Bn%T.
 8bUB
@@ -3593,6 +3601,7 @@ AddAllocatedMessage
 AddBool
 add_cert_dir
 AddDouble
+added
 Added
 Added alt-svc: %s:%d over %s
 Added %.*s:%d:%s to DNS cache%s
@@ -3770,6 +3779,11 @@ AESCCM(256)
 AESCCM8
 AESCCM8(128)
 AESCCM8(256)
+AES_ECB_CipherContext::InitCipher(void const*, unsigned long, unsigned long, unsigned long, bool)
+AES_ECB_DecryptContext::~AES_ECB_DecryptContext()
+AES_ECB_DecryptContext::Decrypt(void const*, unsigned long, void const*, void*, unsigned int*, void const*, unsigned long)
+AES_ECB_EncryptContext::~AES_ECB_EncryptContext()
+AES_ECB_EncryptContext::Encrypt(void const*, unsigned long, void const*, void*, unsigned int*, void const*, unsigned long)
 AESGCM
 AESGCM(128)
 AESGCM(256)
@@ -4646,7 +4660,6 @@ a`tYGa
 atZx
 au0L
 audio
-Audio
 audio_channel_count
 audio_channels
 AuDp,
@@ -5058,6 +5071,7 @@ balo ahora!
 Bal ravasz
 Bal trackpad
 Bal v
+BAlwaysUsesSteamInput(EControllerType)
 bandwidth_test
 baNzZA
 :BAo
@@ -6326,6 +6340,12 @@ CAudioFrame::GetFrameData()
 CAudioFrame::GetFrameDataSize() const
 CAudioFrame::GetFrameID()
 CAudioFrame::GetFrameTimestamp()
+CAudioJitterBuffer<float>::ApplyCrossfade(float*)
+CAudioJitterBuffer<float>::CAudioJitterBuffer(int, int)
+CAudioJitterBuffer<float>::FindBestCrossfadeEndpoint(int, int)
+CAudioJitterBuffer<float>::Pop(float*, int)
+CAudioJitterBuffer<float>::Push(float const*, int)
+CAudioJitterBuffer<float>::UpdateStats(int, int)
 CAuthenticationRequestMsg
 CAuthenticationRequestMsg::ByteSizeLong() const
 CAuthenticationRequestMsg::~CAuthenticationRequestMsg()
@@ -6836,6 +6856,8 @@ CCrypto::SymmetricAuthEncryptWithIV(void const*, unsigned long, void const*, uns
 CCrypto::SymmetricDecryptRecoverIV(unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char*, unsigned int, unsigned char const*, unsigned int, bool)
 CCrypto::SymmetricDecrypt(unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char const*, unsigned int)
 CCrypto::SymmetricDecryptWithIV(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char const*, unsigned int, bool)
+CCrypto::SymmetricECBDecrypt(void const*, unsigned long, void*, unsigned int*, void const*, unsigned long)
+CCrypto::SymmetricECBEncrypt(void const*, unsigned long, void*, unsigned int*, void const*, unsigned long)
 CCrypto::SymmetricEncryptChosenIV(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char const*, unsigned int)
 CCrypto::SymmetricEncrypt(unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char const*, unsigned int)
 CCrypto::SymmetricEncryptWithIV(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char const*, unsigned int)
@@ -7022,46 +7044,58 @@ CDummyFrame::GetFrameDataSize() const
 CDummyFrame::GetFrameID()
 CDummyFrame::GetFrameTimestamp()
 CDummyFrame::SetFrame(unsigned short, unsigned int)
+CDynamicFunc<bool (*)(bool (*)(void*, SDL_Event*), void*)>::~CDynamicFunc()
 CDynamicFunc<bool (*)(bool (*)(void*, SDL_Event*), void*)>::GetNextPointer()
 CDynamicFunc<bool (*)(bool (*)(void*, SDL_Event*), void*)>::Init(CSysModule*)
 CDynamicFunc<bool (*)(bool (*)(void*, SDL_Event*), void*)>::Release()
 CDynamicFunc<bool (*)(bool (*)(void*, SDL_Event*), void*)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<bool (*)(char const*, char const*)>::~CDynamicFunc()
 CDynamicFunc<bool (*)(char const*, char const*)>::GetNextPointer()
 CDynamicFunc<bool (*)(char const*, char const*)>::Init(CSysModule*)
 CDynamicFunc<bool (*)(char const*, char const*)>::Release()
 CDynamicFunc<bool (*)(char const*, char const*)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<bool (*)(SDL_Gamepad*)>::~CDynamicFunc()
 CDynamicFunc<bool (*)(SDL_Gamepad*)>::GetNextPointer()
 CDynamicFunc<bool (*)(SDL_Gamepad*)>::Init(CSysModule*)
+CDynamicFunc<bool (*)(SDL_Gamepad*, int)>::~CDynamicFunc()
 CDynamicFunc<bool (*)(SDL_Gamepad*, int)>::GetNextPointer()
 CDynamicFunc<bool (*)(SDL_Gamepad*, int)>::Init(CSysModule*)
 CDynamicFunc<bool (*)(SDL_Gamepad*, int)>::Release()
 CDynamicFunc<bool (*)(SDL_Gamepad*, int)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunc<bool (*)(SDL_Gamepad*)>::Release()
+CDynamicFunc<bool (*)(SDL_Gamepad*, SDL_SensorType, bool)>::~CDynamicFunc()
 CDynamicFunc<bool (*)(SDL_Gamepad*, SDL_SensorType, bool)>::GetNextPointer()
 CDynamicFunc<bool (*)(SDL_Gamepad*, SDL_SensorType, bool)>::Init(CSysModule*)
 CDynamicFunc<bool (*)(SDL_Gamepad*, SDL_SensorType, bool)>::Release()
 CDynamicFunc<bool (*)(SDL_Gamepad*, SDL_SensorType, bool)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<bool (*)(SDL_Gamepad*, SDL_SensorType)>::~CDynamicFunc()
 CDynamicFunc<bool (*)(SDL_Gamepad*, SDL_SensorType)>::GetNextPointer()
 CDynamicFunc<bool (*)(SDL_Gamepad*, SDL_SensorType)>::Init(CSysModule*)
 CDynamicFunc<bool (*)(SDL_Gamepad*, SDL_SensorType)>::Release()
 CDynamicFunc<bool (*)(SDL_Gamepad*, SDL_SensorType)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunc<bool (*)(SDL_Gamepad*)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<bool (*)(SDL_Gamepad*, unsigned char, unsigned char, unsigned char)>::~CDynamicFunc()
 CDynamicFunc<bool (*)(SDL_Gamepad*, unsigned char, unsigned char, unsigned char)>::GetNextPointer()
 CDynamicFunc<bool (*)(SDL_Gamepad*, unsigned char, unsigned char, unsigned char)>::Init(CSysModule*)
 CDynamicFunc<bool (*)(SDL_Gamepad*, unsigned char, unsigned char, unsigned char)>::Release()
 CDynamicFunc<bool (*)(SDL_Gamepad*, unsigned char, unsigned char, unsigned char)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<bool (*)(SDL_Gamepad*, unsigned short, unsigned short, unsigned int)>::~CDynamicFunc()
 CDynamicFunc<bool (*)(SDL_Gamepad*, unsigned short, unsigned short, unsigned int)>::GetNextPointer()
 CDynamicFunc<bool (*)(SDL_Gamepad*, unsigned short, unsigned short, unsigned int)>::Init(CSysModule*)
 CDynamicFunc<bool (*)(SDL_Gamepad*, unsigned short, unsigned short, unsigned int)>::Release()
 CDynamicFunc<bool (*)(SDL_Gamepad*, unsigned short, unsigned short, unsigned int)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<bool (*)(SDL_Gamepad*, void const*, int)>::~CDynamicFunc()
 CDynamicFunc<bool (*)(SDL_Gamepad*, void const*, int)>::GetNextPointer()
 CDynamicFunc<bool (*)(SDL_Gamepad*, void const*, int)>::Init(CSysModule*)
 CDynamicFunc<bool (*)(SDL_Gamepad*, void const*, int)>::Release()
 CDynamicFunc<bool (*)(SDL_Gamepad*, void const*, int)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<bool (*)(SDL_Joystick*)>::~CDynamicFunc()
 CDynamicFunc<bool (*)(SDL_Joystick*)>::GetNextPointer()
 CDynamicFunc<bool (*)(SDL_Joystick*)>::Init(CSysModule*)
 CDynamicFunc<bool (*)(SDL_Joystick*)>::Release()
 CDynamicFunc<bool (*)(SDL_Joystick*)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<bool (*)(unsigned int)>::~CDynamicFunc()
+CDynamicFunc<bool (*)(unsigned int, char const*, bool)>::~CDynamicFunc()
 CDynamicFunc<bool (*)(unsigned int, char const*, bool)>::GetNextPointer()
 CDynamicFunc<bool (*)(unsigned int, char const*, bool)>::Init(CSysModule*)
 CDynamicFunc<bool (*)(unsigned int, char const*, bool)>::Release()
@@ -7070,175 +7104,218 @@ CDynamicFunc<bool (*)(unsigned int)>::GetNextPointer()
 CDynamicFunc<bool (*)(unsigned int)>::Init(CSysModule*)
 CDynamicFunc<bool (*)(unsigned int)>::Release()
 CDynamicFunc<bool (*)(unsigned int)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<char const* (*)()>::~CDynamicFunc()
 CDynamicFunc<char const* (*)()>::GetNextPointer()
 CDynamicFunc<char const* (*)()>::Init(CSysModule*)
 CDynamicFunc<char const* (*)()>::Release()
+CDynamicFunc<char const* (*)(SDL_GamepadButton)>::~CDynamicFunc()
 CDynamicFunc<char const* (*)(SDL_GamepadButton)>::GetNextPointer()
 CDynamicFunc<char const* (*)(SDL_GamepadButton)>::Init(CSysModule*)
 CDynamicFunc<char const* (*)(SDL_GamepadButton)>::Release()
 CDynamicFunc<char const* (*)(SDL_GamepadButton)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<char const* (*)(SDL_Gamepad*)>::~CDynamicFunc()
 CDynamicFunc<char const* (*)(SDL_Gamepad*)>::GetNextPointer()
 CDynamicFunc<char const* (*)(SDL_Gamepad*)>::Init(CSysModule*)
 CDynamicFunc<char const* (*)(SDL_Gamepad*)>::Release()
 CDynamicFunc<char const* (*)(SDL_Gamepad*)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<char const* (*)(SDL_Joystick*)>::~CDynamicFunc()
 CDynamicFunc<char const* (*)(SDL_Joystick*)>::GetNextPointer()
 CDynamicFunc<char const* (*)(SDL_Joystick*)>::Init(CSysModule*)
 CDynamicFunc<char const* (*)(SDL_Joystick*)>::Release()
 CDynamicFunc<char const* (*)(SDL_Joystick*)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunc<char const* (*)()>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<char const* (*)(unsigned int)>::~CDynamicFunc()
 CDynamicFunc<char const* (*)(unsigned int)>::GetNextPointer()
 CDynamicFunc<char const* (*)(unsigned int)>::Init(CSysModule*)
 CDynamicFunc<char const* (*)(unsigned int)>::Release()
 CDynamicFunc<char const* (*)(unsigned int)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<char* (*)(SDL_Gamepad*)>::~CDynamicFunc()
 CDynamicFunc<char* (*)(SDL_Gamepad*)>::GetNextPointer()
 CDynamicFunc<char* (*)(SDL_Gamepad*)>::Init(CSysModule*)
 CDynamicFunc<char* (*)(SDL_Gamepad*)>::Release()
 CDynamicFunc<char* (*)(SDL_Gamepad*)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<char* (*)(SDL_GUID)>::~CDynamicFunc()
 CDynamicFunc<char* (*)(SDL_GUID)>::GetNextPointer()
 CDynamicFunc<char* (*)(SDL_GUID)>::Init(CSysModule*)
 CDynamicFunc<char* (*)(SDL_GUID)>::Release()
 CDynamicFunc<char* (*)(SDL_GUID)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<char* (*)(unsigned int)>::~CDynamicFunc()
 CDynamicFunc<char* (*)(unsigned int)>::GetNextPointer()
 CDynamicFunc<char* (*)(unsigned int)>::Init(CSysModule*)
 CDynamicFunc<char* (*)(unsigned int)>::Release()
 CDynamicFunc<char* (*)(unsigned int)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<int (*)()>::~CDynamicFunc()
 CDynamicFunc<int (*)()>::GetNextPointer()
 CDynamicFunc<int (*)()>::Init(CSysModule*)
 CDynamicFunc<int (*)()>::Release()
+CDynamicFunc<int (*)(SDL_hid_device*)>::~CDynamicFunc()
 CDynamicFunc<int (*)(SDL_hid_device*)>::GetNextPointer()
 CDynamicFunc<int (*)(SDL_hid_device*)>::Init(CSysModule*)
+CDynamicFunc<int (*)(SDL_hid_device*, int)>::~CDynamicFunc()
 CDynamicFunc<int (*)(SDL_hid_device*, int)>::GetNextPointer()
 CDynamicFunc<int (*)(SDL_hid_device*, int)>::Init(CSysModule*)
 CDynamicFunc<int (*)(SDL_hid_device*, int)>::Release()
 CDynamicFunc<int (*)(SDL_hid_device*, int)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunc<int (*)(SDL_hid_device*)>::Release()
 CDynamicFunc<int (*)(SDL_hid_device*)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<int (*)(SDL_hid_device*, unsigned char const*, unsigned long)>::~CDynamicFunc()
 CDynamicFunc<int (*)(SDL_hid_device*, unsigned char const*, unsigned long)>::GetNextPointer()
 CDynamicFunc<int (*)(SDL_hid_device*, unsigned char const*, unsigned long)>::Init(CSysModule*)
 CDynamicFunc<int (*)(SDL_hid_device*, unsigned char const*, unsigned long)>::Release()
 CDynamicFunc<int (*)(SDL_hid_device*, unsigned char const*, unsigned long)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<int (*)(SDL_hid_device*, unsigned char*, unsigned long)>::~CDynamicFunc()
 CDynamicFunc<int (*)(SDL_hid_device*, unsigned char*, unsigned long)>::GetNextPointer()
 CDynamicFunc<int (*)(SDL_hid_device*, unsigned char*, unsigned long)>::Init(CSysModule*)
+CDynamicFunc<int (*)(SDL_hid_device*, unsigned char*, unsigned long, int)>::~CDynamicFunc()
 CDynamicFunc<int (*)(SDL_hid_device*, unsigned char*, unsigned long, int)>::GetNextPointer()
 CDynamicFunc<int (*)(SDL_hid_device*, unsigned char*, unsigned long, int)>::Init(CSysModule*)
 CDynamicFunc<int (*)(SDL_hid_device*, unsigned char*, unsigned long, int)>::Release()
 CDynamicFunc<int (*)(SDL_hid_device*, unsigned char*, unsigned long, int)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunc<int (*)(SDL_hid_device*, unsigned char*, unsigned long)>::Release()
 CDynamicFunc<int (*)(SDL_hid_device*, unsigned char*, unsigned long)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<int (*)(SDL_hid_device*, wchar_t*, unsigned long)>::~CDynamicFunc()
 CDynamicFunc<int (*)(SDL_hid_device*, wchar_t*, unsigned long)>::GetNextPointer()
 CDynamicFunc<int (*)(SDL_hid_device*, wchar_t*, unsigned long)>::Init(CSysModule*)
 CDynamicFunc<int (*)(SDL_hid_device*, wchar_t*, unsigned long)>::Release()
 CDynamicFunc<int (*)(SDL_hid_device*, wchar_t*, unsigned long)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<int (*)(SDL_Joystick*)>::~CDynamicFunc()
 CDynamicFunc<int (*)(SDL_Joystick*)>::GetNextPointer()
 CDynamicFunc<int (*)(SDL_Joystick*)>::Init(CSysModule*)
 CDynamicFunc<int (*)(SDL_Joystick*)>::Release()
 CDynamicFunc<int (*)(SDL_Joystick*)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunc<int (*)()>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<SDL_GamepadButtonLabel (*)(SDL_GamepadType, SDL_GamepadButton)>::~CDynamicFunc()
 CDynamicFunc<SDL_GamepadButtonLabel (*)(SDL_GamepadType, SDL_GamepadButton)>::GetNextPointer()
 CDynamicFunc<SDL_GamepadButtonLabel (*)(SDL_GamepadType, SDL_GamepadButton)>::Init(CSysModule*)
 CDynamicFunc<SDL_GamepadButtonLabel (*)(SDL_GamepadType, SDL_GamepadButton)>::Release()
 CDynamicFunc<SDL_GamepadButtonLabel (*)(SDL_GamepadType, SDL_GamepadButton)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<SDL_GamepadType (*)(SDL_Gamepad*)>::~CDynamicFunc()
 CDynamicFunc<SDL_GamepadType (*)(SDL_Gamepad*)>::GetNextPointer()
 CDynamicFunc<SDL_GamepadType (*)(SDL_Gamepad*)>::Init(CSysModule*)
 CDynamicFunc<SDL_GamepadType (*)(SDL_Gamepad*)>::Release()
 CDynamicFunc<SDL_GamepadType (*)(SDL_Gamepad*)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<SDL_GamepadType (*)(unsigned int)>::~CDynamicFunc()
 CDynamicFunc<SDL_GamepadType (*)(unsigned int)>::GetNextPointer()
 CDynamicFunc<SDL_GamepadType (*)(unsigned int)>::Init(CSysModule*)
 CDynamicFunc<SDL_GamepadType (*)(unsigned int)>::Release()
 CDynamicFunc<SDL_GamepadType (*)(unsigned int)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<SDL_Gamepad* (*)(unsigned int)>::~CDynamicFunc()
 CDynamicFunc<SDL_Gamepad* (*)(unsigned int)>::GetNextPointer()
 CDynamicFunc<SDL_Gamepad* (*)(unsigned int)>::Init(CSysModule*)
 CDynamicFunc<SDL_Gamepad* (*)(unsigned int)>::Release()
 CDynamicFunc<SDL_Gamepad* (*)(unsigned int)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<SDL_GUID (*)(SDL_Joystick*)>::~CDynamicFunc()
 CDynamicFunc<SDL_GUID (*)(SDL_Joystick*)>::GetNextPointer()
 CDynamicFunc<SDL_GUID (*)(SDL_Joystick*)>::Init(CSysModule*)
 CDynamicFunc<SDL_GUID (*)(SDL_Joystick*)>::Release()
 CDynamicFunc<SDL_GUID (*)(SDL_Joystick*)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<SDL_GUID (*)(unsigned int)>::~CDynamicFunc()
 CDynamicFunc<SDL_GUID (*)(unsigned int)>::GetNextPointer()
 CDynamicFunc<SDL_GUID (*)(unsigned int)>::Init(CSysModule*)
 CDynamicFunc<SDL_GUID (*)(unsigned int)>::Release()
 CDynamicFunc<SDL_GUID (*)(unsigned int)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<SDL_hid_device* (*)(char const*)>::~CDynamicFunc()
 CDynamicFunc<SDL_hid_device* (*)(char const*)>::GetNextPointer()
 CDynamicFunc<SDL_hid_device* (*)(char const*)>::Init(CSysModule*)
 CDynamicFunc<SDL_hid_device* (*)(char const*)>::Release()
 CDynamicFunc<SDL_hid_device* (*)(char const*)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<SDL_hid_device_info* (*)(unsigned short, unsigned short)>::~CDynamicFunc()
 CDynamicFunc<SDL_hid_device_info* (*)(unsigned short, unsigned short)>::GetNextPointer()
 CDynamicFunc<SDL_hid_device_info* (*)(unsigned short, unsigned short)>::Init(CSysModule*)
 CDynamicFunc<SDL_hid_device_info* (*)(unsigned short, unsigned short)>::Release()
 CDynamicFunc<SDL_hid_device_info* (*)(unsigned short, unsigned short)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<SDL_JoystickConnectionState (*)(SDL_Gamepad*)>::~CDynamicFunc()
 CDynamicFunc<SDL_JoystickConnectionState (*)(SDL_Gamepad*)>::GetNextPointer()
 CDynamicFunc<SDL_JoystickConnectionState (*)(SDL_Gamepad*)>::Init(CSysModule*)
 CDynamicFunc<SDL_JoystickConnectionState (*)(SDL_Gamepad*)>::Release()
 CDynamicFunc<SDL_JoystickConnectionState (*)(SDL_Gamepad*)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<SDL_Joystick* (*)(SDL_Gamepad*)>::~CDynamicFunc()
 CDynamicFunc<SDL_Joystick* (*)(SDL_Gamepad*)>::GetNextPointer()
 CDynamicFunc<SDL_Joystick* (*)(SDL_Gamepad*)>::Init(CSysModule*)
 CDynamicFunc<SDL_Joystick* (*)(SDL_Gamepad*)>::Release()
 CDynamicFunc<SDL_Joystick* (*)(SDL_Gamepad*)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<SDL_JoystickType (*)(SDL_Joystick*)>::~CDynamicFunc()
 CDynamicFunc<SDL_JoystickType (*)(SDL_Joystick*)>::GetNextPointer()
 CDynamicFunc<SDL_JoystickType (*)(SDL_Joystick*)>::Init(CSysModule*)
 CDynamicFunc<SDL_JoystickType (*)(SDL_Joystick*)>::Release()
 CDynamicFunc<SDL_JoystickType (*)(SDL_Joystick*)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<SDL_JoystickType (*)(unsigned int)>::~CDynamicFunc()
 CDynamicFunc<SDL_JoystickType (*)(unsigned int)>::GetNextPointer()
 CDynamicFunc<SDL_JoystickType (*)(unsigned int)>::Init(CSysModule*)
 CDynamicFunc<SDL_JoystickType (*)(unsigned int)>::Release()
 CDynamicFunc<SDL_JoystickType (*)(unsigned int)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<SDL_Joystick* (*)(unsigned int)>::~CDynamicFunc()
 CDynamicFunc<SDL_Joystick* (*)(unsigned int)>::GetNextPointer()
 CDynamicFunc<SDL_Joystick* (*)(unsigned int)>::Init(CSysModule*)
 CDynamicFunc<SDL_Joystick* (*)(unsigned int)>::Release()
 CDynamicFunc<SDL_Joystick* (*)(unsigned int)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<SDL_PowerState (*)(SDL_Gamepad*, int*)>::~CDynamicFunc()
 CDynamicFunc<SDL_PowerState (*)(SDL_Gamepad*, int*)>::GetNextPointer()
 CDynamicFunc<SDL_PowerState (*)(SDL_Gamepad*, int*)>::Init(CSysModule*)
 CDynamicFunc<SDL_PowerState (*)(SDL_Gamepad*, int*)>::Release()
 CDynamicFunc<SDL_PowerState (*)(SDL_Gamepad*, int*)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunctionListUnloadOnDestruct::~CDynamicFunctionListUnloadOnDestruct()
+CDynamicFunc<unsigned int (*)()>::~CDynamicFunc()
 CDynamicFunc<unsigned int (*)()>::GetNextPointer()
 CDynamicFunc<unsigned int (*)()>::Init(CSysModule*)
+CDynamicFunc<unsigned int* (*)(int*)>::~CDynamicFunc()
 CDynamicFunc<unsigned int* (*)(int*)>::GetNextPointer()
 CDynamicFunc<unsigned int* (*)(int*)>::Init(CSysModule*)
 CDynamicFunc<unsigned int* (*)(int*)>::Release()
 CDynamicFunc<unsigned int* (*)(int*)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunc<unsigned int (*)()>::Release()
+CDynamicFunc<unsigned int (*)(SDL_Gamepad*)>::~CDynamicFunc()
 CDynamicFunc<unsigned int (*)(SDL_Gamepad*)>::GetNextPointer()
 CDynamicFunc<unsigned int (*)(SDL_Gamepad*)>::Init(CSysModule*)
 CDynamicFunc<unsigned int (*)(SDL_Gamepad*)>::Release()
 CDynamicFunc<unsigned int (*)(SDL_Gamepad*)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<unsigned int (*)(SDL_Joystick*)>::~CDynamicFunc()
 CDynamicFunc<unsigned int (*)(SDL_Joystick*)>::GetNextPointer()
 CDynamicFunc<unsigned int (*)(SDL_Joystick*)>::Init(CSysModule*)
 CDynamicFunc<unsigned int (*)(SDL_Joystick*)>::Release()
 CDynamicFunc<unsigned int (*)(SDL_Joystick*)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunc<unsigned int (*)()>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<unsigned short (*)(SDL_Gamepad*)>::~CDynamicFunc()
 CDynamicFunc<unsigned short (*)(SDL_Gamepad*)>::GetNextPointer()
 CDynamicFunc<unsigned short (*)(SDL_Gamepad*)>::Init(CSysModule*)
 CDynamicFunc<unsigned short (*)(SDL_Gamepad*)>::Release()
 CDynamicFunc<unsigned short (*)(SDL_Gamepad*)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<unsigned short (*)(unsigned int)>::~CDynamicFunc()
 CDynamicFunc<unsigned short (*)(unsigned int)>::GetNextPointer()
 CDynamicFunc<unsigned short (*)(unsigned int)>::Init(CSysModule*)
 CDynamicFunc<unsigned short (*)(unsigned int)>::Release()
 CDynamicFunc<unsigned short (*)(unsigned int)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<void (*)(bool (*)(void*, SDL_Event*), void*)>::~CDynamicFunc()
 CDynamicFunc<void (*)(bool (*)(void*, SDL_Event*), void*)>::GetNextPointer()
 CDynamicFunc<void (*)(bool (*)(void*, SDL_Event*), void*)>::Init(CSysModule*)
 CDynamicFunc<void (*)(bool (*)(void*, SDL_Event*), void*)>::Release()
 CDynamicFunc<void (*)(bool (*)(void*, SDL_Event*), void*)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<void (*)()>::~CDynamicFunc()
 CDynamicFunc<void (*)()>::GetNextPointer()
 CDynamicFunc<void (*)()>::Init(CSysModule*)
 CDynamicFunc<void (*)()>::Release()
+CDynamicFunc<void (*)(SDL_Gamepad*)>::~CDynamicFunc()
 CDynamicFunc<void (*)(SDL_Gamepad*)>::GetNextPointer()
 CDynamicFunc<void (*)(SDL_Gamepad*)>::Init(CSysModule*)
 CDynamicFunc<void (*)(SDL_Gamepad*)>::Release()
 CDynamicFunc<void (*)(SDL_Gamepad*)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<void (*)(SDL_hid_device_info*)>::~CDynamicFunc()
 CDynamicFunc<void (*)(SDL_hid_device_info*)>::GetNextPointer()
 CDynamicFunc<void (*)(SDL_hid_device_info*)>::Init(CSysModule*)
 CDynamicFunc<void (*)(SDL_hid_device_info*)>::Release()
 CDynamicFunc<void (*)(SDL_hid_device_info*)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<void (*)(SDL_Joystick*)>::~CDynamicFunc()
 CDynamicFunc<void (*)(SDL_Joystick*)>::GetNextPointer()
 CDynamicFunc<void (*)(SDL_Joystick*)>::Init(CSysModule*)
 CDynamicFunc<void (*)(SDL_Joystick*)>::Release()
 CDynamicFunc<void (*)(SDL_Joystick*)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunc<void (*)()>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<void (*)(unsigned int)>::~CDynamicFunc()
 CDynamicFunc<void (*)(unsigned int)>::GetNextPointer()
 CDynamicFunc<void (*)(unsigned int)>::Init(CSysModule*)
 CDynamicFunc<void (*)(unsigned int)>::Release()
 CDynamicFunc<void (*)(unsigned int)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<void (*)(void*)>::~CDynamicFunc()
 CDynamicFunc<void (*)(void*)>::GetNextPointer()
 CDynamicFunc<void (*)(void*)>::Init(CSysModule*)
 CDynamicFunc<void (*)(void*)>::Release()
@@ -12267,7 +12344,6 @@ Couldn't lock overlay window
 Couldn't open audio device: format=%d, channels=%u, frequency=%u. Audio is disabled: %s\n
 Couldn't open audio device for sound effects: %s\n
 Couldn't open game controller %s at index %d: %s\n
-Couldn't open microphone, unsupported audio codec %d\n
 Couldn't open SDL controller %u: %s\n
 Couldn't open %s for writing\n
 Couldn't parse color '%s'\n
@@ -12848,7 +12924,6 @@ CreatePollGroup
 CreateSession
 create_session_request
 create_session_response
-CreateSimpleProcess
 CreateSocketPair
 CreateSteamNetworkingUtils
 create_synthetic_message_hash
@@ -16000,7 +16075,6 @@ CStreamPlayer::BHasControllersOpen()
 CStreamPlayer::BHasMicrophone()
 CStreamPlayer::BHasOverlayContent()
 CStreamPlayer::BHasRecordedInput()
-CStreamPlayer::BInitializeMicrophone(int, int)
 CStreamPlayer::BLoadAudio(void const*, int, CSmartPtr<CAudioChunk>&)
 CStreamPlayer::BMicrophoneStreamActive()
 CStreamPlayer::BOpenAudio(EAudioFormat, unsigned int, unsigned int)
@@ -16225,6 +16299,7 @@ CStreamPlayer::OVRStartLatencyTest(OVR::Color const&)
 CStreamPlayer::PanToCursorPosition()
 CStreamPlayer::PasteFromClipboard()
 CStreamPlayer::PlayAudio(CSmartPtr<CAudioChunk>, float)
+CStreamPlayer::PlayAudio(SDL_AudioStream*, int)
 CStreamPlayer::PlayClick()
 CStreamPlayer::PrepareWindow(SDL_Window*)
 CStreamPlayer::PutAudioFrame(IAudioFrame*)
@@ -16268,6 +16343,7 @@ CStreamPlayer::SetIcon(int, int, unsigned char const*)
 CStreamPlayer::SetKeymap(CStreamingKeymap const&)
 CStreamPlayer::SetMagnifyingGlassActive(bool)
 CStreamPlayer::SetMenubarHotkey(int)
+CStreamPlayer::SetMicrophoneConnected(bool)
 CStreamPlayer::SetMouseCentered()
 CStreamPlayer::SetMouseOffscreen()
 CStreamPlayer::SetMouseScale(float)
@@ -16293,7 +16369,6 @@ CStreamPlayer::ShowCursor(float, float)
 CStreamPlayer::ShowNotification(char const*)
 CStreamPlayer::ShowOnScreenKeyboard()
 CStreamPlayer::ShowToast(int)
-CStreamPlayer::ShutdownMicrophone()
 CStreamPlayer::StartPlayingInput()
 CStreamPlayer::StartRecordingInput()
 CStreamPlayer::StopPlayingInput()
@@ -17056,7 +17131,6 @@ CUtlHashMap<int, SteamNetworkingSocketsLib::CSteamNetworkPollGroup*, std::__ndk1
 CUtlHashMap<int, SteamNetworkingSocketsLib::CSteamNetworkPollGroup*, std::__ndk1::equal_to<int>, SteamNetworkingSocketsLib::Identity<int>, int>::RemoveAt(int)
 CUtlHashMap::RemoveAt - couldn't find bucket for item
 CUtlHashMap::RemoveAt - Invalid index
-CUtlHashMap<SDL_GUID, unsigned int, CDefEquals<SDL_GUID>, HashFunctorUnpaddedStructure<SDL_GUID>, SDL_GUID>::~CUtlHashMap()
 CUtlHashMap<SDL_Scancode, unsigned int, CDefEquals<SDL_Scancode>, HashFunctor<SDL_Scancode>, SDL_Scancode>::~CUtlHashMap()
 CUtlHashMap<SDL_Scancode, unsigned int, CDefEquals<SDL_Scancode>, HashFunctor<SDL_Scancode>, SDL_Scancode>::EnsureCapacity(int)
 CUtlHashMap<SDL_Scancode, unsigned int, CDefEquals<SDL_Scancode>, HashFunctor<SDL_Scancode>, SDL_Scancode>::IncrementalRehash()
@@ -20952,6 +21026,7 @@ EVP_EncryptFinal_ex( ctx, pOut, &nBytesWritten ) == 1
 EVP_EncryptInit_ex( ctx, nullptr, nullptr, nullptr, (const uint8*)pIV ) == 1
 EVP_EncryptUpdate
 EVP_EncryptUpdate( ctx, nullptr, &nBytesWritten, (const uint8*)pAdditionalAuthenticationData, (int)cbAuthenticationData ) == 1
+EVP_EncryptUpdate( ctx, pOut, &nBytesWritten, ( const uint8 * )pPlaintextData, ( int )cbPlaintextData ) == 1
 EVP_EncryptUpdate( ctx, pOut, &nBytesWritten, (const uint8*)pPlaintextData, (int)cbPlaintextData ) == 1
 EVP lib
 EVP_MD_CTX_copy_ex
@@ -21437,7 +21512,6 @@ false
 false"
 False
 FALSE
-false"w\n
 f,AN
 \f]aQ9
 .FaQQ%Pg
@@ -28009,6 +28083,7 @@ INVALID
 Invalid address families
 Invalid address family request when binding to IPv4 address
 Invalid address family request when binding to IPv6 address
+Invalid AES-ECB key size
 Invalid AES-GCM key size
 invalid alert
 invalid argument
@@ -29454,7 +29529,7 @@ k_EChooseModeElementToggleMouseOffscreenButtonIcon
 k_EChooseModeElementTrackpadSensitivityButton
 k_EChooseModeElementTrackpadSensitivityButtonIcon
 k_EClientTask_DownloadClip
-k_EControllerAction_Add_ActionSet_Layerk_EControllerAction_BigPicture_Minimizek_EControllerAction_BigPicture_Openk_EControllerAction_BigPicture_Quitk_EControllerAction_Camera_DotsPer360_CalibrationSpink_EControllerAction_Camera_Horizon_Resetk_EControllerAction_Camera_Turn_To_Face_Directionk_EControllerAction_Change_Player_Numberk_EControllerAction_Change_Presetk_EControllerAction_Change_TouchscreenMode_Hoverk_EControllerAction_Change_TouchscreenMode_LeftClickk_EControllerAction_Change_TouchscreenMode_MiddleClickk_EControllerAction_Change_TouchscreenMode_Nativek_EControllerAction_Change_TouchscreenMode_Nonek_EControllerAction_Change_TouchscreenMode_RightClickk_EControllerAction_Chord_Hint_Dismissk_EControllerAction_Chord_Hint_Displayk_EControllerAction_Controller_PowerOffk_EControllerAction_Countk_EControllerAction_Empty_Sub_Commandk_EControllerAction_Force_Guide_Upk_EControllerAction_GR_Clipk_EControllerAction_GR_Markerk_EControllerAction_GR_Togglek_EControllerAction_GuideQAMStateChangek_EControllerAction_Hold_ActionSet_Layerk_EControllerAction_Host_PowerOffk_EControllerAction_Host_Restartk_EControllerAction_Host_Suspendk_EControllerAction_Layer_Empty_Bindingk_EControllerAction_Mouse_Deltak_EControllerAction_Mouse_Positionk_EControllerAction_Notify_ActionSetLayer_Changek_EControllerAction_Notify_ActionSet_Changek_EControllerAction_Notify_InputGeneratedk_EControllerAction_Notify_XInput_Slot_Changek_EControllerAction_Open_Configuratork_EControllerAction_Open_QuickMenuk_EControllerAction_Quit_Applicationk_EControllerAction_Remove_ActionSet_Layerk_EControllerAction_RequestConfigActivationk_EControllerAction_RequestCursorVisibilityChecksk_EControllerAction_Screen_Brightness_Downk_EControllerAction_Screen_Brightness_Upk_EControllerAction_Screenshotk_EControllerAction_Set_LEDk_EControllerAction_Show_Keyboardk_EControllerAction_SteamMusic_Nextk_EControllerAction_SteamMusic_PlayPausek_EControllerAction_SteamMusic_Prevk_EControllerAction_SteamMusic_VolDownk_EControllerAction_SteamMusic_VolMutek_EControllerAction_SteamMusic_VolUpk_EControllerAction_System_Key_0k_EControllerAction_System_Key_1k_EControllerAction_Toggle_Hapticsk_EControllerAction_Toggle_Hudk_EControllerAction_Toggle_Lizard_Modek_EControllerAction_Toggle_Magnifierk_EControllerAction_Toggle_Rumble
+k_EControllerAction_Add_ActionSet_Layerk_EControllerAction_BigPicture_Minimizek_EControllerAction_BigPicture_Openk_EControllerAction_BigPicture_Quitk_EControllerAction_Camera_DotsPer360_CalibrationSpink_EControllerAction_Camera_Horizon_Resetk_EControllerAction_Camera_Turn_To_Face_Directionk_EControllerAction_Change_Player_Numberk_EControllerAction_Change_Presetk_EControllerAction_Change_TouchscreenMode_Hoverk_EControllerAction_Change_TouchscreenMode_LeftClickk_EControllerAction_Change_TouchscreenMode_MiddleClickk_EControllerAction_Change_TouchscreenMode_Nativek_EControllerAction_Change_TouchscreenMode_Nonek_EControllerAction_Change_TouchscreenMode_RightClickk_EControllerAction_Chord_Hint_Dismissk_EControllerAction_Chord_Hint_Displayk_EControllerAction_Controller_PowerOffk_EControllerAction_Countk_EControllerAction_Empty_Sub_Commandk_EControllerAction_Force_Guide_Upk_EControllerAction_GR_Clipk_EControllerAction_GR_Markerk_EControllerAction_GR_Togglek_EControllerAction_GuideQAMStateChangek_EControllerAction_Hold_ActionSet_Layerk_EControllerAction_Host_PowerOffk_EControllerAction_Host_Restartk_EControllerAction_Host_Suspendk_EControllerAction_Layer_Empty_Bindingk_EControllerAction_Mouse_Deltak_EControllerAction_Mouse_Positionk_EControllerAction_Notify_ActionSetLayer_Changek_EControllerAction_Notify_ActionSet_Changek_EControllerAction_Notify_InputGeneratedk_EControllerAction_Notify_XInput_Slot_Changek_EControllerAction_Open_Configuratork_EControllerAction_Open_QuickMenuk_EControllerAction_Quit_Applicationk_EControllerAction_Remove_ActionSet_Layerk_EControllerAction_RequestConfigActivationk_EControllerAction_RequestCursorVisibilityChecksk_EControllerAction_ScreenReader_Disablek_EControllerAction_ScreenReader_Enablek_EControllerAction_ScreenReader_NextHeadingk_EControllerAction_ScreenReader_NextItemk_EControllerAction_ScreenReader_NextLandmarkk_EControllerAction_ScreenReader_NextWordk_EControllerAction_ScreenReader_PrevHeadingk_EControllerAction_ScreenReader_PrevItemk_EControllerAction_ScreenReader_PrevLandmarkk_EControllerAction_ScreenReader_PrevWordk_EControllerAction_ScreenReader_StopTalkingk_EControllerAction_ScreenReader_ToggleModek_EControllerAction_Screen_Brightness_Downk_EControllerAction_Screen_Brightness_Upk_EControllerAction_Screenshotk_EControllerAction_Set_LEDk_EControllerAction_Show_Keyboardk_EControllerAction_SteamMusic_Nextk_EControllerAction_SteamMusic_PlayPausek_EControllerAction_SteamMusic_Prevk_EControllerAction_SteamMusic_VolDownk_EControllerAction_SteamMusic_VolMutek_EControllerAction_SteamMusic_VolUpk_EControllerAction_System_Key_0k_EControllerAction_System_Key_1k_EControllerAction_Toggle_Hapticsk_EControllerAction_Toggle_Hudk_EControllerAction_Toggle_Lizard_Modek_EControllerAction_Toggle_Magnifierk_EControllerAction_Toggle_Rumble
 k_EControllerActivationType_Analogk_EControllerActivationType_Chordk_EControllerActivationType_Countk_EControllerActivationType_DoublePressk_EControllerActivationType_FullPressk_EControllerActivationType_LongPressk_EControllerActivationType_Nonek_EControllerActivationType_Releasek_EControllerActivationType_SoftPressk_EControllerActivationType_StartPress
 k_EControllerDigitalInput_BatteryLowk_EControllerDigitalInput_Button1k_EControllerDigitalInput_Button2k_EControllerDigitalInput_Button3k_EControllerDigitalInput_Button4k_EControllerDigitalInput_ButtonAk_EControllerDigitalInput_ButtonAlwaysOnk_EControllerDigitalInput_ButtonAncillary1k_EControllerDigitalInput_ButtonBk_EControllerDigitalInput_ButtonBackLeftk_EControllerDigitalInput_ButtonBackLeft2k_EControllerDigitalInput_ButtonBackRightk_EControllerDigitalInput_ButtonBackRight2k_EControllerDigitalInput_ButtonDownk_EControllerDigitalInput_ButtonEscapek_EControllerDigitalInput_ButtonLeftk_EControllerDigitalInput_ButtonLeftBumperk_EControllerDigitalInput_ButtonLeftJoystickClickk_EControllerDigitalInput_ButtonLeftTriggerk_EControllerDigitalInput_ButtonMacro0k_EControllerDigitalInput_ButtonMacro1k_EControllerDigitalInput_ButtonMacro1Fingerk_EControllerDigitalInput_ButtonMacro2k_EControllerDigitalInput_ButtonMacro2Fingerk_EControllerDigitalInput_ButtonMacro3k_EControllerDigitalInput_ButtonMacro4k_EControllerDigitalInput_ButtonMacro5k_EControllerDigitalInput_ButtonMacro6k_EControllerDigitalInput_ButtonMacro7k_EControllerDigitalInput_ButtonMenuk_EControllerDigitalInput_ButtonNonek_EControllerDigitalInput_ButtonRightk_EControllerDigitalInput_ButtonRightBumperk_EControllerDigitalInput_ButtonRightJoystickClickk_EControllerDigitalInput_ButtonRightTriggerk_EControllerDigitalInput_ButtonSteamk_EControllerDigitalInput_ButtonUpk_EControllerDigitalInput_ButtonXk_EControllerDigitalInput_ButtonYk_EControllerDigitalInput_Countk_EControllerDigitalInput_LeftAuxCapSensek_EControllerDigitalInput_LeftTrackPadTouchk_EControllerDigitalInput_LeftTrackpadClickk_EControllerDigitalInput_LeftTrackpadDoubleTapk_EControllerDigitalInput_LeftTrackpadEk_EControllerDigitalInput_LeftTrackpadNk_EControllerDigitalInput_LeftTrackpadNek_EControllerDigitalInput_LeftTrackpadNwk_EControllerDigitalInput_LeftTrackpadOuterRadiusk_EControllerDigitalInput_LeftTrackpadSk_EControllerDigitalInput_LeftTrackpadSek_EControllerDigitalInput_LeftTrackpadSwk_EControllerDigitalInput_LeftTrackpadWk_EControllerDigitalInput_LeftTriggerThresholdk_EControllerDigitalInput_RightAuxCapSensek_EControllerDigitalInput_RightTrackPadTouchk_EControllerDigitalInput_RightTrackpadClickk_EControllerDigitalInput_RightTrackpadDoubleTapk_EControllerDigitalInput_RightTrackpadEk_EControllerDigitalInput_RightTrackpadNk_EControllerDigitalInput_RightTrackpadNek_EControllerDigitalInput_RightTrackpadNwk_EControllerDigitalInput_RightTrackpadOuterRadiusk_EControllerDigitalInput_RightTrackpadSk_EControllerDigitalInput_RightTrackpadSek_EControllerDigitalInput_RightTrackpadSwk_EControllerDigitalInput_RightTrackpadWk_EControllerDigitalInput_RightTriggerThresholdk_EControllerDigitalInput_StickDownk_EControllerDigitalInput_StickLeftk_EControllerDigitalInput_StickRightk_EControllerDigitalInput_StickUpk_EControllerDigitalInput_Touch1k_EControllerDigitalInput_Touch2k_EControllerDigitalInput_Touch3k_EControllerDigitalInput_Touch4
 k_EControllerElementTypeButtonA
@@ -29500,7 +29575,7 @@ k_EControllerPresetType_Nextk_EControllerPresetType_Nonek_EControllerPresetType_
 k_EControllerSettingAccelerationk_EControllerSettingActionSetTriggerCursorHidek_EControllerSettingActionSetTriggerCursorShowk_EControllerSettingActivatorActivateStickOrTrackpadk_EControllerSettingActivatorAnalogOutputValuek_EControllerSettingActivatorChordk_EControllerSettingActivatorCyclek_EControllerSettingActivatorDoubleTapTimek_EControllerSettingActivatorEndDelayk_EControllerSettingActivatorInterruptablek_EControllerSettingActivatorLongPressTimek_EControllerSettingActivatorMouseWarpXk_EControllerSettingActivatorMouseWarpYk_EControllerSettingActivatorOutputAxisk_EControllerSettingActivatorRepeatRatek_EControllerSettingActivatorSoftPressStylek_EControllerSettingActivatorStartDelayk_EControllerSettingActivatorThresholdk_EControllerSettingActivatorTogglek_EControllerSettingAdaptiveCenteringk_EControllerSettingAdaptiveThresholdk_EControllerSettingAnalogEmulationDutyCyclePctk_EControllerSettingAnalogEmulationPeriodk_EControllerSettingAntiDeadZonek_EControllerSettingAntiDeadZoneBufferk_EControllerSettingCountk_EControllerSettingCurveExponentk_EControllerSettingCustomCurveExponentk_EControllerSettingDeadZoneEnabledk_EControllerSettingDeadZoneInnerRadiusk_EControllerSettingDeadZoneOuterRadiusk_EControllerSettingDeadZoneShapek_EControllerSettingDeadzonek_EControllerSettingDeadzoneAdvancedSettingsk_EControllerSettingDotsPer360k_EControllerSettingDoubleTapk_EControllerSettingDoubleTapBeepk_EControllerSettingDoubleTapMaxDistk_EControllerSettingDoubleTapMaxDurationk_EControllerSettingDoubleTapMinDurationk_EControllerSettingDynamicModek_EControllerSettingEdgeBindingInvertk_EControllerSettingEdgeBindingRadiusk_EControllerSettingEdgeSpinRadiusk_EControllerSettingEdgeSpinVelocityk_EControllerSettingFlickStickAllowFlickOnAwakek_EControllerSettingFlickStickDepressionSpeedk_EControllerSettingFlickStickEdgeBindingRadiusk_EControllerSettingFlickStickForwardDeadZonek_EControllerSettingFlickStickFrameTimek_EControllerSettingFlickStickHapticBumpPerAnglek_EControllerSettingFlickStickSnapModek_EControllerSettingFlickStickSnapTightnessk_EControllerSettingFlickStickSweepSensitivityk_EControllerSettingFlickStickSweepTightnessk_EControllerSettingFlickStickTransitionTimek_EControllerSettingFourButtonDistk_EControllerSettingFourButtonSizek_EControllerSettingFrictionk_EControllerSettingFrictionVertScalek_EControllerSettingGyroAxisk_EControllerSettingGyroButtonk_EControllerSettingGyroButtonHapticEffectk_EControllerSettingGyroButtonInvertk_EControllerSettingGyroButtonMaskk_EControllerSettingGyroDeflectionAngleMaxk_EControllerSettingGyroDeflectionAngleMink_EControllerSettingGyroDeflectionNeutralAnglek_EControllerSettingGyroDeflectionUseGravityk_EControllerSettingGyroEnableAngleCatchUpk_EControllerSettingGyroJoystickOutputMaxk_EControllerSettingGyroJoystickOutputMink_EControllerSettingGyroJoystickPowerCurvek_EControllerSettingGyroLockExtentsk_EControllerSettingGyroModek_EControllerSettingGyroNaturalSensitivityk_EControllerSettingGyroNeutralAnglek_EControllerSettingGyroPointerk_EControllerSettingGyroPrecisionSpeedk_EControllerSettingGyroRollScalek_EControllerSettingGyroSampleAngleOffsetXk_EControllerSettingGyroSensitivityScalek_EControllerSettingGyroSpeedDeadzonek_EControllerSettingGyroSpeedMaxAnglePerSecondk_EControllerSettingGyroSpeedMinAnglePerSecondk_EControllerSettingGyroTo2DConversionStylek_EControllerSettingGyroUsePerControllerGyroPreferencesk_EControllerSettingGyroXYRatiok_EControllerSettingGyroYawScalek_EControllerSettingHapticIntensityk_EControllerSettingHapticIntensityOverridek_EControllerSettingHoldRepeatIntervalk_EControllerSettingHoldRepeatsk_EControllerSettingInvertXk_EControllerSettingInvertYk_EControllerSettingLayerModek_EControllerSettingLayoutk_EControllerSettingLeftTrackpadModek_EControllerSettingMouseMoveThresholdk_EControllerSettingMouseRegionPositionXk_EControllerSettingMouseRegionPositionYk_EControllerSettingMouseRegionScalek_EControllerSettingMouseSmoothingk_EControllerSettingOutputAxisk_EControllerSettingOutputJoystickk_EControllerSettingOutputToJoystickk_EControllerSettingOutputToJoystickDeadzoneXk_EControllerSettingOutputToJoystickDeadzoneYk_EControllerSettingOutputToJoystickPrecisionk_EControllerSettingOutputTriggerk_EControllerSettingOverlapRegionk_EControllerSettingPressureJoystickEnablek_EControllerSettingPressureJoystickMaxPressurek_EControllerSettingPressureJoystickMinPressurek_EControllerSettingReferencedModek_EControllerSettingRequiresClickk_EControllerSettingRightTrackpadModek_EControllerSettingRotationk_EControllerSettingRotationOldk_EControllerSettingRumbleIntensityk_EControllerSettingRumbleTypek_EControllerSettingScrollAnglek_EControllerSettingScrollInvertk_EControllerSettingScrollMomentumk_EControllerSettingScrollTypek_EControllerSettingScrollWrapk_EControllerSettingSensitivityk_EControllerSettingSensitivityHorizScalek_EControllerSettingSensitivityVertScalek_EControllerSettingSmoothJoystickk_EControllerSettingSwipeDurationk_EControllerSettingTeleportMouseStartk_EControllerSettingTeleportMouseStopk_EControllerSettingTestParam0k_EControllerSettingTestParam1k_EControllerSettingTestParam2k_EControllerSettingTestParam3k_EControllerSettingTestParam4k_EControllerSettingTestParam5k_EControllerSettingTestParam6k_EControllerSettingTestParam7k_EControllerSettingTestParam8k_EControllerSettingTestParam9k_EControllerSettingTouchMenuActivateButtonk_EControllerSettingTouchMenuButtonCountk_EControllerSettingTouchMenuButtonTypek_EControllerSettingTouchMenuInnerDeadzonek_EControllerSettingTouchMenuLabelsk_EControllerSettingTouchMenuOpacityk_EControllerSettingTouchMenuOuterDeadzonek_EControllerSettingTouchMenuPosXk_EControllerSettingTouchMenuPosYk_EControllerSettingTouchMenuScalek_EControllerSettingTrackballk_EControllerSettingTrackpadTriggerDatak_EControllerSettingTriggerMouseClampingk_EControllerSettingTriggerMouseClampingAmountk_EControllerSettingVirtualCapSizek_EControllerSettingVirtualMenuCenterBoundk_EControllerSettingVirtualModek_EControllerSettingVirtualStickThrow
 k_EControllerSource_ABXYk_EControllerSource_CapJoystickLeftk_EControllerSource_CapJoystickRightk_EControllerSource_CenterTrackpadk_EControllerSource_Countk_EControllerSource_DPadk_EControllerSource_Gyrok_EControllerSource_Joystickk_EControllerSource_Keyk_EControllerSource_LeftBumperk_EControllerSource_LeftGyrok_EControllerSource_LeftTrackpadk_EControllerSource_LeftTriggerk_EControllerSource_Mousek_EControllerSource_Nonek_EControllerSource_RightBumperk_EControllerSource_RightJoystickk_EControllerSource_RightTrackpadk_EControllerSource_RightTriggerk_EControllerSource_Switch
 k_EControllerSourceMode_2DScrollwheelk_EControllerSourceMode_AbsoluteMousek_EControllerSourceMode_Buttonsk_EControllerSourceMode_CameraAnglesk_EControllerSourceMode_Countk_EControllerSourceMode_Disabledk_EControllerSourceMode_Dpadk_EControllerSourceMode_FlickStickk_EControllerSourceMode_FlickStickToCameraAnglesk_EControllerSourceMode_FourButtonsk_EControllerSourceMode_GyroToCameraAnglesk_EControllerSourceMode_GyroToJoystickCamerak_EControllerSourceMode_GyroToJoystickDeflectionk_EControllerSourceMode_GyroToMousek_EControllerSourceMode_Hotbark_EControllerSourceMode_JoystickCamerak_EControllerSourceMode_JoystickMousek_EControllerSourceMode_JoystickMovek_EControllerSourceMode_JoystickToCameraAnglesk_EControllerSourceMode_MouseJoystickk_EControllerSourceMode_MouseRegionk_EControllerSourceMode_Nonek_EControllerSourceMode_RadialMenuk_EControllerSourceMode_Referencek_EControllerSourceMode_RelativeMousek_EControllerSourceMode_ScrollWheelk_EControllerSourceMode_SingleButtonk_EControllerSourceMode_Switchesk_EControllerSourceMode_TouchMenuk_EControllerSourceMode_TrackPadToCameraAnglesk_EControllerSourceMode_Trigger
-k_eControllerStyle_ArcadeStickk_eControllerStyle_Gamepadk_eControllerStyle_Gamepad_8BitDo_Pro2k_eControllerStyle_Gamepad_8BitDo_SN30k_eControllerStyle_Gamepad_8BitDo_Ultimatek_eControllerStyle_Gamepad_GameCubek_eControllerStyle_Handheldk_eControllerStyle_Unknown
+k_eControllerStyle_ArcadeStickk_eControllerStyle_Gamepadk_eControllerStyle_Gamepad_8BitDo_Prok_eControllerStyle_Gamepad_8BitDo_SN30k_eControllerStyle_Gamepad_8BitDo_Ultimatek_eControllerStyle_Gamepad_FlyDigi_Apexk_eControllerStyle_Gamepad_FlyDigi_Vaderk_eControllerStyle_Gamepad_GameCubek_eControllerStyle_Handheldk_eControllerStyle_Unknown
 k_EDeviceLocationAny
 k_EDeviceLocationLocal
 k_EDeviceLocationRemote
@@ -30710,7 +30785,7 @@ libGLESv1_CM.so
 libGLESv2.so
 libh264bitstream.so
 libhevcbitstream.so
-lib Jun  7 2025 13:17:13
+lib Jul  2 2025 16:49:08
 liblog.so
 lib(%lu)
 libmain.so
@@ -31804,6 +31879,7 @@ Microfoon dempen
 microphone_button
 microphone_config
 microphone_slider
+Microphone %s, microphone available = %s\n
 Microsoft Commercial Code Signing
 Microsoft CSP Name
 Microsoft Encrypted File System
@@ -31895,6 +31971,9 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 m_iRefs > 0 && m_iRefs < 0x1000000
 -Mi<RvM%!HqP
 ,misc1:
+,misc2:
+,misc3:
+,misc4:
 Mismatching address in STUN response: got %s expected %s.
 missing asn1 eos
 Missing/bad relay_public_key
@@ -33740,6 +33819,7 @@ n\n7\tn\nr
 nnaWUo
 N+N:"=b~@#B}b<
 \n\nbest_score
+\n\ncaps_bits2
 \n\nclient_ids
 \n\n"CMsgSteamDatagramLinkLifetimeStats
 \n\ncodec_data
@@ -38031,7 +38111,6 @@ Quay l
  QUE EST
 QUEM 
 QUEM EST
-Queued %g ms, clearing audio stream\n
 Queuing CSD buffer failed: %d
 _Q-uf
 QUIC connection error
@@ -38649,6 +38728,7 @@ Remote Steam client is currently in VR mode
 Remote Steam client is not logged in
 Remote Steam client is offline
 Remote Steam client requires a PIN code to start streaming
+removed
 remove_doubling
 removeFromCRL
 Remove From CRL
@@ -40211,7 +40291,6 @@ SDL_AddEventWatch
 SDL/APP
 SDL_APP_NAME
 SDL_AUDIO_DEVICE_STREAM_NAME
-SDL_calloc
 SDL_ClearAudioStream
 SDL_CloseGamepad
 SDL_CloseHaptic
@@ -40240,8 +40319,8 @@ SDL_DestroyWindow
 SDL_DisableScreenSaver
 SDL_DuplicateSurface
 SDL_EnableScreenSaver
-SDL_FlushEvents
 SDL_free
+SDL_GAMECONTROLLER_USE_BUTTON_LABELS
 SDL_GamepadConnected
 SDL_GamepadHasSensor
 SDL_GetAndroidJNIEnv
@@ -43873,6 +43952,7 @@ SteamStdLib::CommandLine()
 Steam streamt
 Steam suoratoistossa
 STEAM-Taste gedr
+SteamThreadTools::CreateSimpleProcess(char const*, unsigned int)
 SteamThreadTools::CreateSimpleThread(unsigned int (*)(void*), void*, unsigned int*, unsigned int)
 SteamThreadTools::CThread::BHasValidThreadID() const
 SteamThreadTools::CThread::~CThread()
@@ -46523,6 +46603,9 @@ Type appears to be in generated pool but wasn't
 type.googleapis.com/
 type.googleprod.com/
 type_id
+typeinfo for AES_ECB_CipherContext
+typeinfo for AES_ECB_DecryptContext
+typeinfo for AES_ECB_EncryptContext
 typeinfo for AES_GCM_CipherContext
 typeinfo for AES_GCM_DecryptContext
 typeinfo for AES_GCM_EncryptContext
@@ -47181,6 +47264,9 @@ typeinfo for tinyxml2::XMLPrinter
 typeinfo for tinyxml2::XMLText
 typeinfo for tinyxml2::XMLUnknown
 typeinfo for tinyxml2::XMLVisitor
+typeinfo name for AES_ECB_CipherContext
+typeinfo name for AES_ECB_DecryptContext
+typeinfo name for AES_ECB_EncryptContext
 typeinfo name for AES_GCM_CipherContext
 typeinfo name for AES_GCM_DecryptContext
 typeinfo name for AES_GCM_EncryptContext
@@ -50702,6 +50788,7 @@ V_ReplaceBadFilenameCharactersInPlace
 \vreY
 vrIl6u
 Vrk5
+vr_link_invite_client_id
 /V~RNnH'
 !VRP
 v#RSR#56~D
@@ -50795,6 +50882,8 @@ VSYnHDL
 \vT3J
 \vT6R
 vt9:G?g
+vtable for AES_ECB_DecryptContext
+vtable for AES_ECB_EncryptContext
 vtable for AES_GCM_DecryptContext
 vtable for AES_GCM_EncryptContext
 vtable for CAndroidAccel
