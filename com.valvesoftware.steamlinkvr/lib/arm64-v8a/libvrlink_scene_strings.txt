@@ -6,7 +6,7 @@
 %02x\t
 032AndroidInternalStorageFileLoader
 %.0Lf
-10018851 
+10058557 
 10.35.78
 10QSVLClient
 11QSVLXRInput
@@ -38,6 +38,7 @@
 1e+9999
 %1\f0123456789abcdefABCDEFxX+-pPiInN
 1jr{
+1kEA
 20PanelPositionerPoint
 20StreamBehavior_Empty
 222222
@@ -1499,7 +1500,6 @@ hasMoreElements
 hasNext
 hide_cancel
 hide_cancel_then_show_after_ms
-HO;J
 host_connect
 hosts_list
 hungarian
@@ -4754,6 +4754,7 @@ __strchr_chk
 strcmp
 strcoll_l
 strcpy
+__strcpy_chk
 strcpy_safe(char*, unsigned long, char const*)
 strdup
 stream
@@ -6636,6 +6637,8 @@ xrGetFaceTrackingDataPICO
 xrGetFaceTrackingDataPICO(context.session, timeNow, type, &data)
 xrGetInstanceProcAddr
 xrGetInstanceProcAddr( context.instance, proc_addr.c_str(), (PFN_xrVoidFunction *) &out )
+xrGetInstanceProperties
+xrGetInstanceProperties(outContext.instance, &instanceProperties)
 xrGetOpenGLESGraphicsRequirementsKHR
 xrGetOpenGLESGraphicsRequirementsKHR( outContext.instance, outContext.systemId, &graphicsRequirements )
 xrGetReferenceSpaceBoundsRect
@@ -6774,6 +6777,8 @@ XRQTeardown(XRQContext&)
 XRQUpdateSwapchainSamplerStateGLES(XRQContext const&, XRQSwapchain const&, XrSwapchainStateSamplerOpenGLESFB const&)
 XRQWaitFrame(XRQContext&)
 [XRQ] XR_EXT_display_refresh_rate is not available on this runtime
+[XRQ] XrInstanceProperties::runtimeName: %s
+[XRQ] XrInstanceProperties::runtimeVersion: %i.%i.%i (%lu)
 [XRQ] XR_KHR_convert_timespec_time is not available on this runtime
 XRQXrPathToString(XrInstance_T*, unsigned long, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&)
 XRQXrPathToString(XRQContext const&, unsigned long, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&)
