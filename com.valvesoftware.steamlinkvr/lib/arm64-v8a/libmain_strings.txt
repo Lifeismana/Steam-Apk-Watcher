@@ -18646,6 +18646,7 @@ Disk full or allocation exceeded
 Disminuir la velocidad del mouse
 Disminuir la velocidad del rat
 DispatchOpenSSLErrors(char const*)
+--display
 display
 display-height
 Display size %dx%d, texture size %dx%d, crop-left: %d, crop-right: %d, crop-top: %d, crop-bottom: %d
@@ -20033,6 +20034,7 @@ enable_hardware_decoding
 enable_hardware_encoding_amd
 enable_hardware_encoding_intel
 enable_hardware_encoding_nvidia
+--enable-hevc
 --enable-input
 enable_input_streaming
 --enable-microphone
@@ -29231,12 +29233,11 @@ k_EStreamChannelControl
 k_EStreamChannelDiscovery
 k_EStreamChannelInvalid
 k_EStreamChannelStats
-k_EStreamColorspace_BT2020
-k_EStreamColorspace_BT2020_Full
 k_EStreamColorspace_BT601
 k_EStreamColorspace_BT601_Full
 k_EStreamColorspace_BT709
 k_EStreamColorspace_BT709_Full
+k_EStreamColorspace_HDR10
 k_EStreamColorspace_Unknown
 k_EStreamControlClientHandshake
 k_EStreamControlDeleteCursor
@@ -30326,7 +30327,7 @@ libc++_shared.so
 libc.so
 libcurl lacks IDN support
 libdl.so
-lib Feb 16 2024 16:01:58
+lib Feb 27 2024 13:11:14
 libGLESv1_CM.so
 libGLESv2.so
 libh264bitstream.so
@@ -30385,7 +30386,6 @@ Lim inn tekst
 L|IN
 line
 line 
-linear
 linearGradient
 linebuffer_ctrl
 linebuffer_new
@@ -35272,6 +35272,7 @@ Out of range
 OUT_OF_RANGE
 Out of thread local storage!\n
 out_packets_per_sec_x10
+output_colorspace
 output_gamepad
 output_keyboard
 outsize >= 1
@@ -36617,6 +36618,7 @@ PrepareSessionRequest_ConfirmRecent
  prep*v60
 presentationAddress
 PresentOverlay(SDL_Surface*)
+present_vsync
 preserveAspectRatio
 Presiona F6 o BACK + Y para activar/desactivar la visualizaci
 Presiona F6 o GU
@@ -36866,7 +36868,6 @@ Przytrzymaj Y, by sterowa
 pS25")zC
 psaH
 pSalt
-p Sb
 psC3
 PSC\n
 pSearch != NULL
@@ -39811,7 +39812,7 @@ SDL_CloseSensor
 SDL_ConvertAudioSamples
 SDL_ConvertSurfaceFormat
 SDL_CreateProperties
-SDL_CreateRenderer
+SDL_CreateRendererWithProperties
 SDL_CreateSoftwareRenderer
 SDL_CreateSurface
 SDL_CreateSurfaceFrom
@@ -39988,7 +39989,6 @@ SDL_RenderLine
 SDL_RenderPresent
 SDL_RenderReadPixels
 SDL_RenderRect
-SDL_RENDER_SCALE_QUALITY
 SDL_RenderTexture
 SDL_RenderTextureRotated
 SDL_RestoreWindow
@@ -40007,6 +40007,7 @@ SDL_ScreenKeyboardShown
 SDL_ScreenSaverEnabled
 SDL_SCREENSAVER_INHIBIT_ACTIVITY_NAME
 SDL_SendGamepadEffect
+SDL_SetBooleanProperty
 SDL_SetCursor
 SDL_SetError
 SDL_SetEventEnabled
@@ -40015,6 +40016,7 @@ SDL_SetGamepadPlayerIndex
 SDL_SetGamepadSensorEnabled
 SDL_SetHint
 SDL_SetNumberProperty
+SDL_SetProperty
 SDL_SetRelativeMouseMode
 SDL_SetRenderClipRect
 SDL_SetRenderDrawBlendMode
@@ -51428,6 +51430,7 @@ win32_merger
 win32_name_converter
 win32_splitter
 win32_unload
+window
 --windowed
 WiRe
  wirtualn

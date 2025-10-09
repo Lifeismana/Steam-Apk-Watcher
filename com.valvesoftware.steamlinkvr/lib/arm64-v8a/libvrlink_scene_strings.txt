@@ -47,7 +47,7 @@
 7CThread
 7SVLRoot
 7XrScene
-8704061 
+8726427 
 8SVLAudio
 8SVLCodec
 8SVLCrypt
@@ -115,6 +115,7 @@ AImage_getHeight
 AImage_getTimestamp
 AImage_getWidth
 AImageReader_acquireLatestImage
+AImageReader_delete
 AImageReader_getWindow
 AImageReader_getWindow( m_imageReader, &m_nativeWindow )
 AImageReader_newWithUsage
@@ -874,7 +875,6 @@ Error: Unknown transport mode (%s) requested
 ERROR: While trying to request retransmission of packet #%d, too many packets were missing even to retransmit.  Aborting stream.\n
 Error: XOR0 transport specified, but len too short.
 es-419
-/etc/os-release
 evaluateExpression
 Event not handled: %d
 EventWriteStringBegin(char const*, unsigned long)
@@ -2708,7 +2708,7 @@ QSVLClient::UpdatePowerProps()
 QSVLClient::UpdateStaticProps()
 QSVLClient::VSyncEvent(int)
 QSVLClientXR::BIsLinkActive()
-QSVLClientXR::FlipFrame()
+QSVLClientXR::FlipFrame(long*)
 QSVLClientXR::FlipFrame: Panic! No frames served even after waiting!
 QSVLClientXR::GetAvailableDisplayFrequencies: %.2f
 QSVLClientXR::GetAvailableDisplayFrequencies: All supported Refresh Rates:
@@ -2750,6 +2750,7 @@ QSVLClientXR::TrySetPreferredDisplayFrequency(float)
 QSVLClientXR::TrySetPreferredDisplayFrequency: Setting fallback of 72.0Hz succeeded
 QSVLClientXR::TrySetPreferredDisplayFrequency: Setting fallback of 72Hz failed! Hoping for the best setting the refresh rate to 72Hz
 QSVLClientXR::TrySetPreferredDisplayFrequency: Setting refresh rate to %.1f failed.
+QSVLCodecNDK::AcquireEncodedDataBuffer: Codec was not active
 QSVLCodecNDK::AcquireEncodedDataBuffer: Unable to acquire input buffer! Error: %zd. Resetting stream...
 QSVLCodecNDK::AcquireEncodedDataBuffer(unsigned int)
 QSVLCodecNDK::HandleOnImageAvailable(AImageReader*)
@@ -2771,7 +2772,9 @@ QSVLCodecNDK::MediaThread: Output buffers did change
 QSVLCodecNDK::~QSVLCodecNDK()
 QSVLCodecNDK::QSVLCodecNDK(std::__ndk1::shared_ptr<QSVLFrameServer>, SVLRenderer*)
 QSVLCodecNDK::ReturnEncodedDataBuffer(unsigned char*, unsigned int)
+QSVLCodecNDK::Stop()
 QSVLCodecNDK::SubmitFrameForDecode called but buffer empty
+QSVLCodecNDK::SubmitFrameForDecode: Codec was not active
 QSVLCodecNDK::SubmitFrameForDecode: Failed to queue input buffer. Resetting stream
 QSVLCodecNDK::SubmitFrameForDecode size overflow
 QSVLCodecNDK::SubmitFrameForDecode(unsigned char const*, int, unsigned int, bool)
@@ -2795,7 +2798,7 @@ QSVLFrameServer::QSVLFrameServer()
 QSVLFrameServer::ServeNextHardwareBuffer(HardwareBufferInfo&, int)
 QSVLRendererXR::AcceptDataFrame(unsigned char const*, int, bool, unsigned short)
 QSVLRendererXR::FlipFrame()
-QSVLRendererXR::FlipFrame(XRQContext const&)
+QSVLRendererXR::FlipFrame(XRQContext const&, long*)
 QSVLRendererXR::FlipFrame: You should be calling the other FlipFrame()!
 QSVLRendererXR::GetProjectionLayers(std::__ndk1::vector<XrCompositionLayerBaseHeader*, std::__ndk1::allocator<XrCompositionLayerBaseHeader*>>&)
 QSVLRendererXR::Init()
@@ -2806,6 +2809,7 @@ QSVLRendererXR::QSVLRendererXR(SVLRoot*)
 QSVLRendererXR::SetFadeAmount(float, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1l, 1000l>>)
 QSVLRendererXR::SetShouldWaitOnFrames(bool)
 QSVLRendererXR::SetupSwapchains(XRQContext const&, unsigned int, unsigned int, AtlasMode)
+QSVLRendererXR::Stop()
 QSVLRendererXR::UpdateSwapchainSampler: Sampler type set to bilinear
 QSVLRendererXR::UpdateSwapchainSampler: Sampler type set to linear
 QSVLRendererXR::UpdateSwapchainSampler: Unknown sampler type!
@@ -2885,6 +2889,7 @@ rexmitReq
 rexmitSent
 right
 ro.arch
+ro.board.platform
 ro.build.version.sdk
 romanian
 rotation
@@ -4545,7 +4550,6 @@ std::uncaught_exceptions()
 std::underflow_error::~underflow_error()
 std::unexpected()
 steamlinkvr
-steamrt
 SteamVRVersionAsString()
 sText
 sTitle
@@ -4660,6 +4664,7 @@ SVLAudio::TransportRXAudioFrames(dataset*)
 SVLAudio::UpdateStats()
 SVLClient finished initializing
 --------SVLCLIENT INIT--------
+SVLCodec::Stop()
 SVLCodec::~SVLCodec()
 SVLCodec::SVLCodec(SVLRenderer*)
 SVLCRC32
@@ -4814,6 +4819,7 @@ SVLRenderer::AcceptFrameMetadata(TransportFrameMetadata_t const*, int)
 SVLRenderer::GetFrameMetadataFromCursor(int)
 SVLRenderer::InitDebugCanvas()
 SVLRenderer::MarkMetadataAsInvalid(int)
+SVLRenderer::Stop()
 SVLRenderer::~SVLRenderer()
 SVLRenderer::SVLRenderer(SVLRoot*)
 SVLRoot::ActivateHMDNow()
@@ -4826,6 +4832,7 @@ SVLRoot_EventsThread
 SVLRoot::FillInBookend(SVLVideoFrameDescriptor_t*)
 SVLRoot::GetControllerDriver(vr::ETrackedControllerRole)
 SVLRoot::GetHmdDriver()
+SVLRoot::GetNextDisplayIlluminationTime(int) const
 SVLRoot::GetRequestedConnectionInfo(std::__ndk1::vector<char, std::__ndk1::allocator<char>>&, LaunchOptions const&)
 SVLRoot::GetValueS(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, char const*)
 SVLRoot::HandleConnectionLostEvent()
