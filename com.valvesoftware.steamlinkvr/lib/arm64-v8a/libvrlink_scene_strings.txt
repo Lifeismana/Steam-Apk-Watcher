@@ -5,6 +5,7 @@
 %02x\t
 032AndroidInternalStorageFileLoader
 %.0Lf
+10QSVLClient
 11QSVLXRInput
 11SVLDataLink
 11SVLFECRAID5
@@ -47,7 +48,7 @@
 7CThread
 7SVLRoot
 7XrScene
-8810905 
+8851632 
 8SVLAudio
 8SVLCodec
 8SVLCrypt
@@ -853,6 +854,7 @@ Encryption mechanism failed encryption test.
 Encryption mechanism fialed to decode.
 Encryption mechanism fialed to encode.
 Encryption not giving expected result %x
+Encryption type: %s\n
 english
 enum
 __errno
@@ -966,7 +968,7 @@ FDE is really a CIE
 fDelay
 February
 FEC decode failure %d %d %d\n
-ff$510QSVLClient
+ff$5
 fflush
 fgets
 %F-%H-%M-%S
@@ -2248,6 +2250,7 @@ NSt6__ndk110__function6__funcIPFbcENS_9allocatorIS3_EES2_EE
 NSt6__ndk110__function6__funcIZN10ByteLogger7SetRootEP7SVLRootE3$_0NS_9allocatorIS5_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN10QSVLClient4InitEvE3$_0NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN10QSVLClient4InitEvE3$_1NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
+NSt6__ndk110__function6__funcIZN10QSVLClient4InitEvE3$_2NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN11XrUIManager18AddRenderedUIPanelENS_10unique_ptrI9XrUIPanelNS_14default_deleteIS4_EEEEbNS_6chrono10time_pointINS8_12steady_clockENS8_8durationIxNS_5ratioILl1ELl1000000000EEEEEEEE3$_1NS_9allocatorISG_EEFvRKNS_12basic_stringIcNS_11char_traitsIcEENSH_IcEEEERKN4Json5ValueEEEE
 NSt6__ndk110__function6__funcIZN11XrUIManager18AddTemporaryDialogERK10XRQContextRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEESD_jbE3$_2NS9_ISE_EEFvSD_RKN4Json5ValueEEEE
 NSt6__ndk110__function6__funcIZN11XrUIManager4InitER10XRQContextE3$_0NS_9allocatorIS5_EEFv7AppPathRKNS_7variantIJNS_12basic_stringIcNS_11char_traitsIcEENS6_IcEEEEbfiEEEEEE
@@ -2709,7 +2712,6 @@ QSVLClient::UpdateFrameVariables: VTE_CLIENT_CHAPERONE is updated
 QSVLClient::UpdateFrameVariables: VTE_EYE_TO_HEAD is updated
 QSVLClient::UpdateFrameVariables: VTE_HOST_DEFAULTS is updated
 QSVLClient::UpdateFrameVariables: VTE_PROJECTION_RAW_PRAMS is updated
-QSVLClient::UpdateFrameVariables: VTE_REQ_RENDERTARGETSIZE is updated
 QSVLClient::UpdatePowerProps()
 QSVLClient::UpdateStaticProps()
 QSVLClient::VSyncEvent(int)
@@ -4566,6 +4568,7 @@ std::uncaught_exception()
 std::uncaught_exceptions()
 std::underflow_error::~underflow_error()
 std::unexpected()
+Steam Argument Count: %d\n
 steamlinkvr
 SteamVRVersionAsString()
 sText
@@ -6044,6 +6047,7 @@ WARNING: Requested return to dash on release product, without proper launch acti
 Warning: res field incorrect [clear mode] %04x\n
 Warning: res field incorrect [encryption mode] %08x on packet size %d\n
 Warning: retransmit request for unknown message %d (frame number=%d\n
+WARNING: SVLFECRXFrame::Initialize called before SVLRenderer available.\n
 WARNING: Too many bytes in TX Audio aggregate.  This should be impossible.\n
 WARNING: XRConstruct::RenderFrame() called with inappropriate view count (%d)\n
 w+be
@@ -6577,6 +6581,7 @@ Zjz\v
 ZN10ByteLogger7SetRootEP7SVLRootE3$_0
 ZN10QSVLClient4InitEvE3$_0
 ZN10QSVLClient4InitEvE3$_1
+ZN10QSVLClient4InitEvE3$_2
 ZN11XrUIManager18AddRenderedUIPanelENSt6__ndk110unique_ptrI9XrUIPanelNS0_14default_deleteIS2_EEEEbNS0_6chrono10time_pointINS6_12steady_clockENS6_8durationIxNS0_5ratioILl1ELl1000000000EEEEEEEE3$_1
 ZN11XrUIManager18AddTemporaryDialogERK10XRQContextRKNSt6__ndk112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEESB_jbE3$_2
 ZN11XrUIManager4InitER10XRQContextE3$_0
