@@ -47,7 +47,7 @@
 7CThread
 7SVLRoot
 7XrScene
-8599876 
+8613215 
 8SVLAudio
 8SVLCodec
 8SVLCrypt
@@ -116,8 +116,11 @@ AImage_getTimestamp
 AImage_getWidth
 AImageReader_acquireLatestImage
 AImageReader_getWindow
+AImageReader_getWindow( m_imageReader, &m_nativeWindow )
 AImageReader_newWithUsage
+AImageReader_newWithUsage( 1, 1, AIMAGE_FORMAT_PRIVATE, AHARDWAREBUFFER_USAGE_GPU_SAMPLED_IMAGE | AHARDWAREBUFFER_USAGE_CPU_READ_NEVER | AHARDWAREBUFFER_USAGE_CPU_WRITE_NEVER, 20, &m_imageReader )
 AImageReader_setImageListener
+AImageReader_setImageListener( m_imageReader, &m_imageListener )
 AInputEvent_getType
 AInputQueue_attachLooper
 AInputQueue_detachLooper
@@ -141,6 +144,7 @@ ALooper_release
 ALooper_removeFd
 Already scanning!
 AMediaCodec_configure
+AMediaCodec_configure( m_codec, format,m_nativeWindow, nullptr, 0 )
 AMediaCodec_createDecoderByType
 AMediaCodec_delete
 AMediaCodec_dequeueInputBuffer
@@ -149,8 +153,11 @@ AMediaCodec_flush
 AMediaCodec_getInputBuffer
 AMediaCodec_queueInputBuffer
 AMediaCodec_releaseOutputBuffer
+AMediaCodec_releaseOutputBuffer( m_codec, lOutputBufferIndex, true )
 AMediaCodec_start
+AMediaCodec_start( m_codec )
 AMediaCodec_stop
+AMedia Error: %s = %i
 AMediaFormat_delete
 AMEDIAFORMAT_KEY_COLOR_FORMAT
 AMEDIAFORMAT_KEY_COLOR_RANGE
@@ -360,7 +367,7 @@ bool std::__ndk1::__lexicographical_compare<std::__ndk1::__less<std::__ndk1::pai
 bool XRQAcquireSwapchainImage(XrSwapchain, uint32_t &)
 bool XRQAttachRegisteredActionSets(XRQContext &)
 bool XRQCreateActionAndRegisterSuggestedBindings(XRQContext &, const XrActionSet, const XRQActionCreateInfo &, XRQAction &)
-bool XRQCreateAndRegisterActionSet(XRQContext &, const XRQActionSetCreateInfo &, XrActionSet &)
+bool XRQCreateAndRegisterActionSetForAttach(XRQContext &, const XRQActionSetCreateInfo &, XrActionSet &)
 bool XRQCreateReferenceSpace(XRQContext &, XrReferenceSpaceType)
 bool XRQCreateSwapchain(const XRQContext &, const XRQSwapchainInfo &, XRQSwapchain &)
 bool XRQCreateXRInstance(const XRQApp &, XRQContext &)
@@ -397,7 +404,7 @@ bool XRQGetSupportedSwapchainFormat(const XRQContext &, const int64_t, int64_t &
 bool XRQGetSwapchainSamplerStateGLES(const XRQContext &, XRQSwapchain &, XrSwapchainStateSamplerOpenGLESFB &)
 bool XRQGetTimeNow(const XRQContext &, XrTime &)
 bool XRQGetXRViewConfiguration(const XrViewConfigurationType, XRQContext &)
-bool XRQLocateReferenceSpace(XRQContext &, XrReferenceSpaceType, XrTime, XrSpaceLocation &)
+bool XRQLocateReferenceSpace(XRQContext &, XrReferenceSpaceType, XrReferenceSpaceType, XrTime, XrSpaceLocation &)
 bool XRQLocateViewsFrame(XRQContext &)
 bool XRQLocateViewsInReferenceSpace(const XRQContext &, XrTime, XrSpace, std::vector<XrView> &)
 bool XRQReleaseSwapchain(XrSwapchain)
@@ -405,6 +412,7 @@ bool XRQRequestExitSession(XRQContext &)
 bool XRQRequestRefreshRate(XRQContext &, float)
 bool XRQSetAvailableExtensions(XRQContext &, const std::set<std::string> &)
 bool XRQSetReferencePlaySpace(XRQContext &, const XrReferenceSpaceType)
+bool XRQSyncRegisteredActiveActionSets(const XRQContext &)
 bool XRQTeardown(XRQContext &)
 bool XRQUpdateSwapchainSamplerStateGLES(const XRQContext &, const XRQSwapchain &, const XrSwapchainStateSamplerOpenGLESFB &)
 bool XRQWaitFrame(XRQContext &)
@@ -475,6 +483,7 @@ CIE version is not 1 or 3
 cIntToHexDigit(int)
 CLEAR
 click
+Client QoS Enable: %d
 Client requested holdoff
 clock_gettime
 clock_gettime(CLOCK_MONOTONIC) failed
@@ -873,6 +882,7 @@ Extra non-whitespace after JSON value.
 exynos9810
 Eye gaze interaction supported: %s
 eyeTracking
+Eye Tracking bindings: 
 Face tracking supported: %s
 Fader::BIsFadeActive()
 Fader::BIsFading()
@@ -1471,7 +1481,6 @@ inputTypeIndex
 __int128
 INVALID_ENUM
 INVALID_FRAMEBUFFER_OPERATION
-Invalid hand specified to get subaction path for
 INVALID_OPERATION
 INVALID_VALUE
 invocation function for block in 
@@ -2231,6 +2240,7 @@ NSt6__ndk110__function6__funcIZN14QSVLRendererXR4InitERK10XRQContextE3$_1NS_9all
 NSt6__ndk110__function6__funcIZN14SVLDataLinkUDP26PrepareForPossibleShutdownEvE3$_0NS_9allocatorIS3_EEFvvEEE
 NSt6__ndk110__function6__funcIZN6CVRLog7InitLogEPKcS4_bmE3$_0NS_9allocatorIS5_EEFv9ELogLevelS4_PvEEE
 NSt6__ndk110__function6__funcIZN7SVLRoot4InitEvE3$_0NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
+NSt6__ndk110__function6__funcIZN7SVLRoot4InitEvE3$_1NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN8SVLAudioC1EP7SVLRootbE3$_0NS_9allocatorIS5_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN8SVLAudioC1EP7SVLRootbE3$_1NS_9allocatorIS5_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN8SVLAudioC1EP7SVLRootbE3$_2NS_9allocatorIS5_EEFv16ValueTransportIDbEEE
@@ -2711,6 +2721,7 @@ QSVLClientXR::OnRenderComplete()
 QSVLClientXR::OnUnFocused()
 QSVLClientXR::~QSVLClientXR()
 QSVLClientXR::QSVLClientXR(XRQContext&, LaunchOptions&, std::__ndk1::shared_ptr<QSVLInput>, std::__ndk1::shared_ptr<QSVLDeviceHmd>, std::__ndk1::shared_ptr<XrUIManager>, std::__ndk1::function<void (QSVLClientEvent, std::__ndk1::variant<QSVLClientStreamState, QSVLClientWirelessTimeout>)>)
+QSVLClientXR::ReadyForInputSync()
 QSVLClientXR::RXReliableStream(dataset*)
 QSVLClientXR::RXUnreliableStream(dataset*, SVLDataLink*)
 QSVLClientXR::SetMaximumFrameQueueLatency: %d us
@@ -2723,7 +2734,7 @@ QSVLClientXR::TrySetPrefferedDisplayFrequency(float)
 QSVLClientXR::TrySetPrefferedDisplayFrequency: Setting fallback of 72.0Hz succeeded
 QSVLClientXR::TrySetPrefferedDisplayFrequency: Setting fallback of 72Hz failed! Hoping for the best setting the refresh rate to 72Hz
 QSVLClientXR::TrySetPrefferedDisplayFrequency: Setting refresh rate to %.1f failed.
-QSVLCodecNDK::AcquireEncodedDataBuffer: No input buffers available! Resetting stream...
+QSVLCodecNDK::AcquireEncodedDataBuffer: Unable to acquire input buffer! Error: %zd. Resetting stream...
 QSVLCodecNDK::AcquireEncodedDataBuffer(unsigned int)
 QSVLCodecNDK::HandleOnImageAvailable(AImageReader*)
 QSVLCodecNDK::HandleOnImageAvailable: Deleting previously acquired image
@@ -2736,12 +2747,9 @@ QSVLCodecNDK::HandleUnrecoverableError()
 QSVLCodecNDK::HandleUnrecoverableError: No available renderer or link.
 QSVLCodecNDK::HandleUnrecoverableError: Unrecoverable error was sent
 QSVLCodecNDK::Init()
-QSVLCodecNDK::Init: Failed to configure media codec: %i
-QSVLCodecNDK::Init: Failed to set up image listener
-QSVLCodecNDK::Init: Failed to set up image reader: %i
 QSVLCodecNDK::MediaThread()
 QSVLCodecNDK::MediaThread > 300ms between frame decodes.
-QSVLCodecNDK::MediaThread: Media codec error: %zu
+QSVLCodecNDK::MediaThread: Media codec error: %zd
 QSVLCodecNDK::MediaThread: no m_codec
 QSVLCodecNDK::MediaThread: Output buffers did change
 QSVLCodecNDK::~QSVLCodecNDK()
@@ -3056,6 +3064,7 @@ SoundLogger::~SoundLogger()
 SoundLogger::SoundLogger(SVLRoot*)
 spanish
 sPermission
+SplitStringByDelimiter(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 sRenderModelName
 sResourceRoot
 %s/../../resources/%s
@@ -4152,6 +4161,7 @@ std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>
 std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>::pair<char const (&) [6], char const (&) [10], false>(char const (&) [6], char const (&) [10])
 std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>::pair<char const (&) [6], char const (&) [9], false>(char const (&) [6], char const (&) [9])
 std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>::pair<char const (&) [7], char const (&) [6], false>(char const (&) [7], char const (&) [6])
+std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>>::~pair()
 std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>>::pair(std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>> const&)
 std::__ndk1::pair<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, void*>*>, bool> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>>>::__emplace_unique_key_args<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&>, std::__ndk1::tuple<>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&>&&, std::__ndk1::tuple<>&&)
 std::__ndk1::pair<std::__ndk1::__tree_iterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__tree_node<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void*>*, long>, bool> std::__ndk1::__tree<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__emplace_unique_key_args<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
@@ -4607,6 +4617,7 @@ subActionPathHand
 Successfully wrote user config file: %s
 sUDPIp
 sUDPIp was passed in via extras or paths: %s
+Suggesting bindings for %s
 Sunday
 SVLAudio::AcceptAudioFramesFromPeer(short*, int)
 SVLAudio::AcceptFramesFromDeviceForSendingOverNetwork(short*, int)
@@ -4647,6 +4658,7 @@ SVLCrypt::TestAES()
 [SVLC] SendPoses lnFrameID=%d(%d)
 [SVLC] SendPoses: lnFrameID=%d(%d) (mod64=%d) (mod256=%d) rst=%d toff=%d
 SVLDataLink::BIsLinkActiveCheck()
+SVLDataLink::ChangeQoSState(bool)
 SVLDataLink::CheckUpdateCounters()
 SVLDataLink::EncModeFromString(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 SVLDataLink::EventWriteStringNetwork(char*)
@@ -4668,6 +4680,7 @@ SVLDataLink::InitCrypt() With %lu remaining key max\n
 SVLDataLink::PrepareForPossibleShutdown()
 SVLDataLink::ProcessEvent(vr::VREvent_t const&)
 SVLDataLink::ReceivedData(dataset*)
+SVLDataLink::Reconnect()
 SVLDataLink::ReportDropCount(int)
 SVLDataLink::ReportRXSeqid(unsigned int, int)
 SVLDataLink::ReportTXFailures(int)
@@ -4685,6 +4698,7 @@ SVLDataLink::~SVLDataLink()
 SVLDataLink::SVLDataLink(SVLRoot*, bool)
 SVLDataLink::Tick()
 SVLDataLinkUDP::BIsStreamActive()
+SVLDataLinkUDP::ChangeQoSState(bool)
 SVLDataLinkUDP::Disconnect()
 SVLDataLinkUDP::GetReceiveAddrH()
 SVLDataLinkUDP::GetStats()
@@ -5663,6 +5677,7 @@ ValueTransportSystem::~ValueTransportSystem()
 ValueTransportSystem::ValueTransportSystem()
 vasprintf
 vector
+vendor.qti-ext-dec-heif-mode.value
 vendor.qti-ext-dec-low-latency.enable
 vendor.qti-ext-dec-picture-order.enable
 VerifyTidIntegrity()
@@ -6122,7 +6137,6 @@ xrCreateFaceTracker2FB( context.session, &faceTrackerCreateInfo2Fb, &context.fac
 xrCreateInstance
 xrCreateInstance( &instance_create_info, &outContext.instance )
 xrCreateReferenceSpace
-xrCreateReferenceSpace( context.session, &create_info, &context.mapReferenceSpaceSpaces[ reference_space_type ] )
 xrCreateReferenceSpace( context.session, &referenceSpaceCreateInfo, &context.mapReferenceSpaceSpaces[ spaceType ] )
 xrCreateReferenceSpace( out_context.session, &play_space_create_info, &out_context.mapReferenceSpaceSpaces[ out_context.playSpace ] )
 xrCreateSession
@@ -6200,7 +6214,7 @@ XR_KHR_convert_timespec_time
 XR_KHR_convert_timespec_time is not available on this runtime
 XR_KHR_opengl_es_enable
 xrLocateSpace
-xrLocateSpace( context.mapReferenceSpaceSpaces[ reference_space_type ], context.mapReferenceSpaceSpaces[ context.playSpace ], time, &out_space_location )
+xrLocateSpace(locateSpace, baseSpace, time, &outSpaceLocation )
 xrLocateSpace( m_eyeTrackingAction.vecActionSpaces[ 0 ], viewSpace, timeNow, &spaceLocation )
 xrLocateSpace( m_poseAction.vecActionSpaces[ i ], m_refXrqContext->mapReferenceSpaceSpaces[ m_refXrqContext->playSpace ], timeNow, &spaceLocation )
 xrLocateSpace( m_uiActions.pose.action.vecActionSpaces[ i ], xrqContext.mapReferenceSpaceSpaces.at( xrqContext.playSpace ), xrqContext.currentFrameState.predictedDisplayTime, &spaceLocation )
@@ -6223,8 +6237,9 @@ XRQApp::~XRQApp()
 XRQAttachRegisteredActionSets(XRQContext&)
 XRQContext::~XRQContext()
 XRQCreateActionAndRegisterSuggestedBindings(XRQContext&, XrActionSet_T*, XRQActionCreateInfo const&, XRQAction&)
-XRQCreateAndRegisterActionSet(XRQContext&, XRQActionSetCreateInfo const&, XrActionSet_T*&)
+XRQCreateAndRegisterActionSetForAttach(XRQContext&, XRQActionSetCreateInfo const&, XrActionSet_T*&)
 XRQCreateBasicQuadLayer(XRQContext const&, XRQSwapchain const&, XrCompositionLayerQuad&)
+XRQCreateBasicQuadLayer(XRQContext const&, XRQSwapchain const&, XrReferenceSpaceType, XrCompositionLayerQuad&)
 XRQCreateProjectionViewLayer(XRQContext const&, XRQSwapchain const&, XrCompositionLayerProjectionView&)
 XRQCreateSwapchain: Could not find supported color format
 XRQCreateSwapchain: Could not get swapchain state for created swapchain
@@ -6246,6 +6261,7 @@ XRQGetFaceTracking(XRQContext&, XrFaceExpressionWeights2FB&)
 XRQGetHandSubactionPaths(XRQContext const&, XRQHand, std::__ndk1::vector<unsigned long, std::__ndk1::allocator<unsigned long>>&)
 XRQGetPlayAreaBoundsRect(XRQContext const&, XrExtent2Df&)
 XRQGetReferenceSpace(XRQContext const&, XrReferenceSpaceType, XrSpace_T*&)
+XRQGetSubactionPathForHand: Invalid hand: %i to get subaction path for
 XRQGetSubactionPathForHand(XRQContext const&, XRQHand)
 XRQGetSupportedSwapchainFormat(XRQContext const&, long, long&)
 XRQGetSwapchainSamplerStateGLES: XR_FB_swapchain_update_state extension or derivatives are not available
@@ -6255,10 +6271,14 @@ XRQGetXRViewConfiguration(XrViewConfigurationType, XRQContext&)
 XRQHandleEvents(XRQContext&)
 XRQIsExtensionAvailable(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 XRQLocateReferenceSpaceAtFrameTime(XRQContext&, XrReferenceSpaceType, XrSpaceLocation&)
+XRQLocateReferenceSpace: Failed to locate base reference space type: %i
+XRQLocateReferenceSpace: Failed to locate reference space type: %i
 XRQLocateReferenceSpace(XRQContext&, XrReferenceSpaceType, long, XrSpaceLocation&)
+XRQLocateReferenceSpace(XRQContext&, XrReferenceSpaceType, XrReferenceSpaceType, long, XrSpaceLocation&)
 XRQLocateViewsAtTime(XRQContext&, long, std::__ndk1::vector<XrView, std::__ndk1::allocator<XrView>>&)
 XRQLocateViewsFrame(XRQContext&)
 XRQLocateViewsInReferenceSpace(XRQContext const&, long, XrSpace_T*, std::__ndk1::vector<XrView, std::__ndk1::allocator<XrView>>&)
+XRQRegisterActionSetForSync(XRQContext&, XrActionSet_T*, XRQHand)
 XRQRequestExitSession(XRQContext&)
 XRQRequestHighestRefreshRate: Failed to enumerate refresh rates
 XRQRequestHighestRefreshRate: no refresh rates returned from enumerate
@@ -6278,6 +6298,7 @@ XRQSuggestRegisteredInteractionProfileBindings(XRQContext&)
 XRQSwapchain::~XRQSwapchain()
 XRQSwapchain::~XRQSwapchain: Swapchain destroyed.
 XRQSwapchain::~XRQSwapchain: swapchain was already XR_NULL_HANDLE!
+XRQSyncRegisteredActiveActionSets(XRQContext const&)
 XRQTeardown(...) (.bIsSessionRunning = %d)
 XRQTeardown(XRQContext&)
 XRQUpdateSwapchainSamplerStateGLES: XR_FB_swapchain_update_state extension or derivatives are not available
@@ -6419,8 +6440,6 @@ xrStringToPath( context.instance, "/user/hand/right", &result )
 xrSuggestInteractionProfileBindings
 xrSyncActions
 xrSyncActions( context.session, &syncInfo )
-xrSyncActions( m_refXrqContext->session, &syncInfo )
-xrSyncActions( xrqContext.session, &actionsSyncInfo )
 XrUIControllerActions::~XrUIControllerActions()
 XrUIInput::GetInputState(XRQContext const&, std::__ndk1::array<XrUIControllerState, 2ul>&)
 XrUIInput::GetRequestedExtensions()
@@ -6537,6 +6556,7 @@ ZN14QSVLRendererXR4InitERK10XRQContextE3$_1
 ZN14SVLDataLinkUDP26PrepareForPossibleShutdownEvE3$_0
 ZN6CVRLog7InitLogEPKcS1_bmE3$_0
 ZN7SVLRoot4InitEvE3$_0
+ZN7SVLRoot4InitEvE3$_1
 ZN8SVLAudioC1EP7SVLRootbE3$_0
 ZN8SVLAudioC1EP7SVLRootbE3$_1
 ZN8SVLAudioC1EP7SVLRootbE3$_2
