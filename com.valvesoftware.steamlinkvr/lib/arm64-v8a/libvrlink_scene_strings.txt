@@ -59,7 +59,7 @@
 8SVLAudio
 8SVLCodec
 8SVLCrypt
-9936740 
+9940695 
 9a&g
 9JLX
 9QSVLInput
@@ -97,7 +97,7 @@ AAudioStream_requestStop( pStream )
 AAudioStream_waitForStateChange
 AAudioStream_waitForStateChange( m_pAAudioInputStream, inputState, &nextState, timeoutNanos )
 AAudioStream_waitForStateChange( m_pAAudioOutputStream, inputState, &nextState, timeoutNanos )
-AAudioStream_waitForStateChange( pStream, inputState, &nextState, nsTimeout )
+AAudioStream_waitForStateChange( pStream, AAUDIO_STREAM_STATE_STOPPING, &nextState, nsTimeout )
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 %a %b %d %H:%M:%S %Y
 %a %b %d %Y %H:%M:%S.%%06u
@@ -368,12 +368,12 @@ audio
 [Audio] Attempting to stop streams...
 [Audio] Creating input stream...
 [Audio] Creating output stream...
-[Audio] Failed to stop audio input stream!
-[Audio] Failed to stop audio output stream!
+[Audio] Failed to stop audio stream!
 [Audio] Input stream creation finished
 [Audio] Input stream stopped
 [Audio] Output stream creation finished
 [Audio] Output stream stopped
+[Audio] Totally failed to stop audio stream!
 [Audio] Unhandled error %d
 [Audio] Waiting for input stream state change...
 [Audio] Waiting for output stream state change...
@@ -1491,6 +1491,7 @@ hosts_list
 hungarian
 ignorePath
 iHexCharToInt(char)
+(IIII)V
 (III)V
 (IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 (II)V
@@ -2028,6 +2029,7 @@ latam
 LaunchOptions::~LaunchOptions()
 LaunchOptions::LaunchOptions(LaunchOptions const&)
 LaunchOptions::operator=(LaunchOptions const&)
+layout
 left
 libaaudio.so
 libandroid.so

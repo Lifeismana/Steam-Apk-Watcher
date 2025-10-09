@@ -3566,7 +3566,6 @@ acquire
 Acquisisci %dx%d a %2.2f
 acquisizione
 acsC
-&Ac\tA
 ac-targeting
 Acties veranderen in controllerconfiguratie van Big Picture
 action
@@ -30788,7 +30787,7 @@ libGLESv1_CM.so
 libGLESv2.so
 libh264bitstream.so
 libhevcbitstream.so
-lib Jul 29 2025 17:25:53
+lib Jul 30 2025 17:31:40
 liblog.so
 lib(%lu)
 libmain.so
