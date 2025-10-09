@@ -987,7 +987,7 @@ FDE has zero length
 FDE is really a CIE
 fDelay
 February
-FEC decode failure %d %d %d\n
+FEC decode fail %d %d %d\n
 fflush
 fgets
 %F-%H-%M-%S
