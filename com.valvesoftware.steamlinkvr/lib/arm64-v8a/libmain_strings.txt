@@ -30785,7 +30785,7 @@ libGLESv1_CM.so
 libGLESv2.so
 libh264bitstream.so
 libhevcbitstream.so
-lib Jul 16 2025 20:45:02
+lib Jul 17 2025 15:55:28
 liblog.so
 lib(%lu)
 libmain.so
@@ -36188,6 +36188,7 @@ PDP MK X Fight Pad
 PDP MK X Fight Stick
 PDP Mortal Kombat Controller
 PDP NFL Face-Off Controller
+PDP REALMz Wireless Controller
 PDP Titanfall 2
 PDP Titanfall 2 Controller
 PDP Versus Fighting Pad
