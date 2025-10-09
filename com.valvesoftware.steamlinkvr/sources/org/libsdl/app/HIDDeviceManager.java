@@ -229,27 +229,25 @@ public class HIDDeviceManager {
     }
 
     private void connectHIDDeviceUSB(UsbDevice usbDevice) {
-        int i;
+        HIDDeviceManager hIDDeviceManager = this;
         synchronized (this) {
+            int i = 0;
             int i2 = 0;
-            int i3 = 0;
-            while (i3 < usbDevice.getInterfaceCount()) {
-                UsbInterface usbInterface = usbDevice.getInterface(i3);
-                if (isHIDDeviceInterface(usbDevice, usbInterface)) {
+            while (i2 < usbDevice.getInterfaceCount()) {
+                UsbInterface usbInterface = usbDevice.getInterface(i2);
+                if (hIDDeviceManager.isHIDDeviceInterface(usbDevice, usbInterface)) {
                     int id = 1 << usbInterface.getId();
-                    if ((i2 & id) == 0) {
-                        int i4 = i2 | id;
-                        HIDDeviceUSB hIDDeviceUSB = new HIDDeviceUSB(this, usbDevice, i3);
+                    if ((i & id) == 0) {
+                        int i3 = i | id;
+                        HIDDeviceUSB hIDDeviceUSB = new HIDDeviceUSB(hIDDeviceManager, usbDevice, i2);
                         int id2 = hIDDeviceUSB.getId();
-                        this.mDevicesById.put(Integer.valueOf(id2), hIDDeviceUSB);
+                        hIDDeviceManager.mDevicesById.put(Integer.valueOf(id2), hIDDeviceUSB);
+                        hIDDeviceManager.HIDDeviceConnected(id2, hIDDeviceUSB.getIdentifier(), hIDDeviceUSB.getVendorId(), hIDDeviceUSB.getProductId(), hIDDeviceUSB.getSerialNumber(), hIDDeviceUSB.getVersion(), hIDDeviceUSB.getManufacturerName(), hIDDeviceUSB.getProductName(), usbInterface.getId(), usbInterface.getInterfaceClass(), usbInterface.getInterfaceSubclass(), usbInterface.getInterfaceProtocol(), false);
                         i = i3;
-                        HIDDeviceConnected(id2, hIDDeviceUSB.getIdentifier(), hIDDeviceUSB.getVendorId(), hIDDeviceUSB.getProductId(), hIDDeviceUSB.getSerialNumber(), hIDDeviceUSB.getVersion(), hIDDeviceUSB.getManufacturerName(), hIDDeviceUSB.getProductName(), usbInterface.getId(), usbInterface.getInterfaceClass(), usbInterface.getInterfaceSubclass(), usbInterface.getInterfaceProtocol(), false);
-                        i2 = i4;
-                        i3 = i + 1;
                     }
                 }
-                i = i3;
-                i3 = i + 1;
+                i2++;
+                hIDDeviceManager = this;
             }
         }
     }

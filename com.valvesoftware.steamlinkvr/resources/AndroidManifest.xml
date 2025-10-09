@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    android:versionCode="5001620"
+    android:versionCode="5001627"
     android:versionName="2.0.16"
     android:installLocation="auto"
-    android:compileSdkVersion="34"
-    android:compileSdkVersionCodename="14"
+    android:compileSdkVersion="36"
+    android:compileSdkVersionCodename="16"
     package="com.valvesoftware.steamlinkvr"
-    platformBuildVersionCode="34"
-    platformBuildVersionName="14">
+    platformBuildVersionCode="36"
+    platformBuildVersionName="16">
     <uses-sdk
         android:minSdkVersion="29"
         android:targetSdkVersion="32"/>

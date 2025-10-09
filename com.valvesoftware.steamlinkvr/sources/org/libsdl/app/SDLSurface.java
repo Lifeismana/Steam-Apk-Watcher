@@ -190,37 +190,56 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
 
     @Override // android.view.View.OnTouchListener
     public boolean onTouch(View view, MotionEvent motionEvent) {
+        int i;
+        int i2;
+        int i3;
         int deviceId = motionEvent.getDeviceId();
         int pointerCount = motionEvent.getPointerCount();
         int actionMasked = motionEvent.getActionMasked();
+        int i4 = 6;
         int actionIndex = (actionMasked == 6 || actionMasked == 5) ? motionEvent.getActionIndex() : 0;
-        do {
+        while (true) {
             int toolType = motionEvent.getToolType(actionIndex);
             if (toolType == 3) {
                 int buttonState = motionEvent.getButtonState();
                 SDLGenericMotionListener_API14 motionListener = SDLActivity.getMotionListener();
                 SDLActivity.onNativeMouse(buttonState, actionMasked, motionListener.getEventX(motionEvent, actionIndex), motionListener.getEventY(motionEvent, actionIndex), motionListener.inRelativeMode());
-            } else if (toolType == 2 || toolType == 4) {
-                int pointerId = motionEvent.getPointerId(actionIndex);
-                float x = motionEvent.getX(actionIndex);
-                float y = motionEvent.getY(actionIndex);
-                float pressure = motionEvent.getPressure(actionIndex);
-                if (pressure > 1.0f) {
-                    pressure = 1.0f;
-                }
-                SDLActivity.onNativePen(pointerId, (motionEvent.getButtonState() >> 4) | (1 << (toolType == 2 ? 0 : 30)), actionMasked, x, y, pressure);
             } else {
-                int pointerId2 = motionEvent.getPointerId(actionIndex);
-                float normalizedX = getNormalizedX(motionEvent.getX(actionIndex));
-                float normalizedY = getNormalizedY(motionEvent.getY(actionIndex));
-                float pressure2 = motionEvent.getPressure(actionIndex);
-                SDLActivity.onNativeTouch(deviceId, pointerId2, actionMasked, normalizedX, normalizedY, pressure2 > 1.0f ? 1.0f : pressure2);
+                if (toolType == 2 || toolType == 4) {
+                    int i5 = i4;
+                    int pointerId = motionEvent.getPointerId(actionIndex);
+                    float x = motionEvent.getX(actionIndex);
+                    float y = motionEvent.getY(actionIndex);
+                    float pressure = motionEvent.getPressure(actionIndex);
+                    if (pressure > 1.0f) {
+                        pressure = 1.0f;
+                    }
+                    int buttonState2 = (1 << (toolType == 2 ? 0 : 30)) | (motionEvent.getButtonState() >> 4);
+                    i = actionIndex;
+                    i2 = actionMasked;
+                    i3 = i5;
+                    SDLActivity.onNativePen(pointerId, buttonState2, i2, x, y, pressure);
+                    if (i2 == i3 || i2 == 5 || (actionIndex = i + 1) >= pointerCount) {
+                        break;
+                    }
+                    i4 = i3;
+                    actionMasked = i2;
+                } else {
+                    int pointerId2 = motionEvent.getPointerId(actionIndex);
+                    float normalizedX = getNormalizedX(motionEvent.getX(actionIndex));
+                    float normalizedY = getNormalizedY(motionEvent.getY(actionIndex));
+                    float pressure2 = motionEvent.getPressure(actionIndex);
+                    SDLActivity.onNativeTouch(deviceId, pointerId2, actionMasked, normalizedX, normalizedY, pressure2 <= 1.0f ? pressure2 : 1.0f);
+                }
             }
-            if (actionMasked == 6 || actionMasked == 5) {
+            i2 = actionMasked;
+            i3 = i4;
+            i = actionIndex;
+            if (i2 == i3) {
                 break;
             }
-            actionIndex++;
-        } while (actionIndex < pointerCount);
+            break;
+        }
         return true;
     }
 

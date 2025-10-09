@@ -451,25 +451,24 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         }
         Configuration configuration = activity.getResources().getConfiguration();
         int rotation = activity.getWindowManager().getDefaultDisplay().getRotation();
-        if ((rotation == 0 || rotation == 2) && configuration.orientation == 2) {
-            return 1;
-        }
-        return ((rotation == 1 || rotation == 3) && configuration.orientation == 1) ? 1 : 3;
+        return (((rotation == 0 || rotation == 2) && configuration.orientation == 2) || ((rotation == 1 || rotation == 3) && configuration.orientation == 1)) ? 1 : 3;
     }
 
     public static int getCurrentRotation() {
         int rotation;
         Activity activity = (Activity) getContext();
-        if (activity == null || (rotation = activity.getWindowManager().getDefaultDisplay().getRotation()) == 0) {
-            return 0;
+        if (activity != null && (rotation = activity.getWindowManager().getDefaultDisplay().getRotation()) != 0) {
+            if (rotation == 1) {
+                return 90;
+            }
+            if (rotation == 2) {
+                return 180;
+            }
+            if (rotation == 3) {
+                return 270;
+            }
         }
-        if (rotation == 1) {
-            return 90;
-        }
-        if (rotation != 2) {
-            return rotation != 3 ? 0 : 270;
-        }
-        return 180;
+        return 0;
     }
 
     @Override // android.app.Activity, android.view.Window.Callback
@@ -1090,12 +1089,14 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         int i2;
         int i3;
         int[] intArray = bundle.getIntArray("colors");
+        char c = 2;
+        int i4 = 0;
         if (intArray != null) {
             i = intArray[0];
             i2 = intArray[1];
-            int i4 = intArray[2];
+            int i5 = intArray[2];
             i3 = intArray[3];
-            int i5 = intArray[4];
+            int i6 = intArray[4];
         } else {
             i = 0;
             i2 = 0;
@@ -1125,9 +1126,10 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         LinearLayout linearLayout = new LinearLayout(this);
         linearLayout.setOrientation(0);
         linearLayout.setGravity(SDL_SYSTEM_CURSOR_WINDOW_BOTTOM);
-        for (int i6 = 0; i6 < stringArray.length; i6++) {
+        while (i4 < stringArray.length) {
             Button button = new Button(this);
-            final int i7 = intArray3[i6];
+            final int i7 = intArray3[i4];
+            char c2 = c;
             button.setOnClickListener(new View.OnClickListener() { // from class: org.libsdl.app.SDLActivity.5
                 @Override // android.view.View.OnClickListener
                 public void onClick(View view) {
@@ -1135,16 +1137,16 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
                     create.dismiss();
                 }
             });
-            int i8 = intArray2[i6];
+            int i8 = intArray2[i4];
             if (i8 != 0) {
                 if ((i8 & 1) != 0) {
                     sparseArray.put(66, button);
                 }
-                if ((intArray2[i6] & 2) != 0) {
+                if ((intArray2[i4] & 2) != 0) {
                     sparseArray.put(111, button);
                 }
             }
-            button.setText(stringArray[i6]);
+            button.setText(stringArray[i4]);
             if (i2 != 0) {
                 button.setTextColor(i2);
             }
@@ -1157,6 +1159,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
                 }
             }
             linearLayout.addView(button);
+            i4++;
+            c = c2;
         }
         LinearLayout linearLayout2 = new LinearLayout(this);
         linearLayout2.setOrientation(1);

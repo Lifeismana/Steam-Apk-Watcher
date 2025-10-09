@@ -125,6 +125,8 @@ class HIDDeviceUSB implements HIDDevice {
 
     @Override // org.libsdl.app.HIDDevice
     public int writeReport(byte[] bArr, boolean z) {
+        int i;
+        int i2;
         UsbDeviceConnection usbDeviceConnection = this.mConnection;
         if (usbDeviceConnection == null) {
             Log.w(TAG, "writeReport() called with no device connection");
@@ -132,16 +134,17 @@ class HIDDeviceUSB implements HIDDevice {
         }
         if (z) {
             int length = bArr.length;
-            int i = 0;
             byte b = bArr[0];
             if (b == 0) {
-                length--;
-                i = 1;
+                i = length - 1;
+                i2 = 1;
+            } else {
+                i = length;
+                i2 = 0;
             }
-            int i2 = i;
-            int controlTransfer = usbDeviceConnection.controlTransfer(33, 9, b | 768, this.mInterface, bArr, i2, length, 1000);
+            int controlTransfer = usbDeviceConnection.controlTransfer(33, 9, b | 768, this.mInterface, bArr, i2, i, 1000);
             if (controlTransfer >= 0) {
-                return i2 != 0 ? length + 1 : length;
+                return i2 != 0 ? i + 1 : i;
             }
             Log.w(TAG, "writeFeatureReport() returned " + controlTransfer + " on device " + getDeviceName());
             return -1;
@@ -171,17 +174,19 @@ class HIDDeviceUSB implements HIDDevice {
             i = length;
             i2 = 0;
         }
-        int i3 = i2;
         int controlTransfer = usbDeviceConnection.controlTransfer(161, 1, ((z ? 3 : 1) << 8) | b, this.mInterface, bArr, i2, i, 1000);
         if (controlTransfer < 0) {
             Log.w(TAG, "getFeatureReport() returned " + controlTransfer + " on device " + getDeviceName());
             return false;
         }
-        if (i3 != 0) {
+        if (i2 != 0) {
             controlTransfer++;
             i++;
         }
-        this.mManager.HIDDeviceReportResponse(this.mDeviceId, controlTransfer == i ? bArr : Arrays.copyOfRange(bArr, 0, controlTransfer));
+        if (controlTransfer != i) {
+            bArr = Arrays.copyOfRange(bArr, 0, controlTransfer);
+        }
+        this.mManager.HIDDeviceReportResponse(this.mDeviceId, bArr);
         return true;
     }
 

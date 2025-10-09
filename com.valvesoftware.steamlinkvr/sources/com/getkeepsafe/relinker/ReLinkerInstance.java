@@ -95,7 +95,10 @@ public class ReLinkerInstance {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void loadLibraryInternal(Context context, String str, String str2) {
+        ReLinkerInstance reLinkerInstance;
+        Context context2;
         ElfParser elfParser;
+        Throwable th;
         if (this.loadedLibraries.contains(str) && !this.force) {
             log("%s already loaded previously!", str);
             return;
@@ -113,35 +116,39 @@ public class ReLinkerInstance {
                     log("Forcing a re-link of %s (%s)...", str, str2);
                 }
                 cleanupOldLibFiles(context, str, str2);
-                this.libraryInstaller.installLibrary(context, this.libraryLoader.supportedAbis(), this.libraryLoader.mapLibraryName(str), workaroundLibFile, this);
+                reLinkerInstance = this;
+                context2 = context;
+                this.libraryInstaller.installLibrary(context2, this.libraryLoader.supportedAbis(), this.libraryLoader.mapLibraryName(str), workaroundLibFile, reLinkerInstance);
+            } else {
+                reLinkerInstance = this;
+                context2 = context;
             }
             try {
-                if (this.recursive) {
-                    ElfParser elfParser2 = null;
+                if (reLinkerInstance.recursive) {
                     try {
                         elfParser = new ElfParser(workaroundLibFile);
-                    } catch (Throwable th) {
-                        th = th;
-                    }
-                    try {
-                        List<String> parseNeededDependencies = elfParser.parseNeededDependencies();
-                        elfParser.close();
-                        Iterator<String> it = parseNeededDependencies.iterator();
-                        while (it.hasNext()) {
-                            loadLibrary(context, this.libraryLoader.unmapLibraryName(it.next()));
+                        try {
+                            List<String> parseNeededDependencies = elfParser.parseNeededDependencies();
+                            elfParser.close();
+                            Iterator<String> it = parseNeededDependencies.iterator();
+                            while (it.hasNext()) {
+                                reLinkerInstance.loadLibrary(context2, reLinkerInstance.libraryLoader.unmapLibraryName(it.next()));
+                            }
+                        } catch (Throwable th2) {
+                            th = th2;
+                            elfParser.close();
+                            throw th;
                         }
-                    } catch (Throwable th2) {
-                        th = th2;
-                        elfParser2 = elfParser;
-                        elfParser2.close();
-                        throw th;
+                    } catch (Throwable th3) {
+                        elfParser = null;
+                        th = th3;
                     }
                 }
             } catch (IOException unused) {
             }
-            this.libraryLoader.loadPath(workaroundLibFile.getAbsolutePath());
-            this.loadedLibraries.add(str);
-            log("%s (%s) was re-linked!", str, str2);
+            reLinkerInstance.libraryLoader.loadPath(workaroundLibFile.getAbsolutePath());
+            reLinkerInstance.loadedLibraries.add(str);
+            reLinkerInstance.log("%s (%s) was re-linked!", str, str2);
         }
     }
 
