@@ -5269,6 +5269,7 @@ BHanIdeograph
 BhaNJV
 BHasCacheFile(char const*)
 BHasSteamDeckInputFeatures(EControllerType)
+BHasTouchscreen(EControllerType)
 B\hf
 B?Hf
 Bh|G
@@ -16907,6 +16908,7 @@ CUtlBuffer::CheckPeekGet(int, int)
 CUtlBuffer::CheckPut(int)
 CUtlBuffer::ConvertCRLF(CUtlBuffer&)
 CUtlBuffer::~CUtlBuffer()
+CUtlBuffer::CUtlBuffer()
 CUtlBuffer::CUtlBuffer(int, int, int)
 CUtlBuffer::CUtlBuffer(void const*, int, int)
 CUtlBuffer::DetachAndClear()
@@ -21703,6 +21705,7 @@ final_maxfragmentlen
 final_renegotiate
 final_server_name
 final_sig_algs
+finding route
 find_nal_unit
 fingerid
 Fingerprint check failed: %x vs. %x
@@ -27009,7 +27012,6 @@ iayqIAYQ)!91\t
 IB;4e^WP
 ibF:X
 IbG`
-&ibh
 I_bIb
 iB\nW
 ibp*A
@@ -30695,7 +30697,6 @@ lhUT,
 l@!HuT
 LHzlIP/
 libandroid.so
-lib Apr 28 2025 13:27:39
 LIBC
 libc++_shared.so
 libc.so
@@ -30708,6 +30709,7 @@ libhevcbitstream.so
 liblog.so
 lib(%lu)
 libmain.so
+lib May 21 2025 17:40:34
 libmediandk.so
 libm.so
 libOpenMAXAL.so
@@ -36740,6 +36742,8 @@ pner kontrolleroverlegget i de avanserte str
 pner kontrolleroverlegget i str
 pner kontrolleroverlegget under Innstillinger > Remote Play > Avanserte klientinnstillinger f
 pne str
+pNextForTarget->m_pPrevTaskForTarget == pTask
+pNextForTarget->m_pTarget == pTarget
 !pNext || pNext->m_pPrevTaskForTarget == pTask
 .png
 pNg<k
@@ -36935,6 +36939,8 @@ ppppp`p
 >P>P>P>P>P>P>P<
 pppppppppppppppppppppppp
 ppp\tp
+pPrevForTarget->m_pNextTaskForTarget == pTask
+pPrevForTarget->m_pTarget == pTarget
 (pPrev->*pMbrLinks).m_pNext == pSuccessor
 (pPrev->*pMbrLinks).m_pQueue == pQueue
 pPrimarySession->m_pServer->m_usecTimeLastRecv > 0
@@ -37346,6 +37352,8 @@ pT6w.
 p<t7(
 ptal
 pTarget->m_pFirstTask->m_pPrevTaskForTarget == nullptr
+pTarget->m_pFirstTask != nullptr
+pTarget->m_pFirstTask != pTask
 pTarget->m_pFirstTask == pTask
 pTask->m_eTaskState == CQueuedTask::k_ETaskState_Init
 pTask->m_eTaskState == CQueuedTask::k_ETaskState_Queued
@@ -43461,6 +43469,7 @@ SteamNetworkingSocketsLib::CSteamNetworkListenSocketP2P::CSteamNetworkListenSock
 SteamNetworkingSocketsLib::CSteamNetworkPollGroup::AssignHandleAndAddToGlobalTable()
 SteamNetworkingSocketsLib::CSteamNetworkPollGroup::~CSteamNetworkPollGroup()
 SteamNetworkingSocketsLib::CSteamNetworkPollGroup::CSteamNetworkPollGroup(SteamNetworkingSocketsLib::CSteamNetworkingSockets*)
+SteamNetworkingSocketsLib::CTaskList::DeleteTasks()
 SteamNetworkingSocketsLib::CTaskList::QueueTask(SteamNetworkingSocketsLib::CQueuedTask*)
 SteamNetworkingSocketsLib::CTaskList::RunTasks()
 SteamNetworkingSocketsLib::CTaskTarget::CancelQueuedTasks()
@@ -49448,6 +49457,7 @@ vA8;
 \vadM(
 vA?F
 {va)g
+V_AggressiveStripAllMeanWhitespace
 V_AggressiveStripPrecedingAndTrailingWhitespace
 V_AggressiveStripPrecedingAndTrailingWhitespaceW
 VAiP
@@ -51894,6 +51904,7 @@ WkLm
 w]k-myO
 WK\nb
 WkNDIJbn
+wko$Z
 w)KU#U
 =WL1]
 <WL36!
