@@ -47,7 +47,7 @@
 7CThread
 7SVLRoot
 7XrScene
-8613215 
+8663214 
 8SVLAudio
 8SVLCodec
 8SVLCrypt
@@ -127,6 +127,8 @@ AInputQueue_detachLooper
 AInputQueue_finishEvent
 AInputQueue_getEvent
 AInputQueue_preDispatchEvent
+AKeyEvent_getAction
+AKeyEvent_getKeyCode
 alignof (
 allocator
 allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
@@ -281,6 +283,7 @@ AppDestroy()
 AppDestroy: On Scene
 AppDestroy: On Scene Completed
 app_dummy()
+AppHandleButton: Button Triggered: %i, %s
 AppHandleButton(int, int, int, bool)
 AppHandleMotion(int, int, int)
 AppHandleStateEvent(AppStateEvent)
@@ -417,7 +420,7 @@ bool XRQTeardown(XRQContext &)
 bool XRQUpdateSwapchainSamplerStateGLES(const XRQContext &, const XRQSwapchain &, const XrSwapchainStateSamplerOpenGLESFB &)
 bool XRQWaitFrame(XRQContext &)
 bool XRQXrPathToString(XrInstance, const XrPath, std::string &)
-bool XrUIInput::GetInputState(const XRQContext &, std::array<XrUIControllerState, 2> &)
+bool XrUIInput::GetInputState(XRQContext &, XrUIInputState &)
 brazilian
 bShouldNotShowContinue
 bShow
@@ -769,6 +772,12 @@ description
 dEstLinkBW
 Destroyed instance
 Destroyed session
+DeviceInput::Clear()
+DeviceInput::~DeviceInput()
+DeviceInput::DeviceInput()
+DeviceInput::GetInput(int)
+DeviceInput::GetInstance()::instance
+DeviceInput::SetInput(int, bool)
 /dev/urandom
 dialog_info
 Did not parse interaction profile path static props for active interaction profile. Is the device connected?
@@ -778,6 +787,7 @@ dl_iterate_phdr
 dlsym
 %d OpenXR Events lost before this event in queue!
 double
+Down
 dProblemBW
 draw
 drawColor
@@ -1054,7 +1064,6 @@ getConnectionInfo
 GetCurrentLocale()
 GetCurrentTimestamp
 GetCurrentTimeUS
-getcwd
 getDefault
 GetDeviceProductName()
 getEncodedP
@@ -1099,7 +1108,6 @@ getStreamMaxVolume
 getStreamMinVolume
 getStreamVolume
 getString
-GetSVLPath
 GetSystemBaseTicks()
 getSystemService
 GetSystemTicksFromTime(double)
@@ -1339,10 +1347,12 @@ glTexSubImage2D
 glTexSubImage2D( GL_TEXTURE_2D, 0, 0, 0, m_webViewInfo.nWidth, m_webViewInfo.nHeight, GL_RGBA, GL_UNSIGNED_BYTE, m_bufferbytes )
 glUniform1f
 glUniform1ffnptr
+glUniform1f( id, value )
 glUniform1fv
 glUniform1fvfnptr
 glUniform1i
 glUniform1ifnptr
+glUniform1i( id, value )
 glUniform1i( location, value )
 glUniform1iv
 glUniform1ivfnptr
@@ -1410,6 +1420,7 @@ g_szSemFileName
 guard variable for 
 guard variable for AppConfig::GetInstance()::instance
 guard variable for AppPaths::GetInstance()::instance
+guard variable for DeviceInput::GetInstance()::instance
 __gxx_personality_v0
 HandleCmd(android_app*, int)
 haptic
@@ -2210,8 +2221,6 @@ NSt6__ndk110__function6__funcINS_6__bindIRZN7WebView13RequestResumeEvE3$_5JEEENS
 NSt6__ndk110__function6__funcINS_6__bindIRZN7WebView13WebViewThreadEvE3$_1JEEENS_9allocatorIS6_EEFvvEEE
 NSt6__ndk110__function6__funcINS_6__bindIRZN7WebView13WebViewThreadEvE3$_2JEEENS_9allocatorIS6_EEFvvEEE
 NSt6__ndk110__function6__funcINS_6__bindIRZN7WebView14SendRawMessageERKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEE3$_0JRS9_EEENS7_ISF_EEFvvEEE
-NSt6__ndk110__function6__funcINS_6__bindIRZN7WebView18ThawWebviewsGlobalEvE3$_7JEEENS_9allocatorIS6_EEFvvEEE
-NSt6__ndk110__function6__funcINS_6__bindIRZN7WebView19ChillWebViewsGlobalEvE3$_6JEEENS_9allocatorIS6_EEFvvEEE
 NSt6__ndk110__function6__funcIPFbcENS_9allocatorIS3_EES2_EE
 NSt6__ndk110__function6__funcIZN10ByteLogger7SetRootEP7SVLRootE3$_0NS_9allocatorIS5_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN10QSVLClient4InitEvE3$_0NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
@@ -2326,8 +2335,6 @@ NSt6__ndk118__weak_result_typeIZN7WebView13RequestResumeEvE3$_5EE
 NSt6__ndk118__weak_result_typeIZN7WebView13WebViewThreadEvE3$_1EE
 NSt6__ndk118__weak_result_typeIZN7WebView13WebViewThreadEvE3$_2EE
 NSt6__ndk118__weak_result_typeIZN7WebView14SendRawMessageERKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEE3$_0EE
-NSt6__ndk118__weak_result_typeIZN7WebView18ThawWebviewsGlobalEvE3$_7EE
-NSt6__ndk118__weak_result_typeIZN7WebView19ChillWebViewsGlobalEvE3$_6EE
 NSt6__ndk119basic_istringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 NSt6__ndk119basic_ostringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 NSt6__ndk119__iostream_categoryE
@@ -2338,6 +2345,7 @@ NSt6__ndk120__codecvt_utf8_utf16IwEE
 NSt6__ndk120__shared_ptr_emplaceI11QSVLXRInputNS_9allocatorIS1_EEEE
 NSt6__ndk120__shared_ptr_emplaceI11XrUIManagerNS_9allocatorIS1_EEEE
 NSt6__ndk120__shared_ptr_emplaceI13QSVLDeviceHmdNS_9allocatorIS1_EEEE
+NSt6__ndk120__shared_ptr_emplaceI14QSVLRendererXRNS_9allocatorIS1_EEEE
 NSt6__ndk120__shared_ptr_emplaceI15QSVLFrameServerNS_9allocatorIS1_EEEE
 NSt6__ndk120__shared_ptr_emplaceI18SRGBCorrectionPassNS_9allocatorIS1_EEEE
 NSt6__ndk120__shared_ptr_emplaceI7TextureNS_9allocatorIS1_EEEE
@@ -2351,8 +2359,6 @@ NSt6__ndk122__weak_result_type_impIZN7WebView13RequestResumeEvE3$_5Lb0EEE
 NSt6__ndk122__weak_result_type_impIZN7WebView13WebViewThreadEvE3$_1Lb0EEE
 NSt6__ndk122__weak_result_type_impIZN7WebView13WebViewThreadEvE3$_2Lb0EEE
 NSt6__ndk122__weak_result_type_impIZN7WebView14SendRawMessageERKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEE3$_0Lb0EEE
-NSt6__ndk122__weak_result_type_impIZN7WebView18ThawWebviewsGlobalEvE3$_7Lb0EEE
-NSt6__ndk122__weak_result_type_impIZN7WebView19ChillWebViewsGlobalEvE3$_6Lb0EEE
 NSt6__ndk123__future_error_categoryE
 NSt6__ndk123__system_error_categoryE
 NSt6__ndk124__generic_error_categoryE
@@ -2362,16 +2368,12 @@ NSt6__ndk134__maybe_derive_from_unary_functionIZN7WebView13RequestResumeEvE3$_5L
 NSt6__ndk134__maybe_derive_from_unary_functionIZN7WebView13WebViewThreadEvE3$_1Lb0EEE
 NSt6__ndk134__maybe_derive_from_unary_functionIZN7WebView13WebViewThreadEvE3$_2Lb0EEE
 NSt6__ndk134__maybe_derive_from_unary_functionIZN7WebView14SendRawMessageERKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEE3$_0Lb0EEE
-NSt6__ndk134__maybe_derive_from_unary_functionIZN7WebView18ThawWebviewsGlobalEvE3$_7Lb0EEE
-NSt6__ndk134__maybe_derive_from_unary_functionIZN7WebView19ChillWebViewsGlobalEvE3$_6Lb0EEE
 NSt6__ndk135__maybe_derive_from_binary_functionIZN7WebView11RequestDrawEvE3$_3Lb0EEE
 NSt6__ndk135__maybe_derive_from_binary_functionIZN7WebView12RequestPauseEvE3$_4Lb0EEE
 NSt6__ndk135__maybe_derive_from_binary_functionIZN7WebView13RequestResumeEvE3$_5Lb0EEE
 NSt6__ndk135__maybe_derive_from_binary_functionIZN7WebView13WebViewThreadEvE3$_1Lb0EEE
 NSt6__ndk135__maybe_derive_from_binary_functionIZN7WebView13WebViewThreadEvE3$_2Lb0EEE
 NSt6__ndk135__maybe_derive_from_binary_functionIZN7WebView14SendRawMessageERKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEE3$_0Lb0EEE
-NSt6__ndk135__maybe_derive_from_binary_functionIZN7WebView18ThawWebviewsGlobalEvE3$_7Lb0EEE
-NSt6__ndk135__maybe_derive_from_binary_functionIZN7WebView19ChillWebViewsGlobalEvE3$_6Lb0EEE
 NSt6__ndk15ctypeIcEE
 NSt6__ndk15ctypeIwEE
 NSt6__ndk16__bindIRZN7WebView11RequestDrawEvE3$_3JEEE
@@ -2380,8 +2382,6 @@ NSt6__ndk16__bindIRZN7WebView13RequestResumeEvE3$_5JEEE
 NSt6__ndk16__bindIRZN7WebView13WebViewThreadEvE3$_1JEEE
 NSt6__ndk16__bindIRZN7WebView13WebViewThreadEvE3$_2JEEE
 NSt6__ndk16__bindIRZN7WebView14SendRawMessageERKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEE3$_0JRS7_EEE
-NSt6__ndk16__bindIRZN7WebView18ThawWebviewsGlobalEvE3$_7JEEE
-NSt6__ndk16__bindIRZN7WebView19ChillWebViewsGlobalEvE3$_6JEEE
 NSt6__ndk16locale5facetE
 NSt6__ndk16locale5__impE
 NSt6__ndk17codecvtIcc9mbstate_tEE
@@ -2560,7 +2560,6 @@ PanelRenderer::GetPanelConfig()
 PanelRenderer::PanelRenderer(PanelConfig)
 PanelRenderer::RenderToScreen(std::__ndk1::unique_ptr<Texture, std::__ndk1::default_delete<Texture>> const&, int, int)
 PanelRenderer::RenderToTexture(glm::mat<4, 4, float, (glm::qualifier)0> const&, glm::mat<4, 4, float, (glm::qualifier)0> const&, std::__ndk1::unique_ptr<Texture, std::__ndk1::default_delete<Texture>> const&, unsigned int, int, int)
-pauseTimers
 <Pcjv
 permissions_state
 PFbcE
@@ -2862,7 +2861,6 @@ request_permission
 requestPermissions
  restrict
 result
-resumeTimers
 returnFrom
 ReturnStdString(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, char*, unsigned int)
 rewind
@@ -3004,6 +3002,7 @@ Shader::SetUniform1f(std::__ndk1::basic_string<char, std::__ndk1::char_traits<ch
 Shader::SetUniform1i(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, int)
 Shader::SetUniform2f(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, float, float)
 Shader::SetUniformL1f(int, float)
+Shader::SetUniformL1i(int, int)
 Shader::SetUniformLMat4(int, glm::mat<4, 4, float, (glm::qualifier)0> const&)
 Shader::SetUniformLVec2(int, glm::vec<2, float, (glm::qualifier)0> const&)
 Shader::SetUniformLVec3(int, float const*)
@@ -3839,6 +3838,7 @@ std::__ndk1::generic_category()
 std::__ndk1::get_pointer_safety()
 std::__ndk1::__get_sp_mut(void const*)
 std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, void*>*> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>>>::find<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<int, bool>, std::__ndk1::__unordered_map_hasher<int, std::__ndk1::__hash_value_type<int, bool>, std::__ndk1::hash<int>, true>, std::__ndk1::__unordered_map_equal<int, std::__ndk1::__hash_value_type<int, bool>, std::__ndk1::equal_to<int>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<int, bool>>>::__rehash(unsigned long)
 std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>>>::__rehash(unsigned long)
 std::__ndk1::ios_base::adjustfield
 std::__ndk1::ios_base::app
@@ -4163,6 +4163,7 @@ std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>
 std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>::pair<char const (&) [7], char const (&) [6], false>(char const (&) [7], char const (&) [6])
 std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>>::~pair()
 std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>>::pair(std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>> const&)
+std::__ndk1::pair<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<int, bool>, void*>*>, bool> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<int, bool>, std::__ndk1::__unordered_map_hasher<int, std::__ndk1::__hash_value_type<int, bool>, std::__ndk1::hash<int>, true>, std::__ndk1::__unordered_map_equal<int, std::__ndk1::__hash_value_type<int, bool>, std::__ndk1::equal_to<int>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<int, bool>>>::__emplace_unique_key_args<int, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<int const&>, std::__ndk1::tuple<>>(int const&, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<int const&>&&, std::__ndk1::tuple<>&&)
 std::__ndk1::pair<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, void*>*>, bool> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>>>::__emplace_unique_key_args<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&>, std::__ndk1::tuple<>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&>&&, std::__ndk1::tuple<>&&)
 std::__ndk1::pair<std::__ndk1::__tree_iterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__tree_node<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void*>*, long>, bool> std::__ndk1::__tree<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__emplace_unique_key_args<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 std::__ndk1::pair<std::__ndk1::__tree_iterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__tree_node<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void*>*, long>, bool> std::__ndk1::__tree<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__emplace_unique_key_args<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&)
@@ -4206,6 +4207,9 @@ std::__ndk1::__shared_ptr_emplace<QSVLDeviceHmd, std::__ndk1::allocator<QSVLDevi
 std::__ndk1::__shared_ptr_emplace<QSVLFrameServer, std::__ndk1::allocator<QSVLFrameServer>>::__on_zero_shared()
 std::__ndk1::__shared_ptr_emplace<QSVLFrameServer, std::__ndk1::allocator<QSVLFrameServer>>::__on_zero_shared_weak()
 std::__ndk1::__shared_ptr_emplace<QSVLFrameServer, std::__ndk1::allocator<QSVLFrameServer>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<QSVLRendererXR, std::__ndk1::allocator<QSVLRendererXR>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<QSVLRendererXR, std::__ndk1::allocator<QSVLRendererXR>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<QSVLRendererXR, std::__ndk1::allocator<QSVLRendererXR>>::~__shared_ptr_emplace()
 std::__ndk1::__shared_ptr_emplace<QSVLXRInput, std::__ndk1::allocator<QSVLXRInput>>::__on_zero_shared()
 std::__ndk1::__shared_ptr_emplace<QSVLXRInput, std::__ndk1::allocator<QSVLXRInput>>::__on_zero_shared_weak()
 std::__ndk1::__shared_ptr_emplace<QSVLXRInput, std::__ndk1::allocator<QSVLXRInput>>::~__shared_ptr_emplace()
@@ -4232,6 +4236,7 @@ std::__ndk1::shared_ptr<QSVLFrameServer>::~shared_ptr()
 std::__ndk1::shared_ptr<QSVLInput>::~shared_ptr()
 std::__ndk1::shared_ptr<QSVLXRInput>::~shared_ptr()
 std::__ndk1::shared_ptr<SRGBCorrectionPass>::~shared_ptr()
+std::__ndk1::shared_ptr<SVLRenderer>::~shared_ptr()
 std::__ndk1::shared_ptr<Texture>::~shared_ptr()
 std::__ndk1::shared_ptr<VariableTransportHolder>::~shared_ptr()
 std::__ndk1::shared_ptr<WebView>::~shared_ptr()
@@ -4487,6 +4492,7 @@ std::__ndk1::vector<unsigned int, std::__ndk1::allocator<unsigned int>>::__appen
 std::__ndk1::vector<ValueTransportID, std::__ndk1::allocator<ValueTransportID>>::__append(unsigned long)
 std::__ndk1::vector<VTEAckPacket, std::__ndk1::allocator<VTEAckPacket>>::__append(unsigned long)
 std::__ndk1::vector<XrSpace_T*, std::__ndk1::allocator<XrSpace_T*>>::__append(unsigned long)
+std::__ndk1::weak_ptr<SVLRenderer>::~weak_ptr()
 std::__ndk1::__widen_from_utf8<16ul>::~__widen_from_utf8()
 std::__ndk1::__widen_from_utf8<32ul>::~__widen_from_utf8()
 std::__ndk1::wstring_convert<std::__ndk1::codecvt_utf8_utf16<wchar_t, 1114111ul, (std::__ndk1::codecvt_mode)0>, wchar_t, std::__ndk1::allocator<wchar_t>, std::__ndk1::allocator<char>>::from_bytes(char const*, char const*)
@@ -4735,6 +4741,7 @@ SVLFEC::ExperiencedAnUnrecoverableError()
 SVLFEC: frame %d was entirely dropped, initializing and re-requesting\n
 SVLFEC::GetInFlightAndPendingQueueDepth()
 SVLFEC::GetMetadataForFrameId(unsigned short)
+SVLFEC::InternalAcceptFrameFromRX: Failed to acquire pRender
 SVLFEC::InternalAcceptFrameFromRX(unsigned int, unsigned char*, unsigned short)
 SVLFEC::ProcessTXVideoFrameThreadFunction()
 SVLFEC::ProcessVideoReply(dataset*)
@@ -4763,6 +4770,7 @@ SVLFEC::ReportStreamReset()
 SVLFEC::ReportStreamReset() (m_iLastAcknowledgeFrameNumber = %d)
 SVLFEC::RerequestBookend(unsigned short)
 SVLFEC::RerequestSkippedFrame(unsigned short)
+SVLFECRXFrame::AcceptVFD: Failed to acquire pRender
 SVLFECRXFrame::AcceptVFD(SVLVideoFrameDescriptor_t*, int)
 SVLFECRXFrame::AcceptVideoPacket(dataset*, int)
 SVLFECRXFrame::CheckRetry(int)
@@ -5186,6 +5194,7 @@ typeinfo for std::__ndk1::num_put<wchar_t, std::__ndk1::ostreambuf_iterator<wcha
 typeinfo for std::__ndk1::__shared_count
 typeinfo for std::__ndk1::__shared_ptr_emplace<QSVLDeviceHmd, std::__ndk1::allocator<QSVLDeviceHmd>>
 typeinfo for std::__ndk1::__shared_ptr_emplace<QSVLFrameServer, std::__ndk1::allocator<QSVLFrameServer>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<QSVLRendererXR, std::__ndk1::allocator<QSVLRendererXR>>
 typeinfo for std::__ndk1::__shared_ptr_emplace<QSVLXRInput, std::__ndk1::allocator<QSVLXRInput>>
 typeinfo for std::__ndk1::__shared_ptr_emplace<SRGBCorrectionPass, std::__ndk1::allocator<SRGBCorrectionPass>>
 typeinfo for std::__ndk1::__shared_ptr_emplace<Texture, std::__ndk1::allocator<Texture>>
@@ -5482,6 +5491,7 @@ typeinfo name for std::__ndk1::num_put<wchar_t, std::__ndk1::ostreambuf_iterator
 typeinfo name for std::__ndk1::__shared_count
 typeinfo name for std::__ndk1::__shared_ptr_emplace<QSVLDeviceHmd, std::__ndk1::allocator<QSVLDeviceHmd>>
 typeinfo name for std::__ndk1::__shared_ptr_emplace<QSVLFrameServer, std::__ndk1::allocator<QSVLFrameServer>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<QSVLRendererXR, std::__ndk1::allocator<QSVLRendererXR>>
 typeinfo name for std::__ndk1::__shared_ptr_emplace<QSVLXRInput, std::__ndk1::allocator<QSVLXRInput>>
 typeinfo name for std::__ndk1::__shared_ptr_emplace<SRGBCorrectionPass, std::__ndk1::allocator<SRGBCorrectionPass>>
 typeinfo name for std::__ndk1::__shared_ptr_emplace<Texture, std::__ndk1::allocator<Texture>>
@@ -5688,7 +5698,7 @@ version
 #version 300 es\n        out vec2 uv;\n        layout(location = 12) uniform float group;\n        layout(location = 13) uniform float mode;\n        void main() {\n            uv = vec2(gl_VertexID & 1, gl_VertexID >> 1);\n            // Position based off of 0..1, 0..1\n            vec2 vPos = (uv - 0.5) * 2.;\n            vPos.y *= -1.0; // Flip image.\n            gl_Position = vec4(vPos, 0, 1);\n\n\t\t\t// Output UV over the actual area used.\n\t\t\tif( mode > 1.5 )\n\t\t\t{\n\t\t\t\t// Do nothing\n\t\t\t\tuv.y = (uv.y + group * .5) * 0.5 - .25;\n\t\t\t}\n\t\t\telse if( mode > 0.5 )\n\t\t\t{\n\t\t\t\t// 2x2\n\t            uv.y = (uv.y + group*0.5) * 0.5 - 0.25;\n\t\t\t\tuv.x = uv.x * 0.5;\n\t\t\t}\n\t\t\telse\n\t\t\t{\n\t\t\t\t// 4-way\n\t\t\t\tuv.y = (uv.y + group) * 0.25;\n\t\t\t}\n        }\n    
 #version 300 es\n        out vec2 uv;\n\t\tout vec2 uvmask;\n        layout(location = 12) uniform float group;\n        layout(location = 13) uniform float mode;\n        void main() {\n            uv = vec2(gl_VertexID & 1, gl_VertexID >> 1);\n            // Position based off of 0..1, 0..1\n            vec2 vPos = (uv - 0.5) * 2.;\n            vPos.y *= -1.0; // Flip image.\n            gl_Position = vec4(vPos, 0, 1);\n\n\t\t\tuvmask = uv;\n            // Output UV over the actual area used.\n\t\t\tif( mode > 1.5 )\n\t\t\t{\n\t\t\t\tgl_Position = vec4( 0.0, 0.0, 0.0, 1.0 );\n\t\t\t}\n\t\t\telse if( mode > 0.5 )\n\t\t\t{\n\t\t\t\t// Two-by-Two\n\t\t\t\tuvmask = uv * vec2( 1.0, 0.25 );\n\t            uv.y = (uv.y + group*0.5) * 0.5;\n\t\t\t\tuv.x = uv.x * 0.5 + 0.5;\n\t\t\t}\n\t\t\telse\n\t\t\t{\n\t\t\t\t// 4-Square\n\t\t\t\tuvmask = uv * vec2( 1.0, 0.25 );\n\t            uv.y = (uv.y + group) * 0.25;\n\t\t\t}\n        }\n    
 #version 300 es\nprecision highp float;\nout vec4 out_FragColor;\nlayout(location = 2) uniform float flFadeAmount;\n\nlayout(location = 4) uniform float flTime;\n\nin vec3 vViewDir;\n\nfloat osmooth( float t )\n{\n\treturn t * t * (3.0 - 2.0 * t);\n}\n\nfloat oosmooth( float t )\n{\n\treturn osmooth( osmooth( t ) );\n}\n\n// Original code MIT License...\n// Copyright (c)2014 David Hoskins.\nvec3 hash33(vec3 p3)\n{\n\tp3 = fract(p3 * vec3(.1031, .1030, .0973));\n    p3 += dot(p3, p3.yxz+33.33);\n    return fract((p3.xxy + p3.yxx)*p3.zyx);\n}\n\nfloat fclamp( float v )\n{\n\tif( v < 0.0 ) v = 0.0;\n\tif( v > 1.0 ) v = 1.0;\n\treturn v;\n}\n\nvoid main()\n{\n\tvec3 vViewDirNorm = normalize( vViewDir ) ;\n\tfloat azimuth = atan( vViewDirNorm.x, vViewDirNorm.z ) ;\n\tfloat lalt = length( vViewDirNorm.xz );\n\tfloat altitude = atan( vViewDirNorm.y, lalt );\n\n\tfloat vgrad = altitude / 3.14159 + 0.5;\n\n\n\tvec2 vdn2 = normalize( vViewDirNorm.xz );\n\n\tfloat bubbly = sin( cos( vdn2.x * 4.7 + flTime*0.628/2.0 ) +\n\tsin( flTime*0.628/5.0*0.0 + vdn2.y * 5.2 ) ) * 0.01;\n\n\n\tvec3 grad1 = vec3( 0.059, 0.31, 0.643 ) * 0.3 + vec3( 0.05 );\n\tvec3 grad2 = vec3( 0.027, 0.216, 0.486) * 0.2 + vec3( 0.025 );\n\n\tvgrad = oosmooth( oosmooth( oosmooth( vgrad + bubbly + 0.02) ) );\n\tvec3 color = vec3( mix( grad1, grad2, fclamp( vgrad  ) ) );\n\n\t// Dither to get rid of color bands.\n\tvec3 noise = hash33( vec3( gl_FragCoord.xy * 3.2, flTime*2.4 ) ) / 255.0;\n\tout_FragColor.rgb = color + noise;\n\n\tout_FragColor.a = flFadeAmount;\n}\n    
-#version 300 es\n        precision highp float;\n\t\tlayout(location = 2) uniform float renderType;\n        layout(location = 3) uniform mat4 m;\n        layout(location = 4) uniform mat4 v;\n\t\tlayout(location = 1) uniform float length;\n\n\t\t// All of these are in view space.\n\t\tin vec4 vPointerPosDelta;\n\t\tin vec4 vPointerDirDelta;\n\t\tin vec4 vWorld;\n\t\tin vec4 vEyePos;\n\t\tin vec4 vHitPos;\n\n\t\tin float lineZ;\n\n\t\tout vec4 out_FragColor;\n\n        void main()\n        {\n\t\t\tif( renderType < 0.5 )\n\t\t\t{\n\t\t\t\tfloat fAlpha = smoothstep(0.2, 1.0, 1.f-lineZ);\n    \t        out_FragColor = vec4(0.67, 0.84, 0.9, fAlpha);\n\t\t\t}\n\t\t\telse if( renderType < 1.5 )\n\t\t\t{\n\t\t\t\tfloat fAlpha = 0.8;\n    \t        out_FragColor = vec4(0.67, 0.84, 0.9, fAlpha);\n\t\t\t}\n\t\t\telse if( renderType < 2.5 )\n\t\t\t{\n\t\t\t\t// AA Line.\n\t\t\t\t// With base of pointer at "0,0"\n\t\t\t\t//float fDistFromTargetOnSurface = vInternalPos.z + length;\n\n\t\t\t\tvec3 vRayFromEye = normalize( vWorld.xyz - vEyePos.xyz );\n\n\t\t\t\tvec3 n = cross( vRayFromEye, vPointerDirDelta.xyz );\n\t\t\t\tfloat rd = dot( n, vPointerPosDelta.xyz - vEyePos.xyz ) / length ( n );\n\t\t\t\tfloat oAlpha = 1.05-400.0*abs(rd);\n\n\t\t\t\t// From https://mathworld.wolfram.com/Line-LineIntersection.html\n\t\t\t\tvec3 x3 = vWorld.xyz;\n\t\t\t\tvec3 x4 = vEyePos.xyz;\n\t\t\t\tvec3 x1 = vHitPos.xyz;\n\t\t\t\tvec3 x2 = vPointerPosDelta.xyz;\n\n\t\t\t\tvec3 A = x2 - x1;\n\t\t\t\tvec3 B = x4 - x3;\n\t\t\t\tvec3 C = x3 - x1;\n\t\t\t\tvec3 C2 = x3 - x2;\n\t\t\t\tvec3 ABCross = cross( A, B );\n\n\t\t\t\t// Distance along pointer ray.\n\t\t\t\tfloat s = dot( cross( C, B ), ABCross ) / dot( ABCross, ABCross );\n\n\t\t\t\t// Distance from hand to point on ray.\n\t\t\t\tfloat s2 = dot( cross( C2, B ), ABCross ) / dot( ABCross, ABCross );\n\n\t\t\t\t// Distance along headset ray. (unsued)\n\t\t\t\t//float t =-dot( cross( C, A ), ABCross );\n\n\t\t\t\tif( s < 0.0 ) oAlpha = 0.0;\n\t\t\t\tfloat fLength = length( vHitPos.xyz - vPointerPosDelta.xyz );\n\t\t\t\tfloat closenessToNear = -1.0 - s2*80.0;\n\t\t\t\toAlpha = min( oAlpha, closenessToNear );\n\n\t\t\t\t// Compute intersection with "ball" (or really flat circle) at intersection.\n\t\t\t\t// This is faster than a ray-sphere intersection.\n\n\t\t\t\tvec3 vecCircleHit = cross( vHitPos.xyz - vEyePos.xyz, vRayFromEye );\n\t\t\t\tfloat dotAlpha = 4.5 - 600.0*length( vecCircleHit.xyz );\n\t\t\t\toAlpha = max( dotAlpha, oAlpha );\n\n\t\t\t\tvec3 col = vec3( 0.3, 0.8, 0.7 );\n    \t        out_FragColor = vec4(col, max( 0.0, oAlpha ) );\n\t\t\t}\n        }\n
+#version 300 es\n        precision highp float;\n\t\tlayout(location = 2) uniform float renderType;\n        layout(location = 3) uniform mat4 m;\n        layout(location = 4) uniform mat4 v;\n\t\tlayout(location = 1) uniform float length;\n\t\tlayout(location = 5) uniform float renderLine;\n\n\t\t// All of these are in view space.\n\t\tin vec4 vPointerPosDelta;\n\t\tin vec4 vPointerDirDelta;\n\t\tin vec4 vWorld;\n\t\tin vec4 vEyePos;\n\t\tin vec4 vHitPos;\n\n\t\tin float lineZ;\n\n\t\tout vec4 out_FragColor;\n\n        void main()\n        {\n\t\t\tif( renderType < 0.5 )\n\t\t\t{\n\t\t\t\tfloat fAlpha = smoothstep(0.2, 1.0, 1.f-lineZ);\n    \t        out_FragColor = vec4(0.67, 0.84, 0.9, fAlpha);\n\t\t\t}\n\t\t\telse if( renderType < 1.5 )\n\t\t\t{\n\t\t\t\tfloat fAlpha = 0.8;\n    \t        out_FragColor = vec4(0.67, 0.84, 0.9, fAlpha);\n\t\t\t}\n\t\t\telse if( renderType < 2.5 )\n\t\t\t{\n\t\t\t\t// AA Line.\n\t\t\t\t// With base of pointer at "0,0"\n\t\t\t\t//float fDistFromTargetOnSurface = vInternalPos.z + length;\n\n\t\t\t\tvec3 vRayFromEye = normalize( vWorld.xyz - vEyePos.xyz );\n\n\t\t\t\tvec3 n = cross( vRayFromEye, vPointerDirDelta.xyz );\n\t\t\t\tfloat rd = dot( n, vPointerPosDelta.xyz - vEyePos.xyz ) / length ( n );\n\t\t\t\tfloat oAlpha = 1.05-400.0*abs(rd);\n\n\t\t\t\t// From https://mathworld.wolfram.com/Line-LineIntersection.html\n\t\t\t\tvec3 x3 = vWorld.xyz;\n\t\t\t\tvec3 x4 = vEyePos.xyz;\n\t\t\t\tvec3 x1 = vHitPos.xyz;\n\t\t\t\tvec3 x2 = vPointerPosDelta.xyz;\n\n\t\t\t\tvec3 A = x2 - x1;\n\t\t\t\tvec3 B = x4 - x3;\n\t\t\t\tvec3 C = x3 - x1;\n\t\t\t\tvec3 C2 = x3 - x2;\n\t\t\t\tvec3 ABCross = cross( A, B );\n\n\t\t\t\t// Distance along pointer ray.\n\t\t\t\tfloat s = dot( cross( C, B ), ABCross ) / dot( ABCross, ABCross );\n\n\t\t\t\t// Distance from hand to point on ray.\n\t\t\t\tfloat s2 = dot( cross( C2, B ), ABCross ) / dot( ABCross, ABCross );\n\n\t\t\t\t// Distance along headset ray. (unsued)\n\t\t\t\t//float t =-dot( cross( C, A ), ABCross );\n\n\t\t\t\tif( s < 0.0 ) oAlpha = 0.0;\n\t\t\t\tfloat fLength = length( vHitPos.xyz - vPointerPosDelta.xyz );\n\t\t\t\tfloat closenessToNear = -1.0 - s2*80.0;\n\t\t\t\toAlpha = min( oAlpha, closenessToNear );\n\t\t\t\tif( renderLine < 0.5f) {\n\t\t\t\t\toAlpha = 0.f;\n\t\t\t\t}\n\n\t\t\t\t// Compute intersection with "ball" (or really flat circle) at intersection.\n\t\t\t\t// This is faster than a ray-sphere intersection.\n\n\t\t\t\tvec3 vecCircleHit = cross( vHitPos.xyz - vEyePos.xyz, vRayFromEye );\n\t\t\t\tfloat dotAlpha = 4.5 - 600.0*length( vecCircleHit.xyz );\n\t\t\t\toAlpha = max( dotAlpha, oAlpha );\n\n\t\t\t\tvec3 col = vec3( 0.3, 0.8, 0.7 );\n    \t        out_FragColor = vec4(col, max( 0.0, oAlpha ) );\n\t\t\t}\n        }\n
 #version 300 es\n\t\tlayout(location = 0) in vec3 position;\n        layout(location = 0) uniform mat4 mvp;\n        layout(location = 3) uniform mat4 m;\n        layout(location = 4) uniform mat4 v;\n\t\tlayout(location = 1) uniform float length;\n\n\t\tout float lineZ;\n\t\tout vec4  vPointerDirDelta;\n\t\tout vec4  vPointerPosDelta;\n\t\tout vec4  vWorld;\n\t\tout vec4  vEyePos;\n\t\tout vec3  vInternalPos;\n\t\tout vec4  vHitPos;\n\n        void main() {\n\t\t\tvec3 scaledPos = position;\n\t\t\tscaledPos.xy *= 0.01;\n\t\t\tscaledPos.z = scaledPos.z * length;\n\t\t\tvHitPos = m * vec4( 0., 0., -length, 1.0 );\n\t\t\tvPointerDirDelta = m * vec4( 0.0, 0.0, 1.0, 0.0 );\n\t\t\tvPointerPosDelta = m * vec4( 0.0, 0.0, 0.0, 1.0 );\n\t\t\tvInternalPos = scaledPos;\n\t\t\tvWorld = m * vec4(scaledPos,1.0);\n\t\t\tvEyePos = inverse( v ) * vec4( 0.0, 0.0, 0.0, 1.0 );\n            gl_Position = mvp * vec4(scaledPos, 1.0);\n\t\t\tlineZ = abs(position.z);\n        }\n    
 #version 300 es\n        uniform sampler2D texture;\n        in vec2 texCoord;\n\n        out vec4 out_FragColor;\n        void main()\n        {\n            out_FragColor = texture(texture, texCoord);\n        }\n
 versionCode
@@ -5894,6 +5904,7 @@ vtable for std::__ndk1::num_put<wchar_t, std::__ndk1::ostreambuf_iterator<wchar_
 vtable for std::__ndk1::__shared_count
 vtable for std::__ndk1::__shared_ptr_emplace<QSVLDeviceHmd, std::__ndk1::allocator<QSVLDeviceHmd>>
 vtable for std::__ndk1::__shared_ptr_emplace<QSVLFrameServer, std::__ndk1::allocator<QSVLFrameServer>>
+vtable for std::__ndk1::__shared_ptr_emplace<QSVLRendererXR, std::__ndk1::allocator<QSVLRendererXR>>
 vtable for std::__ndk1::__shared_ptr_emplace<QSVLXRInput, std::__ndk1::allocator<QSVLXRInput>>
 vtable for std::__ndk1::__shared_ptr_emplace<SRGBCorrectionPass, std::__ndk1::allocator<SRGBCorrectionPass>>
 vtable for std::__ndk1::__shared_ptr_emplace<Texture, std::__ndk1::allocator<Texture>>
@@ -5987,11 +5998,7 @@ Warning: packet received with wrong identifier. Expected 0x02...... got: %08x
 WARNING: Packet was XMITTed that was too big. [%d %d %d %d / %d]\n
 Warning: received packet ID %d in frame %d, but packet id exceeded max frame size\n
 Warning: received packet with invalid session ID (%08x/%08x/%08x)\n
-WARNING: Received SVLFECRXFrame while m_pParent->m_pRoot->m_pRender->m_pCodec not valid.\n
-WARNING: Received SVLFECRXFrame while m_pParent->m_pRoot->m_pRender not valid.\n
-WARNING: Received SVLFECRXFrame while m_pParent->m_pRoot not valid.\n
-WARNING: Received SVLFECRXFrame while m_pParent not valid.\n
-WARNING: Requested return to dash on release product, without proper launch activity, exiting.\n
+WARNING: Requested return to dash on release product, without proper launch activity, exiting.
 Warning: res field incorrect [clear mode] %04x\n
 Warning: res field incorrect [encryption mode] %08x on packet size %d\n
 Warning: retransmit request for unknown message %d (frame number=%d\n
@@ -6015,7 +6022,6 @@ wctob
 WebMessage: %s\n
 webui/localization/
 WebView::AddMessageCallback(std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>)
-WebView::ChillWebViewsGlobal()
 WebView::CopyContentsToTexture(unsigned int)
 WebView::Create(int, int, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>)
 WebView::DispatchTouchEvent(int, int, bool)
@@ -6029,8 +6035,6 @@ WebView::RequestResume()
 WebView::SendMailboxMessage(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 WebView::SendRawMessage: Queued message for sending as webview not yet initialized.
 WebView::SendRawMessage(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
-WebView::ThawWebviewsGlobal()
-WebView::UIThread_ChillWebViewGlobal()
 WebView::UIThread_Draw()
 WebView::UIThread_InitializeMessageChannels()
 WebView::UIThread_InitializeMessageChannels: WebView initialized message channels!
@@ -6042,7 +6046,6 @@ WebView::UIThread_SendMessage(std::__ndk1::basic_string<char, std::__ndk1::char_
 WebView::UIThread_SetupWebView()
 WebView::UIThread_SetupWebView: Initializing webview with URL: %s
 WebView::UIThread_SetupWebView: WebView completed setup!
-WebView::UIThread_ThawWebViewGlobal()
 WebView::~WebView()
 WebView::WebView(int, int, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>)
 WebView::WebViewThread()
@@ -6080,10 +6083,10 @@ xrApplyHapticFeedback( m_refXrqContext->session, &actionInfo, ( const XrHapticBa
 XrAppManager::BReadyToSuspend()
 XrAppManager::GetRequestedExtensions()
 XrAppManager::HandleSceneTransition: App transitioned to scene: %i
-XrAppManager::HandleSceneTransition(AppViewType)
+XrAppManager::HandleSceneTransition(AppViewType, bool)
 XrAppManager::HandleSceneTransition: Failed to transition to next scene
 XrAppManager::HandleTransitionToDash()
-XrAppManager::HandleTransitionToDash: Attempting to StartActivity back to SteamLink Dashboard (%s, %s)\n
+XrAppManager::HandleTransitionToDash: Attempting to StartActivity back to SteamLink Dashboard (%s, %s)
 XrAppManager::HandleTransitionToDash: Transitioning to activity: %s, package: %s
 XrAppManager::HandleTransitionToDash: Transitioning to Dash
 XrAppManager::HandleTransitionToLobby()
@@ -6115,7 +6118,6 @@ xrBeginFrame( xrqContext.session, &frame_begin_info )
 xrBeginFrame( xrqContext.session, &frameBeginInfo )
 xrBeginSession
 xrBeginSession( context.session, &session_begin_info )
-XrCompositionLayerBaseHeader *XrUIInput::RenderControllerAimRays(const XRQContext &, const std::array<float, 2>, const std::array<XrMatrix4x4f, 2> &, const std::array<XrMatrix4x4f, 2> &, int)
 XRConstruct::Init: Initializing swapchains...
 XRConstruct::Init(XRQContext const&)
 XRConstruct::ReloadShader(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
@@ -6187,7 +6189,6 @@ xrGetActionStateFloat( xrqContext.session, &selectActionStateGetInfo, &selectAct
 xrGetActionStatePose
 xrGetActionStatePose( context.session, &actionStateGetInfo, &actionStatePose )
 xrGetActionStatePose( m_refXrqContext->session, &actionStateInfo, &poseState )
-xrGetActionStatePose( xrqContext.session, &getInfo, &actionStatePose )
 xrGetActionStatePose( xrqContext.session, &poseActionStateGetInfo, &poseActionState )
 xrGetCurrentInteractionProfile
 xrGetCurrentInteractionProfile( xrqContext.session, vHandSubactionPaths[ i ], &interactionProfileState )
@@ -6320,14 +6321,13 @@ XrSceneLobby::GetRequestedExtensions()
 XrSceneLobby::Init(XRQContext&)
 XrSceneLobby::Render(XRQContext&)
 XrSceneLobby::SendPermissionsStateToWebView(XRQContext&)
-XrSceneLobby::UnFocused(XRQContext&)
+XrSceneLobby::UnFocused(XRQContext&, bool)
 XrSceneLobby::~XrSceneLobby()
 XrSceneLobby::XrSceneLobby(std::__ndk1::function<void (SceneEvent)>)
 XrSceneNoop::Init(XRQContext&)
 XrSceneNoop::Render(XRQContext&)
 XrSceneNoop::~XrSceneNoop()
 XrSceneNoop::XrSceneNoop()
-XrScene::OnAppWillBeRestarted(XRQContext&)
 XrScene::OnEndOfFrame(XRQContext&)
 XrScene::OnTopOfFrame(XRQContext&)
 XrSceneStatic::Init: Initializing swapchains...
@@ -6359,7 +6359,6 @@ XrSceneStream::GetPreflightChecks(std::__ndk1::vector<PreflightCheckInfo, std::_
 XrSceneStream::GetPreflightChecks: WiFi preflight check failed
 XrSceneStream::GetRequestedExtensions()
 XrSceneStream::GetStreamChecks: Host has quit
-XrSceneStream::GetStreamChecks: Host PC not responding.
 XrSceneStream::GetStreamChecks(std::__ndk1::vector<StreamCheckInfo, std::__ndk1::allocator<StreamCheckInfo>>&)
 XrSceneStream::GetStreamChecks: WiFi connection test failed
 XrSceneStream::HandleXREvent(XRQContext&, XrqEvent, std::__ndk1::variant<XrEventDataReferenceSpaceChangePending> const&)
@@ -6372,7 +6371,6 @@ XrSceneStream::Init: Initialized stream loading panel
 XrSceneStream::Init: Initializing stream scene...
 XrSceneStream::Init: Successfully initialized stream scene
 XrSceneStream::Init(XRQContext&)
-XrSceneStream::OnAppWillBeRestarted(XRQContext&)
 XrSceneStream::OnEndOfFrame(XRQContext&)
 XrSceneStream::OnTopOfFrame(XRQContext&)
 XrSceneStream::PreflightCheckThread()
@@ -6383,15 +6381,12 @@ XrSceneStream::Render::STREAM_SCENE_STATE_STREAM_LOADING_CAN_RESUME: Timeout exc
 XrSceneStream::Render::STREAM_SCENE_STATE_STREAM_PRELOADING: Failed to retrieve a new frame within %llu ms, transitioning to loading.
 XrSceneStream::Render: Wiped sideband event: %d
 XrSceneStream::Render(XRQContext&)
-XrSceneStream::SendErrorcodeText: %s
 XrSceneStream::SendErrorcodeText(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)
 XrSceneStream::SendPreflightChecks ...
 XrSceneStream::SendPreflightChecks: Preflight checks were empty. Transitioning straight to stream init
 XrSceneStream::SendPreflightChecks(std::__ndk1::vector<PreflightCheckInfo, std::__ndk1::allocator<PreflightCheckInfo>> const&)
-XrSceneStream::SendWifiText: %s
 XrSceneStream::SendWifiText(unsigned short)
 XrSceneStream::StreamErrorListenerThread()
-XrSceneStream::StreamErrorListenerThread: Sending loading panel stream check
 XrSceneStream::TransitionToPreflightNotice
 XrSceneStream::TransitionToPreflightNotice: Did not disable input as stream was not active
 XrSceneStream::TransitionToPreflightNotice: Disabled input as preflight check needed showing
@@ -6424,13 +6419,14 @@ XrSceneStream::TransitionToStreamStartOrResume(XRQContext&)
 XrSceneStream::UnFocused: Finished unfocusing
 XrSceneStream::UnFocused: m_pQSVLXRClientManager->Shutdown() complete
 XrSceneStream::UnFocused: Stream scene was unfocused
-XrSceneStream::UnFocused(XRQContext&)
+XrSceneStream::UnFocused: Stream scene was unfocused with intention of exit
+XrSceneStream::UnFocused(XRQContext&, bool)
 XrSceneStream::~XrSceneStream()
 XrSceneStream::~XrSceneStream() Complete
 XrSceneStream::~XrSceneStream() Start
 XrSceneStream::XrSceneStream(std::__ndk1::function<void (SceneEvent)>)
 XrSceneStream::~XrSceneStream() Threads Joined
-XrScene::UnFocused(XRQContext&)
+XrScene::UnFocused(XRQContext&, bool)
 XrScene::~XrScene()
 xrStopHapticFeedback
 xrStopHapticFeedback(m_refXrqContext->session, &actionInfo)
@@ -6441,13 +6437,13 @@ xrSuggestInteractionProfileBindings
 xrSyncActions
 xrSyncActions( context.session, &syncInfo )
 XrUIControllerActions::~XrUIControllerActions()
-XrUIInput::GetInputState(XRQContext const&, std::__ndk1::array<XrUIControllerState, 2ul>&)
+XrUIInput::GetInputState(XRQContext&, XrUIInputState&)
 XrUIInput::GetRequestedExtensions()
-XrUIInput::GetSubactionPathForHand(XRQContext const&, XRQHand)
 XrUIInput::Init: Initializing render model swpachains...
 XrUIInput::Init(XRQContext&)
-XrUIInput::RenderControllerAimRays(XRQContext const&, std::__ndk1::array<float, 2ul>, std::__ndk1::array<XrMatrix4x4f, 2ul> const&, std::__ndk1::array<XrMatrix4x4f, 2ul> const&, int)
-XrUIInput::SendHapticTick(XRQContext const&, XRQHand)
+XrUIInput::m_nActiveInputHand
+XrUIInput::RenderAimRay(XRQContext const&, XrPosef const&, float, bool, std::__ndk1::array<XrMatrix4x4f, 2ul> const&, std::__ndk1::array<XrMatrix4x4f, 2ul> const&)
+XrUIInput::SendHapticTickToActiveHand(XRQContext const&)
 XrUIInput::~XrUIInput()
 XrUIInput::XrUIInput: Loading ui input config
 XrUIInput::XrUIInput(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)
@@ -6465,9 +6461,6 @@ XrUIManager::AddTemporaryDialog(XRQContext const&, std::__ndk1::basic_string<cha
 XrUIManager::BAreAllUnfocused()
 XrUIManager::BIsUIPanelVisible: Failed to find panel index in map!
 XrUIManager::BIsUIPanelVisible(unsigned short)
-XrUIManager::ChillPanels()
-XrUIManager::ChillPanels: No panels to chill!
-XrUIManager::ChillPanels: No panels to thaw!
 XrUIManager::HideLoadingPanel()
 XrUIManager::HideLoadingPanelAfterDelay(float)
 XrUIManager::Init: Begin UI initialization
@@ -6478,7 +6471,6 @@ XrUIManager::LoadLocalization: Failed to get contents %s
 XrUIManager::LoadLocalization: Failed to parse input config
 XrUIManager::LoadLocalization: Loading %s
 XrUIManager::LoadLocalization: No language member %s
-XrUIManager::m_nLastHandUsedforUI
 XrUIManager::RemoveRenderedUIPanel: Could not find the panel to delete!
 XrUIManager::RemoveRenderedUIPanel(unsigned short&, bool)
 XrUIManager::RenderFrame: Initializing panel on render thread
@@ -6494,7 +6486,6 @@ XrUIManager::ShouldShowUIPanel: UI Panel was already: %s
 XrUIManager::ShouldShowUIPanel(unsigned short, bool)
 XrUIManager::ShowLoadingPanel()
 XrUIManager::ShowTemporaryDialog: Failed to initialize dialog. Not displaying!
-XrUIManager::ThawPanels()
 XrUIManager::~XrUIManager()
 XrUIManager::XrUIManager(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)
 XrUIManager::~XrUIManager: UI Manager is being destroyed
