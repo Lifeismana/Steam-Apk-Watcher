@@ -496,15 +496,10 @@ _1-0jX
 12CDynamicFuncIPF16SDL_JoystickTypejEE
 12CDynamicFuncIPF16SDL_JoystickTypeP12SDL_JoystickEE
 12CDynamicFuncIPF22SDL_JoystickPowerLevelP12SDL_JoystickEE
-12CDynamicFuncIPF8SDL_booljEE
-12CDynamicFuncIPF8SDL_boolP11SDL_Gamepad14SDL_SensorTypeEE
-12CDynamicFuncIPF8SDL_boolP11SDL_GamepadEE
-12CDynamicFuncIPF8SDL_boolP12SDL_JoystickEE
-12CDynamicFuncIPF8SDL_boolPKcS2_EE
 12CDynamicFuncIPF8SDL_GUIDjEE
 12CDynamicFuncIPF8SDL_GUIDP12SDL_JoystickEE
 12CDynamicFuncIPFijEE
-12CDynamicFuncIPFiP11SDL_Gamepad14SDL_SensorType8SDL_boolEE
+12CDynamicFuncIPFiP11SDL_Gamepad14SDL_SensorTypejEE
 12CDynamicFuncIPFiP11SDL_GamepadhhhEE
 12CDynamicFuncIPFiP11SDL_GamepadiEE
 12CDynamicFuncIPFiP11SDL_GamepadPKviEE
@@ -517,7 +512,11 @@ _1-0jX
 12CDynamicFuncIPFiP15SDL_hid_device_PKhmEE
 12CDynamicFuncIPFiP15SDL_hid_device_PwmEE
 12CDynamicFuncIPFivEE
+12CDynamicFuncIPFjjEE
+12CDynamicFuncIPFjP11SDL_Gamepad14SDL_SensorTypeEE
+12CDynamicFuncIPFjP11SDL_GamepadEE
 12CDynamicFuncIPFjP12SDL_JoystickEE
+12CDynamicFuncIPFjPKcS1_EE
 12CDynamicFuncIPFjvEE
 12CDynamicFuncIPFP11SDL_GamepadjEE
 12CDynamicFuncIPFP12SDL_JoystickjEE
@@ -1106,6 +1105,7 @@ _13zi
 2E*W
 2E(Xm]80)6
 2f00
+2\f.EVRLinkCaps:
 2F?F
 `2fH6
 2-finger pinch/slide
@@ -3038,6 +3038,7 @@ _,_8_D_P_\_
 "8\n#CRemotePlay_SessionStarted_Response
 8\n\fdevice_close
 8\n\fdevice_write
+8\n\fvr_link_caps
 8N.+I6
 8NML
 8n P
@@ -5406,6 +5407,7 @@ BIsTraditionalSteamController(EControllerType)
 BIsTVApp()
 BIsUprightGyro(EControllerType)
 BIsValidDirectory(StringView)
+BIsVRHeadset()
 BIsXBoxController(EControllerType)
 BIsXInputController(EControllerType)
  bit: %0.0f kbit/s
@@ -7088,10 +7090,10 @@ CDynamicFunc<int (*)(SDL_Gamepad*, int)>::GetNextPointer()
 CDynamicFunc<int (*)(SDL_Gamepad*, int)>::Init(CSysModule*)
 CDynamicFunc<int (*)(SDL_Gamepad*, int)>::Release()
 CDynamicFunc<int (*)(SDL_Gamepad*, int)>::SetNextPointer(IDynamicFunction*)
-CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType, SDL_bool)>::GetNextPointer()
-CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType, SDL_bool)>::Init(CSysModule*)
-CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType, SDL_bool)>::Release()
-CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType, SDL_bool)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType, unsigned int)>::GetNextPointer()
+CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType, unsigned int)>::Init(CSysModule*)
+CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType, unsigned int)>::Release()
+CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType, unsigned int)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunc<int (*)(SDL_Gamepad*, unsigned char, unsigned char, unsigned char)>::GetNextPointer()
 CDynamicFunc<int (*)(SDL_Gamepad*, unsigned char, unsigned char, unsigned char)>::Init(CSysModule*)
 CDynamicFunc<int (*)(SDL_Gamepad*, unsigned char, unsigned char, unsigned char)>::Release()
@@ -7137,26 +7139,6 @@ CDynamicFunc<int (*)(unsigned int)>::GetNextPointer()
 CDynamicFunc<int (*)(unsigned int)>::Init(CSysModule*)
 CDynamicFunc<int (*)(unsigned int)>::Release()
 CDynamicFunc<int (*)(unsigned int)>::SetNextPointer(IDynamicFunction*)
-CDynamicFunc<SDL_bool (*)(char const*, char const*)>::GetNextPointer()
-CDynamicFunc<SDL_bool (*)(char const*, char const*)>::Init(CSysModule*)
-CDynamicFunc<SDL_bool (*)(char const*, char const*)>::Release()
-CDynamicFunc<SDL_bool (*)(char const*, char const*)>::SetNextPointer(IDynamicFunction*)
-CDynamicFunc<SDL_bool (*)(SDL_Gamepad*)>::GetNextPointer()
-CDynamicFunc<SDL_bool (*)(SDL_Gamepad*)>::Init(CSysModule*)
-CDynamicFunc<SDL_bool (*)(SDL_Gamepad*)>::Release()
-CDynamicFunc<SDL_bool (*)(SDL_Gamepad*, SDL_SensorType)>::GetNextPointer()
-CDynamicFunc<SDL_bool (*)(SDL_Gamepad*, SDL_SensorType)>::Init(CSysModule*)
-CDynamicFunc<SDL_bool (*)(SDL_Gamepad*, SDL_SensorType)>::Release()
-CDynamicFunc<SDL_bool (*)(SDL_Gamepad*, SDL_SensorType)>::SetNextPointer(IDynamicFunction*)
-CDynamicFunc<SDL_bool (*)(SDL_Gamepad*)>::SetNextPointer(IDynamicFunction*)
-CDynamicFunc<SDL_bool (*)(SDL_Joystick*)>::GetNextPointer()
-CDynamicFunc<SDL_bool (*)(SDL_Joystick*)>::Init(CSysModule*)
-CDynamicFunc<SDL_bool (*)(SDL_Joystick*)>::Release()
-CDynamicFunc<SDL_bool (*)(SDL_Joystick*)>::SetNextPointer(IDynamicFunction*)
-CDynamicFunc<SDL_bool (*)(unsigned int)>::GetNextPointer()
-CDynamicFunc<SDL_bool (*)(unsigned int)>::Init(CSysModule*)
-CDynamicFunc<SDL_bool (*)(unsigned int)>::Release()
-CDynamicFunc<SDL_bool (*)(unsigned int)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunc<SDL_GamepadType (*)(SDL_Gamepad*)>::GetNextPointer()
 CDynamicFunc<SDL_GamepadType (*)(SDL_Gamepad*)>::Init(CSysModule*)
 CDynamicFunc<SDL_GamepadType (*)(SDL_Gamepad*)>::Release()
@@ -7206,6 +7188,10 @@ CDynamicFunc<SDL_Joystick* (*)(unsigned int)>::Init(CSysModule*)
 CDynamicFunc<SDL_Joystick* (*)(unsigned int)>::Release()
 CDynamicFunc<SDL_Joystick* (*)(unsigned int)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunctionListUnloadOnDestruct::~CDynamicFunctionListUnloadOnDestruct()
+CDynamicFunc<unsigned int (*)(char const*, char const*)>::GetNextPointer()
+CDynamicFunc<unsigned int (*)(char const*, char const*)>::Init(CSysModule*)
+CDynamicFunc<unsigned int (*)(char const*, char const*)>::Release()
+CDynamicFunc<unsigned int (*)(char const*, char const*)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunc<unsigned int (*)()>::GetNextPointer()
 CDynamicFunc<unsigned int (*)()>::Init(CSysModule*)
 CDynamicFunc<unsigned int* (*)(int*)>::GetNextPointer()
@@ -7213,11 +7199,23 @@ CDynamicFunc<unsigned int* (*)(int*)>::Init(CSysModule*)
 CDynamicFunc<unsigned int* (*)(int*)>::Release()
 CDynamicFunc<unsigned int* (*)(int*)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunc<unsigned int (*)()>::Release()
+CDynamicFunc<unsigned int (*)(SDL_Gamepad*)>::GetNextPointer()
+CDynamicFunc<unsigned int (*)(SDL_Gamepad*)>::Init(CSysModule*)
+CDynamicFunc<unsigned int (*)(SDL_Gamepad*)>::Release()
+CDynamicFunc<unsigned int (*)(SDL_Gamepad*, SDL_SensorType)>::GetNextPointer()
+CDynamicFunc<unsigned int (*)(SDL_Gamepad*, SDL_SensorType)>::Init(CSysModule*)
+CDynamicFunc<unsigned int (*)(SDL_Gamepad*, SDL_SensorType)>::Release()
+CDynamicFunc<unsigned int (*)(SDL_Gamepad*, SDL_SensorType)>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<unsigned int (*)(SDL_Gamepad*)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunc<unsigned int (*)(SDL_Joystick*)>::GetNextPointer()
 CDynamicFunc<unsigned int (*)(SDL_Joystick*)>::Init(CSysModule*)
 CDynamicFunc<unsigned int (*)(SDL_Joystick*)>::Release()
 CDynamicFunc<unsigned int (*)(SDL_Joystick*)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunc<unsigned int (*)()>::SetNextPointer(IDynamicFunction*)
+CDynamicFunc<unsigned int (*)(unsigned int)>::GetNextPointer()
+CDynamicFunc<unsigned int (*)(unsigned int)>::Init(CSysModule*)
+CDynamicFunc<unsigned int (*)(unsigned int)>::Release()
+CDynamicFunc<unsigned int (*)(unsigned int)>::SetNextPointer(IDynamicFunction*)
 CDynamicFunc<unsigned short (*)(SDL_Gamepad*)>::GetNextPointer()
 CDynamicFunc<unsigned short (*)(SDL_Gamepad*)>::Init(CSysModule*)
 CDynamicFunc<unsigned short (*)(SDL_Gamepad*)>::Release()
@@ -11876,7 +11874,6 @@ compute_band_energies
 compute_frame_size
 compute_key
 compute_stereo_width
-com/valvesoftware/steamlink/SteamLink
 com/valvesoftware/steamlink/SteamLinkUtils
 com/valvesoftware/steamlink/VirtualHere
 cone [...].
@@ -12246,12 +12243,11 @@ Couldn't find a streaming game for your account on the local network.
 Couldn't find avatar_url in profile\n
 Couldn't find host %s in the %s file; using defaults
 Couldn't find image %s\n
+Couldn't find method hideOverlaySurface\n
+Couldn't find method showOverlaySurface\n
 Couldn't find persona_name in profile\n
 Couldn't find string '%s'\n
-Couldn't get Java class com/valvesoftware/steamlink/SteamLink\n
-Couldn't get Java class org/libsdl/app/SDL\n
 Couldn't get Steam Link activity functions
-Couldn't get SteamLink Activity\n
 Couldn't initialize CURL: %d\n
 Couldn't initialize SDL: %s\n
 Couldn't locate Remote Play invitation, please request a new one
@@ -20690,6 +20686,8 @@ EVP_SignFinal
 EVP_VerifyFinal
 &E@vQ
 evrimd
+EVRLinkCaps_descriptor()
+EVRLinkCaps_IsValid(int)
 E\vsP
 e\vt]o
 "Evu
@@ -21909,7 +21907,6 @@ GBMHSVY\oje`{~qt
 \gbn
 gBPh
  Gbps
-g_bRelaunch
 g-bS8
 /gbY!M?
 }gca
@@ -25918,6 +25915,8 @@ h-I7
 Hidas 
 HIDDeviceSDLGamepadStateV2_t::Pack(unsigned char*, unsigned long) const
 HIDDeviceSDLGamepadStateV2_t::SetButton(int, bool)
+hideOverlaySurface
+hideVideoSurface
 Hide virtual keyboard
 h/IE
 &HifO
@@ -26083,6 +26082,157 @@ Hold Y-knappen nede for at styre fjernsession
 Hold Y to control remote session
 Hom0_
 HOME
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/crypto_25519_donna.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/crypto_aescbc_openssl.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/crypto.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/crypto_digest_openssl.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/crypto_rsa_openssl.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/crypto_symmetric_opensslevp.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/crypto_textencode.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/hiddevicelocal.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/hiddevicesdl.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/hiddevicesdl.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/keypair.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/opensslwrapper.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/percentile_generator.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/simplebitstring.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/steamdatagram_messages_auth.pb.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/steamdatagram_messages_sdr.pb.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/steammessages_hiddevices.pb.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/steammessages_remoteclient_discovery.pb.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/steammessages_remoteclient_service_messages.pb.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/steammessages_remoteplay.pb.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/steammessages_streamplayer.pb.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/steammessages_virtualcontroller.pb.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/steamnetworkingsockets_messages_certs.pb.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/steamnetworkingsockets_messages.pb.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/steamnetworkingsockets_messages_udp.pb.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/uifontfile_format.pb.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/common/urlhelper_webapihost.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/arena.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/descriptor.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/descriptor_database.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/descriptor.pb.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/dynamic_message.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/dynamic_message.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/extension_set.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/extension_set_heavy.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/extension_set_inl.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/generated_message_reflection.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/generated_message_util.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/io/coded_stream.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/io/tokenizer.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/io/zero_copy_stream.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/io/zero_copy_stream_impl.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/io/zero_copy_stream_impl_lite.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/map_field.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/map_field.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/message.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/message_lite.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/parse_context.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/reflection_internal.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/reflection_ops.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/repeated_field.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/stubs/common.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/stubs/int128.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/stubs/stringpiece.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/stubs/stringprintf.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/stubs/strutil.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/stubs/substitute.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/text_format.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/wire_format.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/wire_format_lite.cc
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/vjson/vjson.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/external/vjson/vjson.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/public/tier1/bitstring.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/public/tier1/interface.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/public/tier1/netadr.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/public/tier1/refcount.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/public/tier1/smartptr.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/public/tier1/utlbuffer.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/public/tier1/utlhashmap.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/public/tier1/utllinkedlist.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/public/tier1/utlmemory.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/public/tier1/utlpriorityqueue.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/public/tier1/utlqueue.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/public/tier1/utlstring.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/public/tier1/utlvector.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets_sdr.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets_sdr_standalone.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/../steamdatagram_internal.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_connections.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_connections.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/../steamnetworkingsockets_internal.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_lowlevel.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_lowlevel.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_p2p.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_p2p.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_p2p_ice.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_p2p_webrtc.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_sdr_common.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_sdr_common.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_sdr_p2p.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_snp.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_snp.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_stun.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/../steamnetworkingsockets_thinker.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_udp.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/../steamnetworking_statsutils.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/steamdatagram_network_config.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/steamdatagram_network_config.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/steamdatagram_pinglocation.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/steamdatagram_tickets.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/steamnetworkingsockets_certs.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/steamnetworkingsockets_certstore.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/steamnetworkingsockets_certstore.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/steamnetworkingsockets_shared.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/steamnetworkingsockets_stats.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/steamnetworkingsockets_thinker.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/client/androidaccel.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/client/../../common/hiddevicesdl.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/client/../common/streamframe.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/client/../common/streamnetwork.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/client/controlleroverlay.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/client/csteamnetworkingsockets_streamingclient.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/client/istreamdecoder.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/client/istreamplayer.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/client/menubaroverlay.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/client/microphoneaudioencoder.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/client/miniprofile.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/client/remoteclientsession.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/client/servermanager.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/client/servermanager.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/client/streamclient.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/client/streamdecoderh264.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/client/streamdecoderopus.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/client/streamdecodervideo.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/client/streamplayer.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/client/streamplayer.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/client/streamplayerhiddevices.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/client/streamplayertoasts.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/client/virtualcontroller.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/client/webrequest_curl.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/common/streamframe.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/common/streamframe.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/common/streamnetwork.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/common/streamnetwork.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/common/streamsocket.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/common/streamtransport.h
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/common/streamtransportsdr.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/common/streamtransportudp.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/streaming/streaming_tier0_vstdlib.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/tier1/bitstring.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/tier1/checksum_md5.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/tier1/interface.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/tier1/netadr.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/tier1/utlbuffer.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/tier1/utlmemory.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/tier1/utlqueue.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/tier1/utlstring.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/vstdlib/strtools.cpp
+/home/buildbot/buildslave/steamlinkvr_app_release_linux/build/streaming_client/shell-V3/android/jni/src/vstdlib/strtools_unicode.cpp
 homePostalAddress
 homeTelephoneNumber
 Honey Bee Xbox360 dancepad
@@ -28466,6 +28616,8 @@ J\n.c5
 J&ND
 jnE}
 J\nHBF
+JNIActivity::~JNIActivity()
+JNIActivity::JNIActivity(_JNIEnv*)
 JNiD
 _JNIEnv::CallBooleanMethod(_jobject*, _jmethodID*, ...)
 _JNIEnv::CallIntMethod(_jobject*, _jmethodID*, ...)
@@ -28474,7 +28626,6 @@ _JNIEnv::CallStaticBooleanMethod(_jclass*, _jmethodID*, ...)
 _JNIEnv::CallStaticObjectMethod(_jclass*, _jmethodID*, ...)
 _JNIEnv::CallStaticVoidMethod(_jclass*, _jmethodID*, ...)
 _JNIEnv::CallVoidMethod(_jobject*, _jmethodID*, ...)
-JNI:videoSurfaceDestroyed
 J\nJc
 Jn>Qh
 !J>NT
@@ -29226,6 +29377,9 @@ k_ETrayMenuElementResetLayoutButton
 k_EVideoFormatAccel
 k_EVideoFormatNone
 k_EVideoFormatYV12
+k_EVRLinkCapsAvailable
+k_EVRLinkCapsUnimplemented
+k_EVRLinkCapsUnknown
 Ke\vvz
 k=E.x=i
 -Key
@@ -30150,6 +30304,7 @@ LIBC
 libc++_shared.so
 libc.so
 libcurl lacks IDN support
+lib Dec 14 2023 18:01:58
 libdl.so
 libGLESv1_CM.so
 libGLESv2.so
@@ -30160,7 +30315,6 @@ lib(%lu)
 libmain.so
 libmediandk.so
 libm.so
-lib Nov 10 2023 17:21:24
 libOpenMAXAL.so
 libopus unknown-fixed
 [libprotobuf 
@@ -32033,6 +32187,7 @@ N$Ip-
 )\n$k_EStreamControlPauseControllerInput
 )\n$k_EStreamControlShowOnScreenKeyboard
 (\n$k_EStreamControlTouchActionSetActive
+(\n$k_EVRLinkCapsMissingHardwareEncoding
 N$X2
 n0lH
 n == 0 || s1 != NULL
@@ -34088,6 +34243,7 @@ N_VcRg
 n\vDsv
 \n\vEnumOptions
 \n    Version: %lu (0x%lx)\n
+\n\vEVRLinkCaps
 nVf=
 \n\vFileOptions
 NV^fn{
@@ -34421,6 +34577,7 @@ OCTWRAP
 oC:U
 Ocultar teclado virtual
 Oculte os controles por toque no menu de configura
+Oculus Quest
  ocupado.
 :oc\ve
 )oCx
@@ -36544,33 +36701,33 @@ professionOIDs
 programok telep
 progress
 Project-Id-Version: 1.1.10\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2018-08-23 17:03-0700\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: English\nLanguage: en_US\nMIME-Version: 1.0\nContent-Type: text/plain; charset=ASCII\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-10 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Chinese Simplified\nLanguage: zh_CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: zh-CN\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-10 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Czech\nLanguage: cs_CZ\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 3;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: cs\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-10 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: French\nLanguage: fr_FR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n > 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: fr\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-10 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Italian\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: it\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-10 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Japanese\nLanguage: ja_JP\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ja\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-10 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Korean\nLanguage: ko_KR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ko\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-10 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Polish\nLanguage: pl_PL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pl\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-10 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Portuguese, Brazilian\nLanguage: pt_BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pt-BR\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-10 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Russian\nLanguage: ru_RU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ru\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-10 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Spanish, Mexico\nLanguage: es_MX\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: es-MX\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-10 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Thai\nLanguage: th_TH\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: th\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-10 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Turkish\nLanguage: tr_TR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: tr\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-10 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Vietnamese\nLanguage: vi_VN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: vi\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-11 01:36\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Romanian\nLanguage: ro_RO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100>0 && n%100<20)) ? 1 : 2);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ro\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-11 01:37\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Bulgarian\nLanguage: bg_BG\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: bg\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-11 01:37\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Chinese Traditional\nLanguage: zh_TW\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: zh-TW\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-11 01:37\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Danish\nLanguage: da_DK\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: da\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-11 01:37\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Dutch\nLanguage: nl_NL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: nl\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-11 01:37\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Finnish\nLanguage: fi_FI\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: fi\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-11 01:37\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: German\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: de\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-11 01:37\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Greek\nLanguage: el_GR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: el\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-11 01:37\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Hungarian\nLanguage: hu_HU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: hu\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-11 01:37\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Norwegian Bokmal\nLanguage: nb_NO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: nb\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-11 01:37\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Portuguese\nLanguage: pt_PT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pt\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-11 01:37\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Spanish\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: es\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-11 01:37\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Swedish\nLanguage: sv_SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: sv\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-10-11 01:37\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Ukrainian\nLanguage: uk_UA\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: uk\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 13:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Bulgarian\nLanguage: bg_BG\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: bg\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 13:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Chinese Simplified\nLanguage: zh_CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: zh-CN\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 13:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Chinese Traditional\nLanguage: zh_TW\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: zh-TW\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 13:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Czech\nLanguage: cs_CZ\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 3;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: cs\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 13:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Dutch\nLanguage: nl_NL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: nl\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 13:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: French\nLanguage: fr_FR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n > 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: fr\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 13:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: German\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: de\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 13:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Italian\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: it\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 13:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Japanese\nLanguage: ja_JP\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ja\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 13:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Korean\nLanguage: ko_KR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ko\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 13:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Norwegian Bokmal\nLanguage: nb_NO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: nb\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 13:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Polish\nLanguage: pl_PL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pl\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 13:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Portuguese, Brazilian\nLanguage: pt_BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pt-BR\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 13:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Spanish, Mexico\nLanguage: es_MX\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: es-MX\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 13:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Spanish\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: es\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 13:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Swedish\nLanguage: sv_SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: sv\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 13:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Thai\nLanguage: th_TH\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: th\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 21:33\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Danish\nLanguage: da_DK\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: da\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 21:33\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Finnish\nLanguage: fi_FI\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: fi\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 21:33\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Greek\nLanguage: el_GR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: el\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 21:33\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Hungarian\nLanguage: hu_HU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: hu\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 21:33\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Portuguese\nLanguage: pt_PT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pt\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 21:33\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Romanian\nLanguage: ro_RO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100>0 && n%100<20)) ? 1 : 2);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ro\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 21:33\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Russian\nLanguage: ru_RU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ru\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 21:33\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Turkish\nLanguage: tr_TR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: tr\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 21:33\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Ukrainian\nLanguage: uk_UA\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: uk\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-12-12 21:33\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Vietnamese\nLanguage: vi_VN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: vi\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
 Project-Id-Version: steam-link-app\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2023-07-27 20:08\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Indonesian\nLanguage: id_ID\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nX-Crowdin-Project: steam-link-app\nX-Crowdin-Project-ID: 301596\nX-Crowdin-Language: id\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 670\n
 PrOO;SO
 Prossimo set/layer di azioni
@@ -40493,6 +40650,8 @@ Short message received from %s, dropping\n
 Should not reach here.
 Shouldn't be receiving this unless on accepted connections, only connections initiated locally.
 should retry
+showOverlaySurface
+showVideoSurface
 Show virtual keyboard
 shoz
 shoz:
@@ -43242,6 +43401,7 @@ steam://openurl_external/
 Steam Relay Server
  Steam Remote Play
  Steam Remote Play.
+ Steam Remote Play. 
 Steam Remote Play
 Steam Remote Play arac
  > Steam Remote Play > Pokro
@@ -45907,7 +46067,7 @@ typeinfo for CDynamicFunc<char* (*)(SDL_GUID)>
 typeinfo for CDynamicFunc<char* (*)(unsigned int)>
 typeinfo for CDynamicFunc<int (*)()>
 typeinfo for CDynamicFunc<int (*)(SDL_Gamepad*, int)>
-typeinfo for CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType, SDL_bool)>
+typeinfo for CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType, unsigned int)>
 typeinfo for CDynamicFunc<int (*)(SDL_Gamepad*, unsigned char, unsigned char, unsigned char)>
 typeinfo for CDynamicFunc<int (*)(SDL_Gamepad*, unsigned short, unsigned short, unsigned int)>
 typeinfo for CDynamicFunc<int (*)(SDL_Gamepad*, void const*, int)>
@@ -45919,11 +46079,6 @@ typeinfo for CDynamicFunc<int (*)(SDL_hid_device_*, unsigned char*, unsigned lon
 typeinfo for CDynamicFunc<int (*)(SDL_hid_device_*, wchar_t*, unsigned long)>
 typeinfo for CDynamicFunc<int (*)(SDL_Joystick*)>
 typeinfo for CDynamicFunc<int (*)(unsigned int)>
-typeinfo for CDynamicFunc<SDL_bool (*)(char const*, char const*)>
-typeinfo for CDynamicFunc<SDL_bool (*)(SDL_Gamepad*)>
-typeinfo for CDynamicFunc<SDL_bool (*)(SDL_Gamepad*, SDL_SensorType)>
-typeinfo for CDynamicFunc<SDL_bool (*)(SDL_Joystick*)>
-typeinfo for CDynamicFunc<SDL_bool (*)(unsigned int)>
 typeinfo for CDynamicFunc<SDL_GamepadType (*)(SDL_Gamepad*)>
 typeinfo for CDynamicFunc<SDL_GamepadType (*)(unsigned int)>
 typeinfo for CDynamicFunc<SDL_Gamepad* (*)(unsigned int)>
@@ -45937,8 +46092,12 @@ typeinfo for CDynamicFunc<SDL_JoystickType (*)(SDL_Joystick*)>
 typeinfo for CDynamicFunc<SDL_JoystickType (*)(unsigned int)>
 typeinfo for CDynamicFunc<SDL_Joystick* (*)(unsigned int)>
 typeinfo for CDynamicFunc<unsigned int (*)()>
+typeinfo for CDynamicFunc<unsigned int (*)(char const*, char const*)>
 typeinfo for CDynamicFunc<unsigned int* (*)(int*)>
+typeinfo for CDynamicFunc<unsigned int (*)(SDL_Gamepad*)>
+typeinfo for CDynamicFunc<unsigned int (*)(SDL_Gamepad*, SDL_SensorType)>
 typeinfo for CDynamicFunc<unsigned int (*)(SDL_Joystick*)>
+typeinfo for CDynamicFunc<unsigned int (*)(unsigned int)>
 typeinfo for CDynamicFunc<unsigned short (*)(SDL_Gamepad*)>
 typeinfo for CDynamicFunc<unsigned short (*)(unsigned int)>
 typeinfo for CDynamicFunc<void (*)()>
@@ -46549,7 +46708,7 @@ typeinfo name for CDynamicFunc<char* (*)(SDL_GUID)>
 typeinfo name for CDynamicFunc<char* (*)(unsigned int)>
 typeinfo name for CDynamicFunc<int (*)()>
 typeinfo name for CDynamicFunc<int (*)(SDL_Gamepad*, int)>
-typeinfo name for CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType, SDL_bool)>
+typeinfo name for CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType, unsigned int)>
 typeinfo name for CDynamicFunc<int (*)(SDL_Gamepad*, unsigned char, unsigned char, unsigned char)>
 typeinfo name for CDynamicFunc<int (*)(SDL_Gamepad*, unsigned short, unsigned short, unsigned int)>
 typeinfo name for CDynamicFunc<int (*)(SDL_Gamepad*, void const*, int)>
@@ -46561,11 +46720,6 @@ typeinfo name for CDynamicFunc<int (*)(SDL_hid_device_*, unsigned char*, unsigne
 typeinfo name for CDynamicFunc<int (*)(SDL_hid_device_*, wchar_t*, unsigned long)>
 typeinfo name for CDynamicFunc<int (*)(SDL_Joystick*)>
 typeinfo name for CDynamicFunc<int (*)(unsigned int)>
-typeinfo name for CDynamicFunc<SDL_bool (*)(char const*, char const*)>
-typeinfo name for CDynamicFunc<SDL_bool (*)(SDL_Gamepad*)>
-typeinfo name for CDynamicFunc<SDL_bool (*)(SDL_Gamepad*, SDL_SensorType)>
-typeinfo name for CDynamicFunc<SDL_bool (*)(SDL_Joystick*)>
-typeinfo name for CDynamicFunc<SDL_bool (*)(unsigned int)>
 typeinfo name for CDynamicFunc<SDL_GamepadType (*)(SDL_Gamepad*)>
 typeinfo name for CDynamicFunc<SDL_GamepadType (*)(unsigned int)>
 typeinfo name for CDynamicFunc<SDL_Gamepad* (*)(unsigned int)>
@@ -46579,8 +46733,12 @@ typeinfo name for CDynamicFunc<SDL_JoystickType (*)(SDL_Joystick*)>
 typeinfo name for CDynamicFunc<SDL_JoystickType (*)(unsigned int)>
 typeinfo name for CDynamicFunc<SDL_Joystick* (*)(unsigned int)>
 typeinfo name for CDynamicFunc<unsigned int (*)()>
+typeinfo name for CDynamicFunc<unsigned int (*)(char const*, char const*)>
 typeinfo name for CDynamicFunc<unsigned int* (*)(int*)>
+typeinfo name for CDynamicFunc<unsigned int (*)(SDL_Gamepad*)>
+typeinfo name for CDynamicFunc<unsigned int (*)(SDL_Gamepad*, SDL_SensorType)>
 typeinfo name for CDynamicFunc<unsigned int (*)(SDL_Joystick*)>
+typeinfo name for CDynamicFunc<unsigned int (*)(unsigned int)>
 typeinfo name for CDynamicFunc<unsigned short (*)(SDL_Gamepad*)>
 typeinfo name for CDynamicFunc<unsigned short (*)(unsigned int)>
 typeinfo name for CDynamicFunc<void (*)()>
@@ -48443,157 +48601,6 @@ userNotice
 USERNOTICE
 userPassword
 users
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/crypto_25519_donna.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/crypto_aescbc_openssl.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/crypto.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/crypto_digest_openssl.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/crypto_rsa_openssl.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/crypto_symmetric_opensslevp.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/crypto_textencode.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/hiddevicelocal.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/hiddevicesdl.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/hiddevicesdl.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/keypair.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/opensslwrapper.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/percentile_generator.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/simplebitstring.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/steamdatagram_messages_auth.pb.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/steamdatagram_messages_sdr.pb.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/steammessages_hiddevices.pb.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/steammessages_remoteclient_discovery.pb.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/steammessages_remoteclient_service_messages.pb.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/steammessages_remoteplay.pb.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/steammessages_streamplayer.pb.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/steammessages_virtualcontroller.pb.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/steamnetworkingsockets_messages_certs.pb.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/steamnetworkingsockets_messages.pb.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/steamnetworkingsockets_messages_udp.pb.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/uifontfile_format.pb.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/common/urlhelper_webapihost.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/arena.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/descriptor.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/descriptor_database.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/descriptor.pb.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/dynamic_message.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/dynamic_message.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/extension_set.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/extension_set_heavy.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/extension_set_inl.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/generated_message_reflection.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/generated_message_util.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/io/coded_stream.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/io/tokenizer.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/io/zero_copy_stream.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/io/zero_copy_stream_impl.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/io/zero_copy_stream_impl_lite.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/map_field.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/map_field.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/message.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/message_lite.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/parse_context.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/reflection_internal.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/reflection_ops.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/repeated_field.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/stubs/common.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/stubs/int128.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/stubs/stringpiece.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/stubs/stringprintf.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/stubs/strutil.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/stubs/substitute.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/text_format.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/wire_format.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/protobuf-3.11.3/src/google/protobuf/wire_format_lite.cc
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/vjson/vjson.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/external/vjson/vjson.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/public/tier1/bitstring.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/public/tier1/interface.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/public/tier1/netadr.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/public/tier1/refcount.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/public/tier1/smartptr.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/public/tier1/utlbuffer.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/public/tier1/utlhashmap.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/public/tier1/utllinkedlist.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/public/tier1/utlmemory.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/public/tier1/utlpriorityqueue.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/public/tier1/utlqueue.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/public/tier1/utlstring.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/public/tier1/utlvector.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets_sdr.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets_sdr_standalone.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/../steamdatagram_internal.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_connections.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_connections.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/../steamnetworkingsockets_internal.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_lowlevel.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_lowlevel.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_p2p.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_p2p.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_p2p_ice.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_p2p_webrtc.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_sdr_common.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_sdr_common.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_sdr_p2p.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_snp.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_snp.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_stun.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/../steamnetworkingsockets_thinker.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_udp.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/clientlib/../steamnetworking_statsutils.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/steamdatagram_network_config.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/steamdatagram_network_config.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/steamdatagram_pinglocation.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/steamdatagram_tickets.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/steamnetworkingsockets_certs.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/steamnetworkingsockets_certstore.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/steamnetworkingsockets_certstore.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/steamnetworkingsockets_shared.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/steamnetworkingsockets_stats.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/steamnetworkingsockets/steamnetworkingsockets_thinker.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/client/androidaccel.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/client/../../common/hiddevicesdl.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/client/../common/streamframe.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/client/../common/streamnetwork.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/client/controlleroverlay.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/client/csteamnetworkingsockets_streamingclient.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/client/istreamdecoder.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/client/istreamplayer.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/client/menubaroverlay.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/client/microphoneaudioencoder.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/client/miniprofile.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/client/remoteclientsession.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/client/servermanager.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/client/servermanager.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/client/streamclient.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/client/streamdecoderh264.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/client/streamdecoderopus.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/client/streamdecodervideo.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/client/streamplayer.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/client/streamplayer.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/client/streamplayerhiddevices.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/client/streamplayertoasts.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/client/virtualcontroller.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/client/webrequest_curl.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/common/streamframe.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/common/streamframe.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/common/streamnetwork.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/common/streamnetwork.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/common/streamsocket.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/common/streamtransport.h
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/common/streamtransportsdr.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/common/streamtransportudp.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/streaming/streaming_tier0_vstdlib.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/tier1/bitstring.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/tier1/checksum_md5.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/tier1/interface.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/tier1/netadr.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/tier1/utlbuffer.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/tier1/utlmemory.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/tier1/utlqueue.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/tier1/utlstring.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/vstdlib/strtools.cpp
-/Users/valve/dev/Steam/rel/streaming_client/shell-V3/android/jni/src/vstdlib/strtools_unicode.cpp
 user too long
 User was rejected by the SOCKS5 server (%d %d).
 Uses proxy env variable %s == '%s'
@@ -49301,6 +49308,8 @@ video/hevc
 Video overflow (%2.2fms queued), requesting keyframe synchronization\n
 Video rect: %dx%d at %d,%d\n
 Video size: %dx%d, output size: %dx%d, overlay size: %dx%d\n
+videoSurfaceCreated
+videoSurfaceDestroyed
 VIDEOTEXSTRING
 Vieras %d
 vietnamese
@@ -50301,7 +50310,7 @@ vtable for CDynamicFunc<char* (*)(SDL_GUID)>
 vtable for CDynamicFunc<char* (*)(unsigned int)>
 vtable for CDynamicFunc<int (*)()>
 vtable for CDynamicFunc<int (*)(SDL_Gamepad*, int)>
-vtable for CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType, SDL_bool)>
+vtable for CDynamicFunc<int (*)(SDL_Gamepad*, SDL_SensorType, unsigned int)>
 vtable for CDynamicFunc<int (*)(SDL_Gamepad*, unsigned char, unsigned char, unsigned char)>
 vtable for CDynamicFunc<int (*)(SDL_Gamepad*, unsigned short, unsigned short, unsigned int)>
 vtable for CDynamicFunc<int (*)(SDL_Gamepad*, void const*, int)>
@@ -50313,11 +50322,6 @@ vtable for CDynamicFunc<int (*)(SDL_hid_device_*, unsigned char*, unsigned long,
 vtable for CDynamicFunc<int (*)(SDL_hid_device_*, wchar_t*, unsigned long)>
 vtable for CDynamicFunc<int (*)(SDL_Joystick*)>
 vtable for CDynamicFunc<int (*)(unsigned int)>
-vtable for CDynamicFunc<SDL_bool (*)(char const*, char const*)>
-vtable for CDynamicFunc<SDL_bool (*)(SDL_Gamepad*)>
-vtable for CDynamicFunc<SDL_bool (*)(SDL_Gamepad*, SDL_SensorType)>
-vtable for CDynamicFunc<SDL_bool (*)(SDL_Joystick*)>
-vtable for CDynamicFunc<SDL_bool (*)(unsigned int)>
 vtable for CDynamicFunc<SDL_GamepadType (*)(SDL_Gamepad*)>
 vtable for CDynamicFunc<SDL_GamepadType (*)(unsigned int)>
 vtable for CDynamicFunc<SDL_Gamepad* (*)(unsigned int)>
@@ -50331,8 +50335,12 @@ vtable for CDynamicFunc<SDL_JoystickType (*)(SDL_Joystick*)>
 vtable for CDynamicFunc<SDL_JoystickType (*)(unsigned int)>
 vtable for CDynamicFunc<SDL_Joystick* (*)(unsigned int)>
 vtable for CDynamicFunc<unsigned int (*)()>
+vtable for CDynamicFunc<unsigned int (*)(char const*, char const*)>
 vtable for CDynamicFunc<unsigned int* (*)(int*)>
+vtable for CDynamicFunc<unsigned int (*)(SDL_Gamepad*)>
+vtable for CDynamicFunc<unsigned int (*)(SDL_Gamepad*, SDL_SensorType)>
 vtable for CDynamicFunc<unsigned int (*)(SDL_Joystick*)>
+vtable for CDynamicFunc<unsigned int (*)(unsigned int)>
 vtable for CDynamicFunc<unsigned short (*)(SDL_Gamepad*)>
 vtable for CDynamicFunc<unsigned short (*)(unsigned int)>
 vtable for CDynamicFunc<void (*)()>
@@ -53240,6 +53248,7 @@ z=pnp
 zpnx
 )zPR
  z przeka
+*zP\tq
 ZPXQ]]
 zQ$F
 zq'6
