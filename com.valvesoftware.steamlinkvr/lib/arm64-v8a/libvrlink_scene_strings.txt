@@ -59,7 +59,7 @@
 8SVLAudio
 8SVLCodec
 8SVLCrypt
-9940695 
+9957501 
 9a&g
 9JLX
 9QSVLInput
@@ -360,15 +360,20 @@ atoi
 ATrace_beginSection
 ATrace_endSection
 audio
-[Audio] AAUDIO_ERROR_DISCONNECTED: Reinitializing audio
+[Audio] AAUDIO_ERROR_DISCONNECTED: Re-initializing.
+[Audio] AAUDIO_ERROR_DISCONNECTED: Requesting re-init.
 [Audio] AAudio Error: %s = %s
 [Audio] AAudioStream_getFramesPerBurst = %d
 [Audio] Attempting to close input stream...
 [Audio] Attempting to close output stream...
 [Audio] Attempting to stop streams...
+[Audio] Called cold init when audio was already live.
+[Audio] Called re-init when audio was stopped.
+[Audio] Called Stop() when audio was already stopped.
 [Audio] Creating input stream...
 [Audio] Creating output stream...
 [Audio] Failed to stop audio stream!
+[Audio] frame rate change, reinitializing: %d %d\n
 [Audio] Input stream creation finished
 [Audio] Input stream stopped
 [Audio] Output stream creation finished
@@ -919,7 +924,7 @@ Error: Cannot open file %s\n
 #ErrorCode{
 Error: Could not bind socket\n
 Error: Could not connect to host connect(%d)\n
-Error: Could not create socket\n
+Error: Could not create socket: %d\n
 ERROR: Could not initialize UDP driver; unknown session type requested.
 Error: Failed to generate crypt random data.
 ERROR: Failed to get encryption engine.
@@ -2303,7 +2308,6 @@ NSt6__ndk110__function6__baseIFv10SceneEventEEE
 NSt6__ndk110__function6__baseIFv15QSVLClientEventNS_7variantIJ21QSVLClientStreamState25QSVLClientWirelessTimeoutEEEEEE
 NSt6__ndk110__function6__baseIFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__baseIFv17EStreamSceneStateEEE
-NSt6__ndk110__function6__baseIFv20ClientAudioEventTypeEEE
 NSt6__ndk110__function6__baseIFv8XrqEventNS_7variantIJ38XrEventDataReferenceSpaceChangePendingEEEEEE
 NSt6__ndk110__function6__baseIFv9ELogLevelPKcPvEEE
 NSt6__ndk110__function6__baseIFvNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEERKNS_7variantIJS7_bfiEEEEEE
@@ -2326,14 +2330,13 @@ NSt6__ndk110__function6__funcIZN10QSVLClient4InitEvE3$_1NS_9allocatorIS3_EEFv16V
 NSt6__ndk110__function6__funcIZN11XrUIManager18AddRenderedUIPanelENS_10unique_ptrI9XrUIPanelNS_14default_deleteIS4_EEEEbNS_6chrono10time_pointINS8_12steady_clockENS8_8durationIxNS_5ratioILl1ELl1000000000EEEEEEEE3$_1NS_9allocatorISG_EEFvRKNS_12basic_stringIcNS_11char_traitsIcEENSH_IcEEEERKN4Json5ValueEEEE
 NSt6__ndk110__function6__funcIZN11XrUIManager18AddTemporaryDialogERK10XRQContextRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEESD_jbE3$_2NS9_ISE_EEFvSD_RKN4Json5ValueEEEE
 NSt6__ndk110__function6__funcIZN11XrUIManager4InitER10XRQContextE3$_0NS_9allocatorIS5_EEFvRKNS_12basic_stringIcNS_11char_traitsIcEENS6_IcEEEERKNS_7variantIJSC_bfiEEEEEE
+NSt6__ndk110__function6__funcIZN12QSVLClientXR4InitEvE3$_0NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN12QSVLClientXR4InitEvE3$_1NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN12QSVLClientXR4InitEvE3$_2NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN12QSVLClientXR4InitEvE3$_3NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN12QSVLClientXR4InitEvE3$_4NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN12QSVLClientXR4InitEvE3$_5NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN12QSVLClientXR4InitEvE3$_6NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
-NSt6__ndk110__function6__funcIZN12QSVLClientXR4InitEvE3$_7NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
-NSt6__ndk110__function6__funcIZN12QSVLClientXRC1ER10XRQContextR13LaunchOptionsNS_10shared_ptrI9QSVLInputEENS7_I13QSVLDeviceHmdEENS7_I11XrUIManagerEENS_8functionIFv15QSVLClientEventNS_7variantIJ21QSVLClientStreamState25QSVLClientWirelessTimeoutEEEEEEE3$_0NS_9allocatorISM_EEFv20ClientAudioEventTypeEEE
 NSt6__ndk110__function6__funcIZN12XrAppManager4InitER6XRQAppE3$_1NS_9allocatorIS5_EEFv8XrqEventNS_7variantIJ38XrEventDataReferenceSpaceChangePendingEEEEEE
 NSt6__ndk110__function6__funcIZN12XrAppManagerC1EvE3$_0NS_9allocatorIS3_EEFv10SceneEventEEE
 NSt6__ndk110__function6__funcIZN12XrSceneLobby7FocusedER10XRQContextE3$_1NS_9allocatorIS5_EEFvRKNS_12basic_stringIcNS_11char_traitsIcEENS6_IcEEEERKN4Json5ValueEEEE
@@ -2766,7 +2769,7 @@ putExtra
 puts
 Qkkbal
 QSVLClient::AdjustPhaseOffset(int)
-QSVLClientAudioNdk::Init(int)
+QSVLClientAudioNdk::Init(bool, int)
 QSVLClientAudioNdk::OnInputAudioReady(AAudioStreamStruct*, void*, int)
 QSVLClientAudioNdk::OnInputAudioReadyProc(AAudioStreamStruct*, void*, void*, int)
 QSVLClientAudioNdk::OnOutputAudioError(AAudioStreamStruct*, int)
@@ -2774,8 +2777,9 @@ QSVLClientAudioNdk::OnOutputAudioErrorProc(AAudioStreamStruct*, void*, int)
 QSVLClientAudioNdk::OnOutputAudioReady(AAudioStreamStruct*, void*, int)
 QSVLClientAudioNdk::OnOutputAudioReadyProc(AAudioStreamStruct*, void*, void*, int)
 QSVLClientAudioNdk::~QSVLClientAudioNdk()
-QSVLClientAudioNdk::QSVLClientAudioNdk(std::__ndk1::function<void (ClientAudioEventType)>, SVLRoot*, bool)
+QSVLClientAudioNdk::QSVLClientAudioNdk(SVLRoot*, bool)
 QSVLClientAudioNdk::Stop()
+QSVLClientAudioNdk::Tick()
 QSVLClient::FrameSwap()
 QSVLClient::GotDecodedFrame()
 QSVLClient::GotNetworkFrame()
@@ -2909,7 +2913,6 @@ rand
 random_device failed to open 
 random_device got an unexpected error
 random_device got EOF
-Rate Remark: %d %d\n
 RayLineInfo& std::__ndk1::vector<RayLineInfo, std::__ndk1::allocator<RayLineInfo>>::emplace_back<RayLineInfo&>(RayLineInfo&)
 RayLineRenderer::RayLineRenderer()
 RayLineRenderer::Render(std::__ndk1::vector<RayLineInfo, std::__ndk1::allocator<RayLineInfo>> const&, glm::mat<4, 4, float, (glm::qualifier)0> const&, glm::mat<4, 4, float, (glm::qualifier)0> const&, unsigned int, int, int, RayLineRenderer::RayRenderType)
@@ -3053,7 +3056,7 @@ semop
 %s end_ctx=%lu
 send_haptic
 sendto
-sendto error %d\n
+sendto error %d (return value: %d)\n
 SE Perform Encode %d
 September
 servers
@@ -4875,10 +4878,10 @@ SVLAudio::FillFrameBuffer(short*, int)
 SVLAudio::FlushAudioPacket()
 SVLAudio::InitJitterBuffer()
 SVLAudio::OnPeerAudioDiscontinuity()
-SVLAudio::Stop()
 SVLAudio::~SVLAudio()
 SVLAudio::SVLAudio(SVLRoot*, bool)
 SVLAudio::SyncAudioControls(bool)
+SVLAudio::Tick()
 SVLAudio::TransmitAndUpdateFEC()
 SVLAudio::TransmitAudioPacket(dataset*, unsigned short)
 SVLAudio::TransportRXAudioFrames(dataset*)
@@ -5224,6 +5227,7 @@ ThreadGetProcessExitCode
 ThreadGetProcessListInfo
 ThreadGetProcessParentID
 ThreadGetProcessPriority
+ThreadImplOneTimeInit
 ThreadInMainThread
 ThreadInterlockedAssignIf
 ThreadInterlockedAssignIf64
@@ -5256,6 +5260,7 @@ ThreadSetProcessPriority
 ThreadShellExecute
 ThreadSleep
 __thread_specific_ptr construction failed
+ThreadSpinWaitForValue
 ThreadSuspendSignal(int)
 ThreadTerminate
 ThreadTerminateProcessCode
@@ -5460,7 +5465,6 @@ typeinfo for std::__ndk1::ctype<wchar_t>
 typeinfo for std::__ndk1::error_category
 typeinfo for std::__ndk1::__function::__base<bool (char)>
 typeinfo for std::__ndk1::__function::__base<void ()>
-typeinfo for std::__ndk1::__function::__base<void (ClientAudioEventType)>
 typeinfo for std::__ndk1::__function::__base<void (ELogLevel, char const*, void*)>
 typeinfo for std::__ndk1::__function::__base<void (EStreamSceneState)>
 typeinfo for std::__ndk1::__function::__base<void (QSVLClientEvent, std::__ndk1::variant<QSVLClientStreamState, QSVLClientWirelessTimeout>)>
@@ -5781,7 +5785,6 @@ typeinfo name for std::__ndk1::default_delete<XrUIManager>
 typeinfo name for std::__ndk1::error_category
 typeinfo name for std::__ndk1::__function::__base<bool (char)>
 typeinfo name for std::__ndk1::__function::__base<void ()>
-typeinfo name for std::__ndk1::__function::__base<void (ClientAudioEventType)>
 typeinfo name for std::__ndk1::__function::__base<void (ELogLevel, char const*, void*)>
 typeinfo name for std::__ndk1::__function::__base<void (EStreamSceneState)>
 typeinfo name for std::__ndk1::__function::__base<void (QSVLClientEvent, std::__ndk1::variant<QSVLClientStreamState, QSVLClientWirelessTimeout>)>
@@ -6959,14 +6962,13 @@ ZN10QSVLClient4InitEvE3$_1
 ZN11XrUIManager18AddRenderedUIPanelENSt6__ndk110unique_ptrI9XrUIPanelNS0_14default_deleteIS2_EEEEbNS0_6chrono10time_pointINS6_12steady_clockENS6_8durationIxNS0_5ratioILl1ELl1000000000EEEEEEEE3$_1
 ZN11XrUIManager18AddTemporaryDialogERK10XRQContextRKNSt6__ndk112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEESB_jbE3$_2
 ZN11XrUIManager4InitER10XRQContextE3$_0
+ZN12QSVLClientXR4InitEvE3$_0
 ZN12QSVLClientXR4InitEvE3$_1
 ZN12QSVLClientXR4InitEvE3$_2
 ZN12QSVLClientXR4InitEvE3$_3
 ZN12QSVLClientXR4InitEvE3$_4
 ZN12QSVLClientXR4InitEvE3$_5
 ZN12QSVLClientXR4InitEvE3$_6
-ZN12QSVLClientXR4InitEvE3$_7
-ZN12QSVLClientXRC1ER10XRQContextR13LaunchOptionsNSt6__ndk110shared_ptrI9QSVLInputEENS5_I13QSVLDeviceHmdEENS5_I11XrUIManagerEENS4_8functionIFv15QSVLClientEventNS4_7variantIJ21QSVLClientStreamState25QSVLClientWirelessTimeoutEEEEEEE3$_0
 ZN12XrAppManager4InitER6XRQAppE3$_1
 ZN12XrAppManagerC1EvE3$_0
 ZN12XrSceneLobby7FocusedER10XRQContextE3$_1
