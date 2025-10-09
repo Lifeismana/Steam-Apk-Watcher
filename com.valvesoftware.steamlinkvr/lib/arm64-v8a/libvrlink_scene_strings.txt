@@ -21,10 +21,12 @@
 13XrSceneStatic
 13XrSceneStream
 14QSVLRendererXR
+14StreamBehavior
 14SVLDataLinkUDP
 15SVLCryptAArch64
 16IPanelPositioner
 17AndroidFileLoader
+17XRScene_Preflight
 18AndroidAssetLoader
 18PanelPositionerHUD
 18QSVLClientAudioNdk
@@ -37,8 +39,14 @@
 %1\f0123456789abcdefABCDEFxX+-pPiInN
 1X`i
 20PanelPositionerPoint
+20StreamBehavior_Empty
 222222
 22222\n22222
+22StreamBehavior_Loading
+22StreamBehavior_Spinner
+23StreamBehavior_Resuming
+24StreamBehavior_Streaming
+27StreamBehavior_Initializing
 31PanelPositionerSlowTurnFromHead
 66666666666666666
 6666666666666tx
@@ -48,7 +56,7 @@
 7CThread
 7SVLRoot
 7XrScene
-8851632 
+8871650 
 8SVLAudio
 8SVLCodec
 8SVLCrypt
@@ -354,6 +362,7 @@ basic_istream
 basic_ostream
 basic_string
 batterymanager
+BehaviorCallbacks::~BehaviorCallbacks()
 bind
 bindings
 Binding UDP socket to %s\n
@@ -432,7 +441,6 @@ bool XrUIInput::GetInputState(XRQContext &, XrUIInputState &)
 brazilian
 bShouldNotShowContinue
 bShow
-bShowResume
 btowc
 bulgarian
 ByteLogger::~ByteLogger()
@@ -703,6 +711,7 @@ CVRLog::LogIncremental(ELogLevel, char const*, ...)
 CVRLog::RemoveLogListener(ILogListener*)
 CVRLog::SetMaxLogLevel(ELogLevel)
 CVRLog::WillLog(ELogLevel)
+cVTXFailFuzz
 __cxa_allocate_dependent_exception
 __cxa_allocate_exception
 __cxa_atexit
@@ -745,6 +754,7 @@ Datalink failed with %d\n
 /data/src/vrlink/client_android/src/scene/qsvlclient/qsvlrenderer_glxr.cpp
 /data/src/vrlink/client_android/src/scene/scenes/xrscene_lobby.cpp
 /data/src/vrlink/client_android/src/scene/scenes/xrscene_noop.cpp
+/data/src/vrlink/client_android/src/scene/scenes/xrscene_preflight.cpp
 /data/src/vrlink/client_android/src/scene/scenes/xrscene_static.cpp
 /data/src/vrlink/client_android/src/scene/scenes/xrscene_stream.cpp
 /data/src/vrlink/client_android/src/scene/ui/xruiinput.cpp
@@ -902,7 +912,6 @@ Extra non-whitespace after JSON value.
 exynos9810
 Eye gaze interaction supported: %s
 eyeTracking
-Eye Tracking bindings: 
 Face tracking supported: %s
 Fader::BIsFadeActive()
 Fader::BIsFading()
@@ -931,11 +940,13 @@ Failed to get default config file contents
 Failed to get frame metadata for frame
 Failed to get HMD config contents
 Failed to get play area bounds
+Failed to initialize construct
 Failed to initialize hmd device
 Failed to initialize instance
 Failed to initialize scene %d
 Failed to initialize session
 Failed to initialize settings panel. Not displaying.
+Failed to initialize UI manager
 Failed to initialize UI manager.
 Failed to link shader (%d): %s
 Failed to link shader. Got log length %d
@@ -989,7 +1000,6 @@ first
 flLaserMouseHmdAngleDegrees
 float
 __float128
-FloatToString(float, int)
 fmodf
 fopen
 force_pid
@@ -1065,13 +1075,13 @@ getBSSID
 getBytes
 GetCachedFileTime
 getClass
-GetConnectedWiFiFrequencyMHzAndSSID(int*, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&)
 GetConnectedWiFiFrequencyMHzAndSSID: No cConnectionInfo
 GetConnectedWiFiFrequencyMHzAndSSID: No connection info
 GetConnectedWiFiFrequencyMHzAndSSID: No mGetFrequency
 GetConnectedWiFiFrequencyMHzAndSSID: No mGetLinkSpeed
 GetConnectedWiFiFrequencyMHzAndSSID: No wifi manager
 GetConnectedWiFiFrequencyMHz: Failed because frequency was invalid!
+GetConnectedWiFiFrequencyMHz(int*)
 getConnectionInfo
 GetCurrentLocale()
 GetCurrentTimestamp
@@ -1141,6 +1151,10 @@ getULEB128
 GetVersionNumber()
 GetVRLog()
 GetVRLogTimeString(bool)
+GetWifiSSID: No cConnectionInfo
+GetWifiSSID: No connection info
+GetWifiSSID: No wifi manager
+GetWifiSSID(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&)
 getWindow
 glActiveTexture
 glActiveTextureCHEW
@@ -1440,6 +1454,7 @@ guard variable for
 guard variable for AppConfig::GetInstance()::instance
 guard variable for AppPaths::GetInstance()::instance
 guard variable for DeviceInput::GetInstance()::instance
+guard variable for UIAssetCache::GetInstance()::instance
 __gxx_personality_v0
 HandleCmd(android_app*, int)
 haptic
@@ -2091,6 +2106,7 @@ Missing ',' or ']' in array declaration
 Missing ',' or '}' in object declaration
 Missing '}' or object member name
 mktime
+m_mapPanelMailboxes
 modf
 Monday
 money_get error
@@ -2099,7 +2115,6 @@ m_pCorrectionShaderFovea->SetUniformL1f( UNIFORM_LOC_GROUP, eye * 2.0f )
 m_pCorrectionShaderFovea->SetUniformL1f( UNIFORM_LOC_MODE, m_atlasMode )
 m_pCorrectionShader->SetUniformL1f( UNIFORM_LOC_GROUP, eye * 2.0f + 1.0f )
 m_pCorrectionShader->SetUniformL1f( UNIFORM_LOC_MODE, m_atlasMode)
-m_pData was null. Not copying data.
 mutex lock failed
 myLooper
 N10__cxxabiv116__enum_type_infoE
@@ -2233,6 +2248,7 @@ NSt6__ndk110__function6__baseIFbcEEE
 NSt6__ndk110__function6__baseIFv10SceneEventEEE
 NSt6__ndk110__function6__baseIFv15QSVLClientEventNS_7variantIJ21QSVLClientStreamState25QSVLClientWirelessTimeoutEEEEEE
 NSt6__ndk110__function6__baseIFv16ValueTransportIDbEEE
+NSt6__ndk110__function6__baseIFv17EStreamSceneStateEEE
 NSt6__ndk110__function6__baseIFv20ClientAudioEventTypeEEE
 NSt6__ndk110__function6__baseIFv7AppPathRKNS_7variantIJNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEbfiEEEEEE
 NSt6__ndk110__function6__baseIFv8XrqEventNS_7variantIJ38XrEventDataReferenceSpaceChangePendingEEEEEE
@@ -2240,6 +2256,7 @@ NSt6__ndk110__function6__baseIFv9ELogLevelPKcPvEEE
 NSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEERKN4Json5ValueEEEE
 NSt6__ndk110__function6__baseIFvRKNS_6vectorI13SeenServers_tNS_9allocatorIS3_EEEEEEE
 NSt6__ndk110__function6__baseIFvvEEE
+NSt6__ndk110__function6__funcINS_6__bindIM13XrSceneStreamFv17EStreamSceneStateEJPS3_RKNS_12placeholders4__phILi1EEEEEENS_9allocatorISD_EEFvS4_EEE
 NSt6__ndk110__function6__funcINS_6__bindIRZN7WebView11RequestDrawEvE3$_3JEEENS_9allocatorIS6_EEFvvEEE
 NSt6__ndk110__function6__funcINS_6__bindIRZN7WebView12RequestPauseEvE3$_4JEEENS_9allocatorIS6_EEFvvEEE
 NSt6__ndk110__function6__funcINS_6__bindIRZN7WebView13RequestResumeEvE3$_5JEEENS_9allocatorIS6_EEFvvEEE
@@ -2258,21 +2275,20 @@ NSt6__ndk110__function6__funcIZN12QSVLClientXR4InitEvE3$_1NS_9allocatorIS3_EEFv1
 NSt6__ndk110__function6__funcIZN12QSVLClientXR4InitEvE3$_2NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN12QSVLClientXR4InitEvE3$_3NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN12QSVLClientXR4InitEvE3$_4NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
+NSt6__ndk110__function6__funcIZN12QSVLClientXR4InitEvE3$_5NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
+NSt6__ndk110__function6__funcIZN12QSVLClientXR4InitEvE3$_6NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN12QSVLClientXRC1ER10XRQContextR13LaunchOptionsNS_10shared_ptrI9QSVLInputEENS7_I13QSVLDeviceHmdEENS7_I11XrUIManagerEENS_8functionIFv15QSVLClientEventNS_7variantIJ21QSVLClientStreamState25QSVLClientWirelessTimeoutEEEEEEE3$_0NS_9allocatorISM_EEFv20ClientAudioEventTypeEEE
 NSt6__ndk110__function6__funcIZN12XrAppManager4InitER6XRQAppE3$_1NS_9allocatorIS5_EEFv8XrqEventNS_7variantIJ38XrEventDataReferenceSpaceChangePendingEEEEEE
 NSt6__ndk110__function6__funcIZN12XrAppManagerC1EvE3$_0NS_9allocatorIS3_EEFv10SceneEventEEE
 NSt6__ndk110__function6__funcIZN12XrSceneLobby7FocusedER10XRQContextE3$_1NS_9allocatorIS5_EEFvRKNS_12basic_stringIcNS_11char_traitsIcEENS6_IcEEEERKN4Json5ValueEEEE
 NSt6__ndk110__function6__funcIZN12XrSceneLobbyC1ENS_8functionIFv10SceneEventEEEE3$_0NS_9allocatorIS7_EEFvRKNS_6vectorI13SeenServers_tNS8_ISB_EEEEEEE
-NSt6__ndk110__function6__funcIZN13XrSceneStream22TransitionToStreamInitER10XRQContextE3$_4NS_9allocatorIS5_EEFv15QSVLClientEventNS_7variantIJ21QSVLClientStreamState25QSVLClientWirelessTimeoutEEEEEE
-NSt6__ndk110__function6__funcIZN13XrSceneStream22TransitionToStreamInitER10XRQContextE3$_5NS_9allocatorIS5_EEFv16ValueTransportIDbEEE
-NSt6__ndk110__function6__funcIZN13XrSceneStream22TransitionToStreamInitER10XRQContextE3$_6NS_9allocatorIS5_EEFv16ValueTransportIDbEEE
-NSt6__ndk110__function6__funcIZN13XrSceneStream4InitER10XRQContextE3$_0NS_9allocatorIS5_EEFv7AppPathRKNS_7variantIJNS_12basic_stringIcNS_11char_traitsIcEENS6_IcEEEEbfiEEEEEE
-NSt6__ndk110__function6__funcIZN13XrSceneStream4InitER10XRQContextE3$_1NS_9allocatorIS5_EEFvRKNS_12basic_stringIcNS_11char_traitsIcEENS6_IcEEEERKN4Json5ValueEEEE
-NSt6__ndk110__function6__funcIZN13XrSceneStream4InitER10XRQContextE3$_2NS_9allocatorIS5_EEFvRKNS_12basic_stringIcNS_11char_traitsIcEENS6_IcEEEERKN4Json5ValueEEEE
-NSt6__ndk110__function6__funcIZN13XrSceneStream4InitER10XRQContextE3$_3NS_9allocatorIS5_EEFvRKNS_12basic_stringIcNS_11char_traitsIcEENS6_IcEEEERKN4Json5ValueEEEE
+NSt6__ndk110__function6__funcIZN13XrSceneStream4InitER10XRQContextE3$_0NS_9allocatorIS5_EEFvRKNS_12basic_stringIcNS_11char_traitsIcEENS6_IcEEEERKN4Json5ValueEEEE
+NSt6__ndk110__function6__funcIZN13XrSceneStream7FocusedER10XRQContextE3$_1NS_9allocatorIS5_EEFv15QSVLClientEventNS_7variantIJ21QSVLClientStreamState25QSVLClientWirelessTimeoutEEEEEE
 NSt6__ndk110__function6__funcIZN14QSVLRendererXR4InitERK10XRQContextE3$_0NS_9allocatorIS6_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN14QSVLRendererXR4InitERK10XRQContextE3$_1NS_9allocatorIS6_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN14SVLDataLinkUDP26PrepareForPossibleShutdownEvE3$_0NS_9allocatorIS3_EEFvvEEE
+NSt6__ndk110__function6__funcIZN17XRScene_Preflight4InitER10XRQContextE3$_0NS_9allocatorIS5_EEFvRKNS_12basic_stringIcNS_11char_traitsIcEENS6_IcEEEERKN4Json5ValueEEEE
+NSt6__ndk110__function6__funcIZN22StreamBehavior_SpinnerC1ER10XRQContextEUlRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEERKN4Json5ValueEE_NS8_ISH_EEFvSC_SG_EEE
 NSt6__ndk110__function6__funcIZN6CVRLog7InitLogEPKcS4_bmE3$_0NS_9allocatorIS5_EEFv9ELogLevelS4_PvEEE
 NSt6__ndk110__function6__funcIZN7SVLRoot4InitEvE3$_0NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
 NSt6__ndk110__function6__funcIZN7SVLRoot4InitEvE3$_1NS_9allocatorIS3_EEFv16ValueTransportIDbEEE
@@ -2316,6 +2332,7 @@ NSt6__ndk114__codecvt_utf8IDsEE
 NSt6__ndk114__codecvt_utf8IwEE
 NSt6__ndk114collate_bynameIcEE
 NSt6__ndk114collate_bynameIwEE
+NSt6__ndk114default_deleteI11XrUIManagerEE
 NSt6__ndk114default_deleteI23VariableTransportHolderEE
 NSt6__ndk114default_deleteI7WebViewEE
 NSt6__ndk114error_categoryE
@@ -2325,6 +2342,7 @@ NSt6__ndk114__shared_countE
 NSt6__ndk115basic_streambufIcNS_11char_traitsIcEEEE
 NSt6__ndk115basic_streambufIwNS_11char_traitsIwEEEE
 NSt6__ndk115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE
+NSt6__ndk115binary_functionIP13XrSceneStream17EStreamSceneStatevEE
 NSt6__ndk115__codecvt_utf16IDiLb0EEE
 NSt6__ndk115__codecvt_utf16IDiLb1EEE
 NSt6__ndk115__codecvt_utf16IDsLb0EEE
@@ -2355,6 +2373,7 @@ NSt6__ndk118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 NSt6__ndk118codecvt_utf8_utf16IwLm1114111ELNS_12codecvt_modeE0EEE
 NSt6__ndk118__time_get_storageIcEE
 NSt6__ndk118__time_get_storageIwEE
+NSt6__ndk118__weak_result_typeIM13XrSceneStreamFv17EStreamSceneStateEEE
 NSt6__ndk118__weak_result_typeIZN7WebView11RequestDrawEvE3$_3EE
 NSt6__ndk118__weak_result_typeIZN7WebView12RequestPauseEvE3$_4EE
 NSt6__ndk118__weak_result_typeIZN7WebView13RequestResumeEvE3$_5EE
@@ -2369,12 +2388,18 @@ NSt6__ndk120__codecvt_utf8_utf16IDiEE
 NSt6__ndk120__codecvt_utf8_utf16IDsEE
 NSt6__ndk120__codecvt_utf8_utf16IwEE
 NSt6__ndk120__shared_ptr_emplaceI11QSVLXRInputNS_9allocatorIS1_EEEE
-NSt6__ndk120__shared_ptr_emplaceI11XrUIManagerNS_9allocatorIS1_EEEE
 NSt6__ndk120__shared_ptr_emplaceI13QSVLDeviceHmdNS_9allocatorIS1_EEEE
 NSt6__ndk120__shared_ptr_emplaceI14QSVLRendererXRNS_9allocatorIS1_EEEE
 NSt6__ndk120__shared_ptr_emplaceI15QSVLFrameServerNS_9allocatorIS1_EEEE
 NSt6__ndk120__shared_ptr_emplaceI18SRGBCorrectionPassNS_9allocatorIS1_EEEE
+NSt6__ndk120__shared_ptr_emplaceI20StreamBehavior_EmptyNS_9allocatorIS1_EEEE
+NSt6__ndk120__shared_ptr_emplaceI22StreamBehavior_LoadingNS_9allocatorIS1_EEEE
+NSt6__ndk120__shared_ptr_emplaceI22StreamBehavior_SpinnerNS_9allocatorIS1_EEEE
+NSt6__ndk120__shared_ptr_emplaceI23StreamBehavior_ResumingNS_9allocatorIS1_EEEE
+NSt6__ndk120__shared_ptr_emplaceI24StreamBehavior_StreamingNS_9allocatorIS1_EEEE
+NSt6__ndk120__shared_ptr_emplaceI27StreamBehavior_InitializingNS_9allocatorIS1_EEEE
 NSt6__ndk120__shared_ptr_emplaceI7TextureNS_9allocatorIS1_EEEE
+NSt6__ndk120__shared_ptr_pointerIP11XrUIManagerNS_14default_deleteIS1_EENS_9allocatorIS1_EEEE
 NSt6__ndk120__shared_ptr_pointerIP23VariableTransportHolderNS_14default_deleteIS1_EENS_9allocatorIS1_EEEE
 NSt6__ndk120__shared_ptr_pointerIP7WebViewNS_14default_deleteIS1_EENS_9allocatorIS1_EEEE
 NSt6__ndk120__time_get_c_storageIcEE
@@ -2402,6 +2427,7 @@ NSt6__ndk135__maybe_derive_from_binary_functionIZN7WebView13WebViewThreadEvE3$_2
 NSt6__ndk135__maybe_derive_from_binary_functionIZN7WebView14SendRawMessageERKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEE3$_0Lb0EEE
 NSt6__ndk15ctypeIcEE
 NSt6__ndk15ctypeIwEE
+NSt6__ndk16__bindIM13XrSceneStreamFv17EStreamSceneStateEJPS1_RKNS_12placeholders4__phILi1EEEEEE
 NSt6__ndk16__bindIRZN7WebView11RequestDrawEvE3$_3JEEE
 NSt6__ndk16__bindIRZN7WebView12RequestPauseEvE3$_4JEEE
 NSt6__ndk16__bindIRZN7WebView13RequestResumeEvE3$_5JEEE
@@ -2536,6 +2562,8 @@ output
 PackVTEProps(SVLHostDefaults const&, VTE_HostDefaults_t&)
 PackVTEProps(SVLPowerProps const&, VTE_PowerProps_t&)
 PackVTEProps(SVLStaticProps const&, VTE_StaticProps_t&)
+Pairing to address: %s\n
+Pairing to broadcast address not allowed.\n
 pamir_eye_tracking_pose
 Pamir Eye Tracking Set
 pamir_stream_haptic
@@ -2608,9 +2636,11 @@ posix_memalign
 postMessage
 postWebMessage
 precision
-PreflightCheckInfo::~PreflightCheckInfo()
+preflight
 PreflightCheckThread
 preflight_results
+PreflightStateBehavior: Trying to abort.
+PreflightStateBehavior: Trying to go to lobby.
 prepare
 press
 printf
@@ -2659,7 +2689,6 @@ Pure virtual function called!
 putchar
 putExtra
 puts
-QBM-
 Qkkbal
 QSVLClient::AdjustPhaseOffset(int)
 QSVLClientAudioNdk: Attempting to close input stream...
@@ -2715,7 +2744,9 @@ QSVLClient::UpdateFrameVariables: VTE_PROJECTION_RAW_PRAMS is updated
 QSVLClient::UpdatePowerProps()
 QSVLClient::UpdateStaticProps()
 QSVLClient::VSyncEvent(int)
+QSVLClientXR::BIsDecoderStuck()
 QSVLClientXR::BIsLinkActive()
+QSVLClientXR::BStreamSwapchainsSetup()
 QSVLClientXR::FlipFrame(long*)
 QSVLClientXR::FlipFrame: Panic! No frames served even after waiting!
 QSVLClientXR::GetAvailableDisplayFrequencies: %.2f
@@ -2760,7 +2791,8 @@ QSVLClientXR::TrySetPreferredDisplayFrequency: Setting fallback of 72Hz failed! 
 QSVLClientXR::TrySetPreferredDisplayFrequency: Setting refresh rate to %.1f failed.
 QSVLCodecNDK::AcquireEncodedDataBuffer: Codec was not active
 QSVLCodecNDK::AcquireEncodedDataBuffer: Unable to acquire input buffer! Error: %zd. Resetting stream...
-QSVLCodecNDK::AcquireEncodedDataBuffer(unsigned int)
+QSVLCodecNDK::AcquireEncodedDataBuffer(unsigned int, unsigned long*)
+QSVLCodecNDK::BIsStuck()
 QSVLCodecNDK::HandleOnImageAvailable(AImageReader*)
 QSVLCodecNDK::HandleOnImageAvailable: Deleting previously acquired image
 QSVLCodecNDK::HandleOnImageAvailable:  Failed to acquire latest image!
@@ -2794,6 +2826,9 @@ QSVLDeviceHmd::GetPowerProps(SVLPowerProps&)
 QSVLDeviceHmd::GetRequestedExtensions() const
 QSVLDeviceHmd::GetStaticProps(SVLStaticProps&)
 QSVLDeviceHmd::HandleEyeInput(XRQContext&, EyeAndExpressions_t&)
+QSVLDeviceHmd::Init: Eye Tracking bindings:
+QSVLDeviceHmd::Init: Failed to register action set for sync!
+QSVLDeviceHmd::Init: Failed to register hmd device actions!
 QSVLDeviceHmd::Init(XRQContext&)
 QSVLDeviceHmd::~QSVLDeviceHmd()
 QSVLDeviceHmd::QSVLDeviceHmd()
@@ -2806,6 +2841,7 @@ QSVLFrameServer::FlushHardwareBuffers()
 QSVLFrameServer::QSVLFrameServer()
 QSVLFrameServer::ServeNextHardwareBuffer(HardwareBufferInfo&, int)
 QSVLRendererXR::AcceptDataFrame(unsigned char*, int, bool, unsigned short)
+QSVLRendererXR::BSwapchainsSetup()
 QSVLRendererXR::FlipFrame()
 QSVLRendererXR::FlipFrame(XRQContext const&, long*)
 QSVLRendererXR::FlipFrame: You should be calling the other FlipFrame()!
@@ -2892,7 +2928,6 @@ RequestAndroidPermissions: Requesting the following permissions in prompt:\n
 RequestAndroidPermissions(std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>> const&)
 request_app_quit
 request_continue
-request_continue: Was not in the right state to request a continue! Not doing anything.
 requestedExtensions
 Requested extension %s was not available!
 request_permission
@@ -2917,7 +2952,6 @@ rrrrrrrrrrrr
 rrrrrrrrrrrrr
 rtus_test
 russian
-,s6FP$>
 Saturday
 %s begin_ctx=%lu
 sBWFECLim
@@ -2925,6 +2959,8 @@ SC Custom 0 %d
 SC Custom 1 %d
 SC Custom 2 %d
 SC Custom 3 %d
+SCENE_EVENT_REQUEST_PREFLIGHT Event Processed.  Requesting preflight
+SCENE_EVENT_REQUEST_PREFLIGHT Event Processed. Stream requested start
 SCENE_EVENT_REQUEST_QUIT Event Processed. Requesting next scene
 SCENE_STREAM_EVENT_REQUEST_DASH Event Processed.  Requesting next scene.
 SCENE_STREAM_EVENT_REQUEST_LOBBY: No lobby in release, transitioning to dash.
@@ -2934,8 +2970,6 @@ sched_setaffinity
 sched_yield
 schinese
 sControllerType
-sDelayedDescription
-sDelayedTitle
 sDescription
 sDeviceType
 SDK_INT
@@ -3168,6 +3202,10 @@ Starting session with AES Mode 0
 Starting session with ID: %08x
 stat
 stat64
+StateBehavior: Constructed behavior: %i
+~StateBehavior: Destroyed behavior: %i
+StateBehavior::EnterBehavior: Entered: %i
+StateBehavior::EnterBehavior: Left: %i
 static_cast
 staticProps
 sTCPIp
@@ -3751,7 +3789,6 @@ std::__ndk1::collate<wchar_t>::do_compare(wchar_t const*, wchar_t const*, wchar_
 std::__ndk1::collate<wchar_t>::do_hash(wchar_t const*, wchar_t const*) const
 std::__ndk1::collate<wchar_t>::do_transform(wchar_t const*, wchar_t const*) const
 std::__ndk1::collate<wchar_t>::id
-std::__ndk1::__compressed_pair_elem<XrUIManager, 1, false>::__compressed_pair_elem<char const (&) [7], 0ul>(std::__ndk1::piecewise_construct_t, std::__ndk1::tuple<char const (&) [7]>, std::__ndk1::__tuple_indices<0ul>)
 std::__ndk1::condition_variable::~condition_variable()
 std::__ndk1::condition_variable::__do_timed_wait(std::__ndk1::unique_lock<std::__ndk1::mutex>&, std::__ndk1::chrono::time_point<std::__ndk1::chrono::system_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1l, 1000000000l>>>)
 std::__ndk1::condition_variable::notify_all()
@@ -3820,12 +3857,14 @@ std::__ndk1::ctype<wchar_t>::id
 std::__ndk1::declare_no_pointers(char*, unsigned long)
 std::__ndk1::declare_reachable(void*)
 std::__ndk1::defer_lock
+std::__ndk1::__deque_base<EStreamSceneState, std::__ndk1::allocator<EStreamSceneState>>::~__deque_base()
 std::__ndk1::__deque_base<HardwareBufferInfo, std::__ndk1::allocator<HardwareBufferInfo>>::~__deque_base()
 std::__ndk1::__deque_base<Json::OurReader::ErrorInfo, std::__ndk1::allocator<Json::OurReader::ErrorInfo>>::clear()
 std::__ndk1::__deque_base<Json::Reader::ErrorInfo, std::__ndk1::allocator<Json::Reader::ErrorInfo>>::clear()
 std::__ndk1::__deque_base<Json::Value*, std::__ndk1::allocator<Json::Value*>>::~__deque_base()
 std::__ndk1::__deque_base<WebViewInput, std::__ndk1::allocator<WebViewInput>>::clear()
 std::__ndk1::__deque_base<WebViewOutput, std::__ndk1::allocator<WebViewOutput>>::clear()
+std::__ndk1::deque<EStreamSceneState, std::__ndk1::allocator<EStreamSceneState>>::__add_back_capacity()
 std::__ndk1::deque<HardwareBufferInfo, std::__ndk1::allocator<HardwareBufferInfo>>::__add_back_capacity()
 std::__ndk1::deque<Json::OurReader::ErrorInfo, std::__ndk1::allocator<Json::OurReader::ErrorInfo>>::__add_back_capacity()
 std::__ndk1::deque<Json::OurReader::ErrorInfo, std::__ndk1::allocator<Json::OurReader::ErrorInfo>>::__add_back_capacity(unsigned long)
@@ -3864,6 +3903,22 @@ std::__ndk1::__function::__func<bool (*)(char), std::__ndk1::allocator<bool (*)(
 std::__ndk1::__function::__func<bool (*)(char), std::__ndk1::allocator<bool (*)(char)>, bool (char)>::operator()(char&&)
 std::__ndk1::__function::__func<bool (*)(char), std::__ndk1::allocator<bool (*)(char)>, bool (char)>::target(std::type_info const&) const
 std::__ndk1::__function::__func<bool (*)(char), std::__ndk1::allocator<bool (*)(char)>, bool (char)>::target_type() const
+std::__ndk1::__function::__func<std::__ndk1::__bind<void (XrSceneStream::*)(EStreamSceneState), XrSceneStream*, std::__ndk1::placeholders::__ph<1> const&>, std::__ndk1::allocator<std::__ndk1::__bind<void (XrSceneStream::*)(EStreamSceneState), XrSceneStream*, std::__ndk1::placeholders::__ph<1> const&>>, void (EStreamSceneState)>::__clone() const
+std::__ndk1::__function::__func<std::__ndk1::__bind<void (XrSceneStream::*)(EStreamSceneState), XrSceneStream*, std::__ndk1::placeholders::__ph<1> const&>, std::__ndk1::allocator<std::__ndk1::__bind<void (XrSceneStream::*)(EStreamSceneState), XrSceneStream*, std::__ndk1::placeholders::__ph<1> const&>>, void (EStreamSceneState)>::__clone(std::__ndk1::__function::__base<void (EStreamSceneState)>*) const
+std::__ndk1::__function::__func<std::__ndk1::__bind<void (XrSceneStream::*)(EStreamSceneState), XrSceneStream*, std::__ndk1::placeholders::__ph<1> const&>, std::__ndk1::allocator<std::__ndk1::__bind<void (XrSceneStream::*)(EStreamSceneState), XrSceneStream*, std::__ndk1::placeholders::__ph<1> const&>>, void (EStreamSceneState)>::destroy()
+std::__ndk1::__function::__func<std::__ndk1::__bind<void (XrSceneStream::*)(EStreamSceneState), XrSceneStream*, std::__ndk1::placeholders::__ph<1> const&>, std::__ndk1::allocator<std::__ndk1::__bind<void (XrSceneStream::*)(EStreamSceneState), XrSceneStream*, std::__ndk1::placeholders::__ph<1> const&>>, void (EStreamSceneState)>::destroy_deallocate()
+std::__ndk1::__function::__func<std::__ndk1::__bind<void (XrSceneStream::*)(EStreamSceneState), XrSceneStream*, std::__ndk1::placeholders::__ph<1> const&>, std::__ndk1::allocator<std::__ndk1::__bind<void (XrSceneStream::*)(EStreamSceneState), XrSceneStream*, std::__ndk1::placeholders::__ph<1> const&>>, void (EStreamSceneState)>::~__func()
+std::__ndk1::__function::__func<std::__ndk1::__bind<void (XrSceneStream::*)(EStreamSceneState), XrSceneStream*, std::__ndk1::placeholders::__ph<1> const&>, std::__ndk1::allocator<std::__ndk1::__bind<void (XrSceneStream::*)(EStreamSceneState), XrSceneStream*, std::__ndk1::placeholders::__ph<1> const&>>, void (EStreamSceneState)>::operator()(EStreamSceneState&&)
+std::__ndk1::__function::__func<std::__ndk1::__bind<void (XrSceneStream::*)(EStreamSceneState), XrSceneStream*, std::__ndk1::placeholders::__ph<1> const&>, std::__ndk1::allocator<std::__ndk1::__bind<void (XrSceneStream::*)(EStreamSceneState), XrSceneStream*, std::__ndk1::placeholders::__ph<1> const&>>, void (EStreamSceneState)>::target(std::type_info const&) const
+std::__ndk1::__function::__func<std::__ndk1::__bind<void (XrSceneStream::*)(EStreamSceneState), XrSceneStream*, std::__ndk1::placeholders::__ph<1> const&>, std::__ndk1::allocator<std::__ndk1::__bind<void (XrSceneStream::*)(EStreamSceneState), XrSceneStream*, std::__ndk1::placeholders::__ph<1> const&>>, void (EStreamSceneState)>::target_type() const
+std::__ndk1::__function::__func<StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)::'lambda'(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&), std::__ndk1::allocator<StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)::'lambda'(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>, void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>::__clone() const
+std::__ndk1::__function::__func<StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)::'lambda'(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&), std::__ndk1::allocator<StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)::'lambda'(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>, void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>::__clone(std::__ndk1::__function::__base<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>*) const
+std::__ndk1::__function::__func<StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)::'lambda'(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&), std::__ndk1::allocator<StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)::'lambda'(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>, void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>::destroy()
+std::__ndk1::__function::__func<StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)::'lambda'(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&), std::__ndk1::allocator<StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)::'lambda'(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>, void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>::destroy_deallocate()
+std::__ndk1::__function::__func<StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)::'lambda'(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&), std::__ndk1::allocator<StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)::'lambda'(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>, void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>::~__func()
+std::__ndk1::__function::__func<StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)::'lambda'(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&), std::__ndk1::allocator<StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)::'lambda'(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>, void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>::operator()(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)
+std::__ndk1::__function::__func<StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)::'lambda'(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&), std::__ndk1::allocator<StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)::'lambda'(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>, void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>::target(std::type_info const&) const
+std::__ndk1::__function::__func<StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)::'lambda'(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&), std::__ndk1::allocator<StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)::'lambda'(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>, void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>::target_type() const
 std::__ndk1::function<void (ELogLevel, char const*, void*)>::~function()
 std::__ndk1::function<void ()>::~function()
 std::__ndk1::function<void (QSVLClientEvent, std::__ndk1::variant<QSVLClientStreamState, QSVLClientWirelessTimeout>)>::~function()
@@ -4189,6 +4244,7 @@ std::__ndk1::num_put<wchar_t, std::__ndk1::ostreambuf_iterator<wchar_t, std::__n
 std::__ndk1::num_put<wchar_t, std::__ndk1::ostreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>>::id
 std::__ndk1::__num_put<wchar_t>::__widen_and_group_float(char*, char*, char*, wchar_t*, wchar_t*&, wchar_t*&, std::__ndk1::locale const&)
 std::__ndk1::__num_put<wchar_t>::__widen_and_group_int(char*, char*, char*, wchar_t*, wchar_t*&, wchar_t*&, std::__ndk1::locale const&)
+std::__ndk1::pair<EStreamSceneState const, std::__ndk1::shared_ptr<StreamBehavior>>::~pair()
 std::__ndk1::pair<Json::Value::CZString const, Json::Value>::~pair()
 std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>::~pair()
 std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>::pair<char const (&) [11], char const (&) [7], false>(char const (&) [11], char const (&) [7])
@@ -4258,12 +4314,27 @@ std::__ndk1::__shared_ptr_emplace<SRGBCorrectionPass, std::__ndk1::allocator<SRG
 std::__ndk1::__shared_ptr_emplace<SRGBCorrectionPass, std::__ndk1::allocator<SRGBCorrectionPass>>::__on_zero_shared_weak()
 std::__ndk1::__shared_ptr_emplace<SRGBCorrectionPass, std::__ndk1::allocator<SRGBCorrectionPass>>::~__shared_ptr_emplace()
 std::__ndk1::__shared_ptr_emplace<SRGBCorrectionPass, std::__ndk1::allocator<SRGBCorrectionPass>>::__shared_ptr_emplace<std::__ndk1::shared_ptr<Texture>&>(std::__ndk1::allocator<SRGBCorrectionPass>, std::__ndk1::shared_ptr<Texture>&)
+std::__ndk1::__shared_ptr_emplace<StreamBehavior_Empty, std::__ndk1::allocator<StreamBehavior_Empty>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<StreamBehavior_Empty, std::__ndk1::allocator<StreamBehavior_Empty>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<StreamBehavior_Empty, std::__ndk1::allocator<StreamBehavior_Empty>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<StreamBehavior_Initializing, std::__ndk1::allocator<StreamBehavior_Initializing>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<StreamBehavior_Initializing, std::__ndk1::allocator<StreamBehavior_Initializing>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<StreamBehavior_Initializing, std::__ndk1::allocator<StreamBehavior_Initializing>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<StreamBehavior_Loading, std::__ndk1::allocator<StreamBehavior_Loading>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<StreamBehavior_Loading, std::__ndk1::allocator<StreamBehavior_Loading>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<StreamBehavior_Loading, std::__ndk1::allocator<StreamBehavior_Loading>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<StreamBehavior_Resuming, std::__ndk1::allocator<StreamBehavior_Resuming>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<StreamBehavior_Resuming, std::__ndk1::allocator<StreamBehavior_Resuming>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<StreamBehavior_Resuming, std::__ndk1::allocator<StreamBehavior_Resuming>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<StreamBehavior_Spinner, std::__ndk1::allocator<StreamBehavior_Spinner>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<StreamBehavior_Spinner, std::__ndk1::allocator<StreamBehavior_Spinner>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<StreamBehavior_Spinner, std::__ndk1::allocator<StreamBehavior_Spinner>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<StreamBehavior_Streaming, std::__ndk1::allocator<StreamBehavior_Streaming>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<StreamBehavior_Streaming, std::__ndk1::allocator<StreamBehavior_Streaming>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<StreamBehavior_Streaming, std::__ndk1::allocator<StreamBehavior_Streaming>>::~__shared_ptr_emplace()
 std::__ndk1::__shared_ptr_emplace<Texture, std::__ndk1::allocator<Texture>>::__on_zero_shared()
 std::__ndk1::__shared_ptr_emplace<Texture, std::__ndk1::allocator<Texture>>::__on_zero_shared_weak()
 std::__ndk1::__shared_ptr_emplace<Texture, std::__ndk1::allocator<Texture>>::~__shared_ptr_emplace()
-std::__ndk1::__shared_ptr_emplace<XrUIManager, std::__ndk1::allocator<XrUIManager>>::__on_zero_shared()
-std::__ndk1::__shared_ptr_emplace<XrUIManager, std::__ndk1::allocator<XrUIManager>>::__on_zero_shared_weak()
-std::__ndk1::__shared_ptr_emplace<XrUIManager, std::__ndk1::allocator<XrUIManager>>::~__shared_ptr_emplace()
 std::__ndk1::__shared_ptr_pointer<VariableTransportHolder*, std::__ndk1::default_delete<VariableTransportHolder>, std::__ndk1::allocator<VariableTransportHolder>>::__get_deleter(std::type_info const&) const
 std::__ndk1::__shared_ptr_pointer<VariableTransportHolder*, std::__ndk1::default_delete<VariableTransportHolder>, std::__ndk1::allocator<VariableTransportHolder>>::__on_zero_shared()
 std::__ndk1::__shared_ptr_pointer<VariableTransportHolder*, std::__ndk1::default_delete<VariableTransportHolder>, std::__ndk1::allocator<VariableTransportHolder>>::__on_zero_shared_weak()
@@ -4272,11 +4343,21 @@ std::__ndk1::__shared_ptr_pointer<WebView*, std::__ndk1::default_delete<WebView>
 std::__ndk1::__shared_ptr_pointer<WebView*, std::__ndk1::default_delete<WebView>, std::__ndk1::allocator<WebView>>::__on_zero_shared()
 std::__ndk1::__shared_ptr_pointer<WebView*, std::__ndk1::default_delete<WebView>, std::__ndk1::allocator<WebView>>::__on_zero_shared_weak()
 std::__ndk1::__shared_ptr_pointer<WebView*, std::__ndk1::default_delete<WebView>, std::__ndk1::allocator<WebView>>::~__shared_ptr_pointer()
+std::__ndk1::__shared_ptr_pointer<XrUIManager*, std::__ndk1::default_delete<XrUIManager>, std::__ndk1::allocator<XrUIManager>>::__get_deleter(std::type_info const&) const
+std::__ndk1::__shared_ptr_pointer<XrUIManager*, std::__ndk1::default_delete<XrUIManager>, std::__ndk1::allocator<XrUIManager>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_pointer<XrUIManager*, std::__ndk1::default_delete<XrUIManager>, std::__ndk1::allocator<XrUIManager>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_pointer<XrUIManager*, std::__ndk1::default_delete<XrUIManager>, std::__ndk1::allocator<XrUIManager>>::~__shared_ptr_pointer()
 std::__ndk1::shared_ptr<QSVLDeviceHmd>::~shared_ptr()
 std::__ndk1::shared_ptr<QSVLFrameServer>::~shared_ptr()
 std::__ndk1::shared_ptr<QSVLInput>::~shared_ptr()
-std::__ndk1::shared_ptr<QSVLXRInput>::~shared_ptr()
 std::__ndk1::shared_ptr<SRGBCorrectionPass>::~shared_ptr()
+std::__ndk1::shared_ptr<StreamBehavior_Empty>::~shared_ptr()
+std::__ndk1::shared_ptr<StreamBehavior_Initializing>::~shared_ptr()
+std::__ndk1::shared_ptr<StreamBehavior_Loading>::~shared_ptr()
+std::__ndk1::shared_ptr<StreamBehavior_Resuming>::~shared_ptr()
+std::__ndk1::shared_ptr<StreamBehavior>::~shared_ptr()
+std::__ndk1::shared_ptr<StreamBehavior_Spinner>::~shared_ptr()
+std::__ndk1::shared_ptr<StreamBehavior_Streaming>::~shared_ptr()
 std::__ndk1::shared_ptr<SVLRenderer>::~shared_ptr()
 std::__ndk1::shared_ptr<Texture>::~shared_ptr()
 std::__ndk1::shared_ptr<VariableTransportHolder>::~shared_ptr()
@@ -4290,6 +4371,10 @@ std::__ndk1::__shared_weak_count::lock()
 std::__ndk1::__shared_weak_count::__release_shared()
 std::__ndk1::__shared_weak_count::__release_weak()
 std::__ndk1::__shared_weak_count::~__shared_weak_count()
+std::__ndk1::__split_buffer<EStreamSceneState*, std::__ndk1::allocator<EStreamSceneState*>&>::push_back(EStreamSceneState*&&)
+std::__ndk1::__split_buffer<EStreamSceneState*, std::__ndk1::allocator<EStreamSceneState*>>::push_back(EStreamSceneState*&&)
+std::__ndk1::__split_buffer<EStreamSceneState*, std::__ndk1::allocator<EStreamSceneState*>>::push_front(EStreamSceneState*&&)
+std::__ndk1::__split_buffer<EStreamSceneState*, std::__ndk1::allocator<EStreamSceneState*>&>::push_front(EStreamSceneState* const&)
 std::__ndk1::__split_buffer<HardwareBufferInfo*, std::__ndk1::allocator<HardwareBufferInfo*>&>::push_back(HardwareBufferInfo*&&)
 std::__ndk1::__split_buffer<HardwareBufferInfo*, std::__ndk1::allocator<HardwareBufferInfo*>>::push_back(HardwareBufferInfo*&&)
 std::__ndk1::__split_buffer<HardwareBufferInfo*, std::__ndk1::allocator<HardwareBufferInfo*>>::push_front(HardwareBufferInfo*&&)
@@ -4311,11 +4396,11 @@ std::__ndk1::__split_buffer<Json::Value**, std::__ndk1::allocator<Json::Value**>
 std::__ndk1::__split_buffer<Json::Value**, std::__ndk1::allocator<Json::Value**>>::push_back(Json::Value**&&)
 std::__ndk1::__split_buffer<Json::Value**, std::__ndk1::allocator<Json::Value**>>::push_front(Json::Value**&&)
 std::__ndk1::__split_buffer<Json::Value**, std::__ndk1::allocator<Json::Value**>&>::push_front(Json::Value** const&)
-std::__ndk1::__split_buffer<PreflightCheckInfo, std::__ndk1::allocator<PreflightCheckInfo>&>::~__split_buffer()
 std::__ndk1::__split_buffer<SeenServers_t, std::__ndk1::allocator<SeenServers_t>&>::~__split_buffer()
 std::__ndk1::__split_buffer<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>&>::~__split_buffer()
 std::__ndk1::__split_buffer<std::__ndk1::function<void (AppPath, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)>, std::__ndk1::allocator<std::__ndk1::function<void (AppPath, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)>>&>::~__split_buffer()
-std::__ndk1::__split_buffer<StreamCheckInfo, std::__ndk1::allocator<StreamCheckInfo>&>::~__split_buffer()
+std::__ndk1::__split_buffer<StreamBehavior_Loading::StreamCheckInfo, std::__ndk1::allocator<StreamBehavior_Loading::StreamCheckInfo>&>::~__split_buffer()
+std::__ndk1::__split_buffer<XRScene_Preflight::PreflightCheckInfo, std::__ndk1::allocator<XRScene_Preflight::PreflightCheckInfo>&>::~__split_buffer()
 std::__ndk1::__sp_mut::lock()
 std::__ndk1::__sp_mut::unlock()
 std::__ndk1::stod(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned long*)
@@ -4470,6 +4555,7 @@ std::__ndk1::__tree_const_iterator<std::__ndk1::basic_string<char, std::__ndk1::
 std::__ndk1::__tree_const_iterator<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, AppPath>, std::__ndk1::__tree_node<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, AppPath>, void*>*, long> std::__ndk1::__tree<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, AppPath>, std::__ndk1::__map_value_compare<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, AppPath>, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, AppPath>>>::find<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&) const
 std::__ndk1::__tree_iterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__tree_node<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void*>*, long> std::__ndk1::__tree<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__emplace_hint_unique_key_args<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&>(std::__ndk1::__tree_const_iterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__tree_node<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void*>*, long>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 std::__ndk1::__tree_iterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__tree_node<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void*>*, long> std::__ndk1::__tree<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::find<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+std::__ndk1::__tree_iterator<std::__ndk1::__value_type<EPanelMailboxes, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::__tree_node<std::__ndk1::__value_type<EPanelMailboxes, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, void*>*, long> std::__ndk1::__tree<std::__ndk1::__value_type<EPanelMailboxes, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::__map_value_compare<EPanelMailboxes, std::__ndk1::__value_type<EPanelMailboxes, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::less<EPanelMailboxes>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<EPanelMailboxes, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>>::__emplace_hint_unique_key_args<EPanelMailboxes, std::__ndk1::pair<EPanelMailboxes const, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>> const&>(std::__ndk1::__tree_const_iterator<std::__ndk1::__value_type<EPanelMailboxes, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::__tree_node<std::__ndk1::__value_type<EPanelMailboxes, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, void*>*, long>, EPanelMailboxes const&, std::__ndk1::pair<EPanelMailboxes const, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>> const&)
 std::__ndk1::__tree_iterator<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, std::__ndk1::__tree_node<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, void*>*, long> std::__ndk1::__tree<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, std::__ndk1::__map_value_compare<Json::Value::CZString, std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, std::__ndk1::less<Json::Value::CZString>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>>>::find<Json::Value::CZString>(Json::Value::CZString const&)
 std::__ndk1::__tree_iterator<std::__ndk1::__value_type<QSVLControllerHand, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::__tree_node<std::__ndk1::__value_type<QSVLControllerHand, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, void*>*, long> std::__ndk1::__tree<std::__ndk1::__value_type<QSVLControllerHand, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::__map_value_compare<QSVLControllerHand, std::__ndk1::__value_type<QSVLControllerHand, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::less<QSVLControllerHand>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<QSVLControllerHand, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>>::__emplace_hint_unique_key_args<QSVLControllerHand, std::__ndk1::pair<QSVLControllerHand const, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>> const&>(std::__ndk1::__tree_const_iterator<std::__ndk1::__value_type<QSVLControllerHand, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::__tree_node<std::__ndk1::__value_type<QSVLControllerHand, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, void*>*, long>, QSVLControllerHand const&, std::__ndk1::pair<QSVLControllerHand const, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>> const&)
 std::__ndk1::__tree_iterator<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, AppPath>, std::__ndk1::__tree_node<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, AppPath>, void*>*, long> std::__ndk1::__tree<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, AppPath>, std::__ndk1::__map_value_compare<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, AppPath>, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, AppPath>>>::__emplace_hint_unique_key_args<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, AppPath> const&>(std::__ndk1::__tree_const_iterator<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, AppPath>, std::__ndk1::__tree_node<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, AppPath>, void*>*, long>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, AppPath> const&)
@@ -4481,6 +4567,7 @@ std::__ndk1::__tree_iterator<std::__ndk1::__value_type<VertexAttributeLocation, 
 std::__ndk1::__tree_node_base<void*>*& std::__ndk1::__tree<AppPath, std::__ndk1::less<AppPath>, std::__ndk1::allocator<AppPath>>::__find_equal<AppPath>(std::__ndk1::__tree_const_iterator<AppPath, std::__ndk1::__tree_node<AppPath, void*>*, long>, std::__ndk1::__tree_end_node<std::__ndk1::__tree_node_base<void*>*>*&, std::__ndk1::__tree_node_base<void*>*&, AppPath const&)
 std::__ndk1::__tree_node_base<void*>*& std::__ndk1::__tree<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__find_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>(std::__ndk1::__tree_const_iterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__tree_node<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void*>*, long>, std::__ndk1::__tree_end_node<std::__ndk1::__tree_node_base<void*>*>*&, std::__ndk1::__tree_node_base<void*>*&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 std::__ndk1::__tree_node_base<void*>*& std::__ndk1::__tree<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__find_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>(std::__ndk1::__tree_end_node<std::__ndk1::__tree_node_base<void*>*>*&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+std::__ndk1::__tree_node_base<void*>*& std::__ndk1::__tree<std::__ndk1::__value_type<EPanelMailboxes, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::__map_value_compare<EPanelMailboxes, std::__ndk1::__value_type<EPanelMailboxes, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::less<EPanelMailboxes>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<EPanelMailboxes, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>>::__find_equal<EPanelMailboxes>(std::__ndk1::__tree_const_iterator<std::__ndk1::__value_type<EPanelMailboxes, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::__tree_node<std::__ndk1::__value_type<EPanelMailboxes, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, void*>*, long>, std::__ndk1::__tree_end_node<std::__ndk1::__tree_node_base<void*>*>*&, std::__ndk1::__tree_node_base<void*>*&, EPanelMailboxes const&)
 std::__ndk1::__tree_node_base<void*>*& std::__ndk1::__tree<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, std::__ndk1::__map_value_compare<Json::Value::CZString, std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, std::__ndk1::less<Json::Value::CZString>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>>>::__find_equal<Json::Value::CZString>(std::__ndk1::__tree_const_iterator<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, std::__ndk1::__tree_node<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, void*>*, long>, std::__ndk1::__tree_end_node<std::__ndk1::__tree_node_base<void*>*>*&, std::__ndk1::__tree_node_base<void*>*&, Json::Value::CZString const&)
 std::__ndk1::__tree_node_base<void*>*& std::__ndk1::__tree<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, std::__ndk1::__map_value_compare<Json::Value::CZString, std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, std::__ndk1::less<Json::Value::CZString>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>>>::__find_equal<Json::Value::CZString>(std::__ndk1::__tree_end_node<std::__ndk1::__tree_node_base<void*>*>*&, Json::Value::CZString const&)
 std::__ndk1::__tree_node_base<void*>*& std::__ndk1::__tree<std::__ndk1::__value_type<QSVLControllerHand, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::__map_value_compare<QSVLControllerHand, std::__ndk1::__value_type<QSVLControllerHand, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::less<QSVLControllerHand>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<QSVLControllerHand, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>>::__find_equal<QSVLControllerHand>(std::__ndk1::__tree_const_iterator<std::__ndk1::__value_type<QSVLControllerHand, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::__tree_node<std::__ndk1::__value_type<QSVLControllerHand, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, void*>*, long>, std::__ndk1::__tree_end_node<std::__ndk1::__tree_node_base<void*>*>*&, std::__ndk1::__tree_node_base<void*>*&, QSVLControllerHand const&)
@@ -4496,6 +4583,8 @@ std::__ndk1::__tree_node_base<void*>*& std::__ndk1::__tree<std::__ndk1::__value_
 std::__ndk1::__tree<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::destroy(std::__ndk1::__tree_node<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void*>*)
 std::__ndk1::__tree<std::__ndk1::__value_type<AppPath, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int>>, std::__ndk1::__map_value_compare<AppPath, std::__ndk1::__value_type<AppPath, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int>>, std::__ndk1::less<AppPath>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<AppPath, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int>>>>::destroy(std::__ndk1::__tree_node<std::__ndk1::__value_type<AppPath, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int>>, void*>*)
 std::__ndk1::__tree<std::__ndk1::__value_type<AppViewType, std::__ndk1::unique_ptr<XrScene, std::__ndk1::default_delete<XrScene>>>, std::__ndk1::__map_value_compare<AppViewType, std::__ndk1::__value_type<AppViewType, std::__ndk1::unique_ptr<XrScene, std::__ndk1::default_delete<XrScene>>>, std::__ndk1::less<AppViewType>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<AppViewType, std::__ndk1::unique_ptr<XrScene, std::__ndk1::default_delete<XrScene>>>>>::destroy(std::__ndk1::__tree_node<std::__ndk1::__value_type<AppViewType, std::__ndk1::unique_ptr<XrScene, std::__ndk1::default_delete<XrScene>>>, void*>*)
+std::__ndk1::__tree<std::__ndk1::__value_type<EPanelMailboxes, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::__map_value_compare<EPanelMailboxes, std::__ndk1::__value_type<EPanelMailboxes, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::less<EPanelMailboxes>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<EPanelMailboxes, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>>::destroy(std::__ndk1::__tree_node<std::__ndk1::__value_type<EPanelMailboxes, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, void*>*)
+std::__ndk1::__tree<std::__ndk1::__value_type<EStreamSceneState, std::__ndk1::shared_ptr<StreamBehavior>>, std::__ndk1::__map_value_compare<EStreamSceneState, std::__ndk1::__value_type<EStreamSceneState, std::__ndk1::shared_ptr<StreamBehavior>>, std::__ndk1::less<EStreamSceneState>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<EStreamSceneState, std::__ndk1::shared_ptr<StreamBehavior>>>>::destroy(std::__ndk1::__tree_node<std::__ndk1::__value_type<EStreamSceneState, std::__ndk1::shared_ptr<StreamBehavior>>, void*>*)
 std::__ndk1::__tree<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, std::__ndk1::__map_value_compare<Json::Value::CZString, std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, std::__ndk1::less<Json::Value::CZString>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>>>::destroy(std::__ndk1::__tree_node<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, void*>*)
 std::__ndk1::__tree<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, std::__ndk1::__map_value_compare<Json::Value::CZString, std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, std::__ndk1::less<Json::Value::CZString>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>>>::erase(std::__ndk1::__tree_const_iterator<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, std::__ndk1::__tree_node<std::__ndk1::__value_type<Json::Value::CZString, Json::Value>, void*>*, long>)
 std::__ndk1::__tree<std::__ndk1::__value_type<QSVLControllerHand, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::__map_value_compare<QSVLControllerHand, std::__ndk1::__value_type<QSVLControllerHand, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::less<QSVLControllerHand>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<QSVLControllerHand, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>>::destroy(std::__ndk1::__tree_node<std::__ndk1::__value_type<QSVLControllerHand, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, void*>*)
@@ -4526,7 +4615,7 @@ std::__ndk1::vector<float, std::__ndk1::allocator<float>>::__append(unsigned lon
 std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::reserve(unsigned long)
 std::__ndk1::vector<std::__ndk1::shared_ptr<VariableTransportHolder>, std::__ndk1::allocator<std::__ndk1::shared_ptr<VariableTransportHolder>>>::__append(unsigned long)
 std::__ndk1::vector<std::__ndk1::vector<std::__ndk1::pair<void*, std::__ndk1::function<void (ValueTransportID, bool)>>, std::__ndk1::allocator<std::__ndk1::pair<void*, std::__ndk1::function<void (ValueTransportID, bool)>>>>, std::__ndk1::allocator<std::__ndk1::vector<std::__ndk1::pair<void*, std::__ndk1::function<void (ValueTransportID, bool)>>, std::__ndk1::allocator<std::__ndk1::pair<void*, std::__ndk1::function<void (ValueTransportID, bool)>>>>>>::__append(unsigned long)
-std::__ndk1::vector<StreamCheckInfo, std::__ndk1::allocator<StreamCheckInfo>>::insert(std::__ndk1::__wrap_iter<StreamCheckInfo const*>, StreamCheckInfo const&)
+std::__ndk1::vector<StreamBehavior_Loading::StreamCheckInfo, std::__ndk1::allocator<StreamBehavior_Loading::StreamCheckInfo>>::insert(std::__ndk1::__wrap_iter<StreamBehavior_Loading::StreamCheckInfo const*>, StreamBehavior_Loading::StreamCheckInfo const&)
 std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char>>::__append(unsigned long)
 std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char>>::assign(unsigned long, unsigned char const&)
 std::__ndk1::vector<unsigned int, std::__ndk1::allocator<unsigned int>>::__append(unsigned long, unsigned int const&)
@@ -4585,30 +4674,74 @@ stream
 streamactions
 streamanimation: Trying to abort.
 streamanimation: Trying to go to lobby.
-StreamCheckInfo::~StreamCheckInfo()
+StreamBehavior::callbacks
+StreamBehavior_Empty::OnBehaviorEntered()
+StreamBehavior_Empty::OnBehaviorLeft()
+StreamBehavior_Empty::OverlayStream(XRQContext&, bool, std::__ndk1::vector<XrCompositionLayerBaseHeader*, std::__ndk1::allocator<XrCompositionLayerBaseHeader*>>&)
+StreamBehavior_Empty::~StreamBehavior_Empty()
+StreamBehavior_Initializing::OnBehaviorEntered()
+StreamBehavior_Initializing::OnBehaviorLeft()
+StreamBehavior_Initializing::OverlayStream(XRQContext&, bool, std::__ndk1::vector<XrCompositionLayerBaseHeader*, std::__ndk1::allocator<XrCompositionLayerBaseHeader*>>&)
+StreamBehavior_Initializing::~StreamBehavior_Initializing()
+StreamBehavior_Initializing: Stream was rendered, transitioning to STREAM_SCENE_STATE_LOADING_RESUMING
+StreamBehavior_Initializing: Stream was rendered, transitioning to STREAM_SCENE_STATE_STREAMING
+StreamBehavior_Initializing: Timeout exceeded, transitioning to STREAM_SCENE_STATE_STREAM_SPINNER
+StreamBehavior_Loading::ErrorListenerThread()
+StreamBehavior_Loading::GetStreamChecks(std::__ndk1::vector<StreamBehavior_Loading::StreamCheckInfo, std::__ndk1::allocator<StreamBehavior_Loading::StreamCheckInfo>>&)
+StreamBehavior_Loading::OnBehaviorEntered()
+StreamBehavior_Loading::OnBehaviorEntered: No frame within %i seconds, requesting exit
+StreamBehavior_Loading::OnBehaviorLeft()
+StreamBehavior_Loading::OverlayStream(XRQContext&, bool, std::__ndk1::vector<XrCompositionLayerBaseHeader*, std::__ndk1::allocator<XrCompositionLayerBaseHeader*>>&)
+StreamBehavior_Loading::PrepareErrorCodeText(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+StreamBehavior_Loading::~StreamBehavior_Loading()
+StreamBehavior_Loading::StreamCheckInfo::~StreamCheckInfo()
+StreamBehavior_Resuming: Begun streaming again
+StreamBehavior_Resuming::OnBehaviorEntered()
+StreamBehavior_Resuming::OnBehaviorLeft()
+StreamBehavior_Resuming::OverlayStream(XRQContext&, bool, std::__ndk1::vector<XrCompositionLayerBaseHeader*, std::__ndk1::allocator<XrCompositionLayerBaseHeader*>>&)
+StreamBehavior_Resuming::~StreamBehavior_Resuming()
+StreamBehavior_Spinner: Failed to initialize stream animation panel. Not displaying.
+StreamBehavior_Spinner: Initialized stream animation panel
+StreamBehavior_Spinner::OnBehaviorEntered()
+StreamBehavior_Spinner::OnBehaviorLeft()
+StreamBehavior_Spinner::OverlayStream(XRQContext&, bool, std::__ndk1::vector<XrCompositionLayerBaseHeader*, std::__ndk1::allocator<XrCompositionLayerBaseHeader*>>&)
+StreamBehavior_Spinner::~StreamBehavior_Spinner()
+StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)
+StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)::'lambda'(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)::operator()(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&) const
+StreamBehavior_Spinner: Stream was rendered, transitioning to STREAM_SCENE_STATE_STREAMING
+StreamBehavior_Spinner: Timeout exceeded for rendering a valid frame, transiting to loading
+StreamBehavior::~StreamBehavior()
+StreamBehavior::streamContext
+StreamBehavior_Streaming::OnBehaviorEntered()
+StreamBehavior_Streaming::OnBehaviorLeft()
+StreamBehavior_Streaming::OverlayStream(XRQContext&, bool, std::__ndk1::vector<XrCompositionLayerBaseHeader*, std::__ndk1::allocator<XrCompositionLayerBaseHeader*>>&)
+StreamBehavior_Streaming::~StreamBehavior_Streaming()
+StreamBehavior_Streaming: Timeout exceeded for rendering a valid frame, transiting to spinner
+StreamBehavior::streamState
 #StreamCheck_WifiNotConnected
 #StreamCheck_WifiNotConnectedDescription
+StreamContext::~StreamContext()
 #StreamError_CanResumeDescription
 #StreamError_CanResumeTitle
-#StreamError_ConnectionToHostLost
+#StreamError_ConnectedNoDecode
+#StreamError_ConnectedNoDecodeDescription
+#StreamError_ConnectedNoVideo
+#StreamError_ConnectedNoVideoDescription
 #StreamError_HostNotRespondingDescription
 #StreamError_HostNotRespondingTitle
 StreamErrorListenerThread
 /stream/host_is_locked
 /stream/host_is_on_wireless
 streamloading: Got continue, next state init.
-#StreamLoading_StreamInitializing
 streamloading: Trying to abort.
 streamloading: Trying to go to lobby.
-#StreamLoading_WaitingForHost
-#StreamLoading_WaitingForHostTooLong
 #StreamPreflight_HostPCLocked
 #StreamPreflight_HostPCLockedDescription
 #StreamPreflight_HostPCOnWireless
 #StreamPreflight_HostPCOnWirelessDescription
 #StreamPreflight_WifiFrequencyLow{
 #StreamPreflight_WifiFrequencyLowDescription
-STREAM_SCENE_STATE_STREAM_LOADING_CAN_RESUME: request_continue: requesting continue. go straight to streaming.
+StreamSceneState::~StreamSceneState()
 #StreamSideBand_AlreadyActive
 #StreamSideBand_AlreadyActiveDescription
 #StreamSideBand_BadConnectionStatus
@@ -4621,7 +4754,6 @@ STREAM_SCENE_STATE_STREAM_LOADING_CAN_RESUME: request_continue: requesting conti
 #StreamSideBand_UnknownIssueDescription
 #StreamSideBand_WrongId
 #StreamSideBand_WrongIdDescription
-#Stream_StreamingError
 strerror
 strerror_r
 strftime
@@ -4644,6 +4776,7 @@ __strlen_chk
 strncasecmp
 strncmp
 strncpy
+__strncpy_chk
 __strncpy_chk2
 strnicmp(char const*, char const*, unsigned long)
 strpbrk
@@ -4737,6 +4870,7 @@ SVLDataLink::ReportTXFailures(int)
 SVLDataLink::SendLastRXID()
 SVLDataLink::SendPostTeardownShutdown()
 SVLDataLink::SendPostTeardownShutdown() attempting shutdown message
+SVLDataLink::SetPairAddress(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 SVLDataLink::SetPostTeardownShutdown(std::__ndk1::function<void ()>)
 SVLDataLink::s_postTeardownShutdown
 SVLDataLink::StartCapture(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
@@ -4756,7 +4890,7 @@ SVLDataLinkUDP::HandleSidebandPacket(SVLRoot::SidebandEventType)
 SVLDataLinkUDP::HandleStreamIsActiveEvent()
 SVLDataLinkUDP::HandleStreamIsInactiveEvent()
 SVLDataLinkUDP::Init()
-SVLDataLinkUDP::InternalTX(sockaddr const*)
+SVLDataLinkUDP::InternalTX(sockaddr const*, int)
 SVLDataLinkUDP -> Post Shutdown Sock: %d\n
 SVLDataLinkUDP::PrepareForPossibleShutdown()
 SVLDataLinkUDP::ProcessEvent(vr::VREvent_t const&)
@@ -4817,6 +4951,7 @@ SVLFEC::RerequestSkippedFrame(unsigned short)
 SVLFECRXFrame::AcceptVFD: Failed to acquire pRender
 SVLFECRXFrame::AcceptVFD(SVLVideoFrameDescriptor_t*, int)
 SVLFECRXFrame::AcceptVideoPacket(dataset*, int)
+SVLFECRXFrame::AcceptVideoPacket: m_pData was not suitable for video (null or insufficient size)
 SVLFECRXFrame::CheckRetry(int)
 SVLFECRXFrame::Initialize(unsigned short, unsigned int, SVLVideoFrameDescriptor_t*)
 SVLFECRXFrame::Invalidate()
@@ -4898,6 +5033,7 @@ SVLStaticProps::operator=(SVLStaticProps&&)
 SVLStaticProps::~SVLStaticProps()
 SVLWebViewThread
 SVST_HAPTICS_PACKET: Haptic event was dropped but we are restoring it
+sVTXFailFuzz
 SwapBuffers()
 Swapchains were regenerated
 swedish
@@ -5150,6 +5286,8 @@ typeinfo for std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>
 typeinfo for std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t>>
 typeinfo for std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 typeinfo for std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
+typeinfo for std::__ndk1::binary_function<XrSceneStream*, EStreamSceneState, void>
+typeinfo for std::__ndk1::__bind<void (XrSceneStream::*)(EStreamSceneState), XrSceneStream*, std::__ndk1::placeholders::__ph<1> const&>
 typeinfo for std::__ndk1::codecvt_base
 typeinfo for std::__ndk1::codecvt_byname<char16_t, char, mbstate_t>
 typeinfo for std::__ndk1::codecvt_byname<char32_t, char, mbstate_t>
@@ -5188,6 +5326,7 @@ typeinfo for std::__ndk1::__function::__base<void ()>
 typeinfo for std::__ndk1::__function::__base<void (AppPath, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)>
 typeinfo for std::__ndk1::__function::__base<void (ClientAudioEventType)>
 typeinfo for std::__ndk1::__function::__base<void (ELogLevel, char const*, void*)>
+typeinfo for std::__ndk1::__function::__base<void (EStreamSceneState)>
 typeinfo for std::__ndk1::__function::__base<void (QSVLClientEvent, std::__ndk1::variant<QSVLClientStreamState, QSVLClientWirelessTimeout>)>
 typeinfo for std::__ndk1::__function::__base<void (SceneEvent)>
 typeinfo for std::__ndk1::__function::__base<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>
@@ -5195,6 +5334,8 @@ typeinfo for std::__ndk1::__function::__base<void (std::__ndk1::vector<SeenServe
 typeinfo for std::__ndk1::__function::__base<void (ValueTransportID, bool)>
 typeinfo for std::__ndk1::__function::__base<void (XrqEvent, std::__ndk1::variant<XrEventDataReferenceSpaceChangePending>)>
 typeinfo for std::__ndk1::__function::__func<bool (*)(char), std::__ndk1::allocator<bool (*)(char)>, bool (char)>
+typeinfo for std::__ndk1::__function::__func<std::__ndk1::__bind<void (XrSceneStream::*)(EStreamSceneState), XrSceneStream*, std::__ndk1::placeholders::__ph<1> const&>, std::__ndk1::allocator<std::__ndk1::__bind<void (XrSceneStream::*)(EStreamSceneState), XrSceneStream*, std::__ndk1::placeholders::__ph<1> const&>>, void (EStreamSceneState)>
+typeinfo for std::__ndk1::__function::__func<StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)::'lambda'(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&), std::__ndk1::allocator<StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)::'lambda'(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>, void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>
 typeinfo for std::__ndk1::future_error
 typeinfo for std::__ndk1::ios_base
 typeinfo for std::__ndk1::ios_base::failure
@@ -5243,10 +5384,16 @@ typeinfo for std::__ndk1::__shared_ptr_emplace<QSVLFrameServer, std::__ndk1::all
 typeinfo for std::__ndk1::__shared_ptr_emplace<QSVLRendererXR, std::__ndk1::allocator<QSVLRendererXR>>
 typeinfo for std::__ndk1::__shared_ptr_emplace<QSVLXRInput, std::__ndk1::allocator<QSVLXRInput>>
 typeinfo for std::__ndk1::__shared_ptr_emplace<SRGBCorrectionPass, std::__ndk1::allocator<SRGBCorrectionPass>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<StreamBehavior_Empty, std::__ndk1::allocator<StreamBehavior_Empty>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<StreamBehavior_Initializing, std::__ndk1::allocator<StreamBehavior_Initializing>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<StreamBehavior_Loading, std::__ndk1::allocator<StreamBehavior_Loading>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<StreamBehavior_Resuming, std::__ndk1::allocator<StreamBehavior_Resuming>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<StreamBehavior_Spinner, std::__ndk1::allocator<StreamBehavior_Spinner>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<StreamBehavior_Streaming, std::__ndk1::allocator<StreamBehavior_Streaming>>
 typeinfo for std::__ndk1::__shared_ptr_emplace<Texture, std::__ndk1::allocator<Texture>>
-typeinfo for std::__ndk1::__shared_ptr_emplace<XrUIManager, std::__ndk1::allocator<XrUIManager>>
 typeinfo for std::__ndk1::__shared_ptr_pointer<VariableTransportHolder*, std::__ndk1::default_delete<VariableTransportHolder>, std::__ndk1::allocator<VariableTransportHolder>>
 typeinfo for std::__ndk1::__shared_ptr_pointer<WebView*, std::__ndk1::default_delete<WebView>, std::__ndk1::allocator<WebView>>
+typeinfo for std::__ndk1::__shared_ptr_pointer<XrUIManager*, std::__ndk1::default_delete<XrUIManager>, std::__ndk1::allocator<XrUIManager>>
 typeinfo for std::__ndk1::__shared_weak_count
 typeinfo for std::__ndk1::system_error
 typeinfo for std::__ndk1::time_base
@@ -5264,6 +5411,7 @@ typeinfo for std::__ndk1::time_put_byname<char, std::__ndk1::ostreambuf_iterator
 typeinfo for std::__ndk1::time_put_byname<wchar_t, std::__ndk1::ostreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>>
 typeinfo for std::__ndk1::time_put<char, std::__ndk1::ostreambuf_iterator<char, std::__ndk1::char_traits<char>>>
 typeinfo for std::__ndk1::time_put<wchar_t, std::__ndk1::ostreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>>
+typeinfo for std::__ndk1::__weak_result_type<void (XrSceneStream::*)(EStreamSceneState)>
 typeinfo for std::__ndk1::__widen_from_utf8<16ul>
 typeinfo for std::__ndk1::__widen_from_utf8<32ul>
 typeinfo for std::nested_exception
@@ -5276,6 +5424,14 @@ typeinfo for std::range_error
 typeinfo for std::runtime_error
 typeinfo for std::type_info
 typeinfo for std::underflow_error
+typeinfo for StreamBehavior
+typeinfo for StreamBehavior_Empty
+typeinfo for StreamBehavior_Initializing
+typeinfo for StreamBehavior_Loading
+typeinfo for StreamBehavior_Resuming
+typeinfo for StreamBehavior_Spinner
+typeinfo for StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)::'lambda'(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)
+typeinfo for StreamBehavior_Streaming
 typeinfo for SVLAudio
 typeinfo for SVLCodec
 typeinfo for SVLCrypt
@@ -5323,6 +5479,7 @@ typeinfo for wchar_t const*
 typeinfo for XrScene
 typeinfo for XrSceneLobby
 typeinfo for XrSceneNoop
+typeinfo for XRScene_Preflight
 typeinfo for XrSceneStatic
 typeinfo for XrSceneStream
 typeinfo name for 
@@ -5445,6 +5602,8 @@ typeinfo name for std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<ch
 typeinfo name for std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t>>
 typeinfo name for std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 typeinfo name for std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
+typeinfo name for std::__ndk1::binary_function<XrSceneStream*, EStreamSceneState, void>
+typeinfo name for std::__ndk1::__bind<void (XrSceneStream::*)(EStreamSceneState), XrSceneStream*, std::__ndk1::placeholders::__ph<1> const&>
 typeinfo name for std::__ndk1::codecvt_base
 typeinfo name for std::__ndk1::codecvt_byname<char16_t, char, mbstate_t>
 typeinfo name for std::__ndk1::codecvt_byname<char32_t, char, mbstate_t>
@@ -5479,12 +5638,14 @@ typeinfo name for std::__ndk1::ctype<char>
 typeinfo name for std::__ndk1::ctype<wchar_t>
 typeinfo name for std::__ndk1::default_delete<VariableTransportHolder>
 typeinfo name for std::__ndk1::default_delete<WebView>
+typeinfo name for std::__ndk1::default_delete<XrUIManager>
 typeinfo name for std::__ndk1::error_category
 typeinfo name for std::__ndk1::__function::__base<bool (char)>
 typeinfo name for std::__ndk1::__function::__base<void ()>
 typeinfo name for std::__ndk1::__function::__base<void (AppPath, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)>
 typeinfo name for std::__ndk1::__function::__base<void (ClientAudioEventType)>
 typeinfo name for std::__ndk1::__function::__base<void (ELogLevel, char const*, void*)>
+typeinfo name for std::__ndk1::__function::__base<void (EStreamSceneState)>
 typeinfo name for std::__ndk1::__function::__base<void (QSVLClientEvent, std::__ndk1::variant<QSVLClientStreamState, QSVLClientWirelessTimeout>)>
 typeinfo name for std::__ndk1::__function::__base<void (SceneEvent)>
 typeinfo name for std::__ndk1::__function::__base<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>
@@ -5492,6 +5653,8 @@ typeinfo name for std::__ndk1::__function::__base<void (std::__ndk1::vector<Seen
 typeinfo name for std::__ndk1::__function::__base<void (ValueTransportID, bool)>
 typeinfo name for std::__ndk1::__function::__base<void (XrqEvent, std::__ndk1::variant<XrEventDataReferenceSpaceChangePending>)>
 typeinfo name for std::__ndk1::__function::__func<bool (*)(char), std::__ndk1::allocator<bool (*)(char)>, bool (char)>
+typeinfo name for std::__ndk1::__function::__func<std::__ndk1::__bind<void (XrSceneStream::*)(EStreamSceneState), XrSceneStream*, std::__ndk1::placeholders::__ph<1> const&>, std::__ndk1::allocator<std::__ndk1::__bind<void (XrSceneStream::*)(EStreamSceneState), XrSceneStream*, std::__ndk1::placeholders::__ph<1> const&>>, void (EStreamSceneState)>
+typeinfo name for std::__ndk1::__function::__func<StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)::'lambda'(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&), std::__ndk1::allocator<StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)::'lambda'(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>, void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>
 typeinfo name for std::__ndk1::future_error
 typeinfo name for std::__ndk1::ios_base
 typeinfo name for std::__ndk1::ios_base::failure
@@ -5540,10 +5703,16 @@ typeinfo name for std::__ndk1::__shared_ptr_emplace<QSVLFrameServer, std::__ndk1
 typeinfo name for std::__ndk1::__shared_ptr_emplace<QSVLRendererXR, std::__ndk1::allocator<QSVLRendererXR>>
 typeinfo name for std::__ndk1::__shared_ptr_emplace<QSVLXRInput, std::__ndk1::allocator<QSVLXRInput>>
 typeinfo name for std::__ndk1::__shared_ptr_emplace<SRGBCorrectionPass, std::__ndk1::allocator<SRGBCorrectionPass>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<StreamBehavior_Empty, std::__ndk1::allocator<StreamBehavior_Empty>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<StreamBehavior_Initializing, std::__ndk1::allocator<StreamBehavior_Initializing>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<StreamBehavior_Loading, std::__ndk1::allocator<StreamBehavior_Loading>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<StreamBehavior_Resuming, std::__ndk1::allocator<StreamBehavior_Resuming>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<StreamBehavior_Spinner, std::__ndk1::allocator<StreamBehavior_Spinner>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<StreamBehavior_Streaming, std::__ndk1::allocator<StreamBehavior_Streaming>>
 typeinfo name for std::__ndk1::__shared_ptr_emplace<Texture, std::__ndk1::allocator<Texture>>
-typeinfo name for std::__ndk1::__shared_ptr_emplace<XrUIManager, std::__ndk1::allocator<XrUIManager>>
 typeinfo name for std::__ndk1::__shared_ptr_pointer<VariableTransportHolder*, std::__ndk1::default_delete<VariableTransportHolder>, std::__ndk1::allocator<VariableTransportHolder>>
 typeinfo name for std::__ndk1::__shared_ptr_pointer<WebView*, std::__ndk1::default_delete<WebView>, std::__ndk1::allocator<WebView>>
+typeinfo name for std::__ndk1::__shared_ptr_pointer<XrUIManager*, std::__ndk1::default_delete<XrUIManager>, std::__ndk1::allocator<XrUIManager>>
 typeinfo name for std::__ndk1::__shared_weak_count
 typeinfo name for std::__ndk1::system_error
 typeinfo name for std::__ndk1::time_base
@@ -5561,6 +5730,7 @@ typeinfo name for std::__ndk1::time_put_byname<char, std::__ndk1::ostreambuf_ite
 typeinfo name for std::__ndk1::time_put_byname<wchar_t, std::__ndk1::ostreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>>
 typeinfo name for std::__ndk1::time_put<char, std::__ndk1::ostreambuf_iterator<char, std::__ndk1::char_traits<char>>>
 typeinfo name for std::__ndk1::time_put<wchar_t, std::__ndk1::ostreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>>
+typeinfo name for std::__ndk1::__weak_result_type<void (XrSceneStream::*)(EStreamSceneState)>
 typeinfo name for std::__ndk1::__widen_from_utf8<16ul>
 typeinfo name for std::__ndk1::__widen_from_utf8<32ul>
 typeinfo name for std::nested_exception
@@ -5573,6 +5743,14 @@ typeinfo name for std::range_error
 typeinfo name for std::runtime_error
 typeinfo name for std::type_info
 typeinfo name for std::underflow_error
+typeinfo name for StreamBehavior
+typeinfo name for StreamBehavior_Empty
+typeinfo name for StreamBehavior_Initializing
+typeinfo name for StreamBehavior_Loading
+typeinfo name for StreamBehavior_Resuming
+typeinfo name for StreamBehavior_Spinner
+typeinfo name for StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)::'lambda'(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)
+typeinfo name for StreamBehavior_Streaming
 typeinfo name for SVLAudio
 typeinfo name for SVLCodec
 typeinfo name for SVLCrypt
@@ -5620,6 +5798,7 @@ typeinfo name for wchar_t const*
 typeinfo name for XrScene
 typeinfo name for XrSceneLobby
 typeinfo name for XrSceneNoop
+typeinfo name for XRScene_Preflight
 typeinfo name for XrSceneStatic
 typeinfo name for XrSceneStream
 > typename 
@@ -5627,6 +5806,18 @@ typename
 UDP BIND: %d CONN: %d\n
 UDP Driver\n
 ui_actions_
+UIAssetCache::GetInstance()::instance
+UIAssetCache::GetLocalizationInCurrentLocale: Could not find locale in map. Using english
+UIAssetCache::GetLocalizationInCurrentLocale: Current locale is %s
+UIAssetCache::GetLocalizationInCurrentLocale: Failed to load any localizations.
+UIAssetCache::GetLocalizationInCurrentLocale(Json::Value&)
+UIAssetCache::GetLocalizationInCurrentLocale: No localization for %s, using english
+UIAssetCache::~UIAssetCache()
+UIAssetCache::UIAssetCache()
+UIAssetCache::UIAssetCache: Failed to get contents %s
+UIAssetCache::UIAssetCache: Failed to parse input config
+UIAssetCache::UIAssetCache: Loading %s
+UIAssetCache::UIAssetCache: No language member %s
 UI config did not contain input object
 UI config did not contain output object
 ui_haptic
@@ -5640,7 +5831,6 @@ UIThreadCallbackHandler::UIThreadCallbackHandler()
 ukranian
 Unable to find device static props for "%s". Attempting to load defaults
 Unable to parse token length
-Unable to set UDP socket to SO_BROADCAST\n
 uncaught
 unexpected
 unexpected_handler unexpectedly returned
@@ -5757,6 +5947,7 @@ virtual bool QSVLXRInput::OnHapticFeedback(QSVLControllerHand, float, float, flo
 virtual bool QSVLXRInput::StopHapticFeedback(QSVLControllerHand)
 virtual bool XrSceneLobby::Render(XRQContext &)
 virtual bool XrSceneNoop::Render(XRQContext &)
+virtual bool XRScene_Preflight::Render(XRQContext &)
 virtual bool XrSceneStatic::Render(XRQContext &)
 virtual bool XrSceneStream::Render(XRQContext &)
 virtual thunk to 
@@ -5786,8 +5977,6 @@ void std::__ndk1::vector<Json::OurReader::StructuredError, std::__ndk1::allocato
 void std::__ndk1::vector<Json::PathArgument, std::__ndk1::allocator<Json::PathArgument>>::__push_back_slow_path<Json::PathArgument const&>(Json::PathArgument const&)
 void std::__ndk1::vector<Json::PathArgument, std::__ndk1::allocator<Json::PathArgument>>::__push_back_slow_path<Json::PathArgument>(Json::PathArgument&&)
 void std::__ndk1::vector<Json::Reader::StructuredError, std::__ndk1::allocator<Json::Reader::StructuredError>>::__push_back_slow_path<Json::Reader::StructuredError const&>(Json::Reader::StructuredError const&)
-void std::__ndk1::vector<PreflightCheckInfo, std::__ndk1::allocator<PreflightCheckInfo>>::__emplace_back_slow_path<PreflightCheckInfo const&>(PreflightCheckInfo const&)
-void std::__ndk1::vector<PreflightCheckInfo, std::__ndk1::allocator<PreflightCheckInfo>>::__emplace_back_slow_path<PreflightCheckInfo&>(PreflightCheckInfo&)
 void std::__ndk1::vector<SeenServers_t, std::__ndk1::allocator<SeenServers_t>>::__push_back_slow_path<SeenServers_t const&>(SeenServers_t const&)
 void std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__emplace_back_slow_path<char const (&) [32]>(char const (&) [32])
 void std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__emplace_back_slow_path<char const (&) [35]>(char const (&) [35])
@@ -5799,7 +5988,9 @@ void std::__ndk1::vector<std::__ndk1::function<void (AppPath, std::__ndk1::varia
 void std::__ndk1::vector<std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>, std::__ndk1::allocator<std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>>>::__push_back_slow_path<std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>>(std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>&&)
 void std::__ndk1::vector<std::__ndk1::pair<void*, std::__ndk1::function<void (ValueTransportID, bool)>>, std::__ndk1::allocator<std::__ndk1::pair<void*, std::__ndk1::function<void (ValueTransportID, bool)>>>>::__push_back_slow_path<std::__ndk1::pair<void*, std::__ndk1::function<void (ValueTransportID, bool)>>>(std::__ndk1::pair<void*, std::__ndk1::function<void (ValueTransportID, bool)>>&&)
 void std::__ndk1::vector<std::__ndk1::unique_ptr<SVLDataLink, std::__ndk1::default_delete<SVLDataLink>>, std::__ndk1::allocator<std::__ndk1::unique_ptr<SVLDataLink, std::__ndk1::default_delete<SVLDataLink>>>>::__push_back_slow_path<std::__ndk1::unique_ptr<SVLDataLink, std::__ndk1::default_delete<SVLDataLink>>>(std::__ndk1::unique_ptr<SVLDataLink, std::__ndk1::default_delete<SVLDataLink>>&&)
-void std::__ndk1::vector<StreamCheckInfo, std::__ndk1::allocator<StreamCheckInfo>>::__push_back_slow_path<StreamCheckInfo const&>(StreamCheckInfo const&)
+void std::__ndk1::vector<StreamBehavior_Loading::StreamCheckInfo, std::__ndk1::allocator<StreamBehavior_Loading::StreamCheckInfo>>::__push_back_slow_path<StreamBehavior_Loading::StreamCheckInfo const&>(StreamBehavior_Loading::StreamCheckInfo const&)
+void std::__ndk1::vector<XRScene_Preflight::PreflightCheckInfo, std::__ndk1::allocator<XRScene_Preflight::PreflightCheckInfo>>::__emplace_back_slow_path<XRScene_Preflight::PreflightCheckInfo const&>(XRScene_Preflight::PreflightCheckInfo const&)
+void std::__ndk1::vector<XRScene_Preflight::PreflightCheckInfo, std::__ndk1::allocator<XRScene_Preflight::PreflightCheckInfo>>::__emplace_back_slow_path<XRScene_Preflight::PreflightCheckInfo&>(XRScene_Preflight::PreflightCheckInfo&)
  volatile
 vrcore::crc32(unsigned int, void const*, unsigned long)
 VrInitGpuProfiling()
@@ -5916,6 +6107,8 @@ vtable for std::__ndk1::ctype<char>
 vtable for std::__ndk1::ctype<wchar_t>
 vtable for std::__ndk1::error_category
 vtable for std::__ndk1::__function::__func<bool (*)(char), std::__ndk1::allocator<bool (*)(char)>, bool (char)>
+vtable for std::__ndk1::__function::__func<std::__ndk1::__bind<void (XrSceneStream::*)(EStreamSceneState), XrSceneStream*, std::__ndk1::placeholders::__ph<1> const&>, std::__ndk1::allocator<std::__ndk1::__bind<void (XrSceneStream::*)(EStreamSceneState), XrSceneStream*, std::__ndk1::placeholders::__ph<1> const&>>, void (EStreamSceneState)>
+vtable for std::__ndk1::__function::__func<StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)::'lambda'(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&), std::__ndk1::allocator<StreamBehavior_Spinner::StreamBehavior_Spinner(XRQContext&)::'lambda'(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>, void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, Json::Value const&)>
 vtable for std::__ndk1::future_error
 vtable for std::__ndk1::ios_base
 vtable for std::__ndk1::ios_base::failure
@@ -5952,10 +6145,16 @@ vtable for std::__ndk1::__shared_ptr_emplace<QSVLFrameServer, std::__ndk1::alloc
 vtable for std::__ndk1::__shared_ptr_emplace<QSVLRendererXR, std::__ndk1::allocator<QSVLRendererXR>>
 vtable for std::__ndk1::__shared_ptr_emplace<QSVLXRInput, std::__ndk1::allocator<QSVLXRInput>>
 vtable for std::__ndk1::__shared_ptr_emplace<SRGBCorrectionPass, std::__ndk1::allocator<SRGBCorrectionPass>>
+vtable for std::__ndk1::__shared_ptr_emplace<StreamBehavior_Empty, std::__ndk1::allocator<StreamBehavior_Empty>>
+vtable for std::__ndk1::__shared_ptr_emplace<StreamBehavior_Initializing, std::__ndk1::allocator<StreamBehavior_Initializing>>
+vtable for std::__ndk1::__shared_ptr_emplace<StreamBehavior_Loading, std::__ndk1::allocator<StreamBehavior_Loading>>
+vtable for std::__ndk1::__shared_ptr_emplace<StreamBehavior_Resuming, std::__ndk1::allocator<StreamBehavior_Resuming>>
+vtable for std::__ndk1::__shared_ptr_emplace<StreamBehavior_Spinner, std::__ndk1::allocator<StreamBehavior_Spinner>>
+vtable for std::__ndk1::__shared_ptr_emplace<StreamBehavior_Streaming, std::__ndk1::allocator<StreamBehavior_Streaming>>
 vtable for std::__ndk1::__shared_ptr_emplace<Texture, std::__ndk1::allocator<Texture>>
-vtable for std::__ndk1::__shared_ptr_emplace<XrUIManager, std::__ndk1::allocator<XrUIManager>>
 vtable for std::__ndk1::__shared_ptr_pointer<VariableTransportHolder*, std::__ndk1::default_delete<VariableTransportHolder>, std::__ndk1::allocator<VariableTransportHolder>>
 vtable for std::__ndk1::__shared_ptr_pointer<WebView*, std::__ndk1::default_delete<WebView>, std::__ndk1::allocator<WebView>>
+vtable for std::__ndk1::__shared_ptr_pointer<XrUIManager*, std::__ndk1::default_delete<XrUIManager>, std::__ndk1::allocator<XrUIManager>>
 vtable for std::__ndk1::__shared_weak_count
 vtable for std::__ndk1::system_error
 vtable for std::__ndk1::time_get_byname<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>>
@@ -5975,6 +6174,13 @@ vtable for std::range_error
 vtable for std::runtime_error
 vtable for std::type_info
 vtable for std::underflow_error
+vtable for StreamBehavior
+vtable for StreamBehavior_Empty
+vtable for StreamBehavior_Initializing
+vtable for StreamBehavior_Loading
+vtable for StreamBehavior_Resuming
+vtable for StreamBehavior_Spinner
+vtable for StreamBehavior_Streaming
 vtable for SVLAudio
 vtable for SVLCodec
 vtable for SVLCrypt
@@ -5997,6 +6203,7 @@ vtable for UIThreadCallbackHandler
 vtable for UIThreadCallbackHandler::Callable
 vtable for XrSceneLobby
 vtable for XrSceneNoop
+vtable for XRScene_Preflight
 vtable for XrSceneStatic
 vtable for XrSceneStream
 VTE_CLIENT_AUDIO_STATE %d(%d) %d/%d(%d) - %d(%d) %d/%d(%d)\n
@@ -6009,6 +6216,7 @@ VTE_PROP_COLOR_CONTROL: Updating swapchain states
 VTE_SERVER_REQUESTED_FRAMETIME_US: Server requested refresh rate %.1f was not available. Using %.1f
 VTE_SERVER_REQUESTED_FRAMETIME_US: VTE_REQ_FRAMETIME_US was set to %i
 VTE_SERVER_TIMEOUT_SECONDS: Timeout updated to %i
+VTE_SHADER_SCENE_BACKGROUND: Not implemented!
 VTT for 
 VTT for std::__ndk1::basic_ifstream<char, std::__ndk1::char_traits<char>>
 VTT for std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>
@@ -6135,10 +6343,6 @@ XrAppManager::HandleTransitionToDash()
 XrAppManager::HandleTransitionToDash: Attempting to StartActivity back to SteamLink Dashboard (%s, %s)
 XrAppManager::HandleTransitionToDash: Transitioning to activity: %s, package: %s
 XrAppManager::HandleTransitionToDash: Transitioning to Dash
-XrAppManager::HandleTransitionToLobby()
-XrAppManager::HandleTransitionToLobby: App transitioned to lobby
-XrAppManager::HandleTransitionToStream()
-XrAppManager::HandleTransitionToStream: App transitioned to stream
 XrAppManager::HandleXREvent: Cleared scenes
 XrAppManager::HandleXREvent: Clearing scenes...
 XrAppManager::HandleXREvent: Completed XRQ_SHUTDOWN
@@ -6266,7 +6470,7 @@ XR_KHR_convert_timespec_time is not available on this runtime
 XR_KHR_opengl_es_enable
 xrLocateSpace
 xrLocateSpace(locateSpace, baseSpace, time, &outSpaceLocation )
-xrLocateSpace( m_eyeTrackingAction.vecActionSpaces[ 0 ], viewSpace, timeNow, &spaceLocation )
+xrLocateSpace( m_eyeTrackingAction.vecActionSpaces.front(), baseSpace, timeNow, &baseToEyeGazeLocation )
 xrLocateSpace( m_poseAction.vecActionSpaces[ i ], m_refXrqContext->mapReferenceSpaceSpaces[ m_refXrqContext->playSpace ], timeNow, &spaceLocation )
 xrLocateSpace( m_uiActions.pose.action.vecActionSpaces[ i ], xrqContext.mapReferenceSpaceSpaces.at( xrqContext.playSpace ), xrqContext.currentFrameState.predictedDisplayTime, &spaceLocation )
 xrLocateViews
@@ -6383,69 +6587,52 @@ XrSceneNoop::~XrSceneNoop()
 XrSceneNoop::XrSceneNoop()
 XrScene::OnEndOfFrame(XRQContext&)
 XrScene::OnTopOfFrame(XRQContext&)
+XRScene_Preflight::Focused: Preflight scene focused
+XRScene_Preflight::Focused(XRQContext&)
+XRScene_Preflight::GetPreflightChecks(std::__ndk1::vector<XRScene_Preflight::PreflightCheckInfo, std::__ndk1::allocator<XRScene_Preflight::PreflightCheckInfo>>&)
+XRScene_Preflight::Init(XRQContext&)
+XRScene_Preflight::PreflightCheckInfo::~PreflightCheckInfo()
+XRScene_Preflight::PreflightCheckThread()
+XRScene_Preflight::Render(XRQContext&)
+XRScene_Preflight::SendPreflightChecks(std::__ndk1::vector<XRScene_Preflight::PreflightCheckInfo, std::__ndk1::allocator<XRScene_Preflight::PreflightCheckInfo>> const&)
+XRScene_Preflight::UnFocused: Attempting to leave preflight scene
+XRScene_Preflight::UnFocused: Finished preflight scene
+XRScene_Preflight::UnFocused(XRQContext&, bool)
+XRScene_Preflight::~XRScene_Preflight()
+XRScene_Preflight::XRScene_Preflight(std::__ndk1::function<void (SceneEvent)>)
 XrSceneStatic::Init: Initializing swapchains...
 XrSceneStatic::Init(XRQContext&)
 XrSceneStatic::Render(XRQContext&)
 XrSceneStatic::~XrSceneStatic()
 XrSceneStatic::XrSceneStatic()
-XrSceneStream::BIsInInterstitialState()
-XrSceneStream::BShouldBeStreaming()
-XrSceneStream::EndOfFrame: Begin transitioning to next state: STREAM_SCENE_STATE_PREFLIGHT_NOTICE
-XrSceneStream::EndOfFrame: Begin transitioning to next state: STREAM_SCENE_STATE_STREAMING
-XrSceneStream::EndOfFrame: Begin transitioning to next state: STREAM_SCENE_STATE_STREAM_INIT->SCENE_STREAM_EVENT_REQUEST_LOBBY
-XrSceneStream::EndOfFrame: Begin transitioning to next state: STREAM_SCENE_STATE_STREAM_INIT->STREAM_SCENE_STATE_STREAM_INIT_WAITING_FOR_FRAME
-XrSceneStream::EndOfFrame: Begin transitioning to next state: STREAM_SCENE_STATE_STREAM_LOADING
-XrSceneStream::EndOfFrame: Begin transitioning to next state: STREAM_SCENE_STATE_STREAM_LOADING_CAN_RESUME
-XrSceneStream::EndOfFrame: Begin transitioning to next state: STREAM_SCENE_STATE_STREAM_LOADING_RESUMING
-XrSceneStream::EndOfFrame: Begin transitioning to next state: STREAM_SCENE_STATE_STREAM_PRELOADING
-XrSceneStream::EndOfFrame: Failed to initialize stream, transitioning to lobby
-XrSceneStream::EndOfFrame: m_pQSVLXRClientManager->Shutdown() complete\n
-XrSceneStream::Focused: Preflight checks failed! Displaying issues...
-XrSceneStream::Focused: Preflight checks passed. Transitioning to stream init
+XrSceneStream::ClearStream()
 XrSceneStream::Focused: Scene stream was focused
 XrSceneStream::Focused(XRQContext&)
 XrSceneStream::GetPreflightChecks ...
 XrSceneStream::GetPreflightChecks: Host is locked check failed 
 XrSceneStream::GetPreflightChecks: Host is on wireless check failed
 XrSceneStream::GetPreflightChecks: Not doing Wireless preflight check as it received MHz was invalid
-XrSceneStream::GetPreflightChecks(std::__ndk1::vector<PreflightCheckInfo, std::__ndk1::allocator<PreflightCheckInfo>>&)
 XrSceneStream::GetPreflightChecks: WiFi preflight check failed
 XrSceneStream::GetRequestedExtensions()
 XrSceneStream::GetStreamChecks: Host has quit
-XrSceneStream::GetStreamChecks(std::__ndk1::vector<StreamCheckInfo, std::__ndk1::allocator<StreamCheckInfo>>&)
 XrSceneStream::GetStreamChecks: WiFi connection test failed
 XrSceneStream::HandleXREvent(XRQContext&, XrqEvent, std::__ndk1::variant<XrEventDataReferenceSpaceChangePending> const&)
 XrSceneStream::Init: Failed to initialize preflight panel. Not displaying.
-XrSceneStream::Init: Failed to initialize stream animation panel. Not displaying.
 XrSceneStream::Init: Failed to initialize stream loading panel. Not displaying.
 XrSceneStream::Init: Initialized preflight panel
-XrSceneStream::Init: Initialized stream animation panel
 XrSceneStream::Init: Initialized stream loading panel
 XrSceneStream::Init: Initializing stream scene...
-XrSceneStream::Init: Successfully initialized stream scene
+XrSceneStream::Init: Successfully initialized
 XrSceneStream::Init(XRQContext&)
 XrSceneStream::OnEndOfFrame(XRQContext&)
 XrSceneStream::OnTopOfFrame(XRQContext&)
-XrSceneStream::PreflightCheckThread()
-XrSceneStream::Render: App was able to submit a new frame after STREAM_SCENE_STATE_STREAM_INIT_WAITING_FOR_FRAME, transitioning to streaming
-XrSceneStream::Render::STREAM_SCENE_STATE_STREAMING: Failed to retrieve a new frame within %llu ms (took %llu). Transitioning to preloading
-XrSceneStream::Render::STREAM_SCENE_STATE_STREAM_INIT_WAITING_FOR_FRAME: Failed to retrieve a new frame within 4s, transitioning to preloading
-XrSceneStream::Render::STREAM_SCENE_STATE_STREAM_LOADING_CAN_RESUME: Timeout exceeded, transitioning to resuming.
-XrSceneStream::Render::STREAM_SCENE_STATE_STREAM_PRELOADING: Failed to retrieve a new frame within %llu ms, transitioning to loading.
-XrSceneStream::Render: Wiped sideband event: %d
+XrSceneStream::QueueSceneTransition(EStreamSceneState)
 XrSceneStream::Render(XRQContext&)
-XrSceneStream::SendErrorcodeText(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)
 XrSceneStream::SendPreflightChecks ...
 XrSceneStream::SendPreflightChecks: Preflight checks were empty. Transitioning straight to stream init
-XrSceneStream::SendPreflightChecks(std::__ndk1::vector<PreflightCheckInfo, std::__ndk1::allocator<PreflightCheckInfo>> const&)
-XrSceneStream::SendWifiText(unsigned short)
-XrSceneStream::StreamErrorListenerThread()
-XrSceneStream::TransitionToPreflightNotice
-XrSceneStream::TransitionToPreflightNotice: Did not disable input as stream was not active
-XrSceneStream::TransitionToPreflightNotice: Disabled input as preflight check needed showing
-XrSceneStream::TransitionToPreflightNotice(XRQContext&)
-XrSceneStream::TransitionToStreamInit
-XrSceneStream::TransitionToStreamInit: Failed to init qsvl client.
+XrSceneStream::TransitionToState(EStreamSceneState)
+XrSceneStream::TransitionToState: Failed to find next state!
+XrSceneStream::TransitionToStreamInit: Failed to initialize client.
 XrSceneStream::TransitionToStreamInit: Invalid shader push (%d, %d, %d) ... %d
 XrSceneStream::TransitionToStreamInit: Launching stream with arguments passed from external
 XrSceneStream::TransitionToStreamInit: Launching stream with TCP IP: %s
@@ -6453,35 +6640,15 @@ XrSceneStream::TransitionToStreamInit: Launching stream with UDP IP: %s
 XrSceneStream::TransitionToStreamInit: Loading shader ID: %d (%d %d)\n
 XrSceneStream::TransitionToStreamInit: QSVL_CLIENT_REQUEST_QUIT: Received quit event
 XrSceneStream::TransitionToStreamInit: QSVL_CLIENT_REQUEST_QUIT: Received switch desktops event
-XrSceneStream::TransitionToStreamInit: QSVL_CLIENT_STREAM_STATE: Stream state updated. New state: %i
 XrSceneStream::TransitionToStreamInit: REALLY BAD: Unknown launch options for SVLClient!
 XrSceneStream::TransitionToStreamInit: Wifi lock acquired
 XrSceneStream::TransitionToStreamInitWifi lock failed to acquire
-XrSceneStream::TransitionToStreamInit(XRQContext&)
-XrSceneStream::TransitionToStreamLoadingCanResume
-XrSceneStream::TransitionToStreamLoadingCanResume(XRQContext&)
-XrSceneStream::TransitionToStreamLoading: No frame within %i seconds, requesting exit
-XrSceneStream::TransitionToStreamLoadingResuming
-XrSceneStream::TransitionToStreamLoadingResuming(XRQContext&)
-XrSceneStream::TransitionToStreamLoading: Updating text to loading error because last state was preloading state
-XrSceneStream::TransitionToStreamLoading(XRQContext&, StreamSceneState)
-XrSceneStream::TransitionToStreamPreloading
-XrSceneStream::TransitionToStreamPreloading(XRQContext&, StreamSceneState)
-XrSceneStream::TransitionToStreamStartOrResume
-XrSceneStream::TransitionToStreamStartOrResume(XRQContext&)
 XrSceneStream::UnFocused: Finished unfocusing
-XrSceneStream::UnFocused: m_pQSVLXRClientManager destroyed
-XrSceneStream::UnFocused: m_pQSVLXRClientManager::Shutdown complete
-XrSceneStream::UnFocused: PreFlightCheckThread stopped
-XrSceneStream::UnFocused: StreamErrorListenerThread stopped
-XrSceneStream::UnFocused: Stream scene was unfocused
-XrSceneStream::UnFocused: Stream scene was unfocused with intention of exit
 XrSceneStream::UnFocused(XRQContext&, bool)
 XrSceneStream::~XrSceneStream()
 XrSceneStream::~XrSceneStream() Complete
 XrSceneStream::~XrSceneStream() Start
 XrSceneStream::XrSceneStream(std::__ndk1::function<void (SceneEvent)>)
-XrSceneStream::~XrSceneStream() Threads Joined
 XrScene::UnFocused(XRQContext&, bool)
 XrScene::~XrScene()
 xrSetColorSpaceFB
@@ -6505,30 +6672,14 @@ XrUIInput::SendHapticTickToActiveHand(XRQContext const&)
 XrUIInput::~XrUIInput()
 XrUIInput::XrUIInput: Loading ui input config
 XrUIInput::XrUIInput(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)
-XrUIManager::AddLoadingPanel(unsigned short)
 XrUIManager::AddRenderedUIPanel: Added new UI panel
-XrUIManager::AddRenderedUIPanel: Could not find locale in map. Using english
-XrUIManager::AddRenderedUIPanel: Current locale is %s
-XrUIManager::AddRenderedUIPanel: Failed to find locale in map!
-XrUIManager::AddRenderedUIPanel: Failed to load any localizations.
-XrUIManager::AddRenderedUIPanel: No localization for %s, using english
+XrUIManager::AddRenderedUIPanel: Failed to load localization!
 XrUIManager::AddRenderedUIPanel: Panic! was not able to allocate new index
 XrUIManager::AddRenderedUIPanel(std::__ndk1::unique_ptr<XrUIPanel, std::__ndk1::default_delete<XrUIPanel>>, bool, std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1l, 1000000000l>>>)
 XrUIManager::AddTemporaryDialog: Adding temporary dialog under render thread...
 XrUIManager::AddTemporaryDialog(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int, bool)
-XrUIManager::BAreAllUnfocused()
-XrUIManager::BIsUIPanelVisible: Failed to find panel index in map!
-XrUIManager::BIsUIPanelVisible(unsigned short)
-XrUIManager::HideLoadingPanel()
-XrUIManager::HideLoadingPanelAfterDelay(float)
 XrUIManager::Init: Begin UI initialization
 XrUIManager::Init(XRQContext&)
-XrUIManager::IsLoadingPanelShowing()
-XrUIManager::LoadLocalization()
-XrUIManager::LoadLocalization: Failed to get contents %s
-XrUIManager::LoadLocalization: Failed to parse input config
-XrUIManager::LoadLocalization: Loading %s
-XrUIManager::LoadLocalization: No language member %s
 XrUIManager::RemoveRenderedUIPanel: Could not find the panel to delete!
 XrUIManager::RemoveRenderedUIPanel(unsigned short&, bool)
 XrUIManager::RenderFrame: Initializing panel on render thread
@@ -6542,7 +6693,6 @@ XrUIManager::SetShouldShowControllerModels(bool)
 XrUIManager::ShouldShowUIPanel: Failed to find panel index in map!
 XrUIManager::ShouldShowUIPanel: UI Panel was already: %s
 XrUIManager::ShouldShowUIPanel(unsigned short, bool)
-XrUIManager::ShowLoadingPanel()
 XrUIManager::ShowTemporaryDialog: Failed to initialize dialog. Not displaying!
 XrUIManager::~XrUIManager()
 XrUIManager::XrUIManager(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)
@@ -6589,21 +6739,20 @@ ZN12QSVLClientXR4InitEvE3$_1
 ZN12QSVLClientXR4InitEvE3$_2
 ZN12QSVLClientXR4InitEvE3$_3
 ZN12QSVLClientXR4InitEvE3$_4
+ZN12QSVLClientXR4InitEvE3$_5
+ZN12QSVLClientXR4InitEvE3$_6
 ZN12QSVLClientXRC1ER10XRQContextR13LaunchOptionsNSt6__ndk110shared_ptrI9QSVLInputEENS5_I13QSVLDeviceHmdEENS5_I11XrUIManagerEENS4_8functionIFv15QSVLClientEventNS4_7variantIJ21QSVLClientStreamState25QSVLClientWirelessTimeoutEEEEEEE3$_0
 ZN12XrAppManager4InitER6XRQAppE3$_1
 ZN12XrAppManagerC1EvE3$_0
 ZN12XrSceneLobby7FocusedER10XRQContextE3$_1
 ZN12XrSceneLobbyC1ENSt6__ndk18functionIFv10SceneEventEEEE3$_0
-ZN13XrSceneStream22TransitionToStreamInitER10XRQContextE3$_4
-ZN13XrSceneStream22TransitionToStreamInitER10XRQContextE3$_5
-ZN13XrSceneStream22TransitionToStreamInitER10XRQContextE3$_6
 ZN13XrSceneStream4InitER10XRQContextE3$_0
-ZN13XrSceneStream4InitER10XRQContextE3$_1
-ZN13XrSceneStream4InitER10XRQContextE3$_2
-ZN13XrSceneStream4InitER10XRQContextE3$_3
+ZN13XrSceneStream7FocusedER10XRQContextE3$_1
 ZN14QSVLRendererXR4InitERK10XRQContextE3$_0
 ZN14QSVLRendererXR4InitERK10XRQContextE3$_1
 ZN14SVLDataLinkUDP26PrepareForPossibleShutdownEvE3$_0
+ZN17XRScene_Preflight4InitER10XRQContextE3$_0
+ZN22StreamBehavior_SpinnerC1ER10XRQContextEUlRKNSt6__ndk112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEERKN4Json5ValueEE_
 ZN6CVRLog7InitLogEPKcS1_bmE3$_0
 ZN7SVLRoot4InitEvE3$_0
 ZN7SVLRoot4InitEvE3$_1
