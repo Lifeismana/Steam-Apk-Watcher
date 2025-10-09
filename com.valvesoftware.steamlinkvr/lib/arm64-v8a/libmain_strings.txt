@@ -3481,6 +3481,7 @@ Abilita i controlli touch
 Abilita modalit
 aBNc
 abort
+ABORTED
 about to perform blocking dns call from the main thread.  consider refactoring.\n
 abox!
 ABQ/
@@ -4089,7 +4090,7 @@ anchor_y
 "A\n+CMsgRemoteClientBroadcastClientIDDeconflict
 an conectar un control.
 android
-Android (12027248, +pgo, +bolt, +lto, +mlgo, based on r522817) clang version 18.0.1 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
+Android (13624864, +pgo, +bolt, +lto, +mlgo, based on r530567e) clang version 19.0.1 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
 Android (5900059 based on r365631c) clang version 9.0.8 (https://android.googlesource.com/toolchain/llvm-project 207d7abc1a2abf3ef8d4301736d6a7ebc224a290) (based on LLVM 9.0.8svn)
 Android (6875598, based on r399163b) clang version 11.0.5 (https://android.googlesource.com/toolchain/llvm-project 87f1315dfbea7c137aa2e6d362dbb457e388158d)
 ANDROID_CreateOverlay(int, int)
@@ -5641,6 +5642,8 @@ bool picojson::default_parse_context::parse_string<std::__ndk1::__wrap_iter<char
 bool picojson::_parse_codepoint<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__wrap_iter<char const*>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&, picojson::input<std::__ndk1::__wrap_iter<char const*>>&)
 bool picojson::_parse_object<picojson::default_parse_context, std::__ndk1::__wrap_iter<char const*>>(picojson::default_parse_context&, picojson::input<std::__ndk1::__wrap_iter<char const*>>&)
 bool picojson::_parse<picojson::default_parse_context, std::__ndk1::__wrap_iter<char const*>>(picojson::default_parse_context&, picojson::input<std::__ndk1::__wrap_iter<char const*>>&)
+bool picojson::_parse_string<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__wrap_iter<char const*>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&, picojson::input<std::__ndk1::__wrap_iter<char const*>>&)
+bool SteamNetworkingSocketsLib::LinkStatsTrackerRelayBase::RecvPackedAckInternal<SteamNetworkingSocketsLib::LinkStatsTracker<SteamNetworkingSocketsLib::LinkStatsTrackerClientRelaySession>>(SteamNetworkingSocketsLib::LinkStatsTracker<SteamNetworkingSocketsLib::LinkStatsTrackerClientRelaySession>*, unsigned int, long long)
 bool SteamNetworkingSocketsLib::RecvValidDataPacketGeneric<CMsgSteamDatagramConnectionStatsP2PRouterToClient, SteamNetworkingSocketsLib::CSteamNetworkConnectionBase>(SteamNetworkingSocketsLib::CSteamNetworkConnectionBase&, CMsgSteamDatagramConnectionStatsP2PRouterToClient&, SteamNetworkingSocketsLib::SDRClientRecvPacketContext_t&)
 bool SteamNetworkingSocketsLib::SetConfigValueTyped<float>(SteamNetworkingSocketsLib::GlobalConfigValueEntry*, ESteamNetworkingConfigScope, long, ESteamNetworkingConfigDataType, void const*)
 bool SteamNetworkingSocketsLib::SetConfigValueTyped<int>(SteamNetworkingSocketsLib::GlobalConfigValueEntry*, ESteamNetworkingConfigScope, long, ESteamNetworkingConfigDataType, void const*)
@@ -7989,6 +7992,8 @@ CHIDDeviceInputReport::MergeFrom(google::protobuf::Message const&)
 CHIDDeviceInputReport::New() const
 CHIDDeviceInputReport::New(google::protobuf::Arena*) const
 CHIDDeviceInputReport::SetCachedSize(int) const
+CHIDDeviceInputReport::set_delta_report(void const*, unsigned long)
+CHIDDeviceInputReport::set_full_report(void const*, unsigned long)
 CHIDDeviceListLocal::BHaveDevicesChanged()
 CHIDDeviceListLocal::~CHIDDeviceListLocal()
 CHIDDeviceListLocal::CHIDDeviceListLocal()
@@ -8201,6 +8206,7 @@ CHIDMessageFromRemote_RequestResponse::MergeFrom(google::protobuf::Message const
 CHIDMessageFromRemote_RequestResponse::New() const
 CHIDMessageFromRemote_RequestResponse::New(google::protobuf::Arena*) const
 CHIDMessageFromRemote_RequestResponse::SetCachedSize(int) const
+CHIDMessageFromRemote_RequestResponse::set_data(void const*, unsigned long)
 CHIDMessageFromRemote::set_allocated_close_all_devices(CHIDMessageFromRemote_CloseAllDevices*)
 CHIDMessageFromRemote::set_allocated_close_device(CHIDMessageFromRemote_CloseDevice*)
 CHIDMessageFromRemote::set_allocated_reports(CHIDMessageFromRemote_DeviceInputReports*)
@@ -11278,6 +11284,7 @@ CMsgSteamNetworkingIdentityLegacyBinary::MergeFrom(google::protobuf::Message con
 CMsgSteamNetworkingIdentityLegacyBinary::New() const
 CMsgSteamNetworkingIdentityLegacyBinary::New(google::protobuf::Arena*) const
 CMsgSteamNetworkingIdentityLegacyBinary::SetCachedSize(int) const
+CMsgSteamNetworkingIdentityLegacyBinary::set_generic_bytes(void const*, unsigned long)
 CMsgSteamNetworkingIdentityLegacyBinary::set_generic_string(char const*)
 CMsgSteamNetworkingIdentityLegacyBinary::SharedDtor()
 .CMsgSteamNetworkingIPAddress
@@ -11326,6 +11333,7 @@ CMsgSteamNetworkingP2PRendezvous_ApplicationMessage::MergeFrom(google::protobuf:
 CMsgSteamNetworkingP2PRendezvous_ApplicationMessage::New() const
 CMsgSteamNetworkingP2PRendezvous_ApplicationMessage::New(google::protobuf::Arena*) const
 CMsgSteamNetworkingP2PRendezvous_ApplicationMessage::SetCachedSize(int) const
+CMsgSteamNetworkingP2PRendezvous_ApplicationMessage::set_data(void const*, unsigned long)
 CMsgSteamNetworkingP2PRendezvous::ByteSizeLong() const
 CMsgSteamNetworkingP2PRendezvous::Clear()
 CMsgSteamNetworkingP2PRendezvous::~CMsgSteamNetworkingP2PRendezvous()
@@ -16760,7 +16768,6 @@ CTrafficShaper::SentPacket(int, int, unsigned int)
 CTrafficShaper::SetBandwidthLimit(int)
 CTrafficShaper::SetBandwidthLimit(int, int)
 CTransportSignalMsg
-CTransportSignalMsg::add_sdr(void const*, unsigned long)
 CTransportSignalMsg::ByteSizeLong() const
 CTransportSignalMsg::Clear()
 CTransportSignalMsg::CopyFrom(CTransportSignalMsg const&)
@@ -17202,6 +17209,7 @@ CUtlHashMap<unsigned long long, CServerInfo, CDefEquals<unsigned long long>, Has
 CUtlHashMap<unsigned long long, CServerInfo, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::EnsureCapacity(int)
 CUtlHashMap<unsigned long long, CServerInfo, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::Find(unsigned long long const&) const
 CUtlHashMap<unsigned long long, CServerInfo, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::IncrementalRehash()
+CUtlHashMap<unsigned long long, CServerInfo, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::InsertOrReplace(unsigned long long const&, CServerInfo const&)
 CUtlHashMap<unsigned long long, CServerInfo, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::Purge()
 CUtlHashMap<unsigned long long, CServerInfo, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::RemoveAt(int)
 CUtlHashMap<unsigned long long, CServerInfo, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::RemoveNodeFromBucket(int, int)
@@ -17485,7 +17493,6 @@ CUtlVectorAutoPurge<char*>::~CUtlVectorAutoPurge()
 CUtlVector<CAutoRelease<CStreamPacket>, CUtlMemory<CAutoRelease<CStreamPacket>>>::~CUtlVector()
 CUtlVector<CClientIDMap::ClientInformation, CUtlMemory<CClientIDMap::ClientInformation>>::AddToTail(CClientIDMap::ClientInformation const&)
 CUtlVector<CClientIDMap::ClientInformation, CUtlMemory<CClientIDMap::ClientInformation>>::~CUtlVector()
-CUtlVector<CClientIDMap::ClientInformation, CUtlMemory<CClientIDMap::ClientInformation>>::Purge()
 CUtlVector<CFastFrameStats, CUtlMemory<CFastFrameStats>>::~CUtlVector()
 CUtlVector<char*, CUtlMemory<char*>>::PurgeAndDeleteElements()
 CUtlVector<CHIDDeviceInfo, CUtlMemory<CHIDDeviceInfo>>::CopyArray(CHIDDeviceInfo const*, int)
@@ -19547,6 +19554,7 @@ Du kan ta musmark
 Du kan tilf
 Du kan veksle mellom kontrollerens musemodus i kontrolleroverlegget.
 Du kan vise eller fjerne musemark
+.dummy
 dummy.ArraySize() == 0
 dummy.IsNull()
 dummy_legacy_identity_binary
@@ -22140,6 +22148,7 @@ fvn.
 F^vn
 )fvV
 %\fvZ3A#
+Fw?2
 Fw7CF<E
 fWAi
 \fWCg
@@ -22727,6 +22736,7 @@ google::protobuf::Base64Escape(unsigned char const*, int, char*, int)
 google::protobuf::Base64Escape(unsigned char const*, int, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>*, bool)
 google::protobuf::Base64Unescape(google::protobuf::StringPiece, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>*)
 google::protobuf::Base64UnescapeInternal(char const*, int, char*, int, signed char const*)
+google.protobuf.bridge.MessageSet
 google::protobuf::CalculateBase64EscapedLen(int)
 google::protobuf::CalculateBase64EscapedLen(int, bool)
 google::protobuf::CaseEqual(google::protobuf::StringPiece, google::protobuf::StringPiece)
@@ -22897,7 +22907,6 @@ google::protobuf::DescriptorPool::TryFindExtensionInFallbackDatabase(google::pro
 google::protobuf::DescriptorPool::TryFindFileInFallbackDatabase(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&) const
 google::protobuf::DescriptorPool::TryFindSymbolInFallbackDatabase(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&) const
 google/protobuf/descriptor.proto
-google::protobuf::DescriptorProto::add_reserved_name(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 google::protobuf::DescriptorProto::ArenaDtor(void*)
 google::protobuf::DescriptorProto::ByteSizeLong() const
 google::protobuf::DescriptorProto::Clear()
@@ -23027,7 +23036,6 @@ google::protobuf::EnumDescriptor::FindValueByNumberCreatingIfUnknown(int) const
 google::protobuf::EnumDescriptor::FindValueByNumber(int) const
 google::protobuf::EnumDescriptor::GetLocationPath(std::__ndk1::vector<int, std::__ndk1::allocator<int>>*) const
 google::protobuf::EnumDescriptor::GetSourceLocation(google::protobuf::SourceLocation*) const
-google::protobuf::EnumDescriptorProto::add_reserved_name(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 google::protobuf::EnumDescriptorProto::ArenaDtor(void*)
 google::protobuf::EnumDescriptorProto::ByteSizeLong() const
 google::protobuf::EnumDescriptorProto::Clear()
@@ -23100,6 +23108,7 @@ google::protobuf::EnumOptions::GetCachedSize() const
 google::protobuf::EnumOptions::GetMaybeArenaPointer() const
 google::protobuf::EnumOptions::GetMetadata() const
 google::protobuf::EnumOptions* google::protobuf::Arena::CreateMaybeMessage<google::protobuf::EnumOptions>(google::protobuf::Arena*)
+google::protobuf::EnumOptions* google::protobuf::DescriptorPool::Tables::AllocateMessage<google::protobuf::EnumOptions>(google::protobuf::EnumOptions*)
 google::protobuf::EnumOptions::InitAsDefaultInstance()
 google::protobuf::EnumOptions::_InternalParse(char const*, google::protobuf::internal::ParseContext*)
 google::protobuf::EnumOptions::_InternalSerialize(unsigned char*, google::protobuf::io::EpsCopyOutputStream*) const
@@ -23161,6 +23170,7 @@ google::protobuf::EnumValueOptions::GetCachedSize() const
 google::protobuf::EnumValueOptions::GetMaybeArenaPointer() const
 google::protobuf::EnumValueOptions::GetMetadata() const
 google::protobuf::EnumValueOptions* google::protobuf::Arena::CreateMaybeMessage<google::protobuf::EnumValueOptions>(google::protobuf::Arena*)
+google::protobuf::EnumValueOptions* google::protobuf::DescriptorPool::Tables::AllocateMessage<google::protobuf::EnumValueOptions>(google::protobuf::EnumValueOptions*)
 google::protobuf::EnumValueOptions::InitAsDefaultInstance()
 google::protobuf::EnumValueOptions::_InternalParse(char const*, google::protobuf::internal::ParseContext*)
 google::protobuf::EnumValueOptions::_InternalSerialize(unsigned char*, google::protobuf::io::EpsCopyOutputStream*) const
@@ -23188,6 +23198,7 @@ google::protobuf::ExtensionRangeOptions::GetCachedSize() const
 google::protobuf::ExtensionRangeOptions::GetMaybeArenaPointer() const
 google::protobuf::ExtensionRangeOptions::GetMetadata() const
 google::protobuf::ExtensionRangeOptions* google::protobuf::Arena::CreateMaybeMessage<google::protobuf::ExtensionRangeOptions>(google::protobuf::Arena*)
+google::protobuf::ExtensionRangeOptions* google::protobuf::DescriptorPool::Tables::AllocateMessage<google::protobuf::ExtensionRangeOptions>(google::protobuf::ExtensionRangeOptions*)
 google::protobuf::ExtensionRangeOptions::InitAsDefaultInstance()
 google::protobuf::ExtensionRangeOptions::_InternalParse(char const*, google::protobuf::internal::ParseContext*)
 google::protobuf::ExtensionRangeOptions::_InternalSerialize(unsigned char*, google::protobuf::io::EpsCopyOutputStream*) const
@@ -23319,6 +23330,7 @@ google::protobuf::FieldOptions::GetCachedSize() const
 google::protobuf::FieldOptions::GetMaybeArenaPointer() const
 google::protobuf::FieldOptions::GetMetadata() const
 google::protobuf::FieldOptions* google::protobuf::Arena::CreateMaybeMessage<google::protobuf::FieldOptions>(google::protobuf::Arena*)
+google::protobuf::FieldOptions* google::protobuf::DescriptorPool::Tables::AllocateMessage<google::protobuf::FieldOptions>(google::protobuf::FieldOptions*)
 google::protobuf::FieldOptions::InitAsDefaultInstance()
 google::protobuf::FieldOptions::_InternalParse(char const*, google::protobuf::internal::ParseContext*)
 google::protobuf::FieldOptions::_InternalSerialize(unsigned char*, google::protobuf::io::EpsCopyOutputStream*) const
@@ -23356,7 +23368,6 @@ google::protobuf::FileDescriptor::FindServiceByName(std::__ndk1::basic_string<ch
 google::protobuf::FileDescriptor::GetSourceLocation(google::protobuf::SourceLocation*) const
 google::protobuf::FileDescriptor::GetSourceLocation(std::__ndk1::vector<int, std::__ndk1::allocator<int>> const&, google::protobuf::SourceLocation*) const
 google::protobuf::FileDescriptor::InternalDependenciesOnceInit() const
-google::protobuf::FileDescriptorProto::add_dependency(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 google::protobuf::FileDescriptorProto::ArenaDtor(void*)
 google::protobuf::FileDescriptorProto::ByteSizeLong() const
 google::protobuf::FileDescriptorProto::Clear()
@@ -23452,6 +23463,7 @@ google::protobuf::FileOptions::GetCachedSize() const
 google::protobuf::FileOptions::GetMaybeArenaPointer() const
 google::protobuf::FileOptions::GetMetadata() const
 google::protobuf::FileOptions* google::protobuf::Arena::CreateMaybeMessage<google::protobuf::FileOptions>(google::protobuf::Arena*)
+google::protobuf::FileOptions* google::protobuf::DescriptorPool::Tables::AllocateMessage<google::protobuf::FileOptions>(google::protobuf::FileOptions*)
 google::protobuf::FileOptions::InitAsDefaultInstance()
 google::protobuf::FileOptions::_InternalParse(char const*, google::protobuf::internal::ParseContext*)
 google::protobuf::FileOptions::_InternalSerialize(unsigned char*, google::protobuf::io::EpsCopyOutputStream*) const
@@ -23641,7 +23653,6 @@ google::protobuf::internal::ExtensionSet::Extension::SpaceUsedExcludingSelfLong(
 google::protobuf::internal::ExtensionSet::ExtensionType(int) const
 google::protobuf::internal::ExtensionSet::FindExtensionInfoFromFieldNumber(int, int, google::protobuf::internal::ExtensionFinder*, google::protobuf::internal::ExtensionInfo*, bool*)
 google::protobuf::internal::ExtensionSet::FindExtensionInfoFromTag(unsigned int, google::protobuf::internal::ExtensionFinder*, int*, google::protobuf::internal::ExtensionInfo*, bool*)
-google::protobuf::internal::ExtensionSet::FindExtension(int, unsigned int, google::protobuf::MessageLite const*, google::protobuf::internal::ParseContext const*, google::protobuf::internal::ExtensionInfo*, bool*)
 google::protobuf::internal::ExtensionSet::FindOrNullInLargeMap(int)
 google::protobuf::internal::ExtensionSet::FindOrNullInLargeMap(int) const
 google::protobuf::internal::ExtensionSet::FindOrNull(int)
@@ -24481,6 +24492,7 @@ google::protobuf::MessageOptions::GetCachedSize() const
 google::protobuf::MessageOptions::GetMaybeArenaPointer() const
 google::protobuf::MessageOptions::GetMetadata() const
 google::protobuf::MessageOptions* google::protobuf::Arena::CreateMaybeMessage<google::protobuf::MessageOptions>(google::protobuf::Arena*)
+google::protobuf::MessageOptions* google::protobuf::DescriptorPool::Tables::AllocateMessage<google::protobuf::MessageOptions>(google::protobuf::MessageOptions*)
 google::protobuf::MessageOptions::InitAsDefaultInstance()
 google::protobuf::MessageOptions::_InternalParse(char const*, google::protobuf::internal::ParseContext*)
 google::protobuf::MessageOptions::_InternalSerialize(unsigned char*, google::protobuf::io::EpsCopyOutputStream*) const
@@ -24553,6 +24565,7 @@ google::protobuf::MethodOptions::GetCachedSize() const
 google::protobuf::MethodOptions::GetMaybeArenaPointer() const
 google::protobuf::MethodOptions::GetMetadata() const
 google::protobuf::MethodOptions* google::protobuf::Arena::CreateMaybeMessage<google::protobuf::MethodOptions>(google::protobuf::Arena*)
+google::protobuf::MethodOptions* google::protobuf::DescriptorPool::Tables::AllocateMessage<google::protobuf::MethodOptions>(google::protobuf::MethodOptions*)
 google::protobuf::MethodOptions::IdempotencyLevel_ARRAYSIZE
 google::protobuf::MethodOptions_IdempotencyLevel_descriptor()
 google::protobuf::MethodOptions_IdempotencyLevel_IsValid(int)
@@ -24623,6 +24636,7 @@ google::protobuf::OneofOptions::GetCachedSize() const
 google::protobuf::OneofOptions::GetMaybeArenaPointer() const
 google::protobuf::OneofOptions::GetMetadata() const
 google::protobuf::OneofOptions* google::protobuf::Arena::CreateMaybeMessage<google::protobuf::OneofOptions>(google::protobuf::Arena*)
+google::protobuf::OneofOptions* google::protobuf::DescriptorPool::Tables::AllocateMessage<google::protobuf::OneofOptions>(google::protobuf::OneofOptions*)
 google::protobuf::OneofOptions::InitAsDefaultInstance()
 google::protobuf::OneofOptions::_InternalParse(char const*, google::protobuf::internal::ParseContext*)
 google::protobuf::OneofOptions::_InternalSerialize(unsigned char*, google::protobuf::io::EpsCopyOutputStream*) const
@@ -25339,6 +25353,7 @@ google::protobuf::ServiceOptions::GetCachedSize() const
 google::protobuf::ServiceOptions::GetMaybeArenaPointer() const
 google::protobuf::ServiceOptions::GetMetadata() const
 google::protobuf::ServiceOptions* google::protobuf::Arena::CreateMaybeMessage<google::protobuf::ServiceOptions>(google::protobuf::Arena*)
+google::protobuf::ServiceOptions* google::protobuf::DescriptorPool::Tables::AllocateMessage<google::protobuf::ServiceOptions>(google::protobuf::ServiceOptions*)
 google::protobuf::ServiceOptions::InitAsDefaultInstance()
 google::protobuf::ServiceOptions::_InternalParse(char const*, google::protobuf::internal::ParseContext*)
 google::protobuf::ServiceOptions::_InternalSerialize(unsigned char*, google::protobuf::io::EpsCopyOutputStream*) const
@@ -25403,6 +25418,7 @@ google::protobuf::SourceCodeInfo::GetCachedSize() const
 google::protobuf::SourceCodeInfo::GetMaybeArenaPointer() const
 google::protobuf::SourceCodeInfo::GetMetadata() const
 google::protobuf::SourceCodeInfo* google::protobuf::Arena::CreateMaybeMessage<google::protobuf::SourceCodeInfo>(google::protobuf::Arena*)
+google::protobuf::SourceCodeInfo* google::protobuf::DescriptorPool::Tables::AllocateMessage<google::protobuf::SourceCodeInfo>(google::protobuf::SourceCodeInfo*)
 google::protobuf::SourceCodeInfo::InitAsDefaultInstance()
 google::protobuf::SourceCodeInfo::_InternalParse(char const*, google::protobuf::internal::ParseContext*)
 google::protobuf::SourceCodeInfo::_InternalSerialize(unsigned char*, google::protobuf::io::EpsCopyOutputStream*) const
@@ -25700,6 +25716,7 @@ google::protobuf::UnknownFieldSet::SpaceUsedExcludingSelf() const
 google::protobuf::UnknownFieldSet::SpaceUsedExcludingSelfLong() const
 google::protobuf::UnknownFieldSet::SpaceUsedLong() const
 google::protobuf::UTF8FirstLetterNumBytes(char const*, int)
+google::protobuf::util::error::CodeEnumToString(google::protobuf::util::error::Code)
 google::protobuf::util::operator<<(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>&, google::protobuf::util::Status const&)
 google::protobuf::util::Status::CANCELLED
 google::protobuf::util::Status::OK
@@ -27869,6 +27886,7 @@ in F8 veya BA
 in F8 veya GER
 in F8 veya KILAVUZ + X kombinasyonunu kullan
 infinite
+infinity
 inflate
 inflateEnd
 inflateInit_
@@ -28009,7 +28027,6 @@ int CUtlHashMap<unsigned int, IHIDDevice*, CDefEquals<unsigned int>, HashFunctor
 int CUtlHashMap<unsigned int, SteamNetworkingSocketsLib::SharedClusterData::DataCenterPing, std::__ndk1::equal_to<unsigned int>, std::__ndk1::hash<unsigned int>, unsigned int>::InsertUnconstructed<unsigned int const&>(unsigned int const&, int*, bool)
 int CUtlHashMap<unsigned int, SteamNetworkingSocketsLib::SharedClusterData*, std::__ndk1::equal_to<unsigned int>, std::__ndk1::hash<unsigned int>, unsigned int>::InsertUnconstructed<unsigned int const&>(unsigned int const&, int*, bool)
 int CUtlHashMap<unsigned long long, bool, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::InsertUnconstructed<unsigned long long const&>(unsigned long long const&, int*, bool)
-int CUtlHashMap<unsigned long long, CServerInfo, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::FindOrInsert_Internal<unsigned long long const&, CServerInfo const&>(unsigned long long const&, CServerInfo const&, CUtlHashMap<unsigned long long, CServerInfo, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::ReplaceExisting)
 int CUtlHashMap<unsigned long long, CServerInfo, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::InsertUnconstructed<unsigned long long const&>(unsigned long long const&, int*, bool)
 int CUtlHashMap<unsigned long long, CServerManager::PersistentClientInfo_t*, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::InsertUnconstructed<unsigned long long const&>(unsigned long long const&, int*, bool)
 int CUtlHashMap<unsigned long long, CStreamPlayer::LocalCursor_t*, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::InsertUnconstructed<unsigned long long const&>(unsigned long long const&, int*, bool)
@@ -28028,6 +28045,7 @@ interface_number
 InterfaceReg::InterfaceReg(void* (*)(), char const*)
 InterfaceReg::s_pInterfaceRegs
 interior_score
+INTERNAL
 InternalCheckValidCachedRoutes
 internal error
 internalerror
@@ -30779,7 +30797,7 @@ lhUT,
 l@!HuT
 LHzlIP/
 libandroid.so
-lib Aug  6 2025 18:26:14
+lib Aug  7 2025 19:00:53
 LIBC
 libc++_shared.so
 libc.so
@@ -30850,7 +30868,7 @@ linebuffer_new
 link_bandwidth
 Link en la configuraci
 Linkerbumper
-Linker: LLD 18.0.1
+Linker: LLD 19.0.1
 Linkerstick
 Linker Stick
 Linkertrackpad
@@ -36728,6 +36746,7 @@ pL$q
 PL6K|
 .placeholder.proto
 .PLACEHOLDER_VALUE
+PLACEHOLDER_VALUE
 placer, ajouter et masquer les commandes dans les param
 placer la souris au centre de l'
 placer la souris en dehors de l'
@@ -37277,6 +37296,7 @@ PrOO;SO
 Prossimo set/layer di azioni
 Prost
 Prosz
+proto
 proto2
 proto3
 Protobuf failed to parse
@@ -38187,6 +38207,7 @@ Qxz"
 QXzc
 QY0Q
 )qY"34c
+QY8i a
 QYAi)a
 Q{yc
 qyI5
@@ -39173,7 +39194,6 @@ RNZ6
 rO4N
 ,rO5{
 Roboto
-rOc3}
 Rock Candy Gamepad for Xbox 360
 Rock Candy Gamepad for Xbox One 2015
 Rock Candy Gamepad for Xbox One 2016
@@ -39607,7 +39627,6 @@ ryyw
 rZ$2
 \rz0\nN
 \rz3a
-RZ9j!b\t
 rz9y
 )RzA0H#
 \Rzb
@@ -42630,7 +42649,6 @@ std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::all
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::erase(unsigned long, unsigned long)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::find(char const*, unsigned long, unsigned long) const
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::find(char, unsigned long) const
-std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>* google::protobuf::Reflection::AddField<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>(google::protobuf::Message*, google::protobuf::FieldDescriptor const*) const
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::__grow_by(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::__init_copy_ctor_external(char const*, unsigned long)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::insert(unsigned long, char const*)
@@ -42641,12 +42659,11 @@ std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::all
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::reserve(unsigned long)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::resize(unsigned long, char)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::rfind(char, unsigned long) const
-std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>& std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::append[abi:ne180000]<char const*, 0>(__has_forward_iterator_category, __has_forward_iterator_category)
-std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>& std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::append[abi:nn180000]<char const*, 0>(__has_forward_iterator_category, __has_forward_iterator_category)
-std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>& std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::append[abi:nn180000]<std::__ndk1::__wrap_iter<char const*>, 0>(__has_forward_iterator_category, __has_forward_iterator_category)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>& std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::append[abi:ne190000]<char const*, 0>(__has_forward_iterator_category, __has_forward_iterator_category)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>& std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::append[abi:nn190000]<char const*, 0>(__has_forward_iterator_category, __has_forward_iterator_category)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>& std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::append[abi:nn190000]<std::__ndk1::__wrap_iter<char const*>, 0>(__has_forward_iterator_category, __has_forward_iterator_category)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> std::__ndk1::operator+<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>(char const*, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>* std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__push_back_slow_path<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
-std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>* std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__push_back_slow_path<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&&)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> SteamNetworkingSocketsLib::DescribeStatsContents<CMsgSteamDatagramConnectionStatsP2PClientToRouter>(CMsgSteamDatagramConnectionStatsP2PClientToRouter const&)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> SteamNetworkingSocketsLib::DescribeStatsContents<CMsgSteamDatagramConnectionStatsP2PRouterToClient>(CMsgSteamDatagramConnectionStatsP2PRouterToClient const&)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> SteamNetworkingSocketsLib::V_sprintf_stdstring<1024>(char const*, ...)
@@ -42680,7 +42697,7 @@ std::__ndk1::pair<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__n
 std::__ndk1::pair<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<google::protobuf::Descriptor const*, google::protobuf::DynamicMessage::TypeInfo const*>, void*>*>, bool> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<google::protobuf::Descriptor const*, google::protobuf::DynamicMessage::TypeInfo const*>, std::__ndk1::__unordered_map_hasher<google::protobuf::Descriptor const*, std::__ndk1::__hash_value_type<google::protobuf::Descriptor const*, google::protobuf::DynamicMessage::TypeInfo const*>, std::__ndk1::hash<google::protobuf::Descriptor const*>, std::__ndk1::equal_to<google::protobuf::Descriptor const*>, true>, std::__ndk1::__unordered_map_equal<google::protobuf::Descriptor const*, std::__ndk1::__hash_value_type<google::protobuf::Descriptor const*, google::protobuf::DynamicMessage::TypeInfo const*>, std::__ndk1::equal_to<google::protobuf::Descriptor const*>, std::__ndk1::hash<google::protobuf::Descriptor const*>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<google::protobuf::Descriptor const*, google::protobuf::DynamicMessage::TypeInfo const*>>>::__emplace_unique_key_args<google::protobuf::Descriptor const*, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<google::protobuf::Descriptor const* const&>, std::__ndk1::tuple<>>(google::protobuf::Descriptor const* const&, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<google::protobuf::Descriptor const* const&>&&, std::__ndk1::tuple<>&&)
 std::__ndk1::pair<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<google::protobuf::Descriptor const*, google::protobuf::Message const*>, void*>*>, bool> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<google::protobuf::Descriptor const*, google::protobuf::Message const*>, std::__ndk1::__unordered_map_hasher<google::protobuf::Descriptor const*, std::__ndk1::__hash_value_type<google::protobuf::Descriptor const*, google::protobuf::Message const*>, std::__ndk1::hash<google::protobuf::Descriptor const*>, std::__ndk1::equal_to<google::protobuf::Descriptor const*>, true>, std::__ndk1::__unordered_map_equal<google::protobuf::Descriptor const*, std::__ndk1::__hash_value_type<google::protobuf::Descriptor const*, google::protobuf::Message const*>, std::__ndk1::equal_to<google::protobuf::Descriptor const*>, std::__ndk1::hash<google::protobuf::Descriptor const*>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<google::protobuf::Descriptor const*, google::protobuf::Message const*>>>::__emplace_unique_key_args<google::protobuf::Descriptor const*, std::__ndk1::pair<google::protobuf::Descriptor const* const, google::protobuf::Message const*> const&>(google::protobuf::Descriptor const* const&, std::__ndk1::pair<google::protobuf::Descriptor const* const, google::protobuf::Message const*> const&)
 std::__ndk1::pair<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, google::protobuf::SourceCodeInfo_Location const*>, void*>*>, bool> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, google::protobuf::SourceCodeInfo_Location const*>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, google::protobuf::SourceCodeInfo_Location const*>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, google::protobuf::SourceCodeInfo_Location const*>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, google::protobuf::SourceCodeInfo_Location const*>>>::__emplace_unique_key_args<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&&>, std::__ndk1::tuple<>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&&>&&, std::__ndk1::tuple<>&&)
-std::__ndk1::pair<std::__ndk1::__map_iterator<std::__ndk1::__tree_iterator<std::__ndk1::__value_type<long long, SteamNetworkingSocketsLib::SSNPPacketGap>, std::__ndk1::__tree_node<std::__ndk1::__value_type<long long, SteamNetworkingSocketsLib::SSNPPacketGap>, void*>*, long>>, bool> std::__ndk1::map<long long, SteamNetworkingSocketsLib::SSNPPacketGap, std::__ndk1::less<long long>, std::__ndk1::allocator<std::__ndk1::pair<long long const, SteamNetworkingSocketsLib::SSNPPacketGap>>>::insert[abi:ne180000]<std::__ndk1::pair<long long, SteamNetworkingSocketsLib::SSNPPacketGap>&, void>(std::__ndk1::pair<long long, SteamNetworkingSocketsLib::SSNPPacketGap>&)
+std::__ndk1::pair<std::__ndk1::__map_iterator<std::__ndk1::__tree_iterator<std::__ndk1::__value_type<long long, SteamNetworkingSocketsLib::SSNPPacketGap>, std::__ndk1::__tree_node<std::__ndk1::__value_type, void*>*, long>>, bool> std::__ndk1::map<long long, SteamNetworkingSocketsLib::SSNPPacketGap, std::__ndk1::less<long long>, std::__ndk1::allocator<std::__ndk1::pair<long long const, SteamNetworkingSocketsLib::SSNPPacketGap>>>::insert[abi:ne190000]<std::__ndk1::pair<long long, SteamNetworkingSocketsLib::SSNPPacketGap>&, 0>(is_constructible&&)
 std::__ndk1::pair<std::__ndk1::__tree_iterator<google::protobuf::MapKey*, std::__ndk1::__tree_node<google::protobuf::MapKey*, void*>*, long>, bool> std::__ndk1::__tree<google::protobuf::MapKey*, google::protobuf::Map<google::protobuf::MapKey, google::protobuf::MapValueRef>::InnerMap::KeyCompare, google::protobuf::Map<google::protobuf::MapKey, google::protobuf::MapValueRef>::MapAllocator<google::protobuf::MapKey*>>::__emplace_unique_key_args<google::protobuf::MapKey*, google::protobuf::MapKey*>(google::protobuf::MapKey* const&, google::protobuf::MapKey*&&)
 std::__ndk1::pair<std::__ndk1::__tree_iterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__tree_node<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void*>*, long>, bool> std::__ndk1::__tree<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__emplace_unique_key_args<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 std::__ndk1::pair<std::__ndk1::__tree_iterator<std::__ndk1::__value_type<long long, SteamNetworkingSocketsLib::SNPInFlightPacket_t>, std::__ndk1::__tree_node<std::__ndk1::__value_type<long long, SteamNetworkingSocketsLib::SNPInFlightPacket_t>, void*>*, long>, bool> std::__ndk1::__tree<std::__ndk1::__value_type<long long, SteamNetworkingSocketsLib::SNPInFlightPacket_t>, std::__ndk1::__map_value_compare<long long, std::__ndk1::__value_type<long long, SteamNetworkingSocketsLib::SNPInFlightPacket_t>, std::__ndk1::less<long long>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<long long, SteamNetworkingSocketsLib::SNPInFlightPacket_t>>>::__emplace_unique_key_args<long long, std::__ndk1::pair<long long, SteamNetworkingSocketsLib::SNPInFlightPacket_t>&>(long long const&, std::__ndk1::pair<long long, SteamNetworkingSocketsLib::SNPInFlightPacket_t>&)
@@ -42700,7 +42717,7 @@ std::__ndk1::pair<std::__ndk1::__tree_iterator<std::__ndk1::__value_type<std::__
 std::__ndk1::pair<std::__ndk1::__tree_iterator<std::__ndk1::__value_type<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::pair<void const*, int>>, std::__ndk1::__tree_node<std::__ndk1::__value_type<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::pair<void const*, int>>, void*>*, long>, bool> std::__ndk1::__tree<std::__ndk1::__value_type<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::pair<void const*, int>>, std::__ndk1::__map_value_compare<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::__value_type<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::pair<void const*, int>>, std::__ndk1::less<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::pair<void const*, int>>>>::__emplace_unique_key_args<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::pair<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int> const, std::__ndk1::pair<void const*, int>> const&>(std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int> const&, std::__ndk1::pair<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int> const, std::__ndk1::pair<void const*, int>> const&)
 std::__ndk1::pair<std::__ndk1::__tree_iterator<std::__ndk1::__value_type<std::__ndk1::vector<int, std::__ndk1::allocator<int>>, int>, std::__ndk1::__tree_node<std::__ndk1::__value_type<std::__ndk1::vector<int, std::__ndk1::allocator<int>>, int>, void*>*, long>, bool> std::__ndk1::__tree<std::__ndk1::__value_type<std::__ndk1::vector<int, std::__ndk1::allocator<int>>, int>, std::__ndk1::__map_value_compare<std::__ndk1::vector<int, std::__ndk1::allocator<int>>, std::__ndk1::__value_type<std::__ndk1::vector<int, std::__ndk1::allocator<int>>, int>, std::__ndk1::less<std::__ndk1::vector<int, std::__ndk1::allocator<int>>>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<std::__ndk1::vector<int, std::__ndk1::allocator<int>>, int>>>::__emplace_unique_key_args<std::__ndk1::vector<int, std::__ndk1::allocator<int>>, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::vector<int, std::__ndk1::allocator<int>> const&>, std::__ndk1::tuple<>>(std::__ndk1::vector<int, std::__ndk1::allocator<int>> const&, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::vector<int, std::__ndk1::allocator<int>> const&>&&, std::__ndk1::tuple<>&&)
 std::__ndk1::pair<std::__ndk1::__tree_iterator<std::__ndk1::__value_type<std::__ndk1::vector<int, std::__ndk1::allocator<int>>, std::__ndk1::vector<int, std::__ndk1::allocator<int>>>, std::__ndk1::__tree_node<std::__ndk1::__value_type<std::__ndk1::vector<int, std::__ndk1::allocator<int>>, std::__ndk1::vector<int, std::__ndk1::allocator<int>>>, void*>*, long>, bool> std::__ndk1::__tree<std::__ndk1::__value_type<std::__ndk1::vector<int, std::__ndk1::allocator<int>>, std::__ndk1::vector<int, std::__ndk1::allocator<int>>>, std::__ndk1::__map_value_compare<std::__ndk1::vector<int, std::__ndk1::allocator<int>>, std::__ndk1::__value_type<std::__ndk1::vector<int, std::__ndk1::allocator<int>>, std::__ndk1::vector<int, std::__ndk1::allocator<int>>>, std::__ndk1::less<std::__ndk1::vector<int, std::__ndk1::allocator<int>>>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<std::__ndk1::vector<int, std::__ndk1::allocator<int>>, std::__ndk1::vector<int, std::__ndk1::allocator<int>>>>>::__emplace_unique_key_args<std::__ndk1::vector<int, std::__ndk1::allocator<int>>, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::vector<int, std::__ndk1::allocator<int>> const&>, std::__ndk1::tuple<>>(std::__ndk1::vector<int, std::__ndk1::allocator<int>> const&, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::vector<int, std::__ndk1::allocator<int>> const&>&&, std::__ndk1::tuple<>&&)
-std::__ndk1::pair<SteamNetworkingSocketsLib::SteamDatagramNetwork::POP*, SteamNetworkingSocketsLib::SteamDatagramNetwork::POP*> std::__ndk1::__move_loop<std::__ndk1::_ClassicAlgPolicy>::operator()[abi:ne180000]<SteamNetworkingSocketsLib::SteamDatagramNetwork::POP*, SteamNetworkingSocketsLib::SteamDatagramNetwork::POP*, SteamNetworkingSocketsLib::SteamDatagramNetwork::POP*>(SteamNetworkingSocketsLib::SteamDatagramNetwork::POP*, SteamNetworkingSocketsLib::SteamDatagramNetwork::POP*, SteamNetworkingSocketsLib::SteamDatagramNetwork::POP*) const
+std::__ndk1::pair<SteamNetworkingSocketsLib::SteamDatagramNetwork::POP*, SteamNetworkingSocketsLib::SteamDatagramNetwork::POP*> std::__ndk1::__move_loop<std::__ndk1::_ClassicAlgPolicy>::operator()[abi:ne190000]<SteamNetworkingSocketsLib::SteamDatagramNetwork::POP*, SteamNetworkingSocketsLib::SteamDatagramNetwork::POP*, SteamNetworkingSocketsLib::SteamDatagramNetwork::POP*>(SteamNetworkingSocketsLib::SteamDatagramNetwork::POP*, SteamNetworkingSocketsLib::SteamDatagramNetwork::POP*, SteamNetworkingSocketsLib::SteamDatagramNetwork::POP*) const
 std::__ndk1::recursive_timed_mutex::lock()
 std::__ndk1::recursive_timed_mutex::~recursive_timed_mutex()
 std::__ndk1::recursive_timed_mutex::recursive_timed_mutex()
@@ -42744,26 +42761,10 @@ std::__ndk1::__tree_node_base<void*>*& std::__ndk1::__tree<std::__ndk1::__value_
 std::__ndk1::__tree_node_base<void*>*& std::__ndk1::__tree<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, vjson::Value>, std::__ndk1::__map_value_compare<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, vjson::Value>, vjson::ObjectKeyLess, true>, std::__ndk1::allocator<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, vjson::Value>>>::__find_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>(std::__ndk1::__tree_const_iterator<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, vjson::Value>, std::__ndk1::__tree_node<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, vjson::Value>, void*>*, long>, std::__ndk1::__tree_end_node<std::__ndk1::__tree_node_base<void*>*>*&, std::__ndk1::__tree_node_base<void*>*&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 std::__ndk1::__tree_node_base<void*>*& std::__ndk1::__tree<std::__ndk1::__value_type<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, google::protobuf::FileDescriptorProto const*>, std::__ndk1::__map_value_compare<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::__value_type<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, google::protobuf::FileDescriptorProto const*>, std::__ndk1::less<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, google::protobuf::FileDescriptorProto const*>>>::__find_equal<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>>(std::__ndk1::__tree_end_node<std::__ndk1::__tree_node_base<void*>*>*&, std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int> const&)
 std::__ndk1::__tree_node_base<void*>*& std::__ndk1::__tree<std::__ndk1::__value_type<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::pair<void const*, int>>, std::__ndk1::__map_value_compare<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::__value_type<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::pair<void const*, int>>, std::__ndk1::less<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::pair<void const*, int>>>>::__find_equal<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>>(std::__ndk1::__tree_end_node<std::__ndk1::__tree_node_base<void*>*>*&, std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int> const&)
-std::__ndk1::unique_ptr<char [], std::__ndk1::default_delete<char []>>* std::__ndk1::vector<std::__ndk1::unique_ptr<char [], std::__ndk1::default_delete<char []>>, std::__ndk1::allocator<std::__ndk1::unique_ptr<char [], std::__ndk1::default_delete<char []>>>>::__emplace_back_slow_path<char*>(char*&&)
-std::__ndk1::unique_ptr<google::protobuf::FileDescriptorProto const, std::__ndk1::default_delete<google::protobuf::FileDescriptorProto const>>* std::__ndk1::vector<std::__ndk1::unique_ptr<google::protobuf::FileDescriptorProto const, std::__ndk1::default_delete<google::protobuf::FileDescriptorProto const>>, std::__ndk1::allocator<std::__ndk1::unique_ptr<google::protobuf::FileDescriptorProto const, std::__ndk1::default_delete<google::protobuf::FileDescriptorProto const>>>>::__emplace_back_slow_path<google::protobuf::FileDescriptorProto const*&>(google::protobuf::FileDescriptorProto const*&)
-std::__ndk1::unique_ptr<google::protobuf::FileDescriptorTables, std::__ndk1::default_delete<google::protobuf::FileDescriptorTables>>* std::__ndk1::vector<std::__ndk1::unique_ptr<google::protobuf::FileDescriptorTables, std::__ndk1::default_delete<google::protobuf::FileDescriptorTables>>, std::__ndk1::allocator<std::__ndk1::unique_ptr<google::protobuf::FileDescriptorTables, std::__ndk1::default_delete<google::protobuf::FileDescriptorTables>>>>::__emplace_back_slow_path<google::protobuf::FileDescriptorTables*&>(google::protobuf::FileDescriptorTables*&)
-std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>* std::__ndk1::vector<std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>, std::__ndk1::allocator<std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>>>::__emplace_back_slow_path<google::protobuf::EnumOptions*&>(google::protobuf::EnumOptions*&)
-std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>* std::__ndk1::vector<std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>, std::__ndk1::allocator<std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>>>::__emplace_back_slow_path<google::protobuf::EnumValueOptions*&>(google::protobuf::EnumValueOptions*&)
-std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>* std::__ndk1::vector<std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>, std::__ndk1::allocator<std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>>>::__emplace_back_slow_path<google::protobuf::ExtensionRangeOptions*&>(google::protobuf::ExtensionRangeOptions*&)
-std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>* std::__ndk1::vector<std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>, std::__ndk1::allocator<std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>>>::__emplace_back_slow_path<google::protobuf::FieldOptions*&>(google::protobuf::FieldOptions*&)
-std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>* std::__ndk1::vector<std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>, std::__ndk1::allocator<std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>>>::__emplace_back_slow_path<google::protobuf::FileOptions*&>(google::protobuf::FileOptions*&)
-std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>* std::__ndk1::vector<std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>, std::__ndk1::allocator<std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>>>::__emplace_back_slow_path<google::protobuf::MessageOptions*&>(google::protobuf::MessageOptions*&)
-std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>* std::__ndk1::vector<std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>, std::__ndk1::allocator<std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>>>::__emplace_back_slow_path<google::protobuf::MethodOptions*&>(google::protobuf::MethodOptions*&)
-std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>* std::__ndk1::vector<std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>, std::__ndk1::allocator<std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>>>::__emplace_back_slow_path<google::protobuf::OneofOptions*&>(google::protobuf::OneofOptions*&)
-std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>* std::__ndk1::vector<std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>, std::__ndk1::allocator<std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>>>::__emplace_back_slow_path<google::protobuf::ServiceOptions*&>(google::protobuf::ServiceOptions*&)
-std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>* std::__ndk1::vector<std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>, std::__ndk1::allocator<std::__ndk1::unique_ptr<google::protobuf::Message, std::__ndk1::default_delete<google::protobuf::Message>>>>::__emplace_back_slow_path<google::protobuf::SourceCodeInfo*&>(google::protobuf::SourceCodeInfo*&)
-std::__ndk1::unique_ptr<google::protobuf::TextFormat::ParseInfoTree, std::__ndk1::default_delete<google::protobuf::TextFormat::ParseInfoTree>>* std::__ndk1::vector<std::__ndk1::unique_ptr<google::protobuf::TextFormat::ParseInfoTree, std::__ndk1::default_delete<google::protobuf::TextFormat::ParseInfoTree>>, std::__ndk1::allocator<std::__ndk1::unique_ptr<google::protobuf::TextFormat::ParseInfoTree, std::__ndk1::default_delete<google::protobuf::TextFormat::ParseInfoTree>>>>::__emplace_back_slow_path<google::protobuf::TextFormat::ParseInfoTree*>(google::protobuf::TextFormat::ParseInfoTree*&&)
-std::__ndk1::unique_ptr<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::default_delete<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>* std::__ndk1::vector<std::__ndk1::unique_ptr<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::default_delete<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>, std::__ndk1::allocator<std::__ndk1::unique_ptr<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::default_delete<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>>>::__emplace_back_slow_path<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>*&>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>*&)
-std::__ndk1::unique_ptr<std::__ndk1::once_flag, std::__ndk1::default_delete<std::__ndk1::once_flag>>* std::__ndk1::vector<std::__ndk1::unique_ptr<std::__ndk1::once_flag, std::__ndk1::default_delete<std::__ndk1::once_flag>>, std::__ndk1::allocator<std::__ndk1::unique_ptr<std::__ndk1::once_flag, std::__ndk1::default_delete<std::__ndk1::once_flag>>>>::__emplace_back_slow_path<std::__ndk1::once_flag*&>(std::__ndk1::once_flag*&)
 std::__ndk1::unique_ptr<std::__ndk1::__tree_node<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, vjson::Value>, void*>, std::__ndk1::__tree_node_destructor<std::__ndk1::allocator<std::__ndk1::__tree_node<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, vjson::Value>, void*>>>> std::__ndk1::__tree<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, vjson::Value>, std::__ndk1::__map_value_compare<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, vjson::Value>, vjson::ObjectKeyLess, true>, std::__ndk1::allocator<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, vjson::Value>>>::__construct_node<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, vjson::Value> const&>(std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, vjson::Value> const&)
 std::__ndk1::unordered_map<char const*, google::protobuf::Symbol, google::protobuf::hash<char const*>, google::protobuf::streq, std::__ndk1::allocator<std::__ndk1::pair<char const* const, google::protobuf::Symbol>>>::value_type::second_type const* google::protobuf::FindOrNull<std::__ndk1::unordered_map<char const*, google::protobuf::Symbol, google::protobuf::hash<char const*>, google::protobuf::streq, std::__ndk1::allocator<std::__ndk1::pair<char const* const, google::protobuf::Symbol>>>>(std::__ndk1::unordered_map<char const*, google::protobuf::Symbol, google::protobuf::hash<char const*>, google::protobuf::streq, std::__ndk1::allocator<std::__ndk1::pair<char const* const, google::protobuf::Symbol>>> const&, std::__ndk1::unordered_map<char const*, google::protobuf::Symbol, google::protobuf::hash<char const*>, google::protobuf::streq, std::__ndk1::allocator<std::__ndk1::pair<char const* const, google::protobuf::Symbol>>>::value_type::first_type const&)
-std::__ndk1::__wrap_iter<google::protobuf::UnknownField*> std::__ndk1::vector<google::protobuf::UnknownField, std::__ndk1::allocator<google::protobuf::UnknownField>>::__insert_with_size[abi:nn180000]<std::__ndk1::move_iterator<std::__ndk1::__wrap_iter<google::protobuf::UnknownField*>>, std::__ndk1::move_iterator<std::__ndk1::__wrap_iter<google::protobuf::UnknownField*>>>(std::__ndk1::__wrap_iter<google::protobuf::UnknownField const*>, std::__ndk1::move_iterator<std::__ndk1::__wrap_iter<google::protobuf::UnknownField*>>, std::__ndk1::move_iterator<std::__ndk1::__wrap_iter<google::protobuf::UnknownField*>>, long)
-std::__ndk1::__wrap_iter<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>*> std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__insert_with_size[abi:nn180000]<std::__ndk1::__tree_const_iterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__tree_node<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void*>*, long>, std::__ndk1::__tree_const_iterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__tree_node<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void*>*, long>>(std::__ndk1::__wrap_iter<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const*>, std::__ndk1::__tree_const_iterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__tree_node<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void*>*, long>, std::__ndk1::__tree_const_iterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__tree_node<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void*>*, long>, long)
+std::__ndk1::__wrap_iter<google::protobuf::UnknownField*> std::__ndk1::vector<google::protobuf::UnknownField, std::__ndk1::allocator<google::protobuf::UnknownField>>::__insert_with_size[abi:nn190000]<std::__ndk1::move_iterator<std::__ndk1::__wrap_iter<google::protobuf::UnknownField*>>, std::__ndk1::move_iterator<std::__ndk1::__wrap_iter<google::protobuf::UnknownField*>>>(std::__ndk1::__wrap_iter<google::protobuf::UnknownField const*>, std::__ndk1::move_iterator<std::__ndk1::__wrap_iter<google::protobuf::UnknownField*>>, std::__ndk1::move_iterator<std::__ndk1::__wrap_iter<google::protobuf::UnknownField*>>, long)
+std::__ndk1::__wrap_iter<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>*> std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__insert_with_size[abi:nn190000]<std::__ndk1::__tree_const_iterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__tree_node<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void*>*, long>, std::__ndk1::__tree_const_iterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__tree_node<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void*>*, long>>(std::__ndk1::__wrap_iter<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const*>, std::__ndk1::__tree_const_iterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__tree_node<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void*>*, long>, std::__ndk1::__tree_const_iterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__tree_node<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void*>*, long>, long)
 std::nothrow
 stdout
 std::out_of_range::~out_of_range()
@@ -44992,7 +44993,6 @@ ThhT.77.
 t hi
 thinker
 ". This appears to be a value from a sibling type.
-This can't happen; base64 decoder state = 
 this->cur_ptr < this->end()
 this->cur_ptr <= this->end() && x.cur_ptr <= this->end()
 This is an S/MIME signed message%s%s
@@ -48380,6 +48380,7 @@ undefined
 undefined generator
 undefined order
 Undocumented SOCKS5 mode attempted to be used by server.
+uNe3
 Unencrypted
 Unencrypted addresses only allowed to 'dev' POPID
 Unerwarteter Fehler
@@ -50585,6 +50586,7 @@ void google::protobuf::internal::RepeatedFieldHelper<4>::Serialize<google::proto
 void google::protobuf::internal::RepeatedFieldHelper<5>::Serialize<google::protobuf::io::CodedOutputStream>(void const*, google::protobuf::internal::FieldMetadata const&, google::protobuf::io::CodedOutputStream*)
 void google::protobuf::internal::RepeatedFieldHelper<6>::Serialize<google::protobuf::io::CodedOutputStream>(void const*, google::protobuf::internal::FieldMetadata const&, google::protobuf::io::CodedOutputStream*)
 void google::protobuf::internal::RepeatedFieldHelper<7>::Serialize<google::protobuf::io::CodedOutputStream>(void const*, google::protobuf::internal::FieldMetadata const&, google::protobuf::io::CodedOutputStream*)
+void google::protobuf::internal::RepeatedPtrFieldBase::AddAllocatedInternal<google::protobuf::RepeatedPtrField<google::protobuf::MessageLite>::TypeHandler>(google::protobuf::RepeatedPtrField<google::protobuf::MessageLite>::TypeHandler::Type*, std::__ndk1::integral_constant<bool, false>)
 void google::protobuf::internal::RepeatedPtrFieldBase::AddAllocatedSlowWithCopy<google::protobuf::internal::GenericTypeHandler<google::protobuf::Message>>(google::protobuf::internal::GenericTypeHandler<google::protobuf::Message>::Type*, google::protobuf::Arena*, google::protobuf::Arena*)
 void google::protobuf::internal::RepeatedPtrFieldBase::AddAllocatedSlowWithCopy<google::protobuf::RepeatedPtrField<google::protobuf::Message>::TypeHandler>(google::protobuf::RepeatedPtrField<google::protobuf::Message>::TypeHandler::Type*, google::protobuf::Arena*, google::protobuf::Arena*)
 void google::protobuf::internal::RepeatedPtrFieldBase::AddAllocatedSlowWithCopy<google::protobuf::RepeatedPtrField<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>::TypeHandler>(google::protobuf::RepeatedPtrField<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>::TypeHandler::Type*, google::protobuf::Arena*, google::protobuf::Arena*)
@@ -50599,9 +50601,6 @@ void google::protobuf::internal::RepeatedPtrFieldBase::SwapFallback<google::prot
 void google::protobuf::internal::RepeatedPtrFieldBase::SwapFallback<google::protobuf::internal::GenericTypeHandler<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>(google::protobuf::internal::RepeatedPtrFieldBase*)
 void google::protobuf::internal::RepeatedPtrFieldBase::SwapFallback<google::protobuf::RepeatedPtrField<google::protobuf::Message>::TypeHandler>(google::protobuf::internal::RepeatedPtrFieldBase*)
 void google::protobuf::internal::RepeatedPtrFieldBase::SwapFallback<google::protobuf::RepeatedPtrField<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>::TypeHandler>(google::protobuf::internal::RepeatedPtrFieldBase*)
-void google::protobuf::internal::RepeatedPtrFieldBase::UnsafeArenaAddAllocated<google::protobuf::internal::GenericTypeHandler<google::protobuf::Message>>(google::protobuf::internal::GenericTypeHandler<google::protobuf::Message>::Type*)
-void google::protobuf::internal::RepeatedPtrFieldBase::UnsafeArenaAddAllocated<google::protobuf::RepeatedPtrField<google::protobuf::MessageLite>::TypeHandler>(google::protobuf::RepeatedPtrField<google::protobuf::MessageLite>::TypeHandler::Type*)
-void google::protobuf::internal::RepeatedPtrFieldBase::UnsafeArenaAddAllocated<google::protobuf::RepeatedPtrField<google::protobuf::Message>::TypeHandler>(google::protobuf::RepeatedPtrField<google::protobuf::Message>::TypeHandler::Type*)
 void google::protobuf::internal::RepeatedPtrFieldBase::UnsafeArenaAddAllocated<google::protobuf::RepeatedPtrField<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>::TypeHandler>(google::protobuf::RepeatedPtrField<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>::TypeHandler::Type*)
 void google::protobuf::internal::SerializeGroupTo<google::protobuf::internal::ArrayOutput>(google::protobuf::MessageLite const*, void const*, google::protobuf::internal::ArrayOutput*)
 void google::protobuf::internal::SerializeMessageTo<google::protobuf::internal::ArrayOutput>(google::protobuf::MessageLite const*, void const*, google::protobuf::internal::ArrayOutput*)
@@ -50629,7 +50628,7 @@ void google::protobuf::Map<google::protobuf::MapKey, google::protobuf::MapValueR
 void JoinNumbers<CUtlVector<int, CUtlMemory<int>>>(char, CUtlVector<int, CUtlMemory<int>> const&, CUtlString&)
 void JoinNumbers<CUtlVector<unsigned int, CUtlMemory<unsigned int>>>(char, CUtlVector<unsigned int, CUtlMemory<unsigned int>> const&, CUtlString&)
 void JoinNumbers<CUtlVector<unsigned long long, CUtlMemory<unsigned long long>>>(char, CUtlVector<unsigned long long, CUtlMemory<unsigned long long>> const&, CUtlString&)
-void std::__ndk1::allocator<SteamNetworkingSocketsLib::Cert>::construct[abi:ne180000]<SteamNetworkingSocketsLib::Cert, SteamNetworkingSocketsLib::Cert>(SteamNetworkingSocketsLib::Cert*, SteamNetworkingSocketsLib::Cert&&)
+void std::__ndk1::allocator<SteamNetworkingSocketsLib::Cert>::construct[abi:ne190000]<SteamNetworkingSocketsLib::Cert, SteamNetworkingSocketsLib::Cert>(SteamNetworkingSocketsLib::Cert*, SteamNetworkingSocketsLib::Cert&&)
 void std::__ndk1::__hash_table<google::protobuf::Descriptor const*, std::__ndk1::hash<google::protobuf::Descriptor const*>, std::__ndk1::equal_to<google::protobuf::Descriptor const*>, std::__ndk1::allocator<google::protobuf::Descriptor const*>>::__do_rehash<true>(unsigned long)
 void std::__ndk1::__hash_table<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__do_rehash<true>(unsigned long)
 void std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<char const*, google::protobuf::FileDescriptor const*>, std::__ndk1::__unordered_map_hasher<char const*, std::__ndk1::__hash_value_type<char const*, google::protobuf::FileDescriptor const*>, google::protobuf::hash<char const*>, google::protobuf::streq, true>, std::__ndk1::__unordered_map_equal<char const*, std::__ndk1::__hash_value_type<char const*, google::protobuf::FileDescriptor const*>, google::protobuf::streq, google::protobuf::hash<char const*>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<char const*, google::protobuf::FileDescriptor const*>>>::__do_rehash<true>(unsigned long)
@@ -50656,20 +50655,19 @@ void std::__ndk1::__stable_sort<std::__ndk1::_ClassicAlgPolicy, google::protobuf
 void std::__ndk1::__tree<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::__map_value_compare<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>>>::__assign_multi<std::__ndk1::__tree_const_iterator<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::__tree_node<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, void*>*, long>>(std::__ndk1::__tree_const_iterator<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::__tree_node<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, void*>*, long>, std::__ndk1::__tree_const_iterator<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, std::__ndk1::__tree_node<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>, void*>*, long>)
 void std::__ndk1::__tree<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, vjson::Value>, std::__ndk1::__map_value_compare<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, vjson::Value>, vjson::ObjectKeyLess, true>, std::__ndk1::allocator<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, vjson::Value>>>::__assign_multi<std::__ndk1::__tree_const_iterator<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, vjson::Value>, std::__ndk1::__tree_node<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, vjson::Value>, void*>*, long>>(std::__ndk1::__tree_const_iterator<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, vjson::Value>, std::__ndk1::__tree_node<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, vjson::Value>, void*>*, long>, std::__ndk1::__tree_const_iterator<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, vjson::Value>, std::__ndk1::__tree_node<std::__ndk1::__value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, vjson::Value>, void*>*, long>)
 void std::__ndk1::__tree<std::__ndk1::__value_type<unsigned int, int>, std::__ndk1::__map_value_compare<unsigned int, std::__ndk1::__value_type<unsigned int, int>, std::__ndk1::less<unsigned int>, true>, std::__ndk1::allocator<std::__ndk1::__value_type<unsigned int, int>>>::__assign_multi<std::__ndk1::__tree_const_iterator<std::__ndk1::__value_type<unsigned int, int>, std::__ndk1::__tree_node<std::__ndk1::__value_type<unsigned int, int>, void*>*, long>>(std::__ndk1::__tree_const_iterator<std::__ndk1::__value_type<unsigned int, int>, std::__ndk1::__tree_node<std::__ndk1::__value_type<unsigned int, int>, void*>*, long>, std::__ndk1::__tree_const_iterator<std::__ndk1::__value_type<unsigned int, int>, std::__ndk1::__tree_node<std::__ndk1::__value_type<unsigned int, int>, void*>*, long>)
-void std::__ndk1::vector<int, std::__ndk1::allocator<int>>::__assign_with_size[abi:nn180000]<int*, int*>(int*, int*, long)
-void std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__assign_with_size[abi:nn180000]<google::protobuf::internal::RepeatedPtrIterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const>, google::protobuf::internal::RepeatedPtrIterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const>>(google::protobuf::internal::RepeatedPtrIterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const>, google::protobuf::internal::RepeatedPtrIterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const>, long)
-void std::__ndk1::vector<SteamNetworkingSocketsLib::SteamDatagramNetwork::POP, std::__ndk1::allocator<SteamNetworkingSocketsLib::SteamDatagramNetwork::POP>>::__assign_with_size[abi:ne180000]<SteamNetworkingSocketsLib::SteamDatagramNetwork::POP*, SteamNetworkingSocketsLib::SteamDatagramNetwork::POP*>(SteamNetworkingSocketsLib::SteamDatagramNetwork::POP*, SteamNetworkingSocketsLib::SteamDatagramNetwork::POP*, long)
-void std::__ndk1::vector<SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress, std::__ndk1::allocator<SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress>>::__assign_with_size[abi:ne180000]<std::__ndk1::__wrap_iter<SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress*>, std::__ndk1::__wrap_iter<SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress*>>(std::__ndk1::__wrap_iter<SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress*>, std::__ndk1::__wrap_iter<SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress*>, long)
-void std::__ndk1::vector<SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress, std::__ndk1::allocator<SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress>>::__assign_with_size[abi:ne180000]<SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress*, SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress*>(SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress*, SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress*, long)
-void std::__ndk1::vector<SteamNetworkingSocketsLib::SteamDatagramNetwork::RouterAddressLookup, std::__ndk1::allocator<SteamNetworkingSocketsLib::SteamDatagramNetwork::RouterAddressLookup>>::__assign_with_size[abi:ne180000]<SteamNetworkingSocketsLib::SteamDatagramNetwork::RouterAddressLookup*, SteamNetworkingSocketsLib::SteamDatagramNetwork::RouterAddressLookup*>(SteamNetworkingSocketsLib::SteamDatagramNetwork::RouterAddressLookup*, SteamNetworkingSocketsLib::SteamDatagramNetwork::RouterAddressLookup*, long)
-void std::__ndk1::vector<SteamNetworkingSocketsLib::SteamDatagramNetwork::TypicalPing_t, std::__ndk1::allocator<SteamNetworkingSocketsLib::SteamDatagramNetwork::TypicalPing_t>>::__assign_with_size[abi:ne180000]<SteamNetworkingSocketsLib::SteamDatagramNetwork::TypicalPing_t*, SteamNetworkingSocketsLib::SteamDatagramNetwork::TypicalPing_t*>(SteamNetworkingSocketsLib::SteamDatagramNetwork::TypicalPing_t*, SteamNetworkingSocketsLib::SteamDatagramNetwork::TypicalPing_t*, long)
-void std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char>>::__assign_with_size[abi:ne180000]<char const*, char const*>(char const*, char const*, long)
-void std::__ndk1::vector<unsigned int, std::__ndk1::allocator<unsigned int>>::__assign_with_size[abi:ne180000]<unsigned int*, unsigned int*>(unsigned int*, unsigned int*, long)
-void std::__ndk1::vector<vjson::Value, std::__ndk1::allocator<vjson::Value>>::__assign_with_size[abi:ne180000]<vjson::Value*, vjson::Value*>(vjson::Value*, vjson::Value*, long)
-void std::__ndk1::vector<vjson::Value, std::__ndk1::allocator<vjson::Value>>::__init_with_size[abi:ne180000]<vjson::Value*, vjson::Value*>(vjson::Value*, vjson::Value*, unsigned long)
+void std::__ndk1::vector<int, std::__ndk1::allocator<int>>::__assign_with_size[abi:nn190000]<int*, int*>(int*, int*, long)
+void std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__assign_with_size[abi:nn190000]<google::protobuf::internal::RepeatedPtrIterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const>, google::protobuf::internal::RepeatedPtrIterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const>>(google::protobuf::internal::RepeatedPtrIterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const>, google::protobuf::internal::RepeatedPtrIterator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const>, long)
+void std::__ndk1::vector<SteamNetworkingSocketsLib::SteamDatagramNetwork::POP, std::__ndk1::allocator<SteamNetworkingSocketsLib::SteamDatagramNetwork::POP>>::__assign_with_size[abi:ne190000]<SteamNetworkingSocketsLib::SteamDatagramNetwork::POP*, SteamNetworkingSocketsLib::SteamDatagramNetwork::POP*>(SteamNetworkingSocketsLib::SteamDatagramNetwork::POP*, SteamNetworkingSocketsLib::SteamDatagramNetwork::POP*, long)
+void std::__ndk1::vector<SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress, std::__ndk1::allocator<SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress>>::__assign_with_size[abi:ne190000]<std::__ndk1::__wrap_iter<SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress*>, std::__ndk1::__wrap_iter<SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress*>>(std::__ndk1::__wrap_iter<SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress*>, std::__ndk1::__wrap_iter<SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress*>, long)
+void std::__ndk1::vector<SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress, std::__ndk1::allocator<SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress>>::__assign_with_size[abi:ne190000]<SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress*, SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress*>(SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress*, SteamNetworkingSocketsLib::SteamDatagramNetwork::RelayAddress*, long)
+void std::__ndk1::vector<SteamNetworkingSocketsLib::SteamDatagramNetwork::RouterAddressLookup, std::__ndk1::allocator<SteamNetworkingSocketsLib::SteamDatagramNetwork::RouterAddressLookup>>::__assign_with_size[abi:ne190000]<SteamNetworkingSocketsLib::SteamDatagramNetwork::RouterAddressLookup*, SteamNetworkingSocketsLib::SteamDatagramNetwork::RouterAddressLookup*>(SteamNetworkingSocketsLib::SteamDatagramNetwork::RouterAddressLookup*, SteamNetworkingSocketsLib::SteamDatagramNetwork::RouterAddressLookup*, long)
+void std::__ndk1::vector<SteamNetworkingSocketsLib::SteamDatagramNetwork::TypicalPing_t, std::__ndk1::allocator<SteamNetworkingSocketsLib::SteamDatagramNetwork::TypicalPing_t>>::__assign_with_size[abi:ne190000]<SteamNetworkingSocketsLib::SteamDatagramNetwork::TypicalPing_t*, SteamNetworkingSocketsLib::SteamDatagramNetwork::TypicalPing_t*>(SteamNetworkingSocketsLib::SteamDatagramNetwork::TypicalPing_t*, SteamNetworkingSocketsLib::SteamDatagramNetwork::TypicalPing_t*, long)
+void std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char>>::__assign_with_size[abi:ne190000]<char const*, char const*>(char const*, char const*, long)
+void std::__ndk1::vector<unsigned int, std::__ndk1::allocator<unsigned int>>::__assign_with_size[abi:ne190000]<unsigned int*, unsigned int*>(unsigned int*, unsigned int*, long)
+void std::__ndk1::vector<vjson::Value, std::__ndk1::allocator<vjson::Value>>::__assign_with_size[abi:ne190000]<vjson::Value*, vjson::Value*>(vjson::Value*, vjson::Value*, long)
+void std::__ndk1::vector<vjson::Value, std::__ndk1::allocator<vjson::Value>>::__init_with_size[abi:ne190000]<vjson::Value*, vjson::Value*>(vjson::Value*, vjson::Value*, unsigned long)
 void SteamNetworkingSocketsLib::CConnectionTransportSDRBase::RecvStatsCommon<CMsgSteamDatagramConnectionStatsP2PRouterToClient>(SteamNetworkingSocketsLib::RelaySession*, CMsgSteamDatagramConnectionStatsP2PRouterToClient const&, bool, long long)
 void SteamNetworkingSocketsLib::CConnectionTransportSDRBase::TrackSentStatsToSessionCommon<CMsgSteamDatagramConnectionStatsP2PClientToRouter>(SteamNetworkingSocketsLib::RelaySession&, CMsgSteamDatagramConnectionStatsP2PClientToRouter const&, char const*, long long)
-void SteamNetworkingSocketsLib::LinkStatsTrackerClientRelaySession::ReceivedPingInternal<SteamNetworkingSocketsLib::LinkStatsTracker<SteamNetworkingSocketsLib::LinkStatsTrackerClientRelaySession>>(SteamNetworkingSocketsLib::LinkStatsTracker<SteamNetworkingSocketsLib::LinkStatsTrackerClientRelaySession>*, int, long long)
 void SteamNetworkingSocketsLib::LinkStatsTrackerRelayBase::ThinkInternal<SteamNetworkingSocketsLib::LinkStatsTracker<SteamNetworkingSocketsLib::LinkStatsTrackerClientRelaySession>>(SteamNetworkingSocketsLib::LinkStatsTracker<SteamNetworkingSocketsLib::LinkStatsTrackerClientRelaySession>*, long long)
 void SteamNetworkingSocketsLib::LinkStatsTrackerRelayBase::TrackSentMessageExpectingSeqNumAckInternal<SteamNetworkingSocketsLib::LinkStatsTracker<SteamNetworkingSocketsLib::LinkStatsTrackerClientRelaySession>>(SteamNetworkingSocketsLib::LinkStatsTracker<SteamNetworkingSocketsLib::LinkStatsTrackerClientRelaySession>*, long long, bool)
 void SteamNetworkingSocketsLib::PopulateSDRSendPacketContextGeneric<CMsgSteamDatagramConnectionStatsP2PClientToRouter, SteamNetworkingSocketsLib::CConnectionTransportP2PSDR, SteamNetworkingSocketsLib::RelaySession>(SteamNetworkingSocketsLib::CConnectionTransportP2PSDR*, SteamNetworkingSocketsLib::SDRSendPacketContext<CMsgSteamDatagramConnectionStatsP2PClientToRouter, SteamNetworkingSocketsLib::RelaySession>&, SteamNetworkingSocketsLib::EStatsReplyRequest, int, unsigned long, unsigned int, unsigned int)
@@ -52758,7 +52756,6 @@ xnbUH<1(
 "X\n'CRemoteClient_GetRecentClients_Response
 X\nD4
 XNdi
-xNf3
 xNgc
 X-+NlA=lQ0
 "XNO[p
@@ -53840,7 +53837,7 @@ Z+no
 Znqa
 |ZNRk
 ZNs^
-_ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC2B8nn180000ILi0EEEPKc
+_ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC2B8nn190000ILi0EEEPKc
 zN\ta
 z\n\vdtu6
 Z(nW;1

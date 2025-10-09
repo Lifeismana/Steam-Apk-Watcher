@@ -59,7 +59,7 @@
 8SVLAudio
 8SVLCodec
 8SVLCrypt
-9957501 
+9961864 
 9a&g
 9JLX
 9QSVLInput
@@ -367,13 +367,14 @@ audio
 [Audio] Attempting to close input stream...
 [Audio] Attempting to close output stream...
 [Audio] Attempting to stop streams...
+[Audio] Attempt to set audio rx channels to %d.
 [Audio] Called cold init when audio was already live.
 [Audio] Called re-init when audio was stopped.
 [Audio] Called Stop() when audio was already stopped.
 [Audio] Creating input stream...
 [Audio] Creating output stream...
 [Audio] Failed to stop audio stream!
-[Audio] frame rate change, reinitializing: %d %d\n
+[Audio] frame rate change, reinitializing: %d %d to %d %d\n
 [Audio] Input stream creation finished
 [Audio] Input stream stopped
 [Audio] Output stream creation finished
@@ -4876,7 +4877,7 @@ SVLAudio::AcceptAudioFramesFromPeer(short*, int)
 SVLAudio::AcceptFramesFromDeviceForSendingOverNetwork(short*, int)
 SVLAudio::FillFrameBuffer(short*, int)
 SVLAudio::FlushAudioPacket()
-SVLAudio::InitJitterBuffer()
+SVLAudio::InitJitterBuffer(int)
 SVLAudio::OnPeerAudioDiscontinuity()
 SVLAudio::~SVLAudio()
 SVLAudio::SVLAudio(SVLRoot*, bool)
