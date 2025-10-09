@@ -588,6 +588,7 @@ _13zi
 14CRecordedInput
 14CRSAPrivateKey
 14CShowCursorMsg
+14CUtlLinkedListIN11SteamStdLib12CCommandLine18CommandLineParam_tEiE
 14CUtlLinkedListIN19CStreamDecoderVideo14PartialFrame_tEiE
 14CUtlLinkedListIN25SteamNetworkingSocketsLib24SNPSendReliableSegment_tEtE
 14CUtlLinkedListIttE
@@ -3407,7 +3408,6 @@ A1LWAAR
 A1S\v<
 a1UKk
 .A1#UY
-:A20CHIDDeviceSDLGamepad
 a23b
 a24(
 a2d_ASN1_OBJECT
@@ -4178,7 +4178,7 @@ Ansluter till Steam ...
 answer
 A\n\tcandidate
 Anteriorul set/nivel de ac
- antes de empezar a retransmitir.
+ antes de empezar a transmitir.
 Antes de empezar a transmitir, puedes configurar Steam
 a\nTGW
 anti_collapse
@@ -4835,6 +4835,7 @@ AvR-=_p
 Av)T
 aVv5
  av vibrasjon i innstillingene ved 
+/av visning av statistik
 a#vW
 ,AVW\B
 {avx
@@ -4914,6 +4915,7 @@ b1Ne}
 (b,1nI
 -B1#UY
 `B1Y
+;B20CHIDDeviceSDLGamepad
 B-233
 b26n
 B-283
@@ -12306,6 +12308,7 @@ Couldn't open audio device: format=%d, channels=%u, frequency=%u. Audio is disab
 Couldn't open audio device for sound effects: %s\n
 Couldn't open game controller %s at index %d: %s\n
 Couldn't open microphone, unsupported audio codec %d\n
+Couldn't open SDL controller %u: %s\n
 Couldn't open %s for writing\n
 Couldn't parse color '%s'\n
 Couldn't parse colorspace %s\n
@@ -16579,8 +16582,8 @@ ctil
 ctiles
 ctiles en el men
 ctiles para algunos juegos en Par
-ctil y dejar de retransmitir con el toque de 4 dedos.
 ctil y dejar de retransmitir con un toque de 4 dedos.
+ctil y dejar de transmitir con el toque de 4 dedos.
 ctime
 CTLOG_FILE
 CTLOG_new
@@ -17200,6 +17203,7 @@ CUtlLinkedList<CStreamDecoderVideo::PartialFrame_t, int>::LinkBefore(int, int)
 CUtlLinkedList<SteamNetworkingSocketsLib::SNPSendReliableSegment_t, unsigned short>::AllocInternal(bool)
 CUtlLinkedList<SteamNetworkingSocketsLib::SNPSendReliableSegment_t, unsigned short>::~CUtlLinkedList()
 CUtlLinkedList<SteamNetworkingSocketsLib::SNPSendReliableSegment_t, unsigned short>::LinkBefore(unsigned short, unsigned short)
+CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::InsertBefore(int, SteamStdLib::CCommandLine::CommandLineParam_t const&)
 CUtlLinkedList<unsigned short, unsigned short>::AllocInternal(bool)
 CUtlLinkedList<unsigned short, unsigned short>::~CUtlLinkedList()
 CUtlLinkedList<unsigned short, unsigned short>::LinkBefore(unsigned short, unsigned short)
@@ -17434,6 +17438,7 @@ CUtlString::BStartsWithCaseless(char const*) const
 CUtlString::BStartsWith(char const*) const
 CUtlStringBuilder::AppendChar(char)
 CUtlStringBuilder::Append(char const*)
+CUtlStringBuilder::Append(char const*, unsigned long)
 CUtlStringBuilder::AppendFormat(char const*, ...)
 CUtlStringBuilder::AppendHex(void const*, unsigned long, bool)
 CUtlStringBuilder::BEndsWithCaseless(char const*) const
@@ -18776,10 +18781,11 @@ detached content
 Detected USB device 0x%.4x 0x%.4x, %s at address %d\n
 Detener juego
 Detener la retransmisi
-Detener retransmisi
+Detener transmisi
  det lokala n
  det lokale nettverket.
  det lokale netv
+ de transmisi
 De uitnodiging voor Remote Play kon niet worden teruggevonden. Vraag een nieuwe uitnodiging aan.
 dev_client_cert
 dev_gameserver_identity
@@ -19019,10 +19025,10 @@ Digital Signature
 Digit is required after exponent in JSON number; found 0x%02x instead
 digo para iniciar a transmiss
 digo PIN para comenzar la retransmisi
+digo PIN para comenzar la transmisi
  di input per %s
  din controller, fra controller-overlayet.
 dinfo
- din handkontroll, fr
  din interfa
 Din meniul de set
 Dinonaktifkan
@@ -19059,6 +19065,7 @@ disable_amd_hardware_encoding
 --disable-audio
 disable_client_cursor
 Disable controller mouse mode
+Disable controller support
 disabled
 Disabled
 --disable-input
@@ -19371,7 +19378,7 @@ Drag:
 Drag controls to place them on-screen
 Dragging unknown trackpad control\n
 Drag Me
-Dra kontroller f
+Dra kontrollerna f
 Dra meg
 Dra mig
  dra p
@@ -19826,6 +19833,7 @@ EAudioFormat_descriptor()
 EAudioFormat_IsValid(int)
 Ea^v
 (EAv
+_eb2_
 !eb2B
 |+eb6
 E:^Ba
@@ -20389,6 +20397,7 @@ El cliente de retransmisi
 El cliente de Steam remoto est
 El cliente de Steam remoto no est
 El cliente de Steam remoto no ha iniciado sesi
+El cliente de transmisi
 El cliente remoto de Steam requiere un c
 Elecom JC-U3613M
 (elem == Count()) || IsValidIndex(elem)
@@ -20411,6 +20420,7 @@ Elrend. m
 Elrend. szerk.
 Elrend. vissza
 El servidor de retransmisi
+El servidor de transmisi
  el tiempo de espera para la autorizaci
 Elu|
 -Elv
@@ -20717,6 +20727,7 @@ Error decoding string1: %s
 Error decoding string2: %s
 Error de retransmisi
 Error desconocido
+Error de transmisi
 Error %d sending MQTT CONNECT request
 Errore di trasmissione
 Errore imprevisto
@@ -21389,6 +21400,10 @@ f5bP
 f5s?
 "f6a\rR
 F6.c
+ F6 eller GUIDE + Y f
+ F6 eller START + Y f
+ F6 eller TILLBAKA + Y f
+ F6 f
 \f6K5t^
 (\f"6\n CRemoteClient_GetReplies_Request
 F6\ni
@@ -21408,6 +21423,10 @@ F7Tl
 F7w)
 _F7Z
 F7zD87D
+ F8 eller GUIDE + X f
+ F8 eller START + X f
+ F8 eller TILLBAKA + X f
+ F8 f
 \f8gN
 f8>p
  F8 pentru a salva instantaneul pe calculatorul la distan
@@ -21834,6 +21853,7 @@ fingerid
 Fingerprint check failed: %x vs. %x
 fingerprint size does not match digest
 , fingerprint size is 
+ fingrar
 finished
 Finished
 finnish
@@ -21904,6 +21924,7 @@ f?L%Q
 #FLR
 `~f~~~l~~~~~~~r~~~~~~~~~~~~~~~x
 FLt2
+flTextureWidth == STATUS_ICON_WIDTH && flTextureHeight == STATUS_ICON_HEIGHT
 fLT\f
 FluRf2
 FLUSH
@@ -22507,7 +22528,7 @@ gethostname
 GetICEFailureCode() != 0
 GetICEFailureCode() == 0
 GetIdentity
-ge till Big Picture eller Skrivbord under Avancerade streaminginst
+ge till Big Picture eller Skrivbord i Avancerade streaminginst
 GetInstalledRAM
 GetInt32
 GetInt64
@@ -22614,12 +22635,12 @@ G<GbG
 "*ggen
 gg(G
 gg i de avancerade streaminginst
+gg i Inst
 gg i streaminginst
 g^=gkG/
 g.GP
 gg%Rs
 ggs\f
-gg under Inst
 GgVN-!<?I-^]
 GHgm
 %gHGp-T
@@ -22682,7 +22703,6 @@ GLA4
 gler les param
 gler le volume depuis les param
 gler le volume depuis l'interface du contr
-glGetIntegerv
 glich
  glidebryteren.
 Glisare cu 1 deget
@@ -26202,6 +26222,7 @@ Halten Sie die %s-Taste gedr
 Halten Sie die Y-Taste gedr
 HalWh-
 "Ham
+ handkontrollen, i kontrollens 
 Handshake
 handshake failure
 Hang n
@@ -27973,7 +27994,7 @@ Inmatning
 in MENU butonuna bas
  in modalit
 Innan du b
-Innan du streamar, kan du 
+Innan du streamar kan du 
 i\n~nG
 Innkommende bithastighet: %0.0f kbit/s video: %0.0f kbit/s
 i\nNL
@@ -29046,7 +29067,6 @@ jjNc
 jjNYM
 JJ|O
 JJpH
-jjQTZWIVVVVVVVVVVVVVVVVVVVV
 Jj'u
 jjvD
 j,%kE
@@ -29445,7 +29465,7 @@ Kan geen streamend spel vinden voor je account in het lokale netwerk.
 Kan het streamen op de computer op afstand niet starten
 Kan ikke forbinde, server gik offline
 Kan ikke koble til, tjeneren ble frakoblet
-Kan inte ansluta, servern 
+Kan inte ansluta. Servern 
 Kan niet verbinden met %s
 Kan niet verbinden, server is offline
 Kan niet verbinden voor doorgifte van %s
@@ -30569,6 +30589,7 @@ latam
 Latence du stream : <1 ms pour les entr
 Latence du stream : %2.2f ms pour les entr
 Latencia de retransmisi
+Latencia de transmisi
 latency
 latency_datacenter_ids
 latency_datacenter_ids_p2p
@@ -30582,6 +30603,7 @@ Latenza di trasmissione: <1 ms input, %2.2f ms schermo
 Latenza di trasmissione: %2.2f ms input, %2.2f ms schermo
 latest_frame_id
 latn
+La transmisi
 LAT + X kombinasyonunu kullan
 LAT + Y kombinasyonunu kullan
 launch_parameters
@@ -30838,10 +30860,10 @@ libGLESv1_CM.so
 libGLESv2.so
 libh264bitstream.so
 libhevcbitstream.so
+lib Jul  4 2024 19:42:25
 liblog.so
 lib(%lu)
 libmain.so
-lib May 26 2024 06:59:05
 libmediandk.so
 libm.so
 libOpenMAXAL.so
@@ -31018,8 +31040,8 @@ lL**Ll
 LLLLLLLLLLLLLL$
 LLLLLLLLLLLLLLLLLL
 lL_N
-ll ned (1 finger)
 ll ned GUIDE-knappen f
+ll ned med ett finger
 ll ned MENY-knappen f
 ll ned %s-knappen f
 ll ned START-knappen f
@@ -32742,6 +32764,8 @@ n == 0 || s1 != NULL
 n == 0 || s2 != NULL
 \n0Sf
 \n0]UC
+N11SteamStdLib12CCommandLineE
+N11SteamStdLib12ICommandLineE
 \n%12s%s
 N13CStreamPlayer34CBLESteamControllerReportGeneratorE
 N16SteamThreadTools7CThreadE
@@ -33093,11 +33117,10 @@ na u
  na v
 NAV 
  na Va
-n avanzada de la retransmisi
 n avanzada de las transmisiones para que se inicie en el modo Big
 n avanzada de la transmisi
 n avanzada del cliente antes de comenzar a retransmitir.
-n avanzada del cliente antes de empezar a retransmitir.
+n avanzada del cliente antes de empezar a transmitir.
 na ve i
 n, a vez
 navigable
@@ -33246,10 +33269,11 @@ ndef_prefix
 ndef_suffix
 n de la retransmisi
 n delar f
+n de la transmisi
 n del control en Big Picture
 n del equipo remoto
 n del mando desde la interfaz del mando.
-n del mando en Big Picture
+n del mando en Big
 n del ordenador remoto
 n de los controles
 n de los controles".
@@ -33566,7 +33590,6 @@ NH0:
 \nH7F
 NH7U
 n ha fallado.
-n handkontrollens 
 Nhan F8 de luu anh chup man hinh tren may tu xa
 n Hatas
 nh b
@@ -33661,7 +33684,6 @@ n ja hiiren. Kannattaa kytke
 nj~c
 NJECy
 nji\Sp
-NjjNj
 n joillekin peleille kohdasta Asetukset > Remote Play > Asiakasohjelman lis
 nJ|q
 \nj\rA6
@@ -33794,7 +33816,6 @@ nklA
 \nk.Lb
 N:Ko
 NKoG
-n kontrollens 
 NK^oR
 n kosketusohjaimen ja lopetettua suoratoiston.
 }n;kp
@@ -34032,8 +34053,8 @@ No dropped packets, pkt num %lld, dup bit not set?  recvseq=%lld inorder=%lld, d
 noecho_console
 No error
 No es posible conectarse a la retransmisi
-No es posible conectarse a retransmisi
 No es posible conectarse a %s
+No es posible conectarse a transmisi
 No es posible conectarse, el servidor no est
 no explicit policy
 No field named "uninterpreted_option" in the Options proto.
@@ -34051,6 +34072,7 @@ No input buffer available for CSD
 no inverse
 no issuer certificate
 no issuer details
+-nojoy
 no key
 no key or cert
 no key set
@@ -34201,8 +34223,8 @@ no,S
 No scheme part in the URL
 no section
 No se ha podido crear renderizado: %s
-No se ha podido encontrar un juego en retransmisi
-No se ha podido iniciar la retransmisi
+No se ha podido encontrar un juego en transmisi
+No se ha podido iniciar la transmisi
 No se ha podido localizar la invitaci
 No se pudo conectar con %s
 No se pudo crear renderizado: %s
@@ -34632,7 +34654,6 @@ nt az
 .\n\tdirection
 \n\tdummy_pad
 \n\teuniverse
-nTextureWidth == STATUS_ICON_WIDTH && nTextureHeight == STATUS_ICON_HEIGHT
 |Ntf,
 NT\fD
 nt fel
@@ -34910,7 +34931,7 @@ Nyomj F8-at vagy BACK+X-et k
 Nyomj F8-at vagy GUIDE+X-et k
 Nyomj F8-at vagy START+X-et k
 Nyomj meg egy 
-Nyp/svep (2 fingrar)
+Nyp/svep med tv
 ?nYR
 nyul
 n y utilizarlo para hacer zoom.
@@ -36040,6 +36061,7 @@ Para ativar os controles por toque em alguns jogos, acesse "Configura
 parallelizationParameter
 parameter
 parameter encoding error
+Parameter file '%s' not found, skipping...\n
 parameters
 Parameters
 PARAMETERS
@@ -36468,6 +36490,7 @@ picojson::default_parse_context::set_number(double)
 picojson::input<std::__ndk1::__wrap_iter<char const*>>::expect(int)
 picojson::parse(picojson::value&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 picojson::value::~value()
+Picture
 Picture o en el modo
 Picture ou le bureau avant de lancer la session de streaming.
 }p?IGq?|\fr?
@@ -36782,7 +36805,9 @@ platform: android-arm64
 Plat_GetExecutablePath
 Plat_GetExecutablePathUTF8
 Plat_GetPOSIXClockSource
+Plat_GetProcessArgv
 Plat_gmtime
+Plat_InternalOverrideArgv
 Plat_IsGamescope
 Plat_IsInDebugSession
 Plat_IsSteamDeck
@@ -37285,34 +37310,34 @@ professionOIDs
 programok telep
 progress
 Project-Id-Version: 1.1.10\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2018-08-23 17:03-0700\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: English\nLanguage: en_US\nMIME-Version: 1.0\nContent-Type: text/plain; charset=ASCII\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-14 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Dutch\nLanguage: nl_NL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: nl\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-14 14:40\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: French\nLanguage: fr_FR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n > 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: fr\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Bulgarian\nLanguage: bg_BG\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: bg\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Chinese Simplified\nLanguage: zh_CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: zh-CN\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Chinese Traditional\nLanguage: zh_TW\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: zh-TW\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Czech\nLanguage: cs_CZ\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 3;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: cs\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Danish\nLanguage: da_DK\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: da\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Finnish\nLanguage: fi_FI\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: fi\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: German\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: de\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Greek\nLanguage: el_GR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: el\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Hungarian\nLanguage: hu_HU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: hu\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Italian\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: it\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Japanese\nLanguage: ja_JP\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ja\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Korean\nLanguage: ko_KR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ko\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Polish\nLanguage: pl_PL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pl\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Portuguese, Brazilian\nLanguage: pt_BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pt-BR\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Portuguese\nLanguage: pt_PT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pt\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Romanian\nLanguage: ro_RO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100>0 && n%100<20)) ? 1 : 2);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ro\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Russian\nLanguage: ru_RU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ru\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Spanish, Mexico\nLanguage: es_MX\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: es-MX\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Spanish\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: es\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Swedish\nLanguage: sv_SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: sv\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Thai\nLanguage: th_TH\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: th\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Turkish\nLanguage: tr_TR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: tr\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Ukrainian\nLanguage: uk_UA\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: uk\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Vietnamese\nLanguage: vi_VN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: vi\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:01\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Indonesian\nLanguage: id_ID\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: id\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-05-21 12:01\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Norwegian Bokmal\nLanguage: nb_NO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: nb\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Bulgarian\nLanguage: bg_BG\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: bg\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Danish\nLanguage: da_DK\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: da\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Dutch\nLanguage: nl_NL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: nl\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: French\nLanguage: fr_FR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n > 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: fr\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Indonesian\nLanguage: id_ID\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: id\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Italian\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: it\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Japanese\nLanguage: ja_JP\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ja\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Norwegian Bokmal\nLanguage: nb_NO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: nb\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Portuguese\nLanguage: pt_PT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pt\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Russian\nLanguage: ru_RU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ru\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Spanish, Mexico\nLanguage: es_MX\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: es-MX\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Turkish\nLanguage: tr_TR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: tr\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Ukrainian\nLanguage: uk_UA\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: uk\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-11 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Vietnamese\nLanguage: vi_VN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: vi\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Chinese Traditional\nLanguage: zh_TW\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: zh-TW\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Czech\nLanguage: cs_CZ\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 3;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: cs\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Finnish\nLanguage: fi_FI\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: fi\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: German\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: de\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Greek\nLanguage: el_GR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: el\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Hungarian\nLanguage: hu_HU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: hu\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Korean\nLanguage: ko_KR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ko\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Polish\nLanguage: pl_PL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pl\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Portuguese, Brazilian\nLanguage: pt_BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pt-BR\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Romanian\nLanguage: ro_RO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100>0 && n%100<20)) ? 1 : 2);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ro\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Spanish\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: es\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Swedish\nLanguage: sv_SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: sv\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-06-18 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Thai\nLanguage: th_TH\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: th\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2024-07-02 15:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Chinese Simplified\nLanguage: zh_CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: zh-CN\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
 PrOO;SO
 Prossimo set/layer di azioni
 Prost
@@ -37338,6 +37363,7 @@ Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto 
  = { <proto text format> }". To set fields within it, use syntax like "
 Proto type 
 Provalo subito!
+Prova nu!
 proxy
 Proxy
 Proxy-
@@ -38900,7 +38926,6 @@ RETRANSMITIENDO EN %d
 Retransmitiendo m
 Retransmitiendo %s
 Retransmitiendo Steam
- retransmitiendo un v
  retransmitiendo un video actualmente
 Retry-After:
 Retrying
@@ -39151,8 +39176,8 @@ rmd160
 rmen
 rmen 
 rmen er l
-rmen fr
 rmen fra controller-overlayet.
+rmen i handkontrollens 
 rmen via handkontrollens 
 \rMinghuaQu\f
 rM`/Iz
@@ -39163,7 +39188,7 @@ rm\niAB
 r.m_nSortScoreLocal < 9999
 RM<Qe
 \rmqo
-rmtangentbordet med ett tryck med 3 fingrar.
+rmtangentbordet med ett tryck med tre fingrar.
 rmtastaturet til/fra ved at trykke med tre fingre.
 rmtastatur fra controller-overlayet.
 R-muisknop: 
@@ -39202,8 +39227,8 @@ RNPP
 \r\n\tSUCCEEDED
 \r\n\tTYPE_BOOL
 \r\n\tTYPE_ENUM
+r nu ansluten till datorn som tillh
 r nu ansluten till en fj
-r nu ansluten till %ss dator och spelar %s via Steam Remote Play.
 "RNwIx
 r\nxgl%
 ~rnz
@@ -39219,6 +39244,7 @@ Rock Candy Gamepad Wired Controller
 Rock Candy Wired Controller for Xbox One
 rodkowy panel dotykowy
 r offline
+r offline.
 \rOfX=5
 ROGZ
 ROhu
@@ -39327,10 +39353,10 @@ rrelsesglasset i innstillingene og bruke den til
 \r\r\f\f\f\f\v\v\v\n\n\n\t\t\t\t\t\t
 r\r\fmL
 ,RrGBkL*\f
-rrklient 
-rrklient auktoriserar f
-rrklient kr
-rrklient s
+rrklienten 
+rrklienten auktoriserar just nu en annan enhet
+rrklienten kr
+rrklienten s
 rRn*7
 (\r"R\n\fCAudioFormat
 \rRoOs
@@ -39495,6 +39521,7 @@ R-S\nh
 \rSNo
 @rso
 rSO6
+r %s och spelar %s via Steam Remote Play.
 rSQi
 &rsquo;
 \rsr@c
@@ -39563,7 +39590,6 @@ RuY>f{
 rv1(
 R>V3
 Rv63
-rvarande en annan enhet
 rvarande en videostream
 rvarande i VR-l
 RVBA : %d,%d,%d,%d
@@ -39576,7 +39602,7 @@ RV\fV
 rvHU
 R`VI
 ,RvI9jR18b
-r vissa spel under Inst
+r vissa spel i Inst
 r\vJ8
 +RvJJvR+
 ?RVK
@@ -40381,7 +40407,7 @@ SDL_free
 SDL_GamepadConnected
 SDL_GamepadHasSensor
 SDL_GetAndroidSDKVersion
-SDL_GetAudioCaptureDevices
+SDL_GetAudioRecordingDevices
 SDL_GetAudioStreamData
 SDL_GetAudioStreamDevice
 SDL_GetAudioStreamQueued
@@ -40432,6 +40458,7 @@ SDL_GetKeyName
 SDL_GetLogOutputFunction
 SDL_GetMouseState
 SDL_GetNaturalDisplayOrientation
+SDL_GetNumberProperty
 SDL_GetNumJoystickAxes
 SDL_GetNumJoystickButtons
 SDL_GetNumJoystickHats
@@ -40444,11 +40471,13 @@ SDL_GetRectIntersection
 SDL_GetRectUnion
 SDL_GetRelativeMouseMode
 SDL_GetRenderDrawColor
-SDL_GetRendererInfo
+SDL_GetRendererName
 SDL_GetRGB
 SDL_GetSensorData
 SDL_GetSensorInstanceType
 SDL_GetSensors
+SDL_GetTextureProperties
+SDL_GetTextureSize
 SDL_GetTicks
 SDL_GetWindowFlags
 SDL_GetWindowSize
@@ -40528,13 +40557,13 @@ SDL_PollEvent
 SDL_PumpEvents
 SDL_PushEvent
 SDL_PutAudioStreamData
-SDL_QueryTexture
 SDL_Quit
 SDL_QuitSubSystem
 SDL_RaiseWindow
 SDL_ReadIO
 SDL_realloc
 SDL_RenderClear
+SDL_RenderCoordinatesFromWindow
 SDL_RenderFillRect
 SDL_RenderLine
 SDL_RenderPresent
@@ -40577,7 +40606,6 @@ SDL_SetTextureScaleMode
 SDL_SetThreadPriority
 SDL_SetWindowFullscreen
 SDL_SetWindowIcon
-SDL_SetWindowInputFocus
 SDL_SetWindowMouseGrab
 SDL_SetWindowPosition
 SDL_SetWindowSize
@@ -40600,6 +40628,7 @@ SDLTest_TextWindowCreate
 SDLTest_TextWindowDestroy
 SDLTest_TextWindowDisplay
 SDL_Texture* CUtlHashMap<unsigned long long, SDL_Texture*, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::FindElement<std::nullptr_t>(unsigned long long const&, std::nullptr_t&&) const
+SDL.texture.opengles2.texture
 SDL_TOUCH_MOUSE_EVENTS
 SDL_TV_REMOTE_AS_JOYSTICK
 SDL_UnlockJoysticks
@@ -41088,7 +41117,7 @@ setext-pinSecure
 setext-track2
 set filename failed
 SetFloat
-Se till att du har en styrenhet!
+Se till att du har en handkontroll!
 SetInt32
 SetInt64
 Set/layer di azioni precedente
@@ -44061,6 +44090,33 @@ Steam Remote Play
 Steam Remote Play arac
  > Steam Remote Play > Pokro
 steamstatic.com
+SteamStdLib::CCommandLine::AppendParm(SteamStdLib::OpaqueHParamType*, char const*)
+SteamStdLib::CCommandLine::AutoCreateCmdLine()
+SteamStdLib::CCommandLine::~CCommandLine()
+SteamStdLib::CCommandLine::CCommandLine()
+SteamStdLib::CCommandLine::CheckParm(SteamStdLib::OpaqueHParamType*, char const**) const
+SteamStdLib::CCommandLine::CreateCmdLine(int, char**)
+SteamStdLib::CCommandLine::FindParm(SteamStdLib::OpaqueHParamType*) const
+SteamStdLib::CCommandLine::GetCmdLine() const
+SteamStdLib::CCommandLine::GetCommandString(SteamStdLib::OpaqueHParamType*) const
+SteamStdLib::CCommandLine::GetFirstRegisteredCmd()
+SteamStdLib::CCommandLine::GetNextRegisteredCmd(SteamStdLib::OpaqueHParamType*)
+SteamStdLib::CCommandLine::GetParm(int) const
+SteamStdLib::CCommandLine::GetRegisteredCmdHelp(SteamStdLib::OpaqueHParamType*)
+SteamStdLib::CCommandLine::GetRegisteredCmd(SteamStdLib::OpaqueHParamType*)
+SteamStdLib::CCommandLineParam::~CCommandLineParam()
+SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
+SteamStdLib::CCommandLine::ParmCount() const
+SteamStdLib::CCommandLine::ParmValue(SteamStdLib::OpaqueHParamType*, char const*) const
+SteamStdLib::CCommandLine::ParmValue(SteamStdLib::OpaqueHParamType*, float) const
+SteamStdLib::CCommandLine::ParmValue(SteamStdLib::OpaqueHParamType*, int) const
+SteamStdLib::CCommandLine::ParseIncludeFiles()
+SteamStdLib::CCommandLine::PrintCommandHelp()
+SteamStdLib::CCommandLine::RegisterParam(char const*, char const*)
+SteamStdLib::CCommandLine::RemoveParm(SteamStdLib::OpaqueHParamType*)
+SteamStdLib::CCommandLine::UnregisterParam(SteamStdLib::OpaqueHParamType*)
+SteamStdLib::CCommandLine::Validate(CValidator&, char const*)
+SteamStdLib::CommandLine()
 Steam streamt
 Steam suoratoistossa
 STEAM-Taste gedr
@@ -44141,8 +44197,6 @@ SteamThreadTools::ThreadShellExecuteInternal(char const*, char const*, char cons
 SteamThreadTools::ThreadSuspendSignal(int)
 SteamThreadTools::ThreadYield()
 Steam tov
-steamui_DLL_EXT
-Steam Virtual Gamepad
 Steam wird gestreamt
 SteelSeries Stratus Duo
 ste handlingss
@@ -44506,7 +44560,7 @@ Suurennuslasi
 sVaqP
 SvB{
 S&VB
-Svep (1 finger)
+Svep med ett finger
 %*sVersion: %ld (0x%lX)
 .svg
 sv/g
@@ -45239,6 +45293,7 @@ Tilbakestill oppsett
 TILKOBLET
  tilkoblet datamaskinen til %s og spiller %s via Steam Remote Play.
  tilkoblet en ekstern datamaskin og spiller %s via Steam Remote Play.
+Tillbaka
 Tilslutter...
 TILSUTTET
 time
@@ -46280,10 +46335,16 @@ Transferred a partial file
 Transfer was pending, now try another
 transform
 translate
+Transmisi
 Transmisiunea necesit
 Transmisiune desktop securizat
 TRANSMISIUNE - %dx%d @ %2.2f
 Transmiss
+TRANSMITIENDO EN %d
+Transmitiendo m
+Transmitiendo %s
+Transmitiendo Steam
+ transmitiendo un v
 Transmitindo 
 TRANSMITINDO %dx%d a %2.2f QPS
 Transmitindo: %s
@@ -46391,20 +46452,13 @@ tRVVI
 T\Rx
  tryb myszy w kontrolerze w nak
  trybu myszy w kontrolerze w nak
-Tryck (1 finger)
-Tryck (2 fingrar)
-Tryck (3 fingrar)
-Tryck (4 fingrar)
-Tryck F6 eller BAK
-Tryck F6 eller GUIDE+Y f
-Tryck F6 eller START+Y f
-Tryck F6 f
-Tryck F8 eller BAK
-Tryck F8 eller GUIDE+X f
-Tryck F8 eller START+X f
-Tryck F8 f
-Tryck med 4 fingrar f
+Tryck med ett finger
+Tryck med fyra fingrar
+Tryck med fyra fingrar f
+Tryck med tre fingrar
+Tryck med tv
 Tryck p
+Tryckp
 try_decode_params
 try_decode_PKCS12
 try_decode_PKCS8Encrypted
@@ -46690,7 +46744,6 @@ Tx\3
 \tx3P
 <tx7^
 T-xak
-T+X f
 !tX)i
 t^X?IW
 \tXjm(
@@ -46723,7 +46776,6 @@ tYa)
 t#yD
 \tyENeU
 t yetkilendirilmemi
-T+Y f
 T:YG
 \tYhSd
 Ty i tw
@@ -47381,6 +47433,8 @@ typeinfo for SteamNetworkingSocketsLib::ScheduledMethodThinkerLockable<SteamNetw
 typeinfo for SteamNetworkingSocketsLib::ScheduledMethodThinker<SteamNetworkingSocketsLib::CConnectionTransportP2PBase>
 typeinfo for SteamNetworkingSocketsLib::ScheduledMethodThinker<SteamNetworkingSocketsLib::CConnectionTransportSDRBase>
 typeinfo for SteamNetworkingSocketsLib::SteamDatagramClientThinker
+typeinfo for SteamStdLib::CCommandLine
+typeinfo for SteamStdLib::ICommandLine
 typeinfo for SteamThreadTools::CThread
 typeinfo for StreamDecoderThread
 typeinfo for SymmetricCryptContextBase
@@ -47812,6 +47866,7 @@ typeinfo name for CUtlCharConversion
 typeinfo name for CUtlCStringConversion
 typeinfo name for CUtlLinkedList<CStreamDecoderVideo::PartialFrame_t, int>
 typeinfo name for CUtlLinkedList<SteamNetworkingSocketsLib::SNPSendReliableSegment_t, unsigned short>
+typeinfo name for CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>
 typeinfo name for CUtlLinkedList<unsigned short, unsigned short>
 typeinfo name for CUtlNoEscConversion
 typeinfo name for CVideoDecoderInfoMsg
@@ -48032,6 +48087,8 @@ typeinfo name for SteamNetworkingSocketsLib::ScheduledMethodThinkerLockable<Stea
 typeinfo name for SteamNetworkingSocketsLib::ScheduledMethodThinker<SteamNetworkingSocketsLib::CConnectionTransportP2PBase>
 typeinfo name for SteamNetworkingSocketsLib::ScheduledMethodThinker<SteamNetworkingSocketsLib::CConnectionTransportSDRBase>
 typeinfo name for SteamNetworkingSocketsLib::SteamDatagramClientThinker
+typeinfo name for SteamStdLib::CCommandLine
+typeinfo name for SteamStdLib::ICommandLine
 typeinfo name for SteamThreadTools::CThread
 typeinfo name for StreamDecoderThread
 typeinfo name for SymmetricCryptContextBase
@@ -49747,7 +49804,6 @@ valve.org
 Vamos!
 Vamos l
 :van
-va nu!
 V_AppendParamToURL
 V_AppendSlash
 V_AppendSlash: ran out of space on %s.
@@ -50020,6 +50076,7 @@ Vg\nq
 vG=t
 VG)v
 vG\.x
+V_GY__JM____________________________________2
 \vgYX
 \vh0J
 vh0o
@@ -50141,7 +50198,6 @@ V_IsInCommaDelimitedList
 V_IsMeanSpaceW
 visning
  visning af statistikker til/fra
- visning av statistik
 V_isnumeric
 V_IsSteamCloseProtocol
 V_isstrlower
@@ -50170,8 +50226,11 @@ Vjnf
 vjNO
 \vJ>NT
 V_JoinNumbers
+V_JoinNumbers(char, CUtlVector<int, CUtlMemory<int>> const&)
 V_JoinNumbersUint
 V_JoinNumbersUint64
+V_JoinNumbersUint64(char, CUtlVector<unsigned long long, CUtlMemory<unsigned long long>> const&)
+V_JoinNumbersUint(char, CUtlVector<unsigned int, CUtlMemory<unsigned int>> const&)
 V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString>> const&, char const*)
  \vjpF
 V+Jr
@@ -50289,7 +50348,6 @@ Vm\t2
 ,VMu;G
 \vMUMTN
 V?mV<
-V=MV@PVVCFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
 Vm+X|R
 VmZKG
 %Vn1_b
@@ -51609,6 +51667,7 @@ vtable for SteamNetworkingSocketsLib::LinkStatsTracker<SteamNetworkingSocketsLib
 vtable for SteamNetworkingSocketsLib::ScheduledMethodThinkerLockable<SteamNetworkingSocketsLib::CConnectionTransportP2PBase>
 vtable for SteamNetworkingSocketsLib::ScheduledMethodThinkerLockable<SteamNetworkingSocketsLib::CConnectionTransportSDRBase>
 vtable for SteamNetworkingSocketsLib::SteamDatagramClientThinker
+vtable for SteamStdLib::CCommandLine
 vtable for SteamThreadTools::CThread
 vtable for StreamDecoderThread
 vtable for tinyxml2::MemPoolT<104>
@@ -51725,7 +51784,6 @@ Vvu^hE
 ?v?v?v?v?v?
 ?v?v?v?v?vA.A.A.A.A.=
 \v#\v)\v-\v?\vG\vQ\vW\v]\ve\vo\v{\v
-VVVVVVVVVVVVVVVVVVVVVVVVVVV
 V\vXuj
 v\vXYLR
 \vw2PQ
@@ -52368,6 +52426,7 @@ WW)>Q=Y
 wwr(o
 W[WT
 w{wTw-w
+\ww\w
 WWW-Authenticate:
 WWWW',\vWW3WJWWP000C0
 WWWWWW
