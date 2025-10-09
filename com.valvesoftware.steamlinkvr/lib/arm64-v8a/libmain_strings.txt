@@ -5378,6 +5378,7 @@ BIsJoyconController(EControllerType)
 BIsMobileApp()
 BIsOfficialPSController(unsigned int, unsigned int)
 BIsPlaystationController(EControllerType)
+BIsSteamBootloader(unsigned int, unsigned int)
 BIsSteamController(EControllerType)
 BIsSteamDeckHW(EControllerType)
 BIsSteamDongle(unsigned int, unsigned int)
@@ -26824,6 +26825,7 @@ Ht32
 HT4l
 h\t\6e
 HT9+
+HTC VIVE 
 hTdj
 htev
 Htgi_
@@ -30492,7 +30494,7 @@ LAM\rhaI)|pL<
 *laM-\SO
 land
 LANDI
-()Landroid/content/Context;
+()Landroid/app/Activity;
 (Landroid/content/Context;)Lcom/valvesoftware/steamlink/VirtualHere;
 lane
 lane_idx
@@ -30800,6 +30802,7 @@ lib(%lu)
 libmain.so
 libmediandk.so
 libm.so
+lib Oct  6 2025 11:58:16
 libOpenMAXAL.so
 libopus unknown-fixed
 [libprotobuf 
@@ -30810,7 +30813,6 @@ library has no ciphers
 libSDL3_image.so
 libSDL3.so
 libSDL3_ttf.so
-lib Sep 12 2025 14:34:56
 libsteamwebrtc.so
 libunwind: malformed DW_CFA_def_cfa DWARF unwind, reg too big\n
 libunwind: malformed DW_CFA_def_cfa_register DWARF unwind, reg too big\n

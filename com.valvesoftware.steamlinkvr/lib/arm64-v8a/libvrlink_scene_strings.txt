@@ -6,7 +6,7 @@
 %02x\t
 032AndroidInternalStorageFileLoader
 %.0Lf
-10065637 
+10120589 
 10.35.78
 10QSVLClient
 11QSVLXRInput
@@ -399,6 +399,7 @@ basic_ostream
 basic_string
 batterymanager
 BehaviorCallbacks::~BehaviorCallbacks()
+BHasSystemFeature(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 bind
 bindings
 Binding UDP socket to %s\n
@@ -439,13 +440,16 @@ bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrHandTrackerEXT_T *, const XrHandJointsLocateInfoEXT *, XrHandJointLocationsEXT *)]
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrInstance_T *, const timespec *, long *)]
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrInstance_T *, unsigned long, XrGraphicsRequirementsOpenGLESKHR *)]
+bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSession_T *)]
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSession_T *, const XrEyeTrackerCreateInfoFB *, XrEyeTrackerFB_T **)]
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSession_T *, const XrFaceTrackerCreateInfo2FB *, XrFaceTracker2FB_T **)]
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSession_T *, const XrHandTrackerCreateInfoEXT *, XrHandTrackerEXT_T **)]
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSession_T *, float)]
+bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSession_T *, long, XrEyeTrackingDataPICO *)]
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSession_T *, long, XrFaceTrackingDataTypePICO, XrFaceTrackingDataPICO *)]
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSession_T *, unsigned int, unsigned int *, float *)]
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSession_T *, unsigned int, unsigned int *, XrColorSpaceFB *)]
+bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSession_T *, unsigned long)]
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSession_T *, XrAndroidThreadTypeKHR, unsigned int)]
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSession_T *, XrColorSpaceFB)]
 bool XRQGetExtensionFromProcAddr(const XRQContext &, const std::string &, T &) [T = XrResult (*)(XrSwapchain_T *, const XrSwapchainStateBaseHeaderFB *)]
@@ -458,14 +462,17 @@ bool XRQGetExtensionFromProcAddr<XrResult (*)(XrInstance_T*, timespec const*, lo
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrInstance_T*, unsigned long, XrGraphicsRequirementsOpenGLESKHR*)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrInstance_T*, unsigned long, XrGraphicsRequirementsOpenGLESKHR*))
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrLoaderInitInfoBaseHeaderKHR const*)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrLoaderInitInfoBaseHeaderKHR const*))
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSession_T*, float)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSession_T*, float))
+bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSession_T*, long, XrEyeTrackingDataPICO*)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSession_T*, long, XrEyeTrackingDataPICO*))
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSession_T*, long, XrFaceTrackingDataTypePICO, XrFaceTrackingDataPICO*)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSession_T*, long, XrFaceTrackingDataTypePICO, XrFaceTrackingDataPICO*))
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSession_T*, unsigned int, unsigned int*, float*)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSession_T*, unsigned int, unsigned int*, float*))
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSession_T*, unsigned int, unsigned int*, XrColorSpaceFB*)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSession_T*, unsigned int, unsigned int*, XrColorSpaceFB*))
+bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSession_T*, unsigned long)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSession_T*, unsigned long))
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSession_T*, XrAndroidThreadTypeKHR, unsigned int)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSession_T*, XrAndroidThreadTypeKHR, unsigned int))
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSession_T*, XrColorSpaceFB)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSession_T*, XrColorSpaceFB))
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSession_T*, XrEyeTrackerCreateInfoFB const*, XrEyeTrackerFB_T**)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSession_T*, XrEyeTrackerCreateInfoFB const*, XrEyeTrackerFB_T**))
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSession_T*, XrFaceTrackerCreateInfo2FB const*, XrFaceTracker2FB_T**)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSession_T*, XrFaceTrackerCreateInfo2FB const*, XrFaceTracker2FB_T**))
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSession_T*, XrHandTrackerCreateInfoEXT const*, XrHandTrackerEXT_T**)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSession_T*, XrHandTrackerCreateInfoEXT const*, XrHandTrackerEXT_T**))
+bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSession_T*)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSession_T*))
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSwapchain_T*, XrSwapchainStateBaseHeaderFB const*)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSwapchain_T*, XrSwapchainStateBaseHeaderFB const*))
 bool XRQGetExtensionFromProcAddr<XrResult (*)(XrSwapchain_T*, XrSwapchainStateBaseHeaderFB*)>(XRQContext const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, XrResult (*&)(XrSwapchain_T*, XrSwapchainStateBaseHeaderFB*))
 bool XRQGetFaceTrackingFB(XRQContext &, XrFaceExpressionWeights2FB &)
@@ -487,6 +494,7 @@ bool XRQSetApplicationThread(const XRQContext &, XrAndroidThreadTypeKHR)
 bool XRQSetAvailableExtensions(XRQContext &, const std::set<std::string> &)
 bool XRQSetColorSpace(const XRQContext &, XrColorSpaceFB)
 bool XRQSetReferencePlaySpace(XRQContext &, const XrReferenceSpaceType)
+bool XRQStartPicoEyeTracking(XRQContext &)
 bool XRQSyncRegisteredActiveActionSets(const XRQContext &)
 bool XRQTeardown(XRQContext &)
 bool XRQUpdateSwapchainSamplerStateGLES(const XRQContext &, const XRQSwapchain &, const XrSwapchainStateSamplerOpenGLESFB &)
@@ -598,6 +606,8 @@ commentStyle must be 'All' or 'None'
 commit
 com.oculus.permission.EYE_TRACKING
 com.oculus.permission.FACE_TRACKING
+com.picovr.permission.EYE_TRACKING
+com.picovr.permission.FACE_TRACKING
  complex
 com.valvesoftware.steamlinkvr.pamir_pref
 condition_variable timed_wait failed
@@ -842,9 +852,9 @@ dEstLinkBW
 [DeviceHMD] Failed to locate reference space
 [DeviceHMD] Failed to register action set for sync!
 [DeviceHMD] Failed to register hmd device actions!
-[DeviceHMD] Failed to start pico eye tracking!
 [DeviceHMD] Found device static props for: %s
 [DeviceHMD] Loading HMD config
+[DeviceHMD] Sending face tracking for this session: %s
 [DeviceHMD] Unable to find device static props for "%s". Attempting to load defaults
 DeviceInput::Clear()
 DeviceInput::~DeviceInput()
@@ -1497,6 +1507,7 @@ hapticAction
 HapticsThread
 hasMoreElements
 hasNext
+hasSystemFeature
 hide_cancel
 hide_cancel_then_show_after_ms
 host_connect
@@ -2104,6 +2115,7 @@ Ljava/lang/String;
 (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 (Ljava/lang/String;Ljava/lang/String;)V
 (Ljava/lang/String;)V
+(Ljava/lang/String;)Z
 (Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 (Ljava/lang/String;Z)Z
 ()Ljava/net/InetAddress;
@@ -2546,6 +2558,7 @@ objc_object
 obtain
 October
 Oculus
+oculus.software.vr.app.hybrid
 offset
 OnInputEvent(android_app*, AInputEvent*)
 onPause
@@ -3248,6 +3261,7 @@ standing
 startActivity
 StartActivity(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::map<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>> const&)
 StartHomePanelActivity(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::map<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::less<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>> const&)
+Starting pico eye tracking...
 Starting session in mode %d\n
 Starting session with AES Mode 0
 Starting session with ID: %08x
@@ -3914,6 +3928,7 @@ std::__ndk1::__deque_base<Json::OurReader::ErrorInfo, std::__ndk1::allocator<Jso
 std::__ndk1::__deque_base<Json::Reader::ErrorInfo, std::__ndk1::allocator<Json::Reader::ErrorInfo>>::clear()
 std::__ndk1::__deque_base<Json::Value*, std::__ndk1::allocator<Json::Value*>>::~__deque_base()
 std::__ndk1::__deque_base<QSVLCodecNDK::frame_submit_marker_t, std::__ndk1::allocator<QSVLCodecNDK::frame_submit_marker_t>>::~__deque_base()
+std::__ndk1::__deque_base<SVLDataLink::IDAndTime, std::__ndk1::allocator<SVLDataLink::IDAndTime>>::~__deque_base()
 std::__ndk1::__deque_base<WebViewInput, std::__ndk1::allocator<WebViewInput>>::clear()
 std::__ndk1::__deque_base<WebViewOutput, std::__ndk1::allocator<WebViewOutput>>::clear()
 std::__ndk1::deque<EStreamSceneState, std::__ndk1::allocator<EStreamSceneState>>::__add_back_capacity()
@@ -3928,6 +3943,8 @@ std::__ndk1::deque<Json::Reader::ErrorInfo, std::__ndk1::allocator<Json::Reader:
 std::__ndk1::deque<Json::Reader::ErrorInfo, std::__ndk1::allocator<Json::Reader::ErrorInfo>>::__erase_to_end(std::__ndk1::__deque_iterator<Json::Reader::ErrorInfo, Json::Reader::ErrorInfo const*, Json::Reader::ErrorInfo const&, Json::Reader::ErrorInfo const* const*, long, 73l>)
 std::__ndk1::deque<Json::Value*, std::__ndk1::allocator<Json::Value*>>::__add_back_capacity()
 std::__ndk1::deque<QSVLCodecNDK::frame_submit_marker_t, std::__ndk1::allocator<QSVLCodecNDK::frame_submit_marker_t>>::__add_back_capacity()
+std::__ndk1::deque<SVLDataLink::IDAndTime, std::__ndk1::allocator<SVLDataLink::IDAndTime>>::__add_back_capacity()
+std::__ndk1::deque<SVLDataLink::IDAndTime, std::__ndk1::allocator<SVLDataLink::IDAndTime>>::shrink_to_fit()
 std::__ndk1::__do_nothing(void*)
 std::__ndk1::enable_if<__is_cpp17_forward_iterator<char*>::value && is_constructible<char, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, void>::type std::__ndk1::vector<char, std::__ndk1::allocator<char>>::assign<char*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
 std::__ndk1::enable_if<__is_cpp17_forward_iterator<float*>::value && is_constructible<float, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, void>::type std::__ndk1::vector<float, std::__ndk1::allocator<float>>::assign<float*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
@@ -4353,6 +4370,7 @@ std::__ndk1::promise<void>::set_exception_at_thread_exit(std::exception_ptr)
 std::__ndk1::promise<void>::set_exception(std::exception_ptr)
 std::__ndk1::promise<void>::set_value()
 std::__ndk1::promise<void>::set_value_at_thread_exit()
+std::__ndk1::queue<SVLDataLink::IDAndTime, std::__ndk1::deque<SVLDataLink::IDAndTime, std::__ndk1::allocator<SVLDataLink::IDAndTime>>>::~queue()
 std::__ndk1::queue<WebViewInput, std::__ndk1::deque<WebViewInput, std::__ndk1::allocator<WebViewInput>>>::~queue()
 std::__ndk1::queue<WebViewOutput, std::__ndk1::deque<WebViewOutput, std::__ndk1::allocator<WebViewOutput>>>::~queue()
 std::__ndk1::random_device::entropy() const
@@ -4490,6 +4508,11 @@ std::__ndk1::__split_buffer<SeenServers_t, std::__ndk1::allocator<SeenServers_t>
 std::__ndk1::__split_buffer<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>&>::~__split_buffer()
 std::__ndk1::__split_buffer<std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)>, std::__ndk1::allocator<std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)>>&>::~__split_buffer()
 std::__ndk1::__split_buffer<StreamBehavior_Loading::StreamCheckInfo, std::__ndk1::allocator<StreamBehavior_Loading::StreamCheckInfo>&>::~__split_buffer()
+std::__ndk1::__split_buffer<SVLDataLink::IDAndTime*, std::__ndk1::allocator<SVLDataLink::IDAndTime*>&>::push_back(SVLDataLink::IDAndTime*&&)
+std::__ndk1::__split_buffer<SVLDataLink::IDAndTime*, std::__ndk1::allocator<SVLDataLink::IDAndTime*>>::push_back(SVLDataLink::IDAndTime*&&)
+std::__ndk1::__split_buffer<SVLDataLink::IDAndTime*, std::__ndk1::allocator<SVLDataLink::IDAndTime*>>::push_front(SVLDataLink::IDAndTime*&&)
+std::__ndk1::__split_buffer<SVLDataLink::IDAndTime*, std::__ndk1::allocator<SVLDataLink::IDAndTime*>&>::push_front(SVLDataLink::IDAndTime* const&)
+std::__ndk1::__split_buffer<SVLDataLink::IDAndTime*, std::__ndk1::allocator<SVLDataLink::IDAndTime*>>::shrink_to_fit()
 std::__ndk1::__split_buffer<XRScene_Preflight::PreflightCheckInfo, std::__ndk1::allocator<XRScene_Preflight::PreflightCheckInfo>&>::~__split_buffer()
 std::__ndk1::__sp_mut::lock()
 std::__ndk1::__sp_mut::unlock()
@@ -4838,6 +4861,8 @@ StreamSceneState::~StreamSceneState()
 #StreamSideBand_ConnectionStartedDescription
 #StreamSideBand_UnknownIssue
 #StreamSideBand_UnknownIssueDescription
+#StreamSideBand_VersionIncompatible
+#StreamSideBand_VersionIncompatibleDescription
 #StreamSideBand_WrongId
 #StreamSideBand_WrongIdDescription
 strerror
@@ -4866,6 +4891,7 @@ __strncpy_chk
 __strncpy_chk2
 strnicmp(char const*, char const*, unsigned long)
 strpbrk
+strstr
 strtod
 strtof
 strtol
@@ -4991,6 +5017,8 @@ SVLDataLink::InitCrypt(std::__ndk1::vector<char, std::__ndk1::allocator<char>>&,
 SVLDataLink::InitCrypt() With %lu remaining key max\n
 SVLDataLink::PrepareForPossibleShutdown()
 SVLDataLink::ProcessEvent(vr::VREvent_t const&)
+SVLDataLink::PullFromIDAndTimeQueue(std::__ndk1::queue<SVLDataLink::IDAndTime, std::__ndk1::deque<SVLDataLink::IDAndTime, std::__ndk1::allocator<SVLDataLink::IDAndTime>>>&, SVLDataLink::IDAndTime&)
+SVLDataLink::PushOntoIDAndTimeQueue(std::__ndk1::queue<SVLDataLink::IDAndTime, std::__ndk1::deque<SVLDataLink::IDAndTime, std::__ndk1::allocator<SVLDataLink::IDAndTime>>>&, SVLDataLink::IDAndTime)
 SVLDataLink::ReceivedData(dataset*)
 SVLDataLink::ReceiveTimedOut()
 SVLDataLink::Reconnect()
@@ -6478,7 +6506,7 @@ xrApplyHapticFeedback( m_refXrqContext->session, &actionInfo, (const XrHapticBas
 [XrAppManager] APPLICATION_2D_DASH Event Processed
 [XrAppManager] App transitioned to scene: %i
 [XrAppManager] Attempted to transition to scene %d, but was not a valid scene
-[XrAppManager] Attempting to StartActivity back to SteamLink Dashboard (%s, %s)
+[XrAppManager] Attempting to go back to SteamLink Dashboard (%s, %s)
 [XrAppManager] Began construction
 [XrAppManager] Began initialization
 XrAppManager::BReadyToSuspend()
@@ -6500,6 +6528,7 @@ XrAppManager::BReadyToSuspend()
 [XrAppManager] Failed to load stored config to app paths!
 [XrAppManager] Failed to set play space
 XrAppManager::GetRequestedExtensions()
+[XrAppManager] Go back to Steam Link dashboard not supported, exiting the session...
 XrAppManager::HandleSceneTransition(AppViewType, bool)
 XrAppManager::HandleTransitionToDash(bool)
 XrAppManager::HandleXREvent(XrqEvent, std::__ndk1::variant<XrEventDataReferenceSpaceChangePending> const&)
@@ -6630,10 +6659,11 @@ xrGetCurrentInteractionProfile
 xrGetCurrentInteractionProfile( xrqContext.session, vHandSubactionPaths[ i ], &interactionProfileState )
 xrGetEyeGazesFB
 xrGetEyeGazesFB( context.eyeTrackerFB, &gazesInfoFb, &eyeGazesFb )
+xrGetEyeTrackingDataPICO
 xrGetFaceExpressionWeights2FB
 xrGetFaceExpressionWeights2FB( context.faceTracker, &expressionInfo2FB, &outFaceExpressionWeights )
 xrGetFaceTrackingDataPICO
-xrGetFaceTrackingDataPICO(context.session, timeNow, type, &data)
+xrGetFaceTrackingDataPICO(context.session, timeNow, XR_GET_FACE_DATA_DEFAULT_PICO, &data)
 xrGetInstanceProcAddr
 xrGetInstanceProcAddr( context.instance, proc_addr.c_str(), (PFN_xrVoidFunction *) &out )
 xrGetInstanceProperties
@@ -6712,11 +6742,11 @@ XRQEnumerateSupportedRefreshRates(XRQContext&, std::__ndk1::vector<float, std::_
 [XRQ] Eye gaze interaction supported: %s
 [XRQ] Face tracking supported: %s
 [XRQ] Failed to destroy hand tracker (%s): %i
+[XRQ] Failed to setup pico eye tracking!
 [XRQ] Failed to suggest interaction profile bindings for %s with error %i. Skipping.
 [XRQ] FB Eye tracking Social supported: %s
 XRQGetFaceTracking(XRQContext&, XrFaceExpressionWeights2FB&)
 XRQGetHandSubactionPaths(XRQContext const&, XRQHand, std::__ndk1::vector<unsigned long, std::__ndk1::allocator<unsigned long>>&)
-XRQGetPicoEyeTracking(XRQContext const&, XRQEyeVector&)
 XRQGetPlayAreaBoundsRect(XRQContext const&, XrExtent2Df&)
 XRQGetReferenceSpace(XRQContext const&, XrReferenceSpaceType, XrSpace_T*&)
 XRQGetSocialEyeTracking(XRQContext&, XRQEyeVector&)
@@ -6742,6 +6772,8 @@ XRQLocateViewsFrame(XRQContext&)
 XRQLocateViewsInReferenceSpace(XRQContext const&, long, XrSpace_T*, std::__ndk1::vector<XrView, std::__ndk1::allocator<XrView>>&)
 [XRQ] New swapchain Info - magFilter: %#04x, minFilter: %#04x, maxAnisotropy: %.3f
 [XRQ] OpenXR Loader initialized successfully
+[XRQ] Pico eye tracking is not supported
+[XRQ] Pico face tracking is supported
 [XRQ] Received interaction profile changed event
 [XRQ] Received reference space change pending event
 XRQRegisterActionSetForSync(XRQContext&, XrActionSet_T*, XRQHand)
@@ -6796,6 +6828,7 @@ XRQXrPathToString(XRQContext const&, unsigned long, std::__ndk1::basic_string<ch
 [XRQ] XRQRequestHighestRefreshRate: Failed to enumerate refresh rates
 [XRQ] XRQRequestHighestRefreshRate: no refresh rates returned from enumerate
 [XRQ] XRQRequestRefreshRate: Set refresh rate to %.1fHz
+[XRQ] XrqRuntime: %i
 [XRQ] XRQSetColorSpace: Did not set color space as XR_FB_color_space was not available
 [XRQ] ~XRQSwapchain: Swapchain destroyed.
 [XRQ] ~XRQSwapchain: swapchain was already XR_NULL_HANDLE!
@@ -6900,6 +6933,12 @@ xrSetAndroidApplicationThreadKHR
 xrSetAndroidApplicationThreadKHR( context.session, threadType, gettid() )
 xrSetColorSpaceFB
 xrSetColorSpaceFB(context.session, colorSpace)
+xrSetTrackingModePICO
+xrSetTrackingModePICO( context.session, XR_TRACKING_MODE_FACE_BIT_PICO )
+xrStartEyeTrackingPICO
+xrStartEyeTrackingPICO( context.session )
+xrStopEyeTrackingPICO
+xrStopEyeTrackingPICO( context.session, XR_TRACKING_MODE_FACE_BIT_PICO )
 xrStopHapticFeedback
 xrStopHapticFeedback( m_refXrqContext->session, &actionInfo )
 xrStringToPath
