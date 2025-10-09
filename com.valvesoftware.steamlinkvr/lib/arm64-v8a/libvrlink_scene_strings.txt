@@ -59,7 +59,7 @@
 8SVLAudio
 8SVLCodec
 8SVLCrypt
-9932366 
+9936740 
 9a&g
 9JLX
 9QSVLInput
@@ -2168,7 +2168,6 @@ m_pCorrectionShaderFovea->SetUniformL1f( UNIFORM_LOC_GROUP, eye * 2.0f )
 m_pCorrectionShaderFovea->SetUniformL1f( UNIFORM_LOC_MODE, m_atlasMode )
 m_pCorrectionShader->SetUniformL1f( UNIFORM_LOC_GROUP, eye * 2.0f + 1.0f )
 m_pCorrectionShader->SetUniformL1f( UNIFORM_LOC_MODE, m_atlasMode)
-M-t3U
 mutex lock failed
 myLooper
 N10__cxxabiv116__enum_type_infoE
