@@ -1,4 +1,4 @@
-16200     09f3be23  AndroidManifest.xml
+16200     5d193478  AndroidManifest.xml
 27355     6d5cab0b  assets/config/controller_config.json
 61        d09b3de8  assets/config/default_config.json
 5559      deccdfd7  assets/config/hmd_config.json
@@ -75,11 +75,11 @@
 672091    6dfe4817  assets/webui/styles/fonts.css
 3266      4cc6dae7  assets/webui/styles/spinner.css
 6547      d9c510d0  assets/webui/styles/style.css
-126072    a6f7f82e  classes.dex
+126072    6b469252  classes.dex
 1292896   cd320eef  lib/arm64-v8a/libc++_shared.so
 86416     46cf759f  lib/arm64-v8a/libh264bitstream.so
 113072    cc8a5e41  lib/arm64-v8a/libhevcbitstream.so
-14104368  d5ce9312  lib/arm64-v8a/libmain.so
+14104368  fe02194f  lib/arm64-v8a/libmain.so
 730960    f955cf71  lib/arm64-v8a/libopenxr_loader.so
 47216     78bb3fd4  lib/arm64-v8a/libplugins_iconengines_qsvgicon_arm64-v8a.so
 29088     9efcb076  lib/arm64-v8a/libplugins_imageformats_qgif_arm64-v8a.so
@@ -96,9 +96,9 @@
 232072    280c460e  lib/arm64-v8a/libSDL3_mixer.so
 1830560   8afbbe63  lib/arm64-v8a/libSDL3.so
 1543928   694f1d92  lib/arm64-v8a/libSDL3_ttf.so
-26653568  9e06da5b  lib/arm64-v8a/libshell_arm64-v8a.so
+26653568  7f1e2633  lib/arm64-v8a/libshell_arm64-v8a.so
 6396824   48be9e29  lib/arm64-v8a/libsteamwebrtc.so
-2203168   9ff41ccb  lib/arm64-v8a/libvrlink_scene.so
+2203344   f343fa2e  lib/arm64-v8a/libvrlink_scene.so
 56        2b084705  META-INF/com/android/build/gradle/app-metadata.properties
 46        b8ff6554  META-INF/version-control-info.textproto
 544       2cf698ae  res/01.xml
