@@ -5383,6 +5383,7 @@ BIsCapProgressLabel(ELabelPosition)
 BIsCompatibleType(EControllerType, EControllerType)
 BIsControllerThatWantsMouseLikeAim(EControllerType)
 BIsFullSwitchController(EControllerType)
+BIsHandheldLegendSInputController(unsigned int, unsigned int)
 BIsJoyconController(EControllerType)
 BIsMobileApp()
 BIsOfficialPSController(unsigned int, unsigned int)
@@ -12015,6 +12016,7 @@ CONNECTED
 connected_seconds
 Connected to Remote Client service with session %llu\n
 Connected to %s (%s) port %u (#%ld)
+connected_wifi_ap_client_id
 connect error
 ConnectHandshakePacketsInRSVP
 connecting
@@ -30785,7 +30787,7 @@ libGLESv1_CM.so
 libGLESv2.so
 libh264bitstream.so
 libhevcbitstream.so
-lib Jul 17 2025 15:55:28
+lib Jul 28 2025 12:41:41
 liblog.so
 lib(%lu)
 libmain.so
@@ -36740,7 +36742,7 @@ Plat_gmtime
 Plat_InternalOverrideArgv
 Plat_IsGamescope
 Plat_IsInDebugSession
-Plat_IsSteamDeck
+Plat_IsSteamDeck_DoNotUse
 Plat_localtime
 Plat_OutputDebugString
 Plat_RelativeTickFrequency
@@ -50867,8 +50869,8 @@ V_strristr
 V_StrSkipArticles
 V_StrSlice
 V_strstr(char const*, char const*)
-V_StrSubst
 V_StrSubstInPlace
+V_StrSubstN
 V_strtoi64
 V_strtoui64
 V_StrTrim

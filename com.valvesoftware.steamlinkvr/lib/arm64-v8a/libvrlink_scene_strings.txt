@@ -59,7 +59,7 @@
 8SVLAudio
 8SVLCodec
 8SVLCrypt
-9908486 
+9932366 
 9a&g
 9JLX
 9QSVLInput
@@ -132,6 +132,7 @@ AImageReader_newWithUsage
 AImageReader_newWithUsage( 1, 1, AIMAGE_FORMAT_PRIVATE, AHARDWAREBUFFER_USAGE_GPU_SAMPLED_IMAGE | AHARDWAREBUFFER_USAGE_CPU_READ_NEVER | AHARDWAREBUFFER_USAGE_CPU_WRITE_NEVER, 20, &m_imageReader )
 AImageReader_setImageListener
 AImageReader_setImageListener( m_imageReader, &m_imageListener )
+AImageReader_setImageListener( m_imageReader, nullptr )
 AInputEvent_getType
 AInputQueue_attachLooper
 AInputQueue_detachLooper
@@ -164,7 +165,7 @@ AMediaCodec_delete( m_codec )
 AMediaCodec_dequeueInputBuffer
 AMediaCodec_dequeueOutputBuffer
 AMediaCodec_flush
-AMediaCodec_flush(m_codec )
+AMediaCodec_flush( m_codec )
 AMediaCodec_getInputBuffer
 AMediaCodec_queueInputBuffer
 AMediaCodec_releaseOutputBuffer
@@ -980,6 +981,7 @@ FDE is really a CIE
 fDelay
 February
 FEC decode fail %d %d %d\n
+(FFFF)V
 fflush
 fgets
 %F-%H-%M-%S
@@ -2166,6 +2168,7 @@ m_pCorrectionShaderFovea->SetUniformL1f( UNIFORM_LOC_GROUP, eye * 2.0f )
 m_pCorrectionShaderFovea->SetUniformL1f( UNIFORM_LOC_MODE, m_atlasMode )
 m_pCorrectionShader->SetUniformL1f( UNIFORM_LOC_GROUP, eye * 2.0f + 1.0f )
 m_pCorrectionShader->SetUniformL1f( UNIFORM_LOC_MODE, m_atlasMode)
+M-t3U
 mutex lock failed
 myLooper
 N10__cxxabiv116__enum_type_infoE
@@ -2800,7 +2803,7 @@ QSVLClientXR::AcceptHapticsPacket(HapticsPacketData_t const&)
 QSVLClientXR::BIsDecoderStuck()
 QSVLClientXR::BIsLinkActive()
 QSVLClientXR::BStreamSwapchainsSetup()
-QSVLClientXR::FlipFrame(long*)
+QSVLClientXR::FlipFrame(long*, long)
 QSVLClientXR::GetAvailableDisplayFrequencies(std::__ndk1::vector<float, std::__ndk1::allocator<float>>&)
 QSVLClientXR::GetChaperone(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&)
 QSVLClientXR::GetDisplayProjections(std::__ndk1::array<vr::HmdRect2_t, 2ul>&)
@@ -2837,6 +2840,7 @@ QSVLClientXR::SetShouldWaitOnFrames(bool)
 QSVLClientXR::TrySetPreferredDisplayFrequency(float)
 QSVLCodecNDK::AcquireEncodedDataBuffer(unsigned int, unsigned long*)
 QSVLCodecNDK::BIsStuck()
+QSVLCodecNDK::ClearPendingFrameList()
 QSVLCodecNDK::Flush()
 QSVLCodecNDK::HandleOnImageAvailable(AImageReader*)
 QSVLCodecNDK::HandleOnImageAvailableProc(void*, AImageReader*)
@@ -2861,6 +2865,7 @@ QSVLFrameServer::AwaitNewDecodedFrame(std::__ndk1::promise<bool>&&)
 QSVLFrameServer::EnqueueHardwareBuffer(HardwareBufferInfo&&)
 QSVLFrameServer::FlushHardwareBuffers()
 QSVLFrameServer::QSVLFrameServer()
+QSVLFrameServer::ServeBestHardwareBuffer(HardwareBufferInfo&, SVLRoot*, int, int)
 QSVLFrameServer::ServeNextHardwareBuffer(HardwareBufferInfo&, int)
 QSVLHapticsXR
 QSVLHapticsXR::AcceptHapticsPacket(HapticsPacketData_t const&)
@@ -2870,7 +2875,7 @@ QSVLHapticsXR::~QSVLHapticsXR()
 QSVLHapticsXR::QSVLHapticsXR(std::__ndk1::shared_ptr<QSVLInput>)
 QSVLRendererXR::BSwapchainsSetup()
 QSVLRendererXR::FlipFrame()
-QSVLRendererXR::FlipFrame(XRQContext const&, long*)
+QSVLRendererXR::FlipFrame(XRQContext const&, long*, long)
 QSVLRendererXR::GetProjectionLayers(std::__ndk1::vector<XrCompositionLayerBaseHeader*, std::__ndk1::allocator<XrCompositionLayerBaseHeader*>>&)
 QSVLRendererXR::Init()
 QSVLRendererXR::Init(XRQContext const&)
@@ -2961,6 +2966,7 @@ russian
 Saturday
 %s begin_ctx=%lu
 sBWFECLim
+scale
 SC Custom 0 %d
 SC Custom 1 %d
 SC Custom 2 %d
@@ -3892,6 +3898,7 @@ std::__ndk1::__deque_base<HardwareBufferInfo, std::__ndk1::allocator<HardwareBuf
 std::__ndk1::__deque_base<Json::OurReader::ErrorInfo, std::__ndk1::allocator<Json::OurReader::ErrorInfo>>::clear()
 std::__ndk1::__deque_base<Json::Reader::ErrorInfo, std::__ndk1::allocator<Json::Reader::ErrorInfo>>::clear()
 std::__ndk1::__deque_base<Json::Value*, std::__ndk1::allocator<Json::Value*>>::~__deque_base()
+std::__ndk1::__deque_base<QSVLCodecNDK::frame_submit_marker_t, std::__ndk1::allocator<QSVLCodecNDK::frame_submit_marker_t>>::~__deque_base()
 std::__ndk1::__deque_base<WebViewInput, std::__ndk1::allocator<WebViewInput>>::clear()
 std::__ndk1::__deque_base<WebViewOutput, std::__ndk1::allocator<WebViewOutput>>::clear()
 std::__ndk1::deque<EStreamSceneState, std::__ndk1::allocator<EStreamSceneState>>::__add_back_capacity()
@@ -3905,6 +3912,7 @@ std::__ndk1::deque<Json::Reader::ErrorInfo, std::__ndk1::allocator<Json::Reader:
 std::__ndk1::deque<Json::Reader::ErrorInfo, std::__ndk1::allocator<Json::Reader::ErrorInfo>>::__append(unsigned long)
 std::__ndk1::deque<Json::Reader::ErrorInfo, std::__ndk1::allocator<Json::Reader::ErrorInfo>>::__erase_to_end(std::__ndk1::__deque_iterator<Json::Reader::ErrorInfo, Json::Reader::ErrorInfo const*, Json::Reader::ErrorInfo const&, Json::Reader::ErrorInfo const* const*, long, 73l>)
 std::__ndk1::deque<Json::Value*, std::__ndk1::allocator<Json::Value*>>::__add_back_capacity()
+std::__ndk1::deque<QSVLCodecNDK::frame_submit_marker_t, std::__ndk1::allocator<QSVLCodecNDK::frame_submit_marker_t>>::__add_back_capacity()
 std::__ndk1::__do_nothing(void*)
 std::__ndk1::enable_if<__is_cpp17_forward_iterator<char*>::value && is_constructible<char, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, void>::type std::__ndk1::vector<char, std::__ndk1::allocator<char>>::assign<char*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
 std::__ndk1::enable_if<__is_cpp17_forward_iterator<float*>::value && is_constructible<float, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, void>::type std::__ndk1::vector<float, std::__ndk1::allocator<float>>::assign<float*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
@@ -4351,6 +4359,13 @@ std::__ndk1::__shared_count::__release_shared()
 std::__ndk1::__shared_count::~__shared_count()
 std::__ndk1::shared_future<void>::operator=(std::__ndk1::shared_future<void> const&)
 std::__ndk1::shared_future<void>::~shared_future()
+std::__ndk1::__shared_mutex_base::lock()
+std::__ndk1::__shared_mutex_base::lock_shared()
+std::__ndk1::__shared_mutex_base::__shared_mutex_base()
+std::__ndk1::__shared_mutex_base::try_lock()
+std::__ndk1::__shared_mutex_base::try_lock_shared()
+std::__ndk1::__shared_mutex_base::unlock()
+std::__ndk1::__shared_mutex_base::unlock_shared()
 std::__ndk1::__shared_ptr_emplace<QSVLDeviceHmd, std::__ndk1::allocator<QSVLDeviceHmd>>::__on_zero_shared()
 std::__ndk1::__shared_ptr_emplace<QSVLDeviceHmd, std::__ndk1::allocator<QSVLDeviceHmd>>::__on_zero_shared_weak()
 std::__ndk1::__shared_ptr_emplace<QSVLDeviceHmd, std::__ndk1::allocator<QSVLDeviceHmd>>::~__shared_ptr_emplace()
@@ -4413,6 +4428,13 @@ std::__ndk1::shared_ptr<VariableTransportHolder>::~shared_ptr()
 std::__ndk1::shared_ptr<WebView>::~shared_ptr()
 std::__ndk1::shared_ptr<WebView>::shared_ptr<WebView>(WebView*, std::__ndk1::enable_if<is_convertible<WebView*, WebView*>::value, std::__ndk1::shared_ptr<WebView>::__nat>::type)
 std::__ndk1::shared_ptr<XrUIManager>::~shared_ptr()
+std::__ndk1::shared_timed_mutex::lock()
+std::__ndk1::shared_timed_mutex::lock_shared()
+std::__ndk1::shared_timed_mutex::shared_timed_mutex()
+std::__ndk1::shared_timed_mutex::try_lock()
+std::__ndk1::shared_timed_mutex::try_lock_shared()
+std::__ndk1::shared_timed_mutex::unlock()
+std::__ndk1::shared_timed_mutex::unlock_shared()
 std::__ndk1::__shared_weak_count::__add_shared()
 std::__ndk1::__shared_weak_count::__add_weak()
 std::__ndk1::__shared_weak_count::__get_deleter(std::type_info const&) const
@@ -4445,6 +4467,10 @@ std::__ndk1::__split_buffer<Json::Value**, std::__ndk1::allocator<Json::Value**>
 std::__ndk1::__split_buffer<Json::Value**, std::__ndk1::allocator<Json::Value**>>::push_back(Json::Value**&&)
 std::__ndk1::__split_buffer<Json::Value**, std::__ndk1::allocator<Json::Value**>>::push_front(Json::Value**&&)
 std::__ndk1::__split_buffer<Json::Value**, std::__ndk1::allocator<Json::Value**>&>::push_front(Json::Value** const&)
+std::__ndk1::__split_buffer<QSVLCodecNDK::frame_submit_marker_t*, std::__ndk1::allocator<QSVLCodecNDK::frame_submit_marker_t*>&>::push_back(QSVLCodecNDK::frame_submit_marker_t*&&)
+std::__ndk1::__split_buffer<QSVLCodecNDK::frame_submit_marker_t*, std::__ndk1::allocator<QSVLCodecNDK::frame_submit_marker_t*>>::push_back(QSVLCodecNDK::frame_submit_marker_t*&&)
+std::__ndk1::__split_buffer<QSVLCodecNDK::frame_submit_marker_t*, std::__ndk1::allocator<QSVLCodecNDK::frame_submit_marker_t*>>::push_front(QSVLCodecNDK::frame_submit_marker_t*&&)
+std::__ndk1::__split_buffer<QSVLCodecNDK::frame_submit_marker_t*, std::__ndk1::allocator<QSVLCodecNDK::frame_submit_marker_t*>&>::push_front(QSVLCodecNDK::frame_submit_marker_t* const&)
 std::__ndk1::__split_buffer<SeenServers_t, std::__ndk1::allocator<SeenServers_t>&>::~__split_buffer()
 std::__ndk1::__split_buffer<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>&>::~__split_buffer()
 std::__ndk1::__split_buffer<std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)>, std::__ndk1::allocator<std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::variant<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, bool, float, int> const&)>>&>::~__split_buffer()
@@ -4936,7 +4962,7 @@ SVLDataLink::EventWriteStringNetworkF(char*, ...)
 SVLDataLink::EventWriteStringThread()
 SVLDataLink::FrameHasBeenAccepted(unsigned short, int)
 SVLDataLink::FrameHasBeenDecoded(unsigned int, int)
-SVLDataLink::FrameHasBeenSubmittedForDisplay(unsigned int, int)
+SVLDataLink::FrameHasBeenSubmittedForDisplay(unsigned int, int, int)
 SVLDataLink::GetReceiveAddrH()
 SVLDataLink::GetTXQueueDepth()
 SVLDataLink::HandleFECChange( %d )\n
@@ -4951,6 +4977,7 @@ SVLDataLink::InitCrypt() With %lu remaining key max\n
 SVLDataLink::PrepareForPossibleShutdown()
 SVLDataLink::ProcessEvent(vr::VREvent_t const&)
 SVLDataLink::ReceivedData(dataset*)
+SVLDataLink::ReceiveTimedOut()
 SVLDataLink::Reconnect()
 SVLDataLink::ReportDropCount(int)
 SVLDataLink::ReportRXSeqid(unsigned int, int)
@@ -5000,7 +5027,6 @@ SVLDataLinkUDP::~SVLDataLinkUDP()
 SVLDataLinkUDP::SVLDataLinkUDP(SVLRoot*, bool, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, SVLTransportMode, int)
 SVLDataLinkUDP::Tick()
 SVLDataLinkUDP::XMITData(dataset*, bool, bool)
-[SVLDecoder] > 300ms between frame decodes. Reset.
 [SVLDecoder] AMedia Error: %s = %i
 [SVLDecoder] Began decoder init
 [SVLDecoder] Called submit with an empty buffer
@@ -5013,12 +5039,14 @@ SVLDataLinkUDP::XMITData(dataset*, bool, bool)
 [SVLDecoder] Failed to get hardware buffer
 [SVLDecoder] Failed to queue input buffer with error: %zd
 [SVLDecoder] Finished decoder init
+[SVLDecoder] Flush requested with no valid codec.
+[SVLDecoder] In HandleOnImageAvailable with image reader mismatch.
+[SVLDecoder] In HandleOnImageAvailable without valid codec.
 [SVLDecoder] Invalid frame metadata for frame! Dropping
 [SVLDecoder] Joined media thread
 [SVLDecoder] No available renderer or link.
 [SVLDecoder] No codec!
 [SVLDecoder] No image was acquired to delete
-[SVLDecoder] Output buffers changed
 [SVLDecoder] Shutting down decoder
 [SVLDecoder] Size overflow from submit
 [SVLDecoder] Unable to acquire input buffer with error: %zd
@@ -5034,6 +5062,8 @@ SVLFEC::GetInFlightAndPendingQueueDepth()
 SVLFEC::GetMetadataForFrameId(unsigned short)
 SVLFEC::InternalAcceptFrameFromRX: Failed to acquire pRender
 SVLFEC::InternalAcceptFrameFromRX(unsigned int, unsigned char**, unsigned short)
+SVLFEC::NoPacketReceived()
+SVLFEC::PeriodicCheckForErrors()
 SVLFEC::ProcessTXVideoFrameThreadFunction()
 SVLFEC::ProcessVideoReply(dataset*)
 SVLFECRAID6::Deactivate()
@@ -5070,13 +5100,13 @@ SVLFECTXFrame::HandleRetransmitRequest(resend_fec_request*)
 SVLFECTXFrame::~SVLFECTXFrame()
 SVLFECTXFrame::SVLFECTXFrame(SVLFEC*)
 svl_hand_interaction_augmented
-SVLMedaThread
+SVLMediaThread
 [SVLRenderer] AcceptFrameMetadata  m_iPresentNumber=%d, history_idx=%d fdiff=%d
 SVLRenderer::AcceptFrameMetadata(TransportFrameMetadata_t const*, int)
 [SVLRenderer] GetFrameHist.. idx=%d, tidx=%d, md->info=%d age_us=%d
 SVLRenderer::GetFrameMetadataFromCursor(int)
 SVLRenderer::InitDebugCanvas()
-SVLRenderer::MarkMetadataAsInvalid(int)
+SVLRenderer::MarkMetadataAsInvalid(unsigned int)
 SVLRenderer::Stop()
 SVLRenderer::~SVLRenderer()
 SVLRenderer::SVLRenderer(SVLRoot*)
