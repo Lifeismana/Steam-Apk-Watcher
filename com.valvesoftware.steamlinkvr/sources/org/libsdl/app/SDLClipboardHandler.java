@@ -30,7 +30,11 @@ class SDLClipboardHandler implements ClipboardManager.OnPrimaryClipChangedListen
 
     public void clipboardSetText(String str) {
         this.mClipMgr.removePrimaryClipChangedListener(this);
-        this.mClipMgr.setPrimaryClip(ClipData.newPlainText(null, str));
+        if (str.isEmpty()) {
+            this.mClipMgr.clearPrimaryClip();
+        } else {
+            this.mClipMgr.setPrimaryClip(ClipData.newPlainText(null, str));
+        }
         this.mClipMgr.addPrimaryClipChangedListener(this);
     }
 

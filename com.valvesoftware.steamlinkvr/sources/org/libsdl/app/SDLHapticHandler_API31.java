@@ -1,5 +1,6 @@
 package org.libsdl.app;
 
+import android.os.Build;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.os.VibratorManager;
@@ -23,20 +24,22 @@ class SDLHapticHandler_API31 extends SDLHapticHandler {
     @Override // org.libsdl.app.SDLHapticHandler
     void rumble(int i, float f, float f2, int i2) {
         InputDevice device = InputDevice.getDevice(i);
-        if (device == null) {
-            return;
-        }
-        VibratorManager vibratorManager = device.getVibratorManager();
-        int[] vibratorIds = vibratorManager.getVibratorIds();
-        if (vibratorIds.length >= 2) {
-            vibrate(vibratorManager.getVibrator(vibratorIds[0]), f, i2);
-            vibrate(vibratorManager.getVibrator(vibratorIds[1]), f2, i2);
-        } else if (vibratorIds.length == 1) {
-            vibrate(vibratorManager.getVibrator(vibratorIds[0]), (f * 0.6f) + (f2 * 0.4f), i2);
+        if (device != null && Build.VERSION.SDK_INT >= 31) {
+            VibratorManager vibratorManager = device.getVibratorManager();
+            int[] vibratorIds = vibratorManager.getVibratorIds();
+            if (vibratorIds.length >= 2) {
+                vibrate(vibratorManager.getVibrator(vibratorIds[0]), f, i2);
+                vibrate(vibratorManager.getVibrator(vibratorIds[1]), f2, i2);
+            } else if (vibratorIds.length == 1) {
+                vibrate(vibratorManager.getVibrator(vibratorIds[0]), (f * 0.6f) + (f2 * 0.4f), i2);
+            }
         }
     }
 
     private void vibrate(Vibrator vibrator, float f, int i) {
+        if (Build.VERSION.SDK_INT < 31) {
+            return;
+        }
         if (f == 0.0f) {
             vibrator.cancel();
             return;

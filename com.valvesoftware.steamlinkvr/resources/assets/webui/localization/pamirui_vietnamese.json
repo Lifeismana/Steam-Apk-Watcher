@@ -33,6 +33,8 @@
   "StreamSideBand_AlreadyActiveDescription": "Một mũ chụp khác đang kết nối với máy PC chủ. Đang chờ nó ngắt kết nối.",
   "StreamSideBand_UnknownIssue": "Lỗi không xác định",
   "StreamSideBand_UnknownIssueDescription": "Xảy ra lỗi không xác định với Steam Link. Hãy thử khởi động lại Steam Link.",
+  "StreamSideBand_VersionIncompatible": "Phiên bản không tương thích",
+  "StreamSideBand_VersionIncompatibleDescription": "Phần mềm này không tương thích với phiên bản SteamVR hoạt động trên máy chủ. Vui lòng cập nhật ứng dụng.",
   "StreamLoading_StreamInitializing": "Đang khởi tạo phát sóng",
   "StreamLoading_WaitingForHost": "Đang kết nối tới máy PC chủ...",
   "StreamLoading_WaitingForHostTooLong": "Kết nối tới máy PC chủ lâu hơn bình thường...",

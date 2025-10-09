@@ -33,6 +33,8 @@
   "StreamSideBand_AlreadyActiveDescription": "Et annet hodesett er koblet til vertsmaskinen. Venter på at det kobles fra.",
   "StreamSideBand_UnknownIssue": "Ukjent feil",
   "StreamSideBand_UnknownIssueDescription": "Det oppstod en ukjent feil med Steam Link. Prøv å starte Steam Link på nytt.",
+  "StreamSideBand_VersionIncompatible": "Inkompatibel versjon",
+  "StreamSideBand_VersionIncompatibleDescription": "Denne klienten er inkompatibel med versjonen av SteamVR som kjører på vertsmaskinen. Du må oppgradere denne applikasjonen.",
   "StreamLoading_StreamInitializing": "Starter opp strømming",
   "StreamLoading_WaitingForHost": "Kobler til vertsmaskin …",
   "StreamLoading_WaitingForHostTooLong": "Tilkobling til vertsmaskin tar lengre tid enn vanlig …",

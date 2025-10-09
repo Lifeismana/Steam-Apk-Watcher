@@ -1,10 +1,11 @@
 package org.libsdl.app;
 
+import android.app.Activity;
 import android.content.Context;
 
 /* loaded from: classes.dex */
 public class SDL {
-    protected static Context mContext;
+    protected static Activity mContext;
 
     public static void setupJNI() {
         SDLActivity.nativeSetupJNI();
@@ -19,12 +20,12 @@ public class SDL {
         SDLControllerManager.initialize();
     }
 
-    public static void setContext(Context context) {
-        SDLAudioManager.setContext(context);
-        mContext = context;
+    public static void setContext(Activity activity) {
+        SDLAudioManager.setContext(activity);
+        mContext = activity;
     }
 
-    public static Context getContext() {
+    public static Activity getContext() {
         return mContext;
     }
 

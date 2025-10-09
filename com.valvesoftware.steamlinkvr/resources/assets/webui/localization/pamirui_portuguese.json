@@ -33,6 +33,8 @@
   "StreamSideBand_AlreadyActiveDescription": "Outro headset está conectado ao PC transmissor. A aguardar que seja desconectado.",
   "StreamSideBand_UnknownIssue": "Problema desconhecido",
   "StreamSideBand_UnknownIssueDescription": "Ocorreu um erro desconhecido com o Steam Link. Tenta reiniciar o Steam Link.",
+  "StreamSideBand_VersionIncompatible": "Versão incompatível",
+  "StreamSideBand_VersionIncompatibleDescription": "Esta aplicação é incompatível com a versão do SteamVR no PC transmissor. Atualiza esta aplicação.",
   "StreamLoading_StreamInitializing": "Stream a inicializar",
   "StreamLoading_WaitingForHost": "A estabelecer ligação ao PC transmissor...",
   "StreamLoading_WaitingForHostTooLong": "A conexão ao PC transmissor está a demorar mais do que o normal...",

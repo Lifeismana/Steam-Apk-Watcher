@@ -84,6 +84,12 @@ public class SteamLink extends SDLActivity {
 
         public void Update() {
             WifiInfo connectionInfo = ((WifiManager) this.mContext.getSystemService("wifi")).getConnectionInfo();
+            if (connectionInfo == null) {
+                this.m_sSSID = "";
+                this.m_nFrequency = -1;
+                this.m_nStrength = WifiManager.calculateSignalLevel(-127, 3);
+                return;
+            }
             int networkId = connectionInfo.getNetworkId();
             this.m_nNetworkID = networkId;
             if (networkId < 0) {

@@ -33,6 +33,8 @@
   "StreamSideBand_AlreadyActiveDescription": "K hostitelskému počítači je připojen jiný headset. Čeká se na jeho odpojení.",
   "StreamSideBand_UnknownIssue": "Neznámá chyba",
   "StreamSideBand_UnknownIssueDescription": "V aplikaci Steam Link došlo k neznámé chybě. Zkuste ji restartovat.",
+  "StreamSideBand_VersionIncompatible": "Nekompatibilita verzí",
+  "StreamSideBand_VersionIncompatibleDescription": "Tato aplikace není kompatibilní s verzí režimu SteamVR, která běží na hostitelském počítači, a vyžaduje aktualizaci.",
   "StreamLoading_StreamInitializing": "Inicializování streamu",
   "StreamLoading_WaitingForHost": "Připojování k hostitelskému počítači...",
   "StreamLoading_WaitingForHostTooLong": "Připojování k hostitelskému počítači trvá déle než obvykle...",

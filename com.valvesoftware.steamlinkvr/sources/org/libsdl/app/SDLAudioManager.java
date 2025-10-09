@@ -17,7 +17,7 @@ class SDLAudioManager {
 
     static native void nativeRemoveAudioDevice(boolean z, int i);
 
-    static native int nativeSetupJNI();
+    static native void nativeSetupJNI();
 
     static void release(Context context) {
     }

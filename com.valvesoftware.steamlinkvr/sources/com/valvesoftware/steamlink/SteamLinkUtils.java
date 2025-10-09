@@ -12,16 +12,16 @@ public class SteamLinkUtils {
     public static final String TAG = "SteamLinkShell";
 
     public static boolean canDisplay4KVideo() {
-        Activity activity = (Activity) SDL.getContext();
-        if (Build.MODEL.startsWith("BRAVIA") && activity.getPackageManager().hasSystemFeature("com.sony.dtv.hardware.panel.qfhd")) {
+        Activity context = SDL.getContext();
+        if (Build.MODEL.startsWith("BRAVIA") && context.getPackageManager().hasSystemFeature("com.sony.dtv.hardware.panel.qfhd")) {
             return true;
         }
-        Display.Mode mode = activity.getWindowManager().getDefaultDisplay().getMode();
+        Display.Mode mode = context.getWindowManager().getDefaultDisplay().getMode();
         return mode.getPhysicalWidth() >= 3840 && mode.getPhysicalHeight() >= 2160;
     }
 
     public static boolean canDisplayHDRVideo(boolean z, boolean z2) {
-        Display.HdrCapabilities hdrCapabilities = ((Activity) SDL.getContext()).getWindowManager().getDefaultDisplay().getHdrCapabilities();
+        Display.HdrCapabilities hdrCapabilities = SDL.getContext().getWindowManager().getDefaultDisplay().getHdrCapabilities();
         if (hdrCapabilities != null) {
             int[] supportedHdrTypes = hdrCapabilities.getSupportedHdrTypes();
             int length = supportedHdrTypes.length;

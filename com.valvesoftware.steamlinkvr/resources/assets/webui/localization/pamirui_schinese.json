@@ -33,6 +33,8 @@
   "StreamSideBand_AlreadyActiveDescription": "另一头戴式显示器已连接至您的主机。正在等待其断开连接。",
   "StreamSideBand_UnknownIssue": "未知问题",
   "StreamSideBand_UnknownIssueDescription": "Steam 流式应用出现了一个未知错误。请尝试重启。",
+  "StreamSideBand_VersionIncompatible": "版本不兼容",
+  "StreamSideBand_VersionIncompatibleDescription": "此客户端与主机上运行的 SteamVR 版本不兼容。请升级此应用。",
   "StreamLoading_StreamInitializing": "正在初始化流式传输",
   "StreamLoading_WaitingForHost": "正在连接至主机...",
   "StreamLoading_WaitingForHostTooLong": "连接至主机所花的时间比平时要长...",

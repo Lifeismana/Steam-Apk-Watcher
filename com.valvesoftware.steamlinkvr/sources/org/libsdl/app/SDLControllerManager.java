@@ -18,7 +18,7 @@ public class SDLControllerManager {
 
     static native void nativeRemoveJoystick(int i);
 
-    static native int nativeSetupJNI();
+    static native void nativeSetupJNI();
 
     static native void onNativeHat(int i, int i2, int i3, int i4);
 

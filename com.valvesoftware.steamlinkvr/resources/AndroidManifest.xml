@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    android:versionCode="5001684"
-    android:versionName="2.0.19"
+    android:versionCode="5001712"
+    android:versionName="2.0.20"
     android:installLocation="auto"
     android:compileSdkVersion="36"
     android:compileSdkVersionCodename="16"
@@ -83,6 +83,8 @@
     <uses-permission android:name="com.oculus.permission.FACE_TRACKING"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="com.picovr.permission.EYE_TRACKING"/>
+    <uses-permission android:name="com.picovr.permission.FACE_TRACKING"/>
     <queries>
         <provider android:authorities="org.khronos.openxr.runtime_broker;org.khronos.openxr.system_runtime_broker"/>
         <intent>
@@ -169,6 +171,9 @@
             <meta-data
                 android:name="pvr.app.type"
                 android:value="vr"/>
+            <meta-data
+                android:name="picovr.software.face_tracking"
+                android:value="true"/>
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="vrlink_scene"/>

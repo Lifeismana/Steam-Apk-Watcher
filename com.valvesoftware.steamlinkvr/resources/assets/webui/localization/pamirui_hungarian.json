@@ -33,6 +33,8 @@
   "StreamSideBand_AlreadyActiveDescription": "Egy másik fejszett csatlakozik a gazdaszámítógépedhez. Várakozás annak leválasztására.",
   "StreamSideBand_UnknownIssue": "Ismeretlen probléma",
   "StreamSideBand_UnknownIssueDescription": "Ismeretlen hiba történt a Steam Linkkel. Próbáld meg újraindítani a Steam Linket.",
+  "StreamSideBand_VersionIncompatible": "Verzióinkompatibilitás",
+  "StreamSideBand_VersionIncompatibleDescription": "Ez a kliens nem kompatibilis a gazdagépen futó SteamVR verziójával. Kérjük, frissítsd ezt az alkalmazást.",
   "StreamLoading_StreamInitializing": "Adatfolyam inicializálása",
   "StreamLoading_WaitingForHost": "Csatlakozás a gazdaszámítógéphez...",
   "StreamLoading_WaitingForHostTooLong": "A gazdaszámítógéphez csatlakozás a szokásosnál tovább tart...",

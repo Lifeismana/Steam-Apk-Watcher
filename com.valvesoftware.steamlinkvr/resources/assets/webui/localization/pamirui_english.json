@@ -33,6 +33,8 @@
   "StreamSideBand_AlreadyActiveDescription": "Another headset is connected to your host PC. Waiting for it to disconnect.",
   "StreamSideBand_UnknownIssue": "Unknown Issue",
   "StreamSideBand_UnknownIssueDescription": "An unknown error occurred with Steam Link. Try restarting Steam Link.",
+  "StreamSideBand_VersionIncompatible": "Version Incompatibility",
+  "StreamSideBand_VersionIncompatibleDescription": "This client is incompatible with the version of SteamVR running on the host PC. Please upgrade this app.",
   "StreamLoading_StreamInitializing": "Stream Initializing",
   "StreamLoading_WaitingForHost": "Connecting to host PC...",
   "StreamLoading_WaitingForHostTooLong": "Connecting to host PC is taking longer than usual...",

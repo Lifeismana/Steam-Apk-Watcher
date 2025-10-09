@@ -6,6 +6,7 @@ import android.hardware.usb.UsbEndpoint;
 import android.hardware.usb.UsbInterface;
 import android.util.Log;
 import java.util.Arrays;
+import java.util.Locale;
 
 /* loaded from: classes.dex */
 class HIDDeviceUSB implements HIDDevice {
@@ -36,7 +37,7 @@ class HIDDeviceUSB implements HIDDevice {
     }
 
     String getIdentifier() {
-        return String.format("%s/%x/%x/%d", this.mDevice.getDeviceName(), Integer.valueOf(this.mDevice.getVendorId()), Integer.valueOf(this.mDevice.getProductId()), Integer.valueOf(this.mInterfaceIndex));
+        return String.format(Locale.ENGLISH, "%s/%x/%x/%d", this.mDevice.getDeviceName(), Integer.valueOf(this.mDevice.getVendorId()), Integer.valueOf(this.mDevice.getProductId()), Integer.valueOf(this.mInterfaceIndex));
     }
 
     @Override // org.libsdl.app.HIDDevice

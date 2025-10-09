@@ -130,7 +130,7 @@ public class HIDDeviceManager {
             edit.putInt("next_device_id", i2);
         }
         edit.putInt(str, i);
-        edit.commit();
+        edit.apply();
         return i;
     }
 
