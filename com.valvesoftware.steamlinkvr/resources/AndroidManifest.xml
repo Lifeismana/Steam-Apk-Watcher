@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    android:versionCode="5001656"
+    android:versionCode="5001667"
     android:versionName="2.0.17"
     android:installLocation="auto"
     android:compileSdkVersion="36"
@@ -123,6 +123,15 @@
         <meta-data
             android:name="SDL_ENV.STEAM_LINK_VR"
             android:value="1"/>
+        <meta-data
+            android:name="com.htc.vr.content.NumDoFHmd"
+            android:value="6DoF"/>
+        <meta-data
+            android:name="com.htc.vr.content.NumDoFController"
+            android:value="6DoF"/>
+        <meta-data
+            android:name="com.htc.vr.content.NumController"
+            android:value="2"/>
         <meta-data
             android:name="pvr.sdk.version"
             android:value="OpenXR"/>

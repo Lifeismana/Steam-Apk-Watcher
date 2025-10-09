@@ -900,10 +900,10 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     }
 
     public static boolean isChromebook() {
-        if (getContext() == null) {
-            return false;
+        if (getContext() == null || !(getContext().getPackageManager().hasSystemFeature("org.chromium.arc") || getContext().getPackageManager().hasSystemFeature("org.chromium.arc.device_management"))) {
+            return Build.MODEL != null && Build.MODEL.startsWith("sdk_gpc_");
         }
-        return getContext().getPackageManager().hasSystemFeature("org.chromium.arc.device_management");
+        return true;
     }
 
     public static boolean isDeXMode() {

@@ -112,7 +112,7 @@ public class HIDDeviceManager {
         this.mContext = context;
         HIDDeviceRegisterCallback();
         this.mSharedPreferences = this.mContext.getSharedPreferences(TAG, 0);
-        this.mIsChromebook = this.mContext.getPackageManager().hasSystemFeature("org.chromium.arc.device_management");
+        this.mIsChromebook = SDLActivity.isChromebook();
         this.mNextDeviceId = this.mSharedPreferences.getInt("next_device_id", 0);
     }
 
@@ -425,13 +425,9 @@ public class HIDDeviceManager {
             HIDDeviceOpenPending(i);
             try {
                 int i2 = Build.VERSION.SDK_INT >= 31 ? 33554432 : 0;
-                if (Build.VERSION.SDK_INT >= 33) {
-                    Intent intent = new Intent(ACTION_USB_PERMISSION);
-                    intent.setPackage(this.mContext.getPackageName());
-                    this.mUsbManager.requestPermission(device2, PendingIntent.getBroadcast(this.mContext, 0, intent, i2));
-                } else {
-                    this.mUsbManager.requestPermission(device2, PendingIntent.getBroadcast(this.mContext, 0, new Intent(ACTION_USB_PERMISSION), i2));
-                }
+                Intent intent = new Intent(ACTION_USB_PERMISSION);
+                intent.setPackage(this.mContext.getPackageName());
+                this.mUsbManager.requestPermission(device2, PendingIntent.getBroadcast(this.mContext, 0, intent, i2));
             } catch (Exception unused) {
                 Log.v(TAG, "Couldn't request permission for USB device " + device2);
                 HIDDeviceOpenResult(i, false);

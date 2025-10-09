@@ -193,7 +193,7 @@ class HIDDeviceBLESteamController extends BluetoothGattCallback implements HIDDe
         this.mDevice = bluetoothDevice;
         this.mDeviceId = hIDDeviceManager.getDeviceIDForIdentifier(getIdentifier());
         this.mIsRegistered = false;
-        this.mIsChromebook = this.mManager.getContext().getPackageManager().hasSystemFeature("org.chromium.arc.device_management");
+        this.mIsChromebook = SDLActivity.isChromebook();
     }
 
     String getIdentifier() {
