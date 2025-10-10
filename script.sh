@@ -56,7 +56,7 @@ MergeDPIPNG()
 DownloadAPK()
 {
     if [[ "$SOURCE" == "google" ]]; then
-        apkeep -a $1 -d google-play -e $GOOGLE_MAIL -t $AAS_TOKEN $1
+        apkeep -a $1 -d google-play -e $GOOGLE_MAIL -o device=px_9a -t $AAS_TOKEN $1
     elif [[ "$SOURCE" == "apk-pure" || "$SOURCE" == "" ]]; then
         if [[ -n "$2" ]]; then
             apkeep -a $1@$2 -d apk-pure $1
