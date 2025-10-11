@@ -1,5 +1,5 @@
 632737c6d7c9aa77ddc4b19bfe849308  com.valvesoftware.steamlink/com.valvesoftware.steamlink.apk
-9b039c9c7ad5392142daeb33aa0f7efe  com.valvesoftware.steamlink/com.valvesoftware.steamlink.apk.jadx.txt
+1c21b81d97a488d03221bac0df45be8a  com.valvesoftware.steamlink/com.valvesoftware.steamlink.apk.jadx.txt
 d15222d8ab8ee4f03383944a0c1baf1c  com.valvesoftware.steamlink/resources/AndroidManifest.xml
 5e6ba430bdef71de53a921d9e47acf7f  com.valvesoftware.steamlink/resources/META-INF/BNDLTOOL.RSA
 fdad7565ab6094e261b9991ccdfaf073  com.valvesoftware.steamlink/resources/META-INF/BNDLTOOL.SF
