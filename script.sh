@@ -8,6 +8,13 @@ APPS="com.valvesoftware.android.steam.community com.valvesoftware.android.steam.
 
 Commit_message="Daily update"
 
+if [ "$GITHUB_ACTIONS" == "true" ]; then
+    DUMP_STRINGS_PATH="DumpStrings"
+else
+    ROOT_DIR="$(dirname "$(realpath -s "${BASH_SOURCE[0]}")")"
+    DUMP_STRINGS_PATH="$ROOT_DIR/tools/DumpStrings/DumpStrings"
+fi
+
 VerifyRequirements()
 {
     echo "Verifying requirements"
@@ -19,6 +26,14 @@ VerifyRequirements()
     command -v hbc-decompiler >/dev/null 2>&1 || { echo >&2 "hbc-decompiler missing.  Aborting."; exit 1; }
     command -v hbc-file-parser >/dev/null 2>&1 || { echo >&2 "hbc-file-parser missing.  Aborting."; exit 1; }
     command -v git >/dev/null 2>&1 || { echo >&2 "git missing.  Aborting."; exit 1; }
+}
+
+BuildReqs()
+{
+    git submodule update --init
+    cd tools/DumpStrings
+    go build
+    cd ../..
 }
 
 MergeDPIPNG()
@@ -136,6 +151,14 @@ ProcessApp()
     fi
     MergeDPIPNG $1
 
+    ## .so processing
+    while IFS= read -r -d '' file
+	do
+		echo " > $file"
+
+		"$DUMP_STRINGS_PATH" -binary "$file" -target "elf" | sort --unique > "$(echo "$file" | sed -e "s/\.so$/_strings.txt/g")"
+	done <   <(find $1 -type f -name "*.so" -print0)
+
     cur_version_code=''
     cur_version_name=''
     if [[ -f $1/resources/AndroidManifest.xml ]]; then
@@ -163,6 +186,10 @@ ProcessApp()
 }
 
 VerifyRequirements
+
+if [ -z $GITHUB_ACTIONS ] || [ $GITHUB_ACTIONS != "true" ]; then
+    BuildReqs
+fi
 
 if [[ "$SOURCE" == "manual" ]]; then
     for APP in ./.storage/*;
