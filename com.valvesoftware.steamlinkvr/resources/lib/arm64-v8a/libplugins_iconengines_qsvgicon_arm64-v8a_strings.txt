@@ -1,0 +1,140 @@
+$qt_svgicon_
+14QSvgIconEngine
+14QSvgIconPlugin
+Android (13624864, +pgo, +bolt, +lto, +mlgo, based on r530567e) clang version 19.0.1 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+Android (13624864, +pgo, -bolt, +lto, -mlgo, based on r530567e) clang version 19.0.1 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+__cxa_atexit
+__cxa_finalize
+__cxa_guard_acquire
+__cxa_guard_release
+exynos9810
+free
+getauxval
+image/svg+xml
+image/svg+xml-compressed
+LIBC
+libc++_shared.so
+libc.so
+libdl.so
+libEGL.so
+libGLESv2.so
+liblog.so
+libm.so
+libQt6Core_arm64-v8a.so
+libQt6Gui_arm64-v8a.so
+libQt6Svg_arm64-v8a.so
+Linker: LLD 19.0.1
+memcpy
+operator delete(void*)
+operator delete[](void*)
+operator new(unsigned long)
+operator new[](unsigned long)
+operator>>(QDataStream&, QByteArray&)
+operator<<(QDataStream&, QByteArray const&)
+operator>>(QDataStream&, QPixmap&)
+operator<<(QDataStream&, QPixmap const&)
+operator>>(QDataStream&, QString&)
+operator<<(QDataStream&, QString const&)
+QByteArray::_empty
+qCompress(unsigned char const*, long long, int)
+QCoreApplication::self
+QDataStream::atEnd() const
+QDataStream::isDeviceTransactionStarted() const
+QDataStream::operator<<(int)
+QDataStream::operator>>(int&)
+QDataStream::resetStatus()
+QDataStream::setStatus(QDataStream::Status)
+QDataStream::status() const
+QFileInfo::absoluteFilePath() const
+QFileInfo::~QFileInfo()
+QFileInfo::QFileInfo(QString const&)
+QFile::open(QFlags<QIODeviceBase::OpenModeFlag>)
+QFile::~QFile()
+QFile::QFile(QString const&)
+QGuiApplicationPrivate::self
+QGuiApplication::staticMetaObject
+QHashSeed::globalSeed()
+QIconEngine::availableSizes(QIcon::Mode, QIcon::State)
+QIconEngine::iconName()
+QIconEngine::isNull()
+QIconEnginePlugin::~QIconEnginePlugin()
+QIconEnginePlugin::QIconEnginePlugin(QObject*)
+QIconEnginePlugin::qt_metacall(QMetaObject::Call, int, void**)
+QIconEnginePlugin::qt_metacast(char const*)
+QIconEnginePlugin::staticMetaObject
+QIconEngine::~QIconEngine()
+QIconEngine::QIconEngine()
+QIconEngine::QIconEngine(QIconEngine const&)
+QIconEngine::scaledPixmap(QSize const&, QIcon::Mode, QIcon::State, double)
+QIconEngine::virtual_hook(int, void*)
+QImage::fill(unsigned int)
+QImage::~QImage()
+QImage::QImage(QSize const&, QImage::Format)
+QIODevice::readAll()
+QMetaObject::cast(QObject const*) const
+QMimeDatabase::mimeTypeForFile(QFileInfo const&, QMimeDatabase::MatchMode) const
+QMimeDatabase::~QMimeDatabase()
+QMimeDatabase::QMimeDatabase()
+QMimeType::name() const
+QMimeType::~QMimeType()
+QObject::childEvent(QChildEvent*)
+QObject::connectNotify(QMetaMethod const&)
+QObject::customEvent(QEvent*)
+QObjectData::dynamicMetaObject() const
+QObject::disconnectNotify(QMetaMethod const&)
+QObject::eventFilter(QObject*, QEvent*)
+QObject::event(QEvent*)
+QObject::timerEvent(QTimerEvent*)
+QPaintDevice::QPaintDevice()
+QPainter::device() const
+QPainter::drawPixmap(QRectF const&, QPixmap const&, QRectF const&)
+QPainter::end()
+QPainter::~QPainter()
+QPainter::QPainter(QPaintDevice*)
+QPixmapCache::find(QString const&, QPixmap*)
+QPixmapCache::insert(QString const&, QPixmap const&)
+QPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>)
+QPixmap::isNull() const
+QPixmap::operator=(QPixmap const&)
+QPixmap::~QPixmap()
+QPixmap::QPixmap()
+QPixmap::QPixmap(QPixmap const&)
+QPixmap::QPixmap(QString const&, char const*, QFlags<Qt::ImageConversionFlag>)
+QPixmap::size() const
+QSize::scaled(QSize const&, Qt::AspectRatioMode) const
+QString::append(QChar)
+QString::append(QString const&)
+QString::endsWith(QLatin1String, Qt::CaseSensitivity) const
+QString::fromLatin1(QByteArrayView)
+QString::number(int, int)
+QString::number(long long, int)
+QSvgIconPlugin
+QSvgRenderer::defaultSize() const
+QSvgRenderer::isValid() const
+QSvgRenderer::load(QByteArray const&)
+QSvgRenderer::load(QString const&)
+QSvgRenderer::~QSvgRenderer()
+QSvgRenderer::QSvgRenderer(QObject*)
+QSvgRenderer::QSvgRenderer(QString const&, QObject*)
+QSvgRenderer::render(QPainter*)
+Qt_6
+Qt_6_PRIVATE_API
+qtbase/plugins/iconengines/libplugins_iconengines_qsvgicon_arm64-v8a.so
+qt_plugin_instance
+qt_plugin_query_metadata_v2
+QtPrivate::equalStrings(QStringView, QLatin1String)
+QtSharedPointer::ExternalRefCountData::getAndRef(QObject const*)
+qUncompress(unsigned char const*, long long)
+ro.arch
+__stack_chk_fail
+strcmp
+strlen
+strncmp
+.svg
+.svg.gz
+.svgz
+__system_property_get
+typeinfo for QIconEngine
+typeinfo for QIconEnginePlugin
+vtable for __cxxabiv1::__si_class_type_info
+vtable for QPixmap

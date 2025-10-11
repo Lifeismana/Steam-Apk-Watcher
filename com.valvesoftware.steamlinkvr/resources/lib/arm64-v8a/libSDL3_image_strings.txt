@@ -1,0 +1,506 @@
+$3br
+1Au='A
+#%1x%1x%1x
+"%/28;=#$019:>?
+#%2x%2x%2x
+(3DQgp:9Wmhyd<EPgqxg78>M\ec
+3WP>
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+'.5<=6/7>????????????????RGB
+#7@Qhq\1@NWgyxeH\_bpdgc
+%8DmgM
+8@Wb
+(9E8
+Adobe
+Android (13624864, +pgo, +bolt, +lto, +mlgo, based on r530567e) clang version 19.0.1 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+Animation didn't contain any frames
+APNG
+array is NULL
+avif
+AVIF
+avifs
+AVIFS
+bad colormap
+Bad version number, not '87a' or '89a'
+bevel
+BitStream buffer not initialized.
+black
+blue
+BMHD
+BODY
+#BUILTIN:
+butt
+CAMG
+Can't seek in this data source
+circle
+circular table entry BIG ERROR
+class
+CMAP
+colormap size is too large
+colour parse error
+Combined length longer than code bits available
+Compressed ICO files not supported
+Corrupt JPEG
+Corrupt PNG
+Couldn't create palette
+Couldn't create SDL_Surface
+Couldn't create SVG rasterizer
+Couldn't determine file type
+Couldn't parse QOI image
+Couldn't parse SVG image
+Couldn't read header
+Couldn't read image data
+Created by Tiny JPEG Encoder
+__cxa_atexit
+__cxa_finalize
+cyan
+%d %d %d %d
+decoder
+decoding out of bounds (corrupt?)
+defs
+display
+ellipse
+encoder
+#END_OF_COMMENTS
+EOF / read error on image data
+Error reading application extension block size
+error reading BMHD chunk
+error reading BODY chunk
+error reading CAMG chunk
+error reading CMAP chunk
+Error reading GIF application extension block
+Error reading GIF block type
+Error reading GIF comment data
+Error reading GIF extension label
+Error reading GIF magic number
+Error reading global colormap
+error reading IFF chunk
+error reading IFF chunk size
+error reading image
+Error reading Netscape sub-block data
+Error reading Netscape sub-block size
+Error reading TGA data
+[ERROR] -- Valid 'quality' values are 1 (lowest), 2, or 3 (highest)\n
+Error writing TGA colormap entry (24-bit)
+Error writing TGA colormap entry (32-bit)
+Error writing TGA header
+Error writing TGA pixel data
+evenodd
+Extension block not terminated correctly
+Failed to allocate animation stream context.
+Failed to allocate bitstream buffer
+Failed to allocate hash table
+Failed to allocate indexed pixel buffer.
+Failed to allocate LZW dictionary
+Failed to allocate memory for GIF comment
+Failed to allocate palette memory.
+Failed to blit frame onto canvas
+Failed to build palette from Octree.
+Failed to convert and save image
+Failed to convert surface format for TGA saving
+Failed to convert surface to RGBA32 format.
+Failed to convert surface to RGBA32 for palette mapping.
+Failed to copy properties to GIF encoder metadata.
+Failed to create canvas surface
+Failed to create metadata properties for GIF encoder.
+Failed to create Octree root node.
+Failed to create previous canvas surface
+Failed to create properties for animation decoder
+Failed to duplicate frame surface
+Failed to fill canvas surface with transparent color
+Failed to fill canvas with background color
+Failed to fill previous canvas surface with transparent color
+Failed to get pixel format details for original surface.
+Failed to get pixel format details for surface.
+Failed to get SDL_PixelFormatDetails for converted surface format
+Failed to get SDL_PixelFormatDetails for surface format
+Failed to lock INDEX8 surface
+Failed to lock RGBA32 surface
+Failed to lock surface for palette mapping.
+Failed to read screen descriptor
+Failed to reallocate BitStream buffer.
+Failed to restore previous canvas
+Failed to save current canvas for restoration
+Failed to seek to beginning of GIF file
+Failed to set transparency on frame
+Failed to write color table data
+Failed to write GIF background color index.
+Failed to write GIF height.
+Failed to write GIF packed fields byte.
+Failed to write GIF pixel aspect ratio.
+Failed to write GIF signature and version.
+Failed to write GIF trailer.
+Failed to write GIF width.
+file
+File is not a Windows %s file
+file truncated
+fill
+fill-opacity
+fill-rule
+font-size
+FORM
+Frame dimensions (%dx%d) do not match GIF canvas dimensions (%dx%d).
+GIF89a
+GIF file contains no images
+GIF stream property 'num_colors' must be a power of 2 (starting from 2, up to 256).
+Gimp image too large (%ux%u)
+gimp xcf 
+gradientTransform
+gradientUnits
+gray
+green
+grey
+height
+ICO file with unsupported bit count
+IDAT
+IDAT section larger than 2^30 bytes
+IEND
+ILBM
+Image not of any known type, or corrupt
+Image too large to decode
+IMG_AddAnimationEncoderFrame
+IMG_CloseAnimationDecoder
+IMG_CloseAnimationEncoder
+IMG_CreateAnimationDecoder
+IMG_CreateAnimationDecoder_IO
+IMG_CreateAnimationDecoderWithProperties
+IMG_CreateAnimationEncoder
+IMG_CreateAnimationEncoder_IO
+IMG_CreateAnimationEncoderWithProperties
+IMG_FreeAnimation
+IMG_GetAnimationDecoderFrame
+IMG_GetAnimationDecoderProperties
+IMG_GetAnimationDecoderStatus
+IMG_isAVIF
+IMG_isBMP
+IMG_isCUR
+IMG_isGIF
+IMG_isICO
+IMG_isJPG
+IMG_isJXL
+IMG_isLBM
+IMG_isPCX
+IMG_isPNG
+IMG_isPNM
+IMG_isQOI
+IMG_isSVG
+IMG_isTIF
+IMG_isWEBP
+IMG_isXCF
+IMG_isXPM
+IMG_isXV
+IMG_Load
+IMG_LoadAnimation
+IMG_LoadAnimation_IO
+IMG_LoadAnimationTyped_IO
+IMG_LoadAPNGAnimation_IO
+IMG_LoadAVIFAnimation_IO
+IMG_LoadAVIF_IO
+IMG_LoadBMP_IO
+IMG_LoadCUR_IO
+IMG_LoadGIFAnimation_IO
+IMG_LoadGIF_IO
+IMG_LoadICO_IO
+IMG_Load_IO
+IMG_LoadJPG_IO
+IMG_LoadJXL_IO
+IMG_LoadLBM_IO
+IMG_LoadPCX_IO
+IMG_LoadPNG_IO
+IMG_LoadPNM_IO
+IMG_LoadQOI_IO
+IMG_LoadSizedSVG_IO
+IMG_LoadSVG_IO
+IMG_LoadTexture
+IMG_LoadTexture_IO
+IMG_LoadTextureTyped_IO
+IMG_LoadTGA_IO
+IMG_LoadTIF_IO
+IMG_LoadTyped_IO
+IMG_LoadWEBPAnimation_IO
+IMG_LoadWEBP_IO
+IMG_LoadXCF_IO
+IMG_LoadXPM_IO
+IMG_LoadXV_IO
+IMG_ReadXPMFromArray
+IMG_ReadXPMFromArrayToRGB888
+IMG_ResetAnimationDecoder
+IMG_Save
+IMG_SaveAVIF
+IMG_SaveAVIF_IO
+IMG_SaveBMP
+IMG_SaveBMP_IO
+IMG_SaveGIF
+IMG_SaveGIF_IO
+IMG_SaveJPG
+IMG_SaveJPG_IO
+IMG_SavePNG
+IMG_SavePNG_IO
+IMG_SaveTGA
+IMG_SaveTGA_IO
+IMG_SaveTyped_IO
+IMG_SaveWEBP
+IMG_SaveWEBP_IO
+IMG_Version
+INDEX8 surface has no palette.
+INDEX8 surface palette has too many colors for target.
+Invalid arguments for quantizeSurfaceToIndexedPixels: numPaletteColors must be a power of 2.
+invalid channel offset
+Invalid color specification
+Invalid format description
+invalid LWZ data
+Invalid minCodeSize %d (must be between 2 and %d)
+Invalid NULL pointer passed to lzwCompress
+Invalid parameters to IMG_SaveTGA_IO
+JFIF
+jpeg
+JPEG format not supported: 8-bit only
+JPEG format not supported: delayed height
+LIBC
+libc.so
+libdl.so
+libm.so
+libSDL3_image.so
+libSDL3.so
+line
+linearGradient
+Linker: LLD 19.0.1
+magenta
+matrix
+memcpy
+__memcpy_chk
+memory allocation overflow
+memset
+miter
+NETSCAPE2.0
+Netscape extension block not terminated correctly
+none
+nonzero
+No output properties set
+Not a GIF file
+not a IFF file
+not a IFF picture
+Not a PNG
+not enough memory for temporary buffer
+num_colors
+objectBoundingBox
+Octree built more colors than expected.
+Octree_Reduce: No suitable node found to collapse to reduce leafCount.
+offset
+opacity
+Out of memory
+Out of memory for GIF decoder context
+P7 332
+palette buffer len must be 256
+Parameter '%s' is invalid
+Passed a NULL data source
+Passed NULL dst
+path
+PBM 
+PNG not supported: 1/2/4/8/16-bit only
+PNG not supported: unknown PNG chunk type
+PNG not supported: unsupported color depth
+PNG\r\n
+points
+polygon
+polyline
+Premature end of data
+preserveAspectRatio
+props
+QkkXa
+qoif
+QOI image is too big.
+radialGradient
+ran off the end of my bits
+rect
+reflect
+__register_atfork
+repeat
+req_comp must be 1 if loading paletted image without expansion
+req_comp must be 1 when loading paletted
+rgb(%u, %u, %u)
+\rIHDR
+rotate
+round
+scale
+SDL3_0.0.0
+SDL3_image_0.0.0
+SDL_acosf
+SDL_atan2f
+SDL_BlitSurface
+SDL_calloc
+SDL_ceilf
+SDL_ClearError
+SDL_CloseIO
+SDL_ConvertSurface
+SDL_CopyProperties
+SDL_cosf
+SDL_CreatePalette
+SDL_CreateProperties
+SDL_CreateSurface
+SDL_CreateSurfaceFrom
+SDL_CreateSurfacePalette
+SDL_CreateTextureFromSurface
+SDL_DestroyPalette
+SDL_DestroyProperties
+SDL_DestroySurface
+SDL_DuplicateSurface
+SDL_fabs
+SDL_fabsf
+SDL_FillSurfaceRect
+SDL_floorf
+SDL_fmodf
+SDL_free
+SDL_GetBooleanProperty
+SDL_GetIOSize
+SDL_GetIOStatus
+SDL_GetNumberProperty
+SDL_GetPixelFormatDetails
+SDL_GetPointerProperty
+SDL_GetStringProperty
+SDL_GetSurfaceColorKey
+SDL_GetSurfacePalette
+SDL_GetSurfaceProperties
+SDL_HasNEON
+SDL_image.animation_decoder.create.filename
+SDL_image.animation_decoder.create.iostream
+SDL_image.animation_decoder.create.iostream.autoclose
+SDL_image.animation_decoder.create.type
+SDL_image.animation_encoder.create.filename
+SDL_image.animation_encoder.create.iostream
+SDL_image.animation_encoder.create.iostream.autoclose
+SDL_image.animation_encoder.create.quality
+SDL_image.animation_encoder.create.timebase.denominator
+SDL_image.animation_encoder.create.timebase.numerator
+SDL_image.animation_encoder.create.type
+SDL_image built without AVIF animation encoding support
+SDL_image built without AVIF animation loading support
+SDL_image built without AVIF save support
+SDL_image.metadata.description
+SDL_image.metadata.ignore_props
+SDL_image.metadata.loop_count
+SDL_image not built against libpng.
+SDL_image was not built with WEBP load support
+SDL_image was not built with WEBP save support
+SDL_image was not built with WEBP support
+SDL_IOFromFile
+SDL_IOStream pointer (stream->dst) is NULL.
+SDL_isdigit
+SDL_isspace
+SDL_LoadBMP_IO
+SDL_LoadFile_IO
+SDL_LockSurface
+SDL_Log
+SDL_malloc
+SDL_memcmp
+SDL_memset
+SDL_pow
+SDL_qsort
+SDL_ReadIO
+SDL_ReadS32BE
+SDL_ReadS32LE
+SDL_ReadU16LE
+SDL_ReadU32BE
+SDL_ReadU32LE
+SDL_ReadU8
+SDL_realloc
+SDL_roundf
+SDL_SaveBMP_IO
+SDL_SeekIO
+SDL_SetBooleanProperty
+SDL_SetError
+SDL_SetNumberProperty
+SDL_SetPointerProperty
+SDL_SetStringProperty
+SDL_SetSurfaceBlendMode
+SDL_SetSurfaceColorKey
+SDL_SetSurfacePalette
+SDL_sinf
+SDL_sqrt
+SDL_sqrtf
+SDL_sscanf
+SDL_strcasecmp
+SDL_strchr
+SDL_strcmp
+SDL_strlcpy
+SDL_strlen
+SDL_strncasecmp
+SDL_strncmp
+SDL_strrchr
+SDL_strstr
+SDL_strtol
+SDL_strtoll
+SDL_SurfaceHasColorKey
+SDL.surface.hotspot.x
+SDL.surface.hotspot.y
+SDL_tanf
+SDL_TellIO
+SDL_UnlockSurface
+SDL_WriteIO
+skewX
+skewY
+slice
+spreadMethod
+square
+__stack_chk_fail
+stop
+stop-color
+stop-opacity
+stroke
+stroke-dasharray
+stroke-dashoffset
+stroke-linecap
+stroke-linejoin
+stroke-miterlimit
+stroke-opacity
+stroke-width
+style
+surface
+Surface dimensions too large for GIF encoding
+<svg
+Time base denominator must be > 0
+Time base numerator must be > 0
+tinyjpeg error
+transform
+translate
+transparent_color_index
+Transparent color index %d exceeds palette size %d
+\t\t\t\t\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
+\t\t\t\t\t\t\t\t\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
+type
+Unable to read image width and height
+Unknown GIF block type: 0x%02X
+Unknown Gimp image bpp (%u)
+Unknown Gimp image type (%u)
+Unknown Gimp image type (%u)\n
+Unknown image format: %d
+Unrecognized output type
+Unsupported compression
+Unsupported format conversion
+Unsupported ICO bitmap format
+Unsupported image format
+Unsupported or incorrect biClrUsed field
+Unsupported or invalid ICO dimensions
+unsupported PCX format
+unsupported PNM format
+Unsupported SDL_Surface format for TGA saving. Supported formats are INDEX8, BGR24, RGB24, BGRA32, RGBA32, XRGB8888, XRGB1555, ARGB1555.
+Unsupported TGA colormap bit depth for saving
+Unsupported TGA format
+url(
+use_lut
+Very large image (corrupt?)
+viewBox
+webp
+WEBP
+white
+width
+xlink:href
+xMax
+xMid
+xMin
+yellow
+yMax
+yMid
+yMin

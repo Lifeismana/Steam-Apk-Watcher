@@ -1,0 +1,254 @@
+14QVirtualScreen
+14QVirtualWindow
+16QVirtualPlatform
+19QVirtualIntegration
+20QVirtualBackingStore
+20QVirtualFontDatabase
+23QVirtualEventDispatcher
+23QVirtualNativeInterface
+25QVirtualIntegrationPlugin
+Android (13624864, +pgo, +bolt, +lto, +mlgo, based on r530567e) clang version 19.0.1 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+Android (13624864, +pgo, -bolt, +lto, -mlgo, based on r530567e) clang version 19.0.1 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+__cxa_atexit
+__cxa_finalize
+__cxa_guard_acquire
+__cxa_guard_release
+default
+exynos9810
+free
+getauxval
+LIBC
+libc++_shared.so
+libc.so
+libdl.so
+libEGL.so
+libGLESv2.so
+liblog.so
+libm.so
+libQt6Core_arm64-v8a.so
+libQt6Gui_arm64-v8a.so
+libz.so
+Linker: LLD 19.0.1
+memcmp
+operator delete(void*)
+operator new(unsigned long)
+platform
+QAbstractEventDispatcher::awake()
+QAbstractEventDispatcher::closingDown()
+QAbstractEventDispatcher::metaObject() const
+QAbstractEventDispatcher::~QAbstractEventDispatcher()
+QAbstractEventDispatcher::QAbstractEventDispatcher(QObject*)
+QAbstractEventDispatcher::qt_metacall(QMetaObject::Call, int, void**)
+QAbstractEventDispatcher::qt_metacast(char const*)
+QAbstractEventDispatcher::startingUp()
+QColorSpace::QColorSpace(QColorSpace::NamedColorSpace)
+QCoreApplication::sendPostedEvents(QObject*, int)
+QDebug::~QDebug()
+QFreeTypeFontDatabase::addApplicationFont(QByteArray const&, QString const&, QFontDatabasePrivate::ApplicationFont*)
+QFreeTypeFontDatabase::fontEngine(QByteArray const&, double, QFont::HintingPreference)
+QFreeTypeFontDatabase::fontEngine(QFontDef const&, void*)
+QFreeTypeFontDatabase::releaseHandle(void*)
+QGuiApplication::primaryScreen()
+QGuiApplicationPrivate::platform_integration
+QImage::~QImage()
+QImage::QImage()
+QImage::QImage(QSize const&, QImage::Format)
+QImage::size() const
+QMessageLogger::debug() const
+QObject::childEvent(QChildEvent*)
+QObject::connectNotify(QMetaMethod const&)
+QObject::customEvent(QEvent*)
+QObjectData::dynamicMetaObject() const
+QObject::disconnectNotify(QMetaMethod const&)
+QObject::eventFilter(QObject*, QEvent*)
+QObject::event(QEvent*)
+QObject::~QObject()
+QObject::QObject(QObject*)
+QObject::timerEvent(QTimerEvent*)
+QPaintDevice::QPaintDevice()
+QPlatformBackingStore::beginPaint(QRegion const&)
+QPlatformBackingStore::endPaint()
+QPlatformBackingStore::graphicsBuffer() const
+QPlatformBackingStore::~QPlatformBackingStore()
+QPlatformBackingStore::QPlatformBackingStore(QWindow*)
+QPlatformBackingStore::rhiFlush(QWindow*, double, QRegion const&, QPoint const&, QPlatformTextureList*, bool)
+QPlatformBackingStore::scroll(QRegion const&, int, int)
+QPlatformBackingStore::toImage() const
+QPlatformBackingStore::toTexture(QRhiResourceUpdateBatch*, QRegion const&, QFlags<QPlatformBackingStore::TextureFlag>*) const
+QPlatformFontDatabase::defaultFont() const
+QPlatformFontDatabase::fallbacksForFamily(QString const&, QFont::Style, QFont::StyleHint, QChar::Script) const
+QPlatformFontDatabase::fontDir() const
+QPlatformFontDatabase::fontEngineMulti(QFontEngine*, QChar::Script)
+QPlatformFontDatabase::fontsAlwaysScalable() const
+QPlatformFontDatabase::invalidate()
+QPlatformFontDatabase::isPrivateFontFamily(QString const&) const
+QPlatformFontDatabase::populateFamily(QString const&)
+QPlatformFontDatabase::~QPlatformFontDatabase()
+QPlatformFontDatabase::resolveFontFamilyAlias(QString const&) const
+QPlatformFontDatabase::standardSizes() const
+QPlatformIntegration::accessibility() const
+QPlatformIntegration::beep() const
+QPlatformIntegration::clipboard() const
+QPlatformIntegration::createImagePaintEngine(QPaintDevice*) const
+QPlatformIntegration::createPlatformOffscreenSurface(QOffscreenSurface*) const
+QPlatformIntegration::createPlatformOpenGLContext(QOpenGLContext*) const
+QPlatformIntegration::createPlatformPixmap(QPlatformPixmap::PixelType) const
+QPlatformIntegration::createPlatformSessionManager(QString const&, QString const&) const
+QPlatformIntegration::createPlatformSharedGraphicsCache(char const*) const
+QPlatformIntegration::createPlatformTheme(QString const&) const
+QPlatformIntegration::createPlatformVulkanInstance(QVulkanInstance*) const
+QPlatformIntegration::defaultWindowState(QFlags<Qt::WindowType>) const
+QPlatformIntegration::destroy()
+QPlatformIntegration::drag() const
+QPlatformIntegration::hasCapability(QPlatformIntegration::Capability) const
+QPlatformIntegration::initialize()
+QPlatformIntegration::inputContext() const
+QPlatformIntegration::openGLModuleType()
+QPlatformIntegrationPlugin::create(QString const&, QList<QString> const&, int&, char**)
+QPlatformIntegrationPlugin::~QPlatformIntegrationPlugin()
+QPlatformIntegrationPlugin::QPlatformIntegrationPlugin(QObject*)
+QPlatformIntegrationPlugin::qt_metacall(QMetaObject::Call, int, void**)
+QPlatformIntegrationPlugin::qt_metacast(char const*)
+QPlatformIntegrationPlugin::staticMetaObject
+QPlatformIntegration::possibleKeys(QKeyEvent const*) const
+QPlatformIntegration::queryKeyboardModifiers() const
+QPlatformIntegration::quit() const
+QPlatformIntegration::services() const
+QPlatformIntegration::setApplicationBadge(long long)
+QPlatformIntegration::setApplicationIcon(QIcon const&) const
+QPlatformIntegration::styleHint(QPlatformIntegration::StyleHint) const
+QPlatformIntegration::sync()
+QPlatformIntegration::themeNames() const
+QPlatformNativeInterface::nativeResourceForBackingStore(QByteArray const&, QBackingStore*)
+QPlatformNativeInterface::nativeResourceForContext(QByteArray const&, QOpenGLContext*)
+QPlatformNativeInterface::nativeResourceForCursor(QByteArray const&, QCursor const&)
+QPlatformNativeInterface::nativeResourceForIntegration(QByteArray const&)
+QPlatformNativeInterface::nativeResourceForScreen(QByteArray const&, QScreen*)
+QPlatformNativeInterface::nativeResourceForWindow(QByteArray const&, QWindow*)
+QPlatformNativeInterface::nativeResourceFunctionForBackingStore(QByteArray const&)
+QPlatformNativeInterface::nativeResourceFunctionForContext(QByteArray const&)
+QPlatformNativeInterface::nativeResourceFunctionForIntegration(QByteArray const&)
+QPlatformNativeInterface::nativeResourceFunctionForScreen(QByteArray const&)
+QPlatformNativeInterface::nativeResourceFunctionForWindow(QByteArray const&)
+QPlatformNativeInterface::platformFunction(QByteArray const&) const
+QPlatformNativeInterface::qt_metacall(QMetaObject::Call, int, void**)
+QPlatformNativeInterface::qt_metacast(char const*)
+QPlatformNativeInterface::setWindowProperty(QPlatformWindow*, QString const&, QVariant const&)
+QPlatformNativeInterface::staticMetaObject
+QPlatformNativeInterface::windowProperties(QPlatformWindow*) const
+QPlatformNativeInterface::windowProperty(QPlatformWindow*, QString const&) const
+QPlatformNativeInterface::windowProperty(QPlatformWindow*, QString const&, QVariant const&) const
+QPlatformScreen::currentMode() const
+QPlatformScreen::cursor() const
+QPlatformScreen::devicePixelRatio() const
+QPlatformScreen::grabWindow(unsigned long long, int, int, int, int) const
+QPlatformScreen::logicalBaseDpi() const
+QPlatformScreen::logicalDpi() const
+QPlatformScreen::manufacturer() const
+QPlatformScreen::model() const
+QPlatformScreen::modes() const
+QPlatformScreen::nativeOrientation() const
+QPlatformScreen::orientation() const
+QPlatformScreen::physicalSize() const
+QPlatformScreen::powerState() const
+QPlatformScreen::preferredMode() const
+QPlatformScreen::~QPlatformScreen()
+QPlatformScreen::QPlatformScreen()
+QPlatformScreen::refreshRate() const
+QPlatformScreen::serialNumber() const
+QPlatformScreen::setPowerState(QPlatformScreen::PowerState)
+QPlatformScreen::subpixelAntialiasingTypeHint() const
+QPlatformScreen::topLevelAt(QPoint const&) const
+QPlatformScreen::virtualSiblings() const
+QPlatformWindow::close()
+QPlatformWindow::deliverUpdateRequest()
+QPlatformWindow::devicePixelRatio() const
+QPlatformWindow::format() const
+QPlatformWindow::frameMargins() const
+QPlatformWindow::frameStrutEventsEnabled() const
+QPlatformWindow::geometry() const
+QPlatformWindow::handleContentOrientationChange(Qt::ScreenOrientation)
+QPlatformWindow::initialize()
+QPlatformWindow::invalidateSurface()
+QPlatformWindow::isActive() const
+QPlatformWindow::isAlertState() const
+QPlatformWindow::isAncestorOf(QPlatformWindow const*) const
+QPlatformWindow::isEmbedded() const
+QPlatformWindow::isExposed() const
+QPlatformWindow::lower()
+QPlatformWindow::mapFromGlobal(QPoint const&) const
+QPlatformWindow::mapToGlobal(QPoint const&) const
+QPlatformWindow::normalGeometry() const
+QPlatformWindow::~QPlatformWindow()
+QPlatformWindow::QPlatformWindow(QWindow*)
+QPlatformWindow::raise()
+QPlatformWindow::requestActivateWindow()
+QPlatformWindow::requestUpdate()
+QPlatformWindow::safeAreaMargins() const
+QPlatformWindow::screen() const
+QPlatformWindow::setAlertState(bool)
+QPlatformWindow::setFrameStrutEventsEnabled(bool)
+QPlatformWindow::setGeometry(QRect const&)
+QPlatformWindow::setKeyboardGrabEnabled(bool)
+QPlatformWindow::setMask(QRegion const&)
+QPlatformWindow::setMouseGrabEnabled(bool)
+QPlatformWindow::setOpacity(double)
+QPlatformWindow::setParent(QPlatformWindow const*)
+QPlatformWindow::setVisible(bool)
+QPlatformWindow::setWindowFilePath(QString const&)
+QPlatformWindow::setWindowFlags(QFlags<Qt::WindowType>)
+QPlatformWindow::setWindowIcon(QIcon const&)
+QPlatformWindow::setWindowModified(bool)
+QPlatformWindow::setWindowState(QFlags<Qt::WindowState>)
+QPlatformWindow::setWindowTitle(QString const&)
+QPlatformWindow::startSystemMove()
+QPlatformWindow::startSystemResize(QFlags<Qt::Edge>)
+QPlatformWindow::windowEvent(QEvent*)
+QPlatformWindow::winId() const
+QScreen::handle() const
+QString::compare(QLatin1String, Qt::CaseSensitivity) const
+QString::fromUtf8(QByteArrayView)
+Qt_6
+Qt_6_PRIVATE_API
+qtbase/plugins/platforms/libplugins_platforms_qvirtual_arm64-v8a.so
+QTextStream::operator<<(char)
+QTextStream::operator<<(QString const&)
+QThread::msleep(unsigned long)
+QTimerInfoList::activateTimers()
+QTimerInfoList::QTimerInfoList()
+QTimerInfoList::registeredTimers(QObject*) const
+QTimerInfoList::registerTimer(int, long long, Qt::TimerType, QObject*)
+QTimerInfoList::timerRemainingTime(int)
+QTimerInfoList::unregisterTimer(int)
+QTimerInfoList::unregisterTimers(QObject*)
+qt_plugin_instance
+qt_plugin_query_metadata_v2
+QtSharedPointer::ExternalRefCountData::getAndRef(QObject const*)
+QVirtualIntegrationPlugin
+QVirtualNativeInterface
+QWindow::handle() const
+QWindowSystemInterface::handleScreenAdded(QPlatformScreen*, bool)
+QWindowSystemInterface::handleScreenRemoved(QPlatformScreen*)
+QWindowSystemInterface::sendWindowSystemEvents(QFlags<QEventLoop::ProcessEventsFlag>)
+registerSocketNotifier
+ro.arch
+__stack_chk_fail
+strcmp
+strlen
+strncmp
+__system_property_get
+typeinfo for QAbstractEventDispatcher
+typeinfo for QFreeTypeFontDatabase
+typeinfo for QPlatformBackingStore
+typeinfo for QPlatformIntegration
+typeinfo for QPlatformIntegrationPlugin
+typeinfo for QPlatformNativeInterface
+typeinfo for QPlatformScreen
+typeinfo for QPlatformWindow
+unregisterSocketNotifier
+virtual
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info
+vtable for QImage
+vtable for QPlatformNativeInterface

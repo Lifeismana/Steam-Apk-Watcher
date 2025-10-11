@@ -1,0 +1,101 @@
+10QGifPlugin
+11QGifHandler
+Android (13624864, +pgo, +bolt, +lto, +mlgo, based on r530567e) clang version 19.0.1 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+Android (13624864, +pgo, -bolt, +lto, -mlgo, based on r530567e) clang version 19.0.1 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+__cxa_atexit
+__cxa_finalize
+__cxa_guard_acquire
+__cxa_guard_release
+exynos9810
+free
+getauxval
+GIF87a
+GIF89a
+LIBC
+libc++_shared.so
+libc.so
+libdl.so
+libEGL.so
+libGLESv2.so
+liblog.so
+libm.so
+libQt6Core_arm64-v8a.so
+libQt6Gui_arm64-v8a.so
+Linker: LLD 19.0.1
+memcmp
+memcpy
+memmove
+memset
+operator delete(void*)
+operator delete[](void*)
+operator new(unsigned long)
+operator new[](unsigned long)
+QArrayData::allocate(QArrayData**, long long, long long, long long, QArrayData::AllocationOption)
+QArrayData::reallocateUnaligned(QArrayData*, void*, long long, long long, QArrayData::AllocationOption)
+QByteArray::append(QByteArray const&)
+QByteArray::_empty
+QByteArray::QByteArray(char const*, long long)
+QByteArray::remove(long long, long long)
+QGifHandler::canRead() called with no device
+QGifPlugin
+QImage::bits()
+QImage::bytesPerLine() const
+QImage::constBits() const
+QImage::constScanLine(int) const
+QImage::detach()
+QImage::height() const
+QImageIOHandler::allocateImage(QSize, QImage::Format, QImage*)
+QImageIOHandler::currentImageRect() const
+QImageIOHandler::device() const
+QImageIOHandler::jumpToImage(int)
+QImageIOHandler::jumpToNextImage()
+QImageIOHandler::~QImageIOHandler()
+QImageIOHandler::QImageIOHandler()
+QImageIOHandler::setDevice(QIODevice*)
+QImageIOHandler::setFormat(QByteArray const&)
+QImageIOHandler::setFormat(QByteArray const&) const
+QImageIOPlugin::~QImageIOPlugin()
+QImageIOPlugin::QImageIOPlugin(QObject*)
+QImageIOPlugin::qt_metacall(QMetaObject::Call, int, void**)
+QImageIOPlugin::qt_metacast(char const*)
+QImageIOPlugin::staticMetaObject
+QImage::isNull() const
+QImage::operator=(QImage const&)
+QImage::~QImage()
+QImage::QImage()
+QImage::scanLine(int)
+QImage::sizeInBytes() const
+QImage::width() const
+QIODevice::isReadable() const
+QIODevice::peek(char*, long long)
+QIODevice::read(long long)
+QLoggingCategory::~QLoggingCategory()
+QLoggingCategory::QLoggingCategory(char const*, QtMsgType)
+QMessageLogger::warning(char const*, ...) const
+QObject::childEvent(QChildEvent*)
+QObject::connectNotify(QMetaMethod const&)
+QObject::customEvent(QEvent*)
+QObjectData::dynamicMetaObject() const
+QObject::disconnectNotify(QMetaMethod const&)
+QObject::eventFilter(QObject*, QEvent*)
+QObject::event(QEvent*)
+QObject::timerEvent(QTimerEvent*)
+Qt_6
+Qt_6_PRIVATE_API
+qtbase/plugins/imageformats/libplugins_imageformats_qgif_arm64-v8a.so
+qt.gui.imageio.gif
+qt_plugin_instance
+qt_plugin_query_metadata_v2
+QtSharedPointer::ExternalRefCountData::getAndRef(QObject const*)
+QVariant::QVariant(bool)
+QVariant::QVariant(QSize)
+ro.arch
+__stack_chk_fail
+strcmp
+strlen
+strncmp
+__system_property_get
+typeinfo for QImageIOHandler
+typeinfo for QImageIOPlugin
+vtable for __cxxabiv1::__si_class_type_info
+z2f>

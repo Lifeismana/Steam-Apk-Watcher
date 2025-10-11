@@ -1,0 +1,117 @@
+10QICOPlugin
+12QtIcoHandler
+Android (13624864, +pgo, +bolt, +lto, +mlgo, based on r530567e) clang version 19.0.1 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+Android (13624864, +pgo, -bolt, +lto, -mlgo, based on r530567e) clang version 19.0.1 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+__cxa_atexit
+__cxa_finalize
+__cxa_guard_acquire
+__cxa_guard_release
+exynos9810
+free
+getauxval
+LIBC
+libc++_shared.so
+libc.so
+libdl.so
+libEGL.so
+libGLESv2.so
+liblog.so
+libm.so
+libQt6Core_arm64-v8a.so
+libQt6Gui_arm64-v8a.so
+Linker: LLD 19.0.1
+memcmp
+memmove
+memset
+\n_q_icoOrigDepth
+operator delete(void*)
+operator delete[](void*)
+operator new(unsigned long)
+operator new[](unsigned long)
+PNG\r\n
+QArrayData::allocate(QArrayData**, long long, long long, long long, QArrayData::AllocationOption)
+QArrayData::reallocateUnaligned(QArrayData*, void*, long long, long long, QArrayData::AllocationOption)
+QBuffer::open(QFlags<QIODeviceBase::OpenModeFlag>)
+QBuffer::~QBuffer()
+QBuffer::QBuffer(QByteArray*, QObject*)
+QByteArray::QByteArray(char const*, long long)
+QICOPlugin
+QImage::bytesPerLine() const
+QImage::convertToFormat_helper(QImage::Format, QFlags<Qt::ImageConversionFlag>) const
+QImage::convertToFormat_inplace(QImage::Format, QFlags<Qt::ImageConversionFlag>)
+QImage::fill(Qt::GlobalColor)
+QImage::fromData(QByteArrayView, char const*)
+QImage::height() const
+QImageIOHandler::allocateImage(QSize, QImage::Format, QImage*)
+QImageIOHandler::currentImageNumber() const
+QImageIOHandler::currentImageRect() const
+QImageIOHandler::device() const
+QImageIOHandler::loopCount() const
+QImageIOHandler::nextImageDelay() const
+QImageIOHandler::~QImageIOHandler()
+QImageIOHandler::QImageIOHandler()
+QImageIOHandler::setDevice(QIODevice*)
+QImageIOHandler::setFormat(QByteArray const&)
+QImageIOHandler::setFormat(QByteArray const&) const
+QImageIOHandler::setOption(QImageIOHandler::ImageOption, QVariant const&)
+QImageIOPlugin::~QImageIOPlugin()
+QImageIOPlugin::QImageIOPlugin(QObject*)
+QImageIOPlugin::qt_metacall(QMetaObject::Call, int, void**)
+QImageIOPlugin::qt_metacast(char const*)
+QImageIOPlugin::staticMetaObject
+QImage::isNull() const
+QImage::operator=(QImage const&)
+QImage::~QImage()
+QImage::QImage()
+QImage::QImage(int, int, QImage::Format)
+QImage::QImage(QImage const&)
+QImage::scaled(QSize const&, Qt::AspectRatioMode, Qt::TransformationMode) const
+QImage::scanLine(int)
+QImage::setAlphaChannel(QImage const&)
+QImage::setColorCount(int)
+QImage::setColor(int, unsigned int)
+QImage::setPixel(int, int, unsigned int)
+QImage::setText(QString const&, QString const&)
+QImage::width() const
+QIODevice::isOpen() const
+QIODevice::isReadable() const
+QIODevice::isWritable() const
+QIODevice::read(char*, long long)
+QIODevice::read(long long)
+QIODevice::ungetChar(char)
+QIODevice::write(char const*, long long)
+QIODevice::write(QByteArray const&)
+QLoggingCategory::~QLoggingCategory()
+QLoggingCategory::QLoggingCategory(char const*, QtMsgType)
+QMessageLogger::warning(char const*, ...) const
+QObject::childEvent(QChildEvent*)
+QObject::connectNotify(QMetaMethod const&)
+QObject::customEvent(QEvent*)
+QObjectData::dynamicMetaObject() const
+QObject::disconnectNotify(QMetaMethod const&)
+QObject::eventFilter(QObject*, QEvent*)
+QObject::event(QEvent*)
+QObject::timerEvent(QTimerEvent*)
+QPaintDevice::QPaintDevice()
+QString::fromLatin1(QByteArrayView)
+QString::number(int, int)
+Qt_6
+Qt_6_PRIVATE_API
+qtbase/plugins/imageformats/libplugins_imageformats_qico_arm64-v8a.so
+qt.gui.imageio.ico
+QtIcoHandler::canRead() called with no device
+qt_plugin_instance
+qt_plugin_query_metadata_v2
+QtSharedPointer::ExternalRefCountData::getAndRef(QObject const*)
+QVariant::QVariant(int)
+QVariant::QVariant(QSize)
+ro.arch
+__stack_chk_fail
+strcmp
+strlen
+strncmp
+__system_property_get
+typeinfo for QImageIOHandler
+typeinfo for QImageIOPlugin
+vtable for __cxxabiv1::__si_class_type_info
+vtable for QImage

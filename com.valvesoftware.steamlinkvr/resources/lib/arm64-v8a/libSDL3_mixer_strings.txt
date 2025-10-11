@@ -1,0 +1,438 @@
+ (08@HP
+ (08@HPX`p
+ (08@LZ
+0\nDE
+14P;=4p
+18273645
+,[1K6
+"*26L
+38CB!=C0
+&57{15
+=5^LI5;aV5
+8?61$#*-pw~ylkbeHOFATSZ]
+&.8DTf
+9FV\t9
+ADH~OqW/`
+ALBUM
+amplitude
+Android (13624864, +pgo, +bolt, +lto, +mlgo, based on r530567e) clang version 19.0.1 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+APETAGEX
+ARTIST
+audio
+Audio data is in unknown/unsupported/corrupt format
+audiodecoder
+Bad WAV file (no DATA chunk)
+Bad WAV file (no FMT chunk)
+BCPR
+bK0sm!0
+Brava Software Inc.             
+C0;g
+c8nPr8
+Can't seek a streaming track
+Can't seek in stream to find proper decoder
+Can't use MIX_Generate with a MIX_Mixer from MIX_CreateMixerDevice
+Changing mixer output format!!
+COPYRIGHT
+Corrupt WAV file (chunk goes past EOF)
+Corrupt WAV file (wavlength goes past EOF)
+Couldn't read %u bytes from WAV file
+cuC<
+__cxa_atexit
+__cxa_finalize
+d4Ums4
+data
+DATE
+Dc9h\tr9
+DRFLAC
+DRMP3
+Error seeking in datastream
+fLaC
+frames
+gain
+group
+`H9SfU9
+I6e"V6
+IALB
+IART
+iN2j
+IN#5--:X--------S
+INAM
+index
+INFO
+ing`ur{|QV_XMJCD
+Invalid ADPCM header
+Invalid MS ADPCM coefficient index in block header
+ISO-8859-1
+JBF'YB
+jCW pC
+jmdc>907"%,+
+KwV\r
+LIBC
+libc.so
+libdl.so
+libm.so
+libSDL3_mixer.so
+libSDL3.so
+Linker: LLD 19.0.1
+LOOP
+LOOPCOUNT
+LOOPEND
+LOOPLENGTH
+LOOPSTART
+LYRICS200
+LYRICSBEGIN
+LYRICSEND
+memcpy
+__memcpy_chk
+memmove
+memset
+Missing required coefficients in MS ADPCM format header
+MIX_AudioFramesToMS
+MIX_AudioMSToFrames
+MIX_CreateAudioDecoder
+MIX_CreateAudioDecoder_IO
+MIX_CreateGroup
+MIX_CreateMixer
+MIX_CreateMixerDevice
+MIX_CreateSineWaveAudio
+MIX_CreateTrack
+MIX_DecodeAudio
+MIX_DestroyAudio
+MIX_DestroyAudioDecoder
+MIX_DestroyGroup
+MIX_DestroyMixer
+MIX_DestroyTrack
+mixer
+Mixer not initialized (call MIX_Init first)
+MIX_FramesToMS
+MIX_Generate
+MIX_GetAudioDecoder
+MIX_GetAudioDecoderFormat
+MIX_GetAudioDecoderProperties
+MIX_GetAudioDuration
+MIX_GetAudioFormat
+MIX_GetAudioProperties
+MIX_GetGroupMixer
+MIX_GetGroupProperties
+MIX_GetMasterGain
+MIX_GetMixerFormat
+MIX_GetMixerProperties
+MIX_GetNumAudioDecoders
+MIX_GetTrack3DPosition
+MIX_GetTrackAudio
+MIX_GetTrackAudioStream
+MIX_GetTrackFrequencyRatio
+MIX_GetTrackGain
+MIX_GetTrackMixer
+MIX_GetTrackPlaybackPosition
+MIX_GetTrackProperties
+MIX_GetTrackRemaining
+MIX_Init
+MIX_LoadAudio
+MIX_LoadAudio_IO
+MIX_LoadAudioWithProperties
+MIX_LoadRawAudio
+MIX_LoadRawAudio_IO
+MIX_LoadRawAudioNoCopy
+MIX_MSToFrames
+MIX_PauseAllTracks
+MIX_PauseTag
+MIX_PauseTrack
+MIX_PlayAudio
+MIX_PlayTag
+MIX_PlayTrack
+MIX_Quit
+MIX_ResumeAllTracks
+MIX_ResumeTag
+MIX_ResumeTrack
+MIX_SetGroupPostMixCallback
+MIX_SetMasterGain
+MIX_SetPostMixCallback
+MIX_SetTagGain
+MIX_SetTrack3DPosition
+MIX_SetTrackAudio
+MIX_SetTrackAudioStream
+MIX_SetTrackCookedCallback
+MIX_SetTrackFrequencyRatio
+MIX_SetTrackGain
+MIX_SetTrackGroup
+MIX_SetTrackIOStream
+MIX_SetTrackOutputChannelMap
+MIX_SetTrackPlaybackPosition
+MIX_SetTrackRawCallback
+MIX_SetTrackStereo
+MIX_SetTrackStoppedCallback
+MIX_StopAllTracks
+MIX_StopTag
+MIX_StopTrack
+MIX_TagTrack
+MIX_TrackFramesToMS
+MIX_TrackLooping
+MIX_TrackMSToFrames
+MIX_TrackPaused
+MIX_TrackPlaying
+MIX_UntagTrack
+MIX_Version
+\n4mk
+Need NEON instructions but this CPU doesn't offer it
+No audio currently assigned to this track
+Not a FLAC audio stream
+Not an Ogg Vorbis audio stream
+Not a WAV file
+>OggS
+OggS
+Parameter '%s' is invalid
+path
+Playing an input stream (not MIX_Audio) with a non-zero start position
+position
+q.CUN3C
+__register_atfork
+Requested RAW decoder but didn't provide PCM format information
+\r\nWPY^KLEBohafst}z
+sample_rate
+SDL3_0.0.0
+SDL3_mixer_0.0.0
+SDL_abs
+SDL_acosf
+SDL_AddAtomicInt
+SDL_AddEventWatch
+SDL_aligned_alloc
+SDL_aligned_free
+SDL_asprintf
+SDL_atof
+SDL_atoi
+SDL.audiostream.auto_cleanup
+SDL_calloc
+SDL_ClearAudioStream
+SDL_ClearProperty
+SDL_CloseIO
+SDL_CopyProperties
+SDL_cos
+SDL_cosf
+SDL_CreateAudioStream
+SDL_CreateMutex
+SDL_CreateProperties
+SDL_CreateRWLock
+SDL_DestroyAudioStream
+SDL_DestroyMutex
+SDL_DestroyProperties
+SDL_DestroyRWLock
+SDL_EnumerateProperties
+SDL_exp
+SDL_floor
+SDL_floorf
+SDL_FlushAudioStream
+SDL_free
+SDL_GetAudioStreamAvailable
+SDL_GetAudioStreamData
+SDL_GetAudioStreamDevice
+SDL_GetAudioStreamFormat
+SDL_GetAudioStreamFrequencyRatio
+SDL_GetAudioStreamGain
+SDL_GetAudioStreamProperties
+SDL_GetBooleanProperty
+SDL_GetFloatProperty
+SDL_GetIOProperties
+SDL_GetIOSize
+SDL_GetIOStatus
+SDL_GetNumberProperty
+SDL_GetPointerProperty
+SDL_GetSIMDAlignment
+SDL_GetStringProperty
+SDL_HasNEON
+SDL_HasProperty
+SDL_iconv_string
+SDL_Init
+SDL_IOFromConstMem
+SDL_IOFromFile
+SDL.iostream.dynamic.memory
+SDL.iostream.memory.base
+SDL_isdigit
+SDL_LoadFile_IO
+SDL_LockAudioStream
+SDL_LockMutex
+SDL_LockProperties
+SDL_LockRWLockForReading
+SDL_LockRWLockForWriting
+SDL_log
+SDL_Log
+SDL_malloc
+SDL_memcmp
+SDL_MixAudio
+SDL_mixer.audio.decoder
+SDL_mixer.audio.load.closeio
+SDL_mixer.audio.load.iostream
+SDL_mixer.audio.load.ondemand
+SDL_mixer.audio.load.path
+SDL_mixer.audio.load.predecode
+SDL_mixer.audio.load.preferred_mixer
+SDL_mixer.audio.load.skip_metadata_tags
+SDL_mixer.decoder.channels
+SDL_mixer.decoder_drflac.metadata
+SDL_mixer.decoder.format
+SDL_mixer.decoder.freq
+SDL_mixer.decoder.sinewave.amplitude
+SDL_mixer.decoder.sinewave.hz
+SDL_mixer.metadata.album
+SDL_mixer.metadata.ape.album
+SDL_mixer.metadata.ape.artist
+SDL_mixer.metadata.ape.copyright
+SDL_mixer.metadata.ape.%s
+SDL_mixer.metadata.ape.title
+SDL_mixer.metadata.ape.track
+SDL_mixer.metadata.ape.year
+SDL_mixer.metadata.artist
+SDL_mixer.metadata.copyright
+SDL_mixer.metadata.duration_frames
+SDL_mixer.metadata.duration_infinite
+SDL_mixer.metadata.id3v1.album
+SDL_mixer.metadata.id3v1.artist
+SDL_mixer.metadata.id3v1.comment
+SDL_mixer.metadata.id3v1.title
+SDL_mixer.metadata.id3v1.track
+SDL_mixer.metadata.id3v1.year
+SDL_mixer.metadata.id3v2.%c%c%c
+SDL_mixer.metadata.id3v2.%c%c%c%c
+SDL_mixer.metadata.id3v2.TAL
+SDL_mixer.metadata.id3v2.TALB
+SDL_mixer.metadata.id3v2.TCOP
+SDL_mixer.metadata.id3v2.TCR
+SDL_mixer.metadata.id3v2.TIT2
+SDL_mixer.metadata.id3v2.TP1
+SDL_mixer.metadata.id3v2.TPE1
+SDL_mixer.metadata.id3v2.TRCK
+SDL_mixer.metadata.id3v2.TRK
+SDL_mixer.metadata.id3v2.TT2
+SDL_mixer.metadata.id3v2.TYE
+SDL_mixer.metadata.id3v2.TYER
+SDL_mixer.metadata.ogg.
+SDL_mixer.metadata.ogg.vendor
+SDL_mixer.metadata.title
+SDL_mixer.metadata.total_tracks
+SDL_mixer.metadata.track
+SDL_mixer.metadata.wavLIST.%s
+SDL_mixer.metadata.year
+SDL_mixer.play.append_silence_frames
+SDL_mixer.play.append_silence_milliseconds
+SDL_mixer.play.fade_in_frames
+SDL_mixer.play.fade_in_milliseconds
+SDL_mixer.play.loops
+SDL_mixer.play.loop_start_frame
+SDL_mixer.play.loop_start_millisecond
+SDL_mixer.play.max_frame
+SDL_mixer.play.max_milliseconds
+SDL_mixer.play.start_frame
+SDL_mixer.play.start_millisecond
+SDL_OpenAudioDeviceStream
+SDL_OpenIO
+SDL_pow
+SDL_PutAudioStreamData
+SDL_PutAudioStreamDataNoCopy
+SDL_PutAudioStreamPlanarData
+SDL_qsort
+SDL_QuitSubSystem
+SDL_ReadIO
+SDL_ReadU32LE
+SDL_realloc
+SDL_RemoveEventWatch
+SDL_ResumeAudioStreamDevice
+SDL_scalbn
+SDL_SeekIO
+SDL_SetAudioStreamFormat
+SDL_SetAudioStreamFrequencyRatio
+SDL_SetAudioStreamGain
+SDL_SetAudioStreamGetCallback
+SDL_SetAudioStreamOutputChannelMap
+SDL_SetBooleanProperty
+SDL_SetError
+SDL_SetFloatProperty
+SDL_SetNumberProperty
+SDL_SetPointerProperty
+SDL_SetPointerPropertyWithCleanup
+SDL_SetStringProperty
+SDL_sin
+SDL_sinf
+SDL_snprintf
+SDL_sqrtf
+SDL_sscanf
+SDL_strcasecmp
+SDL_strchr
+SDL_strdup
+SDL_strlcpy
+SDL_strlen
+SDL_strncmp
+SDL_strtol
+SDL_strtoll
+SDL_TellIO
+SDL_tolower
+SDL_UnlockAudioStream
+SDL_UnlockMutex
+SDL_UnlockProperties
+SDL_UnlockRWLock
+Seek before start of data
+Seek past end of file
+sinewave
+SINEWAVE
+spec
+__stack_chk_fail
+STBVORBIS
+stb_vorbis_open_io
+stb_vorbis_open_memory
+stb_vorbis_seek
+%s: unknown error %d\n
+TITLE
+track
+Track and group are not from the same MIX_Mixer.
+TRACKNUMBER
+u&62G16t
+UCS-2BE
+UCS-2LE
+Unknown WAVE data format
+US]CQ
+UTF-8
+?VCT][C
+\v\f!&/(=:34NI@GRU\[vqx
+?vorbis
+vorbis
+VORBIS_bad_packet_type
+VORBIS_cant_find_last_page
+VORBIS_continued_packet_flag_invalid
+VORBIS_feature_not_supported
+VORBIS_file_open_failure
+VORBIS_incorrect_stream_serial_number
+VORBIS_invalid_api_mixing
+VORBIS_invalid_first_page
+VORBIS_invalid_setup
+VORBIS_invalid_stream
+VORBIS_invalid_stream_structure_version
+VORBIS_missing_capture_pattern
+VORBIS_need_more_data
+VORBIS_ogg_skeleton_not_supported
+VORBIS_outofmem
+VORBIS_seek_failed
+VORBIS_seek_invalid
+VORBIS_seek_without_length
+VORBIS_too_many_channels
+VORBIS_unexpected_eof
+W4%I
+WAV: 3-bit IMA ADPCM currently not supported
+WAV: ADPCM Invalid number of channels
+WAV: Chunk size too small for MS ADPCM format header
+Wave format chunk too small
+WAV: Invalid IMA ADPCM bits per sample of %u
+WAV: Invalid IMA ADPCM block size (nBlockAlign)
+WAV: Invalid MS ADPCM bits per sample of %u
+WAV: Invalid MS ADPCM block size (nBlockAlign)
+WAV: Invalid MS ADPCM format header (too small)
+WAV: Invalid number of samples per IMA ADPCM block (wSamplesPerBlock)
+WAV: Invalid number of samples per MS ADPCM block (wSamplesPerBlock)
+WAV: not a wav file
+WAV: Unknown PCM format with %d bits
+WAV: Wrong preset coefficients in MS ADPCM format header
+{wsokgc_[WSOKGC?;73/+'#
+yvsokgc_[WSOKGC?;73/+'#
+[YWTQNKHEB?<9630-*'$!
+zwsokgc_[WSOKGC?;73/+'#
+\ZWTQNKHEB?<9630-*'$!
+]ZWTQNKHEB?<9630-*'$!
+ZWTQNKHEB?<9630-*'$!

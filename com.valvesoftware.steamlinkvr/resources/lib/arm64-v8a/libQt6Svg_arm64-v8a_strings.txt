@@ -1,0 +1,1324 @@
+#000000
+10pt
+10QSvgCircle
+10QSvgSwitch
+11QSvgEllipse
+11QSvgPolygon
+1.2.8
+12QSvgPolyline
+12QSvgRenderer
+13QSvgAnimation
+13QSvgFillStyle
+13QSvgFontStyle
+13QSvgGenerator
+14QSvgRefCounted
+15QSvgCompOpStyle
+15QSvgPaintEngine
+15QSvgStrokeStyle
+16QSvgAnimateColor
+16QSvgOpacityStyle
+16QSvgQualityStyle
+?16QSvgTinyDocument
+17QSvgGradientStyle
+17QSvgStructureNode
+17QSvgStyleProperty
+18QSvgTransformStyle
+19QSvgRendererPrivate
+19QSvgSolidColorStyle
+20QSvgAnimateTransform
+21QSvgFillStyleProperty
+21QSvgViewportFillStyle
+22QSvgPaintEnginePrivate
+2repaintNeeded()
+2timeout()
+5QSvgG
+7QSvgArc
+7QSvgUse
+8A*X
+8QSvgDefs
+8QSvgFont
+8QSvgLine
+8QSvgNode
+8QSvgPath
+8QSvgRect
+8QSvgText
+9QSvgImage
+9QSvgTspan
+additive
+adialGradient
+andler
+Android (13624864, +pgo, +bolt, +lto, +mlgo, based on r530567e) clang version 19.0.1 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+Android (13624864, +pgo, -bolt, +lto, -mlgo, based on r530567e) clang version 19.0.1 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+animation
+<animation> no implemented
+aspectRatioMode
+AspectRatioMode
+atan2
+atrix
+attributeName
+auto
+base64,
+begin
+bevel
+block
+bold
+bolder
+bounds
+break
+butt
+Cannot initialize zlib, because: %s
+Cannot open file '%s', because: %s
+Cannot read file '%s', because: %s (line %d)
+circle
+class
+clear
+<clipPath id="%1">\n
+</clipPath>\n
+collapse
+color
+color-burn
+color-dodge
+color-opacity
+compact
+comp-op
+contents
+Could not add child element to parent element because the types are incorrect.
+Could not create image from
+Could not parse node: 
+Could not resolve property: 
+Could not resolve property : %s
+Couldn't find node %s. Skipping rendering.
+cript
+currentColor
+currentFrame
+__cxa_atexit
+__cxa_finalize
+__cxa_guard_acquire
+__cxa_guard_release
+__cxa_pure_virtual
+Cycles detected in SVG, document discarded.
+darken
+-dasharray
+-dashoffset
+data
+default
+defs
+<defs>\n
+</desc>
+<desc>
+difference
+display
+<!DOCTYPE svg
+Drawing
+dst-atop
+dst-in
+dst-out
+dst-over
+Duplicate unique style id:
+elementId
+ellipse
+Ellipse
+Error while inflating gzip file: integer size overflow
+Error while inflating gzip file: %s
+Error while inflating gzip file: SVG format check failed
+etadata
+evenodd
+exclusion
+extArea
+exynos9810
+f17QSvgStyleSelector
+?ffffff
+ffffff9@zpw
+filename
+fill
+fill="
+fill="none" 
+" fill-opacity="
+fill-opacity
+" fill-rule="
+fill-rule
+fill-rule="evenodd" 
+fill="url(#
+font-family
+font-family="
+" font-size="
+font-size
+" font-style="
+font-style
+font-variant
+" font-weight="
+font-weight
+framesPerSecond
+free
+freeze
+from
+Generated with Qt
+getauxval
+gradient%1
+gradientTransform
+gradientUnits
+gradientUnits="
+hard-light
+" height="
+height
+hidden
+horiz-adv-x
+href
+href=\"(.+)\"
+http://www.w3.org/Graphics/SVG/feature/1.2/#ConditionalProcessing
+http://www.w3.org/Graphics/SVG/feature/1.2/#ConditionalProcessingAttribute
+http://www.w3.org/Graphics/SVG/feature/1.2/#CoreAttribute
+http://www.w3.org/Graphics/SVG/feature/1.2/#Extensibility
+http://www.w3.org/Graphics/SVG/feature/1.2/#ExternalResourcesRequiredAttribute
+http://www.w3.org/Graphics/SVG/feature/1.2/#Font
+http://www.w3.org/Graphics/SVG/feature/1.2/#Gradient
+http://www.w3.org/Graphics/SVG/feature/1.2/#GraphicsAttribute
+http://www.w3.org/Graphics/SVG/feature/1.2/#Hyperlinking
+http://www.w3.org/Graphics/SVG/feature/1.2/#Image
+http://www.w3.org/Graphics/SVG/feature/1.2/#OpacityAttribute
+http://www.w3.org/Graphics/SVG/feature/1.2/#PaintAttribute
+http://www.w3.org/Graphics/SVG/feature/1.2/#Prefetch
+http://www.w3.org/Graphics/SVG/feature/1.2/#Shape
+http://www.w3.org/Graphics/SVG/feature/1.2/#SolidColor
+http://www.w3.org/Graphics/SVG/feature/1.2/#Structure
+http://www.w3.org/Graphics/SVG/feature/1.2/#SVG
+http://www.w3.org/Graphics/SVG/feature/1.2/#SVG-static
+http://www.w3.org/Graphics/SVG/feature/1.2/#Text
+http://www.w3.org/Graphics/SVG/feature/1.2/#XlinkAttribute
+ideo
+ignored because it will take too long to rasterize (bounding rect=
+<image 
+image
+Image
+image-rendering
+image was not greater than 0
+indefinite
+inearGradient
+inflate
+inflateEnd
+inflateInit2_
+inflateReset
+inherit
+inline
+inline-table
+<input>
+Invalid path data; path truncated.
+ircle
+" is an invalid value for attribute xml:space. Valid values are "preserve" and "default".
+iscard
+ is not implemented
+issing-glyph
+italic
+itle
+kern
+L1@33333
+large
+LIBC
+libc++_shared.so
+libc.so
+libdl.so
+libEGL.so
+libGLESv2.so
+liblog.so
+libm.so
+libQt6Core_arm64-v8a.so
+libQt6Gui_arm64-v8a.so
+libQt6Svg_arm64-v8a.so
+libz.so
+lighten
+lighter
+line
+Line
+</linearGradient>
+<linearGradient 
+-linecap
+-linejoin
+Linker: LLD 19.0.1
+link #%s is recursive!
+link #%s is undefined!
+list-item
+llipse
+load
+lyph
+mage
+malloc
+marker
+<mask id="
+medium
+memchr
+memcmp
+memcpy
+memmove
+memset
+middle
+miter
+-miterlimit
+mm" height="
+multiply
+name
+n`cXy
+nimate
+nimateColor
+nimateMotion
+nimateTransform
+nimation
+none
+non-scaling-stroke
+nonzero
+normal
+\nYYYYY
+objectBoundingBox
+oblique
+offset
+olidColor
+olygon
+olyline
+ont-face
+ont-face-name
+ont-face-src
+ont-face-uri
+-opacity
+opacity
+opacity="
+Operation: 
+operator delete(void*)
+operator delete[](void*)
+operator new(unsigned long)
+operator new[](unsigned long)
+operator<<(QDebug, QRectF const&)
+optimizeQuality
+optimizeSpeed
+oreignObject
+otate
+overlay
+path
+Path
+<path vector-effect="
+plus
+" points="
+points
+polygon
+Polygon
+polyline
+Polyline
+<polyline fill="none" vector-effect="
+preserve
+" preserveAspectRatio="none" image-rendering="
+Problem parsing 
+QArrayData::allocate(QArrayData**, long long, long long, long long, QArrayData::AllocationOption)
+QArrayData::reallocateUnaligned(QArrayData*, void*, long long, long long, QArrayData::AllocationOption)
+QBitmap::fromData(QSize const&, unsigned char const*, QImage::Format)
+QBitmap::~QBitmap()
+QBrush::gradient() const
+QBrush::operator=(QBrush const&)
+QBrush::operator==(QBrush const&) const
+QBrush::operator QVariant() const
+QBrush::~QBrush()
+QBrush::QBrush()
+QBrush::QBrush(QBrush const&)
+QBrush::QBrush(QColor const&, Qt::BrushStyle)
+QBrush::QBrush(QGradient const&)
+QBrush::QBrush(Qt::BrushStyle)
+QBrush::QBrush(Qt::GlobalColor, Qt::BrushStyle)
+QBrush::setColor(QColor const&)
+QBrush::setTransform(QTransform const&)
+QBuffer::close()
+QBuffer::open(QFlags<QIODeviceBase::OpenModeFlag>)
+QBuffer::~QBuffer()
+QBuffer::QBuffer(QByteArray*, QObject*)
+QBuffer::QBuffer(QObject*)
+QBuffer::setData(QByteArray const&)
+QByteArray::append(char)
+QByteArray::append(QByteArray const&)
+QByteArray::chop(long long)
+QByteArray::_empty
+QByteArray::fromBase64(QByteArray const&, QFlags<QByteArray::Base64Option>)
+QByteArray::insert(long long, QByteArrayView)
+QByteArray::left(long long) const
+QByteArray::number(long long, int)
+QByteArray::operator=(QByteArray const&)
+QByteArray::QByteArray(long long, Qt::Initialization)
+QByteArray::reallocData(long long, QArrayData::AllocationOption)
+QByteArray::resize(long long)
+QByteArray::toBase64(QFlags<QByteArray::Base64Option>) const
+QByteArray::toDouble(bool*) const
+QChar::isSpace_helper(char32_t)
+QColor::alpha() const
+QColor::alphaF() const
+QColor::blue() const
+QColor::fromRgba(unsigned int)
+QColor::fromString(QAnyStringView)
+QColor::green() const
+QColor::name(QColor::NameFormat) const
+QColor::QColor(Qt::GlobalColor)
+QColor::red() const
+QColor::rgba() const
+QColor::setAlphaF(float)
+QColor::setRgb(unsigned int)
+QCss::Parser::init(QString const&, bool)
+QCss::Parser::parse(QCss::StyleSheet*, Qt::CaseSensitivity)
+QCss::Parser::Parser()
+QCss::Parser::Parser(QString const&, bool)
+QCss::Parser::test(QCss::TokenType)
+QCss::StyleSelector::declarationsForNode(QCss::StyleSelector::NodePtr, char const*)
+QCss::StyleSelector::~StyleSelector()
+QCss::Symbol::lexem() const
+QCss::Value::toString() const
+QDataStream::operator<<(int)
+QDataStream::operator>>(int&)
+QDateTime::currentMSecsSinceEpoch()
+QDebug::putString(QChar const*, unsigned long)
+QDebug::~QDebug()
+QDir::absoluteFilePath(QString const&) const
+QDir::~QDir()
+QDir::toNativeSeparators(QString const&)
+QElapsedTimer::nsecsElapsed() const
+QElapsedTimer::start()
+qEnvironmentVariableIntValue(char const*, bool*)
+QFileInfo::absoluteDir() const
+QFileInfo::absoluteFilePath() const
+QFileInfo::exists() const
+QFileInfo::~QFileInfo()
+QFileInfo::QFileInfo(QString const&)
+QFile::open(QFlags<QIODeviceBase::OpenModeFlag>)
+QFile::~QFile()
+QFile::QFile(QString const&)
+QFile::staticMetaObject
+QFont::capitalization() const
+QFont::families() const
+QFont::family() const
+QFontMetricsF::averageCharWidth() const
+QFontMetricsF::height() const
+QFontMetricsF::maxWidth() const
+QFontMetricsF::~QFontMetricsF()
+QFontMetricsF::QFontMetricsF(QFont const&)
+QFont::operator=(QFont const&)
+QFont::pixelSize() const
+QFont::pointSizeF() const
+QFont::~QFont()
+QFont::QFont()
+QFont::QFont(QFont const&)
+QFont::setCapitalization(QFont::Capitalization)
+QFont::setFamilies(QList<QString> const&)
+QFont::setPixelSize(int)
+QFont::setPointSizeF(double)
+QFont::setStyle(QFont::Style)
+QFont::setWeight(QFont::Weight)
+QFont::style() const
+QFont::weight() const
+qFpClassify(float)
+QGradient::coordinateMode() const
+QGradient::interpolationMode() const
+QGradient::~QGradient()
+QGradient::setColorAt(double, QColor const&)
+QGradient::setCoordinateMode(QGradient::CoordinateMode)
+QGradient::setInterpolationMode(QGradient::InterpolationMode)
+QGradient::setStops(QList<std::__ndk1::pair<double, QColor>> const&)
+QGradient::stops() const
+qHash(QStringView, unsigned long)
+QHashSeed::globalSeed()
+QImage::constBits() const
+QImage::convertToFormat_helper(QImage::Format, QFlags<Qt::ImageConversionFlag>) const
+QImage::format() const
+QImage::fromData(QByteArrayView, char const*)
+QImage::height() const
+QImage::isNull() const
+QImage::~QImage()
+QImage::QImage()
+QImage::QImage(int, int, QImage::Format)
+QImage::QImage(QImage const&)
+QImage::QImage(QString const&, char const*)
+QImage::save(QIODevice*, char const*, int) const
+QImage::size() const
+QImage::width() const
+QIODevice::errorString() const
+QIODevice::isOpen() const
+QIODevice::isWritable() const
+QIODevice::readAll()
+QIODevice::read(long long)
+qIsFinite(double)
+QLinearGradient::finalStop() const
+QLinearGradient::QLinearGradient(double, double, double, double)
+QLinearGradient::start() const
+QLocale::name() const
+QLocale::~QLocale()
+QLocale::QLocale()
+QLoggingCategory::~QLoggingCategory()
+QLoggingCategory::QLoggingCategory(char const*, QtMsgType)
+QMessageLogger::debug(char const*, ...) const
+QMessageLogger::debug() const
+QMessageLogger::warning(char const*, ...) const
+QMessageLogger::warning() const
+QMetaObject::activate(QObject*, QMetaObject const*, int, void**)
+QMetaObject::cast(QObject const*) const
+QMetaObject::className() const
+QMetaObject::Connection::~Connection()
+QMetaType::registerHelper(QtPrivate::QMetaTypeInterface const*)
+QMetaType::registerNormalizedTypedef(QByteArray const&, QMetaType)
+QObject::childEvent(QChildEvent*)
+QObject::connectNotify(QMetaMethod const&)
+QObject::connect(QObject const*, char const*, QObject const*, char const*, Qt::ConnectionType)
+QObject::customEvent(QEvent*)
+QObjectData::dynamicMetaObject() const
+QObject::disconnectNotify(QMetaMethod const&)
+QObject::eventFilter(QObject*, QEvent*)
+QObject::event(QEvent*)
+QObjectPrivate::flagsForDumping() const
+QObjectPrivate::~QObjectPrivate()
+QObjectPrivate::QObjectPrivate(int)
+QObject::~QObject()
+QObject::QObject(QObjectPrivate&, QObject*)
+QObject::qt_metacall(QMetaObject::Call, int, void**)
+QObject::qt_metacast(char const*)
+QObject::staticMetaObject
+QObject::timerEvent(QTimerEvent*)
+QPaintDevice::initPainter(QPainter*) const
+QPaintDevice::~QPaintDevice()
+QPaintDevice::QPaintDevice()
+QPaintDevice::redirected(QPoint*) const
+QPaintDevice::sharedPainter() const
+QPaintEngine::coordinateOffset() const
+QPaintEngine::createPixmapFromImage(QImage, QFlags<Qt::ImageConversionFlag>)
+QPaintEngine::createPixmap(QSize)
+QPaintEngine::drawEllipse(QRect const&)
+QPaintEngine::drawLines(QLine const*, int)
+QPaintEngine::drawLines(QLineF const*, int)
+QPaintEngine::drawPoints(QPoint const*, int)
+QPaintEngine::drawPoints(QPointF const*, int)
+QPaintEngine::drawPolygon(QPoint const*, int, QPaintEngine::PolygonDrawMode)
+QPaintEngine::drawRects(QRect const*, int)
+QPaintEngine::drawTextItem(QPointF const&, QTextItem const&)
+QPaintEngine::drawTiledPixmap(QRectF const&, QPixmap const&, QPointF const&)
+QPaintEngine::painter() const
+QPaintEnginePrivate::~QPaintEnginePrivate()
+QPaintEngine::~QPaintEngine()
+QPaintEngine::QPaintEngine(QPaintEnginePrivate&, QFlags<QPaintEngine::PaintEngineFeature>)
+QPaintEngineState::brush() const
+QPaintEngineState::clipOperation() const
+QPaintEngineState::font() const
+QPaintEngineState::isClipEnabled() const
+QPaintEngineState::opacity() const
+QPaintEngineState::pen() const
+QPaintEngineState::renderHints() const
+QPaintEngineState::transform() const
+QPainter*
+QPainter::brush() const
+QPainter::clipPath() const
+QPainter::compositionMode() const
+QPainter::device() const
+QPainter::drawEllipse(QRectF const&)
+QPainter::drawImage(QRectF const&, QImage const&, QRectF const&, QFlags<Qt::ImageConversionFlag>)
+QPainter::drawLines(QLineF const*, int)
+QPainter::drawPath(QPainterPath const&)
+QPainter::drawPolygon(QPointF const*, int, Qt::FillRule)
+QPainter::drawPolyline(QPointF const*, int)
+QPainter::drawRects(QRectF const*, int)
+QPainter::drawRoundedRect(QRectF const&, double, double, Qt::SizeMode)
+QPainter::font() const
+QPainter::opacity() const
+QPainterPath::addEllipse(QRectF const&)
+QPainterPath::addPolygon(QPolygonF const&)
+QPainterPath::addRect(QRectF const&)
+QPainterPath::boundingRect() const
+QPainterPath::closeSubpath()
+QPainterPath::controlPointRect() const
+QPainterPath::cubicTo(QPointF const&, QPointF const&, QPointF const&)
+QPainterPath::elementAt(int) const
+QPainterPath::elementCount() const
+QPainterPath::fillRule() const
+QPainterPath::lineTo(QPointF const&)
+QPainterPath::moveTo(QPointF const&)
+QPainterPath::~QPainterPath()
+QPainterPath::QPainterPath()
+QPainterPath::QPainterPath(QPainterPath const&)
+QPainterPath::QPainterPath(QPointF const&)
+QPainterPath::quadTo(QPointF const&, QPointF const&)
+QPainterPath::setFillRule(Qt::FillRule)
+QPainterPathStroker::createStroke(QPainterPath const&) const
+QPainterPathStroker::~QPainterPathStroker()
+QPainterPathStroker::QPainterPathStroker()
+QPainterPathStroker::setWidth(double)
+QPainter::pen() const
+QPainter::~QPainter()
+QPainter::QPainter(QPaintDevice*)
+QPainter::restore()
+QPainter::save()
+QPainter::scale(double, double)
+QPainter::setBrush(QBrush const&)
+QPainter::setBrush(Qt::BrushStyle)
+QPainter::setCompositionMode(QPainter::CompositionMode)
+QPainter::setFont(QFont const&)
+QPainter::setOpacity(double)
+QPainter::setPen(QPen const&)
+QPainter::setPen(Qt::PenStyle)
+QPainter::setRenderHint(QPainter::RenderHint, bool)
+QPainter::setWorldTransform(QTransform const&, bool)
+QPainter::staticMetaObject
+QPainter::transform() const
+QPainter::translate(QPointF const&)
+QPainter::worldTransform() const
+QPen::brush() const
+QPen::capStyle() const
+QPen::color() const
+QPen::dashOffset() const
+QPen::dashPattern() const
+QPen::isCosmetic() const
+QPen::joinStyle() const
+QPen::miterLimit() const
+QPen::operator=(QPen const&)
+QPen::operator==(QPen const&) const
+QPen::operator QVariant() const
+QPen::~QPen()
+QPen::QPen()
+QPen::QPen(QBrush const&, double, Qt::PenStyle, Qt::PenCapStyle, Qt::PenJoinStyle)
+QPen::QPen(QPen const&)
+QPen::QPen(Qt::PenStyle)
+QPen::setBrush(QBrush const&)
+QPen::setCapStyle(Qt::PenCapStyle)
+QPen::setColor(QColor const&)
+QPen::setCosmetic(bool)
+QPen::setDashOffset(double)
+QPen::setDashPattern(QList<double> const&)
+QPen::setJoinStyle(Qt::PenJoinStyle)
+QPen::setMiterLimit(double)
+QPen::setStyle(Qt::PenStyle)
+QPen::setWidthF(double)
+QPen::style() const
+QPen::width() const
+QPen::widthF() const
+QPixmap::toImage() const
+QPolygonF::boundingRect() const
+QRadialGradient::center() const
+QRadialGradient::focalPoint() const
+QRadialGradient::QRadialGradient(double, double, double, double, double, double)
+QRadialGradient::radius() const
+QRectF::normalized() const
+QRectF::operator|(QRectF const&) const
+QRegion::begin() const
+QRegion::end() const
+QRegion::~QRegion()
+QRegion::QRegion()
+QRegion::QRegion(QBitmap const&)
+QRegularExpression::globalMatch(QString const&, long long, QRegularExpression::MatchType, QFlags<QRegularExpression::MatchOption>) const
+QRegularExpressionMatch::captured(int) const
+QRegularExpressionMatchIterator::hasNext() const
+QRegularExpressionMatchIterator::next()
+QRegularExpressionMatchIterator::~QRegularExpressionMatchIterator()
+QRegularExpressionMatch::~QRegularExpressionMatch()
+QRegularExpression::match(QString const&, long long, QRegularExpression::MatchType, QFlags<QRegularExpression::MatchOption>) const
+QRegularExpression::~QRegularExpression()
+QRegularExpression::QRegularExpression(QString const&, QFlags<QRegularExpression::PatternOption>)
+QSizeF::scaled(QSizeF const&, Qt::AspectRatioMode) const
+QString::append(QChar)
+QString::append(QString const&)
+QString::arg(double, int, char, int, QChar) const
+QString::arg(long long, int, int, QChar) const
+QString::arg(QString const&, int, QChar) const
+QString::chop(long long)
+QString::compare(QString const&, Qt::CaseSensitivity) const
+QString::_empty
+QString::endsWith(QChar, Qt::CaseSensitivity) const
+QString::endsWith(QLatin1String, Qt::CaseSensitivity) const
+QString::fromLatin1(QByteArrayView)
+QString::fromRawData(QChar const*, long long)
+QString::fromUtf8(QByteArrayView)
+QString::indexOf(QChar, long long, Qt::CaseSensitivity) const
+QString::insert(long long, QLatin1String)
+QString::lastIndexOf(QLatin1String, long long, Qt::CaseSensitivity) const
+QString::mid(long long, long long) const
+QString::number(double, char, int)
+QString::number(int, int)
+QString::operator=(QLatin1String)
+QString::operator=(QString const&)
+QString::QString(long long, Qt::Initialization)
+QString::QString(QChar const*, long long)
+QString::remove(long long, long long)
+QString::replace(QChar, QChar, Qt::CaseSensitivity)
+QString::simplified_helper(QString const&)
+QString::split(QChar, QFlags<Qt::SplitBehaviorFlags>, Qt::CaseSensitivity) const
+QString::startsWith(QChar, Qt::CaseSensitivity) const
+QString::startsWith(QLatin1String, Qt::CaseSensitivity) const
+QString::startsWith(QString const&, Qt::CaseSensitivity) const
+QString::toHtmlEscaped() const
+QString::toIntegral_helper(QStringView, bool*, int)
+QString::toLatin1_helper(QString const&)
+QString::toLocal8Bit_helper(QChar const*, long long)
+QString::toLower_helper(QString const&)
+QString::trimmed_helper(QString&)
+QString::trimmed_helper(QString const&)
+QStringView::toDouble(bool*) const
+QSvgAnimateColor::apply(QPainter*, QSvgNode const*, QSvgExtraStates&)
+QSvgAnimateColor::QSvgAnimateColor(int, int, int)
+QSvgAnimateColor::revert(QPainter*, QSvgExtraStates&)
+QSvgAnimateColor::setArgs(bool, QList<QColor> const&)
+QSvgAnimateColor::setFreeze(bool)
+QSvgAnimateColor::setRepeatCount(double)
+QSvgAnimateColor::type() const
+QSvgAnimateTransform::apply(QPainter*, QSvgNode const*, QSvgExtraStates&)
+QSvgAnimateTransform::QSvgAnimateTransform(int, int, int)
+QSvgAnimateTransform::resolveMatrix(QSvgNode const*)
+QSvgAnimateTransform::revert(QPainter*, QSvgExtraStates&)
+QSvgAnimateTransform::setArgs(QSvgAnimateTransform::TransformType, QSvgAnimateTransform::Additive, QList<double> const&)
+QSvgAnimateTransform::setFreeze(bool)
+QSvgAnimateTransform::setRepeatCount(double)
+QSvgAnimateTransform::type() const
+QSvgAnimation::draw(QPainter*, QSvgExtraStates&)
+QSvgAnimation::type() const
+QSvgArc::bounds(QPainter*, QSvgExtraStates&) const
+QSvgArc::draw(QPainter*, QSvgExtraStates&)
+QSvgArc::fastBounds(QPainter*, QSvgExtraStates&) const
+QSvgArc::QSvgArc(QSvgNode*, QPainterPath const&)
+QSvgArc::type() const
+QSvgCircle::type() const
+QSvgCompOpStyle::apply(QPainter*, QSvgNode const*, QSvgExtraStates&)
+QSvgCompOpStyle::QSvgCompOpStyle(QPainter::CompositionMode)
+QSvgCompOpStyle::revert(QPainter*, QSvgExtraStates&)
+QSvgCompOpStyle::type() const
+QSvgDefs::draw(QPainter*, QSvgExtraStates&)
+QSvgDefs::QSvgDefs(QSvgNode*)
+QSvgDefs::type() const
+QSvgEllipse::bounds(QPainter*, QSvgExtraStates&) const
+QSvgEllipse::draw(QPainter*, QSvgExtraStates&)
+QSvgEllipse::fastBounds(QPainter*, QSvgExtraStates&) const
+QSvgEllipse::QSvgEllipse(QSvgNode*, QRectF const&)
+QSvgEllipse::type() const
+QSvgExtraStates::QSvgExtraStates()
+QSvgFillStyle::apply(QPainter*, QSvgNode const*, QSvgExtraStates&)
+QSvgFillStyleProperty::apply(QPainter*, QSvgNode const*, QSvgExtraStates&)
+QSvgFillStyleProperty::revert(QPainter*, QSvgExtraStates&)
+QSvgFillStyle::QSvgFillStyle()
+QSvgFillStyle::revert(QPainter*, QSvgExtraStates&)
+QSvgFillStyle::setBrush(QBrush)
+QSvgFillStyle::setFillOpacity(double)
+QSvgFillStyle::setFillRule(Qt::FillRule)
+QSvgFillStyle::setFillStyle(QSvgFillStyleProperty*)
+QSvgFillStyle::type() const
+QSvgFont::addGlyph(QChar, QPainterPath const&, double)
+QSvgFont::draw(QPainter*, QPointF const&, QString const&, double, QFlags<Qt::AlignmentFlag>) const
+QSvgFont::familyName() const
+QSvgFont::QSvgFont(double)
+QSvgFont::setFamilyName(QString const&)
+QSvgFont::setUnitsPerEm(double)
+QSvgFontStyle::apply(QPainter*, QSvgNode const*, QSvgExtraStates&)
+QSvgFontStyle::QSvgFontStyle()
+QSvgFontStyle::QSvgFontStyle(QSvgFont*, QSvgTinyDocument*)
+QSvgFontStyle::revert(QPainter*, QSvgExtraStates&)
+QSvgFontStyle::type() const
+QSvgG::draw(QPainter*, QSvgExtraStates&)
+QSvgGenerator::description() const
+QSvgGenerator::fileName() const
+QSvgGenerator::metric(QPaintDevice::PaintDeviceMetric) const
+QSvgGenerator::metric(), unhandled metric %d\n
+QSvgGenerator::outputDevice() const
+QSvgGenerator::paintEngine() const
+QSvgGenerator::~QSvgGenerator()
+QSvgGenerator::QSvgGenerator()
+QSvgGenerator::QSvgGenerator(QSvgGenerator::SvgVersion)
+QSvgGenerator::resolution() const
+QSvgGenerator::setDescription(QString const&)
+QSvgGenerator::setFileName(), cannot set file name while SVG is being generated
+QSvgGenerator::setFileName(QString const&)
+QSvgGenerator::setOutputDevice(), cannot set output device while SVG is being generated
+QSvgGenerator::setOutputDevice(QIODevice*)
+QSvgGenerator::setResolution(int)
+QSvgGenerator::setSize(), cannot set size while SVG is being generated
+QSvgGenerator::setSize(QSize const&)
+QSvgGenerator::setTitle(QString const&)
+QSvgGenerator::setViewBox(), cannot set viewBox while SVG is being generated
+QSvgGenerator::setViewBox(QRect const&)
+QSvgGenerator::setViewBox(QRectF const&)
+QSvgGenerator::size() const
+QSvgGenerator::svgVersion() const
+QSvgGenerator::title() const
+QSvgGenerator::viewBox() const
+QSvgGenerator::viewBoxF() const
+QSvgGlyph::QSvgGlyph(QChar, QPainterPath const&, double)
+QSvgG::QSvgG(QSvgNode*)
+QSvgGradientStyle::brush(QPainter*, QSvgExtraStates&)
+QSvgGradientStyle::QSvgGradientStyle(QGradient*)
+QSvgGradientStyle::resolveStops()
+QSvgGradientStyle::resolveStops_helper(QList<QString>*)
+QSvgGradientStyle::setStopLink(QString const&, QSvgTinyDocument*)
+QSvgGradientStyle::setTransform(QTransform const&)
+QSvgGradientStyle::type() const
+QSvgG::type() const
+QSvgHandler::animationDuration() const
+QSvgHandler::characters(QStringView)
+QSvgHandler::createImageNode: Unrecognized inline image format!
+QSvgHandler::currentColor() const
+QSvgHandler::defaultCoordinateSystem() const
+QSvgHandler::device() const
+QSvgHandler::document() const
+QSvgHandler::endElement(QStringView)
+QSvgHandler: Image filename is empty
+QSvgHandler::init()
+QSvgHandler::inStyle() const
+QSvgHandler::parse()
+QSvgHandler::parseCSStoXMLAttrs(QString const&, QList<QSvgCssAttribute>*)
+QSvgHandler::popColor()
+QSvgHandler::processingInstruction(QString const&, QString const&)
+QSvgHandler::pushColorCopy()
+QSvgHandler::pushColor(QColor const&)
+QSvgHandler::~QSvgHandler()
+QSvgHandler::QSvgHandler(QByteArray const&)
+QSvgHandler::QSvgHandler(QIODevice*)
+QSvgHandler::QSvgHandler(QXmlStreamReader*)
+QSvgHandler::resolveGradients(QSvgNode*, int)
+QSvgHandler::resolveNodes()
+QSvgHandler::selector() const
+QSvgHandler::setAnimPeriod(int, int)
+QSvgHandler::setDefaultCoordinateSystem(QSvgHandler::LengthType)
+QSvgHandler::setInStyle(bool)
+QSvgHandler::startElement(QString const&, QXmlStreamAttributes const&)
+QSvgHandler: Width or height for
+QSvgImage::bounds(QPainter*, QSvgExtraStates&) const
+QSvgImage::draw(QPainter*, QSvgExtraStates&)
+QSvgImage::QSvgImage(QSvgNode*, QImage const&, QRectF const&)
+QSvgImage::type() const
+QSvgLine::bounds(QPainter*, QSvgExtraStates&) const
+QSvgLine::draw(QPainter*, QSvgExtraStates&)
+QSvgLine::fastBounds(QPainter*, QSvgExtraStates&) const
+QSvgLine::QSvgLine(QSvgNode*, QLineF const&)
+QSvgLine::type() const
+QSvgNode::appendStyleProperty(QSvgStyleProperty*, QString const&)
+QSvgNode::applyStyle(QPainter*, QSvgExtraStates&) const
+QSvgNode::bounds(QPainter*, QSvgExtraStates&) const
+QSvgNode::displayMode() const
+QSvgNode::document() const
+QSvgNode::fastBounds(QPainter*, QSvgExtraStates&) const
+QSvgNode::isDescendantOf(QSvgNode const*) const
+QSvgNode::~QSvgNode()
+QSvgNode::QSvgNode(QSvgNode*)
+QSvgNode::requiredExtensions() const
+QSvgNode::requiredFeatures() const
+QSvgNode::requiredFonts() const
+QSvgNode::requiredFormats() const
+QSvgNode::requiredLanguages() const
+QSvgNode::revertStyle(QPainter*, QSvgExtraStates&) const
+QSvgNode::setDisplayMode(QSvgNode::DisplayMode)
+QSvgNode::setNodeId(QString const&)
+QSvgNode::setRequiredExtensions(QList<QString> const&)
+QSvgNode::setRequiredFeatures(QList<QString> const&)
+QSvgNode::setRequiredFonts(QList<QString> const&)
+QSvgNode::setRequiredFormats(QList<QString> const&)
+QSvgNode::setRequiredLanguages(QList<QString> const&)
+QSvgNode::setVisible(bool)
+QSvgNode::setXmlClass(QString const&)
+QSvgNode::shouldDrawNode(QPainter*, QSvgExtraStates&) const
+QSvgNode::strokeWidth(QPainter*)
+QSvgNode::styleProperty(QString const&) const
+QSvgNode::styleProperty(QSvgStyleProperty::Type) const
+QSvgNode::transformedBounds() const
+QSvgNode::transformedBounds(QPainter*, QSvgExtraStates&) const
+QSvgNode: Trying to append unknown property!
+QSvgOpacityStyle::apply(QPainter*, QSvgNode const*, QSvgExtraStates&)
+QSvgOpacityStyle::QSvgOpacityStyle(double)
+QSvgOpacityStyle::revert(QPainter*, QSvgExtraStates&)
+QSvgOpacityStyle::type() const
+QSvgPaintEngine::begin(), could not open output device: '%s'
+QSvgPaintEngine::begin(), could not write to read-only output device: '%s'
+QSvgPaintEngine::begin(), no output device
+QSvgPath::bounds(QPainter*, QSvgExtraStates&) const
+QSvgPath::draw(QPainter*, QSvgExtraStates&)
+QSvgPath::fastBounds(QPainter*, QSvgExtraStates&) const
+QSvgPath::QSvgPath(QSvgNode*, QPainterPath const&)
+QSvgPath::type() const
+QSvgPolygon::bounds(QPainter*, QSvgExtraStates&) const
+QSvgPolygon::draw(QPainter*, QSvgExtraStates&)
+QSvgPolygon::fastBounds(QPainter*, QSvgExtraStates&) const
+QSvgPolygon::QSvgPolygon(QSvgNode*, QPolygonF const&)
+QSvgPolygon::type() const
+QSvgPolyline::bounds(QPainter*, QSvgExtraStates&) const
+QSvgPolyline::draw(QPainter*, QSvgExtraStates&)
+QSvgPolyline::fastBounds(QPainter*, QSvgExtraStates&) const
+QSvgPolyline::QSvgPolyline(QSvgNode*, QPolygonF const&)
+QSvgPolyline::type() const
+QSvgQualityStyle::apply(QPainter*, QSvgNode const*, QSvgExtraStates&)
+QSvgQualityStyle::QSvgQualityStyle(int)
+QSvgQualityStyle::revert(QPainter*, QSvgExtraStates&)
+QSvgQualityStyle::setImageRendering(QSvgQualityStyle::ImageRendering)
+QSvgQualityStyle::type() const
+QSvgRect::bounds(QPainter*, QSvgExtraStates&) const
+QSvgRect::draw(QPainter*, QSvgExtraStates&)
+QSvgRect::fastBounds(QPainter*, QSvgExtraStates&) const
+QSvgRect::QSvgRect(QSvgNode*, QRectF const&, int, int)
+QSvgRect::type() const
+QSvgRenderer
+QSvgRenderer::animated() const
+QSvgRenderer::animationDuration() const
+QSvgRenderer::aspectRatioMode() const
+QSvgRenderer::boundsOnElement(QString const&) const
+QSvgRenderer::currentFrame() const
+QSvgRenderer::defaultSize() const
+QSvgRenderer::elementExists(QString const&) const
+QSvgRenderer::framesPerSecond() const
+QSvgRenderer::isValid() const
+QSvgRenderer::load(QByteArray const&)
+QSvgRenderer::load(QString const&)
+QSvgRenderer::load(QXmlStreamReader*)
+QSvgRenderer::metaObject() const
+QSvgRenderer::~QSvgRenderer()
+QSvgRenderer::QSvgRenderer(QByteArray const&, QObject*)
+QSvgRenderer::QSvgRenderer(QObject*)
+QSvgRenderer::QSvgRenderer(QString const&, QObject*)
+QSvgRenderer::QSvgRenderer(QXmlStreamReader*, QObject*)
+QSvgRenderer::qt_metacall(QMetaObject::Call, int, void**)
+QSvgRenderer::qt_metacast(char const*)
+QSvgRenderer::render(QPainter*)
+QSvgRenderer::render(QPainter*, QRectF const&)
+QSvgRenderer::render(QPainter*, QString const&, QRectF const&)
+QSvgRenderer::repaintNeeded()
+QSvgRenderer::setAspectRatioMode(Qt::AspectRatioMode)
+QSvgRenderer::setCurrentFrame(int)
+QSvgRenderer::setFramesPerSecond: Cannot set negative value %d
+QSvgRenderer::setFramesPerSecond(int)
+QSvgRenderer::setViewBox(QRect const&)
+QSvgRenderer::setViewBox(QRectF const&)
+QSvgRenderer::staticMetaObject
+QSvgRenderer::transformForElement(QString const&) const
+QSvgRenderer::viewBox() const
+QSvgRenderer::viewBoxF() const
+QSvgSolidColorStyle::QSvgSolidColorStyle(QColor const&)
+QSvgSolidColorStyle::type() const
+QSvgStrokeStyle::apply(QPainter*, QSvgNode const*, QSvgExtraStates&)
+QSvgStrokeStyle::QSvgStrokeStyle()
+QSvgStrokeStyle::revert(QPainter*, QSvgExtraStates&)
+QSvgStrokeStyle::setDashArray(QList<double> const&)
+QSvgStrokeStyle::type() const
+QSvgStructureNode::addChild(QSvgNode*, QString const&)
+QSvgStructureNode::bounds(QPainter*, QSvgExtraStates&) const
+QSvgStructureNode::previousSiblingNode(QSvgNode*) const
+QSvgStructureNode::~QSvgStructureNode()
+QSvgStructureNode::QSvgStructureNode(QSvgNode*)
+QSvgStructureNode::scopeNode(QString const&) const
+QSvgStyle::apply(QPainter*, QSvgNode const*, QSvgExtraStates&)
+QSvgStyleProperty::~QSvgStyleProperty()
+QSvgStyle::~QSvgStyle()
+QSvgStyle::revert(QPainter*, QSvgExtraStates&)
+QSvgSwitch::draw(QPainter*, QSvgExtraStates&)
+QSvgSwitch::init()
+QSvgSwitch::QSvgSwitch(QSvgNode*)
+QSvgSwitch::type() const
+QSvgText::addText(QString const&)
+QSvgText::bounds(QPainter*, QSvgExtraStates&) const
+QSvgText::draw_helper(QPainter*, QSvgExtraStates&, QRectF*) const
+QSvgText::draw(QPainter*, QSvgExtraStates&)
+QSvgText::fastBounds(QPainter*, QSvgExtraStates&) const
+QSvgText::LINEBREAK
+QSvgText::precheck(QPainter*) const
+QSvgText::~QSvgText()
+QSvgText::QSvgText(QSvgNode*, QPointF const&)
+QSvgText::setTextArea(QSizeF const&)
+QSvgText::type() const
+QSvgTinyDocument::addNamedNode(QString const&, QSvgNode*)
+QSvgTinyDocument::addNamedStyle(QString const&, QSvgFillStyleProperty*)
+QSvgTinyDocument::addSvgFont(QSvgFont*)
+QSvgTinyDocument::animated() const
+QSvgTinyDocument::boundsOnElement(QString const&) const
+QSvgTinyDocument::currentFrame() const
+QSvgTinyDocument::draw(QPainter*)
+QSvgTinyDocument::draw(QPainter*, QRectF const&)
+QSvgTinyDocument::draw(QPainter*, QString const&, QRectF const&)
+QSvgTinyDocument::draw(QPainter*, QSvgExtraStates&)
+QSvgTinyDocument::elementExists(QString const&) const
+QSvgTinyDocument::load(QByteArray const&)
+QSvgTinyDocument::load(QString const&)
+QSvgTinyDocument::load(QXmlStreamReader*)
+QSvgTinyDocument::mapSourceToTarget(QPainter*, QRectF const&, QRectF const&)
+QSvgTinyDocument::namedNode(QString const&) const
+QSvgTinyDocument::namedStyle(QString const&) const
+QSvgTinyDocument::~QSvgTinyDocument()
+QSvgTinyDocument::QSvgTinyDocument()
+QSvgTinyDocument::restartAnimation()
+QSvgTinyDocument::setAnimated(bool)
+QSvgTinyDocument::setCurrentFrame(int)
+QSvgTinyDocument::setFramesPerSecond(int)
+QSvgTinyDocument::setHeight(int, bool)
+QSvgTinyDocument::setPreserveAspectRatio(bool)
+QSvgTinyDocument::setViewBox(QRectF const&)
+QSvgTinyDocument::setWidth(int, bool)
+QSvgTinyDocument::svgFont(QString const&) const
+QSvgTinyDocument::transformForElement(QString const&) const
+QSvgTinyDocument::type() const
+QSvgTransformStyle::apply(QPainter*, QSvgNode const*, QSvgExtraStates&)
+QSvgTransformStyle::QSvgTransformStyle(QTransform const&)
+QSvgTransformStyle::revert(QPainter*, QSvgExtraStates&)
+QSvgTransformStyle::type() const
+QSvgViewportFillStyle::apply(QPainter*, QSvgNode const*, QSvgExtraStates&)
+QSvgViewportFillStyle::QSvgViewportFillStyle(QBrush const&)
+QSvgViewportFillStyle::revert(QPainter*, QSvgExtraStates&)
+QSvgViewportFillStyle::type() const
+Qt_6
+Qt_6_PRIVATE_API
+Qt::AspectRatioMode
+Qt::endl(QTextStream&)
+QTextCharFormat::QTextCharFormat()
+QTextCharFormat::setFont(QFont const&, QTextCharFormat::FontPropertiesInheritanceBehavior)
+QTextFormat::~QTextFormat()
+QTextFormat::QTextFormat(QTextFormat const&)
+QTextFormat::setProperty(int, QVariant const&)
+QTextItem::font() const
+QTextLayout::beginLayout()
+QTextLayout::createLine()
+QTextLayout::draw(QPainter*, QPointF const&, QList<QTextLayout::FormatRange> const&, QRectF const&) const
+QTextLayout::endLayout()
+QTextLayout::lineAt(int) const
+QTextLayout::lineCount() const
+QTextLayout::~QTextLayout()
+QTextLayout::QTextLayout(QString const&)
+QTextLayout::setFormats(QList<QTextLayout::FormatRange> const&)
+QTextLayout::setTextOption(QTextOption const&)
+QTextLayout::textOption() const
+QTextLine::ascent() const
+QTextLine::height() const
+QTextLine::naturalTextRect() const
+QTextLine::naturalTextWidth() const
+QTextLine::setLineWidth(double)
+QTextLine::setPosition(QPointF const&)
+QTextOption::~QTextOption()
+QTextOption::QTextOption(QTextOption const&)
+QTextStream::operator<<(char)
+QTextStream::operator<<(char const*)
+QTextStream::operator<<(double)
+QTextStream::operator<<(float)
+QTextStream::operator<<(int)
+QTextStream::operator<<(QByteArray const&)
+QTextStream::operator<<(QLatin1String)
+QTextStream::operator<<(QString const&)
+QTextStream::~QTextStream()
+QTextStream::QTextStream(QString*, QFlags<QIODeviceBase::OpenModeFlag>)
+QTextStream::setDevice(QIODevice*)
+QTextStream::setString(QString*, QFlags<QIODeviceBase::OpenModeFlag>)
+qt_imageForBrush(int, bool)
+QTimer::QTimer(QObject*)
+QTimer::start(int)
+QTimer::stop()
+qt_inv_premul_factor
+QtPrivate::argToQString(QLatin1String, unsigned long, QtPrivate::ArgBase const**)
+QtPrivate::argToQString(QStringView, unsigned long, QtPrivate::ArgBase const**)
+QtPrivate::compareStrings(QStringView, QLatin1String, Qt::CaseSensitivity)
+QtPrivate::endsWith(QStringView, QLatin1String, Qt::CaseSensitivity)
+QtPrivate::equalStrings(QStringView, QLatin1String)
+QtPrivate::equalStrings(QStringView, QStringView)
+QtPrivate::findByteArray(QByteArrayView, long long, QByteArrayView)
+QtPrivate::QMetaTypeInterfaceWrapper<bool>::metaType
+QtPrivate::QMetaTypeInterfaceWrapper<int>::metaType
+QtPrivate::QMetaTypeInterfaceWrapper<QByteArray>::metaType
+QtPrivate::QMetaTypeInterfaceWrapper<QRectF>::metaType
+QtPrivate::QMetaTypeInterfaceWrapper<QString>::metaType
+QtPrivate::QStringList_contains(QList<QString> const*, QStringView, Qt::CaseSensitivity)
+QtPrivate::startsWith(QByteArrayView, QByteArrayView)
+QtPrivate::trimmed(QStringView)
+qt_QMetaEnum_debugOperator(QDebug&, long long, QMetaObject const*, char const*)
+QTransform::fromScale(double, double)
+QTransform::map(QPainterPath const&) const
+QTransform::map(QPointF const&) const
+QTransform::map(QPolygonF const&) const
+QTransform::mapRect(QRectF const&) const
+QTransform::operator*=(QTransform const&)
+QTransform::operator*(QTransform const&) const
+QTransform::rotate(double, Qt::Axis)
+QTransform::scale(double, double)
+QTransform::shear(double, double)
+QTransform::translate(double, double)
+QTransform::type() const
+Qt::staticMetaObject
+qt.svg
+QT_SVG_DISABLE_SIZE_LIMIT
+Qt SVG Document
+qt.svg.draw
+qt.svg.timing
+QUrl::isRelative() const
+QUrl::~QUrl()
+QUrl::QUrl(QString const&, QUrl::ParsingMode)
+QVariant::~QVariant()
+QVariant::QVariant(QVariant const&)
+QVariant::toInt(bool*) const
+QVariant::toStringList() const
+QXmlStreamAttributes::append(QString const&, QString const&, QString const&)
+QXmlStreamAttributes::value(QAnyStringView) const
+QXmlStreamReader*
+QXmlStreamReader::atEnd() const
+QXmlStreamReader::attributes() const
+QXmlStreamReader::columnNumber() const
+QXmlStreamReader::device() const
+QXmlStreamReader::error() const
+QXmlStreamReader::errorString() const
+QXmlStreamReader::lineNumber() const
+QXmlStreamReader::name() const
+QXmlStreamReader::processingInstructionData() const
+QXmlStreamReader::processingInstructionTarget() const
+QXmlStreamReader::~QXmlStreamReader()
+QXmlStreamReader::QXmlStreamReader(QByteArray const&, QXmlStreamReader::PrivateConstructorTag)
+QXmlStreamReader::QXmlStreamReader(QIODevice*)
+QXmlStreamReader::readNext()
+QXmlStreamReader::setNamespaceProcessing(bool)
+QXmlStreamReader::text() const
+</radialGradient>
+<radialGradient 
+ranslate
+<rect
+rect
+Rect
+refetch
+reflect
+render
+repaintNeeded
+repeat
+repeatCount
+requiredExtensions
+requiredFeatures
+requiredFonts
+requiredFormats
+rgb(
+ro.arch
+rotate
+round
+rrrffrr
+run-in
+scale
+screen
+serif
+Set QT_SVG_DISABLE_SIZE_LIMIT=1 to disable this check.
+Shape of type
+sincos
+skewX
+skewY
+small
+small-caps
+soft-light
+solid-color
+solid-opacity
+span
+spreadMethod
+square
+src-atop
+src-in
+src-out
+src-over
+__stack_chk_fail
+start
+stop-color
+stop-color="
+    <stop offset="
+stop-opacity
+stop-opacity="
+strcmp
+strlen
+strncmp
+stroke="
+stroke="black" 
+stroke-dasharray="
+stroke-dashoffset="
+stroke-linecap="butt" 
+stroke-linecap="round" 
+stroke-linecap="square" 
+stroke-linejoin="bevel" 
+stroke-linejoin="miter" stroke-miterlimit="
+stroke-linejoin="round" 
+stroke="none" 
+stroke="none" fill="#ffffff" patternUnits="userSpaceOnUse" >
+" stroke="none" xml:space="preserve" x="
+stroke-opacity="
+stroke-width="
+stroke-width="1" 
+style
+<svg
+.svg.gz
+svg's don't support conical gradients!
+SVG Tiny does not support nested <svg> elements: ignored.
+.svgz
+switch
+systemLanguage
+__system_property_get
+table
+table-caption
+table-cell
+table-column
+table-column-group
+table-footer-group
+table-header-group
+table-row
+table-row-group
+</text>
+text
+Text
+text-anchor
+textarea
+text/css
+Text element too high to lay out, ignoring
+Text element too wide to lay out, ignoring
+<text fill="
+'text' or 'textArea' element contains invalid element type.
+</title>
+<title>
+took
+Too many nested use nodes at #%s!
+transform
+transform="matrix(
+translate
+troke
+tspan
+'tspan' element in wrong context.
+tyle
+type
+type=\"(.+)\"
+typeinfo for QCss::StyleSelector
+typeinfo for QObject
+typeinfo for QObjectPrivate
+typeinfo for QPaintDevice
+typeinfo for QPaintEngine
+typeinfo for QPaintEnginePrivate
+typeinfo for QSvgAnimateColor
+typeinfo for QSvgAnimateTransform
+typeinfo for QSvgAnimation
+typeinfo for QSvgArc
+typeinfo for QSvgCircle
+typeinfo for QSvgCompOpStyle
+typeinfo for QSvgDefs
+typeinfo for QSvgEllipse
+typeinfo for QSvgFillStyle
+typeinfo for QSvgFillStyleProperty
+typeinfo for QSvgFont
+typeinfo for QSvgFontStyle
+typeinfo for QSvgG
+typeinfo for QSvgGenerator
+typeinfo for QSvgGradientStyle
+typeinfo for QSvgImage
+typeinfo for QSvgLine
+typeinfo for QSvgNode
+typeinfo for QSvgOpacityStyle
+typeinfo for QSvgPath
+typeinfo for QSvgPolygon
+typeinfo for QSvgPolyline
+typeinfo for QSvgQualityStyle
+typeinfo for QSvgRect
+typeinfo for QSvgRefCounted
+typeinfo for QSvgRenderer
+typeinfo for QSvgSolidColorStyle
+typeinfo for QSvgStrokeStyle
+typeinfo for QSvgStructureNode
+typeinfo for QSvgStyleProperty
+typeinfo for QSvgSwitch
+typeinfo for QSvgText
+typeinfo for QSvgTinyDocument
+typeinfo for QSvgTransformStyle
+typeinfo for QSvgTspan
+typeinfo for QSvgViewportFillStyle
+typeinfo name for QSvgAnimateColor
+typeinfo name for QSvgAnimateTransform
+typeinfo name for QSvgAnimation
+typeinfo name for QSvgArc
+typeinfo name for QSvgCircle
+typeinfo name for QSvgCompOpStyle
+typeinfo name for QSvgDefs
+typeinfo name for QSvgEllipse
+typeinfo name for QSvgFillStyle
+typeinfo name for QSvgFillStyleProperty
+typeinfo name for QSvgFont
+typeinfo name for QSvgFontStyle
+typeinfo name for QSvgG
+typeinfo name for QSvgGenerator
+typeinfo name for QSvgGradientStyle
+typeinfo name for QSvgImage
+typeinfo name for QSvgLine
+typeinfo name for QSvgNode
+typeinfo name for QSvgOpacityStyle
+typeinfo name for QSvgPath
+typeinfo name for QSvgPolygon
+typeinfo name for QSvgPolyline
+typeinfo name for QSvgQualityStyle
+typeinfo name for QSvgRect
+typeinfo name for QSvgRefCounted
+typeinfo name for QSvgRenderer
+typeinfo name for QSvgSolidColorStyle
+typeinfo name for QSvgStrokeStyle
+typeinfo name for QSvgStructureNode
+typeinfo name for QSvgStyleProperty
+typeinfo name for QSvgSwitch
+typeinfo name for QSvgText
+typeinfo name for QSvgTinyDocument
+typeinfo name for QSvgTransformStyle
+typeinfo name for QSvgTspan
+typeinfo name for QSvgViewportFillStyle
+udio
+Unhandled cap style
+Unhandled join style
+unicode
+units-per-em
+Unknown error
+Unsupported pen style
+url(
+<use> element %s in wrong context!
+userSpaceOnUse
+?UUUUUU
+values
+vector-effect
+ vector-effect="non-scaling-stroke"
+ version="1.1">
+ version="1.2" baseProfile="tiny">
+video
+ viewBox="
+viewBox
+visibility
+void
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info
+vtable for QImage
+vtable for QPaintEnginePrivate
+vtable for QSvgAnimateColor
+vtable for QSvgAnimateTransform
+vtable for QSvgAnimation
+vtable for QSvgArc
+vtable for QSvgCircle
+vtable for QSvgCompOpStyle
+vtable for QSvgDefs
+vtable for QSvgEllipse
+vtable for QSvgFillStyle
+vtable for QSvgFillStyleProperty
+vtable for QSvgFont
+vtable for QSvgFontStyle
+vtable for QSvgG
+vtable for QSvgGenerator
+vtable for QSvgGradientStyle
+vtable for QSvgImage
+vtable for QSvgLine
+vtable for QSvgNode
+vtable for QSvgOpacityStyle
+vtable for QSvgPath
+vtable for QSvgPolygon
+vtable for QSvgPolyline
+vtable for QSvgQualityStyle
+vtable for QSvgRect
+vtable for QSvgRenderer
+vtable for QSvgSolidColorStyle
+vtable for QSvgStrokeStyle
+vtable for QSvgStructureNode
+vtable for QSvgStyleProperty
+vtable for QSvgSwitch
+vtable for QSvgText
+vtable for QSvgTinyDocument
+vtable for QSvgTransformStyle
+vtable for QSvgTspan
+vtable for QSvgViewportFillStyle
+ width="
+" width="
+-width
+width
+witch
+" x="0" y="0" width="8" height="8" 
+x-large
+xlink:href
+xlink:href="data:image/png;base64,
+<?xml
+xml:id
+ xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+xml:space
+xml-stylesheet
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+x-small
+xx-large
+xx-small
+YYYYYYYY
+YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
+YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY

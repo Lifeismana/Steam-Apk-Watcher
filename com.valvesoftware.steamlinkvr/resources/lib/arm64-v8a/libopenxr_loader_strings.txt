@@ -1,0 +1,944 @@
+;00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899NSt6__ndk112system_errorE
+0123456789
+0123456789abcdef
+%.0Lf
+1.0.0
+-1e+9999
+1e+9999
+66666666666666666
+6666666666666tx
+7F0123456789abcdefABCDEFxX+-pPiInN
+9223372036854775q
+AAsset_close
+AAssetDir_close
+AAssetDir_getNextFileName
+AAsset_getBuffer
+AAsset_getLength
+AAssetManager_fromJava
+AAssetManager_open
+AAssetManager_openDir
+%a %b %d %H:%M:%S %Y
+a+be
+abort
+access
+/active_runtime.aarch64.json
+/active_runtime.json
+Active XrInstance handle already exists
+additional six characters expected to parse unicode surrogate pair.
+alignof (
+allocator
+allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
+allowComments
+allowDroppedNullPlaceholders
+allowNumericKeys
+allowSingleQuotes
+allowSpecialFloats
+allowTrailingCommas
+An active instance currently exists while trying to reinitialize the loader
+ and OpenXR API version 
+Android (9352603, based on r450784d1) clang version 14.0.7 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
+android/content/ContentResolver
+android/content/Context
+android/database/Cursor
+__android_log_print
+__android_log_write
+android/net/Uri
+android/net/Uri$Builder
+android_set_abort_message
+(anonymous namespace)
+api_layer
+ApiLayerInterface being destroyed for layer 
+ApiLayerInterface::GetApiLayerProperties - failed searching for API layer manifest files
+ApiLayerInterface::GetApiLayerProperties - too many API layers found
+ApiLayerInterface::GetInstanceExtensionProperties - failed searching for API layer manifest files
+ApiLayerInterface::LoadApiLayers - failed to find layer 
+ApiLayerInterface::LoadApiLayers forwarded call to xrInitializeLoaderKHR failed.
+ApiLayerInterface::LoadApiLayers forwarding xrInitializeLoaderKHR call to API layer after calling xrNegotiateLoaderApiLayerInterface.
+ApiLayerInterface::LoadApiLayers forwarding xrInitializeLoaderKHR call to API layer before calling xrNegotiateLoaderApiLayerInterface.
+ApiLayerInterface::LoadApiLayers got success from xrGetInstanceProcAddr for xrInitializeLoaderKHR, but output a null pointer.
+ApiLayerInterface::LoadApiLayers skipping layer 
+ApiLayerInterface::LoadApiLayers skipping manifest file 
+ApiLayerInterface::LoadApiLayers succeeded loading layer 
+ApiLayerManifestFile::AddManifestFilesAndroid unable to access asset
+ApiLayerManifestFile::AddManifestFilesAndroid unable to add manifest files LoaderInitData not initialized.
+ApiLayerManifestFile::AddManifestFilesAndroid unable to open asset 
+ApiLayerManifestFile::CreateIfValid 
+ApiLayerManifestFile::FindManifestFiles - unknown manifest file requested
+/api_layers/explicit.d
+/api_layers/implicit.d
+api_version
+appendPath
+application name missing NULL terminator.
+April
+arm64-v8a
+assert json failed
+atoi
+August
+authority
+auto
+A valid JSON document must be either an array or an object value.
+Bad escape sequence in string
+Bad unicode escape sequence in string: four digits expected.
+Bad unicode escape sequence in string: hexadecimal digit expected.
+basic_iostream
+basic_istream
+basic_ostream
+basic_string
+ because negotiation function 
+ because xrInitializeLoaderKHR was not yet called.
+'block-literal'
+bool
+build
+Can't binary search on variable length encoded data.
+char
+char16_t
+char32_t
+char8_t
+CIE ID is not zero
+CIE start does not match
+CIE version is not 1 or 3
+close
+closedir
+closelog
+collectComments
+Completed loader terminator
+Completed loader trampoline
+ complex
+condition_variable wait failed
+condition_variable::wait: mutex not locked
+const_cast
+construction vtable for 
+Could access neither the installable nor system runtime broker.
+Could not attach JNI to thread
+covariant return thunk to 
+__ctype_get_mb_cur_max
+__cxa_atexit
+__cxa_finalize
+__cxa_guard_abort
+__cxa_guard_acquire
+__cxa_guard_acquire detected recursive initialization
+__cxa_guard_release
+__cxa_thread_atexit_impl
+December
+decimal128
+decimal16
+decimal32
+decimal64
+decltype(
+decltype(auto)
+description
+Destroying LoaderInstance = 
+disable_environment
+dlclose
+dlerror
+dl_iterate_phdr
+dlopen
+dlsym
+.  Does it exist?
+ does not appear to exist
+double
+double out of UInt range
+ due to failed negotiation with error 
+Duplicate key: '
+during phase1 personality function said it would stop here, but now in phase2 it did not stop here
+DWARF opcode not implemented
+DW_EH_PE_aligned pointer encoding not supported
+DW_EH_PE_datarel is invalid with a datarelBase of 0
+DW_EH_PE_funcrel pointer encoding not supported
+DW_EH_PE_textrel pointer encoding not supported
+DW_OP_deref_size with bad size
+DW_OP_fbreg not implemented
+DW_OP_piece not implemented
+dynamic_cast
+Empty escape sequence in string
+enabledExtensionCount is non-0 but array is NULL
+enable_environment
+ [enable_if:
+engine name missing NULL terminator.
+Entering LoaderInstance::CreateInstance
+Entering loader terminator
+Entering loader trampoline
+enum
+__errno
+error
+Error [
+ (Error message: 
+/etc/openxr/
+evaluateExpression
+Exceeded stackLimit in readValue().
+Exception when querying %s content resolver: %s
+expected XR_TYPE_INSTANCE_CREATE_INFO.
+expecting another \u token to begin the second half of a unicode surrogate pair
+extension_version
+Extra non-whitespace after JSON value.
+exynos9810
+failed allocating memory
+Failed ApiLayerInterface::GetApiLayerProperties
+Failed loading layer information
+Failed loading runtime information
+Failed querying extension properties
+Failed to find default runtime with RuntimeInterface::LoadRuntime()
+, failed to load with message "
+failed to open 
+failed to parse 
+failIfExtra
+false
+fclose
+FDE has zero length
+FDE is really a CIE
+February
+fflush
+file_format_version
+ filesystem operations failed for path  
+flags must be 0.
+float
+__float128
+fopen
+ for detail.\n
+Found XrDebugUtilsMessengerCreateInfoEXT in 'next' chain.
+fprintf
+fputc
+fread
+free
+freelocale
+Friday
+fseek
+fseeko
+ftello
+function_name
+functions
+ "functions" section contains non-string values.
+fwrite
+GENERAL
+generic
+getActiveRuntimeCursor: Querying URI: %s
+getApplicationContext()Landroid/content/Context;
+getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+getAssets()Landroid/content/res/AssetManager;
+getauxval
+getc
+getColumnIndex
+getContentResolver
+getCount
+getegid
+getEncodedP
+geteuid
+getgid
+getInt
+getName
+getRegister
+getSavedFloatRegister
+getSavedRegister
+getSLEB128
+getString
+getTableEntrySize
+getuid
+getULEB128
+Got runtime: package: %s, so filename: %s, native lib dir: %s, has functions: %s
+guard variable for 
+has_functions
+ has invalid API Version.  Skipping layer.
+(I)Ljava/lang/String;
+""i""""""""""""""""""""""""""""{""m
+ imaginary
+implementation_version
+Implicit layer 
+%I:%M:%S %p
+%I:%M:%S %p%
+-Infinity
+Infinity
+info
+Info [
+info->applicationInfo is not valid.
+<init>
+InitializeLoaderInitData
+in Json::Value::duplicateAndPrefixStringValue(): Failed to allocate string value buffer
+in Json::Value::duplicateAndPrefixStringValue(): length too big for prefixing
+in Json::Value::duplicateStringValue(): Failed to allocate string value buffer
+in Json::Value::find(begin, end): requires objectValue or nullValue
+in Json::Value::operator[](ArrayIndex): requires arrayValue
+in Json::Value::operator[](int index): index cannot be negative
+in Json::Value::resolveReference(key, end): requires objectValue
+in Json::Value::setComment(): Comments must start with /
+installable
+instance_extensions
+Instance handle is XR_NULL_HANDLE.
+insufficient space in array
+__int128
+Invalid Function pointer
+invalid messenger pointer
+Invalid Name pointer
+invalid properties
+invocation function for block in 
+ios_base::clear
+iostream
+isdigit_l
+ is disabled
+ Is it a valid layer manifest file?
+ Is it a valid runtime manifest file?
+islower_l
+ is missing "disable_environment"
+ is missing required fields.  Verify all proper fields exist.
+' is not a number.
+ is not a valid manifest file.
+ is not supported
+istream
+isupper_l
+isValidJson indicates 
+iswlower_l
+isxdigit_l
+January
+java/lang/String
+JNI not initialized
+July
+June
+keylength >= 2^30
+KKKK6
+labelInfo must be non-NULL
+%LaL
+()Landroid/content/ContentResolver;
+()Landroid/net/Uri;
+(Landroid/net/Uri;[Ljava/lang/String;Landroid/os/Bundle;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
+(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
+LargestInt out of UInt range
+LargestUInt out of UInt range
+layer 
+ layers enabled and runtime interface - created instance = 
+libandroid.so
+LIBC
+libc++abi
+libc.so
+libdl.so
+liblog.so
+libm.so
+libopenxr_loader.so
+ library 
+library_path
+libunwind: malformed DW_CFA_def_cfa DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa_register DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa_sf DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_expression DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_GNU_negative_offset_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_offset_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_offset_extended_sf DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_register DWARF unwind, reg2 too big\n
+libunwind: malformed DW_CFA_register DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_restore_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_same_value DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_undefined DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_val_expression DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_val_offset DWARF unwind, reg (%lu) out of range\n\n
+libunwind: malformed DW_CFA_val_offset_sf DWARF unwind, reg too big\n
+libunwind: %s - %s\n
+libunwind: Unsupported .eh_frame_hdr version\n
+Line %d, Column %d
+Linker: LLD 14.0.7
+Ljava/lang/Object;
+()Ljava/lang/String;
+Ljava/lang/String;
+(Ljava/lang/String;)I
+(Ljava/lang/String;)Landroid/net/Uri$Builder;
+Loader does not support simultaneous XrInstances
+LoaderInstance::CreateInstance chained CreateInstance call failed
+LoaderInstance::CreateInstance, no support found for requested extension: 
+LoaderInstance::CreateInstance succeeded with 
+locale not supported
+long
+long double
+long long
+malformed uleb128 expression
+malloc
+ManifestFile::IsValidJson - JSON "file_format_version" 
+ManifestFile::IsValidJson - JSON file missing "file_format_version"
+ManifestFile::ParseCommon 
+March
+.  Max supported version is 
+mbrlen
+mbrtowc
+mbsnrtowcs
+mbsrtowcs
+mbtowc
+memchr
+memcmp
+memcpy
+__memcpy_chk
+memmove
+__memmove_chk
+memset
+Messenger handle is XR_NULL_HANDLE.
+Missing ':' after object member name
+Missing ',' or ']' in array declaration
+Missing ',' or '}' in object declaration
+Missing '}' or object member name
+modf
+Monday
+money_get error
+moveToFirst
+moveToNext
+must be non-NULL
+mutex lock failed
+N10__cxxabiv116__shim_type_infoE
+N10__cxxabiv117__class_type_infoE
+N10__cxxabiv120__si_class_type_infoE
+N10__cxxabiv121__vmi_class_type_infoE
+N12_GLOBAL__N_116itanium_demangle10AbiTagAttrE
+N12_GLOBAL__N_116itanium_demangle10BinaryExprE
+N12_GLOBAL__N_116itanium_demangle10BracedExprE
+N12_GLOBAL__N_116itanium_demangle10DeleteExprE
+N12_GLOBAL__N_116itanium_demangle10LambdaExprE
+N12_GLOBAL__N_116itanium_demangle10MemberExprE
+N12_GLOBAL__N_116itanium_demangle10NestedNameE
+N12_GLOBAL__N_116itanium_demangle10PrefixExprE
+N12_GLOBAL__N_116itanium_demangle10UUIDOfExprE
+N12_GLOBAL__N_116itanium_demangle10VectorTypeE
+N12_GLOBAL__N_116itanium_demangle11PointerTypeE
+N12_GLOBAL__N_116itanium_demangle11PostfixExprE
+ (N12_GLOBAL__N_116itanium_demangle11SpecialNameE
+N12_GLOBAL__N_116itanium_demangle12CtorDtorNameE
+N12_GLOBAL__N_116itanium_demangle12EnableIfAttrE
+N12_GLOBAL__N_116itanium_demangle12FunctionTypeE
+N12_GLOBAL__N_116itanium_demangle12InitListExprE
+N12_GLOBAL__N_116itanium_demangle12NoexceptSpecE
+N12_GLOBAL__N_116itanium_demangle12TemplateArgsE
+N12_GLOBAL__N_116itanium_demangle13EnclosingExprE
+N12_GLOBAL__N_116itanium_demangle13FunctionParamE
+N12_GLOBAL__N_116itanium_demangle13NodeArrayNodeE
+N12_GLOBAL__N_116itanium_demangle13ObjCProtoNameE
+N12_GLOBAL__N_116itanium_demangle13ParameterPackE
+N12_GLOBAL__N_116itanium_demangle13QualifiedNameE
+N12_GLOBAL__N_116itanium_demangle13ReferenceTypeE
+N12_GLOBAL__N_116itanium_demangle13StringLiteralE
+N12_GLOBAL__N_116itanium_demangle14ConversionExprE
+N12_GLOBAL__N_116itanium_demangle14IntegerLiteralE
+N12_GLOBAL__N_116itanium_demangle15BracedRangeExprE
+N12_GLOBAL__N_116itanium_demangle15ClosureTypeNameE
+N12_GLOBAL__N_116itanium_demangle15ConditionalExprE
+N12_GLOBAL__N_116itanium_demangle15IntegerCastExprE
+N12_GLOBAL__N_116itanium_demangle15LiteralOperatorE
+N12_GLOBAL__N_116itanium_demangle15PixelVectorTypeE
+N12_GLOBAL__N_116itanium_demangle15UnnamedTypeNameE
+N12_GLOBAL__N_116itanium_demangle16FloatLiteralImplIdEE
+N12_GLOBAL__N_116itanium_demangle16FloatLiteralImplIeEE
+N12_GLOBAL__N_116itanium_demangle16FloatLiteralImplIfEE
+N12_GLOBAL__N_116itanium_demangle16FunctionEncodingE
+N12_GLOBAL__N_116itanium_demangle16StdQualifiedNameE
+N12_GLOBAL__N_116itanium_demangle17VendorExtQualTypeE
+N12_GLOBAL__N_116itanium_demangle18ArraySubscriptExprE
+N12_GLOBAL__N_116itanium_demangle19GlobalQualifiedNameE
+N12_GLOBAL__N_116itanium_demangle19PointerToMemberTypeE
+N12_GLOBAL__N_116itanium_demangle19SizeofParamPackExprE
+N12_GLOBAL__N_116itanium_demangle19SpecialSubstitutionE
+N12_GLOBAL__N_116itanium_demangle20DynamicExceptionSpecE
+N12_GLOBAL__N_116itanium_demangle20NameWithTemplateArgsE
+N12_GLOBAL__N_116itanium_demangle20PostfixQualifiedTypeE
+N12_GLOBAL__N_116itanium_demangle20TemplateArgumentPackE
+N12_GLOBAL__N_116itanium_demangle21CtorVtableSpecialNameE
+N12_GLOBAL__N_116itanium_demangle21StructuredBindingNameE
+N12_GLOBAL__N_116itanium_demangle21TemplateParamPackDeclE
+N12_GLOBAL__N_116itanium_demangle21TypeTemplateParamDeclE
+N12_GLOBAL__N_116itanium_demangle22ConversionOperatorTypeE
+N12_GLOBAL__N_116itanium_demangle22ElaboratedTypeSpefTypeE
+N12_GLOBAL__N_116itanium_demangle22ParameterPackExpansionE
+N12_GLOBAL__N_116itanium_demangle24ForwardTemplateReferenceE
+N12_GLOBAL__N_116itanium_demangle24NonTypeTemplateParamDeclE
+N12_GLOBAL__N_116itanium_demangle25TemplateTemplateParamDeclE
+N12_GLOBAL__N_116itanium_demangle26SyntheticTemplateParamNameE
+N12_GLOBAL__N_116itanium_demangle27ExpandedSpecialSubstitutionE
+N12_GLOBAL__N_116itanium_demangle4NodeE
+N12_GLOBAL__N_116itanium_demangle7NewExprE
+N12_GLOBAL__N_116itanium_demangle8BoolExprE
+N12_GLOBAL__N_116itanium_demangle8CallExprE
+N12_GLOBAL__N_116itanium_demangle8CastExprE
+N12_GLOBAL__N_116itanium_demangle8DtorNameE
+N12_GLOBAL__N_116itanium_demangle8FoldExprE
+N12_GLOBAL__N_116itanium_demangle8NameTypeE
+N12_GLOBAL__N_116itanium_demangle8QualTypeE
+N12_GLOBAL__N_116itanium_demangle9ArrayTypeE
+N12_GLOBAL__N_116itanium_demangle9DotSuffixE
+N12_GLOBAL__N_116itanium_demangle9LocalNameE
+N12_GLOBAL__N_116itanium_demangle9ThrowExprE
+N3jni19InvocationExceptionE
+N3jni23InitializationExceptionE
+N3jni23NameResolutionExceptionE
+N4Json10LogicErrorE
+N4Json12RuntimeErrorE
+N4Json9ExceptionE
+name
+native_lib_dir
+nativeLibraryDir
+, negotiation did not return a valid getInstanceProcAddr
+, negotiation failed with error 
+, negotiation succeeded but returned invalid interface version
+, negotiation succeeded but returned NULL getInstanceProcAddr
+newlocale
+__next_prime overflow
+No active XrInstance handle.
+noexcept
+noexcept (
+noexcept(
+none
+Non-null but empty cursor when querying content resolver for functions.
+Non-null but empty cursor when querying %s content resolver.
+non-virtual thunk to 
+November
+NSt6__ndk110ctype_baseE
+NSt6__ndk110money_baseE
+NSt6__ndk110moneypunctIcLb0EEE
+NSt6__ndk110moneypunctIcLb1EEE
+NSt6__ndk110moneypunctIwLb0EEE
+NSt6__ndk110moneypunctIwLb1EEE
+NSt6__ndk110__stdinbufIcEE
+NSt6__ndk110__stdinbufIwEE
+NSt6__ndk110__time_putE
+NSt6__ndk111__money_getIcEE
+NSt6__ndk111__money_getIwEE
+NSt6__ndk111__money_putIcEE
+NSt6__ndk111__money_putIwEE
+NSt6__ndk111__stdoutbufIcEE
+NSt6__ndk111__stdoutbufIwEE
+NSt6__ndk112codecvt_baseE
+NSt6__ndk112__do_messageE
+NSt6__ndk113basic_istreamIcNS_11char_traitsIcEEEE
+NSt6__ndk113basic_istreamIwNS_11char_traitsIwEEEE
+NSt6__ndk113basic_ostreamIcNS_11char_traitsIcEEEE
+NSt6__ndk113basic_ostreamIwNS_11char_traitsIwEEEE
+NSt6__ndk113messages_baseE
+NSt6__ndk114error_categoryE
+NSt6__ndk114__num_get_baseE
+NSt6__ndk114__num_put_baseE
+NSt6__ndk114__shared_countE
+NSt6__ndk115basic_streambufIcNS_11char_traitsIcEEEE
+NSt6__ndk115basic_streambufIwNS_11char_traitsIwEEEE
+NSt6__ndk119__iostream_categoryE
+NSt6__ndk120__time_get_c_storageIcEE
+NSt6__ndk120__time_get_c_storageIwEE
+NSt6__ndk123__system_error_categoryE
+NSt6__ndk124__generic_error_categoryE
+NSt6__ndk15ctypeIcEE
+NSt6__ndk15ctypeIwEE
+NSt6__ndk16locale5facetE
+NSt6__ndk16locale5__impE
+NSt6__ndk17codecvtIcc9mbstate_tEE
+NSt6__ndk17codecvtIDic9mbstate_tEE
+NSt6__ndk17codecvtIDsc9mbstate_tEE
+NSt6__ndk17codecvtIwc9mbstate_tEE
+NSt6__ndk17collateIcEE
+NSt6__ndk17collateIwEE
+NSt6__ndk17num_getIcNS_19istreambuf_iteratorIcNS_11char_traitsIcEEEEEE
+NSt6__ndk17num_getIwNS_19istreambuf_iteratorIwNS_11char_traitsIwEEEEEE
+NSt6__ndk17num_putIcNS_19ostreambuf_iteratorIcNS_11char_traitsIcEEEEEE
+NSt6__ndk17num_putIwNS_19ostreambuf_iteratorIwNS_11char_traitsIwEEEEEE
+NSt6__ndk18ios_base7failureE
+NSt6__ndk18ios_baseE
+NSt6__ndk18messagesIcEE
+NSt6__ndk18messagesIwEE
+NSt6__ndk18numpunctIcEE
+NSt6__ndk18numpunctIwEE
+NSt6__ndk18time_getIcNS_19istreambuf_iteratorIcNS_11char_traitsIcEEEEEE
+NSt6__ndk18time_getIwNS_19istreambuf_iteratorIwNS_11char_traitsIwEEEEEE
+NSt6__ndk18time_putIcNS_19ostreambuf_iteratorIcNS_11char_traitsIcEEEEEE
+NSt6__ndk18time_putIwNS_19ostreambuf_iteratorIwNS_11char_traitsIwEEEEEE
+NSt6__ndk19basic_iosIcNS_11char_traitsIcEEEE
+NSt6__ndk19basic_iosIwNS_11char_traitsIwEEEE
+NSt6__ndk19money_getIcNS_19istreambuf_iteratorIcNS_11char_traitsIcEEEEEE
+NSt6__ndk19money_getIwNS_19istreambuf_iteratorIwNS_11char_traitsIwEEEEEE
+NSt6__ndk19money_putIcNS_19ostreambuf_iteratorIcNS_11char_traitsIcEEEEEE
+NSt6__ndk19money_putIwNS_19ostreambuf_iteratorIwNS_11char_traitsIwEEEEEE
+NSt6__ndk19__num_getIcEE
+NSt6__ndk19__num_getIwEE
+NSt6__ndk19__num_putIcEE
+NSt6__ndk19__num_putIwEE
+NSt6__ndk19time_baseE
+null
+Null cursor when querying content resolver for functions.
+Null cursor when querying %s content resolver.
+nullptr
+Null Value Passed to Value Constructor
+objc_object
+    Object[
+October
+/odm
+/oem
+opendir
+openlog
+openxr/
+openxr/1/api_layers/explicit.d/
+openxr/1/api_layers/implicit.d/
+OpenXR-Loader
+, OpenXR version returned not compatible with this loader
+::operator 
+operator 
+operator!
+operator!=
+operator"" 
+operator%
+operator%=
+operator&
+operator&&
+operator&=
+operator()
+operator*
+operator*=
+operator+
+operator++
+operator+=
+operator,
+operator-
+operator--
+operator-=
+operator->
+operator->*
+operator/
+operator/=
+operator<
+operator<<
+operator<<=
+operator<=
+operator<=>
+operator=
+operator==
+operator>
+operator>=
+operator>>
+operator>>=
+operator?
+operator[]
+operator^
+operator^=
+operator|
+operator|=
+operator||
+operator~
+operator delete
+operator delete[]
+operator new
+operator new[]
+org.khronos.openxr.runtime_broker
+org.khronos.openxr.system_runtime_broker
+ostream
+package_name
+<Pcjv
+PERF
+pixel vector[
+populateFunctions: Querying URI: %s
+posix_memalign
+/product
+/product/etc
+pthread_cond_broadcast
+pthread_cond_destroy
+pthread_cond_signal
+pthread_cond_wait
+pthread_getspecific
+pthread_key_create
+pthread_key_delete
+pthread_mutex_destroy
+pthread_mutex_lock
+pthread_mutex_unlock
+pthread_once
+pthread_rwlock_rdlock
+pthread_rwlock_unlock
+pthread_rwlock_wrlock
+pthread_setspecific
+Pure virtual function called!
+query
+r+be
+readdir
+realloc
+realpath
+reference temporary for 
+__register_atfork
+reinterpret_cast
+rejectDupKeys
+ requires a valid instance
+ restrict
+ro.arch
+rrrr
+rrrrrrrrrrrr
+rrrrrrrrrrrrr
+runtime
+RuntimeInterface being destroyed.
+RuntimeInterface::LoadRuntime cannot run because xrInitializeLoaderKHR was not successfully called.
+RuntimeInterface::LoadRuntime failed to find negotiate function 
+RuntimeInterface::LoadRuntime forwarded call to xrInitializeLoaderKHR failed.
+RuntimeInterface::LoadRuntime forwarding xrInitializeLoaderKHR call to runtime after calling xrNegotiateLoaderRuntimeInterface.
+RuntimeInterface::LoadRuntime forwarding xrInitializeLoaderKHR call to runtime before calling xrNegotiateLoaderRuntimeInterface.
+RuntimeInterface::LoadRuntime got success from xrGetInstanceProcAddr for xrInitializeLoaderKHR, but output a null pointer.
+RuntimeInterface::LoadRuntimes - failed to load a runtime
+RuntimeInterface::LoadRuntime skipping manifest file 
+RuntimeInterface::LoadRuntime succeeded loading runtime defined in manifest file 
+RuntimeInterface::LoadRuntimes - unknown error
+RuntimeInterface::UnloadRuntime - Unloading RuntimeInterface
+RuntimeManifestFile::CreateIfValid 
+RuntimeManifestFile::CreateIfValid - attempting to load 
+RuntimeManifestFile::FindManifestFiles - failed to determine active runtime file path for this environment
+RuntimeManifestFile::FindManifestFiles - using environment variable override runtime file 
+RuntimeManifestFile::FindManifestFiles - using global runtime file 
+Saturday
+scheme
+See 
+September
+Session handle is XR_NULL_HANDLE.
+    SessionLabel[
+setRegister
+%s failed to acquire mutex
+%s failed to broadcast
+%s failed to release mutex
+short
+signed char
+sizeof (
+sizeof... (
+sizeof...(
+skipBom
+, skipping
+so_filename
+something wrong with XrInstanceCreateInfo contents
+SPEC
+sscanf
+St11logic_error
+St12length_error
+St12out_of_range
+St13bad_exception
+St13runtime_error
+St14overflow_error
+St8bad_cast
+St9bad_alloc
+St9exception
+St9type_info
+__stack_chk_fail
+stackLimit
+stat
+static_cast
+std::allocator
+std::bad_alloc
+std::bad_cast
+std::bad_exception
+std::basic_iostream<char, std::char_traits<char> >
+std::basic_istream<char, std::char_traits<char> >
+std::basic_ostream<char, std::char_traits<char> >
+std::basic_string
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::iostream
+std::istream
+std::__libcpp_tls_create() failed in __cxa_thread_atexit()
+std::nullptr_t
+std::ostream
+std::string
+strchr
+strcmp
+strerror_r
+strftime_l
+strictRoot
+string
+string literal
+strlen
+__strlen_chk
+strncmp
+strncpy
+strstr
+strtod
+strtof
+strtold_l
+strtoll_l
+strtoull_l
+struct
+Sunday
+symbol_name
+Syntax error: value, object or array expected.
+syscall
+syslog
+/system
+system
+/system/etc
+__system_property_get
+\t6\t\t\t\t\t\t\t\t\t\t\t\t
+template<
+terminate_handler unexpectedly returned
+terminate_handler unexpectedly threw an exception
+terminating
+terminating with %s exception of type %s
+terminating with %s exception of type %s: %s
+terminating with %s foreign exception
+thread-local initialization routine for 
+thread-local wrapper routine for 
+throw
+Thursday
+toString
+true
+truncated sleb128 expression
+truncated uleb128 expression
+Tuesday
+typeid (
+typeinfo for 
+typeinfo name for 
+Type is not convertible to string
+> typename 
+typename 
+Unable to open any of the broker provided runtimes.
+Unable to open broker provided runtime at %s, checking for more records...
+Unable to populate functions from runtime: %s, checking for more records...
+uncaught
+unexpected
+unexpected_handler unexpectedly returned
+ungetc
+union
+UNKNOWN
+Unknown DWARF encoding for search table.
+Unknown error %d
+Unknown error occurred calling down chain
+Unknown failure
+Unknown failure: 
+unknown pointer encoding
+unknown register
+unknown type in properties
+Unloading any previously loaded runtime
+unsigned char
+unsigned int
+unsigned __int128
+unsigned long
+unsigned long long
+unsigned short
+unspecified generic_category error
+unspecified iostream_category error
+unspecified system_category error
+unsupported arm64 register
+unsupported locale for standard input
+unsupported restore location for float register
+unsupported restore location for register
+unwind_phase2
+_Unwind_Resume
+_Unwind_Resume() can't return
+uselocale
+ using interface version 
+__uuidof(
+Value is not convertible to bool.
+Value is not convertible to UInt.
+vasprintf
+vector
+/vendor
+/vendor/etc
+verbose
+Verbose [
+vfprintf
+virtual thunk to 
+void
+ volatile
+vsnprintf
+__vsnprintf_chk
+vsscanf
+vtable for 
+VTT for 
+VUID-XrApiLayerProperties-type-type: unknown type in api_layer_properties
+VUID-XrApplicationInfo-applicationName-parameter
+VUID-XrApplicationInfo-engineName-parameter
+VUID-XrApplicationInfo-engineName-parameter: application name can not be empty.
+VUID-xrCreateDebugUtilsMessengerEXT-messenger-parameter
+VUID-xrCreateInstance-info-parameter
+VUID-xrCreateInstance-info-parameter: something wrong with XrInstanceCreateInfo contents
+VUID-xrCreateInstance-instance-parameter
+VUID-xrEnumerateApiLayerProperties-properties-parameter: non-zero capacity but null array
+VUID-xrEnumerateApiLayerProperties-propertyCapacityInput-parameter: insufficient space in array
+VUID-xrEnumerateInstanceExtensionProperties-properties-parameter
+VUID-xrEnumerateInstanceExtensionProperties-propertyCountOutput-parameter
+VUID-XrExtensionProperties-type-type
+VUID-xrGetInstanceProcAddr-function-parameter
+VUID-xrGetInstanceProcAddr-instance-parameter
+VUID-XrInstanceCreateInfo-applicationInfo-parameter
+VUID-XrInstanceCreateInfo-createFlags-zerobitmask
+VUID-XrInstanceCreateInfo-enabledApiLayerNames-parameter: enabledApiLayerCount is non-0 but array is NULL
+VUID-XrInstanceCreateInfo-enabledExtensionNames-parameter
+VUID-XrInstanceCreateInfo-type-type
+VUID-xrSessionBeginDebugUtilsLabelRegionEXT-labelInfo-parameter
+VUID-xrSessionInsertDebugUtilsLabelEXT-labelInfo-parameter
+warn
+Warning [
+ was not found
+w+be
+wchar_t
+wcrtomb
+wcslen
+wcsnrtombs
+Wednesday
+wmemcpy
+wmemmove
+wmemset
+xrAcquireSwapchainImage
+XR_API_LAYER_PATH
+xrApplyHapticFeedback
+xrAttachSessionActionSets
+xrBeginFrame
+xrBeginSession
+xrCreateAction
+xrCreateActionSet
+xrCreateActionSpace
+xrCreateApiLayerInstance
+xrCreateDebugUtilsMessengerEXT
+xrCreateInstance
+xrCreateInstance called with invalid API version 
+xrCreateInstance failed
+xrCreateReferenceSpace
+xrCreateSession
+xrCreateSwapchain
+xrDestroyAction
+xrDestroyActionSet
+xrDestroyDebugUtilsMessengerEXT
+xrDestroyInstance
+xrDestroySession
+xrDestroySpace
+xrDestroySwapchain
+XR_ENABLE_API_LAYERS
+xrEndFrame
+xrEndSession
+xrEnumerateApiLayerProperties
+xrEnumerateBoundSourcesForAction
+xrEnumerateEnvironmentBlendModes
+xrEnumerateInstanceExtensionProperties
+xrEnumerateReferenceSpaces
+xrEnumerateSwapchainFormats
+xrEnumerateSwapchainImages
+xrEnumerateViewConfigurations
+xrEnumerateViewConfigurationViews
+XR_EXT_debug_utils
+xrGetActionStateBoolean
+xrGetActionStateFloat
+xrGetActionStatePose
+xrGetActionStateVector2f
+xrGetCurrentInteractionProfile
+xrGetInputSourceLocalizedName
+xrGetInstanceProcAddr
+xrGetInstanceProperties
+xrGetReferenceSpaceBoundsRect
+xrGetSystem
+xrGetSystemProperties
+xrGetViewConfigurationProperties
+xrInitializeLoaderKHR
+XR_LOADER_DEBUG
+xrLocateSpace
+xrLocateSpaces
+xrLocateViews
+xrNegotiateLoaderApiLayerInterface
+xrNegotiateLoaderRuntimeInterface
+XR_NULL_HANDLE for instance but query for 
+xrPathToString
+xrPollEvent
+xrReleaseSwapchainImage
+xrRequestExitSession
+xrResultToString
+XR_RUNTIME_JSON
+xrSessionBeginDebugUtilsLabelRegionEXT
+xrSessionEndDebugUtilsLabelRegionEXT
+xrSessionInsertDebugUtilsLabelEXT
+xrSetDebugUtilsObjectNameEXT
+xrStopHapticFeedback
+xrStringToPath
+xrStructureTypeToString
+xrSubmitDebugUtilsMessageEXT
+xrSuggestInteractionProfileBindings
+xrSyncActions
+xrWaitFrame
+xrWaitSwapchainImage
+yptn
+zzzEzzzzzzz
+zzz>zL
+zzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz7zzzzz

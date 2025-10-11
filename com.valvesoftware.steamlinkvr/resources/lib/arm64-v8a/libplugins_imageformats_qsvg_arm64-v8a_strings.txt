@@ -1,0 +1,128 @@
+10QSvgPlugin
+Android (13624864, +pgo, +bolt, +lto, +mlgo, based on r530567e) clang version 19.0.1 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+Android (13624864, +pgo, -bolt, +lto, -mlgo, based on r530567e) clang version 19.0.1 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+__cxa_atexit
+__cxa_finalize
+__cxa_guard_acquire
+__cxa_guard_release
+<!DOCTYPE svg
+exynos9810
+free
+getauxval
+LIBC
+libc++_shared.so
+libc.so
+libdl.so
+libEGL.so
+libGLESv2.so
+liblog.so
+libm.so
+libQt6Core_arm64-v8a.so
+libQt6Gui_arm64-v8a.so
+libQt6Svg_arm64-v8a.so
+Linker: LLD 19.0.1
+memchr
+memcmp
+memcpy
+\n13QSvgIOHandler
+operator delete(void*)
+operator new(unsigned long)
+operator>>(QDataStream&, QColor&)
+operator<<(QDataStream&, QColor const&)
+operator<<(QDebug, QColor const&)
+QBuffer::data() const
+QBuffer::staticMetaObject
+QByteArray::_empty
+QByteArray::QByteArray(char const*, long long)
+?QColor
+QColor::operator==(QColor const&) const
+QColor::operator QVariant() const
+QColor::QColor(Qt::GlobalColor)
+QColor::rgba() const
+QDebug::~QDebug()
+QImage::fill(unsigned int)
+QImageIOHandler::allocateImage(QSize, QImage::Format, QImage*)
+QImageIOHandler::currentImageNumber() const
+QImageIOHandler::currentImageRect() const
+QImageIOHandler::device() const
+QImageIOHandler::format() const
+QImageIOHandler::imageCount() const
+QImageIOHandler::jumpToImage(int)
+QImageIOHandler::jumpToNextImage()
+QImageIOHandler::loopCount() const
+QImageIOHandler::nextImageDelay() const
+QImageIOHandler::~QImageIOHandler()
+QImageIOHandler::QImageIOHandler()
+QImageIOHandler::setDevice(QIODevice*)
+QImageIOHandler::setFormat(QByteArray const&)
+QImageIOHandler::setFormat(QByteArray const&) const
+QImageIOHandler::write(QImage const&)
+QImageIOPlugin::~QImageIOPlugin()
+QImageIOPlugin::QImageIOPlugin(QObject*)
+QImageIOPlugin::qt_metacall(QMetaObject::Call, int, void**)
+QImageIOPlugin::qt_metacast(char const*)
+QImageIOPlugin::staticMetaObject
+QImage::~QImage()
+QImage::QImage()
+QIODevice::isReadable() const
+QIODevice::peek(char*, long long)
+QIODevice::readAll()
+QMetaObject::cast(QObject const*) const
+QMetaType::convert(QMetaType, void const*, QMetaType, void*)
+QMetaType::registerHelper(QtPrivate::QMetaTypeInterface const*)
+QObject::childEvent(QChildEvent*)
+QObject::connectNotify(QMetaMethod const&)
+QObject::customEvent(QEvent*)
+QObjectData::dynamicMetaObject() const
+QObject::disconnectNotify(QMetaMethod const&)
+QObject::eventFilter(QObject*, QEvent*)
+QObject::event(QEvent*)
+QObject::timerEvent(QTimerEvent*)
+QPaintDevice::QPaintDevice()
+QPainter::end()
+QPainter::~QPainter()
+QPainter::QPainter(QPaintDevice*)
+QString::toLatin1_helper_inplace(QString&)
+QString::trimmed_helper(QString&)
+QSvgPlugin
+QSvgRenderer::defaultSize() const
+QSvgRenderer::load(QByteArray const&)
+QSvgRenderer::load(QXmlStreamReader*)
+QSvgRenderer::~QSvgRenderer()
+QSvgRenderer::QSvgRenderer(QObject*)
+QSvgRenderer::render(QPainter*, QRectF const&)
+Qt_6
+Qt_6_PRIVATE_API
+qtbase/plugins/imageformats/libplugins_imageformats_qsvg_arm64-v8a.so
+QTextStream::~QTextStream()
+QTextStream::QTextStream(QByteArray const&, QFlags<QIODeviceBase::OpenModeFlag>)
+QTextStream::read(long long)
+qt_plugin_instance
+qt_plugin_query_metadata_v2
+QtPrivate::startsWith(QByteArrayView, QByteArrayView)
+QTransform::mapRect(QRectF const&) const
+QTransform::scale(double, double)
+QTransform::translate(double, double)
+QtSharedPointer::ExternalRefCountData::getAndRef(QObject const*)
+QVariant::metaType() const
+QVariant::QVariant(int)
+QVariant::QVariant(QRect)
+QVariant::QVariant(QSize)
+QVariant::toRect() const
+QVariant::toSize() const
+QXmlStreamReader::~QXmlStreamReader()
+QXmlStreamReader::QXmlStreamReader()
+QXmlStreamReader::setDevice(QIODevice*)
+ro.arch
+__stack_chk_fail
+strcmp
+strlen
+strncmp
+<svg
+svgz
+__system_property_get
+typeinfo for QImageIOHandler
+typeinfo for QImageIOPlugin
+vtable for __cxxabiv1::__si_class_type_info
+vtable for QImage
+<?xml

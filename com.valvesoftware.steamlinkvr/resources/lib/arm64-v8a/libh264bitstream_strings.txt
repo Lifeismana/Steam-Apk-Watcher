@@ -1,0 +1,298 @@
+%02X 
+Access unit delimiter
+======= Access Unit Delimiter =======\n
+ adaptive_ref_pic_marking_mode_flag : %d \n
+Android (13624864, +pgo, +bolt, +lto, +mlgo, based on r530567e) clang version 19.0.1 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+   aspect_ratio_idc : %d \n
+ aspect_ratio_info_present_flag : %d \n
+avcc_free
+avcc_new
+======= AVC Decoder Configuration Record =======
+ AVCLevelIndication: %d\n
+ AVCProfileIndication: %d\n
+ bit_depth_chroma_minus8 : %d \n
+ bit_depth_luma_minus8 : %d \n
+ bit_rate_scale : %d \n
+   bit_rate_value_minus1[%d] : %d \n
+ bitstream_restriction_flag : %d \n
+ bottom_field_flag : %d \n
+B slice
+B slice only
+Buffering period
+ cabac_init_idc : %d \n
+calloc
+   cbr_flag[%d] : %d \n
+ chroma_format_idc : %d \n
+ chroma_loc_info_present_flag : %d \n
+ chroma_log2_weight_denom : %d \n
+ chroma_qp_index_offset : %d \n
+   chroma_sample_loc_type_bottom_field : %d \n
+   chroma_sample_loc_type_top_field : %d \n
+Coded slice data partition A
+Coded slice data partition B
+Coded slice data partition C
+Coded slice of an auxiliary coded picture without partitioning
+Coded slice of an IDR picture
+Coded slice of a non-IDR picture
+   colour_description_present_flag : %d \n
+     colour_primaries : %d \n
+ configurationVersion: %d\n
+ constrained_intra_pred_flag : %d \n
+ constraint_set0_flag : %d \n
+ constraint_set1_flag : %d \n
+ constraint_set2_flag : %d \n
+ constraint_set3_flag : %d \n
+ constraint_set4_flag : %d \n
+ constraint_set5_flag : %d \n
+ cpb_cnt_minus1 : %d \n
+ cpb_removal_delay_length_minus1 : %d \n
+ cpb_size_scale : %d \n
+   cpb_size_value_minus1[%d] : %d \n
+__cxa_atexit
+__cxa_finalize
+ deblocking_filter_control_present_flag : %d \n
+Deblocking filter display preference
+debug_aud
+debug_avcc
+debug_bytes
+debug_nal
+debug_pps
+debug_seis
+debug_slice_header
+debug_sps
+=== Decoded Ref Pic Marking ===\n
+Dec ref pic marking repetition
+   delta_pic_order_always_zero_flag : %d \n
+ delta_pic_order_cnt_bottom : %d \n
+ direct_8x8_inference_flag : %d \n
+ direct_spatial_mv_pred_flag : %d \n
+ disable_deblocking_filter_idc : %d \n
+ dpb_output_delay_length_minus1 : %d \n
+End of sequence
+End of stream
+ entropy_coding_mode_flag : %d \n
+ field_pic_flag : %d \n
+Filler data
+Filler payload
+Film grain characteristics
+find_nal_unit
+ first_mb_in_slice : %d \n
+   fixed_frame_rate_flag : %d \n
+ forbidden_zero_bit : %d \n
+fprintf
+fputc
+   frame_crop_bottom_offset : %d \n
+   frame_crop_left_offset : %d \n
+ frame_cropping_flag : %d \n
+   frame_crop_right_offset : %d \n
+   frame_crop_top_offset : %d \n
+ frame_mbs_only_flag : %d \n
+ frame_num : %d \n
+free
+Full frame freeze
+Full frame freeze release
+Full frame snapshot
+fwrite
+ gaps_in_frame_num_value_allowed_flag : %d \n
+h264_dbgfile
+h264_free
+h264_new
+=== HRD ===\n
+ idr_pic_id : %d \n
+ initial_cpb_removal_delay_length_minus1 : %d \n
+intlog2
+I, SI
+I, SI, P, SP
+I, SI, P, SP, B
+I slice
+I slice only
+is_slice_type
+ lengthSizeMinusOne: %d\n
+ level_idc : %d \n
+LIBC
+libc.so
+libdl.so
+libh264bitstream.so
+libm.so
+Linker: LLD 19.0.1
+ log2_max_frame_num_minus4 : %d \n
+   log2_max_mv_length_horizontal : %d \n
+   log2_max_mv_length_vertical : %d \n
+   log2_max_pic_order_cnt_lsb_minus4 : %d \n
+ long_term_reference_flag : %d \n
+   low_delay_hrd_flag : %d \n
+ luma_log2_weight_denom : %d \n
+malloc
+   matrix_coefficients : %d \n
+   max_bits_per_mb_denom : %d \n
+   max_bytes_per_pic_denom : %d \n
+   max_dec_frame_buffering : %d \n
+ mb_adaptive_frame_field_flag : %d \n
+memcpy
+memset
+more_rbsp_data
+more_rbsp_trailing_data
+Motion constrained slice group set
+   motion_vectors_over_pic_boundaries_flag : %d \n
+ nal_hrd_parameters_present_flag : %d \n
+==================== NAL ====================\n
+ nal_ref_idc : %d \n
+nal_to_rbsp
+ nal_unit_type : %d ( %s ) \n
+ no_output_of_prior_pics_flag : %d \n
+ null pps
+ null sps
+ numOfPictureParameterSets: %d\n
+ numOfSequenceParameterSets: %d\n
+ num_ref_frames : %d \n
+   num_ref_frames_in_pic_order_cnt_cycle : %d \n
+ num_ref_idx_active_override_flag : %d \n
+ num_ref_idx_l0_active_minus1 : %d \n
+ num_ref_idx_l1_active_minus1 : %d \n
+   num_reorder_frames : %d \n
+ num_slice_groups_minus1 : %d \n
+   num_units_in_tick : %d \n
+   offset_for_non_ref_pic : %d \n
+   offset_for_top_to_bottom_field : %d \n
+   overscan_appropriate_flag : %d \n
+ overscan_info_present_flag : %d \n
+Pan scan rect
+ payload : 
+ payloadSize : %d \n
+ payloadType : %d \n
+peek_nal_unit
+ pic_height_in_map_units_minus1 : %d \n
+ pic_init_qp_minus26 : %d \n
+ pic_init_qs_minus26 : %d \n
+ pic_order_cnt_lsb : %d \n
+ pic_order_cnt_type : %d \n
+ pic_order_present_flag : %d \n
+ pic_parameter_set_id : %d \n
+ pic_scaling_matrix_present_flag : %d \n
+ pic_struct_present_flag : %d \n
+Pic timing
+Picture parameter set
+ pic_width_in_mbs_minus1 : %d \n
+======= PPS =======\n
+=== Prediction Weight Table ===\n
+ primary_pic_type : %d ( %s ) \n
+printf
+ profile_compatibility: %d\n
+ profile_idc : %d \n
+Progressive refinement segment end
+Progressive refinement segment start
+P slice
+P slice only
+putchar
+puts
+ qpprime_y_zero_transform_bypass_flag : %d \n
+rbsp_to_nal
+read_access_unit_delimiter_rbsp
+read_avcc
+read_dec_ref_pic_marking
+read_end_of_seq_rbsp
+read_end_of_stream_rbsp
+_read_ff_coded_number
+read_filler_data_rbsp
+read_hrd_parameters
+read_nal_unit
+read_pic_parameter_set_rbsp
+read_pred_weight_table
+read_rbsp_slice_trailing_bits
+read_rbsp_trailing_bits
+read_ref_pic_list_reordering
+read_scaling_list
+read_sei_end_bits
+read_sei_message
+read_sei_payload
+read_sei_rbsp
+read_seq_parameter_set_rbsp
+read_slice_header
+read_slice_layer_rbsp
+read_vui_parameters
+realloc
+Recovery point
+ redundant_pic_cnt : %d \n
+ redundant_pic_cnt_present_flag : %d \n
+ ref_pic_list_reordering_flag_l0 : %d \n
+ ref_pic_list_reordering_flag_l1 : %d \n
+=== Ref Pic List Reordering ===\n
+__register_atfork
+ reserved_zero_2bits : %d \n
+ residual_colour_transform_flag : %d \n
+     sar_height : %d \n
+     sar_width : %d \n
+Scene info
+ second_chroma_qp_index_offset : %d \n
+sei_free
+======= SEI =======\n
+sei_new
+ seq_parameter_set_id : %d \n
+ seq_scaling_matrix_present_flag : %d \n
+Sequence parameter set
+Sequence parameter set extension
+SI slice
+SI slice only
+SI, SP
+ slice_alpha_c0_offset_div2 : %d \n
+ slice_beta_offset_div2 : %d \n
+ slice_group_change_cycle : %d \n
+ slice_group_map_type : %d \n
+======= Slice Header =======\n
+ slice_qp_delta : %d \n
+ slice_qs_delta : %d \n
+ slice_type : %d ( %s ) \n
+=== %s ===\n
+Spare pic
+ sp_for_switch_flag : %d \n
+SP slice
+SP slice only
+======= SPS =======\n
+stderr
+stdout
+Stereo video info
+Sub seq characteristics
+Sub seq info
+Sub seq layer characteristics
+Supplemental enhancement information (SEI)
+ time_offset_length : %d \n
+   time_scale : %d \n
+ timing_info_present_flag : %d \n
+   transfer_characteristics : %d \n
+ transform_8x8_mode_flag : %d \n
+Unknown
+Unspecified
+User data registered ITU-T T35
+User data unregistered
+ vcl_hrd_parameters_present_flag : %d \n
+   video_format : %d \n
+   video_full_range_flag : %d \n
+ video_signal_type_present_flag : %d \n
+=== VUI ===\n
+ vui_parameters_present_flag : %d \n
+WARNING: bit_equal_to_one is 0!!!!\n
+WARNING: bit_equal_to_zero is 1!!!!\n
+ weighted_bipred_idc : %d \n
+ weighted_pred_flag : %d \n
+write_access_unit_delimiter_rbsp
+write_avcc
+write_dec_ref_pic_marking
+write_end_of_seq_rbsp
+write_end_of_stream_rbsp
+_write_ff_coded_number
+write_filler_data_rbsp
+write_hrd_parameters
+write_nal_unit
+write_pic_parameter_set_rbsp
+write_pred_weight_table
+write_rbsp_slice_trailing_bits
+write_rbsp_trailing_bits
+write_ref_pic_list_reordering
+write_scaling_list
+write_sei_message
+write_sei_payload
+write_sei_rbsp
+write_seq_parameter_set_rbsp
+write_slice_header
+write_slice_layer_rbsp
+write_vui_parameters
