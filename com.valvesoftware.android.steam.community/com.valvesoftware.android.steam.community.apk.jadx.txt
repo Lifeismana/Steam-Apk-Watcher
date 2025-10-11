@@ -1,5 +1,5 @@
-abadac737abccef8432190fd045d92e5  com.valvesoftware.android.steam.community/com.valvesoftware.android.steam.community.apk
-d41d8cd98f00b204e9800998ecf8427e  com.valvesoftware.android.steam.community/com.valvesoftware.android.steam.community.apk.jadx.txt
+c59d97860164c422c3d31934ec80d95b  com.valvesoftware.android.steam.community/com.valvesoftware.android.steam.community.apk
+8197bbe1cc6bf1449c929280b1bf70d9  com.valvesoftware.android.steam.community/com.valvesoftware.android.steam.community.apk.jadx.txt
 2593e193ec5d17bb239339bae703d65b  com.valvesoftware.android.steam.community/resources/AndroidManifest.xml
 139912756c7b0b4f9fbf7dab562f1852  com.valvesoftware.android.steam.community/resources/DebugProbesKt.bin
 82487545a1d2d1d8370aa1fe39a8e956  com.valvesoftware.android.steam.community/resources/META-INF/androidx.activity_activity-ktx.version
@@ -11981,13 +11981,13 @@ b086b6093ba8c4ea2fed58aa25ee40d6  com.valvesoftware.android.steam.community/sour
 09763c353f0ea326847a90be67d3a784  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_common/zzkw.java
 3879ad8216803516b64f379aea114713  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_common/zzkx.java
 a546336afc8c2358254344f697da2488  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_common/zzky.java
-14864f5d5e7261092cff4469ea523300  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_common/zzkz.java
-b2ea12aa6bf829d4899887aa829a7ba1  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_common/zzlb.java
+49b3a109d497922cf59f470e0e6cb89a  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_common/zzkz.java
+fd8f3be7de49e75c6e13a00e0343c6eb  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_common/zzlb.java
 f2deda466cbfe633e3322c2accfb182e  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_common/zzlc.java
 30c4e1ae39f6bae7f3f4fee0b5ae5a0d  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_common/zzld.java
 7fe858a52ed62996f6e13af4bc125ebd  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_common/zzle.java
-6fd0089fa4318c1497e090ebb3b89aac  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_common/zzlf.java
-713bf0bd1d7a3cfff93bf275fc88ae14  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_common/zzlh.java
+891ed96005e70a007e9c0df769e98ab7  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_common/zzlf.java
+05324fcfc96a364f246fa3b4866edfda  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_common/zzlh.java
 f02e8673fa9b3a0ccf16de20ab09e2cc  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_common/zzli.java
 51dce388c61e45af13a2316c9695f8d2  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_common/zzlj.java
 e53253adcd1eeb2b4c96791d08d76e80  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_common/zzlk.java
@@ -12504,7 +12504,7 @@ f5c3db0d28e45f2e92b1c050b8d7ed95  com.valvesoftware.android.steam.community/sour
 82cfdfb30f1539d67304a0f995bc674a  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode/zzou.java
 733d7d78ca57ece4935de34a8288b74f  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode/zzov.java
 459c00d2579fca98b116e900fc058357  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode/zzow.java
-999f3666edd348d353ecac5cd0c0dc3d  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode/zzoy.java
+7281e1361c2ffae3888f7773b160d9f0  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode/zzoy.java
 b0e75e77149f16a3d425c578a30384b1  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode/zzoz.java
 7bf5c6959ae7b9ea2d8a67af7d8509ed  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode/zzp.java
 a955e7b832ab9580c4114cf55659f08e  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode/zzpa.java
@@ -12519,7 +12519,7 @@ d4f574afe7a5fe25e0f5bb65c2129d66  com.valvesoftware.android.steam.community/sour
 b4ca7abfe6db3e730741e0a2668bfd8b  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode/zzpj.java
 5b611902e3e10cd3af00fadf604620b3  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode/zzpk.java
 f03298b6e3ba117bea2d95841ed10a5f  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode/zzpl.java
-5108eaa34ac94d3cbe45609f8016d1fe  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode/zzpn.java
+ef1b1be6270cc6ca10cd592c886d20a4  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode/zzpn.java
 ca0cb8ee94f53e25f648ecacb23a8efc  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode/zzpo.java
 a3d5175503219e0d4a27827133ccc3e7  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode/zzpp.java
 08dcdd421308fd21d1d11fbd7aaec5c2  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode/zzpq.java
@@ -12864,7 +12864,7 @@ f5b0ed9c1be7fa9427f4f0828aa8b65d  com.valvesoftware.android.steam.community/sour
 535f80182d4831f82f67af0be0c23703  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhd.java
 d1f83accfe3d10b37640098b17fc654a  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhe.java
 799f9f1cb306a2d088ea374952d0716d  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhf.java
-c6cdda078a2840cf268f12b08f74e709  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhg.java
+a053df4fece84d9abfd210172e31a0e5  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhg.java
 0d15fd139ccc45fc2e6229d13c5c075f  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhh.java
 929d4073a85b3c6182aa90b16a0d2549  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhi.java
 250c1d10a964de25b0beebd8ded161d2  com.valvesoftware.android.steam.community/sources/com/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhj.java

@@ -1,0 +1,19 @@
+ANativeWindow_fromSurface
+ANativeWindow_getFormat
+ANativeWindow_getHeight
+ANativeWindow_getWidth
+ANativeWindow_release
+Android (9352603, based on r450784d1) clang version 14.0.7 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
+Java_androidx_camera_core_impl_utils_SurfaceUtil_nativeGetSurfaceInfo
+LIBC
+Linker: LLD 14.0.7
+VERS_1.0
+__cxa_atexit
+__cxa_finalize
+__stack_chk_fail
+__stack_chk_guard
+libandroid.so
+libc.so
+libdl.so
+libm.so
+libsurface_util_jni.so

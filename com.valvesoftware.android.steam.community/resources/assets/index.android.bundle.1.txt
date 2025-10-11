@@ -3043,7 +3043,7 @@ DoCheck
 DoLogin
 DoNotApplyPrediction_Bool
 DoNotMix
-Dockerfile README.md com.valvesoftware.android.steam.community com.valvesoftware.android.steam.friendsui com.valvesoftware.steamlink com.valvesoftware.steamlinkvr docker-compose.yml renovate.json script.sh setup.sh
+Dockerfile README.md com.valvesoftware.android.steam.community com.valvesoftware.android.steam.friendsui com.valvesoftware.steamlink com.valvesoftware.steamlinkvr docker-compose.yml renovate.json script.sh setup.sh tools
 Document
 DocumentDirectoryPath
 DocumentType

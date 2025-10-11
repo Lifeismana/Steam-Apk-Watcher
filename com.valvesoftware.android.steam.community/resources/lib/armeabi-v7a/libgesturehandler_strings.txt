@@ -1,0 +1,36 @@
+Android (11349228, +pgo, +bolt, +lto, -mlgo, based on r487747e) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)
+Java_com_swmansion_gesturehandler_react_RNGestureHandlerModule_decorateRuntime
+LIBC
+Linker: LLD 17.0.2
+NSt6__ndk110__function6__baseIFN8facebook3jsi5ValueERNS3_7RuntimeERKS4_PS7_jEEE
+NSt6__ndk110__function6__funcIZ15decorateRuntimeRN8facebook3jsi7RuntimeEE3$_0NS_9allocatorIS6_EEFNS3_5ValueES5_RKS9_PSA_jEEE
+Z15decorateRuntimeRN8facebook3jsi7RuntimeEE3$_0
+__cxa_atexit
+__cxa_begin_catch
+__cxa_end_cleanup
+__cxa_finalize
+__gxx_personality_v0
+__register_atfork
+__stack_chk_fail
+__stack_chk_guard
+decorateRuntime(facebook::jsi::Runtime&)
+facebook::jsi::Value::~Value()
+facebook::react::ShadowNode::getTraits() const
+isFormsStackingContext
+libc++_shared.so
+libc.so
+libdl.so
+libgesturehandler.so
+libjsi.so
+libm.so
+libreactnative.so
+operator delete(void*)
+operator new(unsigned int)
+std::__ndk1::__shared_weak_count::__release_weak()
+std::terminate()
+strlen
+typeinfo for std::__ndk1::__function::__base<facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>
+typeinfo name for std::__ndk1::__function::__base<facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>
+void facebook::jsi::Object::setProperty<facebook::jsi::Function>(facebook::jsi::Runtime&, char const*, facebook::jsi::Function&&) const
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info

@@ -1,0 +1,38 @@
+ANativeWindow_fromSurface
+ANativeWindow_lock
+ANativeWindow_release
+ANativeWindow_setBuffersGeometry
+ANativeWindow_unlockAndPost
+Android (9352603, based on r450784d1) clang version 14.0.7 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
+AndroidBitmap_lockPixels
+AndroidBitmap_unlockPixels
+Failed to get ANativeWindow
+Failed to get JPEG bytes array pointer.
+Failed to lock window.
+Java_androidx_camera_core_ImageProcessingUtil_nativeConvertAndroid420ToABGR
+Java_androidx_camera_core_ImageProcessingUtil_nativeConvertAndroid420ToBitmap
+Java_androidx_camera_core_ImageProcessingUtil_nativeCopyBetweenByteBufferAndBitmap
+Java_androidx_camera_core_ImageProcessingUtil_nativeRotateYUV
+Java_androidx_camera_core_ImageProcessingUtil_nativeShiftPixel
+Java_androidx_camera_core_ImageProcessingUtil_nativeWriteJpegToSurface
+LIBC
+Linker: LLD 14.0.7
+VERS_1.0
+YuvToRgbJni
+__android_log_print
+__cxa_atexit
+__cxa_finalize
+__memcpy_chk
+__stack_chk_fail
+free
+libandroid.so
+libc.so
+libdl.so
+libimage_processing_util_jni.so
+libjnigraphics.so
+liblog.so
+libm.so
+malloc
+memcpy
+memmove
+memset

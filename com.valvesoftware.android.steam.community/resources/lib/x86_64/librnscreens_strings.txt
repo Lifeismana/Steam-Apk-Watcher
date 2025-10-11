@@ -1,0 +1,368 @@
+()Lcom/facebook/jni/HybridData;
+(Lcom/facebook/react/fabric/FabricUIManager;)V
+(Ljava/lang/Integer;)[I
+(Ljava/lang/Integer;Z)V
+24RNSScreenRemovalListener
+<init>
+Android (11349228, +pgo, +bolt, +lto, -mlgo, based on r487747e) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)
+BackForTopScreendisableSwipeBackupdateTransitionfinishTransitionRNScreensTurboModule
+CIE ID is not zero
+CIE start does not match
+CIE version is not 1 or 3
+Can't binary search on variable length encoded data.
+DWARF opcode not implemented
+DW_EH_PE_aligned pointer encoding not supported
+DW_EH_PE_datarel is invalid with a datarelBase of 0
+DW_EH_PE_funcrel pointer encoding not supported
+DW_EH_PE_textrel pointer encoding not supported
+DW_OP_deref_size with bad size
+DW_OP_fbreg not implemented
+DW_OP_piece not implemented
+FDE has zero length
+FDE is really a CIE
+FN8facebook3jsi5ValueERNS0_7RuntimeERKS1_PS4_mE
+JNI_OnLoad
+JNI_OnUnload
+Java_com_swmansion_rnscreens_ScreensModule_nativeInstall
+LIBC
+Lcom/facebook/jni/HybridData$Destructor;
+Lcom/facebook/jni/HybridData;
+Lcom/swmansion/rnscreens/NativeProxy;
+Linker: LLD 17.0.2
+N8facebook3jni11HybridClassIN9rnscreens11NativeProxyENS0_6detail15BaseHybridClassEEE
+N8facebook3jni6detail15BaseHybridClassE
+N8facebook5react24MountingOverrideDelegateE
+N9RNScreens20RNScreensTurboModuleE
+N9rnscreens11NativeProxyE
+NSt6__ndk110__function6__baseIFN8facebook3jsi5ValueERNS3_7RuntimeERKS4_PS7_mEEE
+NSt6__ndk110__function6__baseIFNS_5arrayIiLm2EEEiEEE
+NSt6__ndk110__function6__baseIFvRKN8facebook5react10ShadowTreeERbEEE
+NSt6__ndk110__function6__baseIFviEEE
+NSt6__ndk110__function6__baseIFvibEEE
+NSt6__ndk110__function6__baseIFvidEEE
+NSt6__ndk110__function6__baseIFvvEEE
+NSt6__ndk110__function6__funcIPFN8facebook3jsi5ValueERNS3_7RuntimeERKS4_PS7_mENS_9allocatorISB_EESA_EE
+NSt6__ndk110__function6__funcIZ10JNI_OnLoadE3$_0NS_9allocatorIS2_EEFvvEEE
+NSt6__ndk110__function6__funcIZ56Java_com_swmansion_rnscreens_ScreensModule_nativeInstallE3$_0NS_9allocatorIS2_EEFNS_5arrayIiLm2EEEiEEE
+NSt6__ndk110__function6__funcIZ56Java_com_swmansion_rnscreens_ScreensModule_nativeInstallE3$_1NS_9allocatorIS2_EEFvidEEE
+NSt6__ndk110__function6__funcIZ56Java_com_swmansion_rnscreens_ScreensModule_nativeInstallE3$_2NS_9allocatorIS2_EEFvibEEE
+NSt6__ndk110__function6__funcIZ56Java_com_swmansion_rnscreens_ScreensModule_nativeInstallE3$_3NS_9allocatorIS2_EEFviEEE
+NSt6__ndk110__function6__funcIZN9rnscreens11NativeProxy26nativeAddMutationsListenerEN8facebook3jni9alias_refIPNS5_6detail8JTypeForINS4_5react16JFabricUIManagerENS5_7JObjectEvE11_javaobjectEEEE3$_0NS_9allocatorISG_EEFviEEE
+NSt6__ndk110__function6__funcIZN9rnscreens11NativeProxy26nativeAddMutationsListenerEN8facebook3jni9alias_refIPNS5_6detail8JTypeForINS4_5react16JFabricUIManagerENS5_7JObjectEvE11_javaobjectEEEE3$_1NS_9allocatorISG_EEFvRKNS9_10ShadowTreeERbEEE
+NSt6__ndk117bad_function_callE
+NSt6__ndk120__shared_ptr_emplaceI24RNSScreenRemovalListenerNS_9allocatorIS1_EEEE
+NSt6__ndk120__shared_ptr_emplaceIN9RNScreens20RNScreensTurboModuleENS_9allocatorIS2_EEEE
+PFN8facebook3jsi5ValueERNS0_7RuntimeERKS1_PS4_mE
+RNSScreenRemovalListener::pullTransaction(int, long, facebook::react::TransactionTelemetry const&, std::__ndk1::vector<facebook::react::ShadowViewMutation, std::__ndk1::allocator<facebook::react::ShadowViewMutation>>) const
+RNSScreenRemovalListener::shouldOverridePullTransaction() const
+RNSScreenRemovalListener::~RNSScreenRemovalListener()
+RNSScreenStack
+RNScreens::RNScreensTurboModule::MODULE_NAME
+RNScreens::RNScreensTurboModule::RNScreensTurboModule(std::__ndk1::function<std::__ndk1::array<int, 2ul> (int)>, std::__ndk1::function<void (int, double)>, std::__ndk1::function<void (int, bool)>, std::__ndk1::function<void (int)>)
+RNScreens::RNScreensTurboModule::disableSwipeBackForTopScreen(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)
+RNScreens::RNScreensTurboModule::disableSwipeBackForTopScreen_
+RNScreens::RNScreensTurboModule::finishTransition(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)
+RNScreens::RNScreensTurboModule::finishTransition_
+RNScreens::RNScreensTurboModule::get(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)
+RNScreens::RNScreensTurboModule::getPropertyNames(facebook::jsi::Runtime&)
+RNScreens::RNScreensTurboModule::set(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&, facebook::jsi::Value const&)
+RNScreens::RNScreensTurboModule::startTransition(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)
+RNScreens::RNScreensTurboModule::startTransition_
+RNScreens::RNScreensTurboModule::updateTransition(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)
+RNScreens::RNScreensTurboModule::updateTransition_
+RNScreens::RNScreensTurboModule::~RNScreensTurboModule()
+Unknown DWARF encoding for search table.
+Z10JNI_OnLoadE3$_0
+Z56Java_com_swmansion_rnscreens_ScreensModule_nativeInstallE3$_0
+Z56Java_com_swmansion_rnscreens_ScreensModule_nativeInstallE3$_1
+Z56Java_com_swmansion_rnscreens_ScreensModule_nativeInstallE3$_2
+Z56Java_com_swmansion_rnscreens_ScreensModule_nativeInstallE3$_3
+ZN9rnscreens11NativeProxy26nativeAddMutationsListenerEN8facebook3jni9alias_refIPNS2_6detail8JTypeForINS1_5react16JFabricUIManagerENS2_7JObjectEvE11_javaobjectEEEE3$_0
+ZN9rnscreens11NativeProxy26nativeAddMutationsListenerEN8facebook3jni9alias_refIPNS2_6detail8JTypeForINS1_5react16JFabricUIManagerENS2_7JObjectEvE11_javaobjectEEEE3$_1
+[RNScreens] `finishTransition` requires 2 arguments.
+[RNScreens] `startTransition` method requires 1 argument.
+[RNScreens] `updateTransition` requires 2 arguments.
+_JNIEnv::CallObjectMethod(_jobject*, _jmethodID*, ...)
+_JNIEnv::CallVoidMethod(_jobject*, _jmethodID*, ...)
+_JNIEnv::NewObject(_jclass*, _jmethodID*, ...)
+_Unwind_Resume
+_Unwind_Resume() can't return
+__cxa_allocate_exception
+__cxa_atexit
+__cxa_begin_catch
+__cxa_end_catch
+__cxa_finalize
+__cxa_free_exception
+__cxa_guard_abort
+__cxa_guard_acquire
+__cxa_guard_release
+__cxa_rethrow
+__cxa_throw
+__gxx_personality_v0
+__register_atfork
+__stack_chk_fail
+abort
+basic_string
+belowTopScreenTag
+canStartTransition
+com/facebook/jni/HybridClassBase
+com/swmansion/rnscreens/NativeProxy
+disableSwipeBackForTopScreen
+dl_iterate_phdr
+during phase1 personality function said it would stop here, but now in phase2 it did not stop here
+evaluateExpression
+facebook::jni::Environment::current()
+facebook::jni::HybridClass<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const::hybridDataField
+facebook::jni::HybridClass<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>::makeHybridData(std::__ndk1::unique_ptr<rnscreens::NativeProxy, std::__ndk1::default_delete<rnscreens::NativeProxy>>)
+facebook::jni::HybridClass<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>::registerHybrid(std::initializer_list<JNINativeMethod>)
+facebook::jni::JField<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*> facebook::jni::detectHybrid<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>(facebook::jni::alias_ref<_jclass*>)
+facebook::jni::JObject::getClass() const
+facebook::jni::JavaClass<facebook::jni::HybridClass<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::detail::HybridClassBase, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::base_owned_ref<facebook::jni::JClass, facebook::jni::LocalReferenceAllocator>::~base_owned_ref()
+facebook::jni::base_owned_ref<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator>::~base_owned_ref()
+facebook::jni::base_owned_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator>::~base_owned_ref()
+facebook::jni::base_owned_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator>::~base_owned_ref()
+facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::JObject>(facebook::jni::JObject const*)
+facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::JObject>(facebook::jni::JObject const*)::holderField
+facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::detail::HybridData>(facebook::jni::detail::HybridData const*)
+facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::detail::HybridData>(facebook::jni::detail::HybridData const*)::holderField
+facebook::jni::detail::FunctionWrapper<facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>), facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator>>::call(_JNIEnv*, _jobject*, facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>))
+facebook::jni::detail::FunctionWrapper<void (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::react::JFabricUIManager, facebook::jni::JObject, void>::_javaobject*>&&), facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, void, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::react::JFabricUIManager, facebook::jni::JObject, void>::_javaobject*>>::call(_JNIEnv*, _jobject*, facebook::jni::detail::JTypeFor<facebook::react::JFabricUIManager, facebook::jni::JObject, void>::_javaobject*, void (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::react::JFabricUIManager, facebook::jni::JObject, void>::_javaobject*>&&))
+facebook::jni::detail::FunctionWrapperWithJniEntryPoint<facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>), &rnscreens::NativeProxy::initHybrid(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>), facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator>>::call(_JNIEnv*, _jobject*)
+facebook::jni::detail::HybridClassBase::isHybridClassBase(facebook::jni::alias_ref<_jclass*>)
+facebook::jni::detail::HybridData::create()
+facebook::jni::detail::HybridDestructor::getNativePointer() const
+facebook::jni::detail::HybridDestructor::setNativePointer(std::__ndk1::unique_ptr<facebook::jni::detail::BaseHybridClass, std::__ndk1::default_delete<facebook::jni::detail::BaseHybridClass>>)
+facebook::jni::detail::JniEnvCacher::JniEnvCacher(_JNIEnv*)
+facebook::jni::detail::JniEnvCacher::~JniEnvCacher()
+facebook::jni::detail::MethodWrapper<void (rnscreens::NativeProxy::*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::react::JFabricUIManager, facebook::jni::JObject, void>::_javaobject*>), &rnscreens::NativeProxy::nativeAddMutationsListener(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::react::JFabricUIManager, facebook::jni::JObject, void>::_javaobject*>), rnscreens::NativeProxy, void, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::react::JFabricUIManager, facebook::jni::JObject, void>::_javaobject*>>::call(_JNIEnv*, _jobject*, facebook::jni::detail::JTypeFor<facebook::react::JFabricUIManager, facebook::jni::JObject, void>::_javaobject*)
+facebook::jni::detail::MethodWrapper<void (rnscreens::NativeProxy::*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::react::JFabricUIManager, facebook::jni::JObject, void>::_javaobject*>), &rnscreens::NativeProxy::nativeAddMutationsListener(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::react::JFabricUIManager, facebook::jni::JObject, void>::_javaobject*>), rnscreens::NativeProxy, void, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::react::JFabricUIManager, facebook::jni::JObject, void>::_javaobject*>>::dispatch(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::react::JFabricUIManager, facebook::jni::JObject, void>::_javaobject*>&&)
+facebook::jni::detail::getDestructorField(facebook::jni::basic_strong_ref<facebook::jni::JClass, facebook::jni::LocalReferenceAllocator> const&)
+facebook::jni::findClassLocal(char const*)
+facebook::jni::findClassStatic(char const*)
+facebook::jni::getHybridDataFromField(facebook::jni::JObject const*, facebook::jni::JField<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*> const&)
+facebook::jni::initialize(_JavaVM*, std::__ndk1::function<void ()>&&)
+facebook::jni::jmethod_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject* ()>::kDescriptor
+facebook::jni::jmethod_traits<void (facebook::jni::detail::JTypeFor<facebook::react::JFabricUIManager, facebook::jni::JObject, void>::_javaobject*)>::kDescriptor
+facebook::jni::jmethod_traits<void (int)>::kDescriptor
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridClassBase, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*>::kDescriptor
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*>::kDescriptor
+facebook::jni::throwCppExceptionIf(bool)
+facebook::jni::throwNPE()
+facebook::jni::throwNewJavaException(char const*, char const*)
+facebook::jni::throwPendingJniExceptionAsCppException()
+facebook::jni::translatePendingCppExceptionToJavaException()
+facebook::jsi::HostObject::~HostObject()
+facebook::jsi::JSError::JSError(facebook::jsi::Runtime&, char const*)
+facebook::jsi::JSError::JSError(facebook::jsi::Runtime&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)
+facebook::jsi::JSError::~JSError()
+facebook::jsi::Value::Value(facebook::jsi::Runtime&, facebook::jsi::Value const&)
+facebook::jsi::Value::Value(facebook::jsi::Value&&)
+facebook::jsi::Value::asNumber() const
+facebook::jsi::Value::~Value()
+facebook::react::Binding::getScheduler()
+facebook::react::JFabricUIManager::getBinding()
+facebook::react::MountingCoordinator::setMountingOverrideDelegate(std::__ndk1::weak_ptr<facebook::react::MountingOverrideDelegate const>) const
+facebook::react::MountingTransaction::MountingTransaction(int, long, std::__ndk1::vector<facebook::react::ShadowViewMutation, std::__ndk1::allocator<facebook::react::ShadowViewMutation>>&&, facebook::react::TransactionTelemetry)
+facebook::react::Scheduler::getUIManager() const
+facebook::react::ShadowTree::getMountingCoordinator() const
+facebook::react::ShadowTreeRegistry::enumerate(std::__ndk1::function<void (facebook::react::ShadowTree const&, bool&)> const&) const
+facebook::react::ShadowViewMutation::~ShadowViewMutation()
+facebook::react::UIManager::getShadowTreeRegistry() const
+fflush
+finishTransition
+fprintf
+free
+fwrite
+getEncodedP
+getFloatRegister
+getRegister
+getSLEB128
+getSavedRegister
+getTableEntrySize
+getULEB128
+globalThis
+guard variable for facebook::jni::HybridClass<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const::hybridDataField
+guard variable for facebook::jni::JavaClass<facebook::jni::HybridClass<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::detail::HybridClassBase, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::JObject>(facebook::jni::JObject const*)::holderField
+guard variable for facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::detail::HybridData>(facebook::jni::detail::HybridData const*)::holderField
+initHybrid
+java.lang.NullPointerException
+java/lang/Integer
+java/lang/NullPointerException
+libandroid.so
+libc++_shared.so
+libc.so
+libdl.so
+libfbjni.so
+libjsi.so
+libm.so
+libreactnative.so
+librnscreens.so
+libunwind: %s - %s\n
+libunwind: malformed DW_CFA_GNU_negative_offset_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa_register DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa_sf DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_expression DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_offset DWARF unwind, reg (%lu) out of range\n
+libunwind: malformed DW_CFA_offset_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_offset_extended_sf DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_register DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_register DWARF unwind, reg2 too big\n
+libunwind: malformed DW_CFA_restore DWARF unwind, reg (%lu) out of range\n
+libunwind: malformed DW_CFA_restore_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_same_value DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_undefined DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_val_expression DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_val_offset DWARF unwind, reg (%lu) out of range\n\n
+libunwind: malformed DW_CFA_val_offset_sf DWARF unwind, reg too big\n
+libunwind: unsupported .eh_frame_hdr version: %u at %lx\n
+mDestructor
+mHybridData
+malformed uleb128 expression
+malloc
+memcpy
+memset
+nativeAddMutationsListener
+no x86_64 float registers
+notifyScreenRemoved
+operator delete(void*)
+operator new(unsigned long)
+pthread_rwlock_rdlock
+pthread_rwlock_unlock
+pthread_rwlock_wrlock
+rnscreens::NativeProxy::NativeProxy(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>)
+rnscreens::NativeProxy::initHybrid(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>)
+rnscreens::NativeProxy::nativeAddMutationsListener(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::react::JFabricUIManager, facebook::jni::JObject, void>::_javaobject*>)
+rnscreens::NativeProxy::registerNatives()
+rnscreens::NativeProxy::~NativeProxy()
+setFloatRegister
+setRegister
+startTransition
+std::__ndk1::__function::__func<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long), std::__ndk1::allocator<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>::__clone() const
+std::__ndk1::__function::__func<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long), std::__ndk1::allocator<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>::__clone(std::__ndk1::__function::__base<facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>*) const
+std::__ndk1::__function::__func<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long), std::__ndk1::allocator<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>::destroy()
+std::__ndk1::__function::__func<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long), std::__ndk1::allocator<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>::destroy_deallocate()
+std::__ndk1::__function::__func<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long), std::__ndk1::allocator<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>::operator()(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*&&, unsigned long&&)
+std::__ndk1::__function::__func<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long), std::__ndk1::allocator<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>::target(std::type_info const&) const
+std::__ndk1::__function::__func<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long), std::__ndk1::allocator<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>::target_type() const
+std::__ndk1::__function::__func<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long), std::__ndk1::allocator<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>::~__func()
+std::__ndk1::__shared_ptr_emplace<RNSScreenRemovalListener, std::__ndk1::allocator<RNSScreenRemovalListener>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<RNSScreenRemovalListener, std::__ndk1::allocator<RNSScreenRemovalListener>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<RNSScreenRemovalListener, std::__ndk1::allocator<RNSScreenRemovalListener>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<RNScreens::RNScreensTurboModule, std::__ndk1::allocator<RNScreens::RNScreensTurboModule>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<RNScreens::RNScreensTurboModule, std::__ndk1::allocator<RNScreens::RNScreensTurboModule>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<RNScreens::RNScreensTurboModule, std::__ndk1::allocator<RNScreens::RNScreensTurboModule>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_weak_count::__get_deleter(std::type_info const&) const
+std::__ndk1::__shared_weak_count::__release_weak()
+std::__ndk1::__shared_weak_count::~__shared_weak_count()
+std::__ndk1::bad_function_call::~bad_function_call()
+std::__ndk1::function<std::__ndk1::array<int, 2ul> (int)>::~function()
+std::__ndk1::function<void (int)>::~function()
+std::__ndk1::function<void (int, bool)>::~function()
+std::__ndk1::function<void (int, double)>::~function()
+std::bad_alloc::bad_alloc()
+std::bad_alloc::~bad_alloc()
+std::bad_array_new_length::bad_array_new_length()
+std::bad_array_new_length::~bad_array_new_length()
+std::current_exception()
+std::exception::what() const
+std::exception::~exception()
+std::exception_ptr::~exception_ptr()
+std::length_error::~length_error()
+std::logic_error::logic_error(char const*)
+std::terminate()
+strcmp
+strlen
+topScreenTag
+truncated sleb128 expression
+truncated uleb128 expression
+typeinfo for RNSScreenRemovalListener
+typeinfo for RNScreens::RNScreensTurboModule
+typeinfo for facebook::jni::HybridClass<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>
+typeinfo for facebook::jni::detail::BaseHybridClass
+typeinfo for facebook::jsi::HostObject
+typeinfo for facebook::jsi::JSError
+typeinfo for facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)
+typeinfo for facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)
+typeinfo for facebook::react::MountingOverrideDelegate
+typeinfo for rnscreens::NativeProxy
+typeinfo for std::__ndk1::__function::__base<facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>
+typeinfo for std::__ndk1::__function::__base<std::__ndk1::array<int, 2ul> (int)>
+typeinfo for std::__ndk1::__function::__base<void ()>
+typeinfo for std::__ndk1::__function::__base<void (facebook::react::ShadowTree const&, bool&)>
+typeinfo for std::__ndk1::__function::__base<void (int)>
+typeinfo for std::__ndk1::__function::__base<void (int, bool)>
+typeinfo for std::__ndk1::__function::__base<void (int, double)>
+typeinfo for std::__ndk1::__function::__func<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long), std::__ndk1::allocator<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>
+typeinfo for std::__ndk1::__shared_ptr_emplace<RNSScreenRemovalListener, std::__ndk1::allocator<RNSScreenRemovalListener>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<RNScreens::RNScreensTurboModule, std::__ndk1::allocator<RNScreens::RNScreensTurboModule>>
+typeinfo for std::__ndk1::__shared_weak_count
+typeinfo for std::__ndk1::bad_function_call
+typeinfo for std::bad_alloc
+typeinfo for std::bad_array_new_length
+typeinfo for std::exception
+typeinfo for std::length_error
+typeinfo name for RNSScreenRemovalListener
+typeinfo name for RNScreens::RNScreensTurboModule
+typeinfo name for facebook::jni::HybridClass<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>
+typeinfo name for facebook::jni::detail::BaseHybridClass
+typeinfo name for facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)
+typeinfo name for facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)
+typeinfo name for facebook::react::MountingOverrideDelegate
+typeinfo name for rnscreens::NativeProxy
+typeinfo name for std::__ndk1::__function::__base<facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>
+typeinfo name for std::__ndk1::__function::__base<std::__ndk1::array<int, 2ul> (int)>
+typeinfo name for std::__ndk1::__function::__base<void ()>
+typeinfo name for std::__ndk1::__function::__base<void (facebook::react::ShadowTree const&, bool&)>
+typeinfo name for std::__ndk1::__function::__base<void (int)>
+typeinfo name for std::__ndk1::__function::__base<void (int, bool)>
+typeinfo name for std::__ndk1::__function::__base<void (int, double)>
+typeinfo name for std::__ndk1::__function::__func<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long), std::__ndk1::allocator<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<RNSScreenRemovalListener, std::__ndk1::allocator<RNSScreenRemovalListener>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<RNScreens::RNScreensTurboModule, std::__ndk1::allocator<RNScreens::RNScreensTurboModule>>
+typeinfo name for std::__ndk1::bad_function_call
+unknown pointer encoding
+unknown register
+unsupported restore location for register
+unsupported x86_64 register
+unwind_phase2
+updateTransition
+vector
+void facebook::jni::detail::setNativePointer<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator>(facebook::jni::basic_strong_ref<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator>, std::__ndk1::unique_ptr<facebook::jni::detail::BaseHybridClass, std::__ndk1::default_delete<facebook::jni::detail::BaseHybridClass>>)
+void facebook::jsi::Object::setProperty<facebook::jsi::Object>(facebook::jsi::Runtime&, char const*, facebook::jsi::Object&&) const
+void facebook::jsi::Object::setProperty<facebook::jsi::Value&>(facebook::jsi::Runtime&, char const*, facebook::jsi::Value&) const
+void std::__ndk1::vector<facebook::jsi::PropNameID, std::__ndk1::allocator<facebook::jsi::PropNameID>>::__push_back_slow_path<facebook::jsi::PropNameID>(facebook::jsi::PropNameID&&)
+vtable for RNSScreenRemovalListener
+vtable for RNScreens::RNScreensTurboModule
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__function_type_info
+vtable for __cxxabiv1::__pointer_type_info
+vtable for __cxxabiv1::__si_class_type_info
+vtable for rnscreens::NativeProxy
+vtable for std::__ndk1::__function::__func<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long), std::__ndk1::allocator<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>
+vtable for std::__ndk1::__shared_ptr_emplace<RNSScreenRemovalListener, std::__ndk1::allocator<RNSScreenRemovalListener>>
+vtable for std::__ndk1::__shared_ptr_emplace<RNScreens::RNScreensTurboModule, std::__ndk1::allocator<RNScreens::RNScreensTurboModule>>
+vtable for std::__ndk1::bad_function_call
+vtable for std::length_error
+xmm0
+xmm1
+xmm10
+xmm11
+xmm12
+xmm13
+xmm14
+xmm15
+xmm2
+xmm3
+xmm4
+xmm5
+xmm6
+xmm7
+xmm8
+xmm9

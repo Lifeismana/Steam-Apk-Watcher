@@ -1,0 +1,562 @@
+()Ljava/util/Map;
+/home/buildbot/.gradle/caches/8.10.2/transforms/822d2eaaa049d7113c67a1952816911c/transformed/react-android-0.76.9-release/prefab/modules/reactnative/include/react/renderer/core/propsConversions.h
+0CN8facebook5react20RNCSafeAreaViewPropsE
+?N8facebook5react27ConcreteComponentDescriptorINS0_22ConcreteViewShadowNodeIXadsoKcL_ZNS0_32RNCSafeAreaProviderComponentNameEEEENS0_24RNCSafeAreaProviderPropsENS0_31RNCSafeAreaProviderEventEmitterENS0_24RNCSafeAreaProviderStateELb0EEEEE
+?NSt6__ndk120__shared_ptr_emplaceIN8facebook5react22ConcreteViewShadowNodeIXadsoKcL_ZNS2_32RNCSafeAreaProviderComponentNameEEEENS2_24RNCSafeAreaProviderPropsENS2_31RNCSafeAreaProviderEventEmitterENS2_24RNCSafeAreaProviderStateELb0EEENS_9allocatorIS8_EEEE
+@@RNCSafeAreaConte
+Android (11349228, +pgo, +bolt, +lto, -mlgo, based on r487747e) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)
+CIE ID is not zero
+CIE start does not match
+CIE version is not 1 or 3
+Can't binary search on variable length encoded data.
+DWARF opcode not implemented
+DW_EH_PE_aligned pointer encoding not supported
+DW_EH_PE_datarel is invalid with a datarelBase of 0
+DW_EH_PE_funcrel pointer encoding not supported
+DW_EH_PE_textrel pointer encoding not supported
+DW_OP_deref_size with bad size
+DW_OP_fbreg not implemented
+DW_OP_piece not implemented
+Error while converting prop '
+FDE has zero length
+FDE is really a CIE
+LIBC
+Linker: LLD 17.0.2
+N5folly9TypeErrorE
+N8facebook5react11TurboModuleE
+N8facebook5react12EventEmitterE
+N8facebook5react13BaseViewPropsE
+N8facebook5react13ConcreteStateINS0_24RNCSafeAreaProviderStateELb0EEE
+N8facebook5react17TouchEventEmitterE
+N8facebook5react17YogaStylablePropsE
+N8facebook5react18AccessibilityPropsE
+N8facebook5react18ConcreteShadowNodeIXadsoKcL_ZNS0_32RNCSafeAreaProviderComponentNameEEEENS0_24YogaLayoutableShadowNodeENS0_24RNCSafeAreaProviderPropsENS0_31RNCSafeAreaProviderEventEmitterENS0_24RNCSafeAreaProviderStateELb0EEE
+N8facebook5react19ComponentDescriptorE
+N8facebook5react20BaseViewEventEmitterE
+N8facebook5react21HostPlatformViewPropsE
+N8facebook5react22ConcreteViewShadowNodeIXadsoKcL_ZNS0_32RNCSafeAreaProviderComponentNameEEEENS0_24RNCSafeAreaProviderPropsENS0_31RNCSafeAreaProviderEventEmitterENS0_24RNCSafeAreaProviderStateELb0EEE
+N8facebook5react22DebugStringConvertibleE
+N8facebook5react24RNCSafeAreaProviderPropsE
+N8facebook5react28NativeSafeAreaContextSpecJSIE
+N8facebook5react31NativeSafeAreaContextCxxSpecJSIE
+N8facebook5react31RNCSafeAreaProviderEventEmitterE
+N8facebook5react5PropsE
+N8facebook5react5StateE
+N8facebook5react8SealableE
+NSt6__ndk110__function6__baseIFN8facebook3jsi5ValueERNS3_7RuntimeEEEE
+NSt6__ndk110__function6__baseIFN8facebook3jsi5ValueERNS3_7RuntimeERKS4_PS7_jEEE
+NSt6__ndk110__function6__baseIFNS_10shared_ptrIKvEERKN8facebook5react24RNCSafeAreaProviderStateEEEE
+NSt6__ndk110__function6__baseIFNS_10shared_ptrIKvEERKS4_EEE
+NSt6__ndk110__function6__funcIZN8facebook5react11TurboModule6createERNS2_3jsi7RuntimeERKNS5_10PropNameIDEEUlS7_RKNS5_5ValueEPSC_jE_NS_9allocatorISF_EEFSB_S7_SD_SE_jEEE
+NSt6__ndk110__function6__funcIZNK8facebook5react13ConcreteStateINS3_24RNCSafeAreaProviderStateELb0EE11updateStateENS_8functionIFNS_10shared_ptrIKvEERKS5_EEEEUlRKSA_E_NS_9allocatorISH_EEFSA_SG_EEE
+NSt6__ndk110__function6__funcIZNK8facebook5react13ConcreteStateINS3_24RNCSafeAreaProviderStateELb0EE11updateStateEOS5_EUlRKS5_E_NS_9allocatorISA_EEFNS_10shared_ptrIKvEES9_EEE
+NSt6__ndk110__function6__funcIZNK8facebook5react31RNCSafeAreaProviderEventEmitter14onInsetsChangeENS4_14OnInsetsChangeEE3$_0NS_9allocatorIS6_EEFNS2_3jsi5ValueERNS9_7RuntimeEEEE
+NSt6__ndk117bad_function_callE
+NSt6__ndk120__shared_ptr_emplaceIKN8facebook5react13ConcreteStateINS2_24RNCSafeAreaProviderStateELb0EEENS_9allocatorIS6_EEEE
+NSt6__ndk120__shared_ptr_emplaceIKN8facebook5react24RNCSafeAreaProviderPropsENS_9allocatorIS4_EEEE
+NSt6__ndk120__shared_ptr_emplaceIKN8facebook5react24RNCSafeAreaProviderStateENS_9allocatorIS4_EEEE
+NSt6__ndk120__shared_ptr_emplaceIKN8facebook5react31RNCSafeAreaProviderEventEmitterENS_9allocatorIS4_EEEE
+NSt6__ndk120__shared_ptr_emplaceIN8facebook5react11EventTargetENS_9allocatorIS3_EEEE
+NSt6__ndk120__shared_ptr_emplaceIN8facebook5react13ConcreteStateINS2_24RNCSafeAreaProviderStateELb0EEENS_9allocatorIS5_EEEE
+NSt6__ndk120__shared_ptr_emplaceIN8facebook5react16ShadowNodeFamilyENS_9allocatorIS3_EEEE
+NSt6__ndk120__shared_ptr_emplaceIN8facebook5react20BaseViewEventEmitter16LayoutEventStateENS_9allocatorIS4_EEEE
+NSt6__ndk120__shared_ptr_emplaceIN8facebook5react24RNCSafeAreaProviderPropsENS_9allocatorIS3_EEEE
+NSt6__ndk120__shared_ptr_emplaceIN8facebook5react28NativeSafeAreaContextSpecJSIENS_9allocatorIS3_EEEE
+ORNCSafeAreaView
+RNCSafeAreaContext
+RNCSafeAreaProvider
+Unknown DWARF encoding for search table.
+VTT for facebook::react::BaseViewProps
+VTT for facebook::react::HostPlatformViewProps
+VTT for facebook::react::RNCSafeAreaProviderProps
+VTT for facebook::react::RNCSafeAreaViewProps
+ZN8facebook5react11TurboModule6createERNS_3jsi7RuntimeERKNS2_10PropNameIDEEUlS4_RKNS2_5ValueEPS9_jE_
+ZNK8facebook5react13ConcreteStateINS0_24RNCSafeAreaProviderStateELb0EE11updateStateENSt6__ndk18functionIFNS4_10shared_ptrIKvEERKS2_EEEEUlRKS8_E_
+ZNK8facebook5react13ConcreteStateINS0_24RNCSafeAreaProviderStateELb0EE11updateStateEOS2_EUlRKS2_E_
+ZNK8facebook5react31RNCSafeAreaProviderEventEmitter14onInsetsChangeENS1_14OnInsetsChangeEE3$_0
+_Unwind_Resume
+_Unwind_Resume() can't return
+_ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC2B7v170000IDnEEPKc
+__cxa_allocate_exception
+__cxa_atexit
+__cxa_begin_catch
+__cxa_end_catch
+__cxa_finalize
+__cxa_free_exception
+__cxa_guard_abort
+__cxa_guard_acquire
+__cxa_guard_release
+__cxa_pure_virtual
+__cxa_throw
+__gxx_personality_v0
+__register_atfork
+__stack_chk_fail
+abort
+basic_string
+bottom
+ceilf
+construction vtable for facebook::react::BaseViewProps-in-facebook::react::HostPlatformViewProps
+construction vtable for facebook::react::BaseViewProps-in-facebook::react::RNCSafeAreaProviderProps
+construction vtable for facebook::react::BaseViewProps-in-facebook::react::RNCSafeAreaViewProps
+construction vtable for facebook::react::HostPlatformViewProps-in-facebook::react::RNCSafeAreaProviderProps
+construction vtable for facebook::react::HostPlatformViewProps-in-facebook::react::RNCSafeAreaViewProps
+construction vtable for facebook::react::Props-in-facebook::react::BaseViewProps
+construction vtable for facebook::react::Props-in-facebook::react::HostPlatformViewProps
+construction vtable for facebook::react::Props-in-facebook::react::RNCSafeAreaProviderProps
+construction vtable for facebook::react::Props-in-facebook::react::RNCSafeAreaViewProps
+construction vtable for facebook::react::Props-in-facebook::react::YogaStylableProps
+construction vtable for facebook::react::YogaStylableProps-in-facebook::react::BaseViewProps
+construction vtable for facebook::react::YogaStylableProps-in-facebook::react::HostPlatformViewProps
+construction vtable for facebook::react::YogaStylableProps-in-facebook::react::RNCSafeAreaProviderProps
+construction vtable for facebook::react::YogaStylableProps-in-facebook::react::RNCSafeAreaViewProps
+dl_iterate_phdr
+during phase1 personality function said it would stop here, but now in phase2 it did not stop here
+edges
+evaluateExpression
+facebook::jsi::HostObject::set(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&, facebook::jsi::Value const&)
+facebook::jsi::HostObject::~HostObject()
+facebook::jsi::NativeState::~NativeState()
+facebook::jsi::Value::Value(facebook::jsi::Runtime&, facebook::jsi::Value const&)
+facebook::jsi::Value::asObject(facebook::jsi::Runtime&) &&
+facebook::jsi::Value::~Value()
+facebook::react::AccessibilityProps::~AccessibilityProps()
+facebook::react::BaseViewEventEmitter::~BaseViewEventEmitter()
+facebook::react::BaseViewProps::BaseViewProps()
+facebook::react::BaseViewProps::resolveTransform(facebook::react::LayoutMetrics const&) const
+facebook::react::BaseViewProps::~BaseViewProps()
+facebook::react::ComponentDescriptor::ComponentDescriptor(facebook::react::ComponentDescriptorParameters const&)
+facebook::react::ComponentDescriptor::~ComponentDescriptor()
+facebook::react::ComponentDescriptorProvider::~ComponentDescriptorProvider()
+facebook::react::ComponentDescriptorProviderRegistry::add(facebook::react::ComponentDescriptorProvider const&) const
+facebook::react::ConcreteComponentDescriptor<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>>::adopt(facebook::react::ShadowNode&) const
+facebook::react::ConcreteComponentDescriptor<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>>::appendChild(std::__ndk1::shared_ptr<facebook::react::ShadowNode const> const&, std::__ndk1::shared_ptr<facebook::react::ShadowNode const> const&) const
+facebook::react::ConcreteComponentDescriptor<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>>::cloneProps(facebook::react::PropsParserContext const&, std::__ndk1::shared_ptr<facebook::react::Props const> const&, facebook::react::RawProps) const
+facebook::react::ConcreteComponentDescriptor<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>>::cloneShadowNode(facebook::react::ShadowNode const&, facebook::react::ShadowNodeFragment const&) const
+facebook::react::ConcreteComponentDescriptor<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>>::createFamily(facebook::react::ShadowNodeFamilyFragment const&) const
+facebook::react::ConcreteComponentDescriptor<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>>::createInitialState(std::__ndk1::shared_ptr<facebook::react::Props const> const&, std::__ndk1::shared_ptr<facebook::react::ShadowNodeFamily const> const&) const
+facebook::react::ConcreteComponentDescriptor<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>>::createShadowNode(facebook::react::ShadowNodeFragment const&, std::__ndk1::shared_ptr<facebook::react::ShadowNodeFamily const> const&) const
+facebook::react::ConcreteComponentDescriptor<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>>::createState(facebook::react::ShadowNodeFamily const&, std::__ndk1::shared_ptr<void const> const&) const
+facebook::react::ConcreteComponentDescriptor<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>>::getComponentHandle() const
+facebook::react::ConcreteComponentDescriptor<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>>::getComponentName() const
+facebook::react::ConcreteComponentDescriptor<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>>::getTraits() const
+facebook::react::ConcreteComponentDescriptor<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>>::~ConcreteComponentDescriptor()
+facebook::react::ConcreteShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::YogaLayoutableShadowNode, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>::Props(facebook::react::PropsParserContext const&, facebook::react::RawProps const&, std::__ndk1::shared_ptr<facebook::react::Props const> const&)
+facebook::react::ConcreteShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::YogaLayoutableShadowNode, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>::defaultSharedProps()::defaultSharedProps
+facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::getDynamic() const
+facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::getMapBuffer() const
+facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(folly::dynamic&&) const
+facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(std::__ndk1::function<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>) const
+facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::~ConcreteState()
+facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>::canBeTouchTarget() const
+facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>::canChildrenBeTouchTarget() const
+facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>::getTransform() const
+facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>::~ConcreteViewShadowNode()
+facebook::react::CoreFeatures::enablePropIteratorSetter
+facebook::react::EventEmitter::EventEmitter(std::__ndk1::shared_ptr<facebook::react::EventTarget const>, std::__ndk1::weak_ptr<facebook::react::EventDispatcher const>)
+facebook::react::EventEmitter::dispatchEvent(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::function<facebook::jsi::Value (facebook::jsi::Runtime&)> const&, facebook::react::RawEvent::Category) const
+facebook::react::EventEmitter::~EventEmitter()
+facebook::react::EventTarget::EventTarget(std::__ndk1::shared_ptr<facebook::react::InstanceHandle const>, int)
+facebook::react::HostPlatformViewProps::HostPlatformViewProps(facebook::react::PropsParserContext const&, facebook::react::HostPlatformViewProps const&, facebook::react::RawProps const&)
+facebook::react::HostPlatformViewProps::setProp(facebook::react::PropsParserContext const&, unsigned int, char const*, facebook::react::RawValue const&)
+facebook::react::HostPlatformViewProps::~HostPlatformViewProps()
+facebook::react::JavaTurboModule::JavaTurboModule(facebook::react::JavaTurboModule::InitParams const&)
+facebook::react::JavaTurboModule::invokeJavaMethod(facebook::jsi::Runtime&, facebook::react::TurboModuleMethodValueKind, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, facebook::jsi::Value const*, unsigned int, _jmethodID*&)
+facebook::react::JavaTurboModule::~JavaTurboModule()
+facebook::react::LayoutableShadowNode::baseline(facebook::react::LayoutContext const&, facebook::react::Size) const
+facebook::react::LayoutableShadowNode::getContentOriginOffset(bool) const
+facebook::react::LayoutableShadowNode::getLayoutMetrics() const
+facebook::react::LayoutableShadowNode::measure(facebook::react::LayoutContext const&, facebook::react::LayoutConstraints const&) const
+facebook::react::LayoutableShadowNode::measureContent(facebook::react::LayoutContext const&, facebook::react::LayoutConstraints const&) const
+facebook::react::MapBufferBuilder::EMPTY()
+facebook::react::NativeSafeAreaContextCxxSpecJSI::NativeSafeAreaContextCxxSpecJSI(std::__ndk1::shared_ptr<facebook::react::CallInvoker>)
+facebook::react::NativeSafeAreaContextCxxSpecJSI::~NativeSafeAreaContextCxxSpecJSI()
+facebook::react::NativeSafeAreaContextSpecJSI::NativeSafeAreaContextSpecJSI(facebook::react::JavaTurboModule::InitParams const&)
+facebook::react::NativeSafeAreaContextSpecJSI::~NativeSafeAreaContextSpecJSI()
+facebook::react::Props::getDiffProps(facebook::react::Props const*) const
+facebook::react::Props::~Props()
+facebook::react::RNCSafeAreaProviderComponentName
+facebook::react::RNCSafeAreaProviderEventEmitter::onInsetsChange(facebook::react::RNCSafeAreaProviderEventEmitter::OnInsetsChange) const
+facebook::react::RNCSafeAreaProviderEventEmitter::~RNCSafeAreaProviderEventEmitter()
+facebook::react::RNCSafeAreaProviderProps::RNCSafeAreaProviderProps(facebook::react::PropsParserContext const&, facebook::react::RNCSafeAreaProviderProps const&, facebook::react::RawProps const&)
+facebook::react::RNCSafeAreaProviderProps::~RNCSafeAreaProviderProps()
+facebook::react::RNCSafeAreaViewComponentName
+facebook::react::RNCSafeAreaViewEdgesStruct facebook::react::convertRawProp<facebook::react::RNCSafeAreaViewEdgesStruct, facebook::react::RNCSafeAreaViewEdgesStruct>(facebook::react::PropsParserContext const&, facebook::react::RawProps const&, char const*, facebook::react::RNCSafeAreaViewEdgesStruct const&, facebook::react::RNCSafeAreaViewEdgesStruct const&, char const*, char const*)
+facebook::react::RNCSafeAreaViewEdgesStruct::RNCSafeAreaViewEdgesStruct(facebook::react::RNCSafeAreaViewEdgesStruct const&)
+facebook::react::RNCSafeAreaViewEdgesStruct::~RNCSafeAreaViewEdgesStruct()
+facebook::react::RNCSafeAreaViewMode facebook::react::convertRawProp<facebook::react::RNCSafeAreaViewMode, facebook::react::RNCSafeAreaViewMode>(facebook::react::PropsParserContext const&, facebook::react::RawProps const&, char const*, facebook::react::RNCSafeAreaViewMode const&, facebook::react::RNCSafeAreaViewMode const&, char const*, char const*)
+facebook::react::RNCSafeAreaViewProps::RNCSafeAreaViewProps(facebook::react::PropsParserContext const&, facebook::react::RNCSafeAreaViewProps const&, facebook::react::RawProps const&)
+facebook::react::RNCSafeAreaViewProps::~RNCSafeAreaViewProps()
+facebook::react::RNCSafeAreaViewShadowNode::adjustLayoutWithState()
+facebook::react::RNCSafeAreaViewState::getDynamic() const
+facebook::react::RawProps::RawProps()
+facebook::react::RawProps::at(char const*, char const*, char const*) const
+facebook::react::RawProps::isEmpty() const
+facebook::react::RawProps::parse(facebook::react::RawPropsParser const&)
+facebook::react::RawPropsKey::operator std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>() const
+facebook::react::RawPropsParser::postPrepare()
+facebook::react::ShadowNode::getState() const
+facebook::react::ShadowNode::transferRuntimeShadowNodeReference(std::__ndk1::shared_ptr<facebook::react::ShadowNode const> const&, facebook::react::ShadowNodeFragment const&) const
+facebook::react::ShadowNode::~ShadowNode()
+facebook::react::ShadowNodeFamily::ShadowNodeFamily(facebook::react::ShadowNodeFamilyFragment const&, std::__ndk1::shared_ptr<facebook::react::EventEmitter const>, std::__ndk1::weak_ptr<facebook::react::EventDispatcher const>, facebook::react::ComponentDescriptor const&)
+facebook::react::ShadowNodeFamily::dispatchRawState(facebook::react::StateUpdate&&) const
+facebook::react::ShadowNodeFamily::getMostRecentState() const
+facebook::react::ShadowNodeFamily::~ShadowNodeFamily()
+facebook::react::State::State(std::__ndk1::shared_ptr<void const>, facebook::react::State const&)
+facebook::react::State::State(std::__ndk1::shared_ptr<void const>, std::__ndk1::shared_ptr<facebook::react::ShadowNodeFamily const> const&)
+facebook::react::State::~State()
+facebook::react::StateUpdate::~StateUpdate()
+facebook::react::TurboModule::TurboModule(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::CallInvoker>)
+facebook::react::TurboModule::create(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)
+facebook::react::TurboModule::get(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)
+facebook::react::TurboModule::getPropertyNames(facebook::jsi::Runtime&)
+facebook::react::TurboModule::~TurboModule()
+facebook::react::YogaLayoutableShadowNode::YogaLayoutableShadowNode(facebook::react::ShadowNode const&, facebook::react::ShadowNodeFragment const&)
+facebook::react::YogaLayoutableShadowNode::YogaLayoutableShadowNode(facebook::react::ShadowNodeFragment const&, std::__ndk1::shared_ptr<facebook::react::ShadowNodeFamily const> const&, facebook::react::ShadowNodeTraits)
+facebook::react::YogaLayoutableShadowNode::appendChild(std::__ndk1::shared_ptr<facebook::react::ShadowNode const> const&)
+facebook::react::YogaLayoutableShadowNode::cleanLayout()
+facebook::react::YogaLayoutableShadowNode::dirtyLayout()
+facebook::react::YogaLayoutableShadowNode::filterRawProps(facebook::react::RawProps&)
+facebook::react::YogaLayoutableShadowNode::getIsLayoutClean() const
+facebook::react::YogaLayoutableShadowNode::layout(facebook::react::LayoutContext)
+facebook::react::YogaLayoutableShadowNode::layoutTree(facebook::react::LayoutContext, facebook::react::LayoutConstraints)
+facebook::react::YogaLayoutableShadowNode::replaceChild(facebook::react::ShadowNode const&, std::__ndk1::shared_ptr<facebook::react::ShadowNode const> const&, unsigned int)
+facebook::react::YogaLayoutableShadowNode::~YogaLayoutableShadowNode()
+facebook::react::YogaStylableProps::~YogaStylableProps()
+facebook::react::safeareacontext_ModuleProvider(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, facebook::react::JavaTurboModule::InitParams const&)
+facebook::react::safeareacontext_registerComponentDescriptorsFromCodegen(std::__ndk1::shared_ptr<facebook::react::ComponentDescriptorProviderRegistry const>)
+facebook::yoga::Node::setDirty(bool)
+facebook::yoga::SmallValueBuffer<4u>::Overflow::Overflow(facebook::yoga::SmallValueBuffer<4u>::Overflow const&)
+facebook::yoga::SmallValueBuffer<4u>::operator=(facebook::yoga::SmallValueBuffer<4u> const&)
+facebook::yoga::SmallValueBuffer<4u>::push(unsigned int)
+facebook::yoga::Style::~Style()
+facebook::yoga::StyleValuePool::getLength(facebook::yoga::StyleValueHandle) const
+facebook::yoga::StyleValuePool::storeValue(facebook::yoga::StyleValueHandle&, float, facebook::yoga::StyleValueHandle::Type)
+fflush
+folly::TypeError::TypeError(folly::TypeError&&)
+folly::TypeError::TypeError(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, folly::dynamic::Type)
+folly::TypeError::~TypeError()
+folly::dynamic::TypeInfo<folly::dynamic::ObjectImpl>::name
+folly::dynamic::TypeInfo<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>::name
+folly::dynamic::destroy()
+folly::dynamic::dynamic(folly::dynamic const&)
+folly::dynamic::dynamic(folly::dynamic&&)
+folly::dynamic::operator=(folly::dynamic const&)
+folly::dynamic::operator=(folly::dynamic&&)
+folly::dynamic::operator[](folly::Range<char const*>) &
+fprintf
+frame
+free
+fwrite
+getEncodedP
+getFloatRegister
+getRegister
+getSLEB128
+getSavedRegister
+getTableEntrySize
+getULEB128
+google::LogMessage::LogMessage(char const*, int, int)
+google::LogMessage::stream()
+google::LogMessage::~LogMessage()
+guard variable for facebook::react::ConcreteShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::YogaLayoutableShadowNode, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>::defaultSharedProps()::defaultSharedProps
+height
+insets
+left
+libc++_shared.so
+libc.so
+libdl.so
+libfbjni.so
+libjsi.so
+libm.so
+libreact_codegen_safeareacontext.so
+libreactnative.so
+libunwind: %s - %s\n
+libunwind: malformed DW_CFA_GNU_negative_offset_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa_register DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa_sf DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_expression DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_offset DWARF unwind, reg (%llu) out of range\n
+libunwind: malformed DW_CFA_offset_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_offset_extended_sf DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_register DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_register DWARF unwind, reg2 too big\n
+libunwind: malformed DW_CFA_restore DWARF unwind, reg (%llu) out of range\n
+libunwind: malformed DW_CFA_restore_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_same_value DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_undefined DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_val_expression DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_val_offset DWARF unwind, reg (%llu) out of range\n\n
+libunwind: malformed DW_CFA_val_offset_sf DWARF unwind, reg too big\n
+libunwind: unsupported .eh_frame_hdr version: %u at %llx\n
+malformed uleb128 expression
+malloc
+margin
+memcmp
+memcpy
+memmove
+memset
+mode
+no x86 float registers
+operator delete(void*)
+operator new(unsigned int)
+pthread_rwlock_rdlock
+pthread_rwlock_unlock
+pthread_rwlock_wrlock
+right
+setFloatRegister
+setRegister
+std::__ndk1::__function::__func<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(facebook::react::RNCSafeAreaProviderState&&) const::'lambda'(facebook::react::RNCSafeAreaProviderState const&), std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(facebook::react::RNCSafeAreaProviderState&&) const::'lambda'(facebook::react::RNCSafeAreaProviderState const&)>, std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>::__clone() const
+std::__ndk1::__function::__func<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(facebook::react::RNCSafeAreaProviderState&&) const::'lambda'(facebook::react::RNCSafeAreaProviderState const&), std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(facebook::react::RNCSafeAreaProviderState&&) const::'lambda'(facebook::react::RNCSafeAreaProviderState const&)>, std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>::__clone(std::__ndk1::__function::__base<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>*) const
+std::__ndk1::__function::__func<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(facebook::react::RNCSafeAreaProviderState&&) const::'lambda'(facebook::react::RNCSafeAreaProviderState const&), std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(facebook::react::RNCSafeAreaProviderState&&) const::'lambda'(facebook::react::RNCSafeAreaProviderState const&)>, std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>::destroy()
+std::__ndk1::__function::__func<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(facebook::react::RNCSafeAreaProviderState&&) const::'lambda'(facebook::react::RNCSafeAreaProviderState const&), std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(facebook::react::RNCSafeAreaProviderState&&) const::'lambda'(facebook::react::RNCSafeAreaProviderState const&)>, std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>::destroy_deallocate()
+std::__ndk1::__function::__func<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(facebook::react::RNCSafeAreaProviderState&&) const::'lambda'(facebook::react::RNCSafeAreaProviderState const&), std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(facebook::react::RNCSafeAreaProviderState&&) const::'lambda'(facebook::react::RNCSafeAreaProviderState const&)>, std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>::operator()(facebook::react::RNCSafeAreaProviderState const&)
+std::__ndk1::__function::__func<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(facebook::react::RNCSafeAreaProviderState&&) const::'lambda'(facebook::react::RNCSafeAreaProviderState const&), std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(facebook::react::RNCSafeAreaProviderState&&) const::'lambda'(facebook::react::RNCSafeAreaProviderState const&)>, std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>::target(std::type_info const&) const
+std::__ndk1::__function::__func<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(facebook::react::RNCSafeAreaProviderState&&) const::'lambda'(facebook::react::RNCSafeAreaProviderState const&), std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(facebook::react::RNCSafeAreaProviderState&&) const::'lambda'(facebook::react::RNCSafeAreaProviderState const&)>, std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>::target_type() const
+std::__ndk1::__function::__func<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(facebook::react::RNCSafeAreaProviderState&&) const::'lambda'(facebook::react::RNCSafeAreaProviderState const&), std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(facebook::react::RNCSafeAreaProviderState&&) const::'lambda'(facebook::react::RNCSafeAreaProviderState const&)>, std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>::~__func()
+std::__ndk1::__function::__func<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(std::__ndk1::function<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>) const::'lambda'(std::__ndk1::shared_ptr<void const> const&), std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(std::__ndk1::function<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>) const::'lambda'(std::__ndk1::shared_ptr<void const> const&)>, std::__ndk1::shared_ptr<void const> (std::__ndk1::shared_ptr<void const> const&)>::__clone() const
+std::__ndk1::__function::__func<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(std::__ndk1::function<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>) const::'lambda'(std::__ndk1::shared_ptr<void const> const&), std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(std::__ndk1::function<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>) const::'lambda'(std::__ndk1::shared_ptr<void const> const&)>, std::__ndk1::shared_ptr<void const> (std::__ndk1::shared_ptr<void const> const&)>::__clone(std::__ndk1::__function::__base<std::__ndk1::shared_ptr<void const> (std::__ndk1::shared_ptr<void const> const&)>*) const
+std::__ndk1::__function::__func<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(std::__ndk1::function<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>) const::'lambda'(std::__ndk1::shared_ptr<void const> const&), std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(std::__ndk1::function<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>) const::'lambda'(std::__ndk1::shared_ptr<void const> const&)>, std::__ndk1::shared_ptr<void const> (std::__ndk1::shared_ptr<void const> const&)>::destroy()
+std::__ndk1::__function::__func<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(std::__ndk1::function<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>) const::'lambda'(std::__ndk1::shared_ptr<void const> const&), std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(std::__ndk1::function<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>) const::'lambda'(std::__ndk1::shared_ptr<void const> const&)>, std::__ndk1::shared_ptr<void const> (std::__ndk1::shared_ptr<void const> const&)>::destroy_deallocate()
+std::__ndk1::__function::__func<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(std::__ndk1::function<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>) const::'lambda'(std::__ndk1::shared_ptr<void const> const&), std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(std::__ndk1::function<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>) const::'lambda'(std::__ndk1::shared_ptr<void const> const&)>, std::__ndk1::shared_ptr<void const> (std::__ndk1::shared_ptr<void const> const&)>::operator()(std::__ndk1::shared_ptr<void const> const&)
+std::__ndk1::__function::__func<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(std::__ndk1::function<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>) const::'lambda'(std::__ndk1::shared_ptr<void const> const&), std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(std::__ndk1::function<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>) const::'lambda'(std::__ndk1::shared_ptr<void const> const&)>, std::__ndk1::shared_ptr<void const> (std::__ndk1::shared_ptr<void const> const&)>::target(std::type_info const&) const
+std::__ndk1::__function::__func<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(std::__ndk1::function<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>) const::'lambda'(std::__ndk1::shared_ptr<void const> const&), std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(std::__ndk1::function<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>) const::'lambda'(std::__ndk1::shared_ptr<void const> const&)>, std::__ndk1::shared_ptr<void const> (std::__ndk1::shared_ptr<void const> const&)>::target_type() const
+std::__ndk1::__function::__func<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(std::__ndk1::function<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>) const::'lambda'(std::__ndk1::shared_ptr<void const> const&), std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(std::__ndk1::function<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>) const::'lambda'(std::__ndk1::shared_ptr<void const> const&)>, std::__ndk1::shared_ptr<void const> (std::__ndk1::shared_ptr<void const> const&)>::~__func()
+std::__ndk1::__function::__func<facebook::react::TurboModule::create(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)::'lambda'(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int), std::__ndk1::allocator<facebook::react::TurboModule::create(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)::'lambda'(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>::__clone() const
+std::__ndk1::__function::__func<facebook::react::TurboModule::create(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)::'lambda'(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int), std::__ndk1::allocator<facebook::react::TurboModule::create(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)::'lambda'(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>::__clone(std::__ndk1::__function::__base<facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>*) const
+std::__ndk1::__function::__func<facebook::react::TurboModule::create(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)::'lambda'(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int), std::__ndk1::allocator<facebook::react::TurboModule::create(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)::'lambda'(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>::destroy()
+std::__ndk1::__function::__func<facebook::react::TurboModule::create(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)::'lambda'(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int), std::__ndk1::allocator<facebook::react::TurboModule::create(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)::'lambda'(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>::destroy_deallocate()
+std::__ndk1::__function::__func<facebook::react::TurboModule::create(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)::'lambda'(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int), std::__ndk1::allocator<facebook::react::TurboModule::create(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)::'lambda'(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>::operator()(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*&&, unsigned int&&)
+std::__ndk1::__function::__func<facebook::react::TurboModule::create(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)::'lambda'(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int), std::__ndk1::allocator<facebook::react::TurboModule::create(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)::'lambda'(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>::target(std::type_info const&) const
+std::__ndk1::__function::__func<facebook::react::TurboModule::create(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)::'lambda'(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int), std::__ndk1::allocator<facebook::react::TurboModule::create(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)::'lambda'(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>::target_type() const
+std::__ndk1::__function::__func<facebook::react::TurboModule::create(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)::'lambda'(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int), std::__ndk1::allocator<facebook::react::TurboModule::create(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)::'lambda'(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>::~__func()
+std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::RawValue>, void*>*> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::RawValue>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::RawValue>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::RawValue>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::RawValue>>>::find<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::TurboModule::MethodMetadata>, void*>*> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::TurboModule::MethodMetadata>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::TurboModule::MethodMetadata>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::TurboModule::MethodMetadata>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::TurboModule::MethodMetadata>>>::find<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::IAsyncEventEmitter>>, void*>*> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::IAsyncEventEmitter>>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::IAsyncEventEmitter>>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::IAsyncEventEmitter>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::IAsyncEventEmitter>>>>::find<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::IAsyncEventEmitter>>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::IAsyncEventEmitter>>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::IAsyncEventEmitter>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::IAsyncEventEmitter>>>>::~__hash_table()
+std::__ndk1::__next_prime(unsigned int)
+std::__ndk1::__shared_mutex_base::__shared_mutex_base()
+std::__ndk1::__shared_ptr_emplace<facebook::react::BaseViewEventEmitter::LayoutEventState, std::__ndk1::allocator<facebook::react::BaseViewEventEmitter::LayoutEventState>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<facebook::react::BaseViewEventEmitter::LayoutEventState, std::__ndk1::allocator<facebook::react::BaseViewEventEmitter::LayoutEventState>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<facebook::react::BaseViewEventEmitter::LayoutEventState, std::__ndk1::allocator<facebook::react::BaseViewEventEmitter::LayoutEventState>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false> const, std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false> const>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false> const, std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false> const>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false> const, std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false> const>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>, std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>, std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>, std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>, std::__ndk1::allocator<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>, std::__ndk1::allocator<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>, std::__ndk1::allocator<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<facebook::react::EventTarget, std::__ndk1::allocator<facebook::react::EventTarget>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<facebook::react::EventTarget, std::__ndk1::allocator<facebook::react::EventTarget>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<facebook::react::EventTarget, std::__ndk1::allocator<facebook::react::EventTarget>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<facebook::react::NativeSafeAreaContextSpecJSI, std::__ndk1::allocator<facebook::react::NativeSafeAreaContextSpecJSI>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<facebook::react::NativeSafeAreaContextSpecJSI, std::__ndk1::allocator<facebook::react::NativeSafeAreaContextSpecJSI>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<facebook::react::NativeSafeAreaContextSpecJSI, std::__ndk1::allocator<facebook::react::NativeSafeAreaContextSpecJSI>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<facebook::react::RNCSafeAreaProviderEventEmitter const, std::__ndk1::allocator<facebook::react::RNCSafeAreaProviderEventEmitter const>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<facebook::react::RNCSafeAreaProviderEventEmitter const, std::__ndk1::allocator<facebook::react::RNCSafeAreaProviderEventEmitter const>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<facebook::react::RNCSafeAreaProviderEventEmitter const, std::__ndk1::allocator<facebook::react::RNCSafeAreaProviderEventEmitter const>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<facebook::react::RNCSafeAreaProviderProps const, std::__ndk1::allocator<facebook::react::RNCSafeAreaProviderProps const>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<facebook::react::RNCSafeAreaProviderProps const, std::__ndk1::allocator<facebook::react::RNCSafeAreaProviderProps const>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<facebook::react::RNCSafeAreaProviderProps const, std::__ndk1::allocator<facebook::react::RNCSafeAreaProviderProps const>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<facebook::react::RNCSafeAreaProviderProps, std::__ndk1::allocator<facebook::react::RNCSafeAreaProviderProps>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<facebook::react::RNCSafeAreaProviderProps, std::__ndk1::allocator<facebook::react::RNCSafeAreaProviderProps>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<facebook::react::RNCSafeAreaProviderProps, std::__ndk1::allocator<facebook::react::RNCSafeAreaProviderProps>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<facebook::react::RNCSafeAreaProviderState const, std::__ndk1::allocator<facebook::react::RNCSafeAreaProviderState const>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<facebook::react::RNCSafeAreaProviderState const, std::__ndk1::allocator<facebook::react::RNCSafeAreaProviderState const>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<facebook::react::RNCSafeAreaProviderState const, std::__ndk1::allocator<facebook::react::RNCSafeAreaProviderState const>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<facebook::react::ShadowNodeFamily, std::__ndk1::allocator<facebook::react::ShadowNodeFamily>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<facebook::react::ShadowNodeFamily, std::__ndk1::allocator<facebook::react::ShadowNodeFamily>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<facebook::react::ShadowNodeFamily, std::__ndk1::allocator<facebook::react::ShadowNodeFamily>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_weak_count::__get_deleter(std::type_info const&) const
+std::__ndk1::__shared_weak_count::__release_weak()
+std::__ndk1::__shared_weak_count::lock()
+std::__ndk1::__shared_weak_count::~__shared_weak_count()
+std::__ndk1::allocator<facebook::react::EventTarget> std::__ndk1::__shared_ptr_emplace<facebook::react::EventTarget, std::__ndk1::allocator<facebook::react::EventTarget>>::__shared_ptr_emplace[abi:v170000]<std::__ndk1::shared_ptr<facebook::react::InstanceHandle const> const&, int const&>(std::__ndk1::shared_ptr<facebook::react::InstanceHandle const> const&, int const&)
+std::__ndk1::bad_function_call::~bad_function_call()
+std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::sentry::sentry(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>&)
+std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::sentry::~sentry()
+std::__ndk1::condition_variable::~condition_variable()
+std::__ndk1::ctype<char>::id
+std::__ndk1::enable_if<__is_cpp17_forward_iterator<std::__ndk1::__bit_iterator<std::__ndk1::vector<bool, std::__ndk1::allocator<bool>>, false, 0u>>::value, void>::type std::__ndk1::vector<bool, std::__ndk1::allocator<bool>>::__construct_at_end<std::__ndk1::__bit_iterator<std::__ndk1::vector<bool, std::__ndk1::allocator<bool>>, false, 0u>>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
+std::__ndk1::enable_if<__is_cpp17_forward_iterator<std::__ndk1::__bit_iterator<std::__ndk1::vector<bool, std::__ndk1::allocator<bool>>, true, 0u>>::value, void>::type std::__ndk1::vector<bool, std::__ndk1::allocator<bool>>::__construct_at_end<std::__ndk1::__bit_iterator<std::__ndk1::vector<bool, std::__ndk1::allocator<bool>>, true, 0u>>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
+std::__ndk1::ios_base::__set_badbit_and_consider_rethrow()
+std::__ndk1::ios_base::clear(unsigned int)
+std::__ndk1::ios_base::getloc() const
+std::__ndk1::locale::use_facet(std::__ndk1::locale::id&) const
+std::__ndk1::locale::~locale()
+std::__ndk1::mutex::~mutex()
+std::__ndk1::pair<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::RawValue>, void*>*>, bool> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::RawValue>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::RawValue>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::RawValue>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::RawValue>>>::__emplace_unique_key_args<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&>, std::__ndk1::tuple<>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&>&&, std::__ndk1::tuple<>&&)
+std::__ndk1::pair<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::TurboModule::MethodMetadata>, void*>*>, bool> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::TurboModule::MethodMetadata>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::TurboModule::MethodMetadata>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::TurboModule::MethodMetadata>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::TurboModule::MethodMetadata>>>::__emplace_unique_key_args<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&&>, std::__ndk1::tuple<>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&&>&&, std::__ndk1::tuple<>&&)
+std::__ndk1::unique_ptr<facebook::react::ComponentDescriptor const, std::__ndk1::default_delete<facebook::react::ComponentDescriptor const>> facebook::react::concreteComponentDescriptorConstructor<facebook::react::ConcreteComponentDescriptor<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>>>(facebook::react::ComponentDescriptorParameters const&)
+std::__ndk1::unique_ptr<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::RawValue>, void*>, std::__ndk1::__hash_node_destructor<std::__ndk1::allocator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::RawValue>, void*>>>> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::RawValue>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::RawValue>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::RawValue>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::RawValue>>>::__construct_node_hash<std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&>, std::__ndk1::tuple<>>(unsigned int, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&>&&, std::__ndk1::tuple<>&&)
+std::__ndk1::unordered_map<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::RawValue, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, facebook::react::RawValue>>> facebook::react::RawValue::castValue<facebook::react::RawValue>(folly::dynamic const&, std::__ndk1::unordered_map<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::RawValue, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, facebook::react::RawValue>>>*)
+std::bad_array_new_length::bad_array_new_length()
+std::bad_array_new_length::~bad_array_new_length()
+std::exception::what() const
+std::exception::~exception()
+std::length_error::~length_error()
+std::logic_error::logic_error(char const*)
+std::out_of_range::~out_of_range()
+std::runtime_error::runtime_error(std::runtime_error const&)
+std::runtime_error::what() const
+std::runtime_error::~runtime_error()
+std::terminate()
+strlen
+truncated sleb128 expression
+truncated uleb128 expression
+typeinfo for facebook::jsi::HostObject
+typeinfo for facebook::react::AccessibilityProps
+typeinfo for facebook::react::BaseViewEventEmitter
+typeinfo for facebook::react::BaseViewProps
+typeinfo for facebook::react::ComponentDescriptor
+typeinfo for facebook::react::ConcreteComponentDescriptor<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>>
+typeinfo for facebook::react::ConcreteShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::YogaLayoutableShadowNode, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>
+typeinfo for facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>
+typeinfo for facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(facebook::react::RNCSafeAreaProviderState&&) const::'lambda'(facebook::react::RNCSafeAreaProviderState const&)
+typeinfo for facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(std::__ndk1::function<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>) const::'lambda'(std::__ndk1::shared_ptr<void const> const&)
+typeinfo for facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>
+typeinfo for facebook::react::DebugStringConvertible
+typeinfo for facebook::react::EventEmitter
+typeinfo for facebook::react::HostPlatformViewProps
+typeinfo for facebook::react::JavaTurboModule
+typeinfo for facebook::react::NativeSafeAreaContextCxxSpecJSI
+typeinfo for facebook::react::NativeSafeAreaContextSpecJSI
+typeinfo for facebook::react::Props
+typeinfo for facebook::react::RNCSafeAreaProviderEventEmitter
+typeinfo for facebook::react::RNCSafeAreaProviderProps
+typeinfo for facebook::react::RNCSafeAreaViewProps
+typeinfo for facebook::react::Sealable
+typeinfo for facebook::react::State
+typeinfo for facebook::react::TouchEventEmitter
+typeinfo for facebook::react::TurboModule
+typeinfo for facebook::react::TurboModule::create(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)::'lambda'(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)
+typeinfo for facebook::react::YogaLayoutableShadowNode
+typeinfo for facebook::react::YogaStylableProps
+typeinfo for folly::TypeError
+typeinfo for std::__ndk1::__function::__base<facebook::jsi::Value (facebook::jsi::Runtime&)>
+typeinfo for std::__ndk1::__function::__base<facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>
+typeinfo for std::__ndk1::__function::__base<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>
+typeinfo for std::__ndk1::__function::__base<std::__ndk1::shared_ptr<void const> (std::__ndk1::shared_ptr<void const> const&)>
+typeinfo for std::__ndk1::__function::__func<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(facebook::react::RNCSafeAreaProviderState&&) const::'lambda'(facebook::react::RNCSafeAreaProviderState const&), std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(facebook::react::RNCSafeAreaProviderState&&) const::'lambda'(facebook::react::RNCSafeAreaProviderState const&)>, std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>
+typeinfo for std::__ndk1::__function::__func<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(std::__ndk1::function<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>) const::'lambda'(std::__ndk1::shared_ptr<void const> const&), std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(std::__ndk1::function<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>) const::'lambda'(std::__ndk1::shared_ptr<void const> const&)>, std::__ndk1::shared_ptr<void const> (std::__ndk1::shared_ptr<void const> const&)>
+typeinfo for std::__ndk1::__function::__func<facebook::react::TurboModule::create(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)::'lambda'(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int), std::__ndk1::allocator<facebook::react::TurboModule::create(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)::'lambda'(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::BaseViewEventEmitter::LayoutEventState, std::__ndk1::allocator<facebook::react::BaseViewEventEmitter::LayoutEventState>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false> const, std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false> const>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>, std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>, std::__ndk1::allocator<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::EventTarget, std::__ndk1::allocator<facebook::react::EventTarget>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::NativeSafeAreaContextSpecJSI, std::__ndk1::allocator<facebook::react::NativeSafeAreaContextSpecJSI>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::RNCSafeAreaProviderEventEmitter const, std::__ndk1::allocator<facebook::react::RNCSafeAreaProviderEventEmitter const>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::RNCSafeAreaProviderProps const, std::__ndk1::allocator<facebook::react::RNCSafeAreaProviderProps const>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::RNCSafeAreaProviderProps, std::__ndk1::allocator<facebook::react::RNCSafeAreaProviderProps>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::RNCSafeAreaProviderState const, std::__ndk1::allocator<facebook::react::RNCSafeAreaProviderState const>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::ShadowNodeFamily, std::__ndk1::allocator<facebook::react::ShadowNodeFamily>>
+typeinfo for std::__ndk1::__shared_weak_count
+typeinfo for std::__ndk1::bad_function_call
+typeinfo for std::bad_array_new_length
+typeinfo for std::exception
+typeinfo for std::length_error
+typeinfo for std::out_of_range
+typeinfo for std::runtime_error
+typeinfo name for facebook::react::AccessibilityProps
+typeinfo name for facebook::react::BaseViewEventEmitter
+typeinfo name for facebook::react::BaseViewProps
+typeinfo name for facebook::react::ComponentDescriptor
+typeinfo name for facebook::react::ConcreteComponentDescriptor<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>>
+typeinfo name for facebook::react::ConcreteShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::YogaLayoutableShadowNode, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>
+typeinfo name for facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>
+typeinfo name for facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(facebook::react::RNCSafeAreaProviderState&&) const::'lambda'(facebook::react::RNCSafeAreaProviderState const&)
+typeinfo name for facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(std::__ndk1::function<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>) const::'lambda'(std::__ndk1::shared_ptr<void const> const&)
+typeinfo name for facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>
+typeinfo name for facebook::react::DebugStringConvertible
+typeinfo name for facebook::react::EventEmitter
+typeinfo name for facebook::react::HostPlatformViewProps
+typeinfo name for facebook::react::NativeSafeAreaContextCxxSpecJSI
+typeinfo name for facebook::react::NativeSafeAreaContextSpecJSI
+typeinfo name for facebook::react::Props
+typeinfo name for facebook::react::RNCSafeAreaProviderEventEmitter
+typeinfo name for facebook::react::RNCSafeAreaProviderProps
+typeinfo name for facebook::react::RNCSafeAreaViewProps
+typeinfo name for facebook::react::Sealable
+typeinfo name for facebook::react::State
+typeinfo name for facebook::react::TouchEventEmitter
+typeinfo name for facebook::react::TurboModule
+typeinfo name for facebook::react::TurboModule::create(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)::'lambda'(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)
+typeinfo name for facebook::react::YogaStylableProps
+typeinfo name for folly::TypeError
+typeinfo name for std::__ndk1::__function::__base<facebook::jsi::Value (facebook::jsi::Runtime&)>
+typeinfo name for std::__ndk1::__function::__base<facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>
+typeinfo name for std::__ndk1::__function::__base<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>
+typeinfo name for std::__ndk1::__function::__base<std::__ndk1::shared_ptr<void const> (std::__ndk1::shared_ptr<void const> const&)>
+typeinfo name for std::__ndk1::__function::__func<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(facebook::react::RNCSafeAreaProviderState&&) const::'lambda'(facebook::react::RNCSafeAreaProviderState const&), std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(facebook::react::RNCSafeAreaProviderState&&) const::'lambda'(facebook::react::RNCSafeAreaProviderState const&)>, std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>
+typeinfo name for std::__ndk1::__function::__func<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(std::__ndk1::function<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>) const::'lambda'(std::__ndk1::shared_ptr<void const> const&), std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(std::__ndk1::function<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>) const::'lambda'(std::__ndk1::shared_ptr<void const> const&)>, std::__ndk1::shared_ptr<void const> (std::__ndk1::shared_ptr<void const> const&)>
+typeinfo name for std::__ndk1::__function::__func<facebook::react::TurboModule::create(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)::'lambda'(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int), std::__ndk1::allocator<facebook::react::TurboModule::create(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)::'lambda'(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::BaseViewEventEmitter::LayoutEventState, std::__ndk1::allocator<facebook::react::BaseViewEventEmitter::LayoutEventState>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false> const, std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false> const>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>, std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>, std::__ndk1::allocator<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::EventTarget, std::__ndk1::allocator<facebook::react::EventTarget>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::NativeSafeAreaContextSpecJSI, std::__ndk1::allocator<facebook::react::NativeSafeAreaContextSpecJSI>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::RNCSafeAreaProviderEventEmitter const, std::__ndk1::allocator<facebook::react::RNCSafeAreaProviderEventEmitter const>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::RNCSafeAreaProviderProps const, std::__ndk1::allocator<facebook::react::RNCSafeAreaProviderProps const>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::RNCSafeAreaProviderProps, std::__ndk1::allocator<facebook::react::RNCSafeAreaProviderProps>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::RNCSafeAreaProviderState const, std::__ndk1::allocator<facebook::react::RNCSafeAreaProviderState const>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::ShadowNodeFamily, std::__ndk1::allocator<facebook::react::ShadowNodeFamily>>
+typeinfo name for std::__ndk1::bad_function_call
+unknown pointer encoding
+unknown register
+unsupported restore location for register
+unsupported x86 register
+unwind_phase2
+vector
+void facebook::jsi::Object::setProperty<double const&>(facebook::jsi::Runtime&, char const*, double const&) const
+void facebook::jsi::Object::setProperty<facebook::jsi::Object&>(facebook::jsi::Runtime&, char const*, facebook::jsi::Object&) const
+void facebook::react::RawPropsParser::prepare<facebook::react::RNCSafeAreaProviderProps>()
+void facebook::react::fromRawValue<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>(facebook::react::PropsParserContext const&, facebook::react::RawValue const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&)
+void folly::detail::throw_exception_<folly::TypeError, char const*, folly::dynamic::Type>(char const*, folly::dynamic::Type)
+void folly::throw_exception<folly::TypeError>(folly::TypeError&&)
+void std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::RawValue>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::RawValue>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::RawValue>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::RawValue>>>::__do_rehash<true>(unsigned int)
+void std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::TurboModule::MethodMetadata>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::TurboModule::MethodMetadata>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::TurboModule::MethodMetadata>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::TurboModule::MethodMetadata>>>::__do_rehash<true>(unsigned int)
+void std::__ndk1::vector<facebook::jsi::PropNameID, std::__ndk1::allocator<facebook::jsi::PropNameID>>::__push_back_slow_path<facebook::jsi::PropNameID>(facebook::jsi::PropNameID&&)
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info
+vtable for facebook::react::BaseViewEventEmitter
+vtable for facebook::react::BaseViewProps
+vtable for facebook::react::ComponentDescriptor
+vtable for facebook::react::ConcreteComponentDescriptor<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>>
+vtable for facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>
+vtable for facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>
+vtable for facebook::react::EventEmitter
+vtable for facebook::react::HostPlatformViewProps
+vtable for facebook::react::NativeSafeAreaContextCxxSpecJSI
+vtable for facebook::react::NativeSafeAreaContextSpecJSI
+vtable for facebook::react::Props
+vtable for facebook::react::RNCSafeAreaProviderEventEmitter
+vtable for facebook::react::RNCSafeAreaProviderProps
+vtable for facebook::react::RNCSafeAreaViewProps
+vtable for facebook::react::ShadowNode
+vtable for facebook::react::State
+vtable for facebook::react::TurboModule
+vtable for facebook::react::YogaLayoutableShadowNode
+vtable for facebook::react::YogaStylableProps
+vtable for folly::TypeError
+vtable for std::__ndk1::__function::__func<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(facebook::react::RNCSafeAreaProviderState&&) const::'lambda'(facebook::react::RNCSafeAreaProviderState const&), std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(facebook::react::RNCSafeAreaProviderState&&) const::'lambda'(facebook::react::RNCSafeAreaProviderState const&)>, std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>
+vtable for std::__ndk1::__function::__func<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(std::__ndk1::function<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>) const::'lambda'(std::__ndk1::shared_ptr<void const> const&), std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>::updateState(std::__ndk1::function<std::__ndk1::shared_ptr<void const> (facebook::react::RNCSafeAreaProviderState const&)>) const::'lambda'(std::__ndk1::shared_ptr<void const> const&)>, std::__ndk1::shared_ptr<void const> (std::__ndk1::shared_ptr<void const> const&)>
+vtable for std::__ndk1::__function::__func<facebook::react::TurboModule::create(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)::'lambda'(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int), std::__ndk1::allocator<facebook::react::TurboModule::create(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)::'lambda'(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::BaseViewEventEmitter::LayoutEventState, std::__ndk1::allocator<facebook::react::BaseViewEventEmitter::LayoutEventState>>
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false> const, std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false> const>>
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>, std::__ndk1::allocator<facebook::react::ConcreteState<facebook::react::RNCSafeAreaProviderState, false>>>
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>, std::__ndk1::allocator<facebook::react::ConcreteViewShadowNode<&facebook::react::RNCSafeAreaProviderComponentName.<char const at offset 0>, facebook::react::RNCSafeAreaProviderProps, facebook::react::RNCSafeAreaProviderEventEmitter, facebook::react::RNCSafeAreaProviderState, false>>>
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::EventTarget, std::__ndk1::allocator<facebook::react::EventTarget>>
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::NativeSafeAreaContextSpecJSI, std::__ndk1::allocator<facebook::react::NativeSafeAreaContextSpecJSI>>
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::RNCSafeAreaProviderEventEmitter const, std::__ndk1::allocator<facebook::react::RNCSafeAreaProviderEventEmitter const>>
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::RNCSafeAreaProviderProps const, std::__ndk1::allocator<facebook::react::RNCSafeAreaProviderProps const>>
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::RNCSafeAreaProviderProps, std::__ndk1::allocator<facebook::react::RNCSafeAreaProviderProps>>
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::RNCSafeAreaProviderState const, std::__ndk1::allocator<facebook::react::RNCSafeAreaProviderState const>>
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::ShadowNodeFamily, std::__ndk1::allocator<facebook::react::ShadowNodeFamily>>
+vtable for std::__ndk1::bad_function_call
+vtable for std::length_error
+vtable for std::out_of_range
+width

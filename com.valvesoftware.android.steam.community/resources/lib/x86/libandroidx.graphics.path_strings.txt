@@ -1,0 +1,32 @@
+(J[FI)I
+(Landroid/graphics/Path;IF)J
+([FI[FFF)I
+Android (9352603, based on r450784d1) clang version 14.0.7 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
+JNI_OnLoad
+LIBANDROIDX.GRAPHICS.PATH
+LIBC
+Linker: LLD 14.0.7
+__cxa_atexit
+__cxa_finalize
+__stack_chk_fail
+__system_property_get
+android/graphics/Path
+androidx/graphics/path/ConicConverter
+androidx/graphics/path/PathIteratorPreApi34Impl
+atoi
+createInternalPathIterator
+destroyInternalPathIterator
+free
+internalConicToQuadratics
+internalPathIteratorHasNext
+internalPathIteratorNext
+internalPathIteratorPeek
+internalPathIteratorRawSize
+internalPathIteratorSize
+libandroidx.graphics.path.so
+libc.so
+libdl.so
+libm.so
+mNativePath
+malloc
+ro.build.version.sdk
