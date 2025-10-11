@@ -1,0 +1,620 @@
+    #%02d |lyra|{dso=%s offset=%#tx build-id=%s}
+    #%02d |lyra|{dso=%s offset=%#tx func=%s+%#x build-id=%s}
+ build-id=
+ func=
+ offset=
+!g_vm
+!pdata || !pdata->attached
+()Ljava/lang/String;
+()Ljava/nio/Buffer;
+()Ljava/nio/ByteOrder;
+()[Ljava/lang/StackTraceElement;
+(I)Ljava/nio/ByteBuffer;
+(Ljava/lang/String;)V
+(Ljava/lang/String;I)V
+(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+(Ljava/nio/ByteBuffer;)I
+(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+([Ljava/lang/StackTraceElement;)V
+3 byte utf-8 encodings only valid for up to 16 bits
+4 byte utf-8 encodings only valid for up to 21 bits
+<init>
+<unimplemented>
+Android (7714059, based on r416183c1) clang version 12.0.8 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee)
+Attempt to get direct bytes of non-direct buffer.
+Attempt to get direct size of non-direct buffer.
+Attempt to set C++ native pointer twice
+Backtrace:
+Backtrace:\n
+CIE ID is not zero
+CIE version is not 1 or 3
+Can't binary search on variable length encoded data.
+DWARF opcode not implemented
+DW_EH_PE_aligned pointer encoding not supported
+DW_EH_PE_datarel is invalid with a datarelBase of 0
+DW_EH_PE_funcrel pointer encoding not supported
+DW_EH_PE_textrel pointer encoding not supported
+DW_OP_deref_size with bad size
+DW_OP_fbreg not implemented
+DW_OP_piece not implemented
+Direct byte buffers are unsupported.
+Error getting direct bytes of buffer.
+Error getting direct size of buffer.
+Exception in ~JniException()
+FDE has zero length
+FDE is really a CIE
+Failed to initialize fbjni
+Failed to initialize fbjni: 
+Failed to set Java exception
+JNI_OnLoad
+LIBC
+Lcom/facebook/jni/HybridData$Destructor;
+Lcom/facebook/jni/HybridData;
+Lcom/facebook/jni/NativeRunnable;
+Linker: LLD 12.0.8 (/buildbot/src/android/llvm-r416183/out/llvm-project/lld c935d99d7cf2016289302412d708641d52d2f7ee)
+N8facebook3jni12JniExceptionE
+NSt6__ndk110__function6__baseIFvSt13exception_ptrEEE
+NSt6__ndk110__function6__baseIFvvEEE
+NSt6__ndk110__function6__funcIZ10JNI_OnLoadE3$_0NS_9allocatorIS2_EEFvvEEE
+NSt6__ndk110__function6__funcIZN8facebook3jni31getJavaExceptionForCppExceptionESt13exception_ptrE3$_0NS_9allocatorIS5_EEFvS4_EEE
+NSt6__ndk115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE
+NSt6__ndk117bad_function_callE
+NSt6__ndk118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE
+No exception
+SDK_INT
+Unable to get exception message.
+Unable to get pending JNI exception.
+Unable to retrieve JNIEnv*.
+Unable to retrieve jni environment. Is the thread attached?
+Uncaught exception and no gTerminateHandler set
+Uncaught exception: %s
+Unexpected error in translatePendingCppExceptionToJavaException(): %s
+Unknown DWARF encoding for search table.
+Unknown exception
+Unknown: 
+VTT for std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
+Z10JNI_OnLoadE3$_0
+ZN8facebook3jni31getJavaExceptionForCppExceptionESt13exception_ptrE3$_0
+_JNIEnv::CallBooleanMethod(_jobject*, _jmethodID*, ...)
+_JNIEnv::CallIntMethod(_jobject*, _jmethodID*, ...)
+_JNIEnv::CallObjectMethod(_jobject*, _jmethodID*, ...)
+_JNIEnv::CallStaticObjectMethod(_jclass*, _jmethodID*, ...)
+_JNIEnv::CallStaticVoidMethod(_jclass*, _jmethodID*, ...)
+_JNIEnv::CallVoidMethod(_jobject*, _jmethodID*, ...)
+_JNIEnv::NewObject(_jclass*, _jmethodID*, ...)
+_N8facebook4lyra6detail20ExceptionTraceHolderE
+_Unwind_GetDataRelBase
+_Unwind_GetDataRelBase() not implemented
+_Unwind_GetTextRelBase
+_Unwind_GetTextRelBase() not implemented
+_Unwind_Resume
+_Unwind_Resume() can't return
+_Unwind_Resume_or_Rethrow
+_Unwind_Resume_or_Rethrow() called _Unwind_RaiseException() which unexpectedly returned
+__android_log_assert
+__android_log_print
+__android_log_write
+__cxa_allocate_exception
+__cxa_atexit
+__cxa_begin_catch
+__cxa_current_exception_type
+__cxa_end_catch
+__cxa_finalize
+__cxa_free_exception
+__cxa_guard_abort
+__cxa_guard_acquire
+__cxa_guard_release
+__cxa_rethrow
+__cxa_throw
+__gxx_personality_v0
+__stack_chk_fail
+abort
+allocateDirect
+allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
+android/os/Build$VERSION
+com/facebook/jni/CppException
+com/facebook/jni/CppSystemErrorException
+com/facebook/jni/HybridClassBase
+com/facebook/jni/HybridData
+com/facebook/jni/HybridData$Destructor
+com/facebook/jni/NativeRunnable
+com/facebook/jni/ThreadScopeSupport
+com/facebook/jni/UnknownCppException
+construction vtable for std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
+construction vtable for std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
+construction vtable for std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
+deleteNative
+dl_iterate_phdr
+dladdr
+during phase1 personality function said it would stop here, but now in phase2 it did not stop here
+error %s
+evaluateExpression
+facebook::jni::Environment::current()
+facebook::jni::Environment::ensureCurrentThreadIsAttached()
+facebook::jni::Environment::initialize(_JavaVM*)
+facebook::jni::Environment::isGlobalJvmAvailable()
+facebook::jni::HybridClass<facebook::jni::JNativeRunnable, facebook::jni::JRunnable>::JavaPart::cthis() const
+facebook::jni::HybridClass<facebook::jni::JNativeRunnable, facebook::jni::JRunnable>::JavaPart::cthis() const::hybridDataField
+facebook::jni::HybridClass<facebook::jni::JNativeRunnable, facebook::jni::JRunnable>::registerHybrid(std::initializer_list<JNINativeMethod>)
+facebook::jni::HybridDataOnLoad()
+facebook::jni::JArrayClass<facebook::jni::detail::JTypeFor<facebook::jni::JStackTraceElement, facebook::jni::JObject, void>::_javaobject*>::newArray(unsigned long)
+facebook::jni::JArrayClass<facebook::jni::detail::JTypeFor<facebook::jni::JStackTraceElement, facebook::jni::JObject, void>::_javaobject*>::newArray(unsigned long)::elementClass
+facebook::jni::JBuffer::getDirectAddress() const
+facebook::jni::JBuffer::getDirectCapacity() const
+facebook::jni::JBuffer::isDirect() const
+facebook::jni::JBuffer::rewind() const
+facebook::jni::JByteBuffer::allocateDirect(int)
+facebook::jni::JByteBuffer::order(facebook::jni::alias_ref<facebook::jni::JByteOrder>)
+facebook::jni::JByteBuffer::wrapBytes(unsigned char*, unsigned long)
+facebook::jni::JByteOrder::nativeOrder()
+facebook::jni::JCppException::create(char const*)
+facebook::jni::JField<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*> facebook::jni::detectHybrid<facebook::jni::JNativeRunnable, facebook::jni::JRunnable>(facebook::jni::alias_ref<_jclass*>)
+facebook::jni::JObject::toString() const
+facebook::jni::JObject::toString() const::method
+facebook::jni::JPrimitiveArray<_jbooleanArray*>::getElements(unsigned char*)
+facebook::jni::JPrimitiveArray<_jbooleanArray*>::getRegion(int, int, unsigned char*)
+facebook::jni::JPrimitiveArray<_jbooleanArray*>::newArray(unsigned long)
+facebook::jni::JPrimitiveArray<_jbooleanArray*>::releaseElements(unsigned char*, int)
+facebook::jni::JPrimitiveArray<_jbooleanArray*>::setRegion(int, int, unsigned char const*)
+facebook::jni::JPrimitiveArray<_jbyteArray*>::getElements(unsigned char*)
+facebook::jni::JPrimitiveArray<_jbyteArray*>::getRegion(int, int, signed char*)
+facebook::jni::JPrimitiveArray<_jbyteArray*>::newArray(unsigned long)
+facebook::jni::JPrimitiveArray<_jbyteArray*>::releaseElements(signed char*, int)
+facebook::jni::JPrimitiveArray<_jbyteArray*>::setRegion(int, int, signed char const*)
+facebook::jni::JPrimitiveArray<_jcharArray*>::getElements(unsigned char*)
+facebook::jni::JPrimitiveArray<_jcharArray*>::getRegion(int, int, unsigned short*)
+facebook::jni::JPrimitiveArray<_jcharArray*>::newArray(unsigned long)
+facebook::jni::JPrimitiveArray<_jcharArray*>::releaseElements(unsigned short*, int)
+facebook::jni::JPrimitiveArray<_jcharArray*>::setRegion(int, int, unsigned short const*)
+facebook::jni::JPrimitiveArray<_jdoubleArray*>::getElements(unsigned char*)
+facebook::jni::JPrimitiveArray<_jdoubleArray*>::getRegion(int, int, double*)
+facebook::jni::JPrimitiveArray<_jdoubleArray*>::newArray(unsigned long)
+facebook::jni::JPrimitiveArray<_jdoubleArray*>::releaseElements(double*, int)
+facebook::jni::JPrimitiveArray<_jdoubleArray*>::setRegion(int, int, double const*)
+facebook::jni::JPrimitiveArray<_jfloatArray*>::getElements(unsigned char*)
+facebook::jni::JPrimitiveArray<_jfloatArray*>::getRegion(int, int, float*)
+facebook::jni::JPrimitiveArray<_jfloatArray*>::newArray(unsigned long)
+facebook::jni::JPrimitiveArray<_jfloatArray*>::releaseElements(float*, int)
+facebook::jni::JPrimitiveArray<_jfloatArray*>::setRegion(int, int, float const*)
+facebook::jni::JPrimitiveArray<_jintArray*>::getElements(unsigned char*)
+facebook::jni::JPrimitiveArray<_jintArray*>::getRegion(int, int, int*)
+facebook::jni::JPrimitiveArray<_jintArray*>::newArray(unsigned long)
+facebook::jni::JPrimitiveArray<_jintArray*>::releaseElements(int*, int)
+facebook::jni::JPrimitiveArray<_jintArray*>::setRegion(int, int, int const*)
+facebook::jni::JPrimitiveArray<_jlongArray*>::getElements(unsigned char*)
+facebook::jni::JPrimitiveArray<_jlongArray*>::getRegion(int, int, long*)
+facebook::jni::JPrimitiveArray<_jlongArray*>::newArray(unsigned long)
+facebook::jni::JPrimitiveArray<_jlongArray*>::releaseElements(long*, int)
+facebook::jni::JPrimitiveArray<_jlongArray*>::setRegion(int, int, long const*)
+facebook::jni::JPrimitiveArray<_jshortArray*>::getElements(unsigned char*)
+facebook::jni::JPrimitiveArray<_jshortArray*>::getRegion(int, int, short*)
+facebook::jni::JPrimitiveArray<_jshortArray*>::newArray(unsigned long)
+facebook::jni::JPrimitiveArray<_jshortArray*>::releaseElements(short*, int)
+facebook::jni::JPrimitiveArray<_jshortArray*>::setRegion(int, int, short const*)
+facebook::jni::JReadableByteChannel::read(facebook::jni::alias_ref<facebook::jni::JByteBuffer>) const
+facebook::jni::JStackTraceElement::create(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, int)
+facebook::jni::JStackTraceElement::getClassName() const
+facebook::jni::JStackTraceElement::getFileName() const
+facebook::jni::JStackTraceElement::getLineNumber() const
+facebook::jni::JStackTraceElement::getMethodName() const
+facebook::jni::JString::toStdString() const
+facebook::jni::JString::toU16String() const
+facebook::jni::JThrowable::getStackTrace()
+facebook::jni::JThrowable::initCause(facebook::jni::alias_ref<facebook::jni::JThrowable>)
+facebook::jni::JThrowable::setStackTrace(facebook::jni::alias_ref<facebook::jni::JArrayClass<facebook::jni::detail::JTypeFor<facebook::jni::JStackTraceElement, facebook::jni::JObject, void>::_javaobject*>>)
+facebook::jni::JavaClass<facebook::jni::HybridClass<facebook::jni::JNativeRunnable, facebook::jni::JRunnable>::JavaPart, facebook::jni::JRunnable, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::JBuffer, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::JByteBuffer, facebook::jni::JBuffer, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::JByteOrder, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::JCppException, facebook::jni::JThrowable, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::JReadableByteChannel, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::JStackTraceElement, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::JThrowable, facebook::jni::JObject, _jthrowable*>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::detail::HybridClassBase, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::JniException::JniException()
+facebook::jni::JniException::JniException(facebook::jni::JniException const&)
+facebook::jni::JniException::JniException(facebook::jni::JniException&&)
+facebook::jni::JniException::JniException(facebook::jni::alias_ref<_jthrowable*>)
+facebook::jni::JniException::getThrowable() const
+facebook::jni::JniException::kExceptionMessageFailure_
+facebook::jni::JniException::populateWhat() const
+facebook::jni::JniException::setJavaException() const
+facebook::jni::JniException::what() const
+facebook::jni::JniException::~JniException()
+facebook::jni::JniLocalScope::JniLocalScope(_JNIEnv*, int)
+facebook::jni::JniLocalScope::~JniLocalScope()
+facebook::jni::ThreadScope::OnLoad()
+facebook::jni::ThreadScope::ThreadScope()
+facebook::jni::ThreadScope::WithClassLoader(std::__ndk1::function<void ()>&&)
+facebook::jni::ThreadScope::~ThreadScope()
+facebook::jni::addCppStacktraceToJavaException(facebook::jni::alias_ref<facebook::jni::JThrowable>, std::exception_ptr)
+facebook::jni::basic_strong_ref<facebook::jni::JCppException, facebook::jni::LocalReferenceAllocator> facebook::jni::JavaClass<facebook::jni::JCppException, facebook::jni::JThrowable, void>::newInstance<facebook::jni::basic_strong_ref<facebook::jni::JString, facebook::jni::LocalReferenceAllocator>>(facebook::jni::basic_strong_ref<facebook::jni::JString, facebook::jni::LocalReferenceAllocator>)
+facebook::jni::basic_strong_ref<facebook::jni::JStackTraceElement, facebook::jni::LocalReferenceAllocator> facebook::jni::JavaClass<facebook::jni::JStackTraceElement, facebook::jni::JObject, void>::newInstance<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int)
+facebook::jni::basic_strong_ref<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator> facebook::jni::JavaClass<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::newInstance<>()
+facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::JCppException, facebook::jni::JThrowable, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::JClass::newObject<facebook::jni::detail::JTypeFor<facebook::jni::JCppException, facebook::jni::JThrowable, void>::_javaobject*, facebook::jni::basic_strong_ref<facebook::jni::JString, facebook::jni::LocalReferenceAllocator>>(facebook::jni::JConstructor<facebook::jni::detail::JTypeFor<facebook::jni::JCppException, facebook::jni::JThrowable, void>::_javaobject* (facebook::jni::basic_strong_ref<facebook::jni::JString, facebook::jni::LocalReferenceAllocator>)>, facebook::jni::basic_strong_ref<facebook::jni::JString, facebook::jni::LocalReferenceAllocator>) const
+facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::JStackTraceElement, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::JClass::newObject<facebook::jni::detail::JTypeFor<facebook::jni::JStackTraceElement, facebook::jni::JObject, void>::_javaobject*, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int>(facebook::jni::JConstructor<facebook::jni::detail::JTypeFor<facebook::jni::JStackTraceElement, facebook::jni::JObject, void>::_javaobject* (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int)>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, int) const
+facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::JObject>(facebook::jni::JObject const*)
+facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::JObject>(facebook::jni::JObject const*)::holderField
+facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::detail::HybridData>(facebook::jni::detail::HybridData const*)
+facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::detail::HybridData>(facebook::jni::detail::HybridData const*)::holderField
+facebook::jni::convertCppExceptionToJavaException(std::exception_ptr)
+facebook::jni::createJStackTraceElement(facebook::lyra::StackTraceElement const&)
+facebook::jni::detail::BaseHybridClass* facebook::jni::detail::getNativePointer<facebook::jni::JObject>(facebook::jni::JObject const*)
+facebook::jni::detail::BaseHybridClass* facebook::jni::detail::getNativePointer<facebook::jni::detail::HybridData>(facebook::jni::detail::HybridData const*)
+facebook::jni::detail::ElementProxy<facebook::jni::JArrayClass<facebook::jni::detail::JTypeFor<facebook::jni::JStackTraceElement, facebook::jni::JObject, void>::_javaobject*>>::operator=(facebook::jni::detail::ElementProxy<facebook::jni::JArrayClass<facebook::jni::detail::JTypeFor<facebook::jni::JStackTraceElement, facebook::jni::JObject, void>::_javaobject*>> const&)
+facebook::jni::detail::FunctionWrapper<void (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::jni::JNativeRunnable, facebook::jni::JRunnable>::JavaPart, facebook::jni::JRunnable, void>::_javaobject*>), facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::jni::JNativeRunnable, facebook::jni::JRunnable>::JavaPart, facebook::jni::JRunnable, void>::_javaobject*, void>::call(_JNIEnv*, _jobject*, void (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::jni::JNativeRunnable, facebook::jni::JRunnable>::JavaPart, facebook::jni::JRunnable, void>::_javaobject*>))
+facebook::jni::detail::HybridClassBase::isHybridClassBase(facebook::jni::alias_ref<_jclass*>)
+facebook::jni::detail::HybridData::create()
+facebook::jni::detail::HybridDestructor::getNativePointer() const
+facebook::jni::detail::HybridDestructor::setNativePointer(std::__ndk1::unique_ptr<facebook::jni::detail::BaseHybridClass, std::__ndk1::default_delete<facebook::jni::detail::BaseHybridClass>>)
+facebook::jni::detail::JniEnvCacher::JniEnvCacher(_JNIEnv*)
+facebook::jni::detail::JniEnvCacher::~JniEnvCacher()
+facebook::jni::detail::MethodWrapper<void (facebook::jni::JNativeRunnable::*)(), &facebook::jni::JNativeRunnable::run(), facebook::jni::JNativeRunnable, void>::call(_JNIEnv*, _jobject*)
+facebook::jni::detail::MethodWrapper<void (facebook::jni::JNativeRunnable::*)(), &facebook::jni::JNativeRunnable::run(), facebook::jni::JNativeRunnable, void>::dispatch(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::jni::JNativeRunnable, facebook::jni::JRunnable>::JavaPart, facebook::jni::JRunnable, void>::_javaobject*>)
+facebook::jni::detail::cachedWithAttachmentState(bool&)
+facebook::jni::detail::currentOrNull()
+facebook::jni::detail::findClass(_JNIEnv*, char const*)
+facebook::jni::detail::modifiedLength(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+facebook::jni::detail::modifiedLength(unsigned char const*, unsigned long*)
+facebook::jni::detail::modifiedUTF8ToUTF8(unsigned char const*, unsigned long)
+facebook::jni::detail::utf16toUTF8(unsigned short const*, unsigned long)
+facebook::jni::detail::utf16toUTF8Length(unsigned short const*, unsigned long)
+facebook::jni::detail::utf8ToModifiedUTF8(unsigned char const*, unsigned long, unsigned char*, unsigned long)
+facebook::jni::findClassLocal(char const*)
+facebook::jni::findClassStatic(char const*)
+facebook::jni::getHybridDataFromField(facebook::jni::JObject const*, facebook::jni::JField<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*> const&)
+facebook::jni::getJavaExceptionForCppBackTrace()
+facebook::jni::getJavaExceptionForCppBackTrace(char const*)
+facebook::jni::getJavaExceptionForCppException(std::exception_ptr)
+facebook::jni::initialize(_JavaVM*, std::__ndk1::function<void ()>&&)
+facebook::jni::internal::ReferenceStats::reset()
+facebook::jni::internal::g_reference_stats
+facebook::jni::isObjectRefType(_jobject*, jobjectRefType)
+facebook::jni::jmethod_traits<_jstring* ()>::kDescriptor
+facebook::jni::jmethod_traits<_jthrowable* (_jstring*)>::kConstructorDescriptor
+facebook::jni::jmethod_traits<_jthrowable* (_jthrowable*)>::kDescriptor
+facebook::jni::jmethod_traits<facebook::jni::JByteBuffer (int)>::kDescriptor
+facebook::jni::jmethod_traits<facebook::jni::detail::JTypeFor<facebook::jni::JArrayClass<facebook::jni::detail::JTypeFor<facebook::jni::JStackTraceElement, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::detail::JTypeArray, void>::_javaobject* ()>::kDescriptor
+facebook::jni::jmethod_traits<facebook::jni::detail::JTypeFor<facebook::jni::JBuffer, facebook::jni::JObject, void>::_javaobject* ()>::kDescriptor
+facebook::jni::jmethod_traits<facebook::jni::detail::JTypeFor<facebook::jni::JByteBuffer, facebook::jni::JBuffer, void>::_javaobject* (facebook::jni::detail::JTypeFor<facebook::jni::JByteOrder, facebook::jni::JObject, void>::_javaobject*)>::kDescriptor
+facebook::jni::jmethod_traits<facebook::jni::detail::JTypeFor<facebook::jni::JByteOrder, facebook::jni::JObject, void>::_javaobject* ()>::kDescriptor
+facebook::jni::jmethod_traits<facebook::jni::detail::JTypeFor<facebook::jni::JCppException, facebook::jni::JThrowable, void>::_javaobject* (_jstring*)>::kConstructorDescriptor
+facebook::jni::jmethod_traits<facebook::jni::detail::JTypeFor<facebook::jni::JStackTraceElement, facebook::jni::JObject, void>::_javaobject* (_jstring*, _jstring*, _jstring*, int)>::kConstructorDescriptor
+facebook::jni::jmethod_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject* ()>::kConstructorDescriptor
+facebook::jni::jmethod_traits<int ()>::kDescriptor
+facebook::jni::jmethod_traits<int (facebook::jni::detail::JTypeFor<facebook::jni::JByteBuffer, facebook::jni::JBuffer, void>::_javaobject*)>::kDescriptor
+facebook::jni::jmethod_traits<unsigned char ()>::kDescriptor
+facebook::jni::jmethod_traits<void ()>::kDescriptor
+facebook::jni::jmethod_traits<void (facebook::jni::detail::JTypeFor<facebook::jni::JArrayClass<facebook::jni::detail::JTypeFor<facebook::jni::JStackTraceElement, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::detail::JTypeArray, void>::_javaobject*)>::kDescriptor
+facebook::jni::jmethod_traits<void (long)>::kDescriptor
+facebook::jni::jtype_traits<_jbooleanArray*>::kBaseName
+facebook::jni::jtype_traits<_jbooleanArray*>::kDescriptor
+facebook::jni::jtype_traits<_jbyteArray*>::kBaseName
+facebook::jni::jtype_traits<_jbyteArray*>::kDescriptor
+facebook::jni::jtype_traits<_jcharArray*>::kBaseName
+facebook::jni::jtype_traits<_jcharArray*>::kDescriptor
+facebook::jni::jtype_traits<_jdoubleArray*>::kBaseName
+facebook::jni::jtype_traits<_jdoubleArray*>::kDescriptor
+facebook::jni::jtype_traits<_jfloatArray*>::kBaseName
+facebook::jni::jtype_traits<_jfloatArray*>::kDescriptor
+facebook::jni::jtype_traits<_jintArray*>::kBaseName
+facebook::jni::jtype_traits<_jintArray*>::kDescriptor
+facebook::jni::jtype_traits<_jlongArray*>::kBaseName
+facebook::jni::jtype_traits<_jlongArray*>::kDescriptor
+facebook::jni::jtype_traits<_jshortArray*>::kBaseName
+facebook::jni::jtype_traits<_jshortArray*>::kDescriptor
+facebook::jni::jtype_traits<_jthrowable*>::kBaseName
+facebook::jni::jtype_traits<double>::kBaseName
+facebook::jni::jtype_traits<double>::kDescriptor
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::jni::JNativeRunnable, facebook::jni::JRunnable>::JavaPart, facebook::jni::JRunnable, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::JBuffer, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::JByteBuffer, facebook::jni::JBuffer, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::JByteOrder, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::JCppException, facebook::jni::JThrowable, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::JReadableByteChannel, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::JStackTraceElement, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridClassBase, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*>::kDescriptor
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*>::kDescriptor
+facebook::jni::jtype_traits<float>::kBaseName
+facebook::jni::jtype_traits<float>::kDescriptor
+facebook::jni::jtype_traits<int>::kBaseName
+facebook::jni::jtype_traits<int>::kDescriptor
+facebook::jni::jtype_traits<long>::kBaseName
+facebook::jni::jtype_traits<long>::kDescriptor
+facebook::jni::jtype_traits<short>::kBaseName
+facebook::jni::jtype_traits<short>::kDescriptor
+facebook::jni::jtype_traits<signed char>::kBaseName
+facebook::jni::jtype_traits<signed char>::kDescriptor
+facebook::jni::jtype_traits<unsigned char>::kBaseName
+facebook::jni::jtype_traits<unsigned char>::kDescriptor
+facebook::jni::jtype_traits<unsigned short>::kBaseName
+facebook::jni::jtype_traits<unsigned short>::kDescriptor
+facebook::jni::jtype_traits<void>::kDescriptor
+facebook::jni::log_::loge(char const*, char const*)
+facebook::jni::make_boolean_array(int)
+facebook::jni::make_byte_array(int)
+facebook::jni::make_char_array(int)
+facebook::jni::make_double_array(int)
+facebook::jni::make_float_array(int)
+facebook::jni::make_int_array(int)
+facebook::jni::make_jstring(char const*)
+facebook::jni::make_jstring(std::__ndk1::basic_string<char16_t, std::__ndk1::char_traits<char16_t>, std::__ndk1::allocator<char16_t>> const&)
+facebook::jni::make_long_array(int)
+facebook::jni::make_short_array(int)
+facebook::jni::registerNatives(char const*, std::initializer_list<JNINativeMethod>)
+facebook::jni::throwCppExceptionIf(bool)
+facebook::jni::throwNPE()
+facebook::jni::throwNewJavaException(_jthrowable*)
+facebook::jni::throwNewJavaException(char const*, char const*)
+facebook::jni::throwPendingJniExceptionAsCppException()
+facebook::jni::translatePendingCppExceptionToJavaException()
+facebook::lyra::StackTraceElement::buildId() const
+facebook::lyra::cxa_throw(void*, std::type_info const*, void (*)(void*))
+facebook::lyra::detail::ExceptionTraceHolder::ExceptionTraceHolder()
+facebook::lyra::detail::ExceptionTraceHolder::~ExceptionTraceHolder()
+facebook::lyra::detail::getExceptionTraceHolder(std::exception_ptr)
+facebook::lyra::enableCxaThrowHookBacktraces(bool)
+facebook::lyra::ensureRegisteredTerminateHandler()
+facebook::lyra::getBreakpadId(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+facebook::lyra::getExceptionTrace(std::exception_ptr)
+facebook::lyra::getStackTrace(std::__ndk1::vector<void const*, std::__ndk1::allocator<void const*>>&, unsigned long)
+facebook::lyra::getStackTraceSymbols(std::__ndk1::vector<facebook::lyra::StackTraceElement, std::__ndk1::allocator<facebook::lyra::StackTraceElement>>&, std::__ndk1::vector<void const*, std::__ndk1::allocator<void const*>> const&)
+facebook::lyra::logStackTrace(std::__ndk1::vector<facebook::lyra::StackTraceElement, std::__ndk1::allocator<facebook::lyra::StackTraceElement>> const&)
+facebook::lyra::operator<<(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>&, facebook::lyra::StackTraceElement const&)
+facebook::lyra::operator<<(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>&, std::__ndk1::vector<facebook::lyra::StackTraceElement, std::__ndk1::allocator<facebook::lyra::StackTraceElement>> const&)
+facebook::lyra::original_cxa_throw
+facebook::lyra::setLibraryIdentifierFunction(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&))
+facebook::lyra::toString(std::exception_ptr)
+fbjni is uninitialized; no thread can be attached.
+fflush
+fprintf
+free
+fwrite
+g_vm
+getClassName
+getEncodedP
+getFileName
+getFloatRegister
+getLineNumber
+getMethodName
+getRegister
+getSLEB128
+getSavedRegister
+getStackTrace
+getTableEntrySize
+getULEB128
+guard variable for facebook::jni::HybridClass<facebook::jni::JNativeRunnable, facebook::jni::JRunnable>::JavaPart::cthis() const::hybridDataField
+guard variable for facebook::jni::JArrayClass<facebook::jni::detail::JTypeFor<facebook::jni::JStackTraceElement, facebook::jni::JObject, void>::_javaobject*>::newArray(unsigned long)::elementClass
+guard variable for facebook::jni::JObject::toString() const::method
+guard variable for facebook::jni::JavaClass<facebook::jni::HybridClass<facebook::jni::JNativeRunnable, facebook::jni::JRunnable>::JavaPart, facebook::jni::JRunnable, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::JBuffer, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::JByteBuffer, facebook::jni::JBuffer, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::JByteOrder, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::JCppException, facebook::jni::JThrowable, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::JReadableByteChannel, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::JStackTraceElement, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::JThrowable, facebook::jni::JObject, _jthrowable*>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::detail::HybridClassBase, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::JObject>(facebook::jni::JObject const*)::holderField
+guard variable for facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::detail::HybridData>(facebook::jni::detail::HybridData const*)::holderField
+initCause
+isDirect
+java.lang.NullPointerException
+java/io/IOException
+java/lang/ArrayIndexOutOfBoundsException
+java/lang/NullPointerException
+java/lang/Object
+java/lang/OutOfMemoryError
+java/lang/RuntimeException
+java/lang/StackTraceElement
+java/lang/Throwable
+java/nio/Buffer
+java/nio/ByteBuffer
+java/nio/ByteOrder
+java/nio/channels/ReadableByteChannel
+libandroid.so
+libc++_shared.so
+libc.so
+libdl.so
+libfbjni.so
+liblog.so
+libm.so
+libunwind: %s - %s\n
+libunwind: Unsupported .eh_frame_hdr version\n
+libunwind: malformed DW_CFA_GNU_negative_offset_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa_register DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa_sf DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_expression DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_offset DWARF unwind, reg (%lu) out of range\n
+libunwind: malformed DW_CFA_offset_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_offset_extended_sf DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_register DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_register DWARF unwind, reg2 too big\n
+libunwind: malformed DW_CFA_restore DWARF unwind, reg (%lu) out of range\n
+libunwind: malformed DW_CFA_restore_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_same_value DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_undefined DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_val_expression DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_val_offset DWARF unwind, reg (%lu) out of range\n\n
+libunwind: malformed DW_CFA_val_offset_sf DWARF unwind, reg too big\n
+mDestructor
+mHybridData
+mNativePointer
+malformed uleb128 expression
+malloc
+memcpy
+memmove
+memset
+nativeOrder
+no x86_64 float registers
+non-virtual thunk to std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>::~basic_iostream()
+non-virtual thunk to std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::~basic_stringstream()
+operator delete(void*)
+operator new(unsigned long)
+order
+output buffer is too short
+pdata
+pdata == nullptr
+pdata->attached
+pdata->env != nullptr
+pdata->env == nullptr
+prctl
+pthread_getspecific
+pthread_key_create
+pthread_key_create failed: %d
+pthread_rwlock_rdlock
+pthread_rwlock_unlock
+pthread_rwlock_wrlock
+pthread_setspecific
+pthread_setspecific failed: %d
+read
+result == JNI_OK
+ret == JNI_OK || ret == JNI_EDETACHED
+rewind
+runStdFunction
+runStdFunctionImpl
+setFloatRegister
+setRegister
+setStackTrace
+std::__ndk1::__basic_string_common<true>::__throw_length_error() const
+std::__ndk1::__next_prime(unsigned long)
+std::__ndk1::__vector_base_common<true>::__throw_length_error() const
+std::__ndk1::bad_function_call::~bad_function_call()
+std::__ndk1::basic_ios<char, std::__ndk1::char_traits<char>>::~basic_ios()
+std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>::~basic_iostream()
+std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>::~basic_istream()
+std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>& std::__ndk1::__put_character_sequence<char, std::__ndk1::char_traits<char>>(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>&, char const*, unsigned long)
+std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::operator<<(int)
+std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::operator<<(long)
+std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::sentry::sentry(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>&)
+std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::sentry::~sentry()
+std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::~basic_ostream()
+std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::basic_streambuf()
+std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::imbue(std::__ndk1::locale const&)
+std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::setbuf(char*, long)
+std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::showmanyc()
+std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::sync()
+std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::uflow()
+std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::xsgetn(char*, long)
+std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::xsputn(char const*, long)
+std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::~basic_streambuf()
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> std::__ndk1::operator+<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>(char const*, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::append(char const*)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::assign(char const*)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::basic_string(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::operator=(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::push_back(char)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::resize(unsigned long, char)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::~basic_string()
+std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::overflow(int)
+std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::pbackfail(int)
+std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::seekoff(long long, std::__ndk1::ios_base::seekdir, unsigned int)
+std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::str() const
+std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::underflow()
+std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::~basic_stringbuf()
+std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::~basic_stringstream()
+std::__ndk1::ctype<char>::id
+std::__ndk1::enable_if<__is_cpp17_forward_iterator<char const*>::value && is_constructible<char, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, void>::type std::__ndk1::vector<char, std::__ndk1::allocator<char>>::assign<char const*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
+std::__ndk1::ios_base::__set_badbit_and_consider_rethrow()
+std::__ndk1::ios_base::clear(unsigned int)
+std::__ndk1::ios_base::getloc() const
+std::__ndk1::ios_base::init(void*)
+std::__ndk1::locale::use_facet(std::__ndk1::locale::id&) const
+std::__ndk1::locale::~locale()
+std::__ndk1::mutex::lock()
+std::__ndk1::mutex::unlock()
+std::__ndk1::vector<facebook::lyra::StackTraceElement, std::__ndk1::allocator<facebook::lyra::StackTraceElement>>::reserve(unsigned long)
+std::bad_alloc::bad_alloc()
+std::bad_alloc::~bad_alloc()
+std::current_exception()
+std::exception::what() const
+std::exception::~exception()
+std::exception_ptr::exception_ptr(std::exception_ptr const&)
+std::exception_ptr::~exception_ptr()
+std::length_error::~length_error()
+std::logic_error::logic_error(char const*)
+std::rethrow_exception(std::exception_ptr)
+std::runtime_error::runtime_error(char const*)
+std::runtime_error::runtime_error(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+std::runtime_error::~runtime_error()
+std::set_terminate(void (*)())
+std::terminate()
+strlen
+toString
+truncated sleb128 expression
+truncated uleb128 expression
+typeinfo for char const*
+typeinfo for facebook::jni::JniException
+typeinfo for facebook::lyra::detail::ExceptionTraceHolder
+typeinfo for std::__ndk1::__function::__base<void ()>
+typeinfo for std::__ndk1::__function::__base<void (std::exception_ptr)>
+typeinfo for std::__ndk1::bad_function_call
+typeinfo for std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>
+typeinfo for std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>
+typeinfo for std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>
+typeinfo for std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>
+typeinfo for std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
+typeinfo for std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
+typeinfo for std::__ndk1::ios_base::failure
+typeinfo for std::__ndk1::system_error
+typeinfo for std::bad_alloc
+typeinfo for std::exception
+typeinfo for std::length_error
+typeinfo for std::nested_exception
+typeinfo for std::out_of_range
+typeinfo for std::runtime_error
+typeinfo name for facebook::jni::JniException
+typeinfo name for facebook::lyra::detail::ExceptionTraceHolder
+typeinfo name for std::__ndk1::__function::__base<void ()>
+typeinfo name for std::__ndk1::__function::__base<void (std::exception_ptr)>
+typeinfo name for std::__ndk1::bad_function_call
+typeinfo name for std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
+typeinfo name for std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
+unknown pointer encoding
+unknown register
+unsupported restore location for register
+unsupported x86_64 register
+unwind_phase2
+virtual thunk to std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>::~basic_iostream()
+virtual thunk to std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>::~basic_istream()
+virtual thunk to std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::~basic_ostream()
+virtual thunk to std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::~basic_stringstream()
+void facebook::jni::log_::logassert<char const*>(char const*, char const*, char const*)
+void facebook::jni::log_::loge<char const*>(char const*, char const*, char const*)
+void std::__ndk1::allocator<facebook::lyra::StackTraceElement>::construct<facebook::lyra::StackTraceElement, void const* const&, void*&, void*&, char const*, char const*>(facebook::lyra::StackTraceElement*, void const* const&, void*&, void*&, char const*&&, char const*&&)
+void std::__ndk1::vector<facebook::lyra::StackTraceElement, std::__ndk1::allocator<facebook::lyra::StackTraceElement>>::__emplace_back_slow_path<void const* const&, void*&, void*&, char const*, char const*>(void const* const&, void*&, void*&, char const*&&, char const*&&)
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info
+vtable for facebook::jni::JniException
+vtable for facebook::lyra::detail::ExceptionTraceHolder
+vtable for std::__ndk1::bad_function_call
+vtable for std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
+vtable for std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
+vtable for std::length_error
+xmm0
+xmm1
+xmm10
+xmm11
+xmm12
+xmm13
+xmm14
+xmm15
+xmm2
+xmm3
+xmm4
+xmm5
+xmm6
+xmm7
+xmm8
+xmm9
+{dso=
+|lyra|{

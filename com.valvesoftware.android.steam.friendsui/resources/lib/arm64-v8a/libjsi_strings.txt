@@ -1,0 +1,329 @@
+ (while raising 
+' is a non-callable Object, expected a Function
+' on HostObject with default setter
+, expected a BigInt
+, expected a Function
+, expected a String
+, expected a Symbol
+, expected a boolean
+, expected a function
+, expected a number
+, expected an Object
+, expected an array
+/root/react-native/packages/react-native/ReactCommon/jsi/jsi/JSIDynamic.cpp
+;\tFQ8
+Android (7714059, based on r416183c1) clang version 12.0.8 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee)
+CIE ID is not zero
+CIE version is not 1 or 3
+Can't binary search on variable length encoded data.
+Check failed: false 
+Could not mmap %s: %s
+Could not open %s: %s
+Could not stat %s: %s
+Could not unmap memory (%p, %zu bytes): %s
+DWARF opcode not implemented
+DW_EH_PE_aligned pointer encoding not supported
+DW_EH_PE_datarel is invalid with a datarelBase of 0
+DW_EH_PE_funcrel pointer encoding not supported
+DW_EH_PE_textrel pointer encoding not supported
+DW_OP_deref_size with bad size
+DW_OP_fbreg not implemented
+DW_OP_piece not implemented
+Default instrumentation cannot create a heap snapshot
+Error
+FDE has zero length
+FDE is really a CIE
+Failed to format error message: 
+Infinity
+JS BigInts are not convertible to dynamic
+JS Functions are not convertible to dynamic
+JS Symbols are not convertible to dynamic
+JSON
+LIBC
+Linker: LLD 12.0.8 (/buildbot/src/android/llvm-r416183/out/llvm-project/lld c935d99d7cf2016289302412d708641d52d2f7ee)
+Lossy truncation in BigInt64::asInt64
+Lossy truncation in BigInt64::asUint64
+N5folly9TypeErrorE
+N8facebook3jsi10FileBufferE
+N8facebook3jsi10HostObjectE
+N8facebook3jsi11NativeStateE
+N8facebook3jsi12JSIExceptionE
+N8facebook3jsi13MutableBufferE
+N8facebook3jsi15InstrumentationE
+N8facebook3jsi18JSINativeExceptionE
+N8facebook3jsi6BufferE
+N8facebook3jsi7JSErrorE
+N8facebook3jsi7RuntimeE
+NSt6__ndk120__shared_ptr_emplaceIN8facebook3jsi5ValueENS_9allocatorIS3_EEEE
+Object is 
+String
+String(e) is a 
+String(e.message) is a 
+String(e.stack) is a 
+Unknown DWARF encoding for search table.
+Value is 
+Value is not convertible to dynamic
+ZN8facebook3jsi7Runtime15instrumentationEvE17NoInstrumentation
+[Exception while creating message string: 
+[Exception while creating stack string: 
+_Unwind_Resume
+_Unwind_Resume() can't return
+__cxa_allocate_exception
+__cxa_atexit
+__cxa_begin_catch
+__cxa_end_catch
+__cxa_finalize
+__cxa_free_exception
+__cxa_guard_acquire
+__cxa_guard_release
+__cxa_pure_virtual
+__cxa_throw
+__errno
+__gxx_personality_v0
+__open_2
+__stack_chk_fail
+__strlen_chk
+a function
+abort
+allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
+an object
+cJTypeError: Cannot assign to property '
+callGlobalFunction: JS global property '
+close
+dl_iterate_phdr
+double_conversion::DoubleToStringConverter::ToShortestIeeeNumber(double, double_conversion::StringBuilder*, double_conversion::DoubleToStringConverter::DtoaMode) const
+during phase1 personality function said it would stop here, but now in phase2 it did not stop here
+evaluateExpression
+facebook::jsi::Array::createWithElements(facebook::jsi::Runtime&, std::initializer_list<facebook::jsi::Value>)
+facebook::jsi::BigInt::asInt64(facebook::jsi::Runtime&) const
+facebook::jsi::BigInt::asUint64(facebook::jsi::Runtime&) const
+facebook::jsi::Buffer::~Buffer()
+facebook::jsi::FileBuffer::FileBuffer(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+facebook::jsi::FileBuffer::data() const
+facebook::jsi::FileBuffer::size() const
+facebook::jsi::FileBuffer::~FileBuffer()
+facebook::jsi::HostObject::get(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)
+facebook::jsi::HostObject::getPropertyNames(facebook::jsi::Runtime&)
+facebook::jsi::HostObject::set(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&, facebook::jsi::Value const&)
+facebook::jsi::HostObject::~HostObject()
+facebook::jsi::Instrumentation::~Instrumentation()
+facebook::jsi::JSError::JSError(facebook::jsi::Runtime&, char const*)
+facebook::jsi::JSError::JSError(facebook::jsi::Runtime&, facebook::jsi::Value&&)
+facebook::jsi::JSError::JSError(facebook::jsi::Runtime&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)
+facebook::jsi::JSError::JSError(facebook::jsi::Runtime&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)
+facebook::jsi::JSError::JSError(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::jsi::Runtime&, facebook::jsi::Value&&)
+facebook::jsi::JSError::setValue(facebook::jsi::Runtime&, facebook::jsi::Value&&)
+facebook::jsi::JSError::~JSError()
+facebook::jsi::JSIException::what() const
+facebook::jsi::JSIException::~JSIException()
+facebook::jsi::JSINativeException::~JSINativeException()
+facebook::jsi::MutableBuffer::~MutableBuffer()
+facebook::jsi::NativeState::~NativeState()
+facebook::jsi::Object::asArray(facebook::jsi::Runtime&) &&
+facebook::jsi::Object::asArray(facebook::jsi::Runtime&) const &
+facebook::jsi::Object::asFunction(facebook::jsi::Runtime&) &&
+facebook::jsi::Object::asFunction(facebook::jsi::Runtime&) const &
+facebook::jsi::Object::getPropertyAsFunction(facebook::jsi::Runtime&, char const*) const
+facebook::jsi::Object::getPropertyAsObject(facebook::jsi::Runtime&, char const*) const
+facebook::jsi::Pointer::operator=(facebook::jsi::Pointer&&)
+facebook::jsi::PreparedJavaScript::~PreparedJavaScript()
+facebook::jsi::Runtime::createValueFromJsonUtf8(unsigned char const*, unsigned long)
+facebook::jsi::Runtime::instrumentation()
+facebook::jsi::Runtime::popScope(facebook::jsi::Runtime::ScopeState*)
+facebook::jsi::Runtime::pushScope()
+facebook::jsi::Runtime::~Runtime()
+facebook::jsi::Value facebook::jsi::Function::call<facebook::jsi::String>(facebook::jsi::Runtime&, facebook::jsi::String&&) const
+facebook::jsi::Value facebook::jsi::Function::call<facebook::jsi::Value const&>(facebook::jsi::Runtime&, facebook::jsi::Value const&) const
+facebook::jsi::Value::Value(facebook::jsi::Runtime&, facebook::jsi::Value const&)
+facebook::jsi::Value::Value(facebook::jsi::Value&&)
+facebook::jsi::Value::asBigInt(facebook::jsi::Runtime&) &&
+facebook::jsi::Value::asBigInt(facebook::jsi::Runtime&) const &
+facebook::jsi::Value::asBool() const
+facebook::jsi::Value::asNumber() const
+facebook::jsi::Value::asObject(facebook::jsi::Runtime&) &&
+facebook::jsi::Value::asObject(facebook::jsi::Runtime&) const &
+facebook::jsi::Value::asString(facebook::jsi::Runtime&) &&
+facebook::jsi::Value::asString(facebook::jsi::Runtime&) const &
+facebook::jsi::Value::asSymbol(facebook::jsi::Runtime&) &&
+facebook::jsi::Value::asSymbol(facebook::jsi::Runtime&) const &
+facebook::jsi::Value::strictEquals(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const&)
+facebook::jsi::Value::toString(facebook::jsi::Runtime&) const
+facebook::jsi::Value::~Value()
+facebook::jsi::dynamicFromValue(facebook::jsi::Runtime&, facebook::jsi::Value const&)
+facebook::jsi::valueFromDynamic(facebook::jsi::Runtime&, folly::dynamic const&)
+false
+fflush
+folly::Optional<decltype(fp.begin(0))> folly::f14::detail::F14BasicMap<folly::dynamic, folly::dynamic, folly::detail::DynamicHasher, folly::detail::DynamicKeyEqual, std::__ndk1::allocator<std::__ndk1::pair<folly::dynamic const, folly::dynamic>>>::findLocal<folly::f14::detail::F14BasicMap<folly::dynamic, folly::dynamic, folly::detail::DynamicHasher, folly::detail::DynamicKeyEqual, std::__ndk1::allocator<std::__ndk1::pair<folly::dynamic const, folly::dynamic>>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>(folly::f14::detail::F14BasicMap<folly::dynamic, folly::dynamic, folly::detail::DynamicHasher, folly::detail::DynamicKeyEqual, std::__ndk1::allocator<std::__ndk1::pair<folly::dynamic const, folly::dynamic>>>&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+folly::TypeError::TypeError(folly::TypeError&&)
+folly::TypeError::TypeError(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, folly::dynamic::Type)
+folly::TypeError::~TypeError()
+folly::detail::to_ascii_powers<10ul, unsigned long>::data
+folly::detail::to_ascii_table<10ul, folly::to_ascii_alphabet<false>>::data
+folly::dynamic::TypeInfo<folly::dynamic::ObjectImpl>::name
+folly::dynamic::TypeInfo<std::__ndk1::vector<folly::dynamic, std::__ndk1::allocator<folly::dynamic>>>::name
+folly::dynamic::atImpl(folly::dynamic const&) const &
+folly::dynamic::destroy()
+folly::dynamic::hash() const
+folly::dynamic::operator=(folly::dynamic&&)
+folly::dynamic::operator==(folly::dynamic const&) const
+folly::dynamic::operator[](folly::Range<char const*>) &
+folly::dynamic::size() const
+folly::hash::SpookyHashV2::Hash128(void const*, unsigned long, unsigned long*, unsigned long*)
+fprintf
+free
+fstat
+fwrite
+getEncodedP
+getPropertyAsFunction: property '
+getPropertyAsObject: property '
+getRegister
+getSLEB128
+getSavedFloatRegister
+getSavedRegister
+getTableEntrySize
+getULEB128
+google::LogMessage::stream()
+google::LogMessageFatal::LogMessageFatal(char const*, int)
+google::LogMessageFatal::~LogMessageFatal()
+int/double/bool/string
+libc++_shared.so
+libc.so
+libdl.so
+libfolly_runtime.so
+libglog.so
+libjsi.so
+libm.so
+libunwind: %s - %s\n
+libunwind: Unsupported .eh_frame_hdr version\n
+libunwind: malformed DW_CFA_GNU_negative_offset_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa_register DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa_sf DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_expression DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_offset_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_offset_extended_sf DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_register DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_register DWARF unwind, reg2 too big\n
+libunwind: malformed DW_CFA_restore_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_same_value DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_undefined DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_val_expression DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_val_offset DWARF unwind, reg (%lu) out of range\n\n
+libunwind: malformed DW_CFA_val_offset_sf DWARF unwind, reg too big\n
+malformed uleb128 expression
+malloc
+memcmp
+memcpy
+memset
+message
+mmap
+munmap
+no stack
+operator delete(void*)
+operator new(unsigned long)
+parse
+pthread_rwlock_rdlock
+pthread_rwlock_unlock
+pthread_rwlock_wrlock
+setRegister
+stack
+std::__ndk1::__basic_string_common<true>::__throw_length_error() const
+std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, std::__ndk1::__unordered_map_hasher<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicHasher, true>, std::__ndk1::__unordered_map_equal<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicKeyEqual, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>>>::__rehash(unsigned long)
+std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, std::__ndk1::__unordered_map_hasher<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicHasher, true>, std::__ndk1::__unordered_map_equal<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicKeyEqual, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>>>::rehash(unsigned long)
+std::__ndk1::__next_prime(unsigned long)
+std::__ndk1::__shared_ptr_emplace<facebook::jsi::Value, std::__ndk1::allocator<facebook::jsi::Value>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<facebook::jsi::Value, std::__ndk1::allocator<facebook::jsi::Value>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<facebook::jsi::Value, std::__ndk1::allocator<facebook::jsi::Value>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_weak_count::__get_deleter(std::type_info const&) const
+std::__ndk1::__shared_weak_count::__release_weak()
+std::__ndk1::__shared_weak_count::~__shared_weak_count()
+std::__ndk1::__vector_base_common<true>::__throw_length_error() const
+std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>& std::__ndk1::__put_character_sequence<char, std::__ndk1::char_traits<char>>(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>&, char const*, unsigned long)
+std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>& std::__ndk1::operator<< <std::__ndk1::char_traits<char>>(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>&, char const*)
+std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::sentry::sentry(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>&)
+std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::sentry::~sentry()
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> folly::dynamic::asImpl<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>() const
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::append(char const*)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::append(char const*, unsigned long)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::assign(char const*)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::basic_string(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::insert(unsigned long, char const*)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::push_back(char)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::reserve(unsigned long)
+std::__ndk1::ctype<char>::id
+std::__ndk1::ios_base::__set_badbit_and_consider_rethrow()
+std::__ndk1::ios_base::clear(unsigned int)
+std::__ndk1::ios_base::getloc() const
+std::__ndk1::locale::use_facet(std::__ndk1::locale::id&) const
+std::__ndk1::locale::~locale()
+std::__ndk1::pair<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, void*>*>, bool> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, std::__ndk1::__unordered_map_hasher<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicHasher, true>, std::__ndk1::__unordered_map_equal<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicKeyEqual, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>>>::__emplace_unique_impl<std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&>, std::__ndk1::tuple<>>(std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&>&&, std::__ndk1::tuple<>&&)
+std::exception::~exception()
+std::length_error::~length_error()
+std::logic_error::logic_error(char const*)
+std::runtime_error::runtime_error(std::runtime_error const&)
+std::runtime_error::what() const
+std::runtime_error::~runtime_error()
+std::terminate()
+strerror
+strlen
+true
+truncated sleb128 expression
+truncated uleb128 expression
+typeinfo for facebook::jsi::Buffer
+typeinfo for facebook::jsi::FileBuffer
+typeinfo for facebook::jsi::HostObject
+typeinfo for facebook::jsi::Instrumentation
+typeinfo for facebook::jsi::JSError
+typeinfo for facebook::jsi::JSIException
+typeinfo for facebook::jsi::JSINativeException
+typeinfo for facebook::jsi::MutableBuffer
+typeinfo for facebook::jsi::NativeState
+typeinfo for facebook::jsi::Runtime
+typeinfo for folly::TypeError
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::jsi::Value, std::__ndk1::allocator<facebook::jsi::Value>>
+typeinfo for std::__ndk1::__shared_weak_count
+typeinfo for std::exception
+typeinfo for std::length_error
+typeinfo for std::runtime_error
+typeinfo name for facebook::jsi::Buffer
+typeinfo name for facebook::jsi::FileBuffer
+typeinfo name for facebook::jsi::HostObject
+typeinfo name for facebook::jsi::Instrumentation
+typeinfo name for facebook::jsi::JSError
+typeinfo name for facebook::jsi::JSIException
+typeinfo name for facebook::jsi::JSINativeException
+typeinfo name for facebook::jsi::MutableBuffer
+typeinfo name for facebook::jsi::NativeState
+typeinfo name for facebook::jsi::Runtime
+typeinfo name for folly::TypeError
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::jsi::Value, std::__ndk1::allocator<facebook::jsi::Value>>
+undefined
+unknown pointer encoding
+unknown register
+unsigned long folly::to_ascii_size<10ul>(unsigned long)
+unsigned long folly::to_ascii_with<10ul, folly::to_ascii_alphabet<false>, 20ul>(char (&) [20ul], unsigned long)
+unsupported arm64 register
+unsupported restore location for float register
+unsupported restore location for register
+unwind_phase2
+void facebook::jsi::Object::setProperty<facebook::jsi::String>(facebook::jsi::Runtime&, char const*, facebook::jsi::String&&) const
+void folly::detail::throw_exception_<folly::TypeError, char const*, folly::dynamic::Type>(char const*, folly::dynamic::Type)
+void folly::throw_exception<folly::TypeError>(folly::TypeError&&)
+void std::__ndk1::vector<folly::dynamic, std::__ndk1::allocator<folly::dynamic>>::__push_back_slow_path<folly::dynamic>(folly::dynamic&&)
+void std::__ndk1::vector<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::jsi::Value>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::jsi::Value>>>::__emplace_back_slow_path<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::jsi::Value>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&&, facebook::jsi::Value&&)
+vsnprintf
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info
+vtable for facebook::jsi::Buffer
+vtable for facebook::jsi::FileBuffer
+vtable for facebook::jsi::HostObject
+vtable for facebook::jsi::JSError
+vtable for facebook::jsi::JSIException
+vtable for facebook::jsi::JSINativeException
+vtable for facebook::jsi::MutableBuffer
+vtable for facebook::jsi::NativeState
+vtable for facebook::jsi::Runtime
+vtable for folly::TypeError
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::jsi::Value, std::__ndk1::allocator<facebook::jsi::Value>>
+vtable for std::length_error
+xxxx 6:

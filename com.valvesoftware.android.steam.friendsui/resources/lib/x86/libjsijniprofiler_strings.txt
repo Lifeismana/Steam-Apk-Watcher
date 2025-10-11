@@ -1,0 +1,142 @@
+(Ljava/lang/String;)V
+Android (7714059, based on r416183c1) clang version 12.0.8 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee)
+CIE ID is not zero
+CIE version is not 1 or 3
+Can't binary search on variable length encoded data.
+DWARF opcode not implemented
+DW_EH_PE_aligned pointer encoding not supported
+DW_EH_PE_datarel is invalid with a datarelBase of 0
+DW_EH_PE_funcrel pointer encoding not supported
+DW_EH_PE_textrel pointer encoding not supported
+DW_OP_deref_size with bad size
+DW_OP_fbreg not implemented
+DW_OP_piece not implemented
+FDE has zero length
+FDE is really a CIE
+JNI_OnLoad
+LIBC
+Linker: LLD 12.0.8 (/buildbot/src/android/llvm-r416183/out/llvm-project/lld c935d99d7cf2016289302412d708641d52d2f7ee)
+NSt6__ndk110__function6__baseIFvvEEE
+NSt6__ndk110__function6__funcIZ10JNI_OnLoadE3$_0NS_9allocatorIS2_EEFvvEEE
+Unknown DWARF encoding for search table.
+Z10JNI_OnLoadE3$_0
+_Unwind_Resume
+_Unwind_Resume() can't return
+__cxa_atexit
+__cxa_begin_catch
+__cxa_end_catch
+__cxa_finalize
+__gxx_personality_v0
+__stack_chk_fail
+abort
+com/facebook/hermes/instrumentation/HermesSamplingProfiler
+disable
+dl_iterate_phdr
+dumpSampledTraceToFile
+during phase1 personality function said it would stop here, but now in phase2 it did not stop here
+enable
+evaluateExpression
+facebook::hermes::HermesRuntime::disableSamplingProfiler()
+facebook::hermes::HermesRuntime::dumpSampledTraceToFile(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+facebook::hermes::HermesRuntime::enableSamplingProfiler()
+facebook::jni::Environment::current()
+facebook::jni::JString::toStdString() const
+facebook::jni::JavaClass<facebook::jsi::jni::HermesSamplingProfiler, facebook::jni::JObject, void>::javaClassLocal()
+facebook::jni::detail::FunctionWrapper<void (*)(facebook::jni::alias_ref<_jclass*>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>), _jclass*, void, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>::call(_JNIEnv*, _jobject*, _jstring*, void (*)(facebook::jni::alias_ref<_jclass*>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>))
+facebook::jni::detail::FunctionWrapperWithJniEntryPoint<void (*)(facebook::jni::alias_ref<_jclass*>), &facebook::jsi::jni::HermesSamplingProfiler::enable(facebook::jni::alias_ref<_jclass*>), _jclass*, void>::call(_JNIEnv*, _jobject*)
+facebook::jni::detail::FunctionWrapperWithJniEntryPoint<void (*)(facebook::jni::alias_ref<_jclass*>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>), &facebook::jsi::jni::HermesSamplingProfiler::dumpSampledTraceToFile(facebook::jni::alias_ref<_jclass*>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>), _jclass*, void, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>::call(_JNIEnv*, _jobject*, _jstring*)
+facebook::jni::detail::JniEnvCacher::JniEnvCacher(_JNIEnv*)
+facebook::jni::detail::JniEnvCacher::~JniEnvCacher()
+facebook::jni::findClassLocal(char const*)
+facebook::jni::initialize(_JavaVM*, std::__ndk1::function<void ()>&&)
+facebook::jni::jmethod_traits<void ()>::kDescriptor
+facebook::jni::jmethod_traits<void (_jstring*)>::kDescriptor
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jsi::jni::HermesSamplingProfiler, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::throwCppExceptionIf(bool)
+facebook::jni::translatePendingCppExceptionToJavaException()
+facebook::jsi::jni::HermesSamplingProfiler::disable(facebook::jni::alias_ref<_jclass*>)
+facebook::jsi::jni::HermesSamplingProfiler::dumpSampledTraceToFile(facebook::jni::alias_ref<_jclass*>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)
+facebook::jsi::jni::HermesSamplingProfiler::enable(facebook::jni::alias_ref<_jclass*>)
+facebook::jsi::jni::HermesSamplingProfiler::registerNatives()
+fflush
+fprintf
+free
+fwrite
+getEncodedP
+getFloatRegister
+getRegister
+getSLEB128
+getSavedRegister
+getTableEntrySize
+getULEB128
+libandroid.so
+libc++_shared.so
+libc.so
+libdl.so
+libfb.so
+libfbjni.so
+libfolly_runtime.so
+libglog.so
+libglog_init.so
+libhermes.so
+libjsi.so
+libjsijniprofiler.so
+libjsinspector.so
+liblog.so
+liblogger.so
+libm.so
+libreact_debug.so
+libreact_render_core.so
+libreact_render_debug.so
+libreact_render_graphics.so
+libreact_render_mapbuffer.so
+libreact_render_runtimescheduler.so
+libreact_utils.so
+libreactnativejni.so
+libreactperfloggerjni.so
+libruntimeexecutor.so
+libunwind: %s - %s\n
+libunwind: Unsupported .eh_frame_hdr version\n
+libunwind: malformed DW_CFA_GNU_negative_offset_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa_register DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa_sf DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_expression DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_offset DWARF unwind, reg (%llu) out of range\n
+libunwind: malformed DW_CFA_offset_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_offset_extended_sf DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_register DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_register DWARF unwind, reg2 too big\n
+libunwind: malformed DW_CFA_restore DWARF unwind, reg (%llu) out of range\n
+libunwind: malformed DW_CFA_restore_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_same_value DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_undefined DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_val_expression DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_val_offset DWARF unwind, reg (%llu) out of range\n\n
+libunwind: malformed DW_CFA_val_offset_sf DWARF unwind, reg too big\n
+libyoga.so
+malformed uleb128 expression
+malloc
+memcpy
+no x86 float registers
+operator delete(void*)
+operator new(unsigned int)
+pthread_rwlock_rdlock
+pthread_rwlock_unlock
+pthread_rwlock_wrlock
+setFloatRegister
+setRegister
+std::__ndk1::__basic_string_common<true>::__throw_length_error() const
+std::terminate()
+strlen
+truncated sleb128 expression
+truncated uleb128 expression
+typeinfo for std::__ndk1::__function::__base<void ()>
+typeinfo name for std::__ndk1::__function::__base<void ()>
+unknown pointer encoding
+unknown register
+unsupported restore location for register
+unsupported x86 register
+unwind_phase2
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info

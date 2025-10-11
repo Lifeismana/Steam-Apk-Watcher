@@ -1,0 +1,29 @@
+Android (7714059, based on r416183c1) clang version 12.0.8 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee)
+LIBC
+Linker: LLD 12.0.8 (/buildbot/src/android/llvm-r416183/out/llvm-project/lld c935d99d7cf2016289302412d708641d52d2f7ee)
+N8facebook5react15RunLoopObserverE
+__cxa_atexit
+__cxa_finalize
+__cxa_pure_virtual
+facebook::react::RunLoopObserver::RunLoopObserver(facebook::react::RunLoopObserver::Activity, std::__ndk1::weak_ptr<void const> const&)
+facebook::react::RunLoopObserver::activityDidChange(facebook::react::RunLoopObserver::Activity) const
+facebook::react::RunLoopObserver::disable() const
+facebook::react::RunLoopObserver::enable() const
+facebook::react::RunLoopObserver::getOwner() const
+facebook::react::RunLoopObserver::setDelegate(facebook::react::RunLoopObserver::Delegate const*) const
+facebook::react::RunLoopObserver::~RunLoopObserver()
+libc++_shared.so
+libc.so
+libdl.so
+libfolly_runtime.so
+libglog.so
+libglog_init.so
+liblog.so
+libm.so
+libreact_debug.so
+libreact_utils.so
+std::__ndk1::__shared_weak_count::__release_weak()
+typeinfo for facebook::react::RunLoopObserver
+typeinfo name for facebook::react::RunLoopObserver
+vtable for __cxxabiv1::__class_type_info
+vtable for facebook::react::RunLoopObserver

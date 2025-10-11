@@ -1,0 +1,71 @@
+(Landroid/graphics/Bitmap;II)V
+(Landroid/graphics/Bitmap;IIII)V
+(Landroid/graphics/Bitmap;IIZ)V
+(Landroid/graphics/Bitmap;Z)V
+Android (6454773 based on r365631c2) clang version 9.0.8 (https://android.googlesource.com/toolchain/llvm-project 98c855489587874b2a325e7a516b99d838599c6f) (based on LLVM 9.0.8svn)
+AndroidBitmap_getInfo
+AndroidBitmap_lockPixels
+AndroidBitmap_unlockPixels
+BlurFilter_iterativeBoxBlur: Bitmap dimensions too large
+BlurFilter_iterativeBoxBlur: Blur radius argument out of bounds
+BlurFilter_iterativeBoxBlur: Failed to allocate memory: div
+BlurFilter_iterativeBoxBlur: Failed to allocate memory: tempRowOrColumn
+BlurFilter_iterativeBoxBlur: Failed to get Bitmap info
+BlurFilter_iterativeBoxBlur: Failed to lock Bitmap pixels
+BlurFilter_iterativeBoxBlur: Failed to unlock Bitmap pixels
+BlurFilter_iterativeBoxBlur: Iterations argument out of bounds
+BlurFilter_iterativeBoxBlur: Unexpected bitmap format
+Circle must be fully visible!
+Circle radius too small!
+Could not register NativeBlurFilter methods
+Could not register NativeRoundingFilter methods
+Invalid bitmap dimensions!
+Invalid circle center coordinates!
+Invalid internal state!
+JNI_OnLoad
+LIBC
+Rounding#addRoundedCorners: Bitmap dimensions too large
+Rounding#addRoundedCorners: Failed to get Bitmap info
+Rounding#addRoundedCorners: Failed to lock Bitmap pixels
+Rounding#addRoundedCorners: Failed to unlock Bitmap pixels
+Rounding#addRoundedCorners: nexpected bitmap format
+Rounding#toCircleFastWithOptionalBorder: Bitmap dimensions too large
+Rounding#toCircleFastWithOptionalBorder: Failed to get Bitmap info
+Rounding#toCircleFastWithOptionalBorder: Failed to lock Bitmap pixels
+Rounding#toCircleFastWithOptionalBorder: Failed to unlock Bitmap pixels
+Rounding#toCircleFastWithOptionalBorder: Unexpected bitmap format
+Rounding#toCircleWithOptionalBorder: Bitmap dimensions too large
+Rounding#toCircleWithOptionalBorder: Failed to get Bitmap info
+Rounding#toCircleWithOptionalBorder: Failed to lock Bitmap pixels
+Rounding#toCircleWithOptionalBorder: Failed to unlock Bitmap pixels
+Rounding#toCircleWithOptionalBorder: Unexpected bitmap format
+__android_log_print
+__bss_start
+__cxa_atexit
+__cxa_finalize
+__stack_chk_fail
+__stack_chk_guard
+_edata
+_end
+ceil
+com/facebook/imagepipeline/nativecode/NativeBlurFilter
+com/facebook/imagepipeline/nativecode/NativeRoundingFilter
+could not find RuntimeException class
+free
+ik6%F
+java/lang/RuntimeException
+libc.so
+libdl.so
+libjnigraphics.so
+liblog.so
+libm.so
+libnative-filters
+libnative-filters.so
+malloc
+memcpy
+memset
+nativeAddRoundedCornersFilter
+nativeIterativeBoxBlur
+nativeToCircleFastFilter
+nativeToCircleFilter
+nativeToCircleWithBorderFilter

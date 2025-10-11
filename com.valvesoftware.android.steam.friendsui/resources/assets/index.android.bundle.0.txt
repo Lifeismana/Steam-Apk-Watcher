@@ -2733,7 +2733,7 @@ $|^
 .caf
 .end
 .getChildContext(): key "
-.git .github .gitignore
+.git .github .gitignore .gitmodules
 .jpeg
 .jpg
 .keys
@@ -4204,9 +4204,9 @@ Dj
 Dk
 DoSubstitutions
 DoSubstitutionsAndLocalizePartnerText
-Dockerfile README.md com.valvesoftware.android.steam.community com.valvesoftware.android.steam.friendsui com.valvesoftware.steamlink com.valvesoftware.steamlinkvr docker-compose.yml renovate.json script.sh setup.sh
-Dockerfile README.md com.valvesoftware.android.steam.community com.valvesoftware.android.steam.friendsui com.valvesoftware.steamlink com.valvesoftware.steamlinkvr docker-compose.yml renovate.json script.sh setup.sh A module failed to load due to an error and `AppRegistry.registerComponent` wasn't called.
-Dockerfile README.md com.valvesoftware.android.steam.community com.valvesoftware.android.steam.friendsui com.valvesoftware.steamlink com.valvesoftware.steamlinkvr docker-compose.yml renovate.json script.sh setup.sh Metro (the local dev server) is run from the wrong folder.
+Dockerfile README.md com.valvesoftware.android.steam.community com.valvesoftware.android.steam.friendsui com.valvesoftware.steamlink com.valvesoftware.steamlinkvr docker-compose.yml renovate.json script.sh setup.sh tools
+Dockerfile README.md com.valvesoftware.android.steam.community com.valvesoftware.android.steam.friendsui com.valvesoftware.steamlink com.valvesoftware.steamlinkvr docker-compose.yml renovate.json script.sh setup.sh tools A module failed to load due to an error and `AppRegistry.registerComponent` wasn't called.
+Dockerfile README.md com.valvesoftware.android.steam.community com.valvesoftware.android.steam.friendsui com.valvesoftware.steamlink com.valvesoftware.steamlinkvr docker-compose.yml renovate.json script.sh setup.sh tools Metro (the local dev server) is run from the wrong folder.
 Dolphin
 Domain:
 Don't know how to handle state change of type
@@ -8105,7 +8105,7 @@ appid=
 applecoremedia\\/[\\w\\.]+ \\((ipad)
 application
 application/json
-application/json, text/plain, com.valvesoftware.android.steam.community/com.valvesoftware.android.steam.community.apk com.valvesoftware.android.steam.community/com.valvesoftware.android.steam.community.apk.jadx.txt com.valvesoftware.android.steam.community/com.valvesoftware.android.steam.community.apk.txt com.valvesoftware.android.steam.community/resources com.valvesoftware.android.steam.community/sources com.valvesoftware.android.steam.friendsui/com.valvesoftware.android.steam.friendsui.apk com.valvesoftware.android.steam.friendsui/com.valvesoftware.android.steam.friendsui.apk.jadx.txt com.valvesoftware.android.steam.friendsui/com.valvesoftware.android.steam.friendsui.apk.txt com.valvesoftware.android.steam.friendsui/resources com.valvesoftware.android.steam.friendsui/sources com.valvesoftware.steamlink/com.valvesoftware.steamlink.apk.jadx.txt com.valvesoftware.steamlink/com.valvesoftware.steamlink.apk.txt com.valvesoftware.steamlink/resources com.valvesoftware.steamlink/sources com.valvesoftware.steamlinkvr/com.valvesoftware.steamlinkvr.apk.jadx.txt com.valvesoftware.steamlinkvr/com.valvesoftware.steamlinkvr.apk.txt com.valvesoftware.steamlinkvr/resources com.valvesoftware.steamlinkvr/sources
+application/json, text/plain, com.valvesoftware.android.steam.community/com.valvesoftware.android.steam.community.apk com.valvesoftware.android.steam.community/com.valvesoftware.android.steam.community.apk.jadx.txt com.valvesoftware.android.steam.community/com.valvesoftware.android.steam.community.apk.txt com.valvesoftware.android.steam.community/resources com.valvesoftware.android.steam.community/sources com.valvesoftware.android.steam.friendsui/com.valvesoftware.android.steam.friendsui.apk com.valvesoftware.android.steam.friendsui/com.valvesoftware.android.steam.friendsui.apk.jadx.txt com.valvesoftware.android.steam.friendsui/com.valvesoftware.android.steam.friendsui.apk.txt com.valvesoftware.android.steam.friendsui/resources com.valvesoftware.android.steam.friendsui/sources com.valvesoftware.steamlink/com.valvesoftware.steamlink.apk.jadx.txt com.valvesoftware.steamlink/com.valvesoftware.steamlink.apk.txt com.valvesoftware.steamlink/resources com.valvesoftware.steamlink/sources com.valvesoftware.steamlinkvr/com.valvesoftware.steamlinkvr.apk.jadx.txt com.valvesoftware.steamlinkvr/com.valvesoftware.steamlinkvr.apk.txt com.valvesoftware.steamlinkvr/resources com.valvesoftware.steamlinkvr/sources tools/DumpStrings
 application/x-www-form-urlencoded
 application/x-www-form-urlencoded;charset=UTF-8
 application/x-www-form-urlencoded;charset=utf-8
@@ -8695,7 +8695,7 @@ com.android.voicemail.permission.READ_VOICEMAIL
 com.android.voicemail.permission.WRITE_VOICEMAIL
 com.googleusercontent.apps.603386649315-vp4revvrcgrcjme51ebuhbkbspl048l9
 com.valvesoftware.Steam.friendsui
-com.valvesoftware.android.steam.community/ com.valvesoftware.android.steam.friendsui/ com.valvesoftware.steamlink/ com.valvesoftware.steamlinkvr/
+com.valvesoftware.android.steam.community/ com.valvesoftware.android.steam.friendsui/ com.valvesoftware.steamlink/ com.valvesoftware.steamlinkvr/ tools/
 com.valvesoftware.android.steam.friendsui
 combineFuncs
 combineURLs

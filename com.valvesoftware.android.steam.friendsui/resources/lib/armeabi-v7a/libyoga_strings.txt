@@ -1,0 +1,474 @@
+                                                            
+%s%d.{[skipped] 
+(FF)F
+(FIFI)J
+(I)Lcom/facebook/yoga/YogaLogLevel;
+(JF)V
+(JFF[J[Lcom/facebook/yoga/YogaNodeJNIBase;)V
+(JI)F
+(JI)J
+(JI)V
+(JIF)V
+(JIZ)V
+(JJ)V
+(JJI)V
+(JLcom/facebook/yoga/YogaLogger;)V
+(JZ)V
+(Lcom/facebook/yoga/YogaLogLevel;Ljava/lang/String;)V
+(Ljava/lang/String;)V
+<init>
+AT_MOST
+Aborting due to error detected in native code: %s
+Android (7714059, based on r416183c1) clang version 12.0.8 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee)
+Cannot add child: Nodes with measure functions cannot have children.
+Cannot get layout properties of multi-edge shorthands
+Cannot reset a node still attached to a owner
+Cannot reset a node which still has children attached
+Cannot set measure function: Nodes with measure functions cannot have children.
+Child already has a owner, it must be removed first.
+Could not obtain global reference from object
+EXACTLY
+Error retrieving JNIEnv during initialization of vanillajni
+Expect custom baseline function to not return NaN
+JNI_OnLoad
+Java YGNode was GCed during layout calculation\n
+LAY_AT_MOST
+LAY_EXACTLY
+LAY_UNDEFINED
+LIBC
+Linker: LLD 12.0.8 (/buildbot/src/android/llvm-r416183/out/llvm-project/lld c935d99d7cf2016289302412d708641d52d2f7ee)
+N8facebook4yoga10vanillajni16YogaJniExceptionE
+NSt6__ndk117bad_function_callE
+Need to pass a valid JNIEnv pointer to vanillajni initialization routine
+Only leaf nodes with custom measure functionsshould manually mark themselves as dirty
+Out of cache entries!\n
+Scale factor should not be less than zero
+There was an error retrieving the current JNIEnv. Make sure the current thread is attached
+Tried to construct YGNode with null config
+UNDEFINED
+Unable to get pending JNI exception.
+Unknown ARM float register
+VanillaJni
+YGAssert
+YGAssertWithConfig
+YGAssertWithNode
+YGConfig::YGConfig(int (*)(YGConfig*, YGNode*, YGLogLevel, char const*, std::__va_list))
+YGConfig::cloneNode(YGNode*, YGNode*, int, void*)
+YGConfig::log(YGConfig*, YGNode*, YGLogLevel, void*, char const*, std::__va_list)
+YGConfigCopy
+YGConfigFree
+YGConfigGetContext
+YGConfigGetDefault
+YGConfigGetInstanceCount
+YGConfigGetUseLegacyStretchBehaviour
+YGConfigGetUseWebDefaults
+YGConfigIsExperimentalFeatureEnabled
+YGConfigNew
+YGConfigSetCloneNodeFunc
+YGConfigSetContext
+YGConfigSetExperimentalFeatureEnabled
+YGConfigSetLogger
+YGConfigSetPointScaleFactor
+YGConfigSetPrintTreeFlag
+YGConfigSetUseLegacyStretchBehaviour
+YGConfigSetUseWebDefaults
+YGDoubleEqual(double, double)
+YGFlexDirectionCross(YGFlexDirection, YGDirection)
+YGFloatIsUndefined
+YGFloatMax(float, float)
+YGFloatMin(float, float)
+YGFloatOptionalMax(YGFloatOptional, YGFloatOptional)
+YGFloatSanitize(float)
+YGFloatsEqual(float, float)
+YGLayoutNodeInternal(YGNode*, float, float, YGDirection, YGMeasureMode, YGMeasureMode, float, float, bool, facebook::yoga::LayoutPassReason, YGConfig*, facebook::yoga::LayoutData&, void*, unsigned int, unsigned int)
+YGNode::YGNode(YGConfig*)
+YGNode::YGNode(YGNode const&, YGConfig*)
+YGNode::YGNode(YGNode&&)
+YGNode::baseline(float, float, void*)
+YGNode::clearChildren()
+YGNode::cloneChildrenIfNeeded(void*)
+YGNode::computeColumnGap(facebook::yoga::detail::Values<3u> const&, facebook::yoga::detail::CompactValue)
+YGNode::computeEdgeValueForColumn(facebook::yoga::detail::Values<9u> const&, YGEdge, facebook::yoga::detail::CompactValue)
+YGNode::computeEdgeValueForRow(facebook::yoga::detail::Values<9u> const&, YGEdge, YGEdge, facebook::yoga::detail::CompactValue)
+YGNode::computeRowGap(facebook::yoga::detail::Values<3u> const&, facebook::yoga::detail::CompactValue)
+YGNode::getGapForAxis(YGFlexDirection, float) const
+YGNode::getLeadingBorder(YGFlexDirection) const
+YGNode::getLeadingMargin(YGFlexDirection, float) const
+YGNode::getLeadingPadding(YGFlexDirection, float) const
+YGNode::getLeadingPaddingAndBorder(YGFlexDirection, float) const
+YGNode::getLeadingPosition(YGFlexDirection, float) const
+YGNode::getMarginForAxis(YGFlexDirection, float) const
+YGNode::getTrailingBorder(YGFlexDirection) const
+YGNode::getTrailingMargin(YGFlexDirection, float) const
+YGNode::getTrailingPadding(YGFlexDirection, float) const
+YGNode::getTrailingPaddingAndBorder(YGFlexDirection, float) const
+YGNode::getTrailingPosition(YGFlexDirection, float) const
+YGNode::insertChild(YGNode*, unsigned int)
+YGNode::isLeadingPositionDefined(YGFlexDirection) const
+YGNode::isNodeFlexible()
+YGNode::isTrailingPosDefined(YGFlexDirection) const
+YGNode::marginLeadingValue(YGFlexDirection) const
+YGNode::marginTrailingValue(YGFlexDirection) const
+YGNode::markDirtyAndPropogate()
+YGNode::markDirtyAndPropogateDownwards()
+YGNode::measure(float, YGMeasureMode, float, YGMeasureMode, void*)
+YGNode::print(void*)
+YGNode::relativePosition(YGFlexDirection, float) const
+YGNode::removeChild(YGNode*)
+YGNode::removeChild(unsigned int)
+YGNode::replaceChild(YGNode*, YGNode*)
+YGNode::replaceChild(YGNode*, unsigned int)
+YGNode::reset()
+YGNode::resolveDimension()
+YGNode::resolveDirection(YGDirection)
+YGNode::resolveFlexBasisPtr() const
+YGNode::resolveFlexGrow() const
+YGNode::resolveFlexShrink() const
+YGNode::setDirty(bool)
+YGNode::setLayoutBorder(float, int)
+YGNode::setLayoutComputedFlexBasis(YGFloatOptional)
+YGNode::setLayoutComputedFlexBasisGeneration(unsigned int)
+YGNode::setLayoutDimension(float, int)
+YGNode::setLayoutDirection(YGDirection)
+YGNode::setLayoutHadOverflow(bool)
+YGNode::setLayoutLastOwnerDirection(YGDirection)
+YGNode::setLayoutMargin(float, int)
+YGNode::setLayoutMeasuredDimension(float, int)
+YGNode::setLayoutPadding(float, int)
+YGNode::setLayoutPosition(float, int)
+YGNode::setMeasureFunc(YGNode::'unnamed')
+YGNode::setMeasureFunc(YGSize (*)(YGNode*, float, YGMeasureMode, float, YGMeasureMode))
+YGNode::setMeasureFunc(YGSize (*)(YGNode*, float, YGMeasureMode, float, YGMeasureMode, void*))
+YGNode::setPosition(YGDirection, float, float, float)
+YGNodeCalculateLayout
+YGNodeCalculateLayoutWithContext
+YGNodeCanUseCachedMeasurement
+YGNodeClone
+YGNodeCopyStyle
+YGNodeFree
+YGNodeFreeRecursive
+YGNodeFreeRecursiveWithCleanupFunc
+YGNodeGetChild
+YGNodeGetChildCount
+YGNodeGetContext
+YGNodeGetDirtiedFunc
+YGNodeGetHasNewLayout
+YGNodeGetNodeType
+YGNodeGetOwner
+YGNodeGetParent
+YGNodeHasBaselineFunc
+YGNodeHasMeasureFunc
+YGNodeInsertChild
+YGNodeIsDirty
+YGNodeIsReferenceBaseline
+YGNodeLayoutGetBorder
+YGNodeLayoutGetBottom
+YGNodeLayoutGetDirection
+YGNodeLayoutGetHadOverflow
+YGNodeLayoutGetHeight
+YGNodeLayoutGetLeft
+YGNodeLayoutGetMargin
+YGNodeLayoutGetPadding
+YGNodeLayoutGetRight
+YGNodeLayoutGetTop
+YGNodeLayoutGetWidth
+YGNodeMarkDirty
+YGNodeMarkDirtyAndPropogateToDescendants
+YGNodeNew
+YGNodeNewWithConfig
+YGNodeRemoveAllChildren
+YGNodeRemoveChild
+YGNodeReset
+YGNodeSetBaselineFunc
+YGNodeSetChildren
+YGNodeSetChildren(YGNode*, std::__ndk1::vector<YGNode*, std::__ndk1::allocator<YGNode*>> const&)
+YGNodeSetContext
+YGNodeSetDirtiedFunc
+YGNodeSetHasNewLayout
+YGNodeSetIsReferenceBaseline
+YGNodeSetMeasureFunc
+YGNodeSetNodeType
+YGNodeSetPrintFunc
+YGNodeStyleGetAlignContent
+YGNodeStyleGetAlignItems
+YGNodeStyleGetAlignSelf
+YGNodeStyleGetAspectRatio
+YGNodeStyleGetBorder
+YGNodeStyleGetDirection
+YGNodeStyleGetDisplay
+YGNodeStyleGetFlex
+YGNodeStyleGetFlexBasis
+YGNodeStyleGetFlexDirection
+YGNodeStyleGetFlexGrow
+YGNodeStyleGetFlexShrink
+YGNodeStyleGetFlexWrap
+YGNodeStyleGetGap
+YGNodeStyleGetHeight
+YGNodeStyleGetJustifyContent
+YGNodeStyleGetMargin
+YGNodeStyleGetMaxHeight
+YGNodeStyleGetMaxWidth
+YGNodeStyleGetMinHeight
+YGNodeStyleGetMinWidth
+YGNodeStyleGetOverflow
+YGNodeStyleGetPadding
+YGNodeStyleGetPosition
+YGNodeStyleGetPositionType
+YGNodeStyleGetWidth
+YGNodeStyleSetAlignContent
+YGNodeStyleSetAlignItems
+YGNodeStyleSetAlignSelf
+YGNodeStyleSetAspectRatio
+YGNodeStyleSetBorder
+YGNodeStyleSetDirection
+YGNodeStyleSetDisplay
+YGNodeStyleSetFlex
+YGNodeStyleSetFlexBasis
+YGNodeStyleSetFlexBasisAuto
+YGNodeStyleSetFlexBasisPercent
+YGNodeStyleSetFlexDirection
+YGNodeStyleSetFlexGrow
+YGNodeStyleSetFlexShrink
+YGNodeStyleSetFlexWrap
+YGNodeStyleSetGap
+YGNodeStyleSetHeight
+YGNodeStyleSetHeightAuto
+YGNodeStyleSetHeightPercent
+YGNodeStyleSetJustifyContent
+YGNodeStyleSetMargin
+YGNodeStyleSetMarginAuto
+YGNodeStyleSetMarginPercent
+YGNodeStyleSetMaxHeight
+YGNodeStyleSetMaxHeightPercent
+YGNodeStyleSetMaxWidth
+YGNodeStyleSetMaxWidthPercent
+YGNodeStyleSetMinHeight
+YGNodeStyleSetMinHeightPercent
+YGNodeStyleSetMinWidth
+YGNodeStyleSetMinWidthPercent
+YGNodeStyleSetOverflow
+YGNodeStyleSetPadding
+YGNodeStyleSetPaddingPercent
+YGNodeStyleSetPosition
+YGNodeStyleSetPositionPercent
+YGNodeStyleSetPositionType
+YGNodeStyleSetWidth
+YGNodeStyleSetWidthAuto
+YGNodeStyleSetWidthPercent
+YGNodeSwapChild
+YGRoundValueToPixelGrid
+YGStyle::YGStyle()
+YGTraversePreOrder(YGNode*, std::__ndk1::function<void (YGNode*)>&&)
+YGValueAuto
+YGValueEqual(YGValue const&, YGValue const&)
+YGValueUndefined
+YGValueZero
+You cannot pass a NULL JavaVM to ensureInitialized
+_Unwind_Resume
+_Unwind_Resume() can't return
+_Unwind_VRS_Get_Internal
+_Unwind_VRS_Pop
+_Unwind_VRS_Set
+__android_log_print
+__android_log_vprint
+__cxa_allocate_exception
+__cxa_atexit
+__cxa_begin_catch
+__cxa_end_catch
+__cxa_finalize
+__cxa_free_exception
+__cxa_guard_abort
+__cxa_guard_acquire
+__cxa_guard_release
+__cxa_throw
+__gxx_personality_v0
+__stack_chk_fail
+__stack_chk_guard
+__vsnprintf_chk
+abort
+abs_layout
+abs_measure
+allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
+availableHeight is indefinite so heightMeasureMode must be YGMeasureModeUndefined
+availableWidth is indefinite so widthMeasureMode must be YGMeasureModeUndefined
+baseline
+com/facebook/yoga/YogaLogLevel
+com/facebook/yoga/YogaNative
+dl_unwind_find_exidx
+during phase1 personality function said it would stop here, but now in phase2 it did not stop here
+facebook::yoga::Event::publish(YGNode const&, facebook::yoga::Event::Type, facebook::yoga::Event::Data const&)
+facebook::yoga::Event::reset()
+facebook::yoga::Event::subscribe(std::__ndk1::function<void (YGNode const&, facebook::yoga::Event::Type, facebook::yoga::Event::Data)>&&)
+facebook::yoga::LayoutPassReasonToString(facebook::yoga::LayoutPassReason)
+facebook::yoga::detail::Log::log(YGConfig*, YGLogLevel, void*, char const*, ...)
+facebook::yoga::detail::Log::log(YGNode*, YGLogLevel, void*, char const*, ...)
+facebook::yoga::throwLogicalErrorWithMessage(char const*)
+facebook::yoga::vanillajni::getCurrentEnv()
+fflush
+flex_layout
+flex_measure
+fmaxf
+fminf
+fmod
+fprintf
+fromInt
+gConfigInstanceCount
+gCurrentGenerationCount
+gPrintChanges
+gPrintSkips
+getFloatRegister
+getInfoFromEHABISection
+getRegister
+index inlined table detected but pr function requires extra words
+initial
+java/lang/IllegalStateException
+java/lang/RuntimeException
+jni_YGConfigFreeJNI
+jni_YGConfigNewJNI
+jni_YGConfigSetExperimentalFeatureEnabledJNI
+jni_YGConfigSetLoggerJNI
+jni_YGConfigSetPointScaleFactorJNI
+jni_YGConfigSetPrintTreeFlagJNI
+jni_YGConfigSetUseLegacyStretchBehaviourJNI
+jni_YGConfigSetUseWebDefaultsJNI
+jni_YGNodeCalculateLayoutJNI
+jni_YGNodeClearChildrenJNI
+jni_YGNodeCloneJNI
+jni_YGNodeCopyStyleJNI
+jni_YGNodeFreeJNI
+jni_YGNodeInsertChildJNI
+jni_YGNodeIsDirtyJNI
+jni_YGNodeIsReferenceBaselineJNI
+jni_YGNodeMarkDirtyAndPropogateToDescendantsJNI
+jni_YGNodeMarkDirtyJNI
+jni_YGNodeNewJNI
+jni_YGNodeNewWithConfigJNI
+jni_YGNodePrintJNI
+jni_YGNodeRemoveChildJNI
+jni_YGNodeResetJNI
+jni_YGNodeSetHasBaselineFuncJNI
+jni_YGNodeSetHasMeasureFuncJNI
+jni_YGNodeSetIsReferenceBaselineJNI
+jni_YGNodeStyleGetAlignContentJNI
+jni_YGNodeStyleGetAlignItemsJNI
+jni_YGNodeStyleGetAlignSelfJNI
+jni_YGNodeStyleGetAspectRatioJNI
+jni_YGNodeStyleGetBorderJNI
+jni_YGNodeStyleGetDirectionJNI
+jni_YGNodeStyleGetDisplayJNI
+jni_YGNodeStyleGetFlexBasisJNI
+jni_YGNodeStyleGetFlexDirectionJNI
+jni_YGNodeStyleGetFlexGrowJNI
+jni_YGNodeStyleGetFlexJNI
+jni_YGNodeStyleGetFlexShrinkJNI
+jni_YGNodeStyleGetFlexWrapJNI
+jni_YGNodeStyleGetGapJNI
+jni_YGNodeStyleGetHeightJNI
+jni_YGNodeStyleGetJustifyContentJNI
+jni_YGNodeStyleGetMarginJNI
+jni_YGNodeStyleGetMaxHeightJNI
+jni_YGNodeStyleGetMaxWidthJNI
+jni_YGNodeStyleGetMinHeightJNI
+jni_YGNodeStyleGetMinWidthJNI
+jni_YGNodeStyleGetOverflowJNI
+jni_YGNodeStyleGetPaddingJNI
+jni_YGNodeStyleGetPositionJNI
+jni_YGNodeStyleGetPositionTypeJNI
+jni_YGNodeStyleGetWidthJNI
+jni_YGNodeStyleSetAlignContentJNI
+jni_YGNodeStyleSetAlignItemsJNI
+jni_YGNodeStyleSetAlignSelfJNI
+jni_YGNodeStyleSetAspectRatioJNI
+jni_YGNodeStyleSetBorderJNI
+jni_YGNodeStyleSetDirectionJNI
+jni_YGNodeStyleSetDisplayJNI
+jni_YGNodeStyleSetFlexBasisAutoJNI
+jni_YGNodeStyleSetFlexBasisJNI
+jni_YGNodeStyleSetFlexBasisPercentJNI
+jni_YGNodeStyleSetFlexDirectionJNI
+jni_YGNodeStyleSetFlexGrowJNI
+jni_YGNodeStyleSetFlexJNI
+jni_YGNodeStyleSetFlexShrinkJNI
+jni_YGNodeStyleSetFlexWrapJNI
+jni_YGNodeStyleSetGapJNI
+jni_YGNodeStyleSetHeightAutoJNI
+jni_YGNodeStyleSetHeightJNI
+jni_YGNodeStyleSetHeightPercentJNI
+jni_YGNodeStyleSetJustifyContentJNI
+jni_YGNodeStyleSetMarginAutoJNI
+jni_YGNodeStyleSetMarginJNI
+jni_YGNodeStyleSetMarginPercentJNI
+jni_YGNodeStyleSetMaxHeightJNI
+jni_YGNodeStyleSetMaxHeightPercentJNI
+jni_YGNodeStyleSetMaxWidthJNI
+jni_YGNodeStyleSetMaxWidthPercentJNI
+jni_YGNodeStyleSetMinHeightJNI
+jni_YGNodeStyleSetMinHeightPercentJNI
+jni_YGNodeStyleSetMinWidthJNI
+jni_YGNodeStyleSetMinWidthPercentJNI
+jni_YGNodeStyleSetOverflowJNI
+jni_YGNodeStyleSetPaddingJNI
+jni_YGNodeStyleSetPaddingPercentJNI
+jni_YGNodeStyleSetPositionJNI
+jni_YGNodeStyleSetPositionPercentJNI
+jni_YGNodeStyleSetPositionTypeJNI
+jni_YGNodeStyleSetWidthAutoJNI
+jni_YGNodeStyleSetWidthJNI
+jni_YGNodeStyleSetWidthPercentJNI
+jni_YGNodeSwapChildJNI
+leading
+libandroid.so
+libc++_shared.so
+libc.so
+libdl.so
+libfb.so
+libfbjni.so
+liblog.so
+libm.so
+libunwind: %s - %s\n
+libyoga.so
+mLayoutDirection
+measure
+memcpy
+memmove
+memset
+multiline_stretch
+operator delete(void*)
+operator new(unsigned int)
+operator==(YGStyle const&, YGStyle const&)
+setFloatRegister
+setRegister
+std::__ndk1::__vector_base_common<true>::__throw_length_error() const
+std::__ndk1::__vector_base_common<true>::__throw_out_of_range() const
+std::__ndk1::bad_function_call::~bad_function_call()
+std::__ndk1::enable_if<__is_cpp17_forward_iterator<YGNode**>::value && is_constructible<YGNode*, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, void>::type std::__ndk1::vector<YGNode*, std::__ndk1::allocator<YGNode*>>::assign<YGNode**>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
+std::__ndk1::vector<YGNode*, std::__ndk1::allocator<YGNode*>>::insert(std::__ndk1::__wrap_iter<YGNode* const*>, YGNode* const&)
+std::__ndk1::vector<YGNode*, std::__ndk1::allocator<YGNode*>>::shrink_to_fit()
+std::__ndk1::vector<YGNode*, std::__ndk1::allocator<YGNode*>>::vector(std::__ndk1::vector<YGNode*, std::__ndk1::allocator<YGNode*>> const&)
+std::exception::what() const
+std::exception::~exception()
+std::length_error::~length_error()
+std::logic_error::logic_error(char const*)
+std::logic_error::~logic_error()
+std::terminate()
+stretch
+trailing
+typeinfo for std::__ndk1::bad_function_call
+typeinfo for std::exception
+typeinfo for std::length_error
+typeinfo for std::logic_error
+typeinfo name for std::__ndk1::bad_function_call
+unknown
+unknown personality routine
+unknown register
+unsupported arm register
+unsupported register class
+unwind_phase2
+vsnprintf
+vtable for __cxxabiv1::__si_class_type_info
+vtable for std::__ndk1::bad_function_call
+vtable for std::length_error
+wm: %s, hm: %s, aw: %f ah: %f %s\n
+wm: %s, hm: %s, aw: %f ah: %f => d: (%f, %f) %s\n
+wm: %s, hm: %s, d: (%f, %f) %s\n
+yoga

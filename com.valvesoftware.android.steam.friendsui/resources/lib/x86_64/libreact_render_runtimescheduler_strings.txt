@@ -1,0 +1,290 @@
+$$typeof
+.AN8facebook5react23RuntimeSchedulerBindingE
+Android (7714059, based on r416183c1) clang version 12.0.8 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee)
+CIE ID is not zero
+CIE version is not 1 or 3
+Can't binary search on variable length encoded data.
+DWARF opcode not implemented
+DW_EH_PE_aligned pointer encoding not supported
+DW_EH_PE_datarel is invalid with a datarelBase of 0
+DW_EH_PE_funcrel pointer encoding not supported
+DW_EH_PE_textrel pointer encoding not supported
+DW_OP_deref_size with bad size
+DW_OP_fbreg not implemented
+DW_OP_piece not implemented
+ErrorUtils
+ErrorUtils is not set up properly. Something probably went wrong trying to load the JS bundle. Trying to report error 
+FDE has zero length
+FDE is really a CIE
+LIBC
+Linker: LLD 12.0.8 (/buildbot/src/android/llvm-r416183/out/llvm-project/lld c935d99d7cf2016289302412d708641d52d2f7ee)
+N8facebook5react11CallInvokerE
+N8facebook5react11TaskWrapperE
+N8facebook5react27RuntimeSchedulerCallInvokerE
+N8facebook5react4TaskE
+NSt6__ndk110__function6__baseIFN8facebook3jsi5ValueERNS3_7RuntimeERKS4_PS7_mEEE
+NSt6__ndk110__function6__baseIFvRN8facebook3jsi7RuntimeEEEE
+NSt6__ndk110__function6__funcIZN8facebook5react16RuntimeScheduler25executeNowOnTheSameThreadENS_8functionIFvRNS2_3jsi7RuntimeEEEEE3$_1NS_9allocatorISB_EES9_EE
+NSt6__ndk110__function6__funcIZN8facebook5react23RuntimeSchedulerBinding3getERNS2_3jsi7RuntimeERKNS5_10PropNameIDEE3$_0NS_9allocatorISB_EEFNS5_5ValueES7_RKSE_PSF_mEEE
+NSt6__ndk110__function6__funcIZN8facebook5react23RuntimeSchedulerBinding3getERNS2_3jsi7RuntimeERKNS5_10PropNameIDEE3$_1NS_9allocatorISB_EEFNS5_5ValueES7_RKSE_PSF_mEEE
+NSt6__ndk110__function6__funcIZN8facebook5react23RuntimeSchedulerBinding3getERNS2_3jsi7RuntimeERKNS5_10PropNameIDEE3$_2NS_9allocatorISB_EEFNS5_5ValueES7_RKSE_PSF_mEEE
+NSt6__ndk110__function6__funcIZN8facebook5react23RuntimeSchedulerBinding3getERNS2_3jsi7RuntimeERKNS5_10PropNameIDEE3$_3NS_9allocatorISB_EEFNS5_5ValueES7_RKSE_PSF_mEEE
+NSt6__ndk110__function6__funcIZN8facebook5react23RuntimeSchedulerBinding3getERNS2_3jsi7RuntimeERKNS5_10PropNameIDEE3$_4NS_9allocatorISB_EEFNS5_5ValueES7_RKSE_PSF_mEEE
+NSt6__ndk110__function6__funcIZN8facebook5react23RuntimeSchedulerBinding3getERNS2_3jsi7RuntimeERKNS5_10PropNameIDEE3$_5NS_9allocatorISB_EEFNS5_5ValueES7_RKSE_PSF_mEEE
+NSt6__ndk110__function6__funcIZN8facebook5react27RuntimeSchedulerCallInvoker10invokeSyncEONS_8functionIFvvEEEE3$_1NS_9allocatorIS9_EEFvRNS2_3jsi7RuntimeEEEE
+NSt6__ndk110__function6__funcIZN8facebook5react27RuntimeSchedulerCallInvoker11invokeAsyncENS3_17SchedulerPriorityEONS_8functionIFvvEEEE3$_2NS_9allocatorISA_EEFvRNS2_3jsi7RuntimeEEEE
+NSt6__ndk110__function6__funcIZN8facebook5react27RuntimeSchedulerCallInvoker11invokeAsyncEONS_8functionIFvvEEEE3$_0NS_9allocatorIS9_EEFvRNS2_3jsi7RuntimeEEEE
+NSt6__ndk110__function6__funcIZN8facebook5reactL45executeSynchronouslyOnSameThread_CAN_DEADLOCKERKNS_8functionIFvONS4_IFvRNS2_3jsi7RuntimeEEEEEEESA_EUlS7_E_NS_9allocatorISF_EES8_EE
+NSt6__ndk110__function6__funcIZNK8facebook5react16RuntimeScheduler12scheduleWorkENS_8functionIFvRNS2_3jsi7RuntimeEEEEE3$_0NS_9allocatorISB_EES9_EE
+NSt6__ndk110__function6__funcIZNK8facebook5react16RuntimeScheduler27scheduleWorkLoopIfNecessaryEvE3$_2NS_9allocatorIS5_EEFvRNS2_3jsi7RuntimeEEEE
+NSt6__ndk117bad_function_callE
+NSt6__ndk120__shared_ptr_emplaceIN8facebook5react11TaskWrapperENS_9allocatorIS3_EEEE
+NSt6__ndk120__shared_ptr_emplaceIN8facebook5react23RuntimeSchedulerBindingENS_9allocatorIS3_EEEE
+NSt6__ndk120__shared_ptr_emplaceIN8facebook5react4TaskENS_9allocatorIS3_EEEE
+Unknown DWARF encoding for search table.
+ZN8facebook5react16RuntimeScheduler25executeNowOnTheSameThreadENSt6__ndk18functionIFvRNS_3jsi7RuntimeEEEEE3$_1
+ZN8facebook5react23RuntimeSchedulerBinding3getERNS_3jsi7RuntimeERKNS2_10PropNameIDEE3$_0
+ZN8facebook5react23RuntimeSchedulerBinding3getERNS_3jsi7RuntimeERKNS2_10PropNameIDEE3$_1
+ZN8facebook5react23RuntimeSchedulerBinding3getERNS_3jsi7RuntimeERKNS2_10PropNameIDEE3$_2
+ZN8facebook5react23RuntimeSchedulerBinding3getERNS_3jsi7RuntimeERKNS2_10PropNameIDEE3$_3
+ZN8facebook5react23RuntimeSchedulerBinding3getERNS_3jsi7RuntimeERKNS2_10PropNameIDEE3$_4
+ZN8facebook5react23RuntimeSchedulerBinding3getERNS_3jsi7RuntimeERKNS2_10PropNameIDEE3$_5
+ZN8facebook5react27RuntimeSchedulerCallInvoker10invokeSyncEONSt6__ndk18functionIFvvEEEE3$_1
+ZN8facebook5react27RuntimeSchedulerCallInvoker11invokeAsyncENS0_17SchedulerPriorityEONSt6__ndk18functionIFvvEEEE3$_2
+ZN8facebook5react27RuntimeSchedulerCallInvoker11invokeAsyncEONSt6__ndk18functionIFvvEEEE3$_0
+ZN8facebook5reactL45executeSynchronouslyOnSameThread_CAN_DEADLOCKERKNSt6__ndk18functionIFvONS2_IFvRNS_3jsi7RuntimeEEEEEEES8_EUlS5_E_
+ZNK8facebook5react16RuntimeScheduler12scheduleWorkENSt6__ndk18functionIFvRNS_3jsi7RuntimeEEEEE3$_0
+ZNK8facebook5react16RuntimeScheduler27scheduleWorkLoopIfNecessaryEvE3$_2
+_Unwind_Resume
+_Unwind_Resume() can't return
+__cxa_allocate_exception
+__cxa_atexit
+__cxa_begin_catch
+__cxa_end_catch
+__cxa_finalize
+__cxa_free_exception
+__cxa_throw
+__gxx_personality_v0
+__stack_chk_fail
+__strlen_chk
+abort
+allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
+dl_iterate_phdr
+during phase1 personality function said it would stop here, but now in phase2 it did not stop here
+evaluateExpression
+facebook::jsi::HostObject::get(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)
+facebook::jsi::HostObject::getPropertyNames(facebook::jsi::Runtime&)
+facebook::jsi::HostObject::set(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&, facebook::jsi::Value const&)
+facebook::jsi::HostObject::~HostObject()
+facebook::jsi::JSError::JSError(facebook::jsi::Runtime&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)
+facebook::jsi::JSError::~JSError()
+facebook::jsi::NativeState::~NativeState()
+facebook::jsi::Object::getPropertyAsFunction(facebook::jsi::Runtime&, char const*) const
+facebook::jsi::Pointer::operator=(facebook::jsi::Pointer&&)
+facebook::jsi::Value::Value(facebook::jsi::Runtime&, facebook::jsi::Value const&)
+facebook::jsi::Value::Value(facebook::jsi::Value&&)
+facebook::jsi::Value::asObject(facebook::jsi::Runtime&) const &
+facebook::jsi::Value::~Value()
+facebook::react::RuntimeScheduler::RuntimeScheduler(std::__ndk1::function<void (std::__ndk1::function<void (facebook::jsi::Runtime&)>&&)>, std::__ndk1::function<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1l, 1000000000l>>> ()>)
+facebook::react::RuntimeScheduler::callExpiredTasks(facebook::jsi::Runtime&)
+facebook::react::RuntimeScheduler::cancelTask(facebook::react::Task&)
+facebook::react::RuntimeScheduler::executeNowOnTheSameThread(std::__ndk1::function<void (facebook::jsi::Runtime&)>)
+facebook::react::RuntimeScheduler::getCurrentPriorityLevel() const
+facebook::react::RuntimeScheduler::getIsSynchronous() const
+facebook::react::RuntimeScheduler::getShouldYield() const
+facebook::react::RuntimeScheduler::now() const
+facebook::react::RuntimeScheduler::scheduleTask(facebook::react::SchedulerPriority, facebook::jsi::Function)
+facebook::react::RuntimeScheduler::scheduleTask(facebook::react::SchedulerPriority, std::__ndk1::function<void (facebook::jsi::Runtime&)>)
+facebook::react::RuntimeScheduler::scheduleWork(std::__ndk1::function<void (facebook::jsi::Runtime&)>) const
+facebook::react::RuntimeScheduler::scheduleWorkLoopIfNecessary() const
+facebook::react::RuntimeScheduler::startWorkLoop(facebook::jsi::Runtime&) const
+facebook::react::RuntimeSchedulerBinding::RuntimeSchedulerBinding(std::__ndk1::shared_ptr<facebook::react::RuntimeScheduler>)
+facebook::react::RuntimeSchedulerBinding::createAndInstallIfNeeded(facebook::jsi::Runtime&, std::__ndk1::shared_ptr<facebook::react::RuntimeScheduler> const&)
+facebook::react::RuntimeSchedulerBinding::get(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)
+facebook::react::RuntimeSchedulerBinding::getBinding(facebook::jsi::Runtime&)
+facebook::react::RuntimeSchedulerBinding::getIsSynchronous() const
+facebook::react::RuntimeSchedulerBinding::~RuntimeSchedulerBinding()
+facebook::react::RuntimeSchedulerCallInvoker::RuntimeSchedulerCallInvoker(std::__ndk1::weak_ptr<facebook::react::RuntimeScheduler>)
+facebook::react::RuntimeSchedulerCallInvoker::invokeAsync(facebook::react::SchedulerPriority, std::__ndk1::function<void ()>&&)
+facebook::react::RuntimeSchedulerCallInvoker::invokeAsync(std::__ndk1::function<void ()>&&)
+facebook::react::RuntimeSchedulerCallInvoker::invokeSync(std::__ndk1::function<void ()>&&)
+facebook::react::RuntimeSchedulerCallInvoker::~RuntimeSchedulerCallInvoker()
+facebook::react::Task::Task(facebook::react::SchedulerPriority, facebook::jsi::Function, std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1l, 1000000000l>>>)
+facebook::react::Task::Task(facebook::react::SchedulerPriority, std::__ndk1::function<void (facebook::jsi::Runtime&)>, std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1l, 1000000000l>>>)
+facebook::react::Task::execute(facebook::jsi::Runtime&, bool)
+facebook::react::Task::~Task()
+facebook::react::TaskWrapper::~TaskWrapper()
+fflush
+fprintf
+free
+fwrite
+getEncodedP
+getFloatRegister
+getRegister
+getSLEB128
+getSavedRegister
+getTableEntrySize
+getULEB128
+libandroid.so
+libc++_shared.so
+libc.so
+libdl.so
+libfb.so
+libfbjni.so
+libfolly_runtime.so
+libglog.so
+libglog_init.so
+libjsi.so
+liblog.so
+libm.so
+libreact_debug.so
+libreact_render_core.so
+libreact_render_debug.so
+libreact_render_graphics.so
+libreact_render_mapbuffer.so
+libreact_render_runtimescheduler.so
+libreact_utils.so
+libruntimeexecutor.so
+libunwind: %s - %s\n
+libunwind: Unsupported .eh_frame_hdr version\n
+libunwind: malformed DW_CFA_GNU_negative_offset_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa_register DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa_sf DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_expression DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_offset DWARF unwind, reg (%lu) out of range\n
+libunwind: malformed DW_CFA_offset_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_offset_extended_sf DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_register DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_register DWARF unwind, reg2 too big\n
+libunwind: malformed DW_CFA_restore DWARF unwind, reg (%lu) out of range\n
+libunwind: malformed DW_CFA_restore_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_same_value DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_undefined DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_val_expression DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_val_offset DWARF unwind, reg (%lu) out of range\n\n
+libunwind: malformed DW_CFA_val_offset_sf DWARF unwind, reg too big\n
+malformed uleb128 expression
+malloc
+memcpy
+memset
+nativeRuntimeScheduler
+no x86_64 float registers
+operator delete(void*)
+operator new(unsigned long)
+pthread_equal
+pthread_rwlock_rdlock
+pthread_rwlock_unlock
+pthread_rwlock_wrlock
+pthread_self
+reportFatalError
+setFloatRegister
+setRegister
+std::__ndk1::__compressed_pair_elem<facebook::react::Task, 1, false>::__compressed_pair_elem<facebook::react::SchedulerPriority&, std::__ndk1::function<void (facebook::jsi::Runtime&)>&&, std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1l, 1000000000l>>>&, 0ul, 1ul, 2ul>(std::__ndk1::piecewise_construct_t, std::__ndk1::tuple<facebook::react::SchedulerPriority&, std::__ndk1::function<void (facebook::jsi::Runtime&)>&&, std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1l, 1000000000l>>>&>, std::__ndk1::__tuple_indices<0ul, 1ul, 2ul>)
+std::__ndk1::__shared_ptr_emplace<facebook::react::RuntimeSchedulerBinding, std::__ndk1::allocator<facebook::react::RuntimeSchedulerBinding>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<facebook::react::RuntimeSchedulerBinding, std::__ndk1::allocator<facebook::react::RuntimeSchedulerBinding>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<facebook::react::RuntimeSchedulerBinding, std::__ndk1::allocator<facebook::react::RuntimeSchedulerBinding>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<facebook::react::Task, std::__ndk1::allocator<facebook::react::Task>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<facebook::react::Task, std::__ndk1::allocator<facebook::react::Task>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<facebook::react::Task, std::__ndk1::allocator<facebook::react::Task>>::__shared_ptr_emplace<facebook::react::SchedulerPriority&, facebook::jsi::Function, std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1l, 1000000000l>>>&>(std::__ndk1::allocator<facebook::react::Task>, facebook::react::SchedulerPriority&, facebook::jsi::Function&&, std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1l, 1000000000l>>>&)
+std::__ndk1::__shared_ptr_emplace<facebook::react::Task, std::__ndk1::allocator<facebook::react::Task>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<facebook::react::TaskWrapper, std::__ndk1::allocator<facebook::react::TaskWrapper>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<facebook::react::TaskWrapper, std::__ndk1::allocator<facebook::react::TaskWrapper>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<facebook::react::TaskWrapper, std::__ndk1::allocator<facebook::react::TaskWrapper>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_weak_count::__get_deleter(std::type_info const&) const
+std::__ndk1::__shared_weak_count::__release_weak()
+std::__ndk1::__shared_weak_count::lock()
+std::__ndk1::__shared_weak_count::~__shared_weak_count()
+std::__ndk1::__vector_base_common<true>::__throw_length_error() const
+std::__ndk1::bad_function_call::~bad_function_call()
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> std::__ndk1::operator+<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>(char const*, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::basic_string(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::compare(unsigned long, unsigned long, char const*, unsigned long) const
+std::__ndk1::mutex::lock()
+std::__ndk1::mutex::unlock()
+std::__ndk1::mutex::~mutex()
+std::exception::what() const
+std::exception::~exception()
+std::length_error::~length_error()
+std::logic_error::logic_error(char const*)
+std::terminate()
+strlen
+truncated sleb128 expression
+truncated uleb128 expression
+typeinfo for facebook::jsi::HostObject
+typeinfo for facebook::jsi::JSError
+typeinfo for facebook::jsi::NativeState
+typeinfo for facebook::react::CallInvoker
+typeinfo for facebook::react::RuntimeSchedulerBinding
+typeinfo for facebook::react::RuntimeSchedulerCallInvoker
+typeinfo for facebook::react::Task
+typeinfo for facebook::react::TaskWrapper
+typeinfo for std::__ndk1::__function::__base<facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>
+typeinfo for std::__ndk1::__function::__base<void (facebook::jsi::Runtime&)>
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::RuntimeSchedulerBinding, std::__ndk1::allocator<facebook::react::RuntimeSchedulerBinding>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::Task, std::__ndk1::allocator<facebook::react::Task>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::TaskWrapper, std::__ndk1::allocator<facebook::react::TaskWrapper>>
+typeinfo for std::__ndk1::__shared_weak_count
+typeinfo for std::__ndk1::bad_function_call
+typeinfo for std::bad_variant_access
+typeinfo for std::exception
+typeinfo for std::length_error
+typeinfo name for facebook::react::CallInvoker
+typeinfo name for facebook::react::RuntimeSchedulerBinding
+typeinfo name for facebook::react::RuntimeSchedulerCallInvoker
+typeinfo name for facebook::react::Task
+typeinfo name for facebook::react::TaskWrapper
+typeinfo name for std::__ndk1::__function::__base<facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>
+typeinfo name for std::__ndk1::__function::__base<void (facebook::jsi::Runtime&)>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::RuntimeSchedulerBinding, std::__ndk1::allocator<facebook::react::RuntimeSchedulerBinding>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::Task, std::__ndk1::allocator<facebook::react::Task>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::TaskWrapper, std::__ndk1::allocator<facebook::react::TaskWrapper>>
+typeinfo name for std::__ndk1::bad_function_call
+unknown pointer encoding
+unknown register
+unstable_IdlePriority
+unstable_ImmediatePriority
+unstable_LowPriority
+unstable_NormalPriority
+unstable_UserBlockingPriority
+unstable_cancelCallback
+unstable_getCurrentPriorityLevel
+unstable_now
+unstable_requestPaint
+unstable_scheduleCallback
+unstable_shouldYield
+unsupported restore location for register
+unsupported x86_64 register
+unwind_phase2
+void facebook::jsi::Object::setProperty<facebook::jsi::Object>(facebook::jsi::Runtime&, char const*, facebook::jsi::Object&&) const
+void std::__ndk1::__sift_down<facebook::react::TaskPriorityComparer&, std::__ndk1::__wrap_iter<std::__ndk1::shared_ptr<facebook::react::Task>*>>(std::__ndk1::__wrap_iter<std::__ndk1::shared_ptr<facebook::react::Task>*>, std::__ndk1::__wrap_iter<std::__ndk1::shared_ptr<facebook::react::Task>*>, facebook::react::TaskPriorityComparer&, std::__ndk1::iterator_traits<std::__ndk1::__wrap_iter<std::__ndk1::shared_ptr<facebook::react::Task>*>>::difference_type, std::__ndk1::__wrap_iter<std::__ndk1::shared_ptr<facebook::react::Task>*>)
+void std::__ndk1::__sift_up<facebook::react::TaskPriorityComparer&, std::__ndk1::__wrap_iter<std::__ndk1::shared_ptr<facebook::react::Task>*>>(std::__ndk1::__wrap_iter<std::__ndk1::shared_ptr<facebook::react::Task>*>, std::__ndk1::__wrap_iter<std::__ndk1::shared_ptr<facebook::react::Task>*>, facebook::react::TaskPriorityComparer&, std::__ndk1::iterator_traits<std::__ndk1::__wrap_iter<std::__ndk1::shared_ptr<facebook::react::Task>*>>::difference_type)
+void std::__ndk1::vector<std::__ndk1::shared_ptr<facebook::react::Task>, std::__ndk1::allocator<std::__ndk1::shared_ptr<facebook::react::Task>>>::__push_back_slow_path<std::__ndk1::shared_ptr<facebook::react::Task> const&>(std::__ndk1::shared_ptr<facebook::react::Task> const&)
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info
+vtable for facebook::react::RuntimeSchedulerBinding
+vtable for facebook::react::RuntimeSchedulerCallInvoker
+vtable for facebook::react::Task
+vtable for facebook::react::TaskWrapper
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::RuntimeSchedulerBinding, std::__ndk1::allocator<facebook::react::RuntimeSchedulerBinding>>
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::Task, std::__ndk1::allocator<facebook::react::Task>>
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::TaskWrapper, std::__ndk1::allocator<facebook::react::TaskWrapper>>
+vtable for std::__ndk1::bad_function_call
+vtable for std::bad_variant_access
+vtable for std::length_error
+xmm0
+xmm1
+xmm10
+xmm11
+xmm12
+xmm13
+xmm14
+xmm15
+xmm2
+xmm3
+xmm4
+xmm5
+xmm6
+xmm7
+xmm8
+xmm9

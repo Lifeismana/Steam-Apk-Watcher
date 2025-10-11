@@ -1,0 +1,26 @@
+Android (7714059, based on r416183c1) clang version 12.0.8 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee)
+JNI_OnLoad
+LIBC
+Linker: LLD 12.0.8 (/buildbot/src/android/llvm-r416183/out/llvm-project/lld c935d99d7cf2016289302412d708641d52d2f7ee)
+NSt6__ndk110__function6__baseIFvvEEE
+NSt6__ndk110__function6__funcIZ10JNI_OnLoadE3$_0NS_9allocatorIS2_EEFvvEEE
+Z10JNI_OnLoadE3$_0
+__cxa_atexit
+__cxa_finalize
+__stack_chk_fail
+facebook::jni::initialize(_JavaVM*, std::__ndk1::function<void ()>&&)
+libandroid.so
+libc++_shared.so
+libc.so
+libdl.so
+libfb.so
+libfbjni.so
+liblog.so
+libm.so
+libreactperfloggerjni.so
+operator delete(void*)
+operator new(unsigned long)
+typeinfo for std::__ndk1::__function::__base<void ()>
+typeinfo name for std::__ndk1::__function::__base<void ()>
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info

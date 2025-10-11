@@ -1,0 +1,221 @@
+()Ljava/nio/ByteBuffer;
+()[Ljava/lang/Object;
+(Lcom/facebook/jni/HybridData;)V
+<init>
+Android (7714059, based on r416183c1) clang version 12.0.8 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee)
+JNI_OnLoad
+LIBC
+Lcom/facebook/jni/HybridData$Destructor;
+Lcom/facebook/jni/HybridData;
+Lcom/facebook/react/common/mapbuffer/ReadableMapBuffer;
+Linker: LLD 12.0.8 (/buildbot/src/android/llvm-r416183/out/llvm-project/lld c935d99d7cf2016289302412d708641d52d2f7ee)
+N8facebook3jni11HybridClassINS_5react18JReadableMapBufferENS0_6detail15BaseHybridClassEEE
+N8facebook3jni6detail15BaseHybridClassE
+N8facebook5react18JReadableMapBufferE
+NSt6__ndk110__function6__baseIFvvEEE
+NSt6__ndk110__function6__funcIZ10JNI_OnLoadE3$_0NS_9allocatorIS2_EEFvvEEE
+Unknown ARM float register
+Z10JNI_OnLoadE3$_0
+_JNIEnv::CallBooleanMethod(_jobject*, _jmethodID*, ...)
+_JNIEnv::CallDoubleMethod(_jobject*, _jmethodID*, ...)
+_JNIEnv::CallIntMethod(_jobject*, _jmethodID*, ...)
+_JNIEnv::CallObjectMethod(_jobject*, _jmethodID*, ...)
+_JNIEnv::NewObject(_jclass*, _jmethodID*, ...)
+_Unwind_Resume
+_Unwind_Resume() can't return
+_Unwind_VRS_Get_Internal
+_Unwind_VRS_Pop
+_Unwind_VRS_Set
+__cxa_allocate_exception
+__cxa_atexit
+__cxa_begin_catch
+__cxa_end_catch
+__cxa_finalize
+__cxa_guard_abort
+__cxa_guard_acquire
+__cxa_guard_release
+__cxa_rethrow
+__cxa_throw
+__gxx_personality_v0
+__stack_chk_fail
+__stack_chk_guard
+abort
+booleanValue
+com/facebook/jni/HybridClassBase
+com/facebook/react/common/mapbuffer/ReadableMapBuffer
+com/facebook/react/common/mapbuffer/WritableMapBuffer
+dl_unwind_find_exidx
+doubleValue
+during phase1 personality function said it would stop here, but now in phase2 it did not stop here
+facebook::jni::Environment::current()
+facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const
+facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const::hybridDataField
+facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::makeHybridData(std::__ndk1::unique_ptr<facebook::react::JReadableMapBuffer, std::__ndk1::default_delete<facebook::react::JReadableMapBuffer>>)
+facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::registerHybrid(std::initializer_list<JNINativeMethod>)
+facebook::jni::JByteBuffer::wrapBytes(unsigned char*, unsigned int)
+facebook::jni::JField<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*> facebook::jni::detectHybrid<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>(facebook::jni::alias_ref<_jclass*>)
+facebook::jni::JPrimitiveArray<_jintArray*>::getElements(unsigned char*)
+facebook::jni::JPrimitiveArray<_jintArray*>::releaseElements(int*, int)
+facebook::jni::JString::toStdString() const
+facebook::jni::JavaClass<facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::JBoolean, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::JDouble, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::JInteger, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::JString, facebook::jni::JObject, _jstring*>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::detail::HybridClassBase, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::react::JWritableMapBuffer, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::basic_strong_ref<facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::LocalReferenceAllocator> facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::newObjectCxxArgs<facebook::react::MapBuffer>(facebook::react::MapBuffer&&)
+facebook::jni::basic_strong_ref<facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::LocalReferenceAllocator> facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::newObjectCxxArgs<facebook::react::MapBuffer>(facebook::react::MapBuffer&&)::isHybrid
+facebook::jni::basic_strong_ref<facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::LocalReferenceAllocator> facebook::jni::JavaClass<facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::newInstance<>()
+facebook::jni::basic_strong_ref<facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::LocalReferenceAllocator> facebook::jni::JavaClass<facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::newInstance<facebook::jni::basic_strong_ref<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator>>(facebook::jni::basic_strong_ref<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator>)
+facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::JClass::newObject<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, facebook::jni::basic_strong_ref<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator>>(facebook::jni::JConstructor<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject* (facebook::jni::basic_strong_ref<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator>)>, facebook::jni::basic_strong_ref<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator>) const
+facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart>(facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart const*)
+facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart>(facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart const*)::holderField
+facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::JObject>(facebook::jni::JObject const*)
+facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::JObject>(facebook::jni::JObject const*)::holderField
+facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::detail::HybridData>(facebook::jni::detail::HybridData const*)
+facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::detail::HybridData>(facebook::jni::detail::HybridData const*)::holderField
+facebook::jni::detail::BaseHybridClass* facebook::jni::detail::getNativePointer<facebook::jni::JObject>(facebook::jni::JObject const*)
+facebook::jni::detail::BaseHybridClass* facebook::jni::detail::getNativePointer<facebook::jni::detail::HybridData>(facebook::jni::detail::HybridData const*)
+facebook::jni::detail::FunctionWrapper<facebook::jni::basic_strong_ref<facebook::jni::JByteBuffer, facebook::jni::LocalReferenceAllocator> (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>), facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, facebook::jni::basic_strong_ref<facebook::jni::JByteBuffer, facebook::jni::LocalReferenceAllocator>>::call(_JNIEnv*, _jobject*, facebook::jni::basic_strong_ref<facebook::jni::JByteBuffer, facebook::jni::LocalReferenceAllocator> (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>))
+facebook::jni::detail::HybridClassBase::isHybridClassBase(facebook::jni::alias_ref<_jclass*>)
+facebook::jni::detail::HybridData::create()
+facebook::jni::detail::HybridDestructor::getNativePointer() const
+facebook::jni::detail::HybridDestructor::setNativePointer(std::__ndk1::unique_ptr<facebook::jni::detail::BaseHybridClass, std::__ndk1::default_delete<facebook::jni::detail::BaseHybridClass>>)
+facebook::jni::detail::JPrimitive<facebook::jni::JBoolean, unsigned char>::value() const
+facebook::jni::detail::JPrimitive<facebook::jni::JBoolean, unsigned char>::value() const::method
+facebook::jni::detail::JPrimitive<facebook::jni::JDouble, double>::value() const
+facebook::jni::detail::JPrimitive<facebook::jni::JDouble, double>::value() const::method
+facebook::jni::detail::JPrimitive<facebook::jni::JInteger, int>::value() const
+facebook::jni::detail::JPrimitive<facebook::jni::JInteger, int>::value() const::method
+facebook::jni::detail::JniEnvCacher::JniEnvCacher(_JNIEnv*)
+facebook::jni::detail::JniEnvCacher::~JniEnvCacher()
+facebook::jni::detail::MethodWrapper<facebook::jni::basic_strong_ref<facebook::jni::JByteBuffer, facebook::jni::LocalReferenceAllocator> (facebook::react::JReadableMapBuffer::*)(), &facebook::react::JReadableMapBuffer::importByteBuffer(), facebook::react::JReadableMapBuffer, facebook::jni::basic_strong_ref<facebook::jni::JByteBuffer, facebook::jni::LocalReferenceAllocator>>::call(_JNIEnv*, _jobject*)
+facebook::jni::detail::MethodWrapper<facebook::jni::basic_strong_ref<facebook::jni::JByteBuffer, facebook::jni::LocalReferenceAllocator> (facebook::react::JReadableMapBuffer::*)(), &facebook::react::JReadableMapBuffer::importByteBuffer(), facebook::react::JReadableMapBuffer, facebook::jni::basic_strong_ref<facebook::jni::JByteBuffer, facebook::jni::LocalReferenceAllocator>>::dispatch(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>)
+facebook::jni::findClassLocal(char const*)
+facebook::jni::findClassStatic(char const*)
+facebook::jni::getHybridDataFromField(facebook::jni::JObject const*, facebook::jni::JField<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*> const&)
+facebook::jni::initialize(_JavaVM*, std::__ndk1::function<void ()>&&)
+facebook::jni::jmethod_traits<double ()>::kDescriptor
+facebook::jni::jmethod_traits<facebook::jni::JArrayClass<facebook::jni::JObject> ()>::kDescriptor
+facebook::jni::jmethod_traits<facebook::jni::JPrimitiveArray<_jintArray*> ()>::kDescriptor
+facebook::jni::jmethod_traits<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject* ()>::kConstructorDescriptor
+facebook::jni::jmethod_traits<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject* (facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*)>::kConstructorDescriptor
+facebook::jni::jmethod_traits<facebook::jni::detail::JTypeFor<facebook::jni::JByteBuffer, facebook::jni::JBuffer, void>::_javaobject* ()>::kDescriptor
+facebook::jni::jmethod_traits<int ()>::kDescriptor
+facebook::jni::jmethod_traits<unsigned char ()>::kDescriptor
+facebook::jni::jtype_traits<_jstring*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::JBoolean, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::JDouble, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::JInteger, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridClassBase, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*>::kDescriptor
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*>::kDescriptor
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::react::JWritableMapBuffer, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::throwCppExceptionIf(bool)
+facebook::jni::throwNPE()
+facebook::jni::throwNewJavaException(char const*, char const*)
+facebook::jni::throwPendingJniExceptionAsCppException()
+facebook::jni::translatePendingCppExceptionToJavaException()
+facebook::react::JReadableMapBuffer::JReadableMapBuffer(facebook::react::MapBuffer&&)
+facebook::react::JReadableMapBuffer::createWithContents(facebook::react::MapBuffer&&)
+facebook::react::JReadableMapBuffer::data() const
+facebook::react::JReadableMapBuffer::importByteBuffer()
+facebook::react::JReadableMapBuffer::registerNatives()
+facebook::react::JReadableMapBuffer::~JReadableMapBuffer()
+facebook::react::JWritableMapBuffer::getMapBuffer()
+facebook::react::MapBuffer::MapBuffer(std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char>>)
+facebook::react::MapBufferBuilder::MapBufferBuilder(unsigned int)
+facebook::react::MapBufferBuilder::build()
+facebook::react::MapBufferBuilder::putBool(unsigned short, bool)
+facebook::react::MapBufferBuilder::putDouble(unsigned short, double)
+facebook::react::MapBufferBuilder::putInt(unsigned short, int)
+facebook::react::MapBufferBuilder::putMapBuffer(unsigned short, facebook::react::MapBuffer const&)
+facebook::react::MapBufferBuilder::putString(unsigned short, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+fflush
+fprintf
+getFloatRegister
+getInfoFromEHABISection
+getKeys
+getRegister
+getValues
+guard variable for facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const::hybridDataField
+guard variable for facebook::jni::JavaClass<facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::JBoolean, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::JDouble, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::JInteger, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::JString, facebook::jni::JObject, _jstring*>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::detail::HybridClassBase, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::react::JWritableMapBuffer, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::basic_strong_ref<facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::LocalReferenceAllocator> facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::newObjectCxxArgs<facebook::react::MapBuffer>(facebook::react::MapBuffer&&)::isHybrid
+guard variable for facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart>(facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart const*)::holderField
+guard variable for facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::JObject>(facebook::jni::JObject const*)::holderField
+guard variable for facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::detail::HybridData>(facebook::jni::detail::HybridData const*)::holderField
+guard variable for facebook::jni::detail::JPrimitive<facebook::jni::JBoolean, unsigned char>::value() const::method
+guard variable for facebook::jni::detail::JPrimitive<facebook::jni::JDouble, double>::value() const::method
+guard variable for facebook::jni::detail::JPrimitive<facebook::jni::JInteger, int>::value() const::method
+importByteBuffer
+index inlined table detected but pr function requires extra words
+intValue
+java.lang.NullPointerException
+java/lang/Boolean
+java/lang/Double
+java/lang/Integer
+java/lang/NullPointerException
+java/lang/String
+libandroid.so
+libc++_shared.so
+libc.so
+libdl.so
+libfb.so
+libfbjni.so
+libfolly_runtime.so
+libglog.so
+libglog_init.so
+liblog.so
+libm.so
+libmapbufferjni.so
+libreact_config.so
+libreact_debug.so
+libreact_render_mapbuffer.so
+libreact_utils.so
+libunwind: %s - %s\n
+libyoga.so
+mDestructor
+mHybridData
+memcpy
+memset
+operator delete(void*)
+operator new(unsigned int)
+setFloatRegister
+setRegister
+std::__ndk1::__vector_base_common<true>::__throw_length_error() const
+std::__ndk1::enable_if<IsPlainJniReference<facebook::jni::detail::JavaObjectType<facebook::jni::JBoolean>::type>(), facebook::jni::basic_strong_ref<facebook::jni::JBoolean, facebook::jni::LocalReferenceAllocator>>::type facebook::jni::static_ref_cast<facebook::jni::JBoolean, facebook::jni::JObject>(facebook::jni::basic_strong_ref<facebook::jni::JObject, facebook::jni::LocalReferenceAllocator> const&)
+std::__ndk1::enable_if<IsPlainJniReference<facebook::jni::detail::JavaObjectType<facebook::jni::JDouble>::type>(), facebook::jni::basic_strong_ref<facebook::jni::JDouble, facebook::jni::LocalReferenceAllocator>>::type facebook::jni::static_ref_cast<facebook::jni::JDouble, facebook::jni::JObject>(facebook::jni::basic_strong_ref<facebook::jni::JObject, facebook::jni::LocalReferenceAllocator> const&)
+std::__ndk1::enable_if<IsPlainJniReference<facebook::jni::detail::JavaObjectType<facebook::jni::JInteger>::type>(), facebook::jni::basic_strong_ref<facebook::jni::JInteger, facebook::jni::LocalReferenceAllocator>>::type facebook::jni::static_ref_cast<facebook::jni::JInteger, facebook::jni::JObject>(facebook::jni::basic_strong_ref<facebook::jni::JObject, facebook::jni::LocalReferenceAllocator> const&)
+std::__ndk1::enable_if<IsPlainJniReference<facebook::jni::detail::JavaObjectType<facebook::jni::JString>::type>(), facebook::jni::basic_strong_ref<facebook::jni::JString, facebook::jni::LocalReferenceAllocator>>::type facebook::jni::static_ref_cast<facebook::jni::JString, facebook::jni::JObject>(facebook::jni::basic_strong_ref<facebook::jni::JObject, facebook::jni::LocalReferenceAllocator> const&)
+std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char>>::vector(std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char>> const&)
+std::bad_alloc::bad_alloc()
+std::bad_alloc::~bad_alloc()
+std::terminate()
+typeinfo for facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>
+typeinfo for facebook::jni::detail::BaseHybridClass
+typeinfo for facebook::react::JReadableMapBuffer
+typeinfo for std::__ndk1::__function::__base<void ()>
+typeinfo for std::bad_alloc
+typeinfo for std::exception
+typeinfo name for facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>
+typeinfo name for facebook::jni::detail::BaseHybridClass
+typeinfo name for facebook::react::JReadableMapBuffer
+typeinfo name for std::__ndk1::__function::__base<void ()>
+unknown personality routine
+unknown register
+unsupported arm register
+unsupported register class
+unwind_phase2
+void facebook::jni::detail::setNativePointer<facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::LocalReferenceAllocator>(facebook::jni::basic_strong_ref<facebook::jni::HybridClass<facebook::react::JReadableMapBuffer, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::LocalReferenceAllocator>, std::__ndk1::unique_ptr<facebook::jni::detail::BaseHybridClass, std::__ndk1::default_delete<facebook::jni::detail::BaseHybridClass>>)
+void facebook::jni::detail::setNativePointer<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator>(facebook::jni::basic_strong_ref<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator>, std::__ndk1::unique_ptr<facebook::jni::detail::BaseHybridClass, std::__ndk1::default_delete<facebook::jni::detail::BaseHybridClass>>)
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info
+vtable for facebook::react::JReadableMapBuffer

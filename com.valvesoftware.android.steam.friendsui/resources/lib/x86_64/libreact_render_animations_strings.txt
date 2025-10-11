@@ -1,0 +1,361 @@
+/root/react-native/packages/react-native/ReactCommon/react/renderer/animations/LayoutAnimationKeyFrameManager.cpp
+/root/react-native/packages/react-native/ReactCommon/react/renderer/animations/conversions.h
+Android (7714059, based on r416183c1) clang version 12.0.8 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee)
+CIE ID is not zero
+CIE version is not 1 or 3
+Can't binary search on variable length encoded data.
+DWARF opcode not implemented
+DW_EH_PE_aligned pointer encoding not supported
+DW_EH_PE_datarel is invalid with a datarelBase of 0
+DW_EH_PE_funcrel pointer encoding not supported
+DW_EH_PE_textrel pointer encoding not supported
+DW_OP_deref_size with bad size
+DW_OP_fbreg not implemented
+DW_OP_piece not implemented
+Error parsing animation config: could not find field `property`
+Error parsing animation config: could not find field `type`
+Error parsing animation config: could not parse field `property`
+Error parsing animation config: could not parse field `type`
+Error parsing animation config: could not unwrap field `property`
+Error parsing animation config: could not unwrap field `type`
+Error parsing animation config: field `delay` must be a number
+Error parsing animation config: field `duration` must be a number
+Error parsing animation config: field `initialVelocity` must be a number
+Error parsing animation property: 
+Error parsing animation type: 
+FDE has zero length
+FDE is really a CIE
+Infinity
+LIBC
+LayoutAnimationDriver: Animation Completed
+Linker: LLD 12.0.8 (/buildbot/src/android/llvm-r416183/out/llvm-project/lld c935d99d7cf2016289302412d708641d52d2f7ee)
+N5folly9TypeErrorE
+N8facebook5react21LayoutAnimationDriverE
+N8facebook5react24MountingOverrideDelegateE
+N8facebook5react26UIManagerAnimationDelegateE
+N8facebook5react30LayoutAnimationKeyFrameManagerE
+NSt6__ndk110__function6__baseIFmvEEE
+NSt6__ndk110__function6__baseIFvRN8facebook3jsi7RuntimeEEEE
+NSt6__ndk110__function6__funcIZN8facebook5react30LayoutAnimationKeyFrameManagerC1ENS_8functionIFvONS5_IFvRNS2_3jsi7RuntimeEEEEEEERNS_10shared_ptrIKNS3_16ContextContainerEEEPNS3_29LayoutAnimationStatusDelegateEE3$_0NS_9allocatorISL_EEFmvEEE
+NSt6__ndk110__function6__funcIZNK8facebook5react30LayoutAnimationKeyFrameManager12callCallbackERKNS3_30LayoutAnimationCallbackWrapperEE3$_4NS_9allocatorIS8_EEFvRNS2_3jsi7RuntimeEEEE
+NSt6__ndk117bad_function_callE
+NSt6__ndk120__shared_ptr_emplaceIN8facebook3jsi8FunctionENS_9allocatorIS3_EEEE
+No ComponentDescriptor for ShadowView being animated: [
+Parsing LayoutAnimationConfig failed: 
+Unknown DWARF encoding for search table.
+ZN8facebook5react30LayoutAnimationKeyFrameManagerC1ENSt6__ndk18functionIFvONS3_IFvRNS_3jsi7RuntimeEEEEEEERNS2_10shared_ptrIKNS0_16ContextContainerEEEPNS0_29LayoutAnimationStatusDelegateEE3$_0
+ZNK8facebook5react30LayoutAnimationKeyFrameManager12callCallbackERKNS0_30LayoutAnimationCallbackWrapperEE3$_4
+_Unwind_Resume
+_Unwind_Resume() can't return
+__cxa_allocate_exception
+__cxa_atexit
+__cxa_begin_catch
+__cxa_end_catch
+__cxa_finalize
+__cxa_free_exception
+__cxa_pure_virtual
+__cxa_rethrow
+__cxa_throw
+__gxx_personality_v0
+__stack_chk_fail
+abort
+allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
+create
+delay
+delete
+dl_iterate_phdr
+double_conversion::DoubleToStringConverter::ToShortestIeeeNumber(double, double_conversion::StringBuilder*, double_conversion::DoubleToStringConverter::DtoaMode) const
+duration
+during phase1 personality function said it would stop here, but now in phase2 it did not stop here
+easeIn
+easeInEaseOut
+easeOut
+evaluateExpression
+exp2
+facebook::jsi::Value::~Value()
+facebook::react::AnimationKeyFrame::AnimationKeyFrame(facebook::react::AnimationKeyFrame const&)
+facebook::react::AnimationKeyFrame::~AnimationKeyFrame()
+facebook::react::ComponentDescriptorRegistry::at(long) const
+facebook::react::ComponentDescriptorRegistry::hasComponentDescriptorAt(long) const
+facebook::react::LayoutAnimation::operator=(facebook::react::LayoutAnimation&&)
+facebook::react::LayoutAnimationCallbackWrapper::call(facebook::jsi::Runtime&) const
+facebook::react::LayoutAnimationDriver::animationMutationsForFrame(int, std::__ndk1::vector<facebook::react::ShadowViewMutation, std::__ndk1::allocator<facebook::react::ShadowViewMutation>>&, unsigned long) const
+facebook::react::LayoutAnimationDriver::~LayoutAnimationDriver()
+facebook::react::LayoutAnimationKeyFrameManager::LayoutAnimationKeyFrameManager(std::__ndk1::function<void (std::__ndk1::function<void (facebook::jsi::Runtime&)>&&)>, std::__ndk1::shared_ptr<facebook::react::ContextContainer const>&, facebook::react::LayoutAnimationStatusDelegate*)
+facebook::react::LayoutAnimationKeyFrameManager::adjustDelayedMutationIndicesForMutation(int, facebook::react::ShadowViewMutation const&, bool) const
+facebook::react::LayoutAnimationKeyFrameManager::adjustImmediateMutationIndicesForDelayedMutations(int, facebook::react::ShadowViewMutation&, bool, bool) const
+facebook::react::LayoutAnimationKeyFrameManager::callCallback(facebook::react::LayoutAnimationCallbackWrapper const&) const
+facebook::react::LayoutAnimationKeyFrameManager::createInterpolatedShadowView(float, facebook::react::ShadowView const&, facebook::react::ShadowView const&) const
+facebook::react::LayoutAnimationKeyFrameManager::deleteAnimationsForStoppedSurfaces() const
+facebook::react::LayoutAnimationKeyFrameManager::getAndEraseConflictingAnimations(int, std::__ndk1::vector<facebook::react::ShadowViewMutation, std::__ndk1::allocator<facebook::react::ShadowViewMutation>> const&, std::__ndk1::vector<facebook::react::AnimationKeyFrame, std::__ndk1::allocator<facebook::react::AnimationKeyFrame>>&) const
+facebook::react::LayoutAnimationKeyFrameManager::getComponentDescriptorForShadowView(facebook::react::ShadowView const&) const
+facebook::react::LayoutAnimationKeyFrameManager::hasComponentDescriptorForShadowView(facebook::react::ShadowView const&) const
+facebook::react::LayoutAnimationKeyFrameManager::pullTransaction(int, long, facebook::react::TransactionTelemetry const&, std::__ndk1::vector<facebook::react::ShadowViewMutation, std::__ndk1::allocator<facebook::react::ShadowViewMutation>>) const
+facebook::react::LayoutAnimationKeyFrameManager::queueFinalMutationsForCompletedKeyFrame(facebook::react::AnimationKeyFrame const&, std::__ndk1::vector<facebook::react::ShadowViewMutation, std::__ndk1::allocator<facebook::react::ShadowViewMutation>>&, bool, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&) const
+facebook::react::LayoutAnimationKeyFrameManager::setClockNow(std::__ndk1::function<unsigned long ()>)
+facebook::react::LayoutAnimationKeyFrameManager::setComponentDescriptorRegistry(std::__ndk1::shared_ptr<facebook::react::ComponentDescriptorRegistry const> const&)
+facebook::react::LayoutAnimationKeyFrameManager::setLayoutAnimationStatusDelegate(facebook::react::LayoutAnimationStatusDelegate*) const
+facebook::react::LayoutAnimationKeyFrameManager::setReduceDeleteCreateMutation(bool)
+facebook::react::LayoutAnimationKeyFrameManager::shouldAnimateFrame() const
+facebook::react::LayoutAnimationKeyFrameManager::shouldOverridePullTransaction() const
+facebook::react::LayoutAnimationKeyFrameManager::stopSurface(int)
+facebook::react::LayoutAnimationKeyFrameManager::uiManagerDidConfigureNextLayoutAnimation(facebook::jsi::Runtime&, facebook::react::RawValue const&, facebook::jsi::Value const&, facebook::jsi::Value const&) const
+facebook::react::LayoutAnimationKeyFrameManager::uiManagerDidConfigureNextLayoutAnimation(facebook::react::LayoutAnimation) const
+facebook::react::LayoutAnimationKeyFrameManager::~LayoutAnimationKeyFrameManager()
+facebook::react::MountingTransaction::MountingTransaction(int, long, std::__ndk1::vector<facebook::react::ShadowViewMutation, std::__ndk1::allocator<facebook::react::ShadowViewMutation>>&&, facebook::react::TransactionTelemetry)
+facebook::react::RawProps::RawProps()
+facebook::react::ShadowView::operator=(facebook::react::ShadowView const&)
+facebook::react::ShadowView::operator=(facebook::react::ShadowView&&)
+facebook::react::ShadowViewMutation::CreateMutation(facebook::react::ShadowView)
+facebook::react::ShadowViewMutation::DeleteMutation(facebook::react::ShadowView, bool)
+facebook::react::ShadowViewMutation::InsertMutation(facebook::react::ShadowView, facebook::react::ShadowView, int)
+facebook::react::ShadowViewMutation::RemoveMutation(facebook::react::ShadowView, facebook::react::ShadowView, int, bool)
+facebook::react::ShadowViewMutation::UpdateMutation(facebook::react::ShadowView, facebook::react::ShadowView, facebook::react::ShadowView)
+facebook::react::ShadowViewMutation::mutatedViewIsVirtual() const
+facebook::react::ShadowViewMutation::~ShadowViewMutation()
+facebook::react::Transform::Scale(float, float, float)
+facebook::react::calculateAnimationProgress(unsigned long, facebook::react::LayoutAnimation const&, facebook::react::AnimationConfig const&)
+fflush
+folly::Optional<decltype(fp.begin(0))> folly::f14::detail::F14BasicMap<folly::dynamic, folly::dynamic, folly::detail::DynamicHasher, folly::detail::DynamicKeyEqual, std::__ndk1::allocator<std::__ndk1::pair<folly::dynamic const, folly::dynamic>>>::findLocal<folly::f14::detail::F14BasicMap<folly::dynamic, folly::dynamic, folly::detail::DynamicHasher, folly::detail::DynamicKeyEqual, std::__ndk1::allocator<std::__ndk1::pair<folly::dynamic const, folly::dynamic>>> const, folly::Range<char const*>>(folly::f14::detail::F14BasicMap<folly::dynamic, folly::dynamic, folly::detail::DynamicHasher, folly::detail::DynamicKeyEqual, std::__ndk1::allocator<std::__ndk1::pair<folly::dynamic const, folly::dynamic>>> const&, folly::Range<char const*> const&)
+folly::TypeError::TypeError(folly::TypeError&&)
+folly::TypeError::TypeError(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, folly::dynamic::Type)
+folly::TypeError::~TypeError()
+folly::detail::to_ascii_powers<10ul, unsigned long>::data
+folly::detail::to_ascii_table<10ul, folly::to_ascii_alphabet<false>>::data
+folly::dynamic::TypeInfo<folly::dynamic::ObjectImpl>::name
+folly::dynamic::destroy()
+folly::dynamic::operator=(folly::dynamic const&)
+folly::dynamic::print(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>&) const
+folly::dynamic::print_as_pseudo_json(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>&) const
+folly::dynamic::size() const
+folly::hash::SpookyHashV2::Hash128(void const*, unsigned long, unsigned long*, unsigned long*)
+fprintf
+free
+fwrite
+getEncodedP
+getFloatRegister
+getRegister
+getSLEB128
+getSavedRegister
+getTableEntrySize
+getULEB128
+google::LogMessage::LogMessage(char const*, int, int)
+google::LogMessage::stream()
+google::LogMessage::~LogMessage()
+initialVelocity
+int/double/bool/string
+keyboard
+libandroid.so
+libc++_shared.so
+libc.so
+libdl.so
+libfb.so
+libfbjni.so
+libfolly_runtime.so
+libglog.so
+libglog_init.so
+libjsi.so
+liblog.so
+liblogger.so
+libm.so
+libreact_config.so
+libreact_debug.so
+libreact_render_animations.so
+libreact_render_componentregistry.so
+libreact_render_core.so
+libreact_render_debug.so
+libreact_render_graphics.so
+libreact_render_leakchecker.so
+libreact_render_mapbuffer.so
+libreact_render_mounting.so
+libreact_render_runtimescheduler.so
+libreact_render_telemetry.so
+libreact_render_uimanager.so
+libreact_utils.so
+librrc_root.so
+librrc_view.so
+libruntimeexecutor.so
+libunwind: %s - %s\n
+libunwind: Unsupported .eh_frame_hdr version\n
+libunwind: malformed DW_CFA_GNU_negative_offset_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa_register DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa_sf DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_expression DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_offset DWARF unwind, reg (%lu) out of range\n
+libunwind: malformed DW_CFA_offset_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_offset_extended_sf DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_register DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_register DWARF unwind, reg2 too big\n
+libunwind: malformed DW_CFA_restore DWARF unwind, reg (%lu) out of range\n
+libunwind: malformed DW_CFA_restore_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_same_value DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_undefined DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_val_expression DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_val_offset DWARF unwind, reg (%lu) out of range\n\n
+libunwind: malformed DW_CFA_val_offset_sf DWARF unwind, reg too big\n
+libyoga.so
+linear
+malformed uleb128 expression
+malloc
+memcmp
+memcpy
+memset
+no x86_64 float registers
+non-virtual thunk to facebook::react::LayoutAnimationDriver::~LayoutAnimationDriver()
+non-virtual thunk to facebook::react::LayoutAnimationKeyFrameManager::pullTransaction(int, long, facebook::react::TransactionTelemetry const&, std::__ndk1::vector<facebook::react::ShadowViewMutation, std::__ndk1::allocator<facebook::react::ShadowViewMutation>>) const
+non-virtual thunk to facebook::react::LayoutAnimationKeyFrameManager::shouldOverridePullTransaction() const
+non-virtual thunk to facebook::react::LayoutAnimationKeyFrameManager::~LayoutAnimationKeyFrameManager()
+null
+opacity
+operator delete(void*)
+operator new(unsigned long)
+operator new(unsigned long, std::nothrow_t const&)
+property
+pthread_rwlock_rdlock
+pthread_rwlock_unlock
+pthread_rwlock_wrlock
+scaleX
+scaleXY
+scaleY
+setFloatRegister
+setRegister
+spring
+springDamping
+std::__ndk1::__basic_string_common<true>::__throw_length_error() const
+std::__ndk1::__hash_table<int, folly::HeterogeneousAccessHash<int, void>, folly::HeterogeneousAccessEqualTo<int, void>, std::__ndk1::allocator<int>>::__rehash(unsigned long)
+std::__ndk1::__hash_table<int, folly::HeterogeneousAccessHash<int, void>, folly::HeterogeneousAccessEqualTo<int, void>, std::__ndk1::allocator<int>>::rehash(unsigned long)
+std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<int, facebook::react::ShadowViewMutation>, std::__ndk1::__unordered_map_hasher<int, std::__ndk1::__hash_value_type<int, facebook::react::ShadowViewMutation>, std::__ndk1::hash<int>, true>, std::__ndk1::__unordered_map_equal<int, std::__ndk1::__hash_value_type<int, facebook::react::ShadowViewMutation>, std::__ndk1::equal_to<int>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<int, facebook::react::ShadowViewMutation>>>::__rehash(unsigned long)
+std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<int, facebook::react::ShadowViewMutation>, std::__ndk1::__unordered_map_hasher<int, std::__ndk1::__hash_value_type<int, facebook::react::ShadowViewMutation>, std::__ndk1::hash<int>, true>, std::__ndk1::__unordered_map_equal<int, std::__ndk1::__hash_value_type<int, facebook::react::ShadowViewMutation>, std::__ndk1::equal_to<int>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<int, facebook::react::ShadowViewMutation>>>::rehash(unsigned long)
+std::__ndk1::__next_prime(unsigned long)
+std::__ndk1::__optional_destruct_base<facebook::react::LayoutAnimation, false>::__optional_destruct_base<facebook::react::LayoutAnimation&>(std::__ndk1::in_place_t, facebook::react::LayoutAnimation&)
+std::__ndk1::__shared_ptr_emplace<facebook::jsi::Function, std::__ndk1::allocator<facebook::jsi::Function>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<facebook::jsi::Function, std::__ndk1::allocator<facebook::jsi::Function>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<facebook::jsi::Function, std::__ndk1::allocator<facebook::jsi::Function>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_weak_count::__get_deleter(std::type_info const&) const
+std::__ndk1::__shared_weak_count::__release_weak()
+std::__ndk1::__shared_weak_count::~__shared_weak_count()
+std::__ndk1::__vector_base_common<true>::__throw_length_error() const
+std::__ndk1::bad_function_call::~bad_function_call()
+std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>& std::__ndk1::__put_character_sequence<char, std::__ndk1::char_traits<char>>(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>&, char const*, unsigned long)
+std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::operator<<(bool)
+std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::operator<<(double)
+std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::operator<<(int)
+std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::operator<<(long)
+std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::sentry::sentry(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>&)
+std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::sentry::~sentry()
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> folly::dynamic::asImpl<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>() const
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::append(char const*, unsigned long)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::compare(unsigned long, unsigned long, char const*, unsigned long) const
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::push_back(char)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::reserve(unsigned long)
+std::__ndk1::chrono::steady_clock::now()
+std::__ndk1::ctype<char>::id
+std::__ndk1::enable_if<__is_cpp17_forward_iterator<facebook::react::AnimationKeyFrame*>::value && is_constructible<facebook::react::AnimationKeyFrame, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, void>::type std::__ndk1::vector<facebook::react::AnimationKeyFrame, std::__ndk1::allocator<facebook::react::AnimationKeyFrame>>::assign<facebook::react::AnimationKeyFrame*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
+std::__ndk1::enable_if<__is_cpp17_forward_iterator<facebook::react::ShadowViewMutation*>::value && is_constructible<facebook::react::ShadowViewMutation, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, void>::type std::__ndk1::vector<facebook::react::ShadowViewMutation, std::__ndk1::allocator<facebook::react::ShadowViewMutation>>::assign<facebook::react::ShadowViewMutation*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
+std::__ndk1::enable_if<__is_cpp17_forward_iterator<std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>::value && is_constructible<facebook::react::ShadowViewMutation, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>::type std::__ndk1::vector<facebook::react::ShadowViewMutation, std::__ndk1::allocator<facebook::react::ShadowViewMutation>>::insert<std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>(std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation const*>, __is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
+std::__ndk1::ios_base::__set_badbit_and_consider_rethrow()
+std::__ndk1::ios_base::clear(unsigned int)
+std::__ndk1::ios_base::getloc() const
+std::__ndk1::locale::use_facet(std::__ndk1::locale::id&) const
+std::__ndk1::locale::~locale()
+std::__ndk1::mutex::lock()
+std::__ndk1::mutex::unlock()
+std::__ndk1::mutex::~mutex()
+std::__ndk1::pair<int const, facebook::react::ShadowViewMutation>::pair<true, false>(int const&, facebook::react::ShadowViewMutation const&)
+std::__ndk1::pair<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<int, void*>*>, bool> std::__ndk1::__hash_table<int, folly::HeterogeneousAccessHash<int, void>, folly::HeterogeneousAccessEqualTo<int, void>, std::__ndk1::allocator<int>>::__emplace_unique_key_args<int, int const&>(int const&, int const&)
+std::__ndk1::pair<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<int, facebook::react::ShadowViewMutation>, void*>*>, bool> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<int, facebook::react::ShadowViewMutation>, std::__ndk1::__unordered_map_hasher<int, std::__ndk1::__hash_value_type<int, facebook::react::ShadowViewMutation>, std::__ndk1::hash<int>, true>, std::__ndk1::__unordered_map_equal<int, std::__ndk1::__hash_value_type<int, facebook::react::ShadowViewMutation>, std::__ndk1::equal_to<int>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<int, facebook::react::ShadowViewMutation>>>::__emplace_unique_key_args<int, std::__ndk1::pair<int const, facebook::react::ShadowViewMutation>>(int const&, std::__ndk1::pair<int const, facebook::react::ShadowViewMutation>&&)
+std::__ndk1::vector<facebook::react::AnimationKeyFrame, std::__ndk1::allocator<facebook::react::AnimationKeyFrame>>::vector(std::__ndk1::vector<facebook::react::AnimationKeyFrame, std::__ndk1::allocator<facebook::react::AnimationKeyFrame>> const&)
+std::__ndk1::vector<facebook::react::ShadowViewMutation, std::__ndk1::allocator<facebook::react::ShadowViewMutation>>::__move_range(facebook::react::ShadowViewMutation*, facebook::react::ShadowViewMutation*, facebook::react::ShadowViewMutation*)
+std::__ndk1::vector<facebook::react::ShadowViewMutation, std::__ndk1::allocator<facebook::react::ShadowViewMutation>>::__swap_out_circular_buffer(std::__ndk1::__split_buffer<facebook::react::ShadowViewMutation, std::__ndk1::allocator<facebook::react::ShadowViewMutation>&>&, facebook::react::ShadowViewMutation*)
+std::__ndk1::vector<facebook::react::ShadowViewMutation, std::__ndk1::allocator<facebook::react::ShadowViewMutation>>::vector(std::__ndk1::vector<facebook::react::ShadowViewMutation, std::__ndk1::allocator<facebook::react::ShadowViewMutation>> const&)
+std::exception::what() const
+std::exception::~exception()
+std::length_error::~length_error()
+std::logic_error::logic_error(char const*)
+std::nothrow
+std::runtime_error::runtime_error(std::runtime_error const&)
+std::runtime_error::what() const
+std::runtime_error::~runtime_error()
+std::terminate()
+strlen
+truncated sleb128 expression
+truncated uleb128 expression
+type
+typeinfo for facebook::react::LayoutAnimationDriver
+typeinfo for facebook::react::LayoutAnimationKeyFrameManager
+typeinfo for facebook::react::MountingOverrideDelegate
+typeinfo for facebook::react::UIManagerAnimationDelegate
+typeinfo for folly::TypeError
+typeinfo for std::__ndk1::__function::__base<unsigned long ()>
+typeinfo for std::__ndk1::__function::__base<void (facebook::jsi::Runtime&)>
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::jsi::Function, std::__ndk1::allocator<facebook::jsi::Function>>
+typeinfo for std::__ndk1::__shared_weak_count
+typeinfo for std::__ndk1::bad_function_call
+typeinfo for std::exception
+typeinfo for std::length_error
+typeinfo for std::runtime_error
+typeinfo name for facebook::react::LayoutAnimationDriver
+typeinfo name for facebook::react::LayoutAnimationKeyFrameManager
+typeinfo name for facebook::react::MountingOverrideDelegate
+typeinfo name for facebook::react::UIManagerAnimationDelegate
+typeinfo name for folly::TypeError
+typeinfo name for std::__ndk1::__function::__base<unsigned long ()>
+typeinfo name for std::__ndk1::__function::__base<void (facebook::jsi::Runtime&)>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::jsi::Function, std::__ndk1::allocator<facebook::jsi::Function>>
+typeinfo name for std::__ndk1::bad_function_call
+unknown pointer encoding
+unknown register
+unsigned long folly::to_ascii_size<10ul>(unsigned long)
+unsigned long folly::to_ascii_with<10ul, folly::to_ascii_alphabet<false>, 20ul>(char (&) [20ul], unsigned long)
+unsupported restore location for register
+unsupported x86_64 register
+unwind_phase2
+update
+void folly::detail::throw_exception_<folly::TypeError, char const*, folly::dynamic::Type>(char const*, folly::dynamic::Type)
+void folly::throw_exception<folly::TypeError>(folly::TypeError&&)
+void std::__ndk1::__buffered_inplace_merge<bool (*&)(facebook::react::ShadowViewMutation const&, facebook::react::ShadowViewMutation const&) noexcept, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>(std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>, bool (*&)(facebook::react::ShadowViewMutation const&, facebook::react::ShadowViewMutation const&) noexcept, std::__ndk1::iterator_traits<std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>::difference_type, std::__ndk1::iterator_traits<std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>::difference_type, std::__ndk1::iterator_traits<std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>::value_type*)
+void std::__ndk1::__half_inplace_merge<bool (*)(facebook::react::ShadowViewMutation const&, facebook::react::ShadowViewMutation const&) noexcept, facebook::react::ShadowViewMutation*, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>(facebook::react::ShadowViewMutation*, facebook::react::ShadowViewMutation*, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>, bool (*)(facebook::react::ShadowViewMutation const&, facebook::react::ShadowViewMutation const&) noexcept)
+void std::__ndk1::__half_inplace_merge<std::__ndk1::__invert<bool (*&)(facebook::react::ShadowViewMutation const&, facebook::react::ShadowViewMutation const&) noexcept>, std::__ndk1::reverse_iterator<facebook::react::ShadowViewMutation*>, std::__ndk1::reverse_iterator<std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>, std::__ndk1::reverse_iterator<std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>>(std::__ndk1::reverse_iterator<facebook::react::ShadowViewMutation*>, std::__ndk1::reverse_iterator<facebook::react::ShadowViewMutation*>, std::__ndk1::reverse_iterator<std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>, std::__ndk1::reverse_iterator<std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>, std::__ndk1::reverse_iterator<std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>, std::__ndk1::__invert<bool (*&)(facebook::react::ShadowViewMutation const&, facebook::react::ShadowViewMutation const&) noexcept>)
+void std::__ndk1::__hash_table<int, folly::HeterogeneousAccessHash<int, void>, folly::HeterogeneousAccessEqualTo<int, void>, std::__ndk1::allocator<int>>::__assign_multi<std::__ndk1::__hash_const_iterator<std::__ndk1::__hash_node<int, void*>*>>(std::__ndk1::__hash_const_iterator<std::__ndk1::__hash_node<int, void*>*>, std::__ndk1::__hash_const_iterator<std::__ndk1::__hash_node<int, void*>*>)
+void std::__ndk1::__inplace_merge<bool (*&)(facebook::react::ShadowViewMutation const&, facebook::react::ShadowViewMutation const&) noexcept, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>(std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>, bool (*&)(facebook::react::ShadowViewMutation const&, facebook::react::ShadowViewMutation const&) noexcept, std::__ndk1::iterator_traits<std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>::difference_type, std::__ndk1::iterator_traits<std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>::difference_type, std::__ndk1::iterator_traits<std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>::value_type*, long)
+void std::__ndk1::__insertion_sort<bool (*&)(facebook::react::ShadowViewMutation const&, facebook::react::ShadowViewMutation const&) noexcept, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>(std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>, bool (*&)(facebook::react::ShadowViewMutation const&, facebook::react::ShadowViewMutation const&) noexcept)
+void std::__ndk1::__insertion_sort_move<bool (*&)(facebook::react::ShadowViewMutation const&, facebook::react::ShadowViewMutation const&) noexcept, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>(std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>, std::__ndk1::iterator_traits<std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>::value_type*, bool (*&)(facebook::react::ShadowViewMutation const&, facebook::react::ShadowViewMutation const&) noexcept)
+void std::__ndk1::__merge_move_assign<bool (*&)(facebook::react::ShadowViewMutation const&, facebook::react::ShadowViewMutation const&) noexcept, facebook::react::ShadowViewMutation*, facebook::react::ShadowViewMutation*, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>(facebook::react::ShadowViewMutation*, facebook::react::ShadowViewMutation*, facebook::react::ShadowViewMutation*, facebook::react::ShadowViewMutation*, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>, bool (*&)(facebook::react::ShadowViewMutation const&, facebook::react::ShadowViewMutation const&) noexcept)
+void std::__ndk1::__merge_move_construct<bool (*&)(facebook::react::ShadowViewMutation const&, facebook::react::ShadowViewMutation const&) noexcept, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>(std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>, std::__ndk1::iterator_traits<std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>::value_type*, bool (*&)(facebook::react::ShadowViewMutation const&, facebook::react::ShadowViewMutation const&) noexcept)
+void std::__ndk1::__optional_storage_base<facebook::react::ShadowViewMutation, false>::__construct<facebook::react::ShadowViewMutation const&>(facebook::react::ShadowViewMutation const&)
+void std::__ndk1::__stable_sort<bool (*&)(facebook::react::ShadowViewMutation const&, facebook::react::ShadowViewMutation const&) noexcept, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>(std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>, bool (*&)(facebook::react::ShadowViewMutation const&, facebook::react::ShadowViewMutation const&) noexcept, std::__ndk1::iterator_traits<std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>::difference_type, std::__ndk1::iterator_traits<std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>::value_type*, long)
+void std::__ndk1::__stable_sort_move<bool (*&)(facebook::react::ShadowViewMutation const&, facebook::react::ShadowViewMutation const&) noexcept, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>(std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>, std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>, bool (*&)(facebook::react::ShadowViewMutation const&, facebook::react::ShadowViewMutation const&) noexcept, std::__ndk1::iterator_traits<std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>::difference_type, std::__ndk1::iterator_traits<std::__ndk1::__wrap_iter<facebook::react::ShadowViewMutation*>>::value_type*)
+void std::__ndk1::allocator<facebook::react::ShadowViewMutation>::construct<facebook::react::ShadowViewMutation, facebook::react::ShadowViewMutation const&>(facebook::react::ShadowViewMutation*, facebook::react::ShadowViewMutation const&)
+void std::__ndk1::allocator<facebook::react::ShadowViewMutation>::construct<facebook::react::ShadowViewMutation, facebook::react::ShadowViewMutation&>(facebook::react::ShadowViewMutation*, facebook::react::ShadowViewMutation&)
+void std::__ndk1::allocator_traits<std::__ndk1::allocator<facebook::react::ShadowViewMutation>>::__construct_backward_with_exception_guarantees<facebook::react::ShadowViewMutation*>(std::__ndk1::allocator<facebook::react::ShadowViewMutation>&, facebook::react::ShadowViewMutation*, facebook::react::ShadowViewMutation*, facebook::react::ShadowViewMutation*&)
+void std::__ndk1::vector<facebook::react::AnimationKeyFrame, std::__ndk1::allocator<facebook::react::AnimationKeyFrame>>::__push_back_slow_path<facebook::react::AnimationKeyFrame const&>(facebook::react::AnimationKeyFrame const&)
+void std::__ndk1::vector<facebook::react::LayoutAnimation, std::__ndk1::allocator<facebook::react::LayoutAnimation>>::__push_back_slow_path<facebook::react::LayoutAnimation>(facebook::react::LayoutAnimation&&)
+void std::__ndk1::vector<facebook::react::ShadowViewMutation, std::__ndk1::allocator<facebook::react::ShadowViewMutation>>::__emplace_back_slow_path<facebook::react::ShadowViewMutation>(facebook::react::ShadowViewMutation&&)
+void std::__ndk1::vector<facebook::react::ShadowViewMutation, std::__ndk1::allocator<facebook::react::ShadowViewMutation>>::__push_back_slow_path<facebook::react::ShadowViewMutation const&>(facebook::react::ShadowViewMutation const&)
+void std::__ndk1::vector<facebook::react::ShadowViewMutation, std::__ndk1::allocator<facebook::react::ShadowViewMutation>>::__push_back_slow_path<facebook::react::ShadowViewMutation>(facebook::react::ShadowViewMutation&&)
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info
+vtable for facebook::react::LayoutAnimationDriver
+vtable for facebook::react::LayoutAnimationKeyFrameManager
+vtable for folly::TypeError
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::jsi::Function, std::__ndk1::allocator<facebook::jsi::Function>>
+vtable for std::__ndk1::bad_function_call
+vtable for std::length_error
+xmm0
+xmm1
+xmm10
+xmm11
+xmm12
+xmm13
+xmm14
+xmm15
+xmm2
+xmm3
+xmm4
+xmm5
+xmm6
+xmm7
+xmm8
+xmm9

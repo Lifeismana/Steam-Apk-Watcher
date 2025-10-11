@@ -1,0 +1,107 @@
+Android (7714059, based on r416183c1) clang version 12.0.8 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee)
+LIBC
+Linker: LLD 12.0.8 (/buildbot/src/android/llvm-r416183/out/llvm-project/lld c935d99d7cf2016289302412d708641d52d2f7ee)
+NSt6__ndk120__shared_ptr_emplaceIN8facebook5react14SharedFunctionIJEE4PairENS_9allocatorIS5_EEEE
+Unknown ARM float register
+_Unwind_Resume
+_Unwind_Resume() can't return
+_Unwind_VRS_Get_Internal
+_Unwind_VRS_Pop
+_Unwind_VRS_Set
+__cxa_allocate_exception
+__cxa_atexit
+__cxa_begin_catch
+__cxa_finalize
+__cxa_free_exception
+__cxa_throw
+__gxx_personality_v0
+__stack_chk_fail
+__stack_chk_guard
+abort
+allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
+dl_unwind_find_exidx
+during phase1 personality function said it would stop here, but now in phase2 it did not stop here
+facebook::react::ImageManager::ImageManager(std::__ndk1::shared_ptr<facebook::react::ContextContainer const> const&)
+facebook::react::ImageManager::requestImage(facebook::react::ImageSource const&, int) const
+facebook::react::ImageManager::~ImageManager()
+facebook::react::ImageRequest::ImageRequest(facebook::react::ImageSource, std::__ndk1::shared_ptr<facebook::react::ImageTelemetry const>, facebook::react::SharedFunction<>)
+facebook::react::ImageRequest::getObserverCoordinator() const
+facebook::react::ImageRequest::getSharedObserverCoordinator() const
+facebook::react::ImageResponse::ImageResponse(std::__ndk1::shared_ptr<void>, std::__ndk1::shared_ptr<void>)
+facebook::react::ImageResponse::getImage() const
+facebook::react::ImageResponse::getMetadata() const
+facebook::react::ImageResponseObserverCoordinator::addObserver(facebook::react::ImageResponseObserver const&) const
+facebook::react::ImageResponseObserverCoordinator::nativeImageResponseComplete(facebook::react::ImageResponse const&) const
+facebook::react::ImageResponseObserverCoordinator::nativeImageResponseFailed() const
+facebook::react::ImageResponseObserverCoordinator::nativeImageResponseProgress(float) const
+facebook::react::ImageResponseObserverCoordinator::removeObserver(facebook::react::ImageResponseObserver const&) const
+facebook::react::ImageTelemetry::getSurfaceId() const
+facebook::react::ImageTelemetry::getWillRequestUrlTime() const
+fflush
+fprintf
+getFloatRegister
+getInfoFromEHABISection
+getRegister
+index inlined table detected but pr function requires extra words
+libandroid.so
+libc++_shared.so
+libc.so
+libdl.so
+libfb.so
+libfbjni.so
+libfolly_runtime.so
+libglog.so
+libglog_init.so
+libjsi.so
+liblog.so
+liblogger.so
+libm.so
+libreact_debug.so
+libreact_render_core.so
+libreact_render_debug.so
+libreact_render_graphics.so
+libreact_render_imagemanager.so
+libreact_render_mapbuffer.so
+libreact_render_mounting.so
+libreact_render_telemetry.so
+libreact_utils.so
+librrc_root.so
+librrc_view.so
+libunwind: %s - %s\n
+libyoga.so
+memcpy
+memset
+operator delete(void*)
+operator new(unsigned int)
+setFloatRegister
+setRegister
+std::__ndk1::__shared_mutex_base::__shared_mutex_base()
+std::__ndk1::__shared_ptr_emplace<facebook::react::SharedFunction<>::Pair, std::__ndk1::allocator<facebook::react::SharedFunction<>::Pair>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<facebook::react::SharedFunction<>::Pair, std::__ndk1::allocator<facebook::react::SharedFunction<>::Pair>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<facebook::react::SharedFunction<>::Pair, std::__ndk1::allocator<facebook::react::SharedFunction<>::Pair>>::__shared_ptr_emplace<std::__ndk1::function<void ()>>(std::__ndk1::allocator<facebook::react::SharedFunction<>::Pair>, std::__ndk1::function<void ()>&&)
+std::__ndk1::__shared_ptr_emplace<facebook::react::SharedFunction<>::Pair, std::__ndk1::allocator<facebook::react::SharedFunction<>::Pair>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_weak_count::__get_deleter(std::type_info const&) const
+std::__ndk1::__shared_weak_count::__release_weak()
+std::__ndk1::__shared_weak_count::~__shared_weak_count()
+std::__ndk1::__vector_base_common<true>::__throw_length_error() const
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::basic_string(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+std::__ndk1::condition_variable::~condition_variable()
+std::__ndk1::mutex::lock()
+std::__ndk1::mutex::unlock()
+std::__ndk1::mutex::~mutex()
+std::__ndk1::vector<facebook::react::ImageResponseObserver const*, std::__ndk1::allocator<facebook::react::ImageResponseObserver const*>>::vector(std::__ndk1::vector<facebook::react::ImageResponseObserver const*, std::__ndk1::allocator<facebook::react::ImageResponseObserver const*>> const&)
+std::length_error::~length_error()
+std::logic_error::logic_error(char const*)
+std::terminate()
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::SharedFunction<>::Pair, std::__ndk1::allocator<facebook::react::SharedFunction<>::Pair>>
+typeinfo for std::__ndk1::__shared_weak_count
+typeinfo for std::length_error
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::SharedFunction<>::Pair, std::__ndk1::allocator<facebook::react::SharedFunction<>::Pair>>
+unknown personality routine
+unknown register
+unsupported arm register
+unsupported register class
+unwind_phase2
+vtable for __cxxabiv1::__si_class_type_info
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::SharedFunction<>::Pair, std::__ndk1::allocator<facebook::react::SharedFunction<>::Pair>>
+vtable for std::length_error

@@ -1,5 +1,5 @@
-9ab14b81ed883f275f7be54b163559f6  com.valvesoftware.android.steam.friendsui/com.valvesoftware.android.steam.friendsui.apk
-d41d8cd98f00b204e9800998ecf8427e  com.valvesoftware.android.steam.friendsui/com.valvesoftware.android.steam.friendsui.apk.jadx.txt
+38fc0fc0b4926f4015b9cebd03789494  com.valvesoftware.android.steam.friendsui/com.valvesoftware.android.steam.friendsui.apk
+717c1c765e32d628e0c81f1ae754ecb4  com.valvesoftware.android.steam.friendsui/com.valvesoftware.android.steam.friendsui.apk.jadx.txt
 5610a3ef571cab1a8cd36c9e8d0e5e34  com.valvesoftware.android.steam.friendsui/resources/AndroidManifest.xml
 26e4a87d5450c027450ee547f1fb2d45  com.valvesoftware.android.steam.friendsui/resources/DebugProbesKt.bin
 79450bb5a7df87235634de1f9e2d527f  com.valvesoftware.android.steam.friendsui/resources/META-INF/CERT.RSA

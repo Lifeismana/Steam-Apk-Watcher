@@ -1,0 +1,79 @@
+10LogcatSink
+16TaggedLogcatSink
+Android (7714059, based on r416183c1) clang version 12.0.8 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee)
+Failed to initialize glog
+LIBC
+Linker: LLD 12.0.8 (/buildbot/src/android/llvm-r416183/out/llvm-project/lld c935d99d7cf2016289302412d708641d52d2f7ee)
+LogcatSink::send(int, char const*, char const*, int, tm const*, char const*, unsigned int)
+LogcatSink::~LogcatSink()
+TaggedLogcatSink::send(int, char const*, char const*, int, tm const*, char const*, unsigned int)
+TaggedLogcatSink::~TaggedLogcatSink()
+Unknown ARM float register
+_Unwind_Resume
+_Unwind_Resume() can't return
+_Unwind_VRS_Get_Internal
+_Unwind_VRS_Pop
+_Unwind_VRS_Set
+__android_log_print
+__android_log_write
+__cxa_allocate_exception
+__cxa_atexit
+__cxa_begin_catch
+__cxa_end_catch
+__cxa_finalize
+__cxa_free_exception
+__cxa_throw
+__gxx_personality_v0
+__stack_chk_fail
+__stack_chk_guard
+abort
+dl_unwind_find_exidx
+during phase1 personality function said it would stop here, but now in phase2 it did not stop here
+facebook::gloginit::initialize(char const*)
+fflush
+fprintf
+getFloatRegister
+getInfoFromEHABISection
+getRegister
+google::AddLogSink(google::LogSink*)
+google::InitGoogleLogging(char const*)
+google::LogSink::WaitTillSent()
+google::LogSink::~LogSink()
+google::SetLogDestination(int, char const*)
+index inlined table detected but pr function requires extra words
+libc++_shared.so
+libc.so
+libdl.so
+libglog.so
+libglog_init.so
+liblog.so
+libm.so
+libunwind: %s - %s\n
+memcpy
+memset
+operator delete(void*)
+operator new(unsigned int)
+setFloatRegister
+setRegister
+std::__ndk1::__basic_string_common<true>::__throw_length_error() const
+std::__ndk1::__call_once(unsigned long volatile&, void*, void (*)(void*))
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::basic_string(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+std::runtime_error::runtime_error(char const*)
+std::runtime_error::~runtime_error()
+std::terminate()
+strlen
+typeinfo for LogcatSink
+typeinfo for TaggedLogcatSink
+typeinfo for google::LogSink
+typeinfo for std::exception
+typeinfo for std::runtime_error
+typeinfo name for LogcatSink
+typeinfo name for TaggedLogcatSink
+unknown personality routine
+unknown register
+unsupported arm register
+unsupported register class
+unwind_phase2
+vtable for LogcatSink
+vtable for TaggedLogcatSink
+vtable for __cxxabiv1::__si_class_type_info

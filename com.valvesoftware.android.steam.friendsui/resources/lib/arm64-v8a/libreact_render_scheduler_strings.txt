@@ -1,0 +1,521 @@
+    >>>> EXCEPTION <<<  rendering uiTemplate in 
+/root/react-native/packages/react-native/ReactCommon/react/renderer/scheduler/Scheduler.cpp
+;\tFQ8
+Android (7714059, based on r416183c1) clang version 12.0.8 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee)
+CIE ID is not zero
+CIE version is not 1 or 3
+Can't binary search on variable length encoded data.
+ComponentDescriptorRegistry_DO_NOT_USE_PRETTY_PLEASE
+DWARF opcode not implemented
+DW_EH_PE_aligned pointer encoding not supported
+DW_EH_PE_datarel is invalid with a datarelBase of 0
+DW_EH_PE_funcrel pointer encoding not supported
+DW_EH_PE_textrel pointer encoding not supported
+DW_OP_deref_size with bad size
+DW_OP_fbreg not implemented
+DW_OP_piece not implemented
+FDE has zero length
+FDE is really a CIE
+LIBC
+Linker: LLD 12.0.8 (/buildbot/src/android/llvm-r416183/out/llvm-project/lld c935d99d7cf2016289302412d708641d52d2f7ee)
+N5folly9TypeErrorE
+N8facebook5react10EventQueueE
+N8facebook5react12EventEmitterE
+N8facebook5react14SurfaceHandlerE
+N8facebook5react15RunLoopObserver8DelegateE
+N8facebook5react17UIManagerDelegateE
+N8facebook5react20SynchronousEventBeatE
+N8facebook5react21AsynchronousEventBeatE
+N8facebook5react9SchedulerE
+NSt6__ndk110__function6__baseIFN8facebook5react13InspectorDataERNS2_3jsi7RuntimeEEEE
+NSt6__ndk110__function6__baseIFNS_10shared_ptrIN8facebook5react14RootShadowNodeEEERKS5_EEE
+NSt6__ndk110__function6__baseIFvRKN8facebook5react10ShadowTreeEEEE
+NSt6__ndk110__function6__baseIFvRKN8facebook5react10ShadowTreeERbEEE
+NSt6__ndk110__function6__baseIFvRKN8facebook5react11StateUpdateEEEE
+NSt6__ndk110__function6__baseIFvRKN8facebook5react14SurfaceHandlerEEEE
+NSt6__ndk110__function6__baseIFvRKN8facebook5react16UIManagerBindingEEEE
+NSt6__ndk110__function6__baseIFvRN8facebook3jsi7RuntimeEEEE
+NSt6__ndk110__function6__baseIFvRN8facebook3jsi7RuntimeEPKNS2_5react11EventTargetERKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS6_18ReactEventPriorityERKNS_8functionIFNS3_5ValueES5_EEEEEE
+NSt6__ndk110__function6__funcIZN8facebook5react9Scheduler23renderTemplateToSurfaceEiRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEE3$_6NS8_ISD_EEFvRKNS3_10ShadowTreeEEEE
+NSt6__ndk110__function6__funcIZN8facebook5react9Scheduler29uiManagerDidFinishTransactionENS_10shared_ptrIKNS3_19MountingCoordinatorEEEbE3$_7NS_9allocatorIS9_EEFvRNS2_3jsi7RuntimeEEEE
+NSt6__ndk110__function6__funcIZN8facebook5react9SchedulerC1ERKNS3_16SchedulerToolboxEPNS3_26UIManagerAnimationDelegateEPNS3_17SchedulerDelegateEE3$_0NS_9allocatorISC_EEFvRNS2_3jsi7RuntimeEPKNS3_11EventTargetERKNS_12basic_stringIcNS_11char_traitsIcEENSD_IcEEEENS3_18ReactEventPriorityERKNS_8functionIFNSF_5ValueESH_EEEEEE
+NSt6__ndk110__function6__funcIZN8facebook5react9SchedulerC1ERKNS3_16SchedulerToolboxEPNS3_26UIManagerAnimationDelegateEPNS3_17SchedulerDelegateEE3$_1NS_9allocatorISC_EEFvRKNS3_11StateUpdateEEEE
+NSt6__ndk110__function6__funcIZN8facebook5react9SchedulerC1ERKNS3_16SchedulerToolboxEPNS3_26UIManagerAnimationDelegateEPNS3_17SchedulerDelegateEE3$_2NS_9allocatorISC_EEFvRNS2_3jsi7RuntimeEEEE
+NSt6__ndk110__function6__funcIZN8facebook5react9SchedulerD1EvE3$_3NS_9allocatorIS5_EEFvRKNS3_10ShadowTreeERbEEE
+NSt6__ndk110__function6__funcIZN8facebook5react9SchedulerD1EvE3$_4NS_9allocatorIS5_EEFvRKNS3_10ShadowTreeEEEE
+NSt6__ndk110__function6__funcIZN8facebook5reactL45executeSynchronouslyOnSameThread_CAN_DEADLOCKERKNS_8functionIFvONS4_IFvRNS2_3jsi7RuntimeEEEEEEESA_EUlS7_E_NS_9allocatorISF_EES8_EE
+NSt6__ndk110__function6__funcIZN8facebook5reactL45executeSynchronouslyOnSameThread_CAN_DEADLOCKINS3_13InspectorDataEEET_RKNS_8functionIFvONS7_IFvRNS2_3jsi7RuntimeEEEEEEEONS7_IFS6_SA_EEEEUlSA_E_NS_9allocatorISL_EESB_EE
+NSt6__ndk110__function6__funcIZNK8facebook5react14SurfaceHandler16applyDisplayModeENS3_11DisplayModeEE3$_1NS_9allocatorIS6_EEFNS_10shared_ptrINS3_14RootShadowNodeEEERKSA_EEE
+NSt6__ndk110__function6__funcIZNK8facebook5react14SurfaceHandler16constraintLayoutERKNS3_17LayoutConstraintsERKNS3_13LayoutContextEE3$_0NS_9allocatorISB_EEFNS_10shared_ptrINS3_14RootShadowNodeEEERKSF_EEE
+NSt6__ndk110__function6__funcIZNK8facebook5react14SurfaceManager11stopSurfaceEiE3$_1NS_9allocatorIS5_EEFvRKNS3_14SurfaceHandlerEEEE
+NSt6__ndk110__function6__funcIZNK8facebook5react14SurfaceManager12startSurfaceEiRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEERKN5folly7dynamicERKNS3_17LayoutConstraintsERKNS3_13LayoutContextEE3$_0NS8_ISN_EEFvRKNS3_14SurfaceHandlerEEEE
+NSt6__ndk110__function6__funcIZNK8facebook5react14SurfaceManager14measureSurfaceEiRKNS3_17LayoutConstraintsERKNS3_13LayoutContextEE3$_2NS_9allocatorISB_EEFvRKNS3_14SurfaceHandlerEEEE
+NSt6__ndk110__function6__funcIZNK8facebook5react14SurfaceManager23constraintSurfaceLayoutEiRKNS3_17LayoutConstraintsERKNS3_13LayoutContextEE3$_4NS_9allocatorISB_EEFvRKNS3_14SurfaceHandlerEEEE
+NSt6__ndk110__function6__funcIZNK8facebook5react14SurfaceManager23findMountingCoordinatorEiE3$_3NS_9allocatorIS5_EEFvRKNS3_14SurfaceHandlerEEEE
+NSt6__ndk110__function6__funcIZNK8facebook5react20SynchronousEventBeat19lockExecutorAndBeatEvE3$_0NS_9allocatorIS5_EEFvRNS2_3jsi7RuntimeEEEE
+NSt6__ndk110__function6__funcIZNK8facebook5react20SynchronousEventBeat19lockExecutorAndBeatEvE3$_1NS_9allocatorIS5_EEFvRNS2_3jsi7RuntimeEEEE
+NSt6__ndk110__function6__funcIZNK8facebook5react21AsynchronousEventBeat6induceEvE3$_0NS_9allocatorIS5_EEFvRNS2_3jsi7RuntimeEEEE
+NSt6__ndk110__function6__funcIZNK8facebook5react9Scheduler27getInspectorDataForInstanceERKNS3_12EventEmitterEE3$_5NS_9allocatorIS8_EEFNS3_13InspectorDataERNS2_3jsi7RuntimeEEEE
+NSt6__ndk110__function6__funcIZZN8facebook5react9Scheduler23renderTemplateToSurfaceEiRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEENK3$_6clERKNS3_10ShadowTreeEEUlRKNS3_14RootShadowNodeEE_NS8_ISK_EEFNS_10shared_ptrISH_EESJ_EEE
+NSt6__ndk110__function6__funcIZZN8facebook5react9SchedulerC1ERKNS3_16SchedulerToolboxEPNS3_26UIManagerAnimationDelegateEPNS3_17SchedulerDelegateEENK3$_0clERNS2_3jsi7RuntimeEPKNS3_11EventTargetERKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS3_18ReactEventPriorityERKNS_8functionIFNSD_5ValueESF_EEEEUlRKNS3_16UIManagerBindingEE_NSM_IS11_EEFvS10_EEE
+NSt6__ndk117bad_function_callE
+NSt6__ndk120__shared_ptr_emplaceIN8facebook5react14RootShadowNodeENS_9allocatorIS3_EEEE
+NSt6__ndk120__shared_ptr_emplaceIN8facebook5react9EventBeat8OwnerBoxENS_9allocatorIS4_EEEE
+NSt6__ndk120__shared_ptr_emplaceIN8facebook5react9UIManagerENS_9allocatorIS3_EEEE
+NSt6__ndk120__shared_ptr_emplaceINS_6vectorINS_10shared_ptrIKN8facebook5react10ShadowNodeEEENS_9allocatorIS7_EEEENS8_ISA_EEEE
+NSt6__ndk120__shared_ptr_emplaceINS_8optionalIKN8facebook5react15EventDispatcherEEENS_9allocatorIS6_EEEE
+NSt6__ndk120__shared_ptr_emplaceINS_8weak_ptrIKN8facebook5react27ComponentDescriptorRegistryEEENS_9allocatorIS6_EEEE
+ReactNativeConfig
+RuntimeScheduler
+Scheduler was destroyed with outstanding Surfaces.
+Scheduler::renderTemplateToSurface: 
+Scheduler::~Scheduler() was called (address: 
+Unknown DWARF encoding for search table.
+ZN8facebook5react9Scheduler23renderTemplateToSurfaceEiRKNSt6__ndk112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEE3$_6
+ZN8facebook5react9Scheduler29uiManagerDidFinishTransactionENSt6__ndk110shared_ptrIKNS0_19MountingCoordinatorEEEbE3$_7
+ZN8facebook5react9SchedulerC1ERKNS0_16SchedulerToolboxEPNS0_26UIManagerAnimationDelegateEPNS0_17SchedulerDelegateEE3$_0
+ZN8facebook5react9SchedulerC1ERKNS0_16SchedulerToolboxEPNS0_26UIManagerAnimationDelegateEPNS0_17SchedulerDelegateEE3$_1
+ZN8facebook5react9SchedulerC1ERKNS0_16SchedulerToolboxEPNS0_26UIManagerAnimationDelegateEPNS0_17SchedulerDelegateEE3$_2
+ZN8facebook5react9SchedulerD1EvE3$_3
+ZN8facebook5react9SchedulerD1EvE3$_4
+ZN8facebook5reactL45executeSynchronouslyOnSameThread_CAN_DEADLOCKERKNSt6__ndk18functionIFvONS2_IFvRNS_3jsi7RuntimeEEEEEEES8_EUlS5_E_
+ZN8facebook5reactL45executeSynchronouslyOnSameThread_CAN_DEADLOCKINS0_13InspectorDataEEET_RKNSt6__ndk18functionIFvONS5_IFvRNS_3jsi7RuntimeEEEEEEEONS5_IFS3_S8_EEEEUlS8_E_
+ZNK8facebook5react14SurfaceHandler16applyDisplayModeENS0_11DisplayModeEE3$_1
+ZNK8facebook5react14SurfaceHandler16constraintLayoutERKNS0_17LayoutConstraintsERKNS0_13LayoutContextEE3$_0
+ZNK8facebook5react14SurfaceManager11stopSurfaceEiE3$_1
+ZNK8facebook5react14SurfaceManager12startSurfaceEiRKNSt6__ndk112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEERKN5folly7dynamicERKNS0_17LayoutConstraintsERKNS0_13LayoutContextEE3$_0
+ZNK8facebook5react14SurfaceManager14measureSurfaceEiRKNS0_17LayoutConstraintsERKNS0_13LayoutContextEE3$_2
+ZNK8facebook5react14SurfaceManager23constraintSurfaceLayoutEiRKNS0_17LayoutConstraintsERKNS0_13LayoutContextEE3$_4
+ZNK8facebook5react14SurfaceManager23findMountingCoordinatorEiE3$_3
+ZNK8facebook5react20SynchronousEventBeat19lockExecutorAndBeatEvE3$_0
+ZNK8facebook5react20SynchronousEventBeat19lockExecutorAndBeatEvE3$_1
+ZNK8facebook5react21AsynchronousEventBeat6induceEvE3$_0
+ZNK8facebook5react9Scheduler27getInspectorDataForInstanceERKNS0_12EventEmitterEE3$_5
+ZZN8facebook5react9Scheduler23renderTemplateToSurfaceEiRKNSt6__ndk112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEENK3$_6clERKNS0_10ShadowTreeEEUlRKNS0_14RootShadowNodeEE_
+ZZN8facebook5react9SchedulerC1ERKNS0_16SchedulerToolboxEPNS0_26UIManagerAnimationDelegateEPNS0_17SchedulerDelegateEENK3$_0clERNS_3jsi7RuntimeEPKNS0_11EventTargetERKNSt6__ndk112basic_stringIcNSG_11char_traitsIcEENSG_9allocatorIcEEEENS0_18ReactEventPriorityERKNSG_8functionIFNSA_5ValueESC_EEEEUlRKNS0_16UIManagerBindingEE_
+_Unwind_Resume
+_Unwind_Resume() can't return
+__cxa_allocate_exception
+__cxa_atexit
+__cxa_begin_catch
+__cxa_end_catch
+__cxa_finalize
+__cxa_free_exception
+__cxa_pure_virtual
+__cxa_throw
+__gxx_personality_v0
+__stack_chk_fail
+abort
+allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
+columnNumber
+dl_iterate_phdr
+during phase1 personality function said it would stop here, but now in phase2 it did not stop here
+evaluateExpression
+facebook::jsi::NativeState::~NativeState()
+facebook::jsi::Value::~Value()
+facebook::jsi::dynamicFromValue(facebook::jsi::Runtime&, facebook::jsi::Value const&)
+facebook::react::AsynchronousEventBeat::AsynchronousEventBeat(std::__ndk1::unique_ptr<facebook::react::RunLoopObserver const, std::__ndk1::default_delete<facebook::react::RunLoopObserver const>>, std::__ndk1::function<void (std::__ndk1::function<void (facebook::jsi::Runtime&)>&&)>)
+facebook::react::AsynchronousEventBeat::activityDidChange(facebook::react::RunLoopObserver::Delegate const*, facebook::react::RunLoopObserver::Activity) const
+facebook::react::AsynchronousEventBeat::induce() const
+facebook::react::AsynchronousEventBeat::~AsynchronousEventBeat()
+facebook::react::ComponentDescriptorRegistry::findComponentDescriptorByHandle_DO_NOT_USE_THIS_IS_BROKEN(long) const
+facebook::react::ContextContainer::erase(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&) const
+facebook::react::CoreFeatures::blockPaintForUseLayoutEffect
+facebook::react::EventBeat::EventBeat(std::__ndk1::shared_ptr<facebook::react::EventBeat::OwnerBox>)
+facebook::react::EventBeat::beat(facebook::jsi::Runtime&) const
+facebook::react::EventBeat::request() const
+facebook::react::EventDispatcher::EventDispatcher(facebook::react::EventQueueProcessor const&, std::__ndk1::function<std::__ndk1::unique_ptr<facebook::react::EventBeat, std::__ndk1::default_delete<facebook::react::EventBeat>> (std::__ndk1::shared_ptr<facebook::react::EventBeat::OwnerBox> const&)> const&, std::__ndk1::function<std::__ndk1::unique_ptr<facebook::react::EventBeat, std::__ndk1::default_delete<facebook::react::EventBeat>> (std::__ndk1::shared_ptr<facebook::react::EventBeat::OwnerBox> const&)> const&, std::__ndk1::shared_ptr<facebook::react::EventBeat::OwnerBox> const&)
+facebook::react::EventDispatcher::addListener(std::__ndk1::shared_ptr<std::__ndk1::function<bool (facebook::react::RawEvent const&)> const> const&) const
+facebook::react::EventDispatcher::removeListener(std::__ndk1::shared_ptr<std::__ndk1::function<bool (facebook::react::RawEvent const&)> const> const&) const
+facebook::react::EventDispatcher::~EventDispatcher()
+facebook::react::EventEmitter::~EventEmitter()
+facebook::react::EventQueue::~EventQueue()
+facebook::react::EventQueueProcessor::EventQueueProcessor(std::__ndk1::function<void (facebook::jsi::Runtime&, facebook::react::EventTarget const*, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, facebook::react::ReactEventPriority, std::__ndk1::function<facebook::jsi::Value (facebook::jsi::Runtime&)> const&)>, std::__ndk1::function<void (facebook::react::StateUpdate const&)>)
+facebook::react::LayoutConstraints::clamp(facebook::react::Size const&) const
+facebook::react::LayoutableShadowNode::getLayoutMetrics() const
+facebook::react::RootShadowNode::clone(facebook::react::PropsParserContext const&, facebook::react::LayoutConstraints const&, facebook::react::LayoutContext const&) const
+facebook::react::RootShadowNode::layoutIfNeeded(std::__ndk1::vector<facebook::react::LayoutableShadowNode const*, std::__ndk1::allocator<facebook::react::LayoutableShadowNode const*>>*)
+facebook::react::RunLoopObserver::enable() const
+facebook::react::RunLoopObserver::getOwner() const
+facebook::react::RunLoopObserver::setDelegate(facebook::react::RunLoopObserver::Delegate const*) const
+facebook::react::RuntimeScheduler::callExpiredTasks(facebook::jsi::Runtime&)
+facebook::react::RuntimeScheduler::executeNowOnTheSameThread(std::__ndk1::function<void (facebook::jsi::Runtime&)>)
+facebook::react::RuntimeScheduler::scheduleTask(facebook::react::SchedulerPriority, std::__ndk1::function<void (facebook::jsi::Runtime&)>)
+facebook::react::Scheduler::Scheduler(facebook::react::SchedulerToolbox const&, facebook::react::UIManagerAnimationDelegate*, facebook::react::SchedulerDelegate*)
+facebook::react::Scheduler::addEventListener(std::__ndk1::shared_ptr<std::__ndk1::function<bool (facebook::react::RawEvent const&)> const> const&)
+facebook::react::Scheduler::animationTick() const
+facebook::react::Scheduler::findComponentDescriptorByHandle_DO_NOT_USE_THIS_IS_BROKEN(long) const
+facebook::react::Scheduler::getContextContainer() const
+facebook::react::Scheduler::getDelegate() const
+facebook::react::Scheduler::getInspectorDataForInstance(facebook::react::EventEmitter const&) const
+facebook::react::Scheduler::getUIManager() const
+facebook::react::Scheduler::registerSurface(facebook::react::SurfaceHandler const&) const
+facebook::react::Scheduler::removeEventListener(std::__ndk1::shared_ptr<std::__ndk1::function<bool (facebook::react::RawEvent const&)> const> const&)
+facebook::react::Scheduler::renderTemplateToSurface(int, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+facebook::react::Scheduler::setDelegate(facebook::react::SchedulerDelegate*)
+facebook::react::Scheduler::uiManagerDidCreateShadowNode(facebook::react::ShadowNode const&)
+facebook::react::Scheduler::uiManagerDidDispatchCommand(std::__ndk1::shared_ptr<facebook::react::ShadowNode const> const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, folly::dynamic const&)
+facebook::react::Scheduler::uiManagerDidFinishTransaction(std::__ndk1::shared_ptr<facebook::react::MountingCoordinator const>, bool)
+facebook::react::Scheduler::uiManagerDidSendAccessibilityEvent(std::__ndk1::shared_ptr<facebook::react::ShadowNode const> const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+facebook::react::Scheduler::uiManagerDidSetIsJSResponder(std::__ndk1::shared_ptr<facebook::react::ShadowNode const> const&, bool, bool)
+facebook::react::Scheduler::unregisterSurface(facebook::react::SurfaceHandler const&) const
+facebook::react::Scheduler::~Scheduler()
+facebook::react::ShadowNode::clone(facebook::react::ShadowNodeFragment const&) const
+facebook::react::ShadowNode::getSurfaceId() const
+facebook::react::ShadowNode::~ShadowNode()
+facebook::react::ShadowNodeFragment::childrenPlaceholder()
+facebook::react::ShadowNodeFragment::propsPlaceholder()
+facebook::react::ShadowNodeFragment::statePlaceholder()
+facebook::react::ShadowTree::ShadowTree(int, facebook::react::LayoutConstraints const&, facebook::react::LayoutContext const&, facebook::react::ShadowTreeDelegate const&, facebook::react::ContextContainer const&)
+facebook::react::ShadowTree::commit(std::__ndk1::function<std::__ndk1::shared_ptr<facebook::react::RootShadowNode> (facebook::react::RootShadowNode const&)> const&, facebook::react::ShadowTree::CommitOptions const&) const
+facebook::react::ShadowTree::commitEmptyTree() const
+facebook::react::ShadowTree::getCurrentRevision() const
+facebook::react::ShadowTree::getMountingCoordinator() const
+facebook::react::ShadowTree::getSurfaceId() const
+facebook::react::ShadowTree::setCommitMode(facebook::react::ShadowTree::CommitMode) const
+facebook::react::ShadowTree::tryCommit(std::__ndk1::function<std::__ndk1::shared_ptr<facebook::react::RootShadowNode> (facebook::react::RootShadowNode const&)> const&, facebook::react::ShadowTree::CommitOptions const&) const
+facebook::react::ShadowTree::~ShadowTree()
+facebook::react::ShadowTreeRegistry::enumerate(std::__ndk1::function<void (facebook::react::ShadowTree const&, bool&)> const&) const
+facebook::react::ShadowTreeRegistry::remove(int) const
+facebook::react::ShadowTreeRegistry::visit(int, std::__ndk1::function<void (facebook::react::ShadowTree const&)> const&) const
+facebook::react::ShadowView::ShadowView(facebook::react::ShadowNode const&)
+facebook::react::SurfaceHandler::SurfaceHandler(facebook::react::SurfaceHandler&&)
+facebook::react::SurfaceHandler::SurfaceHandler(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, int)
+facebook::react::SurfaceHandler::applyDisplayMode(facebook::react::DisplayMode) const
+facebook::react::SurfaceHandler::constraintLayout(facebook::react::LayoutConstraints const&, facebook::react::LayoutContext const&) const
+facebook::react::SurfaceHandler::getDisplayMode() const
+facebook::react::SurfaceHandler::getLayoutConstraints() const
+facebook::react::SurfaceHandler::getLayoutContext() const
+facebook::react::SurfaceHandler::getModuleName() const
+facebook::react::SurfaceHandler::getMountingCoordinator() const
+facebook::react::SurfaceHandler::getProps() const
+facebook::react::SurfaceHandler::getStatus() const
+facebook::react::SurfaceHandler::getSurfaceId() const
+facebook::react::SurfaceHandler::measure(facebook::react::LayoutConstraints const&, facebook::react::LayoutContext const&) const
+facebook::react::SurfaceHandler::operator=(facebook::react::SurfaceHandler&&)
+facebook::react::SurfaceHandler::setContextContainer(std::__ndk1::shared_ptr<facebook::react::ContextContainer const>) const
+facebook::react::SurfaceHandler::setDisplayMode(facebook::react::DisplayMode) const
+facebook::react::SurfaceHandler::setProps(folly::dynamic const&) const
+facebook::react::SurfaceHandler::setSurfaceId(int) const
+facebook::react::SurfaceHandler::setUIManager(facebook::react::UIManager const*) const
+facebook::react::SurfaceHandler::start() const
+facebook::react::SurfaceHandler::stop() const
+facebook::react::SurfaceHandler::~SurfaceHandler()
+facebook::react::SurfaceManager::SurfaceManager(facebook::react::Scheduler const&)
+facebook::react::SurfaceManager::constraintSurfaceLayout(int, facebook::react::LayoutConstraints const&, facebook::react::LayoutContext const&) const
+facebook::react::SurfaceManager::findMountingCoordinator(int) const
+facebook::react::SurfaceManager::measureSurface(int, facebook::react::LayoutConstraints const&, facebook::react::LayoutContext const&) const
+facebook::react::SurfaceManager::startSurface(int, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, folly::dynamic const&, facebook::react::LayoutConstraints const&, facebook::react::LayoutContext const&) const
+facebook::react::SurfaceManager::stopSurface(int) const
+facebook::react::SurfaceManager::visit(int, std::__ndk1::function<void (facebook::react::SurfaceHandler const&)> const&) const
+facebook::react::SynchronousEventBeat::SynchronousEventBeat(std::__ndk1::unique_ptr<facebook::react::RunLoopObserver const, std::__ndk1::default_delete<facebook::react::RunLoopObserver const>>, std::__ndk1::function<void (std::__ndk1::function<void (facebook::jsi::Runtime&)>&&)>, std::__ndk1::shared_ptr<facebook::react::RuntimeScheduler>)
+facebook::react::SynchronousEventBeat::activityDidChange(facebook::react::RunLoopObserver::Delegate const*, facebook::react::RunLoopObserver::Activity) const
+facebook::react::SynchronousEventBeat::induce() const
+facebook::react::SynchronousEventBeat::lockExecutorAndBeat() const
+facebook::react::SynchronousEventBeat::~SynchronousEventBeat()
+facebook::react::UIManager::UIManager(std::__ndk1::function<void (std::__ndk1::function<void (facebook::jsi::Runtime&)>&&)> const&, std::__ndk1::function<void (std::__ndk1::function<void ()>&&)>, std::__ndk1::shared_ptr<facebook::react::ContextContainer const>)
+facebook::react::UIManager::animationTick() const
+facebook::react::UIManager::getShadowTreeRegistry() const
+facebook::react::UIManager::registerCommitHook(facebook::react::UIManagerCommitHook const&) const
+facebook::react::UIManager::setAnimationDelegate(facebook::react::UIManagerAnimationDelegate*)
+facebook::react::UIManager::setComponentDescriptorRegistry(std::__ndk1::shared_ptr<facebook::react::ComponentDescriptorRegistry const> const&)
+facebook::react::UIManager::setDelegate(facebook::react::UIManagerDelegate*)
+facebook::react::UIManager::setSurfaceProps(int, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, folly::dynamic const&, facebook::react::DisplayMode) const
+facebook::react::UIManager::startSurface(std::__ndk1::unique_ptr<facebook::react::ShadowTree, std::__ndk1::default_delete<facebook::react::ShadowTree>>&&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, folly::dynamic const&, facebook::react::DisplayMode) const
+facebook::react::UIManager::stopSurface(int) const
+facebook::react::UIManager::unregisterCommitHook(facebook::react::UIManagerCommitHook const&) const
+facebook::react::UIManager::updateState(facebook::react::StateUpdate const&) const
+facebook::react::UIManager::visitBinding(std::__ndk1::function<void (facebook::react::UIManagerBinding const&)> const&, facebook::jsi::Runtime&) const
+facebook::react::UIManager::~UIManager()
+facebook::react::UIManagerBinding::createAndInstallIfNeeded(facebook::jsi::Runtime&, std::__ndk1::shared_ptr<facebook::react::UIManager> const&)
+facebook::react::UIManagerBinding::dispatchEvent(facebook::jsi::Runtime&, facebook::react::EventTarget const*, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, facebook::react::ReactEventPriority, std::__ndk1::function<facebook::jsi::Value (facebook::jsi::Runtime&)> const&) const
+facebook::react::UIManagerBinding::getBinding(facebook::jsi::Runtime&)
+facebook::react::UIManagerBinding::getInspectorDataForInstance(facebook::jsi::Runtime&, facebook::react::EventEmitter const&) const
+facebook::react::UITemplateProcessor::buildShadowTree(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, int, folly::dynamic const&, facebook::react::ComponentDescriptorRegistry const&, facebook::react::NativeModuleRegistry const&, std::__ndk1::shared_ptr<facebook::react::ReactNativeConfig const> const&)
+facebook::react::YogaLayoutableShadowNode::YogaLayoutableShadowNode(facebook::react::ShadowNode const&, facebook::react::ShadowNodeFragment const&)
+fflush
+fileName
+folly::TypeError::TypeError(folly::TypeError&&)
+folly::TypeError::TypeError(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, folly::dynamic::Type)
+folly::TypeError::~TypeError()
+folly::dynamic::TypeInfo<double>::name
+folly::dynamic::TypeInfo<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>::name
+folly::dynamic::TypeInfo<std::__ndk1::vector<folly::dynamic, std::__ndk1::allocator<folly::dynamic>>>::name
+folly::dynamic::destroy()
+folly::dynamic::operator=(folly::dynamic const&)
+folly::dynamic::operator=(folly::dynamic&&)
+folly::dynamic::operator[](folly::Range<char const*>) &
+fprintf
+free
+fwrite
+getEncodedP
+getRegister
+getSLEB128
+getSavedFloatRegister
+getSavedRegister
+getTableEntrySize
+getULEB128
+google::LogMessage::LogMessage(char const*, int, int)
+google::LogMessage::stream()
+google::LogMessage::~LogMessage()
+hierarchy
+int std::__ndk1::try_lock<std::__ndk1::unique_lock<std::__ndk1::shared_mutex>, std::__ndk1::unique_lock<std::__ndk1::shared_mutex>, std::__ndk1::unique_lock<std::__ndk1::shared_mutex>>(std::__ndk1::unique_lock<std::__ndk1::shared_mutex>&, std::__ndk1::unique_lock<std::__ndk1::shared_mutex>&, std::__ndk1::unique_lock<std::__ndk1::shared_mutex>&)
+int std::__ndk1::try_lock<std::__ndk1::unique_lock<std::__ndk1::shared_mutex>, std::__ndk1::unique_lock<std::__ndk1::shared_mutex>>(std::__ndk1::unique_lock<std::__ndk1::shared_mutex>&, std::__ndk1::unique_lock<std::__ndk1::shared_mutex>&)
+libandroid.so
+libc++_shared.so
+libc.so
+libdl.so
+libfb.so
+libfbjni.so
+libfolly_runtime.so
+libglog.so
+libglog_init.so
+libjsi.so
+liblog.so
+liblogger.so
+libm.so
+libreact_config.so
+libreact_debug.so
+libreact_render_componentregistry.so
+libreact_render_core.so
+libreact_render_debug.so
+libreact_render_graphics.so
+libreact_render_leakchecker.so
+libreact_render_mapbuffer.so
+libreact_render_mounting.so
+libreact_render_runtimescheduler.so
+libreact_render_scheduler.so
+libreact_render_telemetry.so
+libreact_render_templateprocessor.so
+libreact_render_uimanager.so
+libreact_utils.so
+librrc_root.so
+librrc_view.so
+libruntimeexecutor.so
+libunwind: %s - %s\n
+libunwind: Unsupported .eh_frame_hdr version\n
+libunwind: malformed DW_CFA_GNU_negative_offset_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa_register DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa_sf DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_expression DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_offset_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_offset_extended_sf DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_register DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_register DWARF unwind, reg2 too big\n
+libunwind: malformed DW_CFA_restore_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_same_value DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_undefined DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_val_expression DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_val_offset DWARF unwind, reg (%lu) out of range\n\n
+libunwind: malformed DW_CFA_val_offset_sf DWARF unwind, reg too big\n
+libyoga.so
+lineNumber
+malformed uleb128 expression
+malloc
+memcmp
+memcpy
+memset
+name
+non-virtual thunk to facebook::react::AsynchronousEventBeat::activityDidChange(facebook::react::RunLoopObserver::Delegate const*, facebook::react::RunLoopObserver::Activity) const
+non-virtual thunk to facebook::react::AsynchronousEventBeat::~AsynchronousEventBeat()
+non-virtual thunk to facebook::react::SynchronousEventBeat::activityDidChange(facebook::react::RunLoopObserver::Delegate const*, facebook::react::RunLoopObserver::Activity) const
+non-virtual thunk to facebook::react::SynchronousEventBeat::~SynchronousEventBeat()
+operator delete(void*)
+operator new(unsigned long)
+props
+pthread_equal
+pthread_rwlock_rdlock
+pthread_rwlock_unlock
+pthread_rwlock_wrlock
+pthread_self
+react_fabric:block_paint_for_use_layout_effect
+react_fabric:reduce_delete_create_mutation_layout_animation_android
+sched_yield
+selectedIndex
+setRegister
+source
+std::__ndk1::__basic_string_common<true>::__throw_length_error() const
+std::__ndk1::__compressed_pair_elem<facebook::react::UIManager, 1, false>::__compressed_pair_elem<std::__ndk1::function<void (std::__ndk1::function<void (facebook::jsi::Runtime&)>&&)>&, std::__ndk1::function<void (std::__ndk1::function<void ()>&&)> const&, std::__ndk1::shared_ptr<facebook::react::ContextContainer const>&, 0ul, 1ul, 2ul>(std::__ndk1::piecewise_construct_t, std::__ndk1::tuple<std::__ndk1::function<void (std::__ndk1::function<void (facebook::jsi::Runtime&)>&&)>&, std::__ndk1::function<void (std::__ndk1::function<void ()>&&)> const&, std::__ndk1::shared_ptr<facebook::react::ContextContainer const>&>, std::__ndk1::__tuple_indices<0ul, 1ul, 2ul>)
+std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>, void*>*> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>, folly::HeterogeneousAccessHash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>, folly::HeterogeneousAccessEqualTo<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>>>::find<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<int, facebook::react::SurfaceHandler>, std::__ndk1::__unordered_map_hasher<int, std::__ndk1::__hash_value_type<int, facebook::react::SurfaceHandler>, folly::HeterogeneousAccessHash<int, void>, true>, std::__ndk1::__unordered_map_equal<int, std::__ndk1::__hash_value_type<int, facebook::react::SurfaceHandler>, folly::HeterogeneousAccessEqualTo<int, void>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<int, facebook::react::SurfaceHandler>>>::__rehash(unsigned long)
+std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<int, facebook::react::SurfaceHandler>, std::__ndk1::__unordered_map_hasher<int, std::__ndk1::__hash_value_type<int, facebook::react::SurfaceHandler>, folly::HeterogeneousAccessHash<int, void>, true>, std::__ndk1::__unordered_map_equal<int, std::__ndk1::__hash_value_type<int, facebook::react::SurfaceHandler>, folly::HeterogeneousAccessEqualTo<int, void>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<int, facebook::react::SurfaceHandler>>>::rehash(unsigned long)
+std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<int, facebook::react::SurfaceHandler>, std::__ndk1::__unordered_map_hasher<int, std::__ndk1::__hash_value_type<int, facebook::react::SurfaceHandler>, folly::HeterogeneousAccessHash<int, void>, true>, std::__ndk1::__unordered_map_equal<int, std::__ndk1::__hash_value_type<int, facebook::react::SurfaceHandler>, folly::HeterogeneousAccessEqualTo<int, void>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<int, facebook::react::SurfaceHandler>>>::remove(std::__ndk1::__hash_const_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<int, facebook::react::SurfaceHandler>, void*>*>)
+std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>, folly::HeterogeneousAccessHash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>, folly::HeterogeneousAccessEqualTo<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>>>::__rehash(unsigned long)
+std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>, folly::HeterogeneousAccessHash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>, folly::HeterogeneousAccessEqualTo<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>>>::erase(std::__ndk1::__hash_const_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>, void*>*>)
+std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>, folly::HeterogeneousAccessHash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>, folly::HeterogeneousAccessEqualTo<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>>>::rehash(unsigned long)
+std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>, folly::HeterogeneousAccessHash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>, folly::HeterogeneousAccessEqualTo<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>>>::remove(std::__ndk1::__hash_const_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>, void*>*>)
+std::__ndk1::__murmur2_or_cityhash<unsigned long, 64ul>::__hash_len_0_to_16(char const*, unsigned long)
+std::__ndk1::__murmur2_or_cityhash<unsigned long, 64ul>::operator()(void const*, unsigned long)
+std::__ndk1::__next_prime(unsigned long)
+std::__ndk1::__shared_mutex_base::__shared_mutex_base()
+std::__ndk1::__shared_mutex_base::lock()
+std::__ndk1::__shared_mutex_base::lock_shared()
+std::__ndk1::__shared_mutex_base::try_lock()
+std::__ndk1::__shared_mutex_base::unlock()
+std::__ndk1::__shared_mutex_base::unlock_shared()
+std::__ndk1::__shared_ptr_emplace<facebook::react::EventBeat::OwnerBox, std::__ndk1::allocator<facebook::react::EventBeat::OwnerBox>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<facebook::react::EventBeat::OwnerBox, std::__ndk1::allocator<facebook::react::EventBeat::OwnerBox>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<facebook::react::EventBeat::OwnerBox, std::__ndk1::allocator<facebook::react::EventBeat::OwnerBox>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<facebook::react::RootShadowNode, std::__ndk1::allocator<facebook::react::RootShadowNode>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<facebook::react::RootShadowNode, std::__ndk1::allocator<facebook::react::RootShadowNode>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<facebook::react::RootShadowNode, std::__ndk1::allocator<facebook::react::RootShadowNode>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<facebook::react::UIManager, std::__ndk1::allocator<facebook::react::UIManager>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<facebook::react::UIManager, std::__ndk1::allocator<facebook::react::UIManager>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<facebook::react::UIManager, std::__ndk1::allocator<facebook::react::UIManager>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<std::__ndk1::optional<facebook::react::EventDispatcher const>, std::__ndk1::allocator<std::__ndk1::optional<facebook::react::EventDispatcher const>>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<std::__ndk1::optional<facebook::react::EventDispatcher const>, std::__ndk1::allocator<std::__ndk1::optional<facebook::react::EventDispatcher const>>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<std::__ndk1::optional<facebook::react::EventDispatcher const>, std::__ndk1::allocator<std::__ndk1::optional<facebook::react::EventDispatcher const>>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<std::__ndk1::vector<std::__ndk1::shared_ptr<facebook::react::ShadowNode const>, std::__ndk1::allocator<std::__ndk1::shared_ptr<facebook::react::ShadowNode const>>>, std::__ndk1::allocator<std::__ndk1::vector<std::__ndk1::shared_ptr<facebook::react::ShadowNode const>, std::__ndk1::allocator<std::__ndk1::shared_ptr<facebook::react::ShadowNode const>>>>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<std::__ndk1::vector<std::__ndk1::shared_ptr<facebook::react::ShadowNode const>, std::__ndk1::allocator<std::__ndk1::shared_ptr<facebook::react::ShadowNode const>>>, std::__ndk1::allocator<std::__ndk1::vector<std::__ndk1::shared_ptr<facebook::react::ShadowNode const>, std::__ndk1::allocator<std::__ndk1::shared_ptr<facebook::react::ShadowNode const>>>>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<std::__ndk1::vector<std::__ndk1::shared_ptr<facebook::react::ShadowNode const>, std::__ndk1::allocator<std::__ndk1::shared_ptr<facebook::react::ShadowNode const>>>, std::__ndk1::allocator<std::__ndk1::vector<std::__ndk1::shared_ptr<facebook::react::ShadowNode const>, std::__ndk1::allocator<std::__ndk1::shared_ptr<facebook::react::ShadowNode const>>>>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<std::__ndk1::weak_ptr<facebook::react::ComponentDescriptorRegistry const>, std::__ndk1::allocator<std::__ndk1::weak_ptr<facebook::react::ComponentDescriptorRegistry const>>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<std::__ndk1::weak_ptr<facebook::react::ComponentDescriptorRegistry const>, std::__ndk1::allocator<std::__ndk1::weak_ptr<facebook::react::ComponentDescriptorRegistry const>>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<std::__ndk1::weak_ptr<facebook::react::ComponentDescriptorRegistry const>, std::__ndk1::allocator<std::__ndk1::weak_ptr<facebook::react::ComponentDescriptorRegistry const>>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_weak_count::__get_deleter(std::type_info const&) const
+std::__ndk1::__shared_weak_count::__release_weak()
+std::__ndk1::__shared_weak_count::lock()
+std::__ndk1::__shared_weak_count::~__shared_weak_count()
+std::__ndk1::__throw_system_error(int, char const*)
+std::__ndk1::__vector_base_common<true>::__throw_length_error() const
+std::__ndk1::bad_function_call::~bad_function_call()
+std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>& std::__ndk1::__put_character_sequence<char, std::__ndk1::char_traits<char>>(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>&, char const*, unsigned long)
+std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::operator<<(void const*)
+std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::sentry::sentry(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>&)
+std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::sentry::~sentry()
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::assign(char const*)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::basic_string(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::operator=(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+std::__ndk1::condition_variable::~condition_variable()
+std::__ndk1::ctype<char>::id
+std::__ndk1::enable_if<__is_cpp17_forward_iterator<std::__ndk1::shared_ptr<facebook::react::UIManagerCommitHook const>*>::value && is_constructible<std::__ndk1::shared_ptr<facebook::react::UIManagerCommitHook const>, std::__ndk1::iterator_traits<__is_cpp17_forward_iterator>::reference>::value, void>::type std::__ndk1::vector<std::__ndk1::shared_ptr<facebook::react::UIManagerCommitHook const>, std::__ndk1::allocator<std::__ndk1::shared_ptr<facebook::react::UIManagerCommitHook const>>>::assign<std::__ndk1::shared_ptr<facebook::react::UIManagerCommitHook const>*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
+std::__ndk1::function<void (std::__ndk1::function<void (facebook::jsi::Runtime&)>&&)>::~function()
+std::__ndk1::ios_base::__set_badbit_and_consider_rethrow()
+std::__ndk1::ios_base::clear(unsigned int)
+std::__ndk1::ios_base::getloc() const
+std::__ndk1::locale::use_facet(std::__ndk1::locale::id&) const
+std::__ndk1::locale::~locale()
+std::__ndk1::mutex::lock()
+std::__ndk1::mutex::unlock()
+std::__ndk1::mutex::~mutex()
+std::__ndk1::optional<std::__ndk1::weak_ptr<facebook::react::RuntimeScheduler>> facebook::react::ContextContainer::find<std::__ndk1::weak_ptr<facebook::react::RuntimeScheduler>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&) const
+std::__ndk1::pair<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<int, facebook::react::SurfaceHandler>, void*>*>, bool> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<int, facebook::react::SurfaceHandler>, std::__ndk1::__unordered_map_hasher<int, std::__ndk1::__hash_value_type<int, facebook::react::SurfaceHandler>, folly::HeterogeneousAccessHash<int, void>, true>, std::__ndk1::__unordered_map_equal<int, std::__ndk1::__hash_value_type<int, facebook::react::SurfaceHandler>, folly::HeterogeneousAccessEqualTo<int, void>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<int, facebook::react::SurfaceHandler>>>::__emplace_unique_key_args<int, int&, facebook::react::SurfaceHandler>(int const&, int&, facebook::react::SurfaceHandler&&)
+std::__ndk1::pair<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>, void*>*>, bool> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>, folly::HeterogeneousAccessHash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>, folly::HeterogeneousAccessEqualTo<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<void>>>>::__emplace_unique_key_args<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::shared_ptr<void>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&&, std::__ndk1::shared_ptr<void>&&)
+std::__ndk1::shared_ptr<facebook::react::ComponentDescriptorRegistry const>::~shared_ptr()
+std::__ndk1::shared_ptr<facebook::react::ContextContainer const>::~shared_ptr()
+std::__ndk1::shared_ptr<facebook::react::ReactNativeConfig const> facebook::react::ContextContainer::at<std::__ndk1::shared_ptr<facebook::react::ReactNativeConfig const>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&) const
+std::__ndk1::shared_ptr<facebook::react::ReactNativeConfig const>::~shared_ptr()
+std::__ndk1::shared_ptr<facebook::react::UIManager>::~shared_ptr()
+std::__ndk1::shared_ptr<std::__ndk1::optional<facebook::react::EventDispatcher const>>::~shared_ptr()
+std::bad_optional_access::~bad_optional_access()
+std::exception::what() const
+std::exception::~exception()
+std::length_error::~length_error()
+std::logic_error::logic_error(char const*)
+std::out_of_range::~out_of_range()
+std::runtime_error::runtime_error(std::runtime_error const&)
+std::runtime_error::what() const
+std::runtime_error::~runtime_error()
+std::terminate()
+strlen
+truncated sleb128 expression
+truncated uleb128 expression
+typeinfo for facebook::react::AsynchronousEventBeat
+typeinfo for facebook::react::EventBeat
+typeinfo for facebook::react::EventEmitter
+typeinfo for facebook::react::EventQueue
+typeinfo for facebook::react::RunLoopObserver::Delegate
+typeinfo for facebook::react::Scheduler
+typeinfo for facebook::react::SurfaceHandler
+typeinfo for facebook::react::SynchronousEventBeat
+typeinfo for facebook::react::UIManagerDelegate
+typeinfo for folly::TypeError
+typeinfo for std::__ndk1::__function::__base<facebook::react::InspectorData (facebook::jsi::Runtime&)>
+typeinfo for std::__ndk1::__function::__base<std::__ndk1::shared_ptr<facebook::react::RootShadowNode> (facebook::react::RootShadowNode const&)>
+typeinfo for std::__ndk1::__function::__base<void (facebook::jsi::Runtime&)>
+typeinfo for std::__ndk1::__function::__base<void (facebook::jsi::Runtime&, facebook::react::EventTarget const*, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, facebook::react::ReactEventPriority, std::__ndk1::function<facebook::jsi::Value (facebook::jsi::Runtime&)> const&)>
+typeinfo for std::__ndk1::__function::__base<void (facebook::react::ShadowTree const&)>
+typeinfo for std::__ndk1::__function::__base<void (facebook::react::ShadowTree const&, bool&)>
+typeinfo for std::__ndk1::__function::__base<void (facebook::react::StateUpdate const&)>
+typeinfo for std::__ndk1::__function::__base<void (facebook::react::SurfaceHandler const&)>
+typeinfo for std::__ndk1::__function::__base<void (facebook::react::UIManagerBinding const&)>
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::EventBeat::OwnerBox, std::__ndk1::allocator<facebook::react::EventBeat::OwnerBox>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::RootShadowNode, std::__ndk1::allocator<facebook::react::RootShadowNode>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::UIManager, std::__ndk1::allocator<facebook::react::UIManager>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<std::__ndk1::optional<facebook::react::EventDispatcher const>, std::__ndk1::allocator<std::__ndk1::optional<facebook::react::EventDispatcher const>>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<std::__ndk1::vector<std::__ndk1::shared_ptr<facebook::react::ShadowNode const>, std::__ndk1::allocator<std::__ndk1::shared_ptr<facebook::react::ShadowNode const>>>, std::__ndk1::allocator<std::__ndk1::vector<std::__ndk1::shared_ptr<facebook::react::ShadowNode const>, std::__ndk1::allocator<std::__ndk1::shared_ptr<facebook::react::ShadowNode const>>>>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<std::__ndk1::weak_ptr<facebook::react::ComponentDescriptorRegistry const>, std::__ndk1::allocator<std::__ndk1::weak_ptr<facebook::react::ComponentDescriptorRegistry const>>>
+typeinfo for std::__ndk1::__shared_weak_count
+typeinfo for std::__ndk1::bad_function_call
+typeinfo for std::bad_optional_access
+typeinfo for std::exception
+typeinfo for std::length_error
+typeinfo for std::out_of_range
+typeinfo for std::runtime_error
+typeinfo name for facebook::react::AsynchronousEventBeat
+typeinfo name for facebook::react::EventEmitter
+typeinfo name for facebook::react::EventQueue
+typeinfo name for facebook::react::RunLoopObserver::Delegate
+typeinfo name for facebook::react::Scheduler
+typeinfo name for facebook::react::SurfaceHandler
+typeinfo name for facebook::react::SynchronousEventBeat
+typeinfo name for facebook::react::UIManagerDelegate
+typeinfo name for folly::TypeError
+typeinfo name for std::__ndk1::__function::__base<facebook::react::InspectorData (facebook::jsi::Runtime&)>
+typeinfo name for std::__ndk1::__function::__base<std::__ndk1::shared_ptr<facebook::react::RootShadowNode> (facebook::react::RootShadowNode const&)>
+typeinfo name for std::__ndk1::__function::__base<void (facebook::jsi::Runtime&)>
+typeinfo name for std::__ndk1::__function::__base<void (facebook::jsi::Runtime&, facebook::react::EventTarget const*, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, facebook::react::ReactEventPriority, std::__ndk1::function<facebook::jsi::Value (facebook::jsi::Runtime&)> const&)>
+typeinfo name for std::__ndk1::__function::__base<void (facebook::react::ShadowTree const&)>
+typeinfo name for std::__ndk1::__function::__base<void (facebook::react::ShadowTree const&, bool&)>
+typeinfo name for std::__ndk1::__function::__base<void (facebook::react::StateUpdate const&)>
+typeinfo name for std::__ndk1::__function::__base<void (facebook::react::SurfaceHandler const&)>
+typeinfo name for std::__ndk1::__function::__base<void (facebook::react::UIManagerBinding const&)>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::EventBeat::OwnerBox, std::__ndk1::allocator<facebook::react::EventBeat::OwnerBox>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::RootShadowNode, std::__ndk1::allocator<facebook::react::RootShadowNode>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::UIManager, std::__ndk1::allocator<facebook::react::UIManager>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<std::__ndk1::optional<facebook::react::EventDispatcher const>, std::__ndk1::allocator<std::__ndk1::optional<facebook::react::EventDispatcher const>>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<std::__ndk1::vector<std::__ndk1::shared_ptr<facebook::react::ShadowNode const>, std::__ndk1::allocator<std::__ndk1::shared_ptr<facebook::react::ShadowNode const>>>, std::__ndk1::allocator<std::__ndk1::vector<std::__ndk1::shared_ptr<facebook::react::ShadowNode const>, std::__ndk1::allocator<std::__ndk1::shared_ptr<facebook::react::ShadowNode const>>>>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<std::__ndk1::weak_ptr<facebook::react::ComponentDescriptorRegistry const>, std::__ndk1::allocator<std::__ndk1::weak_ptr<facebook::react::ComponentDescriptorRegistry const>>>
+typeinfo name for std::__ndk1::bad_function_call
+unique_lock::lock: already locked
+unique_lock::lock: references null mutex
+unique_lock::try_lock: already locked
+unique_lock::try_lock: references null mutex
+unique_lock::unlock: not locked
+unknown pointer encoding
+unknown register
+unordered_map::at: key not found
+unsupported arm64 register
+unsupported restore location for float register
+unsupported restore location for register
+unwind_phase2
+void facebook::react::ContextContainer::insert<std::__ndk1::weak_ptr<facebook::react::ComponentDescriptorRegistry const>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::weak_ptr<facebook::react::ComponentDescriptorRegistry const> const&) const
+void folly::detail::throw_exception_<folly::TypeError, char const*, folly::dynamic::Type>(char const*, folly::dynamic::Type)
+void folly::throw_exception<folly::TypeError>(folly::TypeError&&)
+void std::__ndk1::__lock_first<std::__ndk1::unique_lock<std::__ndk1::shared_mutex>, std::__ndk1::unique_lock<std::__ndk1::shared_mutex>, std::__ndk1::unique_lock<std::__ndk1::shared_mutex>, std::__ndk1::unique_lock<std::__ndk1::shared_mutex>>(int, std::__ndk1::unique_lock<std::__ndk1::shared_mutex>&, std::__ndk1::unique_lock<std::__ndk1::shared_mutex>&, std::__ndk1::unique_lock<std::__ndk1::shared_mutex>&, std::__ndk1::unique_lock<std::__ndk1::shared_mutex>&)
+void std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__emplace_back_slow_path<char const*>(char const*&&)
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info
+vtable for facebook::react::AsynchronousEventBeat
+vtable for facebook::react::EventBeat
+vtable for facebook::react::EventEmitter
+vtable for facebook::react::EventQueue
+vtable for facebook::react::RootShadowNode
+vtable for facebook::react::Scheduler
+vtable for facebook::react::ShadowNode
+vtable for facebook::react::SurfaceHandler
+vtable for facebook::react::SynchronousEventBeat
+vtable for facebook::react::YogaLayoutableShadowNode
+vtable for folly::TypeError
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::EventBeat::OwnerBox, std::__ndk1::allocator<facebook::react::EventBeat::OwnerBox>>
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::RootShadowNode, std::__ndk1::allocator<facebook::react::RootShadowNode>>
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::UIManager, std::__ndk1::allocator<facebook::react::UIManager>>
+vtable for std::__ndk1::__shared_ptr_emplace<std::__ndk1::optional<facebook::react::EventDispatcher const>, std::__ndk1::allocator<std::__ndk1::optional<facebook::react::EventDispatcher const>>>
+vtable for std::__ndk1::__shared_ptr_emplace<std::__ndk1::vector<std::__ndk1::shared_ptr<facebook::react::ShadowNode const>, std::__ndk1::allocator<std::__ndk1::shared_ptr<facebook::react::ShadowNode const>>>, std::__ndk1::allocator<std::__ndk1::vector<std::__ndk1::shared_ptr<facebook::react::ShadowNode const>, std::__ndk1::allocator<std::__ndk1::shared_ptr<facebook::react::ShadowNode const>>>>>
+vtable for std::__ndk1::__shared_ptr_emplace<std::__ndk1::weak_ptr<facebook::react::ComponentDescriptorRegistry const>, std::__ndk1::allocator<std::__ndk1::weak_ptr<facebook::react::ComponentDescriptorRegistry const>>>
+vtable for std::__ndk1::bad_function_call
+vtable for std::bad_optional_access
+vtable for std::length_error
+vtable for std::out_of_range
+xxxx 6:

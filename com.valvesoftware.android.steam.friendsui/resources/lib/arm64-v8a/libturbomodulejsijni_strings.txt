@@ -1,0 +1,392 @@
+()Lcom/facebook/jni/HybridData;
+(Lcom/facebook/react/bridge/RuntimeExecutor;Lcom/facebook/react/turbomodule/core/CallInvokerHolderImpl;Lcom/facebook/react/turbomodule/core/CallInvokerHolderImpl;Lcom/facebook/react/turbomodule/core/TurboModuleManagerDelegate;)Lcom/facebook/jni/HybridData;
+(Lcom/facebook/react/perflogger/NativeModulePerfLogger;)V
+(Lcom/facebook/react/turbomodule/core/TurboModuleManagerDelegate;)V
+(Ljava/lang/String;)Lcom/facebook/react/bridge/CxxModuleWrapper;
+(Ljava/lang/String;)Lcom/facebook/react/turbomodule/core/interfaces/TurboModule;
+;\tFQ8
+Android (7714059, based on r416183c1) clang version 12.0.8 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee)
+CIE ID is not zero
+CIE version is not 1 or 3
+Can't binary search on variable length encoded data.
+DWARF opcode not implemented
+DW_EH_PE_aligned pointer encoding not supported
+DW_EH_PE_datarel is invalid with a datarelBase of 0
+DW_EH_PE_funcrel pointer encoding not supported
+DW_EH_PE_textrel pointer encoding not supported
+DW_OP_deref_size with bad size
+DW_OP_fbreg not implemented
+DW_OP_piece not implemented
+FDE has zero length
+FDE is really a CIE
+JNI_OnLoad
+LIBC
+Lcom/facebook/jni/HybridData$Destructor;
+Lcom/facebook/jni/HybridData;
+Lcom/facebook/react/CompositeReactPackageTurboModuleManagerDelegate;
+Lcom/facebook/react/turbomodule/core/TurboModuleManager;
+Linker: LLD 12.0.8 (/buildbot/src/android/llvm-r416183/out/llvm-project/lld c935d99d7cf2016289302412d708641d52d2f7ee)
+N8facebook3jni11HybridClassINS_5react17CallInvokerHolderENS0_6detail15BaseHybridClassEEE
+N8facebook3jni11HybridClassINS_5react18TurboModuleManagerENS0_6detail15BaseHybridClassEEE
+N8facebook3jni11HybridClassINS_5react26TurboModuleManagerDelegateENS0_6detail15BaseHybridClassEEE
+N8facebook3jni11HybridClassINS_5react35CompositeTurboModuleManagerDelegateENS2_26TurboModuleManagerDelegateEEE
+N8facebook3jni6detail15BaseHybridClassE
+N8facebook5react11TurboModuleE
+N8facebook5react17CallInvokerHolderE
+N8facebook5react18TurboModuleManagerE
+N8facebook5react26TurboModuleManagerDelegateE
+N8facebook5react35CompositeTurboModuleManagerDelegateE
+NSt6__ndk110__function6__baseIFNS_10shared_ptrIN8facebook5react11TurboModuleEEERKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEE
+NSt6__ndk110__function6__baseIFvRN8facebook3jsi7RuntimeEEEE
+NSt6__ndk110__function6__baseIFvvEEE
+NSt6__ndk110__function6__funcIZ10JNI_OnLoadE3$_0NS_9allocatorIS2_EEFvvEEE
+NSt6__ndk110__function6__funcIZN8facebook5react18TurboModuleManager18installJSIBindingsEvE3$_0NS_9allocatorIS5_EEFvRNS2_3jsi7RuntimeEEEE
+NSt6__ndk110__function6__funcIZZN8facebook5react18TurboModuleManager18installJSIBindingsEvENK3$_0clERNS2_3jsi7RuntimeEEUlRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEE_NSC_ISH_EEFNS_10shared_ptrINS3_11TurboModuleEEESG_EEE
+NSt6__ndk117bad_function_callE
+NSt6__ndk120__shared_ptr_emplaceIN8facebook5react14TurboCxxModuleENS_9allocatorIS3_EEEE
+NSt6__ndk120__shared_ptr_emplaceINS_13unordered_mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_10shared_ptrIN8facebook5react11TurboModuleEEENS_4hashIS7_EENS_8equal_toIS7_EENS5_INS_4pairIKS7_SC_EEEEEENS5_ISL_EEEE
+Unknown DWARF encoding for search table.
+Z10JNI_OnLoadE3$_0
+ZN8facebook5react18TurboModuleManager18installJSIBindingsEvE3$_0
+ZZN8facebook5react18TurboModuleManager18installJSIBindingsEvENK3$_0clERNS_3jsi7RuntimeEEUlRKNSt6__ndk112basic_stringIcNS6_11char_traitsIcEENS6_9allocatorIcEEEEE_
+_JNIEnv::CallObjectMethod(_jobject*, _jmethodID*, ...)
+_Unwind_Resume
+_Unwind_Resume() can't return
+__cxa_allocate_exception
+__cxa_atexit
+__cxa_begin_catch
+__cxa_end_catch
+__cxa_finalize
+__cxa_free_exception
+__cxa_guard_abort
+__cxa_guard_acquire
+__cxa_guard_release
+__cxa_rethrow
+__cxa_throw
+__gxx_personality_v0
+__stack_chk_fail
+abort
+addTurboModuleManagerDelegate
+allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
+com/facebook/jni/HybridClassBase
+com/facebook/react/CompositeReactPackageTurboModuleManagerDelegate
+com/facebook/react/bridge/CxxModuleWrapper
+com/facebook/react/bridge/RuntimeExecutor
+com/facebook/react/config/ReactFeatureFlags
+com/facebook/react/perflogger/NativeModulePerfLogger
+com/facebook/react/turbomodule/core/CallInvokerHolderImpl
+com/facebook/react/turbomodule/core/TurboModuleManager
+com/facebook/react/turbomodule/core/TurboModuleManagerDelegate
+com/facebook/react/turbomodule/core/TurboModulePerfLogger
+dl_iterate_phdr
+during phase1 personality function said it would stop here, but now in phase2 it did not stop here
+evaluateExpression
+facebook::jni::Environment::current()
+facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const
+facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const::hybridDataField
+facebook::jni::HybridClass<facebook::react::CompositeTurboModuleManagerDelegate, facebook::react::TurboModuleManagerDelegate>::JavaPart::cthis() const
+facebook::jni::HybridClass<facebook::react::CompositeTurboModuleManagerDelegate, facebook::react::TurboModuleManagerDelegate>::JavaPart::cthis() const::hybridDataField
+facebook::jni::HybridClass<facebook::react::CompositeTurboModuleManagerDelegate, facebook::react::TurboModuleManagerDelegate>::makeHybridData(std::__ndk1::unique_ptr<facebook::react::CompositeTurboModuleManagerDelegate, std::__ndk1::default_delete<facebook::react::CompositeTurboModuleManagerDelegate>>)
+facebook::jni::HybridClass<facebook::react::CompositeTurboModuleManagerDelegate, facebook::react::TurboModuleManagerDelegate>::registerHybrid(std::initializer_list<JNINativeMethod>)
+facebook::jni::HybridClass<facebook::react::CxxModuleWrapper, facebook::react::CxxModuleWrapperBase>::JavaPart::cthis() const
+facebook::jni::HybridClass<facebook::react::CxxModuleWrapper, facebook::react::CxxModuleWrapperBase>::JavaPart::cthis() const::hybridDataField
+facebook::jni::HybridClass<facebook::react::JNativeModulePerfLogger, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const
+facebook::jni::HybridClass<facebook::react::JNativeModulePerfLogger, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const::hybridDataField
+facebook::jni::HybridClass<facebook::react::JRuntimeExecutor, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const
+facebook::jni::HybridClass<facebook::react::JRuntimeExecutor, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const::hybridDataField
+facebook::jni::HybridClass<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const
+facebook::jni::HybridClass<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const::hybridDataField
+facebook::jni::HybridClass<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>::makeHybridData(std::__ndk1::unique_ptr<facebook::react::TurboModuleManager, std::__ndk1::default_delete<facebook::react::TurboModuleManager>>)
+facebook::jni::HybridClass<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>::registerHybrid(std::initializer_list<JNINativeMethod>)
+facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const
+facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const::hybridDataField
+facebook::jni::JField<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*> facebook::jni::detectHybrid<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>(facebook::jni::alias_ref<_jclass*>)
+facebook::jni::JField<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*> facebook::jni::detectHybrid<facebook::react::CompositeTurboModuleManagerDelegate, facebook::react::TurboModuleManagerDelegate>(facebook::jni::alias_ref<_jclass*>)
+facebook::jni::JField<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*> facebook::jni::detectHybrid<facebook::react::CxxModuleWrapper, facebook::react::CxxModuleWrapperBase>(facebook::jni::alias_ref<_jclass*>)
+facebook::jni::JField<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*> facebook::jni::detectHybrid<facebook::react::JNativeModulePerfLogger, facebook::jni::detail::BaseHybridClass>(facebook::jni::alias_ref<_jclass*>)
+facebook::jni::JField<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*> facebook::jni::detectHybrid<facebook::react::JRuntimeExecutor, facebook::jni::detail::BaseHybridClass>(facebook::jni::alias_ref<_jclass*>)
+facebook::jni::JField<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*> facebook::jni::detectHybrid<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>(facebook::jni::alias_ref<_jclass*>)
+facebook::jni::JField<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*> facebook::jni::detectHybrid<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>(facebook::jni::alias_ref<_jclass*>)
+facebook::jni::JMethod<facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CxxModuleWrapper, facebook::react::CxxModuleWrapperBase>::JavaPart, facebook::jni::HybridClass<facebook::react::CxxModuleWrapperBase, facebook::react::JNativeModule>::JavaPart, void>::_javaobject*> (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)>::operator()(facebook::jni::alias_ref<_jobject*>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&) const
+facebook::jni::JMethod<facebook::jni::alias_ref<facebook::react::JTurboModule> (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)>::operator()(facebook::jni::alias_ref<_jobject*>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&) const
+facebook::jni::JavaClass<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::HybridClass<facebook::react::CompositeTurboModuleManagerDelegate, facebook::react::TurboModuleManagerDelegate>::JavaPart, facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::HybridClass<facebook::react::CxxModuleWrapper, facebook::react::CxxModuleWrapperBase>::JavaPart, facebook::jni::HybridClass<facebook::react::CxxModuleWrapperBase, facebook::react::JNativeModule>::JavaPart, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::HybridClass<facebook::react::JNativeModulePerfLogger, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::HybridClass<facebook::react::JRuntimeExecutor, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::HybridClass<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::detail::HybridClassBase, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::basic_strong_ref<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator> facebook::jni::HybridClass<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>::makeCxxInstance<facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>&, std::__ndk1::function<void (std::__ndk1::function<void (facebook::jsi::Runtime&)>&&)>, std::__ndk1::shared_ptr<facebook::react::CallInvoker>, std::__ndk1::shared_ptr<facebook::react::CallInvoker>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>&>(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>&, std::__ndk1::function<void (std::__ndk1::function<void (facebook::jsi::Runtime&)>&&)>&&, std::__ndk1::shared_ptr<facebook::react::CallInvoker>&&, std::__ndk1::shared_ptr<facebook::react::CallInvoker>&&, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>&)
+facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::JObject>(facebook::jni::JObject const*)
+facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::JObject>(facebook::jni::JObject const*)::holderField
+facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::detail::HybridData>(facebook::jni::detail::HybridData const*)
+facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::detail::HybridData>(facebook::jni::detail::HybridData const*)::holderField
+facebook::jni::detail::BaseHybridClass* facebook::jni::detail::getNativePointer<facebook::jni::JObject>(facebook::jni::JObject const*)
+facebook::jni::detail::BaseHybridClass* facebook::jni::detail::getNativePointer<facebook::jni::detail::HybridData>(facebook::jni::detail::HybridData const*)
+facebook::jni::detail::FunctionWrapper<facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CompositeTurboModuleManagerDelegate, facebook::react::TurboModuleManagerDelegate>::JavaPart, facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, void>::_javaobject*>), facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CompositeTurboModuleManagerDelegate, facebook::react::TurboModuleManagerDelegate>::JavaPart, facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, void>::_javaobject*, facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator>>::call(_JNIEnv*, _jobject*, facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CompositeTurboModuleManagerDelegate, facebook::react::TurboModuleManagerDelegate>::JavaPart, facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, void>::_javaobject*>))
+facebook::jni::detail::FunctionWrapper<facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JRuntimeExecutor, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>), facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JRuntimeExecutor, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>>::call(_JNIEnv*, _jobject*, facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JRuntimeExecutor, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JRuntimeExecutor, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>))
+facebook::jni::detail::FunctionWrapper<void (*)(facebook::jni::alias_ref<_jclass*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JNativeModulePerfLogger, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>), _jclass*, void, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JNativeModulePerfLogger, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>>::call(_JNIEnv*, _jobject*, facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JNativeModulePerfLogger, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, void (*)(facebook::jni::alias_ref<_jclass*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JNativeModulePerfLogger, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>))
+facebook::jni::detail::FunctionWrapper<void (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CompositeTurboModuleManagerDelegate, facebook::react::TurboModuleManagerDelegate>::JavaPart, facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>&&), facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CompositeTurboModuleManagerDelegate, facebook::react::TurboModuleManagerDelegate>::JavaPart, facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, void>::_javaobject*, void, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>>::call(_JNIEnv*, _jobject*, facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, void (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CompositeTurboModuleManagerDelegate, facebook::react::TurboModuleManagerDelegate>::JavaPart, facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>&&))
+facebook::jni::detail::FunctionWrapper<void (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>), facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, void>::call(_JNIEnv*, _jobject*, void (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>))
+facebook::jni::detail::FunctionWrapperWithJniEntryPoint<facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CompositeTurboModuleManagerDelegate, facebook::react::TurboModuleManagerDelegate>::JavaPart, facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, void>::_javaobject*>), &facebook::react::CompositeTurboModuleManagerDelegate::initHybrid(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CompositeTurboModuleManagerDelegate, facebook::react::TurboModuleManagerDelegate>::JavaPart, facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, void>::_javaobject*>), facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CompositeTurboModuleManagerDelegate, facebook::react::TurboModuleManagerDelegate>::JavaPart, facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, void>::_javaobject*, facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator>>::call(_JNIEnv*, _jobject*)
+facebook::jni::detail::FunctionWrapperWithJniEntryPoint<facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JRuntimeExecutor, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>), &facebook::react::TurboModuleManager::initHybrid(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JRuntimeExecutor, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>), facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JRuntimeExecutor, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>>::call(_JNIEnv*, _jobject*, facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JRuntimeExecutor, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*)
+facebook::jni::detail::FunctionWrapperWithJniEntryPoint<void (*)(facebook::jni::alias_ref<_jclass*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JNativeModulePerfLogger, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>), &jniEnableCppLogging(facebook::jni::alias_ref<_jclass*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JNativeModulePerfLogger, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>), _jclass*, void, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JNativeModulePerfLogger, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>>::call(_JNIEnv*, _jobject*, facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JNativeModulePerfLogger, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*)
+facebook::jni::detail::HybridClassBase::isHybridClassBase(facebook::jni::alias_ref<_jclass*>)
+facebook::jni::detail::HybridData::create()
+facebook::jni::detail::HybridDestructor::getNativePointer() const
+facebook::jni::detail::HybridDestructor::setNativePointer(std::__ndk1::unique_ptr<facebook::jni::detail::BaseHybridClass, std::__ndk1::default_delete<facebook::jni::detail::BaseHybridClass>>)
+facebook::jni::detail::JniEnvCacher::JniEnvCacher(_JNIEnv*)
+facebook::jni::detail::JniEnvCacher::~JniEnvCacher()
+facebook::jni::detail::MethodWrapper<void (facebook::react::CompositeTurboModuleManagerDelegate::*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>), &facebook::react::CompositeTurboModuleManagerDelegate::addTurboModuleManagerDelegate(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>), facebook::react::CompositeTurboModuleManagerDelegate, void, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>>::call(_JNIEnv*, _jobject*, facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*)
+facebook::jni::detail::MethodWrapper<void (facebook::react::CompositeTurboModuleManagerDelegate::*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>), &facebook::react::CompositeTurboModuleManagerDelegate::addTurboModuleManagerDelegate(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>), facebook::react::CompositeTurboModuleManagerDelegate, void, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>>::dispatch(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CompositeTurboModuleManagerDelegate, facebook::react::TurboModuleManagerDelegate>::JavaPart, facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>&&)
+facebook::jni::detail::MethodWrapper<void (facebook::react::TurboModuleManager::*)(), &facebook::react::TurboModuleManager::installJSIBindings(), facebook::react::TurboModuleManager, void>::call(_JNIEnv*, _jobject*)
+facebook::jni::detail::MethodWrapper<void (facebook::react::TurboModuleManager::*)(), &facebook::react::TurboModuleManager::installJSIBindings(), facebook::react::TurboModuleManager, void>::dispatch(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>)
+facebook::jni::findClassLocal(char const*)
+facebook::jni::findClassStatic(char const*)
+facebook::jni::getHybridDataFromField(facebook::jni::JObject const*, facebook::jni::JField<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*> const&)
+facebook::jni::initialize(_JavaVM*, std::__ndk1::function<void ()>&&)
+facebook::jni::jmethod_traits<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CxxModuleWrapper, facebook::react::CxxModuleWrapperBase>::JavaPart, facebook::jni::HybridClass<facebook::react::CxxModuleWrapperBase, facebook::react::JNativeModule>::JavaPart, void>::_javaobject* (_jstring*)>::kDescriptor
+facebook::jni::jmethod_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject* ()>::kDescriptor
+facebook::jni::jmethod_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject* (facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JRuntimeExecutor, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*)>::kDescriptor
+facebook::jni::jmethod_traits<facebook::jni::detail::JTypeFor<facebook::react::JTurboModule, facebook::jni::JObject, void>::_javaobject* (_jstring*)>::kDescriptor
+facebook::jni::jmethod_traits<void ()>::kDescriptor
+facebook::jni::jmethod_traits<void (facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JNativeModulePerfLogger, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*)>::kDescriptor
+facebook::jni::jmethod_traits<void (facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*)>::kDescriptor
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CompositeTurboModuleManagerDelegate, facebook::react::TurboModuleManagerDelegate>::JavaPart, facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CxxModuleWrapper, facebook::react::CxxModuleWrapperBase>::JavaPart, facebook::jni::HybridClass<facebook::react::CxxModuleWrapperBase, facebook::react::JNativeModule>::JavaPart, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JNativeModulePerfLogger, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JRuntimeExecutor, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridClassBase, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*>::kDescriptor
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*>::kDescriptor
+facebook::jni::jtype_traits<int>::kDescriptor
+facebook::jni::make_jstring(char const*)
+facebook::jni::registerNatives(char const*, std::initializer_list<JNINativeMethod>)
+facebook::jni::throwCppExceptionIf(bool)
+facebook::jni::throwNPE()
+facebook::jni::throwNewJavaException(char const*, char const*)
+facebook::jni::throwPendingJniExceptionAsCppException()
+facebook::jni::translatePendingCppExceptionToJavaException()
+facebook::jsi::HostObject::set(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&, facebook::jsi::Value const&)
+facebook::jsi::HostObject::~HostObject()
+facebook::jsi::Value::Value(facebook::jsi::Runtime&, facebook::jsi::Value const&)
+facebook::jsi::Value::asObject(facebook::jsi::Runtime&) &&
+facebook::jsi::Value::~Value()
+facebook::react::CallInvokerHolder::CallInvokerHolder(std::__ndk1::shared_ptr<facebook::react::CallInvoker>)
+facebook::react::CallInvokerHolder::getCallInvoker()
+facebook::react::CallInvokerHolder::registerNatives()
+facebook::react::CallInvokerHolder::~CallInvokerHolder()
+facebook::react::CompositeTurboModuleManagerDelegate::addTurboModuleManagerDelegate(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>)
+facebook::react::CompositeTurboModuleManagerDelegate::getTurboModule(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, facebook::react::JavaTurboModule::InitParams const&)
+facebook::react::CompositeTurboModuleManagerDelegate::getTurboModule(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::shared_ptr<facebook::react::CallInvoker> const&)
+facebook::react::CompositeTurboModuleManagerDelegate::initHybrid(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CompositeTurboModuleManagerDelegate, facebook::react::TurboModuleManagerDelegate>::JavaPart, facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, void>::_javaobject*>)
+facebook::react::CompositeTurboModuleManagerDelegate::registerNatives()
+facebook::react::CompositeTurboModuleManagerDelegate::~CompositeTurboModuleManagerDelegate()
+facebook::react::JRuntimeExecutor::get()
+facebook::react::TurboCxxModule::TurboCxxModule(std::__ndk1::unique_ptr<facebook::xplat::module::CxxModule, std::__ndk1::default_delete<facebook::xplat::module::CxxModule>>, std::__ndk1::shared_ptr<facebook::react::CallInvoker>)
+facebook::react::TurboModule::createHostFunction(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&, facebook::react::TurboModule::MethodMetadata const&)
+facebook::react::TurboModule::get(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&)
+facebook::react::TurboModule::getPropertyNames(facebook::jsi::Runtime&)
+facebook::react::TurboModule::~TurboModule()
+facebook::react::TurboModuleBinding::install(facebook::jsi::Runtime&, facebook::react::TurboModuleBindingMode, std::__ndk1::function<std::__ndk1::shared_ptr<facebook::react::TurboModule> (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)>&&)
+facebook::react::TurboModuleManager::TurboModuleManager(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, std::__ndk1::function<void (std::__ndk1::function<void (facebook::jsi::Runtime&)>&&)>, std::__ndk1::shared_ptr<facebook::react::CallInvoker>, std::__ndk1::shared_ptr<facebook::react::CallInvoker>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>)
+facebook::react::TurboModuleManager::initHybrid(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JRuntimeExecutor, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>)
+facebook::react::TurboModuleManager::installJSIBindings()
+facebook::react::TurboModuleManager::registerNatives()
+facebook::react::TurboModuleManager::~TurboModuleManager()
+facebook::react::TurboModulePerfLogger::enableLogging(std::__ndk1::unique_ptr<facebook::react::NativeModulePerfLogger, std::__ndk1::default_delete<facebook::react::NativeModulePerfLogger>>&&)
+facebook::react::TurboModulePerfLogger::moduleJSRequireBeginningCacheHit(char const*)
+facebook::react::TurboModulePerfLogger::moduleJSRequireBeginningEnd(char const*)
+facebook::react::TurboModulePerfLogger::moduleJSRequireBeginningStart(char const*)
+facebook::react::TurboModulePerfLogger::moduleJSRequireEndingEnd(char const*)
+facebook::react::TurboModulePerfLogger::moduleJSRequireEndingStart(char const*)
+fflush
+fprintf
+free
+fwrite
+getEncodedP
+getJavaModule
+getLegacyCxxModule
+getRegister
+getSLEB128
+getSavedFloatRegister
+getSavedRegister
+getTableEntrySize
+getULEB128
+guard variable for facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const::hybridDataField
+guard variable for facebook::jni::HybridClass<facebook::react::CompositeTurboModuleManagerDelegate, facebook::react::TurboModuleManagerDelegate>::JavaPart::cthis() const::hybridDataField
+guard variable for facebook::jni::HybridClass<facebook::react::CxxModuleWrapper, facebook::react::CxxModuleWrapperBase>::JavaPart::cthis() const::hybridDataField
+guard variable for facebook::jni::HybridClass<facebook::react::JNativeModulePerfLogger, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const::hybridDataField
+guard variable for facebook::jni::HybridClass<facebook::react::JRuntimeExecutor, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const::hybridDataField
+guard variable for facebook::jni::HybridClass<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const::hybridDataField
+guard variable for facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const::hybridDataField
+guard variable for facebook::jni::JavaClass<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::HybridClass<facebook::react::CompositeTurboModuleManagerDelegate, facebook::react::TurboModuleManagerDelegate>::JavaPart, facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::HybridClass<facebook::react::CxxModuleWrapper, facebook::react::CxxModuleWrapperBase>::JavaPart, facebook::jni::HybridClass<facebook::react::CxxModuleWrapperBase, facebook::react::JNativeModule>::JavaPart, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::HybridClass<facebook::react::JNativeModulePerfLogger, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::HybridClass<facebook::react::JRuntimeExecutor, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::HybridClass<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::detail::HybridClassBase, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::JObject>(facebook::jni::JObject const*)::holderField
+guard variable for facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::detail::HybridData>(facebook::jni::detail::HybridData const*)::holderField
+initHybrid
+installJSIBindings
+java.lang.NullPointerException
+java/lang/NullPointerException
+jniEnableCppLogging
+jniEnableCppLogging(facebook::jni::alias_ref<_jclass*>, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::JNativeModulePerfLogger, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>)
+libandroid.so
+libc++_shared.so
+libc.so
+libdl.so
+libfb.so
+libfbjni.so
+libfolly_runtime.so
+libglog.so
+libglog_init.so
+libjsi.so
+libjsinspector.so
+liblog.so
+liblogger.so
+libm.so
+libreact_debug.so
+libreact_nativemodule_core.so
+libreact_render_core.so
+libreact_render_debug.so
+libreact_render_graphics.so
+libreact_render_mapbuffer.so
+libreact_render_runtimescheduler.so
+libreact_utils.so
+libreactnativejni.so
+libreactperfloggerjni.so
+libruntimeexecutor.so
+libturbomodulejsijni.so
+libunwind: %s - %s\n
+libunwind: Unsupported .eh_frame_hdr version\n
+libunwind: malformed DW_CFA_GNU_negative_offset_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa_register DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa_sf DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_expression DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_offset_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_offset_extended_sf DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_register DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_register DWARF unwind, reg2 too big\n
+libunwind: malformed DW_CFA_restore_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_same_value DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_undefined DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_val_expression DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_val_offset DWARF unwind, reg (%lu) out of range\n\n
+libunwind: malformed DW_CFA_val_offset_sf DWARF unwind, reg too big\n
+libyoga.so
+mDestructor
+mHybridData
+malformed uleb128 expression
+malloc
+memcmp
+memcpy
+memset
+operator delete(void*)
+operator new(unsigned long)
+pthread_rwlock_rdlock
+pthread_rwlock_unlock
+pthread_rwlock_wrlock
+setRegister
+std::__ndk1::__compressed_pair_elem<facebook::react::TurboCxxModule, 1, false>::__compressed_pair_elem<std::__ndk1::unique_ptr<facebook::xplat::module::CxxModule, std::__ndk1::default_delete<facebook::xplat::module::CxxModule>>&&, std::__ndk1::shared_ptr<facebook::react::CallInvoker>&, 0ul, 1ul>(std::__ndk1::piecewise_construct_t, std::__ndk1::tuple<std::__ndk1::unique_ptr<facebook::xplat::module::CxxModule, std::__ndk1::default_delete<facebook::xplat::module::CxxModule>>&&, std::__ndk1::shared_ptr<facebook::react::CallInvoker>&>, std::__ndk1::__tuple_indices<0ul, 1ul>)
+std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::TurboModule::MethodMetadata>, void*>*> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::TurboModule::MethodMetadata>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::TurboModule::MethodMetadata>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::TurboModule::MethodMetadata>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::react::TurboModule::MethodMetadata>>>::find<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>>, void*>*> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>>>>::find<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+std::__ndk1::__hash_table<facebook::react::TurboModuleManagerDelegate*, std::__ndk1::hash<facebook::react::TurboModuleManagerDelegate*>, std::__ndk1::equal_to<facebook::react::TurboModuleManagerDelegate*>, std::__ndk1::allocator<facebook::react::TurboModuleManagerDelegate*>>::__rehash(unsigned long)
+std::__ndk1::__hash_table<facebook::react::TurboModuleManagerDelegate*, std::__ndk1::hash<facebook::react::TurboModuleManagerDelegate*>, std::__ndk1::equal_to<facebook::react::TurboModuleManagerDelegate*>, std::__ndk1::allocator<facebook::react::TurboModuleManagerDelegate*>>::rehash(unsigned long)
+std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>>>>::__rehash(unsigned long)
+std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>>>>::rehash(unsigned long)
+std::__ndk1::__murmur2_or_cityhash<unsigned long, 64ul>::__hash_len_0_to_16(char const*, unsigned long)
+std::__ndk1::__murmur2_or_cityhash<unsigned long, 64ul>::operator()(void const*, unsigned long)
+std::__ndk1::__next_prime(unsigned long)
+std::__ndk1::__shared_ptr_emplace<facebook::react::TurboCxxModule, std::__ndk1::allocator<facebook::react::TurboCxxModule>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<facebook::react::TurboCxxModule, std::__ndk1::allocator<facebook::react::TurboCxxModule>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<facebook::react::TurboCxxModule, std::__ndk1::allocator<facebook::react::TurboCxxModule>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<std::__ndk1::unordered_map<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::shared_ptr<facebook::react::TurboModule>>>>, std::__ndk1::allocator<std::__ndk1::unordered_map<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::shared_ptr<facebook::react::TurboModule>>>>>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<std::__ndk1::unordered_map<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::shared_ptr<facebook::react::TurboModule>>>>, std::__ndk1::allocator<std::__ndk1::unordered_map<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::shared_ptr<facebook::react::TurboModule>>>>>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<std::__ndk1::unordered_map<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::shared_ptr<facebook::react::TurboModule>>>>, std::__ndk1::allocator<std::__ndk1::unordered_map<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::shared_ptr<facebook::react::TurboModule>>>>>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_weak_count::__get_deleter(std::type_info const&) const
+std::__ndk1::__shared_weak_count::__release_weak()
+std::__ndk1::__shared_weak_count::lock()
+std::__ndk1::__shared_weak_count::~__shared_weak_count()
+std::__ndk1::__vector_base_common<true>::__throw_length_error() const
+std::__ndk1::bad_function_call::~bad_function_call()
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::basic_string(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+std::__ndk1::pair<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<facebook::react::TurboModuleManagerDelegate*, void*>*>, bool> std::__ndk1::__hash_table<facebook::react::TurboModuleManagerDelegate*, std::__ndk1::hash<facebook::react::TurboModuleManagerDelegate*>, std::__ndk1::equal_to<facebook::react::TurboModuleManagerDelegate*>, std::__ndk1::allocator<facebook::react::TurboModuleManagerDelegate*>>::__emplace_unique_key_args<facebook::react::TurboModuleManagerDelegate*, facebook::react::TurboModuleManagerDelegate*>(facebook::react::TurboModuleManagerDelegate* const&, facebook::react::TurboModuleManagerDelegate*&&)
+std::__ndk1::pair<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>>, void*>*>, bool> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>>, std::__ndk1::__unordered_map_hasher<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::__unordered_map_equal<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>>>>::__emplace_unique_key_args<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::shared_ptr<facebook::react::TurboModule>>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::shared_ptr<facebook::react::TurboModule>>&&)
+std::__ndk1::vector<facebook::jsi::PropNameID, std::__ndk1::allocator<facebook::jsi::PropNameID>>::reserve(unsigned long)
+std::bad_alloc::bad_alloc()
+std::bad_alloc::~bad_alloc()
+std::exception::what() const
+std::exception::~exception()
+std::length_error::~length_error()
+std::logic_error::logic_error(char const*)
+std::terminate()
+truncated sleb128 expression
+truncated uleb128 expression
+turboModuleBindingMode
+typeinfo for facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>
+typeinfo for facebook::jni::HybridClass<facebook::react::CompositeTurboModuleManagerDelegate, facebook::react::TurboModuleManagerDelegate>
+typeinfo for facebook::jni::HybridClass<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>
+typeinfo for facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>
+typeinfo for facebook::jni::detail::BaseHybridClass
+typeinfo for facebook::jsi::HostObject
+typeinfo for facebook::react::CallInvokerHolder
+typeinfo for facebook::react::CompositeTurboModuleManagerDelegate
+typeinfo for facebook::react::TurboModule
+typeinfo for facebook::react::TurboModuleManager
+typeinfo for facebook::react::TurboModuleManagerDelegate
+typeinfo for std::__ndk1::__function::__base<std::__ndk1::shared_ptr<facebook::react::TurboModule> (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)>
+typeinfo for std::__ndk1::__function::__base<void ()>
+typeinfo for std::__ndk1::__function::__base<void (facebook::jsi::Runtime&)>
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::TurboCxxModule, std::__ndk1::allocator<facebook::react::TurboCxxModule>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<std::__ndk1::unordered_map<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::shared_ptr<facebook::react::TurboModule>>>>, std::__ndk1::allocator<std::__ndk1::unordered_map<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::shared_ptr<facebook::react::TurboModule>>>>>>
+typeinfo for std::__ndk1::__shared_weak_count
+typeinfo for std::__ndk1::bad_function_call
+typeinfo for std::bad_alloc
+typeinfo for std::exception
+typeinfo for std::length_error
+typeinfo name for facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>
+typeinfo name for facebook::jni::HybridClass<facebook::react::CompositeTurboModuleManagerDelegate, facebook::react::TurboModuleManagerDelegate>
+typeinfo name for facebook::jni::HybridClass<facebook::react::TurboModuleManager, facebook::jni::detail::BaseHybridClass>
+typeinfo name for facebook::jni::HybridClass<facebook::react::TurboModuleManagerDelegate, facebook::jni::detail::BaseHybridClass>
+typeinfo name for facebook::jni::detail::BaseHybridClass
+typeinfo name for facebook::react::CallInvokerHolder
+typeinfo name for facebook::react::CompositeTurboModuleManagerDelegate
+typeinfo name for facebook::react::TurboModule
+typeinfo name for facebook::react::TurboModuleManager
+typeinfo name for facebook::react::TurboModuleManagerDelegate
+typeinfo name for std::__ndk1::__function::__base<std::__ndk1::shared_ptr<facebook::react::TurboModule> (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)>
+typeinfo name for std::__ndk1::__function::__base<void ()>
+typeinfo name for std::__ndk1::__function::__base<void (facebook::jsi::Runtime&)>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::TurboCxxModule, std::__ndk1::allocator<facebook::react::TurboCxxModule>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<std::__ndk1::unordered_map<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::shared_ptr<facebook::react::TurboModule>>>>, std::__ndk1::allocator<std::__ndk1::unordered_map<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::shared_ptr<facebook::react::TurboModule>>>>>>
+typeinfo name for std::__ndk1::bad_function_call
+unknown pointer encoding
+unknown register
+unsupported arm64 register
+unsupported restore location for float register
+unsupported restore location for register
+unwind_phase2
+void facebook::jni::detail::setNativePointer<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator>(facebook::jni::basic_strong_ref<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator>, std::__ndk1::unique_ptr<facebook::jni::detail::BaseHybridClass, std::__ndk1::default_delete<facebook::jni::detail::BaseHybridClass>>)
+void std::__ndk1::vector<facebook::jsi::PropNameID, std::__ndk1::allocator<facebook::jsi::PropNameID>>::__push_back_slow_path<facebook::jsi::PropNameID>(facebook::jsi::PropNameID&&)
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info
+vtable for facebook::react::CallInvokerHolder
+vtable for facebook::react::CompositeTurboModuleManagerDelegate
+vtable for facebook::react::TurboCxxModule
+vtable for facebook::react::TurboModule
+vtable for facebook::react::TurboModuleManager
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::TurboCxxModule, std::__ndk1::allocator<facebook::react::TurboCxxModule>>
+vtable for std::__ndk1::__shared_ptr_emplace<std::__ndk1::unordered_map<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::shared_ptr<facebook::react::TurboModule>>>>, std::__ndk1::allocator<std::__ndk1::unordered_map<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::shared_ptr<facebook::react::TurboModule>, std::__ndk1::hash<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::equal_to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const, std::__ndk1::shared_ptr<facebook::react::TurboModule>>>>>>
+vtable for std::__ndk1::bad_function_call
+vtable for std::length_error
+xxxx 6:

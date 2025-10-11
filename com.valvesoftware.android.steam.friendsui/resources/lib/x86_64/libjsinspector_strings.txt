@@ -1,0 +1,141 @@
+Android (7714059, based on r416183c1) clang version 12.0.8 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee)
+CIE ID is not zero
+CIE version is not 1 or 3
+Can't binary search on variable length encoded data.
+DWARF opcode not implemented
+DW_EH_PE_aligned pointer encoding not supported
+DW_EH_PE_datarel is invalid with a datarelBase of 0
+DW_EH_PE_funcrel pointer encoding not supported
+DW_EH_PE_textrel pointer encoding not supported
+DW_OP_deref_size with bad size
+DW_OP_fbreg not implemented
+DW_OP_piece not implemented
+FDE has zero length
+FDE is really a CIE
+LIBC
+Linker: LLD 12.0.8 (/buildbot/src/android/llvm-r416183/out/llvm-project/lld c935d99d7cf2016289302412d708641d52d2f7ee)
+N8facebook5react10IInspectorE
+N8facebook5react13IDestructibleE
+Unknown DWARF encoding for search table.
+_N8facebook5react12_GLOBAL__N_113InspectorImplE
+_Unwind_Resume
+_Unwind_Resume() can't return
+__cxa_allocate_exception
+__cxa_atexit
+__cxa_begin_catch
+__cxa_finalize
+__cxa_free_exception
+__cxa_guard_acquire
+__cxa_guard_release
+__cxa_throw
+__gxx_personality_v0
+__stack_chk_fail
+abort
+allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
+dl_iterate_phdr
+during phase1 personality function said it would stop here, but now in phase2 it did not stop here
+evaluateExpression
+facebook::react::IDestructible::~IDestructible()
+facebook::react::IInspector::~IInspector()
+facebook::react::ILocalConnection::~ILocalConnection()
+facebook::react::IRemoteConnection::~IRemoteConnection()
+facebook::react::getInspectorInstance()
+facebook::react::makeTestInspectorInstance()
+fflush
+fprintf
+free
+fwrite
+getEncodedP
+getFloatRegister
+getRegister
+getSLEB128
+getSavedRegister
+getTableEntrySize
+getULEB128
+libc++_shared.so
+libc.so
+libdl.so
+libjsinspector.so
+libm.so
+libunwind: %s - %s\n
+libunwind: Unsupported .eh_frame_hdr version\n
+libunwind: malformed DW_CFA_GNU_negative_offset_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa_register DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa_sf DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_expression DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_offset DWARF unwind, reg (%lu) out of range\n
+libunwind: malformed DW_CFA_offset_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_offset_extended_sf DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_register DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_register DWARF unwind, reg2 too big\n
+libunwind: malformed DW_CFA_restore DWARF unwind, reg (%lu) out of range\n
+libunwind: malformed DW_CFA_restore_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_same_value DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_undefined DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_val_expression DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_val_offset DWARF unwind, reg (%lu) out of range\n\n
+libunwind: malformed DW_CFA_val_offset_sf DWARF unwind, reg too big\n
+malformed uleb128 expression
+malloc
+memcpy
+memset
+no x86_64 float registers
+operator delete(void*)
+operator new(unsigned long)
+pthread_rwlock_rdlock
+pthread_rwlock_unlock
+pthread_rwlock_wrlock
+setFloatRegister
+setRegister
+std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<int, std::__ndk1::function<std::__ndk1::unique_ptr<facebook::react::ILocalConnection, std::__ndk1::default_delete<facebook::react::ILocalConnection>> (std::__ndk1::unique_ptr<facebook::react::IRemoteConnection, std::__ndk1::default_delete<facebook::react::IRemoteConnection>>)>>, std::__ndk1::__unordered_map_hasher<int, std::__ndk1::__hash_value_type<int, std::__ndk1::function<std::__ndk1::unique_ptr<facebook::react::ILocalConnection, std::__ndk1::default_delete<facebook::react::ILocalConnection>> (std::__ndk1::unique_ptr<facebook::react::IRemoteConnection, std::__ndk1::default_delete<facebook::react::IRemoteConnection>>)>>, std::__ndk1::hash<int>, true>, std::__ndk1::__unordered_map_equal<int, std::__ndk1::__hash_value_type<int, std::__ndk1::function<std::__ndk1::unique_ptr<facebook::react::ILocalConnection, std::__ndk1::default_delete<facebook::react::ILocalConnection>> (std::__ndk1::unique_ptr<facebook::react::IRemoteConnection, std::__ndk1::default_delete<facebook::react::IRemoteConnection>>)>>, std::__ndk1::equal_to<int>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<int, std::__ndk1::function<std::__ndk1::unique_ptr<facebook::react::ILocalConnection, std::__ndk1::default_delete<facebook::react::ILocalConnection>> (std::__ndk1::unique_ptr<facebook::react::IRemoteConnection, std::__ndk1::default_delete<facebook::react::IRemoteConnection>>)>>>>::__rehash(unsigned long)
+std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<int, std::__ndk1::function<std::__ndk1::unique_ptr<facebook::react::ILocalConnection, std::__ndk1::default_delete<facebook::react::ILocalConnection>> (std::__ndk1::unique_ptr<facebook::react::IRemoteConnection, std::__ndk1::default_delete<facebook::react::IRemoteConnection>>)>>, std::__ndk1::__unordered_map_hasher<int, std::__ndk1::__hash_value_type<int, std::__ndk1::function<std::__ndk1::unique_ptr<facebook::react::ILocalConnection, std::__ndk1::default_delete<facebook::react::ILocalConnection>> (std::__ndk1::unique_ptr<facebook::react::IRemoteConnection, std::__ndk1::default_delete<facebook::react::IRemoteConnection>>)>>, std::__ndk1::hash<int>, true>, std::__ndk1::__unordered_map_equal<int, std::__ndk1::__hash_value_type<int, std::__ndk1::function<std::__ndk1::unique_ptr<facebook::react::ILocalConnection, std::__ndk1::default_delete<facebook::react::ILocalConnection>> (std::__ndk1::unique_ptr<facebook::react::IRemoteConnection, std::__ndk1::default_delete<facebook::react::IRemoteConnection>>)>>, std::__ndk1::equal_to<int>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<int, std::__ndk1::function<std::__ndk1::unique_ptr<facebook::react::ILocalConnection, std::__ndk1::default_delete<facebook::react::ILocalConnection>> (std::__ndk1::unique_ptr<facebook::react::IRemoteConnection, std::__ndk1::default_delete<facebook::react::IRemoteConnection>>)>>>>::rehash(unsigned long)
+std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<int, std::__ndk1::function<std::__ndk1::unique_ptr<facebook::react::ILocalConnection, std::__ndk1::default_delete<facebook::react::ILocalConnection>> (std::__ndk1::unique_ptr<facebook::react::IRemoteConnection, std::__ndk1::default_delete<facebook::react::IRemoteConnection>>)>>, std::__ndk1::__unordered_map_hasher<int, std::__ndk1::__hash_value_type<int, std::__ndk1::function<std::__ndk1::unique_ptr<facebook::react::ILocalConnection, std::__ndk1::default_delete<facebook::react::ILocalConnection>> (std::__ndk1::unique_ptr<facebook::react::IRemoteConnection, std::__ndk1::default_delete<facebook::react::IRemoteConnection>>)>>, std::__ndk1::hash<int>, true>, std::__ndk1::__unordered_map_equal<int, std::__ndk1::__hash_value_type<int, std::__ndk1::function<std::__ndk1::unique_ptr<facebook::react::ILocalConnection, std::__ndk1::default_delete<facebook::react::ILocalConnection>> (std::__ndk1::unique_ptr<facebook::react::IRemoteConnection, std::__ndk1::default_delete<facebook::react::IRemoteConnection>>)>>, std::__ndk1::equal_to<int>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<int, std::__ndk1::function<std::__ndk1::unique_ptr<facebook::react::ILocalConnection, std::__ndk1::default_delete<facebook::react::ILocalConnection>> (std::__ndk1::unique_ptr<facebook::react::IRemoteConnection, std::__ndk1::default_delete<facebook::react::IRemoteConnection>>)>>>>::remove(std::__ndk1::__hash_const_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<int, std::__ndk1::function<std::__ndk1::unique_ptr<facebook::react::ILocalConnection, std::__ndk1::default_delete<facebook::react::ILocalConnection>> (std::__ndk1::unique_ptr<facebook::react::IRemoteConnection, std::__ndk1::default_delete<facebook::react::IRemoteConnection>>)>>, void*>*>)
+std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<int, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>, std::__ndk1::__unordered_map_hasher<int, std::__ndk1::__hash_value_type<int, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>, std::__ndk1::hash<int>, true>, std::__ndk1::__unordered_map_equal<int, std::__ndk1::__hash_value_type<int, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>, std::__ndk1::equal_to<int>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<int, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>>>::__rehash(unsigned long)
+std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<int, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>, std::__ndk1::__unordered_map_hasher<int, std::__ndk1::__hash_value_type<int, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>, std::__ndk1::hash<int>, true>, std::__ndk1::__unordered_map_equal<int, std::__ndk1::__hash_value_type<int, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>, std::__ndk1::equal_to<int>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<int, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>>>::rehash(unsigned long)
+std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<int, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>, std::__ndk1::__unordered_map_hasher<int, std::__ndk1::__hash_value_type<int, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>, std::__ndk1::hash<int>, true>, std::__ndk1::__unordered_map_equal<int, std::__ndk1::__hash_value_type<int, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>, std::__ndk1::equal_to<int>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<int, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>>>::remove(std::__ndk1::__hash_const_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<int, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>, void*>*>)
+std::__ndk1::__next_prime(unsigned long)
+std::__ndk1::__vector_base_common<true>::__throw_length_error() const
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::basic_string(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+std::__ndk1::mutex::lock()
+std::__ndk1::mutex::unlock()
+std::__ndk1::mutex::~mutex()
+std::__ndk1::pair<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<int, std::__ndk1::function<std::__ndk1::unique_ptr<facebook::react::ILocalConnection, std::__ndk1::default_delete<facebook::react::ILocalConnection>> (std::__ndk1::unique_ptr<facebook::react::IRemoteConnection, std::__ndk1::default_delete<facebook::react::IRemoteConnection>>)>>, void*>*>, bool> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<int, std::__ndk1::function<std::__ndk1::unique_ptr<facebook::react::ILocalConnection, std::__ndk1::default_delete<facebook::react::ILocalConnection>> (std::__ndk1::unique_ptr<facebook::react::IRemoteConnection, std::__ndk1::default_delete<facebook::react::IRemoteConnection>>)>>, std::__ndk1::__unordered_map_hasher<int, std::__ndk1::__hash_value_type<int, std::__ndk1::function<std::__ndk1::unique_ptr<facebook::react::ILocalConnection, std::__ndk1::default_delete<facebook::react::ILocalConnection>> (std::__ndk1::unique_ptr<facebook::react::IRemoteConnection, std::__ndk1::default_delete<facebook::react::IRemoteConnection>>)>>, std::__ndk1::hash<int>, true>, std::__ndk1::__unordered_map_equal<int, std::__ndk1::__hash_value_type<int, std::__ndk1::function<std::__ndk1::unique_ptr<facebook::react::ILocalConnection, std::__ndk1::default_delete<facebook::react::ILocalConnection>> (std::__ndk1::unique_ptr<facebook::react::IRemoteConnection, std::__ndk1::default_delete<facebook::react::IRemoteConnection>>)>>, std::__ndk1::equal_to<int>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<int, std::__ndk1::function<std::__ndk1::unique_ptr<facebook::react::ILocalConnection, std::__ndk1::default_delete<facebook::react::ILocalConnection>> (std::__ndk1::unique_ptr<facebook::react::IRemoteConnection, std::__ndk1::default_delete<facebook::react::IRemoteConnection>>)>>>>::__emplace_unique_key_args<int, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<int const&>, std::__ndk1::tuple<>>(int const&, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<int const&>&&, std::__ndk1::tuple<>&&)
+std::__ndk1::pair<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<int, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>, void*>*>, bool> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<int, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>, std::__ndk1::__unordered_map_hasher<int, std::__ndk1::__hash_value_type<int, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>, std::__ndk1::hash<int>, true>, std::__ndk1::__unordered_map_equal<int, std::__ndk1::__hash_value_type<int, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>, std::__ndk1::equal_to<int>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<int, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>>>::__emplace_unique_key_args<int, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<int const&>, std::__ndk1::tuple<>>(int const&, std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<int const&>&&, std::__ndk1::tuple<>&&)
+std::length_error::~length_error()
+std::logic_error::logic_error(char const*)
+std::terminate()
+truncated sleb128 expression
+truncated uleb128 expression
+typeinfo for facebook::react::IDestructible
+typeinfo for facebook::react::IInspector
+typeinfo for std::length_error
+typeinfo name for facebook::react::IDestructible
+typeinfo name for facebook::react::IInspector
+unknown pointer encoding
+unknown register
+unsigned long std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<int, std::__ndk1::function<std::__ndk1::unique_ptr<facebook::react::ILocalConnection, std::__ndk1::default_delete<facebook::react::ILocalConnection>> (std::__ndk1::unique_ptr<facebook::react::IRemoteConnection, std::__ndk1::default_delete<facebook::react::IRemoteConnection>>)>>, std::__ndk1::__unordered_map_hasher<int, std::__ndk1::__hash_value_type<int, std::__ndk1::function<std::__ndk1::unique_ptr<facebook::react::ILocalConnection, std::__ndk1::default_delete<facebook::react::ILocalConnection>> (std::__ndk1::unique_ptr<facebook::react::IRemoteConnection, std::__ndk1::default_delete<facebook::react::IRemoteConnection>>)>>, std::__ndk1::hash<int>, true>, std::__ndk1::__unordered_map_equal<int, std::__ndk1::__hash_value_type<int, std::__ndk1::function<std::__ndk1::unique_ptr<facebook::react::ILocalConnection, std::__ndk1::default_delete<facebook::react::ILocalConnection>> (std::__ndk1::unique_ptr<facebook::react::IRemoteConnection, std::__ndk1::default_delete<facebook::react::IRemoteConnection>>)>>, std::__ndk1::equal_to<int>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<int, std::__ndk1::function<std::__ndk1::unique_ptr<facebook::react::ILocalConnection, std::__ndk1::default_delete<facebook::react::ILocalConnection>> (std::__ndk1::unique_ptr<facebook::react::IRemoteConnection, std::__ndk1::default_delete<facebook::react::IRemoteConnection>>)>>>>::__erase_unique<int>(int const&)
+unsigned long std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<int, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>, std::__ndk1::__unordered_map_hasher<int, std::__ndk1::__hash_value_type<int, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>, std::__ndk1::hash<int>, true>, std::__ndk1::__unordered_map_equal<int, std::__ndk1::__hash_value_type<int, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>, std::__ndk1::equal_to<int>, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<int, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>>>::__erase_unique<int>(int const&)
+unsupported restore location for register
+unsupported x86_64 register
+unwind_phase2
+void std::__ndk1::vector<facebook::react::InspectorPage, std::__ndk1::allocator<facebook::react::InspectorPage>>::__push_back_slow_path<facebook::react::InspectorPage>(facebook::react::InspectorPage&&)
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info
+vtable for std::length_error
+xmm0
+xmm1
+xmm10
+xmm11
+xmm12
+xmm13
+xmm14
+xmm15
+xmm2
+xmm3
+xmm4
+xmm5
+xmm6
+xmm7
+xmm8
+xmm9

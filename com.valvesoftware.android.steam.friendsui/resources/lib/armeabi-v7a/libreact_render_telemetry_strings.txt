@@ -1,0 +1,146 @@
+Android (7714059, based on r416183c1) clang version 12.0.8 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee)
+FNSt6__ndk16chrono10time_pointINS0_12steady_clockENS0_8durationIxNS_5ratioILx1ELx1000000000EEEEEEEvE
+LIBC
+Linker: LLD 12.0.8 (/buildbot/src/android/llvm-r416183/out/llvm-project/lld c935d99d7cf2016289302412d708641d52d2f7ee)
+NSt6__ndk110__function6__baseIFNS_6chrono10time_pointINS2_12steady_clockENS2_8durationIxNS_5ratioILx1ELx1000000000EEEEEEEvEEE
+NSt6__ndk110__function6__funcIPFNS_6chrono10time_pointINS2_12steady_clockENS2_8durationIxNS_5ratioILx1ELx1000000000EEEEEEEvENS_9allocatorISB_EESA_EE
+NSt6__ndk117bad_function_callE
+PFNSt6__ndk16chrono10time_pointINS0_12steady_clockENS0_8durationIxNS_5ratioILx1ELx1000000000EEEEEEEvE
+Unknown ARM float register
+_Unwind_Resume
+_Unwind_Resume() can't return
+_Unwind_VRS_Get_Internal
+_Unwind_VRS_Pop
+_Unwind_VRS_Set
+__cxa_allocate_exception
+__cxa_atexit
+__cxa_begin_catch
+__cxa_finalize
+__cxa_free_exception
+__cxa_throw
+__emutls_get_address
+__emutls_t._ZN8facebook5react31threadLocalTransactionTelemetryE
+__emutls_v._ZN8facebook5react31threadLocalTransactionTelemetryE
+__gxx_personality_v0
+__stack_chk_fail
+__stack_chk_guard
+abort
+allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
+dl_unwind_find_exidx
+during phase1 personality function said it would stop here, but now in phase2 it did not stop here
+facebook::react::SurfaceTelemetry::getCommitTime() const
+facebook::react::SurfaceTelemetry::getDiffTime() const
+facebook::react::SurfaceTelemetry::getLastRevisionNumber() const
+facebook::react::SurfaceTelemetry::getLayoutTime() const
+facebook::react::SurfaceTelemetry::getMountTime() const
+facebook::react::SurfaceTelemetry::getNumberOfMutations() const
+facebook::react::SurfaceTelemetry::getNumberOfTextMeasurements() const
+facebook::react::SurfaceTelemetry::getNumberOfTransactions() const
+facebook::react::SurfaceTelemetry::getRecentTransactionTelemetries() const
+facebook::react::SurfaceTelemetry::getTextMeasureTime() const
+facebook::react::SurfaceTelemetry::incorporate(facebook::react::TransactionTelemetry const&, int)
+facebook::react::TransactionTelemetry::TransactionTelemetry()
+facebook::react::TransactionTelemetry::TransactionTelemetry(std::__ndk1::function<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> ()>)
+facebook::react::TransactionTelemetry::didCommit()
+facebook::react::TransactionTelemetry::didDiff()
+facebook::react::TransactionTelemetry::didLayout()
+facebook::react::TransactionTelemetry::didMeasureText()
+facebook::react::TransactionTelemetry::didMount()
+facebook::react::TransactionTelemetry::getCommitEndTime() const
+facebook::react::TransactionTelemetry::getCommitStartTime() const
+facebook::react::TransactionTelemetry::getDiffEndTime() const
+facebook::react::TransactionTelemetry::getDiffStartTime() const
+facebook::react::TransactionTelemetry::getLayoutEndTime() const
+facebook::react::TransactionTelemetry::getLayoutStartTime() const
+facebook::react::TransactionTelemetry::getMountEndTime() const
+facebook::react::TransactionTelemetry::getMountStartTime() const
+facebook::react::TransactionTelemetry::getNumberOfTextMeasurements() const
+facebook::react::TransactionTelemetry::getRevisionNumber() const
+facebook::react::TransactionTelemetry::getTextMeasureTime() const
+facebook::react::TransactionTelemetry::setAsThreadLocal()
+facebook::react::TransactionTelemetry::setRevisionNumber(int)
+facebook::react::TransactionTelemetry::threadLocalTelemetry()
+facebook::react::TransactionTelemetry::unsetAsThreadLocal()
+facebook::react::TransactionTelemetry::willCommit()
+facebook::react::TransactionTelemetry::willDiff()
+facebook::react::TransactionTelemetry::willLayout()
+facebook::react::TransactionTelemetry::willMeasureText()
+facebook::react::TransactionTelemetry::willMount()
+fflush
+fprintf
+getFloatRegister
+getInfoFromEHABISection
+getRegister
+index inlined table detected but pr function requires extra words
+libandroid.so
+libc++_shared.so
+libc.so
+libdl.so
+libfb.so
+libfbjni.so
+libfolly_runtime.so
+libglog.so
+libglog_init.so
+libjsi.so
+liblog.so
+liblogger.so
+libm.so
+libreact_debug.so
+libreact_render_core.so
+libreact_render_debug.so
+libreact_render_graphics.so
+libreact_render_mapbuffer.so
+libreact_render_telemetry.so
+libreact_utils.so
+librrc_root.so
+librrc_view.so
+libunwind: %s - %s\n
+libyoga.so
+memcpy
+memset
+operator delete(void*)
+operator new(unsigned int)
+setFloatRegister
+setRegister
+std::__ndk1::__function::__func<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> (*)(), std::__ndk1::allocator<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> (*)()>, std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> ()>::__clone() const
+std::__ndk1::__function::__func<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> (*)(), std::__ndk1::allocator<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> (*)()>, std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> ()>::__clone(std::__ndk1::__function::__base<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> ()>*) const
+std::__ndk1::__function::__func<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> (*)(), std::__ndk1::allocator<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> (*)()>, std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> ()>::destroy()
+std::__ndk1::__function::__func<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> (*)(), std::__ndk1::allocator<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> (*)()>, std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> ()>::destroy_deallocate()
+std::__ndk1::__function::__func<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> (*)(), std::__ndk1::allocator<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> (*)()>, std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> ()>::operator()()
+std::__ndk1::__function::__func<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> (*)(), std::__ndk1::allocator<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> (*)()>, std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> ()>::target(std::type_info const&) const
+std::__ndk1::__function::__func<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> (*)(), std::__ndk1::allocator<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> (*)()>, std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> ()>::target_type() const
+std::__ndk1::__function::__func<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> (*)(), std::__ndk1::allocator<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> (*)()>, std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> ()>::~__func()
+std::__ndk1::__vector_base_common<true>::__throw_length_error() const
+std::__ndk1::bad_function_call::~bad_function_call()
+std::__ndk1::chrono::steady_clock::now()
+std::__ndk1::vector<facebook::react::TransactionTelemetry, std::__ndk1::allocator<facebook::react::TransactionTelemetry>>::reserve(unsigned int)
+std::exception::what() const
+std::exception::~exception()
+std::length_error::~length_error()
+std::logic_error::logic_error(char const*)
+std::terminate()
+typeinfo for std::__ndk1::__function::__base<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> ()>
+typeinfo for std::__ndk1::__function::__func<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> (*)(), std::__ndk1::allocator<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> (*)()>, std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> ()>
+typeinfo for std::__ndk1::bad_function_call
+typeinfo for std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> ()
+typeinfo for std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> (*)()
+typeinfo for std::exception
+typeinfo for std::length_error
+typeinfo name for std::__ndk1::__function::__base<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> ()>
+typeinfo name for std::__ndk1::__function::__func<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> (*)(), std::__ndk1::allocator<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> (*)()>, std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> ()>
+typeinfo name for std::__ndk1::bad_function_call
+typeinfo name for std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> ()
+typeinfo name for std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> (*)()
+unknown personality routine
+unknown register
+unsupported arm register
+unsupported register class
+unwind_phase2
+void std::__ndk1::vector<facebook::react::TransactionTelemetry, std::__ndk1::allocator<facebook::react::TransactionTelemetry>>::__push_back_slow_path<facebook::react::TransactionTelemetry const&>(facebook::react::TransactionTelemetry const&)
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__function_type_info
+vtable for __cxxabiv1::__pointer_type_info
+vtable for __cxxabiv1::__si_class_type_info
+vtable for std::__ndk1::__function::__func<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> (*)(), std::__ndk1::allocator<std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> (*)()>, std::__ndk1::chrono::time_point<std::__ndk1::chrono::steady_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>> ()>
+vtable for std::__ndk1::bad_function_call
+vtable for std::length_error

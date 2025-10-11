@@ -1,0 +1,301 @@
+()Lcom/facebook/jni/HybridData;
+(I)Lexpo/modules/av/player/PlayerData;
+?(JLcom/facebook/react/turbomodule/core/CallInvokerHolderImpl;)V
+Android (7714059, based on r416183c1) clang version 12.0.8 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee)
+CIE ID is not zero
+CIE version is not 1 or 3
+Can't binary search on variable length encoded data.
+DWARF opcode not implemented
+DW_EH_PE_aligned pointer encoding not supported
+DW_EH_PE_datarel is invalid with a datarelBase of 0
+DW_EH_PE_funcrel pointer encoding not supported
+DW_EH_PE_textrel pointer encoding not supported
+DW_OP_deref_size with bad size
+DW_OP_fbreg not implemented
+DW_OP_piece not implemented
+Disabling Sample Buffer Callback...
+Enabling Sample Buffer Callback...
+FDE has zero length
+FDE is really a CIE
+JAVManager
+JNI_OnLoad
+JPlayerData
+LIBC
+Lcom/facebook/jni/HybridData$Destructor;
+Lcom/facebook/jni/HybridData;
+Lexpo/modules/av/AVManager;
+Lexpo/modules/av/player/PlayerData;
+Linker: LLD 12.0.8 (/buildbot/src/android/llvm-r416183/out/llvm-project/lld c935d99d7cf2016289302412d708641d52d2f7ee)
+N4expo2av10JAVManagerE
+N4expo2av11JPlayerDataE
+N8facebook3jni11HybridClassIN4expo2av10JAVManagerENS0_6detail15BaseHybridClassEEE
+N8facebook3jni11HybridClassIN4expo2av11JPlayerDataENS0_6detail15BaseHybridClassEEE
+N8facebook3jni6detail15BaseHybridClassE
+NSt6__ndk110__function6__baseIFN8facebook3jsi5ValueERNS3_7RuntimeERKS4_PS7_jEEE
+NSt6__ndk110__function6__baseIFvN8facebook3jni16basic_strong_refINS3_15JPrimitiveArrayIP11_jbyteArrayEENS3_23LocalReferenceAllocatorEEEdEEE
+NSt6__ndk110__function6__baseIFvvEEE
+NSt6__ndk110__function6__funcIZ10JNI_OnLoadE3$_0NS_9allocatorIS2_EEFvvEEE
+NSt6__ndk110__function6__funcIZN4expo2av10JAVManager18installJSIBindingsExN8facebook3jni9alias_refIPNS6_6detail8JTypeForINS6_11HybridClassINS5_5react17CallInvokerHolderENS8_15BaseHybridClassEE8JavaPartENS6_7JObjectEvE11_javaobjectEEEE3$_0NS_9allocatorISL_EEFNS5_3jsi5ValueERNSO_7RuntimeERKSP_PSS_jEEE
+NSt6__ndk110__function6__funcIZZN4expo2av10JAVManager18installJSIBindingsExN8facebook3jni9alias_refIPNS6_6detail8JTypeForINS6_11HybridClassINS5_5react17CallInvokerHolderENS8_15BaseHybridClassEE8JavaPartENS6_7JObjectEvE11_javaobjectEEEENK3$_0clERNS5_3jsi7RuntimeERKNSM_5ValueEPSQ_jEUlNS7_INS6_15JPrimitiveArrayIP11_jbyteArrayEEEEdE_NS_9allocatorISY_EEFvNS6_16basic_strong_refISW_NS6_23LocalReferenceAllocatorEEEdEEE
+NSt6__ndk110__function6__funcIZZZN4expo2av10JAVManager18installJSIBindingsExN8facebook3jni9alias_refIPNS6_6detail8JTypeForINS6_11HybridClassINS5_5react17CallInvokerHolderENS8_15BaseHybridClassEE8JavaPartENS6_7JObjectEvE11_javaobjectEEEENK3$_0clERNS5_3jsi7RuntimeERKNSM_5ValueEPSQ_jENKUlNS7_INS6_15JPrimitiveArrayIP11_jbyteArrayEEEEdE_clESX_dEUlvE_NS_9allocatorISZ_EEFvvEEE
+NSt6__ndk117bad_function_callE
+NSt6__ndk120__shared_ptr_emplaceIN8facebook3jsi6ObjectENS_9allocatorIS3_EEEE
+NSt6__ndk120__shared_ptr_emplaceIN8facebook3jsi8FunctionENS_9allocatorIS3_EEEE
+Sample Buffer Callback is null!
+Sample Buffer Callback threw an error! 
+Sample Buffer Callback threw an error: 
+Setting Audio Sample Buffer Callback for Player 
+Sound Instance with ID 
+Unknown DWARF encoding for search table.
+Unsetting Sample Buffer Callback...
+Z10JNI_OnLoadE3$_0
+ZN4expo2av10JAVManager18installJSIBindingsExN8facebook3jni9alias_refIPNS3_6detail8JTypeForINS3_11HybridClassINS2_5react17CallInvokerHolderENS5_15BaseHybridClassEE8JavaPartENS3_7JObjectEvE11_javaobjectEEEE3$_0
+ZZN4expo2av10JAVManager18installJSIBindingsExN8facebook3jni9alias_refIPNS3_6detail8JTypeForINS3_11HybridClassINS2_5react17CallInvokerHolderENS5_15BaseHybridClassEE8JavaPartENS3_7JObjectEvE11_javaobjectEEEENK3$_0clERNS2_3jsi7RuntimeERKNSJ_5ValueEPSN_jEUlNS4_INS3_15JPrimitiveArrayIP11_jbyteArrayEEEEdE_
+ZZZN4expo2av10JAVManager18installJSIBindingsExN8facebook3jni9alias_refIPNS3_6detail8JTypeForINS3_11HybridClassINS2_5react17CallInvokerHolderENS5_15BaseHybridClassEE8JavaPartENS3_7JObjectEvE11_javaobjectEEEENK3$_0clERNS2_3jsi7RuntimeERKNSJ_5ValueEPSN_jENKUlNS4_INS3_15JPrimitiveArrayIP11_jbyteArrayEEEEdE_clESU_dEUlvE_
+_JNIEnv::CallObjectMethod(_jobject*, _jmethodID*, ...)
+_JNIEnv::CallVoidMethod(_jobject*, _jmethodID*, ...)
+_Unwind_Resume
+_Unwind_Resume() can't return
+__EXAV_setOnAudioSampleReceivedCallback
+__android_log_write
+__cxa_allocate_exception
+__cxa_atexit
+__cxa_begin_catch
+__cxa_end_catch
+__cxa_finalize
+__cxa_free_exception
+__cxa_guard_abort
+__cxa_guard_acquire
+__cxa_guard_release
+__cxa_rethrow
+__cxa_throw
+__gxx_personality_v0
+__stack_chk_fail
+abort
+channels
+com/facebook/jni/HybridClassBase
+com/facebook/react/turbomodule/core/CallInvokerHolderImpl
+dl_iterate_phdr
+does not exist!
+during phase1 personality function said it would stop here, but now in phase2 it did not stop here
+evaluateExpression
+expo/modules/av/AVManager
+expo/modules/av/player/PlayerData
+expo::av::JAVManager::getMediaPlayerById(int)
+expo::av::JAVManager::initHybrid(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<expo::av::JAVManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>)
+expo::av::JAVManager::installJSIBindings(long long, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>)
+expo::av::JAVManager::registerNatives()
+expo::av::JAVManager::~JAVManager()
+expo::av::JPlayerData::initHybrid(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<expo::av::JPlayerData, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>)
+expo::av::JPlayerData::registerNatives()
+expo::av::JPlayerData::sampleBufferCallback(facebook::jni::alias_ref<facebook::jni::JPrimitiveArray<_jbyteArray*>>, double)
+expo::av::JPlayerData::setEnableSampleBufferCallback(bool)
+expo::av::JPlayerData::setSampleBufferCallback(std::__ndk1::function<void (facebook::jni::basic_strong_ref<facebook::jni::JPrimitiveArray<_jbyteArray*>, facebook::jni::LocalReferenceAllocator>, double)> const&&)
+expo::av::JPlayerData::unsetSampleBufferCallback()
+expo::av::JPlayerData::~JPlayerData()
+facebook::jni::Environment::current()
+facebook::jni::HybridClass<expo::av::JAVManager, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const
+facebook::jni::HybridClass<expo::av::JAVManager, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const::hybridDataField
+facebook::jni::HybridClass<expo::av::JAVManager, facebook::jni::detail::BaseHybridClass>::makeHybridData(std::__ndk1::unique_ptr<expo::av::JAVManager, std::__ndk1::default_delete<expo::av::JAVManager>>)
+facebook::jni::HybridClass<expo::av::JAVManager, facebook::jni::detail::BaseHybridClass>::registerHybrid(std::initializer_list<JNINativeMethod>)
+facebook::jni::HybridClass<expo::av::JPlayerData, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const
+facebook::jni::HybridClass<expo::av::JPlayerData, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const::hybridDataField
+facebook::jni::HybridClass<expo::av::JPlayerData, facebook::jni::detail::BaseHybridClass>::makeHybridData(std::__ndk1::unique_ptr<expo::av::JPlayerData, std::__ndk1::default_delete<expo::av::JPlayerData>>)
+facebook::jni::HybridClass<expo::av::JPlayerData, facebook::jni::detail::BaseHybridClass>::registerHybrid(std::initializer_list<JNINativeMethod>)
+facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const
+facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const::hybridDataField
+facebook::jni::JField<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*> facebook::jni::detectHybrid<expo::av::JAVManager, facebook::jni::detail::BaseHybridClass>(facebook::jni::alias_ref<_jclass*>)
+facebook::jni::JField<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*> facebook::jni::detectHybrid<expo::av::JPlayerData, facebook::jni::detail::BaseHybridClass>(facebook::jni::alias_ref<_jclass*>)
+facebook::jni::JField<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*> facebook::jni::detectHybrid<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>(facebook::jni::alias_ref<_jclass*>)
+facebook::jni::JPrimitiveArray<_jbyteArray*>::getRegion(int, int, signed char*)
+facebook::jni::JavaClass<facebook::jni::HybridClass<expo::av::JAVManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::HybridClass<expo::av::JPlayerData, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::jni::detail::HybridClassBase, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::basic_strong_ref<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator> facebook::jni::HybridClass<expo::av::JAVManager, facebook::jni::detail::BaseHybridClass>::makeCxxInstance<facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<expo::av::JAVManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>&>(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<expo::av::JAVManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>&)
+facebook::jni::basic_strong_ref<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator> facebook::jni::HybridClass<expo::av::JPlayerData, facebook::jni::detail::BaseHybridClass>::makeCxxInstance<facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<expo::av::JPlayerData, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>&>(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<expo::av::JPlayerData, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>&)
+facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::JObject>(facebook::jni::JObject const*)
+facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::JObject>(facebook::jni::JObject const*)::holderField
+facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::detail::HybridData>(facebook::jni::detail::HybridData const*)
+facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::detail::HybridData>(facebook::jni::detail::HybridData const*)::holderField
+facebook::jni::detail::BaseHybridClass* facebook::jni::detail::getNativePointer<facebook::jni::JObject>(facebook::jni::JObject const*)
+facebook::jni::detail::BaseHybridClass* facebook::jni::detail::getNativePointer<facebook::jni::detail::HybridData>(facebook::jni::detail::HybridData const*)
+facebook::jni::detail::FunctionWrapper<void (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<expo::av::JAVManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, long long&&, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>&&), facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<expo::av::JAVManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, void, long long, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>>::call(_JNIEnv*, _jobject*, long long, facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, void (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<expo::av::JAVManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, long long&&, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>&&))
+facebook::jni::detail::FunctionWrapper<void (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<expo::av::JPlayerData, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::JPrimitiveArray<_jbyteArray*>>&&, double&&), facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<expo::av::JPlayerData, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, void, facebook::jni::alias_ref<facebook::jni::JPrimitiveArray<_jbyteArray*>>, double>::call(_JNIEnv*, _jobject*, _jbyteArray*, double, void (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<expo::av::JPlayerData, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::JPrimitiveArray<_jbyteArray*>>&&, double&&))
+facebook::jni::detail::FunctionWrapperWithJniEntryPoint<facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<expo::av::JAVManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>), &expo::av::JAVManager::initHybrid(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<expo::av::JAVManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>), facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<expo::av::JAVManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator>>::call(_JNIEnv*, _jobject*)
+facebook::jni::detail::FunctionWrapperWithJniEntryPoint<facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<expo::av::JPlayerData, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>), &expo::av::JPlayerData::initHybrid(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<expo::av::JPlayerData, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>), facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<expo::av::JPlayerData, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*, facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator>>::call(_JNIEnv*, _jobject*)
+facebook::jni::detail::HybridClassBase::isHybridClassBase(facebook::jni::alias_ref<_jclass*>)
+facebook::jni::detail::HybridData::create()
+facebook::jni::detail::HybridDestructor::getNativePointer() const
+facebook::jni::detail::HybridDestructor::setNativePointer(std::__ndk1::unique_ptr<facebook::jni::detail::BaseHybridClass, std::__ndk1::default_delete<facebook::jni::detail::BaseHybridClass>>)
+facebook::jni::detail::JniEnvCacher::JniEnvCacher(_JNIEnv*)
+facebook::jni::detail::JniEnvCacher::~JniEnvCacher()
+facebook::jni::detail::MethodWrapper<void (expo::av::JAVManager::*)(long long, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>), &expo::av::JAVManager::installJSIBindings(long long, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>), expo::av::JAVManager, void, long long, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>>::call(_JNIEnv*, _jobject*, long long, facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*)
+facebook::jni::detail::MethodWrapper<void (expo::av::JAVManager::*)(long long, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>), &expo::av::JAVManager::installJSIBindings(long long, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>), expo::av::JAVManager, void, long long, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>>::dispatch(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<expo::av::JAVManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, long long&&, facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>&&)
+facebook::jni::detail::MethodWrapper<void (expo::av::JPlayerData::*)(facebook::jni::alias_ref<facebook::jni::JPrimitiveArray<_jbyteArray*>>, double), &expo::av::JPlayerData::sampleBufferCallback(facebook::jni::alias_ref<facebook::jni::JPrimitiveArray<_jbyteArray*>>, double), expo::av::JPlayerData, void, facebook::jni::alias_ref<facebook::jni::JPrimitiveArray<_jbyteArray*>>, double>::call(_JNIEnv*, _jobject*, _jbyteArray*, double)
+facebook::jni::detail::MethodWrapper<void (expo::av::JPlayerData::*)(facebook::jni::alias_ref<facebook::jni::JPrimitiveArray<_jbyteArray*>>, double), &expo::av::JPlayerData::sampleBufferCallback(facebook::jni::alias_ref<facebook::jni::JPrimitiveArray<_jbyteArray*>>, double), expo::av::JPlayerData, void, facebook::jni::alias_ref<facebook::jni::JPrimitiveArray<_jbyteArray*>>, double>::dispatch(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<expo::av::JPlayerData, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>, facebook::jni::alias_ref<facebook::jni::JPrimitiveArray<_jbyteArray*>>&&, double&&)
+facebook::jni::findClassLocal(char const*)
+facebook::jni::findClassStatic(char const*)
+facebook::jni::getHybridDataFromField(facebook::jni::JObject const*, facebook::jni::JField<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*> const&)
+facebook::jni::initialize(_JavaVM*, std::__ndk1::function<void ()>&&)
+facebook::jni::jmethod_traits<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<expo::av::JPlayerData, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject* (int)>::kDescriptor
+facebook::jni::jmethod_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject* ()>::kDescriptor
+facebook::jni::jmethod_traits<void (_jbyteArray*, double)>::kDescriptor
+facebook::jni::jmethod_traits<void (long long, facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*)>::kDescriptor
+facebook::jni::jmethod_traits<void (unsigned char)>::kDescriptor
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<expo::av::JAVManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<expo::av::JPlayerData, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridClassBase, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*>::kDescriptor
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*>::kDescriptor
+facebook::jni::throwCppExceptionIf(bool)
+facebook::jni::throwNPE()
+facebook::jni::throwNewJavaException(char const*, char const*)
+facebook::jni::throwPendingJniExceptionAsCppException()
+facebook::jni::translatePendingCppExceptionToJavaException()
+facebook::jsi::JSError::JSError(facebook::jsi::Runtime&, char const*)
+facebook::jsi::JSError::JSError(facebook::jsi::Runtime&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)
+facebook::jsi::JSError::~JSError()
+facebook::jsi::Object::asFunction(facebook::jsi::Runtime&) &&
+facebook::jsi::Value::asNumber() const
+facebook::jsi::Value::asObject(facebook::jsi::Runtime&) const &
+facebook::jsi::Value::~Value()
+facebook::react::CallInvokerHolder::getCallInvoker()
+fflush
+fprintf
+frames
+free
+fwrite
+getEncodedP
+getFloatRegister
+getMediaPlayerById
+getRegister
+getSLEB128
+getSavedRegister
+getTableEntrySize
+getULEB128
+guard variable for facebook::jni::HybridClass<expo::av::JAVManager, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const::hybridDataField
+guard variable for facebook::jni::HybridClass<expo::av::JPlayerData, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const::hybridDataField
+guard variable for facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart::cthis() const::hybridDataField
+guard variable for facebook::jni::JavaClass<facebook::jni::HybridClass<expo::av::JAVManager, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::HybridClass<expo::av::JPlayerData, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::HybridClass<facebook::react::CallInvokerHolder, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::jni::detail::HybridClassBase, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::JObject>(facebook::jni::JObject const*)::holderField
+guard variable for facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::detail::HybridData>(facebook::jni::detail::HybridData const*)::holderField
+initHybrid
+installJSIBindings
+java.lang.NullPointerException
+java/lang/NullPointerException
+libandroid.so
+libc++_shared.so
+libc.so
+libdl.so
+libexpo-av.so
+libfbjni.so
+libjsi.so
+liblog.so
+libm.so
+libreactnativejni.so
+libunwind: %s - %s\n
+libunwind: Unsupported .eh_frame_hdr version\n
+libunwind: malformed DW_CFA_GNU_negative_offset_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa_register DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_def_cfa_sf DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_expression DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_offset DWARF unwind, reg (%llu) out of range\n
+libunwind: malformed DW_CFA_offset_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_offset_extended_sf DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_register DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_register DWARF unwind, reg2 too big\n
+libunwind: malformed DW_CFA_restore DWARF unwind, reg (%llu) out of range\n
+libunwind: malformed DW_CFA_restore_extended DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_same_value DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_undefined DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_val_expression DWARF unwind, reg too big\n
+libunwind: malformed DW_CFA_val_offset DWARF unwind, reg (%llu) out of range\n\n
+libunwind: malformed DW_CFA_val_offset_sf DWARF unwind, reg too big\n
+mDestructor
+mHybridData
+malformed uleb128 expression
+malloc
+memcpy
+memset
+no x86 float registers
+operator delete(void*)
+operator new(unsigned int)
+pthread_rwlock_rdlock
+pthread_rwlock_unlock
+pthread_rwlock_wrlock
+sampleBufferCallback
+setEnableSampleBufferCallback
+setFloatRegister
+setRegister
+std::__ndk1::__basic_string_common<true>::__throw_length_error() const
+std::__ndk1::__shared_ptr_emplace<facebook::jsi::Function, std::__ndk1::allocator<facebook::jsi::Function>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<facebook::jsi::Function, std::__ndk1::allocator<facebook::jsi::Function>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<facebook::jsi::Function, std::__ndk1::allocator<facebook::jsi::Function>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<facebook::jsi::Object, std::__ndk1::allocator<facebook::jsi::Object>>::__on_zero_shared()
+std::__ndk1::__shared_ptr_emplace<facebook::jsi::Object, std::__ndk1::allocator<facebook::jsi::Object>>::__on_zero_shared_weak()
+std::__ndk1::__shared_ptr_emplace<facebook::jsi::Object, std::__ndk1::allocator<facebook::jsi::Object>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_weak_count::__get_deleter(std::type_info const&) const
+std::__ndk1::__shared_weak_count::__release_weak()
+std::__ndk1::__shared_weak_count::~__shared_weak_count()
+std::__ndk1::__vector_base_common<true>::__throw_length_error() const
+std::__ndk1::bad_function_call::~bad_function_call()
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::append(char const*)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::insert(unsigned int, char const*)
+std::__ndk1::to_string(double)
+std::bad_alloc::bad_alloc()
+std::bad_alloc::~bad_alloc()
+std::exception::what() const
+std::exception::~exception()
+std::terminate()
+strlen
+timestamp
+truncated sleb128 expression
+truncated uleb128 expression
+typeinfo for expo::av::JAVManager
+typeinfo for expo::av::JPlayerData
+typeinfo for facebook::jni::HybridClass<expo::av::JAVManager, facebook::jni::detail::BaseHybridClass>
+typeinfo for facebook::jni::HybridClass<expo::av::JPlayerData, facebook::jni::detail::BaseHybridClass>
+typeinfo for facebook::jni::detail::BaseHybridClass
+typeinfo for facebook::jsi::JSError
+typeinfo for std::__ndk1::__function::__base<facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>
+typeinfo for std::__ndk1::__function::__base<void ()>
+typeinfo for std::__ndk1::__function::__base<void (facebook::jni::basic_strong_ref<facebook::jni::JPrimitiveArray<_jbyteArray*>, facebook::jni::LocalReferenceAllocator>, double)>
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::jsi::Function, std::__ndk1::allocator<facebook::jsi::Function>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::jsi::Object, std::__ndk1::allocator<facebook::jsi::Object>>
+typeinfo for std::__ndk1::__shared_weak_count
+typeinfo for std::__ndk1::bad_function_call
+typeinfo for std::bad_alloc
+typeinfo for std::exception
+typeinfo name for expo::av::JAVManager
+typeinfo name for expo::av::JPlayerData
+typeinfo name for facebook::jni::HybridClass<expo::av::JAVManager, facebook::jni::detail::BaseHybridClass>
+typeinfo name for facebook::jni::HybridClass<expo::av::JPlayerData, facebook::jni::detail::BaseHybridClass>
+typeinfo name for facebook::jni::detail::BaseHybridClass
+typeinfo name for std::__ndk1::__function::__base<facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>
+typeinfo name for std::__ndk1::__function::__base<void ()>
+typeinfo name for std::__ndk1::__function::__base<void (facebook::jni::basic_strong_ref<facebook::jni::JPrimitiveArray<_jbyteArray*>, facebook::jni::LocalReferenceAllocator>, double)>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::jsi::Function, std::__ndk1::allocator<facebook::jsi::Function>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::jsi::Object, std::__ndk1::allocator<facebook::jsi::Object>>
+typeinfo name for std::__ndk1::bad_function_call
+unknown pointer encoding
+unknown register
+unsupported restore location for register
+unsupported x86 register
+unwind_phase2
+void facebook::jni::detail::setNativePointer<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator>(facebook::jni::basic_strong_ref<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator>, std::__ndk1::unique_ptr<facebook::jni::detail::BaseHybridClass, std::__ndk1::default_delete<facebook::jni::detail::BaseHybridClass>>)
+void facebook::jsi::Object::setProperty<facebook::jsi::Array&>(facebook::jsi::Runtime&, char const*, facebook::jsi::Array&) const
+void facebook::jsi::Object::setProperty<facebook::jsi::Function>(facebook::jsi::Runtime&, char const*, facebook::jsi::Function&&) const
+void facebook::jsi::Object::setProperty<facebook::jsi::Value>(facebook::jsi::Runtime&, char const*, facebook::jsi::Value&&) const
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info
+vtable for expo::av::JAVManager
+vtable for expo::av::JPlayerData
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::jsi::Function, std::__ndk1::allocator<facebook::jsi::Function>>
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::jsi::Object, std::__ndk1::allocator<facebook::jsi::Object>>
+vtable for std::__ndk1::bad_function_call

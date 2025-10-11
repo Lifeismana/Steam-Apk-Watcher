@@ -1,0 +1,48 @@
+(JJI)V
+(J[BII)V
+(Landroid/graphics/Bitmap;)V
+(Landroid/graphics/Bitmap;ILandroid/graphics/Bitmap;II)V
+Android (6454773 based on r365631c2) clang version 9.0.8 (https://android.googlesource.com/toolchain/llvm-project 98c855489587874b2a325e7a516b99d838599c6f) (based on LLVM 9.0.8svn)
+AndroidBitmap_lockPixels
+AndroidBitmap_unlockPixels
+Could not lock desination's pixels
+Could not lock source's pixels
+Could not register Bitmaps methods
+Could not register DalvikPurgeableDecoder methods
+Could not register NativeMemoryChunk methods
+Failed to pin Bitmap
+JNI_OnLoad
+LIBC
+__android_log_print
+__bss_end__
+__bss_start
+__bss_start__
+__cxa_atexit
+__cxa_finalize
+__stack_chk_fail
+_edata
+_end
+com/facebook/imagepipeline/memory/NativeMemoryChunk
+com/facebook/imagepipeline/nativecode/Bitmaps
+com/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder
+could not allocate memory
+could not find RuntimeException class
+free
+java/lang/RuntimeException
+libc.so
+libdl.so
+libimagepipeline
+libimagepipeline.so
+libjnigraphics.so
+liblog.so
+libm.so
+malloc
+memcpy
+nativeAllocate
+nativeCopyBitmap
+nativeCopyFromByteArray
+nativeCopyToByteArray
+nativeFree
+nativeMemcpy
+nativePinBitmap
+nativeReadByte
