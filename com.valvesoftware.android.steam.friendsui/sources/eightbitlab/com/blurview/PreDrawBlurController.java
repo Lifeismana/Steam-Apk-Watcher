@@ -3,15 +3,16 @@ package eightbitlab.com.blurview;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
+import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import eightbitlab.com.blurview.SizeScaler;
 
-/* loaded from: classes2.dex */
-final class PreDrawBlurController implements BlurController {
-    static final int TRANSPARENT = 0;
+/* loaded from: classes3.dex */
+public final class PreDrawBlurController implements BlurController {
+    public static final int TRANSPARENT = 0;
     private final BlurAlgorithm blurAlgorithm;
-    final BlurView blurView;
+    final View blurView;
     private Drawable frameClearDrawable;
     private boolean initialized;
     private Bitmap internalBitmap;
@@ -30,15 +31,15 @@ final class PreDrawBlurController implements BlurController {
     };
     private boolean blurEnabled = true;
 
-    PreDrawBlurController(BlurView blurView, ViewGroup viewGroup, int i, BlurAlgorithm blurAlgorithm) {
+    public PreDrawBlurController(View view, ViewGroup viewGroup, int i, BlurAlgorithm blurAlgorithm) {
         this.rootView = viewGroup;
-        this.blurView = blurView;
+        this.blurView = view;
         this.overlayColor = i;
         this.blurAlgorithm = blurAlgorithm;
         if (blurAlgorithm instanceof RenderEffectBlur) {
-            ((RenderEffectBlur) blurAlgorithm).setContext(blurView.getContext());
+            ((RenderEffectBlur) blurAlgorithm).setContext(view.getContext());
         }
-        init(blurView.getMeasuredWidth(), blurView.getMeasuredHeight());
+        init(view.getMeasuredWidth(), view.getMeasuredHeight());
     }
 
     void init(int i, int i2) {
@@ -148,8 +149,12 @@ final class PreDrawBlurController implements BlurController {
     @Override // eightbitlab.com.blurview.BlurViewFacade
     public BlurViewFacade setBlurAutoUpdate(boolean z) {
         this.rootView.getViewTreeObserver().removeOnPreDrawListener(this.drawListener);
+        this.blurView.getViewTreeObserver().removeOnPreDrawListener(this.drawListener);
         if (z) {
             this.rootView.getViewTreeObserver().addOnPreDrawListener(this.drawListener);
+            if (this.rootView.getWindowId() != this.blurView.getWindowId()) {
+                this.blurView.getViewTreeObserver().addOnPreDrawListener(this.drawListener);
+            }
         }
         return this;
     }

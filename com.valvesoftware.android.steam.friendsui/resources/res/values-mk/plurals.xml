@@ -8,4 +8,8 @@
         <item quantity="one">Премотајте %d секунда</item>
         <item quantity="other">Премотајте %d секунди</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d ново известување</item>
+        <item quantity="other">%d нови известувања</item>
+    </plurals>
 </resources>

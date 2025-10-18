@@ -8,4 +8,8 @@
         <item quantity="one">Visszatekerés %d másodperccel</item>
         <item quantity="other">Visszatekerés %d másodperccel</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d új értesítés</item>
+        <item quantity="other">%d új értesítés</item>
+    </plurals>
 </resources>

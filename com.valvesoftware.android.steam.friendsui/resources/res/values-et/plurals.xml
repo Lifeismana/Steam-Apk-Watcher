@@ -8,4 +8,8 @@
         <item quantity="one">Keri %d sekund tagasi</item>
         <item quantity="other">Keri %d sekundit tagasi</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d uus märguanne</item>
+        <item quantity="other">%d uut märguannet</item>
+    </plurals>
 </resources>

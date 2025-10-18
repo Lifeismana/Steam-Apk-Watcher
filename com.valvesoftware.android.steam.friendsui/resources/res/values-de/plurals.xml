@@ -8,4 +8,8 @@
         <item quantity="one">%d Sekunde zurückspulen</item>
         <item quantity="other">%d Sekunden zurückspulen</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d neue Benachrichtigung</item>
+        <item quantity="other">%d neue Benachrichtigungen</item>
+    </plurals>
 </resources>

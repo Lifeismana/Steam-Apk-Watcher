@@ -9,7 +9,7 @@ import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
-/* loaded from: classes2.dex */
+/* loaded from: classes3.dex */
 public class BlurView extends FrameLayout {
     private static final String TAG = "BlurView";
     BlurController blurController;
@@ -34,8 +34,8 @@ public class BlurView extends FrameLayout {
     }
 
     private void init(AttributeSet attributeSet, int i) {
-        TypedArray obtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, C2291R.styleable.BlurView, i, 0);
-        this.overlayColor = obtainStyledAttributes.getColor(C2291R.styleable.BlurView_blurOverlayColor, 0);
+        TypedArray obtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, C2312R.styleable.BlurView, i, 0);
+        this.overlayColor = obtainStyledAttributes.getColor(C2312R.styleable.BlurView_blurOverlayColor, 0);
         obtainStyledAttributes.recycle();
     }
 
@@ -76,10 +76,7 @@ public class BlurView extends FrameLayout {
     }
 
     public BlurViewFacade setupWith(ViewGroup viewGroup) {
-        this.blurController.destroy();
-        PreDrawBlurController preDrawBlurController = new PreDrawBlurController(this, viewGroup, this.overlayColor, getBlurAlgorithm());
-        this.blurController = preDrawBlurController;
-        return preDrawBlurController;
+        return setupWith(viewGroup, getBlurAlgorithm());
     }
 
     public BlurViewFacade setBlurRadius(float f) {

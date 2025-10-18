@@ -1,51 +1,194 @@
+ Ejs%
+ P>Gg
+ P>GkD
  [enable_if:
+ at offset 
+ auto
  complex
- const
+ decltype(auto)
  imaginary
+ noexcept
+ requires 
  restrict
- vector[
+ typename 
  volatile
+!a9X
+"Mw^r
+"P3gy
+"Vfy
+#;6m89
+#;6m89P
+$89=E
+$;6m89
+$Jlr
 %.0Lf
+%4xY
 %I:%M:%S %p
-%I:%M:%S %p%H:%M%
+%J\eH
 %LaL
 %a %b %d %H:%M:%S %Y
 %s failed to acquire mutex
 %s failed to broadcast
 %s failed to release mutex
-' failed. 
 'block-literal'
-'lambda
-'unnamed
+'wnGz$
+((ttypeEncoding == DW_EH_PE_absptr) || (ttypeEncoding == DW_EH_PE_pcrel) || (ttypeEncoding == (DW_EH_PE_pcrel | DW_EH_PE_indirect))) && "Unexpected TTypeEncoding"
 (anonymous namespace)
-/NSt6__ndk14__fs10filesystem16filesystem_errorE
-/buildbot/src/android/ndk-release-r23/toolchain/llvm-project/libcxx/../../../toolchain/llvm-project/libcxxabi/src/abort_message.cpp
-/tmp
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+(base != 0) && "DW_EH_PE_datarel is invalid with a base of 0"
+(ytR>
+(ytR>u
+)BEI/
+)R85
+)jXG
+*REm
++70r
+, std::allocator<char>
+,Z%CR
+,c>qI3
+,oGlN
+,tjPV
+-sSN\
+-ucD
+.Afff
+.wN\v9
+/>tsF
+/Mz8
+/NSt6__ndk117bad_function_callE
+/data/local/tmp
+000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdefghijklmnopqrstuvwxyz
 0123456789
 0123456789abcdefABCDEFxX+-pPiInN
-: _LIBCPP_ASSERT '
+0WW 
+12\nw\v3
+17 w
+1N6@
+1T8xBO
+1w`;l
+29|8(
+2Hw&
+2IHT
+2Z^t
+2qqz
+3']t2+1
+3-4T
+31:viN<
+39C:
+39C:\f
+3Sfr(
+4*REm
+4*REmv
+433333333333333
+4ClR
+5!j9
+50N9
+74NY
+7Am"
+7\v#EQ
+7m89
+89fi
+8k\ty:
+8xBO
+99S3
+9hR'
+9xw\f
+9xw\fu
 : no conversion
 : out of range
-::operator 
+::friend 
+:V!2m
+:jW~1
+;\tFzn
+<char, std::char_traits<char>
+<eF2
+=33s?
+=V25
 > typename 
+>Bx1
+?8EGr
+?fffff
+?ffffff
+@3333
+@9hP
+@AgP
+@BXV
+@JjN
+@fff
+@iZb
 An empty regex is not allowed in the POSIX grammar.
 An invalid regex grammar has been requested.
-Android (7714059, based on r416183c1) clang version 12.0.8 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee)
-April
-August
-C.UTF-8
-December
+Android (11695104, +pgo, +bolt, +lto, +mlgo, based on r522817) clang version 18.0.1 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
+Android (12285214, +pgo, +bolt, +lto, +mlgo, based on r522817b) clang version 18.0.2 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
+AyIv
+B9[N
+B?\t^gmjp*
+B?\t^gmjpP
+BH\r4
+BW6H;\rP
+BWG/
+BXwx
+BXwxZH+
+Bsx*
+Bsxr
+C.aX
+C3"I
+C?\t^gmjpP
+CE\fI4
+D0=0\v
+D4/LN
+DBU\r
+D\vi0
 Deleted virtual function called!
-February
-Friday
-January
-July
-June
+DwZh
+DwZhN"
+E6m!
+E7RK(
+EBU\r
+EDBH$
+EZ%4
+E\fI4
+E\vi(
+EhW#
+El}5
+EwZhN"
+EydU
+F8\r2
+FAau
+Fd"U
+HVkN
+HX\tCA
+Hahx'
+Haz[~i
+I28>
+IMbP?i
+IRe0
+Invalid access!
+Invalid descriptor kind found.
+Iq|o
+JKvP[
+J_7`3
+Jqt@1\r
+Jufm
+K3 sK
+K`A8
+KjY5
+Kw4;
+L'knN
+L8]q
 LIBC
-Linker: LLD 12.0.8 (/buildbot/src/android/llvm-r416183/out/llvm-project/lld c935d99d7cf2016289302412d708641d52d2f7ee)
-March
-Monday
+Linker: LLD 18.0.2
+LnL\r
+L{6P
+L{6T
+MSe"
+MbP?
+MbP?8\t
+MbP?Z
+MbP?^
+MbP?w
+MbP?z
+MbP?{
+MbP?}F
+Mw,b\v
 N10__cxxabiv116__enum_type_infoE
 N10__cxxabiv116__shim_type_infoE
 N10__cxxabiv117__array_type_infoE
@@ -59,22 +202,27 @@ N10__cxxabiv123__fundamental_type_infoE
 N10__cxxabiv129__pointer_to_member_type_infoE
 N12_GLOBAL__N_116itanium_demangle10AbiTagAttrE
 N12_GLOBAL__N_116itanium_demangle10BinaryExprE
+N12_GLOBAL__N_116itanium_demangle10BitIntTypeE
 N12_GLOBAL__N_116itanium_demangle10BracedExprE
 N12_GLOBAL__N_116itanium_demangle10DeleteExprE
 N12_GLOBAL__N_116itanium_demangle10LambdaExprE
 N12_GLOBAL__N_116itanium_demangle10MemberExprE
+N12_GLOBAL__N_116itanium_demangle10ModuleNameE
 N12_GLOBAL__N_116itanium_demangle10NestedNameE
 N12_GLOBAL__N_116itanium_demangle10PrefixExprE
-N12_GLOBAL__N_116itanium_demangle10UUIDOfExprE
 N12_GLOBAL__N_116itanium_demangle10VectorTypeE
+N12_GLOBAL__N_116itanium_demangle11EnumLiteralE
 N12_GLOBAL__N_116itanium_demangle11PointerTypeE
 N12_GLOBAL__N_116itanium_demangle11PostfixExprE
 N12_GLOBAL__N_116itanium_demangle11SpecialNameE
+N12_GLOBAL__N_116itanium_demangle12BinaryFPTypeE
 N12_GLOBAL__N_116itanium_demangle12CtorDtorNameE
 N12_GLOBAL__N_116itanium_demangle12EnableIfAttrE
 N12_GLOBAL__N_116itanium_demangle12FunctionTypeE
 N12_GLOBAL__N_116itanium_demangle12InitListExprE
+N12_GLOBAL__N_116itanium_demangle12ModuleEntityE
 N12_GLOBAL__N_116itanium_demangle12NoexceptSpecE
+N12_GLOBAL__N_116itanium_demangle12RequiresExprE
 N12_GLOBAL__N_116itanium_demangle12TemplateArgsE
 N12_GLOBAL__N_116itanium_demangle13EnclosingExprE
 N12_GLOBAL__N_116itanium_demangle13FunctionParamE
@@ -84,20 +232,23 @@ N12_GLOBAL__N_116itanium_demangle13ParameterPackE
 N12_GLOBAL__N_116itanium_demangle13QualifiedNameE
 N12_GLOBAL__N_116itanium_demangle13ReferenceTypeE
 N12_GLOBAL__N_116itanium_demangle13StringLiteralE
+N12_GLOBAL__N_116itanium_demangle13SubobjectExprE
 N12_GLOBAL__N_116itanium_demangle14ConversionExprE
 N12_GLOBAL__N_116itanium_demangle14IntegerLiteralE
 N12_GLOBAL__N_116itanium_demangle15BracedRangeExprE
 N12_GLOBAL__N_116itanium_demangle15ClosureTypeNameE
 N12_GLOBAL__N_116itanium_demangle15ConditionalExprE
-N12_GLOBAL__N_116itanium_demangle15IntegerCastExprE
+N12_GLOBAL__N_116itanium_demangle15ExprRequirementE
 N12_GLOBAL__N_116itanium_demangle15LiteralOperatorE
 N12_GLOBAL__N_116itanium_demangle15PixelVectorTypeE
+N12_GLOBAL__N_116itanium_demangle15TransformedTypeE
+N12_GLOBAL__N_116itanium_demangle15TypeRequirementE
 N12_GLOBAL__N_116itanium_demangle15UnnamedTypeNameE
 N12_GLOBAL__N_116itanium_demangle16FloatLiteralImplIdEE
 N12_GLOBAL__N_116itanium_demangle16FloatLiteralImplIeEE
 N12_GLOBAL__N_116itanium_demangle16FloatLiteralImplIfEE
 N12_GLOBAL__N_116itanium_demangle16FunctionEncodingE
-N12_GLOBAL__N_116itanium_demangle16StdQualifiedNameE
+N12_GLOBAL__N_116itanium_demangle17NestedRequirementE
 N12_GLOBAL__N_116itanium_demangle17VendorExtQualTypeE
 N12_GLOBAL__N_116itanium_demangle18ArraySubscriptExprE
 N12_GLOBAL__N_116itanium_demangle19GlobalQualifiedNameE
@@ -105,6 +256,7 @@ N12_GLOBAL__N_116itanium_demangle19PointerToMemberTypeE
 N12_GLOBAL__N_116itanium_demangle19SizeofParamPackExprE
 N12_GLOBAL__N_116itanium_demangle19SpecialSubstitutionE
 N12_GLOBAL__N_116itanium_demangle20DynamicExceptionSpecE
+N12_GLOBAL__N_116itanium_demangle20MemberLikeFriendNameE
 N12_GLOBAL__N_116itanium_demangle20NameWithTemplateArgsE
 N12_GLOBAL__N_116itanium_demangle20PostfixQualifiedTypeE
 N12_GLOBAL__N_116itanium_demangle20TemplateArgumentPackE
@@ -115,11 +267,15 @@ N12_GLOBAL__N_116itanium_demangle21TypeTemplateParamDeclE
 N12_GLOBAL__N_116itanium_demangle22ConversionOperatorTypeE
 N12_GLOBAL__N_116itanium_demangle22ElaboratedTypeSpefTypeE
 N12_GLOBAL__N_116itanium_demangle22ParameterPackExpansionE
+N12_GLOBAL__N_116itanium_demangle23ExplicitObjectParameterE
 N12_GLOBAL__N_116itanium_demangle24ForwardTemplateReferenceE
 N12_GLOBAL__N_116itanium_demangle24NonTypeTemplateParamDeclE
+N12_GLOBAL__N_116itanium_demangle25TemplateParamQualifiedArgE
 N12_GLOBAL__N_116itanium_demangle25TemplateTemplateParamDeclE
 N12_GLOBAL__N_116itanium_demangle26SyntheticTemplateParamNameE
 N12_GLOBAL__N_116itanium_demangle27ExpandedSpecialSubstitutionE
+N12_GLOBAL__N_116itanium_demangle29PointerToMemberConversionExprE
+N12_GLOBAL__N_116itanium_demangle32ConstrainedTypeTemplateParamDeclE
 N12_GLOBAL__N_116itanium_demangle4NodeE
 N12_GLOBAL__N_116itanium_demangle7NewExprE
 N12_GLOBAL__N_116itanium_demangle8BoolExprE
@@ -162,6 +318,7 @@ NSt6__ndk112ctype_bynameIwEE
 NSt6__ndk112future_errorE
 NSt6__ndk112strstreambufE
 NSt6__ndk112system_errorE
+NSt6__ndk113basic_filebufIcNS_11char_traitsIcEEEE
 NSt6__ndk113basic_istreamIcNS_11char_traitsIcEEEE
 NSt6__ndk113basic_istreamIwNS_11char_traitsIwEEEE
 NSt6__ndk113basic_ostreamIcNS_11char_traitsIcEEEE
@@ -173,8 +330,12 @@ NSt6__ndk114__codecvt_utf8IwEE
 NSt6__ndk114__num_get_baseE
 NSt6__ndk114__num_put_baseE
 NSt6__ndk114__shared_countE
+NSt6__ndk114basic_ifstreamIcNS_11char_traitsIcEEEE
 NSt6__ndk114basic_iostreamIcNS_11char_traitsIcEEEE
+NSt6__ndk114basic_ofstreamIcNS_11char_traitsIcEEEE
+NSt6__ndk114codecvt_bynameIDiDu9mbstate_tEE
 NSt6__ndk114codecvt_bynameIDic9mbstate_tEE
+NSt6__ndk114codecvt_bynameIDsDu9mbstate_tEE
 NSt6__ndk114codecvt_bynameIDsc9mbstate_tEE
 NSt6__ndk114codecvt_bynameIcc9mbstate_tEE
 NSt6__ndk114codecvt_bynameIwc9mbstate_tEE
@@ -191,6 +352,7 @@ NSt6__ndk115__time_get_tempIcEE
 NSt6__ndk115__time_get_tempIwEE
 NSt6__ndk115basic_streambufIcNS_11char_traitsIcEEEE
 NSt6__ndk115basic_streambufIwNS_11char_traitsIwEEEE
+NSt6__ndk115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 NSt6__ndk115messages_bynameIcEE
 NSt6__ndk115messages_bynameIwEE
 NSt6__ndk115numpunct_bynameIcEE
@@ -210,8 +372,11 @@ NSt6__ndk117moneypunct_bynameIwLb0EEE
 NSt6__ndk117moneypunct_bynameIwLb1EEE
 NSt6__ndk118__time_get_storageIcEE
 NSt6__ndk118__time_get_storageIwEE
+NSt6__ndk118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 NSt6__ndk119__iostream_categoryE
 NSt6__ndk119__shared_weak_countE
+NSt6__ndk119basic_istringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE
+NSt6__ndk119basic_ostringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 NSt6__ndk120__codecvt_utf8_utf16IDiEE
 NSt6__ndk120__codecvt_utf8_utf16IDsEE
 NSt6__ndk120__codecvt_utf8_utf16IwEE
@@ -223,11 +388,20 @@ NSt6__ndk120__time_get_c_storageIwEE
 NSt6__ndk123__future_error_categoryE
 NSt6__ndk123__system_error_categoryE
 NSt6__ndk124__generic_error_categoryE
+NSt6__ndk13pmr15memory_resourceE
+NSt6__ndk13pmr25monotonic_buffer_resourceE
+NSt6__ndk13pmr26__null_memory_resource_impE
+NSt6__ndk13pmr26synchronized_pool_resourceE
+NSt6__ndk13pmr28unsynchronized_pool_resourceE
+NSt6__ndk13pmr32__new_delete_memory_resource_impE
+NSt6__ndk14__fs10filesystem16filesystem_errorE
 NSt6__ndk15ctypeIcEE
 NSt6__ndk15ctypeIwEE
 NSt6__ndk16locale5__impE
 NSt6__ndk16locale5facetE
+NSt6__ndk17codecvtIDiDu9mbstate_tEE
 NSt6__ndk17codecvtIDic9mbstate_tEE
+NSt6__ndk17codecvtIDsDu9mbstate_tEE
 NSt6__ndk17codecvtIDsc9mbstate_tEE
 NSt6__ndk17codecvtIcc9mbstate_tEE
 NSt6__ndk17codecvtIwc9mbstate_tEE
@@ -237,7 +411,6 @@ NSt6__ndk17num_getIcNS_19istreambuf_iteratorIcNS_11char_traitsIcEEEEEE
 NSt6__ndk17num_getIwNS_19istreambuf_iteratorIwNS_11char_traitsIwEEEEEE
 NSt6__ndk17num_putIcNS_19ostreambuf_iteratorIcNS_11char_traitsIcEEEEEE
 NSt6__ndk17num_putIwNS_19ostreambuf_iteratorIwNS_11char_traitsIwEEEEEE
-NSt6__ndk18__c_nodeE
 NSt6__ndk18ios_base7failureE
 NSt6__ndk18ios_baseE
 NSt6__ndk18messagesIcEE
@@ -260,19 +433,41 @@ NSt6__ndk19money_putIcNS_19ostreambuf_iteratorIcNS_11char_traitsIcEEEEEE
 NSt6__ndk19money_putIwNS_19ostreambuf_iteratorIwNS_11char_traitsIwEEEEEE
 NSt6__ndk19strstreamE
 NSt6__ndk19time_baseE
-November
-October
+Nl!C5
+Nl!C\r
+Nl9?
+Nnu\n
+Ny\vs
+Ny~G
+O-h7
+O8Mr
+OTru
 One of *?+{ was not preceded by a valid regular expression.
+Oo\rr
 Operation not permitted on an object without an associated state.
+OzFS
+P%Kc
+P199
+P3gy
+P?tb(
 PKDh
 PKDi
 PKDn
 PKDs
 PKDu
-POSIX
+Popping empty vector!
+ProcessDescriptors
 Pure virtual function called!
-Saturday
+R-Np
+R-Np/
+R5qhi5
+RJqn
+RX1e
+Rv87e
+STv.N
 September
+SgQY
+Sp^z0h
 St10bad_typeid
 St11logic_error
 St11range_error
@@ -293,10 +488,12 @@ St8bad_cast
 St9bad_alloc
 St9exception
 St9type_info
-Sunday
+T%L9
+T3K'
 TEMP
 TEMPDIR
 TMPDIR
+Tfr(
 The associated promise has been destructed prior to the associated state becoming ready.
 The complexity of an attempted match against a regular expression exceeded a pre-set level.
 The expression contained an invalid back reference.
@@ -313,25 +510,75 @@ The parser did not consume the entire regular expression.
 The state of the promise has already been set.
 There was insufficient memory to convert the expression into a finite state machine.
 There was insufficient memory to determine whether the regular expression could match the specified character sequence.
-Thursday
-Tuesday
-UTF-8
+TiE;
+TiEK
+Tjwb
+Type matching not implemented
+U"J0
+UMP?7
 Ua9enable_ifI
 Unknown ARM float register
 Unknown error %d
 Unknown error type
+V*q4
+V0EI
+V?AUE
+V?AgP
+V?AgPhU
+VB-l
+VHNzu\t
+VJT]
+VNF\n
+VP*4
 VTT for 
+VTT for std::__ndk1::basic_ifstream<char, std::__ndk1::char_traits<char>>
 VTT for std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>
 VTT for std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>
 VTT for std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t>>
+VTT for std::__ndk1::basic_istringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
+VTT for std::__ndk1::basic_ofstream<char, std::__ndk1::char_traits<char>>
 VTT for std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>
 VTT for std::__ndk1::basic_ostream<wchar_t, std::__ndk1::char_traits<wchar_t>>
+VTT for std::__ndk1::basic_ostringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
+VTT for std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 VTT for std::__ndk1::istrstream
 VTT for std::__ndk1::ostrstream
 VTT for std::__ndk1::strstream
+V{dfK
+W4vC
+W5/6
+WS\rG
+WS\rs
 Wednesday
-[abi:
+X1fe
+X4AHx
+X@3T
+Xb4z
+Xk2G
+XpJ,
+XqkY
+Xwa6
+Yhze
+Yz45
+ZjF%
+[*QlU
+[NVJ2
+[NVJfx'
+\!4O5
+\f;5Bt
+\fDF2
+\n^gmjpP
+\nmZk
+\nmZk+
+\tV?AgP
+\xsK
+]C14
+]HTP
 ]xEc
+]xgK
+^WdP
+^z0h
+_5eh6
 _GLOBAL__N
 _Unwind_Resume
 _Unwind_Resume() can't return
@@ -346,8 +593,8 @@ __aeabi_memcpy4
 __aeabi_memmove
 __aeabi_memmove4
 __aeabi_memset
-__aeabi_memset8
 __assert2
+__ctype_get_mb_cur_max
 __cxa_allocate_dependent_exception
 __cxa_allocate_exception
 __cxa_atexit
@@ -371,7 +618,6 @@ __cxa_get_globals
 __cxa_get_globals_fast
 __cxa_guard_abort
 __cxa_guard_acquire
-__cxa_guard_acquire detected recursive initialization
 __cxa_guard_release
 __cxa_increment_exception_refcount
 __cxa_new_handler
@@ -403,25 +649,39 @@ __float128
 __gxx_personality_v0
 __int128
 __next_prime overflow
-__stack_chk_fail
-__stack_chk_guard
 __thread_specific_ptr construction failed
-__uuidof(
+__uuidof
 _block_invoke
+`tQl
+`tQl3
+`u"Z2
+a+be
+a.Q0
+a3lm
+a9>7
+a9>7QL
+aQ49
 abort
-abort_message
+actions & (_UA_SEARCH_PHASE | _UA_FORCE_UNWIND)
+actions & (_UA_SEARCH_PHASE | _UA_HANDLER_FRAME | _UA_FORCE_UNWIND)
+actions & _UA_SEARCH_PHASE
 alert
-alignof (
+alignof 
 allocator
-allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 alnum
 alpha
 ampersand
+android_set_abort_message
 apostrophe
 asterisk
 at root "%s"
+atQl3
 attempting recursion into "%s"
 auto
+b6\nN
+b6\nP
+b9>7
+bY't&
 backslash
 backspace
 bad any cast
@@ -429,40 +689,28 @@ bad_array_new_length
 bad_optional_access
 bad_variant_access
 bad_weak_ptr
+basic_
 basic_iostream
 basic_istream
 basic_ostream
 basic_string
 blank
+bnMG
 bool
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<char, char>&, char*>(char*, char*, std::__ndk1::__less<char, char>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<double, double>&, double*>(double*, double*, std::__ndk1::__less<double, double>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<float, float>&, float*>(float*, float*, std::__ndk1::__less<float, float>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<int, int>&, int*>(int*, int*, std::__ndk1::__less<int, int>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<long double, long double>&, long double*>(long double*, long double*, std::__ndk1::__less<long double, long double>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<long long, long long>&, long long*>(long long*, long long*, std::__ndk1::__less<long long, long long>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<long, long>&, long*>(long*, long*, std::__ndk1::__less<long, long>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<short, short>&, short*>(short*, short*, std::__ndk1::__less<short, short>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<signed char, signed char>&, signed char*>(signed char*, signed char*, std::__ndk1::__less<signed char, signed char>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<unsigned char, unsigned char>&, unsigned char*>(unsigned char*, unsigned char*, std::__ndk1::__less<unsigned char, unsigned char>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<unsigned int, unsigned int>&, unsigned int*>(unsigned int*, unsigned int*, std::__ndk1::__less<unsigned int, unsigned int>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<unsigned long long, unsigned long long>&, unsigned long long*>(unsigned long long*, unsigned long long*, std::__ndk1::__less<unsigned long long, unsigned long long>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<unsigned long, unsigned long>&, unsigned long*>(unsigned long*, unsigned long*, std::__ndk1::__less<unsigned long, unsigned long>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<unsigned short, unsigned short>&, unsigned short*>(unsigned short*, unsigned short*, std::__ndk1::__less<unsigned short, unsigned short>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<wchar_t, wchar_t>&, wchar_t*>(wchar_t*, wchar_t*, std::__ndk1::__less<wchar_t, wchar_t>&)
+bool __cxxabiv1::exception_spec_can_catch(int64_t, const uint8_t *, uint8_t, const __shim_type_info *, void *, _Unwind_Control_Block *, uintptr_t)
+bpV'
 btowc
+bzo<
 call to getcwd failed
-calloc
 cannot access path "%s"
 canonical
 carriage-return
 char
-char const* std::__ndk1::__find_end<bool (*)(char, char) noexcept, char const*, char const*>(char const*, char const*, char const*, char const*, bool (*)(char, char) noexcept, std::__ndk1::random_access_iterator_tag, std::__ndk1::random_access_iterator_tag)
-char const* std::__ndk1::__search_substring<char, std::__ndk1::char_traits<char>>(char const*, char const*, char const*, char const*)
 char16_t
 char32_t
 char8_t
 chdir
+cie?
 circumflex
 circumflex-accent
 clock_gettime
@@ -470,6 +718,7 @@ clock_gettime(CLOCK_MONOTONIC) failed
 clock_gettime(CLOCK_REALTIME) failed
 close
 closedir
+closelog
 cntrl
 codecvt_byname<wchar_t, char, mbstate_t>::codecvt_byname failed to construct for 
 collate_byname<char>::collate_byname failed to construct for 
@@ -481,13 +730,21 @@ condition_variable timed_wait failed
 condition_variable wait failed
 condition_variable::timed wait: mutex not locked
 condition_variable::wait: mutex not locked
+const __shim_type_info *__cxxabiv1::get_shim_type_info(uint64_t, const uint8_t *, uint8_t, bool, _Unwind_Control_Block *, uintptr_t)
 const_cast
 construction vtable for 
+construction vtable for std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 construction vtable for std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::strstream
+construction vtable for std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::basic_ifstream<char, std::__ndk1::char_traits<char>>
 construction vtable for std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>
+construction vtable for std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::basic_istringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
+construction vtable for std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 construction vtable for std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::istrstream
 construction vtable for std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::strstream
 construction vtable for std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>
+construction vtable for std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::basic_ofstream<char, std::__ndk1::char_traits<char>>
+construction vtable for std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::basic_ostringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
+construction vtable for std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 construction vtable for std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::ostrstream
 construction vtable for std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::strstream
 copy
@@ -501,13 +758,16 @@ create_symlink
 ctype_byname<char>::ctype_byname failed to construct for 
 ctype_byname<wchar_t>::ctype_byname failed to construct for 
 current_path
+d5\f6
+dSp^z
+dSp^z0h
+dSp^z0hS 6
+daZ+ 
 decimal128
-decimal16
 decimal32
 decimal64
-decltype(
+decltype
 decltype(auto)
-delete
 digit
 directory_iterator::directory_iterator(...)
 directory_iterator::operator++()
@@ -516,33 +776,54 @@ dollar-sign
 double
 during phase1 personality function said it would stop here, but now in phase2 it did not stop here
 dynamic_cast
+e,<O7tC
+eLK(
+eLK(w
+eVt{!
+eax~Z
 eight
-en_US.UTF-8
+ekhHD
 enum
 equals-sign
 equivalent
 exclamation-mark
+f18(
 failed to determine attributes for the specified path
 false
 fchmod
 fchmodat
+fclose
+fdopendir
+fe?,7
+ffffff
+ffkM=
+ffkM_
 fflush
 file_size
 filesystem error: %s
-filesystem error: %s [%s]
-filesystem error: %s [%s] [%s]
+filesystem error: %s ["%s"]
+filesystem error: %s ["%s"] ["%s"]
 five
 float
+fopen
 form-feed
 four
 fprintf
 fputc
+fputwc
+fread
 free
+freelocale
+fseek
+fseeko
 fstat
+ftello
 ftruncate
 full-stop
 future
 fwrite
+g2Q}
+gb^L
 generic
 getFloatRegister
 getInfoFromEHABISection
@@ -550,41 +831,74 @@ getRegister
 getc
 getcwd
 getenv
+getwc
+gffffff
+gfkM=
 graph
 grave-accent
 greater-than-sign
 guard variable for 
+hFr?m
+hGT.
+hLZ1
+hPMX
+half
 hard_link_count
+hmjpP
+hsy{
 hyphen
 hyphen-minus
+iBU.\v
+iRx\n
 index inlined table detected but pr function requires extra words
+initializer for module 
 invocation function for block in 
+ioctl
 ios_base::clear
 iostream
 is_empty
-istream
-iswalpha
-iswcntrl
-iswdigit
-iswlower
-iswprint
-iswpunct
-iswspace
-iswupper
-iswxdigit
+iswalpha_l
+iswblank_l
+iswcntrl_l
+iswdigit_l
+iswlower_l
+iswprint_l
+iswpunct_l
+iswspace_l
+iswupper_l
+iswxdigit_l
+isy{
+j+"Mw^r
+jA+cT
+jS6/1
+jky"
+k*do^
+k\fC,C
+k_Hv5
+kky"
+kqu]h
+l$2n
+l%mDX=XG^
+l,uo
+labM
 last_write_time
 left-brace
 left-curly-bracket
 left-parenthesis
 left-square-bracket
 less-than-sign
+libc++
 libc++_shared.so
+libc++abi
+libc++abi: 
 libc.so
 libdl.so
+libm.so
 libunwind: %s - %s\n
 link
 locale constructed with null
 locale not supported
+localeconv
 long
 long double
 long long
@@ -593,24 +907,37 @@ lower
 lstat
 malloc
 mbrlen
-memalign
+mbrtowc
+mbsnrtowcs
+mbsrtowcs
+mbtowc
 memchr
 memcmp
 memcpy
 memset
+mi5\fjV
 mkdir
+mk}d
+mk}d\v
 money_get error
 moneypunct_byname failed to construct for 
+mr"iR
 mutex lock failed
+n4k1
+nQ:B
+n\nh8
+nan(ind)
+nan(snan)
 nanosleep
 newline
+newlocale
 nine
 noexcept
-noexcept (
-noexcept(
+noexcept 
 non-virtual thunk to 
 non-virtual thunk to std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>::~basic_iostream()
 non-virtual thunk to std::__ndk1::strstream::~strstream()
+nqq+
 nullptr
 number-sign
 numpunct_byname<char>::numpunct_byname failed to construct for 
@@ -618,8 +945,12 @@ numpunct_byname<wchar_t>::numpunct_byname failed to construct for
 objc_object
 objcproto
 open
+openat
 opendir
+openlog
+operator
 operator 
+operator co_await
 operator delete
 operator delete(void*)
 operator delete(void*, std::align_val_t)
@@ -634,6 +965,7 @@ operator delete[](void*, std::align_val_t, std::nothrow_t const&)
 operator delete[](void*, std::nothrow_t const&)
 operator delete[](void*, unsigned int)
 operator delete[](void*, unsigned int, std::align_val_t)
+operator name does not start with 'operator'
 operator new
 operator new(unsigned int)
 operator new(unsigned int, std::align_val_t)
@@ -664,6 +996,8 @@ operator--
 operator-=
 operator->
 operator->*
+operator.
+operator.*
 operator/
 operator/=
 operator<
@@ -685,14 +1019,25 @@ operator|
 operator|=
 operator||
 operator~
-ostream
+out/llvm-project/libcxxabi/src/cxa_demangle.cpp
+out/llvm-project/libcxxabi/src/cxa_personality.cpp
+out/llvm-project/libcxxabi/src/demangle/ItaniumDemangle.h
+out/llvm-project/libcxxabi/src/demangle/Utility.h
+out/llvm-project/libcxxabi/src/fallback_malloc.cpp
+pH_q
+pIx\f
 path "%s" is not a directory
 pathconf
+pc1g
 percent-sign
 period
 permissions
 pixel vector[
 plus-sign
+po\N"
+po`Q
+po`Q49
+posix_memalign
 posix_stat
 print
 pthread_cond_broadcast
@@ -701,7 +1046,6 @@ pthread_cond_signal
 pthread_cond_timedwait
 pthread_cond_wait
 pthread_detach
-pthread_equal
 pthread_getspecific
 pthread_join
 pthread_key_create
@@ -718,8 +1062,18 @@ pthread_once
 pthread_self
 pthread_setspecific
 punct
+pvuM
+qni8
+qo`Q49
+quAt
+qu]h
 question-mark
 quotation-mark
+r+be
+rF!Ff
+rH6v6u
+rH6v>
+raB3G
 random_device failed to open 
 random_device got EOF
 random_device got an unexpected error
@@ -745,37 +1099,28 @@ right-brace
 right-curly-bracket
 right-parenthesis
 right-square-bracket
-sched_yield
+rlXe
 semicolon
 sendfile
 setFloatRegister
 setRegister
+setlocale
 seven
 short
+shrinkToSize() can't expand!
 signed char
-sizeof (
-sizeof... (
-sizeof...(
+sizeof 
+sizeof...
+sizeof... 
 slash
 snprintf
 solidus
 space
 sscanf
 stat
-statfs
 static_cast
-std::
+statvfs
 std::__libcpp_tls_create() failed in __cxa_thread_atexit()
-std::__ndk1::DoIOSInit::DoIOSInit()
-std::__ndk1::DoIOSInit::~DoIOSInit()
-std::__ndk1::_MetaBase<__can_be_converted_to_string_view<char, std::__ndk1::char_traits<char>, std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>>::value && !__is_same_uncvref<__can_be_converted_to_string_view, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>::value>::_EnableIfImpl<int> std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::compare<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>>(unsigned int, unsigned int, __can_be_converted_to_string_view const&, unsigned int, unsigned int) const
-std::__ndk1::_MetaBase<__can_be_converted_to_string_view<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::basic_string_view<wchar_t, std::__ndk1::char_traits<wchar_t>>>::value && !__is_same_uncvref<__can_be_converted_to_string_view, std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>>::value>::_EnableIfImpl<int> std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::compare<std::__ndk1::basic_string_view<wchar_t, std::__ndk1::char_traits<wchar_t>>>(unsigned int, unsigned int, __can_be_converted_to_string_view const&, unsigned int, unsigned int) const
-std::__ndk1::_MetaBase<__is_cpp17_forward_iterator<char const*>::value>::_EnableIfImpl<void> std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::__init<char const*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
-std::__ndk1::_MetaBase<__is_cpp17_forward_iterator<char*>::value>::_EnableIfImpl<void> std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::__init<char*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
-std::__ndk1::_MetaBase<__is_cpp17_forward_iterator<char*>::value>::_EnableIfImpl<void> std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::__init<char*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
-std::__ndk1::_MetaBase<__is_cpp17_forward_iterator<wchar_t const*>::value>::_EnableIfImpl<void> std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::__init<wchar_t const*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
-std::__ndk1::_MetaBase<__is_cpp17_forward_iterator<wchar_t*>::value && __libcpp_string_gets_noexcept_iterator<__is_cpp17_forward_iterator>::value>::_EnableIfImpl<std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>&> std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::assign<wchar_t*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
-std::__ndk1::_MetaBase<__is_cpp17_forward_iterator<wchar_t*>::value>::_EnableIfImpl<void> std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::__init<wchar_t*>(__is_cpp17_forward_iterator, __is_cpp17_forward_iterator)
 std::__ndk1::__arrive_barrier_algorithm_base(std::__ndk1::__barrier_algorithm_base*, unsigned char)
 std::__ndk1::__assoc_sub_state::__execute()
 std::__ndk1::__assoc_sub_state::__make_ready()
@@ -787,11 +1132,8 @@ std::__ndk1::__assoc_sub_state::set_exception_at_thread_exit(std::exception_ptr)
 std::__ndk1::__assoc_sub_state::set_value()
 std::__ndk1::__assoc_sub_state::set_value_at_thread_exit()
 std::__ndk1::__assoc_sub_state::wait()
-std::__ndk1::__assoc_sub_state::~__assoc_sub_state()
 std::__ndk1::__basic_string_common<true>::__throw_length_error() const
 std::__ndk1::__basic_string_common<true>::__throw_out_of_range() const
-std::__ndk1::__c_node::__add(std::__ndk1::__i_node*)
-std::__ndk1::__c_node::~__c_node()
 std::__ndk1::__call_once(unsigned long volatile&, void*, void (*)(void*))
 std::__ndk1::__check_grouping(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int*, unsigned int*, unsigned int&)
 std::__ndk1::__cloc()
@@ -802,7 +1144,6 @@ std::__ndk1::__codecvt_utf16<char16_t, false>::do_length(mbstate_t&, char const*
 std::__ndk1::__codecvt_utf16<char16_t, false>::do_max_length() const
 std::__ndk1::__codecvt_utf16<char16_t, false>::do_out(mbstate_t&, char16_t const*, char16_t const*, char16_t const*&, char*, char*, char*&) const
 std::__ndk1::__codecvt_utf16<char16_t, false>::do_unshift(mbstate_t&, char*, char*, char*&) const
-std::__ndk1::__codecvt_utf16<char16_t, false>::~__codecvt_utf16()
 std::__ndk1::__codecvt_utf16<char16_t, true>::do_always_noconv() const
 std::__ndk1::__codecvt_utf16<char16_t, true>::do_encoding() const
 std::__ndk1::__codecvt_utf16<char16_t, true>::do_in(mbstate_t&, char const*, char const*, char const*&, char16_t*, char16_t*, char16_t*&) const
@@ -810,7 +1151,6 @@ std::__ndk1::__codecvt_utf16<char16_t, true>::do_length(mbstate_t&, char const*,
 std::__ndk1::__codecvt_utf16<char16_t, true>::do_max_length() const
 std::__ndk1::__codecvt_utf16<char16_t, true>::do_out(mbstate_t&, char16_t const*, char16_t const*, char16_t const*&, char*, char*, char*&) const
 std::__ndk1::__codecvt_utf16<char16_t, true>::do_unshift(mbstate_t&, char*, char*, char*&) const
-std::__ndk1::__codecvt_utf16<char16_t, true>::~__codecvt_utf16()
 std::__ndk1::__codecvt_utf16<char32_t, false>::do_always_noconv() const
 std::__ndk1::__codecvt_utf16<char32_t, false>::do_encoding() const
 std::__ndk1::__codecvt_utf16<char32_t, false>::do_in(mbstate_t&, char const*, char const*, char const*&, char32_t*, char32_t*, char32_t*&) const
@@ -818,7 +1158,6 @@ std::__ndk1::__codecvt_utf16<char32_t, false>::do_length(mbstate_t&, char const*
 std::__ndk1::__codecvt_utf16<char32_t, false>::do_max_length() const
 std::__ndk1::__codecvt_utf16<char32_t, false>::do_out(mbstate_t&, char32_t const*, char32_t const*, char32_t const*&, char*, char*, char*&) const
 std::__ndk1::__codecvt_utf16<char32_t, false>::do_unshift(mbstate_t&, char*, char*, char*&) const
-std::__ndk1::__codecvt_utf16<char32_t, false>::~__codecvt_utf16()
 std::__ndk1::__codecvt_utf16<char32_t, true>::do_always_noconv() const
 std::__ndk1::__codecvt_utf16<char32_t, true>::do_encoding() const
 std::__ndk1::__codecvt_utf16<char32_t, true>::do_in(mbstate_t&, char const*, char const*, char const*&, char32_t*, char32_t*, char32_t*&) const
@@ -826,7 +1165,6 @@ std::__ndk1::__codecvt_utf16<char32_t, true>::do_length(mbstate_t&, char const*,
 std::__ndk1::__codecvt_utf16<char32_t, true>::do_max_length() const
 std::__ndk1::__codecvt_utf16<char32_t, true>::do_out(mbstate_t&, char32_t const*, char32_t const*, char32_t const*&, char*, char*, char*&) const
 std::__ndk1::__codecvt_utf16<char32_t, true>::do_unshift(mbstate_t&, char*, char*, char*&) const
-std::__ndk1::__codecvt_utf16<char32_t, true>::~__codecvt_utf16()
 std::__ndk1::__codecvt_utf16<wchar_t, false>::do_always_noconv() const
 std::__ndk1::__codecvt_utf16<wchar_t, false>::do_encoding() const
 std::__ndk1::__codecvt_utf16<wchar_t, false>::do_in(mbstate_t&, char const*, char const*, char const*&, wchar_t*, wchar_t*, wchar_t*&) const
@@ -834,7 +1172,6 @@ std::__ndk1::__codecvt_utf16<wchar_t, false>::do_length(mbstate_t&, char const*,
 std::__ndk1::__codecvt_utf16<wchar_t, false>::do_max_length() const
 std::__ndk1::__codecvt_utf16<wchar_t, false>::do_out(mbstate_t&, wchar_t const*, wchar_t const*, wchar_t const*&, char*, char*, char*&) const
 std::__ndk1::__codecvt_utf16<wchar_t, false>::do_unshift(mbstate_t&, char*, char*, char*&) const
-std::__ndk1::__codecvt_utf16<wchar_t, false>::~__codecvt_utf16()
 std::__ndk1::__codecvt_utf16<wchar_t, true>::do_always_noconv() const
 std::__ndk1::__codecvt_utf16<wchar_t, true>::do_encoding() const
 std::__ndk1::__codecvt_utf16<wchar_t, true>::do_in(mbstate_t&, char const*, char const*, char const*&, wchar_t*, wchar_t*, wchar_t*&) const
@@ -842,7 +1179,6 @@ std::__ndk1::__codecvt_utf16<wchar_t, true>::do_length(mbstate_t&, char const*, 
 std::__ndk1::__codecvt_utf16<wchar_t, true>::do_max_length() const
 std::__ndk1::__codecvt_utf16<wchar_t, true>::do_out(mbstate_t&, wchar_t const*, wchar_t const*, wchar_t const*&, char*, char*, char*&) const
 std::__ndk1::__codecvt_utf16<wchar_t, true>::do_unshift(mbstate_t&, char*, char*, char*&) const
-std::__ndk1::__codecvt_utf16<wchar_t, true>::~__codecvt_utf16()
 std::__ndk1::__codecvt_utf8<char16_t>::do_always_noconv() const
 std::__ndk1::__codecvt_utf8<char16_t>::do_encoding() const
 std::__ndk1::__codecvt_utf8<char16_t>::do_in(mbstate_t&, char const*, char const*, char const*&, char16_t*, char16_t*, char16_t*&) const
@@ -850,7 +1186,6 @@ std::__ndk1::__codecvt_utf8<char16_t>::do_length(mbstate_t&, char const*, char c
 std::__ndk1::__codecvt_utf8<char16_t>::do_max_length() const
 std::__ndk1::__codecvt_utf8<char16_t>::do_out(mbstate_t&, char16_t const*, char16_t const*, char16_t const*&, char*, char*, char*&) const
 std::__ndk1::__codecvt_utf8<char16_t>::do_unshift(mbstate_t&, char*, char*, char*&) const
-std::__ndk1::__codecvt_utf8<char16_t>::~__codecvt_utf8()
 std::__ndk1::__codecvt_utf8<char32_t>::do_always_noconv() const
 std::__ndk1::__codecvt_utf8<char32_t>::do_encoding() const
 std::__ndk1::__codecvt_utf8<char32_t>::do_in(mbstate_t&, char const*, char const*, char const*&, char32_t*, char32_t*, char32_t*&) const
@@ -858,7 +1193,6 @@ std::__ndk1::__codecvt_utf8<char32_t>::do_length(mbstate_t&, char const*, char c
 std::__ndk1::__codecvt_utf8<char32_t>::do_max_length() const
 std::__ndk1::__codecvt_utf8<char32_t>::do_out(mbstate_t&, char32_t const*, char32_t const*, char32_t const*&, char*, char*, char*&) const
 std::__ndk1::__codecvt_utf8<char32_t>::do_unshift(mbstate_t&, char*, char*, char*&) const
-std::__ndk1::__codecvt_utf8<char32_t>::~__codecvt_utf8()
 std::__ndk1::__codecvt_utf8<wchar_t>::do_always_noconv() const
 std::__ndk1::__codecvt_utf8<wchar_t>::do_encoding() const
 std::__ndk1::__codecvt_utf8<wchar_t>::do_in(mbstate_t&, char const*, char const*, char const*&, wchar_t*, wchar_t*, wchar_t*&) const
@@ -866,7 +1200,6 @@ std::__ndk1::__codecvt_utf8<wchar_t>::do_length(mbstate_t&, char const*, char co
 std::__ndk1::__codecvt_utf8<wchar_t>::do_max_length() const
 std::__ndk1::__codecvt_utf8<wchar_t>::do_out(mbstate_t&, wchar_t const*, wchar_t const*, wchar_t const*&, char*, char*, char*&) const
 std::__ndk1::__codecvt_utf8<wchar_t>::do_unshift(mbstate_t&, char*, char*, char*&) const
-std::__ndk1::__codecvt_utf8<wchar_t>::~__codecvt_utf8()
 std::__ndk1::__codecvt_utf8_utf16<char16_t>::do_always_noconv() const
 std::__ndk1::__codecvt_utf8_utf16<char16_t>::do_encoding() const
 std::__ndk1::__codecvt_utf8_utf16<char16_t>::do_in(mbstate_t&, char const*, char const*, char const*&, char16_t*, char16_t*, char16_t*&) const
@@ -874,7 +1207,6 @@ std::__ndk1::__codecvt_utf8_utf16<char16_t>::do_length(mbstate_t&, char const*, 
 std::__ndk1::__codecvt_utf8_utf16<char16_t>::do_max_length() const
 std::__ndk1::__codecvt_utf8_utf16<char16_t>::do_out(mbstate_t&, char16_t const*, char16_t const*, char16_t const*&, char*, char*, char*&) const
 std::__ndk1::__codecvt_utf8_utf16<char16_t>::do_unshift(mbstate_t&, char*, char*, char*&) const
-std::__ndk1::__codecvt_utf8_utf16<char16_t>::~__codecvt_utf8_utf16()
 std::__ndk1::__codecvt_utf8_utf16<char32_t>::do_always_noconv() const
 std::__ndk1::__codecvt_utf8_utf16<char32_t>::do_encoding() const
 std::__ndk1::__codecvt_utf8_utf16<char32_t>::do_in(mbstate_t&, char const*, char const*, char const*&, char32_t*, char32_t*, char32_t*&) const
@@ -882,7 +1214,6 @@ std::__ndk1::__codecvt_utf8_utf16<char32_t>::do_length(mbstate_t&, char const*, 
 std::__ndk1::__codecvt_utf8_utf16<char32_t>::do_max_length() const
 std::__ndk1::__codecvt_utf8_utf16<char32_t>::do_out(mbstate_t&, char32_t const*, char32_t const*, char32_t const*&, char*, char*, char*&) const
 std::__ndk1::__codecvt_utf8_utf16<char32_t>::do_unshift(mbstate_t&, char*, char*, char*&) const
-std::__ndk1::__codecvt_utf8_utf16<char32_t>::~__codecvt_utf8_utf16()
 std::__ndk1::__codecvt_utf8_utf16<wchar_t>::do_always_noconv() const
 std::__ndk1::__codecvt_utf8_utf16<wchar_t>::do_encoding() const
 std::__ndk1::__codecvt_utf8_utf16<wchar_t>::do_in(mbstate_t&, char const*, char const*, char const*&, wchar_t*, wchar_t*, wchar_t*&) const
@@ -890,7 +1221,6 @@ std::__ndk1::__codecvt_utf8_utf16<wchar_t>::do_length(mbstate_t&, char const*, c
 std::__ndk1::__codecvt_utf8_utf16<wchar_t>::do_max_length() const
 std::__ndk1::__codecvt_utf8_utf16<wchar_t>::do_out(mbstate_t&, wchar_t const*, wchar_t const*, wchar_t const*&, char*, char*, char*&) const
 std::__ndk1::__codecvt_utf8_utf16<wchar_t>::do_unshift(mbstate_t&, char*, char*, char*&) const
-std::__ndk1::__codecvt_utf8_utf16<wchar_t>::~__codecvt_utf8_utf16()
 std::__ndk1::__construct_barrier_algorithm_base(int&)
 std::__ndk1::__cxx_atomic_notify_all(std::__ndk1::__cxx_atomic_impl<int, std::__ndk1::__cxx_atomic_base_impl<int>> const volatile*)
 std::__ndk1::__cxx_atomic_notify_all(void const volatile*)
@@ -917,12 +1247,6 @@ std::__ndk1::__fs::filesystem::__equivalent(std::__ndk1::__fs::filesystem::path 
 std::__ndk1::__fs::filesystem::__file_size(std::__ndk1::__fs::filesystem::path const&, std::__ndk1::error_code*)
 std::__ndk1::__fs::filesystem::__fs_is_empty(std::__ndk1::__fs::filesystem::path const&, std::__ndk1::error_code*)
 std::__ndk1::__fs::filesystem::__hard_link_count(std::__ndk1::__fs::filesystem::path const&, std::__ndk1::error_code*)
-std::__ndk1::__fs::filesystem::__is_pathable_char_array<char [1], char*, char, true>::__range_end(char const*)
-std::__ndk1::__fs::filesystem::__is_pathable_char_array<char [2], char*, char, true>::__range_end(char const*)
-std::__ndk1::__fs::filesystem::__is_pathable_char_array<char [3], char*, char, true>::__range_end(char const*)
-std::__ndk1::__fs::filesystem::__is_pathable_char_array<char const*, char const*, char, true>::__range_end(char const*)
-std::__ndk1::__fs::filesystem::__is_pathable_char_array<char*, char*, char, true>::__range_end(char const*)
-std::__ndk1::__fs::filesystem::__is_pathable_string<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void>::__range_end(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 std::__ndk1::__fs::filesystem::__last_write_time(std::__ndk1::__fs::filesystem::path const&, std::__ndk1::chrono::time_point<std::__ndk1::__fs::filesystem::_FilesystemClock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1ll, 1000000000ll>>>, std::__ndk1::error_code*)
 std::__ndk1::__fs::filesystem::__last_write_time(std::__ndk1::__fs::filesystem::path const&, std::__ndk1::error_code*)
 std::__ndk1::__fs::filesystem::__permissions(std::__ndk1::__fs::filesystem::path const&, std::__ndk1::__fs::filesystem::perms, std::__ndk1::__fs::filesystem::perm_options, std::__ndk1::error_code*)
@@ -937,12 +1261,8 @@ std::__ndk1::__fs::filesystem::__symlink_status(std::__ndk1::__fs::filesystem::p
 std::__ndk1::__fs::filesystem::__temp_directory_path(std::__ndk1::error_code*)
 std::__ndk1::__fs::filesystem::__weakly_canonical(std::__ndk1::__fs::filesystem::path const&, std::__ndk1::error_code*)
 std::__ndk1::__fs::filesystem::directory_entry::__do_refresh()
-std::__ndk1::__fs::filesystem::directory_entry::directory_entry()
-std::__ndk1::__fs::filesystem::directory_entry::directory_entry(std::__ndk1::__fs::filesystem::directory_entry&&)
 std::__ndk1::__fs::filesystem::directory_iterator::__dereference() const
 std::__ndk1::__fs::filesystem::directory_iterator::__increment(std::__ndk1::error_code*)
-std::__ndk1::__fs::filesystem::directory_iterator::directory_iterator(std::__ndk1::__fs::filesystem::path const&)
-std::__ndk1::__fs::filesystem::directory_iterator::directory_iterator(std::__ndk1::__fs::filesystem::path const&, std::__ndk1::error_code&)
 std::__ndk1::__fs::filesystem::directory_iterator::directory_iterator(std::__ndk1::__fs::filesystem::path const&, std::__ndk1::error_code*, std::__ndk1::__fs::filesystem::directory_options)
 std::__ndk1::__fs::filesystem::filesystem_error::__create_what(int)
 std::__ndk1::__fs::filesystem::filesystem_error::~filesystem_error()
@@ -962,13 +1282,6 @@ std::__ndk1::__fs::filesystem::path::iterator::__decrement()
 std::__ndk1::__fs::filesystem::path::iterator::__increment()
 std::__ndk1::__fs::filesystem::path::lexically_normal() const
 std::__ndk1::__fs::filesystem::path::lexically_relative(std::__ndk1::__fs::filesystem::path const&) const
-std::__ndk1::__fs::filesystem::path::operator/=(std::__ndk1::__fs::filesystem::path const&)
-std::__ndk1::__fs::filesystem::path::path<char [1], void>(char const (&) [1], std::__ndk1::__fs::filesystem::path::format)
-std::__ndk1::__fs::filesystem::path::path<char [2], void>(char const (&) [2], std::__ndk1::__fs::filesystem::path::format)
-std::__ndk1::__fs::filesystem::path::path<char const*, void>(char const* const&, std::__ndk1::__fs::filesystem::path::format)
-std::__ndk1::__fs::filesystem::path::path<char*, void>(char* const&, std::__ndk1::__fs::filesystem::path::format)
-std::__ndk1::__fs::filesystem::path::path<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, void>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::__fs::filesystem::path::format)
-std::__ndk1::__fs::filesystem::path::path<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, void>(std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>> const&, std::__ndk1::__fs::filesystem::path::format)
 std::__ndk1::__fs::filesystem::path::preferred_separator
 std::__ndk1::__fs::filesystem::path::replace_extension(std::__ndk1::__fs::filesystem::path const&)
 std::__ndk1::__fs::filesystem::recursive_directory_iterator::__advance(std::__ndk1::error_code*)
@@ -981,44 +1294,15 @@ std::__ndk1::__fs::filesystem::recursive_directory_iterator::options() const
 std::__ndk1::__fs::filesystem::recursive_directory_iterator::recursive_directory_iterator(std::__ndk1::__fs::filesystem::path const&, std::__ndk1::__fs::filesystem::directory_options, std::__ndk1::error_code*)
 std::__ndk1::__get_classname(char const*, bool)
 std::__ndk1::__get_collation_name(char const*)
-std::__ndk1::__get_const_db()
-std::__ndk1::__get_db()
+std::__ndk1::__get_ostream_file(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>&)
 std::__ndk1::__get_sp_mut(void const*)
-std::__ndk1::__i_node::~__i_node()
 std::__ndk1::__itoa::__u32toa(unsigned int, char*)
 std::__ndk1::__itoa::__u64toa(unsigned long long, char*)
-std::__ndk1::__libcpp_abort_debug_function(std::__ndk1::__libcpp_debug_info const&)
-std::__ndk1::__libcpp_asprintf_l(char**, __locale_t*, char const*, ...)
 std::__ndk1::__libcpp_atomic_monitor(std::__ndk1::__cxx_atomic_impl<int, std::__ndk1::__cxx_atomic_base_impl<int>> const volatile*)
 std::__ndk1::__libcpp_atomic_monitor(void const volatile*)
 std::__ndk1::__libcpp_atomic_wait(std::__ndk1::__cxx_atomic_impl<int, std::__ndk1::__cxx_atomic_base_impl<int>> const volatile*, int)
 std::__ndk1::__libcpp_atomic_wait(void const volatile*, int)
-std::__ndk1::__libcpp_db::__addable(void const*, int) const
-std::__ndk1::__libcpp_db::__decrementable(void const*) const
-std::__ndk1::__libcpp_db::__dereferenceable(void const*) const
-std::__ndk1::__libcpp_db::__erase_c(void*)
-std::__ndk1::__libcpp_db::__erase_i(void*)
-std::__ndk1::__libcpp_db::__find_c(void*) const
-std::__ndk1::__libcpp_db::__find_c_and_lock(void*) const
-std::__ndk1::__libcpp_db::__find_c_from_i(void*) const
-std::__ndk1::__libcpp_db::__insert_c(void*, std::__ndk1::__c_node* (*)(void*, void*, std::__ndk1::__c_node*))
-std::__ndk1::__libcpp_db::__insert_i(void*)
-std::__ndk1::__libcpp_db::__insert_ic(void*, void const*)
-std::__ndk1::__libcpp_db::__invalidate_all(void*)
-std::__ndk1::__libcpp_db::__iterator_copy(void*, void const*)
-std::__ndk1::__libcpp_db::__less_than_comparable(void const*, void const*) const
-std::__ndk1::__libcpp_db::__libcpp_db()
-std::__ndk1::__libcpp_db::__subscriptable(void const*, int) const
-std::__ndk1::__libcpp_db::swap(void*, void*)
-std::__ndk1::__libcpp_db::unlock() const
-std::__ndk1::__libcpp_db::~__libcpp_db()
-std::__ndk1::__libcpp_debug_function
-std::__ndk1::__libcpp_debug_info::what() const
-std::__ndk1::__libcpp_set_debug_function(void (*)(std::__ndk1::__libcpp_debug_info const&))
-std::__ndk1::__libcpp_snprintf_l(char*, unsigned int, __locale_t*, char const*, ...)
-std::__ndk1::__libcpp_sscanf_l(char const*, __locale_t*, char const*, ...)
-std::__ndk1::__libcpp_unique_locale::__libcpp_unique_locale(char const*)
-std::__ndk1::__libcpp_unique_locale::~__libcpp_unique_locale()
+std::__ndk1::__libcpp_verbose_abort(char const*, ...)
 std::__ndk1::__match_any_but_newline<char>::__exec(std::__ndk1::__state<char>&) const
 std::__ndk1::__match_any_but_newline<wchar_t>::__exec(std::__ndk1::__state<wchar_t>&) const
 std::__ndk1::__money_get<char>::__gather_info(bool, std::__ndk1::locale const&, std::__ndk1::money_base::pattern&, char&, char&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&, int&)
@@ -1027,7 +1311,6 @@ std::__ndk1::__money_put<char>::__format(char*, char*&, char*&, unsigned int, ch
 std::__ndk1::__money_put<char>::__gather_info(bool, bool, std::__ndk1::locale const&, std::__ndk1::money_base::pattern&, char&, char&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&, int&)
 std::__ndk1::__money_put<wchar_t>::__format(wchar_t*, wchar_t*&, wchar_t*&, unsigned int, wchar_t const*, wchar_t const*, std::__ndk1::ctype<wchar_t> const&, bool, std::__ndk1::money_base::pattern const&, wchar_t, wchar_t, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>> const&, std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>> const&, int)
 std::__ndk1::__money_put<wchar_t>::__gather_info(bool, bool, std::__ndk1::locale const&, std::__ndk1::money_base::pattern&, wchar_t&, wchar_t&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&, std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>&, std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>&, int&)
-std::__ndk1::__murmur2_or_cityhash<unsigned int, 32u>::operator()(void const*, unsigned int)
 std::__ndk1::__narrow_to_utf8<16u>::~__narrow_to_utf8()
 std::__ndk1::__narrow_to_utf8<32u>::~__narrow_to_utf8()
 std::__ndk1::__next_prime(unsigned int)
@@ -1073,13 +1356,7 @@ std::__ndk1::__shared_weak_count::lock()
 std::__ndk1::__shared_weak_count::~__shared_weak_count()
 std::__ndk1::__sp_mut::lock()
 std::__ndk1::__sp_mut::unlock()
-std::__ndk1::__split_buffer<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, std::__ndk1::allocator<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>>&>::__split_buffer(unsigned int, unsigned int, std::__ndk1::allocator<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>>&)
-std::__ndk1::__split_buffer<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, std::__ndk1::allocator<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>>&>::~__split_buffer()
-std::__ndk1::__split_buffer<std::__ndk1::pair<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, std::__ndk1::__fs::filesystem::PathPartKind>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, std::__ndk1::__fs::filesystem::PathPartKind>>&>::__split_buffer(unsigned int, unsigned int, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, std::__ndk1::__fs::filesystem::PathPartKind>>&)
-std::__ndk1::__split_buffer<std::__ndk1::pair<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, std::__ndk1::__fs::filesystem::PathPartKind>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, std::__ndk1::__fs::filesystem::PathPartKind>>&>::~__split_buffer()
 std::__ndk1::__thread_local_data()
-std::__ndk1::__thread_specific_ptr<std::__ndk1::__thread_struct>::__thread_specific_ptr()
-std::__ndk1::__thread_specific_ptr<std::__ndk1::__thread_struct>::set_pointer(std::__ndk1::__thread_struct*)
 std::__ndk1::__thread_struct::__make_ready_at_thread_exit(std::__ndk1::__assoc_sub_state*)
 std::__ndk1::__thread_struct::__thread_struct()
 std::__ndk1::__thread_struct::notify_all_at_thread_exit(std::__ndk1::condition_variable*, std::__ndk1::mutex*)
@@ -1119,22 +1396,32 @@ std::__ndk1::__time_put::__time_put(char const*)
 std::__ndk1::__time_put::__time_put(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 std::__ndk1::__time_put::~__time_put()
 std::__ndk1::__undeclare_reachable(void*)
-std::__ndk1::__vector_base<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, std::__ndk1::allocator<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>>>::~__vector_base()
-std::__ndk1::__vector_base<std::__ndk1::pair<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, std::__ndk1::__fs::filesystem::PathPartKind>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, std::__ndk1::__fs::filesystem::PathPartKind>>>::~__vector_base()
 std::__ndk1::__vector_base_common<true>::__throw_length_error() const
 std::__ndk1::__vector_base_common<true>::__throw_out_of_range() const
 std::__ndk1::__widen_from_utf8<16u>::~__widen_from_utf8()
 std::__ndk1::__widen_from_utf8<32u>::~__widen_from_utf8()
-std::__ndk1::__wrap_iter<char*> std::__ndk1::__rotate_gcd<std::__ndk1::__wrap_iter<char*>>(std::__ndk1::__wrap_iter<char*>, std::__ndk1::__wrap_iter<char*>, std::__ndk1::__wrap_iter<char*>)
-std::__ndk1::__wrap_iter<char*> std::__ndk1::__rotate_right<std::__ndk1::__wrap_iter<char*>>(std::__ndk1::__wrap_iter<char*>, std::__ndk1::__wrap_iter<char*>)
-std::__ndk1::__wrap_iter<wchar_t*> std::__ndk1::__rotate_gcd<std::__ndk1::__wrap_iter<wchar_t*>>(std::__ndk1::__wrap_iter<wchar_t*>, std::__ndk1::__wrap_iter<wchar_t*>, std::__ndk1::__wrap_iter<wchar_t*>)
-std::__ndk1::__wrap_iter<wchar_t*> std::__ndk1::__rotate_left<std::__ndk1::__wrap_iter<wchar_t*>>(std::__ndk1::__wrap_iter<wchar_t*>, std::__ndk1::__wrap_iter<wchar_t*>)
-std::__ndk1::__wrap_iter<wchar_t*> std::__ndk1::__rotate_right<std::__ndk1::__wrap_iter<wchar_t*>>(std::__ndk1::__wrap_iter<wchar_t*>, std::__ndk1::__wrap_iter<wchar_t*>)
-std::__ndk1::adopt_lock
 std::__ndk1::align(unsigned int, unsigned int, void*&, unsigned int&)
-std::__ndk1::allocator_arg
+std::__ndk1::bad_function_call::~bad_function_call()
 std::__ndk1::bad_weak_ptr::what() const
 std::__ndk1::bad_weak_ptr::~bad_weak_ptr()
+std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char>>::__read_mode()
+std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char>>::__write_mode()
+std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char>>::basic_filebuf()
+std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char>>::basic_filebuf(std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char>>&&)
+std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char>>::close()
+std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char>>::imbue(std::__ndk1::locale const&)
+std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char>>::open(char const*, unsigned int)
+std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char>>::overflow(int)
+std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char>>::pbackfail(int)
+std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char>>::seekoff(long long, std::__ndk1::ios_base::seekdir, unsigned int)
+std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char>>::seekpos(std::__ndk1::fpos<mbstate_t>, unsigned int)
+std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char>>::setbuf(char*, int)
+std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char>>::swap(std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char>>&)
+std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char>>::sync()
+std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char>>::underflow()
+std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char>>::~basic_filebuf()
+std::__ndk1::basic_ifstream<char, std::__ndk1::char_traits<char>>::open(char const*, unsigned int)
+std::__ndk1::basic_ifstream<char, std::__ndk1::char_traits<char>>::open(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)
 std::__ndk1::basic_ios<char, std::__ndk1::char_traits<char>>::copyfmt(std::__ndk1::basic_ios<char, std::__ndk1::char_traits<char>> const&)
 std::__ndk1::basic_ios<char, std::__ndk1::char_traits<char>>::~basic_ios()
 std::__ndk1::basic_ios<wchar_t, std::__ndk1::char_traits<wchar_t>>::copyfmt(std::__ndk1::basic_ios<wchar_t, std::__ndk1::char_traits<wchar_t>> const&)
@@ -1220,6 +1507,9 @@ std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t>>::sync()
 std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t>>::tellg()
 std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t>>::unget()
 std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t>>::~basic_istream()
+std::__ndk1::basic_istringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::operator=(std::__ndk1::basic_istringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&&)
+std::__ndk1::basic_ofstream<char, std::__ndk1::char_traits<char>>::open(char const*, unsigned int)
+std::__ndk1::basic_ofstream<char, std::__ndk1::char_traits<char>>::open(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)
 std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::basic_ostream(std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>*)
 std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::flush()
 std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::operator<<(bool)
@@ -1276,6 +1566,7 @@ std::__ndk1::basic_ostream<wchar_t, std::__ndk1::char_traits<wchar_t>>::swap(std
 std::__ndk1::basic_ostream<wchar_t, std::__ndk1::char_traits<wchar_t>>::tellp()
 std::__ndk1::basic_ostream<wchar_t, std::__ndk1::char_traits<wchar_t>>::write(wchar_t const*, int)
 std::__ndk1::basic_ostream<wchar_t, std::__ndk1::char_traits<wchar_t>>::~basic_ostream()
+std::__ndk1::basic_ostringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::operator=(std::__ndk1::basic_ostringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&&)
 std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::basic_streambuf()
 std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::basic_streambuf(std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>> const&)
 std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::gbump(int)
@@ -1349,17 +1640,11 @@ std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t>>::xsgetn
 std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t>>::xsputn(wchar_t const*, int)
 std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t>>::~basic_streambuf()
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> std::__ndk1::operator+<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>(char const*, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
-std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>& std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::__append_forward_unsafe<char const*>(char const*, char const*)
-std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>& std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::__append_forward_unsafe<char*>(char*, char*)
-std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>& std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::__assign_no_alias<false>(char const*, unsigned int)
-std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>& std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::__assign_no_alias<true>(char const*, unsigned int)
-std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::__erase_external_with_move(unsigned int, unsigned int)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::__grow_by(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::__grow_by_and_replace(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, char const*)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::__init(char const*, unsigned int)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::__init(char const*, unsigned int, unsigned int)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::__init(unsigned int, char)
-std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::__init_copy_ctor_external(char const*, unsigned int)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::append(char const*)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::append(char const*, unsigned int)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::append(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int, unsigned int)
@@ -1373,8 +1658,6 @@ std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::all
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::basic_string(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::basic_string(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::allocator<char> const&)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::basic_string(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int, unsigned int, std::__ndk1::allocator<char> const&)
-std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::basic_string<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, void>(std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>> const&)
-std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::basic_string<std::nullptr_t>(char const*)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::compare(char const*) const
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::compare(unsigned int, unsigned int, char const*) const
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::compare(unsigned int, unsigned int, char const*, unsigned int) const
@@ -1405,16 +1688,11 @@ std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::all
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::rfind(char const*, unsigned int, unsigned int) const
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::rfind(char, unsigned int) const
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::~basic_string()
-std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>& std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::__append_forward_unsafe<wchar_t*>(wchar_t*, wchar_t*)
-std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>& std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::__assign_no_alias<false>(wchar_t const*, unsigned int)
-std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>& std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::__assign_no_alias<true>(wchar_t const*, unsigned int)
-std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::__erase_external_with_move(unsigned int, unsigned int)
 std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::__grow_by(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)
 std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::__grow_by_and_replace(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, wchar_t const*)
 std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::__init(unsigned int, wchar_t)
 std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::__init(wchar_t const*, unsigned int)
 std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::__init(wchar_t const*, unsigned int, unsigned int)
-std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::__init_copy_ctor_external(wchar_t const*, unsigned int)
 std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::append(std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>> const&, unsigned int, unsigned int)
 std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::append(unsigned int, wchar_t)
 std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::append(wchar_t const*)
@@ -1428,7 +1706,6 @@ std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk
 std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::basic_string(std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>> const&)
 std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::basic_string(std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>> const&, std::__ndk1::allocator<wchar_t> const&)
 std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::basic_string(std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>> const&, unsigned int, unsigned int, std::__ndk1::allocator<wchar_t> const&)
-std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::basic_string<std::nullptr_t>(wchar_t const*)
 std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::compare(unsigned int, unsigned int, std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>> const&, unsigned int, unsigned int) const
 std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::compare(unsigned int, unsigned int, wchar_t const*) const
 std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::compare(unsigned int, unsigned int, wchar_t const*, unsigned int) const
@@ -1459,18 +1736,17 @@ std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk
 std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::rfind(wchar_t const*, unsigned int, unsigned int) const
 std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::rfind(wchar_t, unsigned int) const
 std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t>>::~basic_string()
-std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>::compare(std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>) const
-std::__ndk1::basic_string_view<wchar_t, std::__ndk1::char_traits<wchar_t>>::compare(std::__ndk1::basic_string_view<wchar_t, std::__ndk1::char_traits<wchar_t>>) const
+std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::basic_stringbuf(std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&&)
+std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::operator=(std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&&)
+std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::overflow(int)
+std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::pbackfail(int)
+std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::seekoff(long long, std::__ndk1::ios_base::seekdir, unsigned int)
+std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::str() const
+std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::str(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::swap(std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&)
+std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::underflow()
+std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::operator=(std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&&)
 std::__ndk1::cerr
-std::__ndk1::char_traits<char>::compare(char const*, char const*, unsigned int)
-std::__ndk1::char_traits<char>::eq(char, char)
-std::__ndk1::char_traits<char>::find(char const*, unsigned int, char const&)
-std::__ndk1::char_traits<wchar_t>::assign(wchar_t*, unsigned int, wchar_t)
-std::__ndk1::char_traits<wchar_t>::compare(wchar_t const*, wchar_t const*, unsigned int)
-std::__ndk1::char_traits<wchar_t>::copy(wchar_t*, wchar_t const*, unsigned int)
-std::__ndk1::char_traits<wchar_t>::eq(wchar_t, wchar_t)
-std::__ndk1::char_traits<wchar_t>::find(wchar_t const*, unsigned int, wchar_t const&)
-std::__ndk1::char_traits<wchar_t>::move(wchar_t*, wchar_t const*, unsigned int)
 std::__ndk1::chrono::steady_clock::is_steady
 std::__ndk1::chrono::steady_clock::now()
 std::__ndk1::chrono::system_clock::from_time_t(long)
@@ -1497,6 +1773,15 @@ std::__ndk1::codecvt<char16_t, char, mbstate_t>::do_out(mbstate_t&, char16_t con
 std::__ndk1::codecvt<char16_t, char, mbstate_t>::do_unshift(mbstate_t&, char*, char*, char*&) const
 std::__ndk1::codecvt<char16_t, char, mbstate_t>::id
 std::__ndk1::codecvt<char16_t, char, mbstate_t>::~codecvt()
+std::__ndk1::codecvt<char16_t, char8_t, mbstate_t>::do_always_noconv() const
+std::__ndk1::codecvt<char16_t, char8_t, mbstate_t>::do_encoding() const
+std::__ndk1::codecvt<char16_t, char8_t, mbstate_t>::do_in(mbstate_t&, char8_t const*, char8_t const*, char8_t const*&, char16_t*, char16_t*, char16_t*&) const
+std::__ndk1::codecvt<char16_t, char8_t, mbstate_t>::do_length(mbstate_t&, char8_t const*, char8_t const*, unsigned int) const
+std::__ndk1::codecvt<char16_t, char8_t, mbstate_t>::do_max_length() const
+std::__ndk1::codecvt<char16_t, char8_t, mbstate_t>::do_out(mbstate_t&, char16_t const*, char16_t const*, char16_t const*&, char8_t*, char8_t*, char8_t*&) const
+std::__ndk1::codecvt<char16_t, char8_t, mbstate_t>::do_unshift(mbstate_t&, char8_t*, char8_t*, char8_t*&) const
+std::__ndk1::codecvt<char16_t, char8_t, mbstate_t>::id
+std::__ndk1::codecvt<char16_t, char8_t, mbstate_t>::~codecvt()
 std::__ndk1::codecvt<char32_t, char, mbstate_t>::do_always_noconv() const
 std::__ndk1::codecvt<char32_t, char, mbstate_t>::do_encoding() const
 std::__ndk1::codecvt<char32_t, char, mbstate_t>::do_in(mbstate_t&, char const*, char const*, char const*&, char32_t*, char32_t*, char32_t*&) const
@@ -1506,6 +1791,15 @@ std::__ndk1::codecvt<char32_t, char, mbstate_t>::do_out(mbstate_t&, char32_t con
 std::__ndk1::codecvt<char32_t, char, mbstate_t>::do_unshift(mbstate_t&, char*, char*, char*&) const
 std::__ndk1::codecvt<char32_t, char, mbstate_t>::id
 std::__ndk1::codecvt<char32_t, char, mbstate_t>::~codecvt()
+std::__ndk1::codecvt<char32_t, char8_t, mbstate_t>::do_always_noconv() const
+std::__ndk1::codecvt<char32_t, char8_t, mbstate_t>::do_encoding() const
+std::__ndk1::codecvt<char32_t, char8_t, mbstate_t>::do_in(mbstate_t&, char8_t const*, char8_t const*, char8_t const*&, char32_t*, char32_t*, char32_t*&) const
+std::__ndk1::codecvt<char32_t, char8_t, mbstate_t>::do_length(mbstate_t&, char8_t const*, char8_t const*, unsigned int) const
+std::__ndk1::codecvt<char32_t, char8_t, mbstate_t>::do_max_length() const
+std::__ndk1::codecvt<char32_t, char8_t, mbstate_t>::do_out(mbstate_t&, char32_t const*, char32_t const*, char32_t const*&, char8_t*, char8_t*, char8_t*&) const
+std::__ndk1::codecvt<char32_t, char8_t, mbstate_t>::do_unshift(mbstate_t&, char8_t*, char8_t*, char8_t*&) const
+std::__ndk1::codecvt<char32_t, char8_t, mbstate_t>::id
+std::__ndk1::codecvt<char32_t, char8_t, mbstate_t>::~codecvt()
 std::__ndk1::codecvt<wchar_t, char, mbstate_t>::codecvt(char const*, unsigned int)
 std::__ndk1::codecvt<wchar_t, char, mbstate_t>::codecvt(unsigned int)
 std::__ndk1::codecvt<wchar_t, char, mbstate_t>::do_always_noconv() const
@@ -1519,7 +1813,9 @@ std::__ndk1::codecvt<wchar_t, char, mbstate_t>::id
 std::__ndk1::codecvt<wchar_t, char, mbstate_t>::~codecvt()
 std::__ndk1::codecvt_byname<char, char, mbstate_t>::~codecvt_byname()
 std::__ndk1::codecvt_byname<char16_t, char, mbstate_t>::~codecvt_byname()
+std::__ndk1::codecvt_byname<char16_t, char8_t, mbstate_t>::~codecvt_byname()
 std::__ndk1::codecvt_byname<char32_t, char, mbstate_t>::~codecvt_byname()
+std::__ndk1::codecvt_byname<char32_t, char8_t, mbstate_t>::~codecvt_byname()
 std::__ndk1::codecvt_byname<wchar_t, char, mbstate_t>::~codecvt_byname()
 std::__ndk1::collate<char>::do_compare(char const*, char const*, char const*, char const*) const
 std::__ndk1::collate<char>::do_hash(char const*, char const*) const
@@ -1558,6 +1854,7 @@ std::__ndk1::ctype<char>::do_toupper(char*, char const*) const
 std::__ndk1::ctype<char>::do_widen(char const*, char const*, char*) const
 std::__ndk1::ctype<char>::do_widen(char) const
 std::__ndk1::ctype<char>::id
+std::__ndk1::ctype<char>::table_size
 std::__ndk1::ctype<char>::~ctype()
 std::__ndk1::ctype<wchar_t>::do_is(unsigned long, wchar_t) const
 std::__ndk1::ctype<wchar_t>::do_is(wchar_t const*, wchar_t const*, unsigned long*) const
@@ -1609,12 +1906,6 @@ std::__ndk1::ctype_byname<wchar_t>::do_widen(char) const
 std::__ndk1::ctype_byname<wchar_t>::~ctype_byname()
 std::__ndk1::declare_no_pointers(char*, unsigned int)
 std::__ndk1::declare_reachable(void*)
-std::__ndk1::defer_lock
-std::__ndk1::enable_if<_CheckArrayPointerConversion<char*>::value, void>::type std::__ndk1::unique_ptr<char [], std::__ndk1::default_delete<char []>>::reset<char*>(_CheckArrayPointerConversion)
-std::__ndk1::enable_if<__is_pathable<char [1]>::value, std::__ndk1::__fs::filesystem::path&>::type std::__ndk1::__fs::filesystem::path::append<char [1]>(__is_pathable const&)
-std::__ndk1::enable_if<__is_pathable<char [3]>::value, std::__ndk1::__fs::filesystem::path&>::type std::__ndk1::__fs::filesystem::path::append<char [3]>(__is_pathable const&)
-std::__ndk1::enable_if<__is_pathable<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>>::value, std::__ndk1::__fs::filesystem::path&>::type std::__ndk1::__fs::filesystem::path::append<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>>(__is_pathable const&)
-std::__ndk1::enable_if<__is_pathable<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>>::value, std::__ndk1::__fs::filesystem::path&>::type std::__ndk1::__fs::filesystem::path::assign<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>>(__is_pathable const&)
 std::__ndk1::error_category::default_error_condition(int) const
 std::__ndk1::error_category::equivalent(int, std::__ndk1::error_condition const&) const
 std::__ndk1::error_category::equivalent(std::__ndk1::error_code const&, int) const
@@ -1627,10 +1918,8 @@ std::__ndk1::future<void>::get()
 std::__ndk1::future<void>::~future()
 std::__ndk1::future_category()
 std::__ndk1::future_error::future_error(std::__ndk1::error_code)
-std::__ndk1::future_error::future_error(std::__ndk1::future_error const&)
 std::__ndk1::future_error::~future_error()
 std::__ndk1::generic_category()
-std::__ndk1::get_pointer_safety()
 std::__ndk1::gslice::__init(unsigned int)
 std::__ndk1::ios_base::Init::Init()
 std::__ndk1::ios_base::Init::~Init()
@@ -1683,24 +1972,6 @@ std::__ndk1::ios_base::uppercase
 std::__ndk1::ios_base::xalloc()
 std::__ndk1::ios_base::~ios_base()
 std::__ndk1::iostream_category()
-std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>> std::__ndk1::num_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>>::__do_get_floating_point<double>(std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>, std::__ndk1::ios_base&, unsigned int&, double&) const
-std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>> std::__ndk1::num_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>>::__do_get_floating_point<float>(std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>, std::__ndk1::ios_base&, unsigned int&, float&) const
-std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>> std::__ndk1::num_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>>::__do_get_floating_point<long double>(std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>, std::__ndk1::ios_base&, unsigned int&, long double&) const
-std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>> std::__ndk1::num_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>>::__do_get_signed<long long>(std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>, std::__ndk1::ios_base&, unsigned int&, long long&) const
-std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>> std::__ndk1::num_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>>::__do_get_signed<long>(std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>, std::__ndk1::ios_base&, unsigned int&, long&) const
-std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>> std::__ndk1::num_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>>::__do_get_unsigned<unsigned int>(std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>, std::__ndk1::ios_base&, unsigned int&, unsigned int&) const
-std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>> std::__ndk1::num_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>>::__do_get_unsigned<unsigned long long>(std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>, std::__ndk1::ios_base&, unsigned int&, unsigned long long&) const
-std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>> std::__ndk1::num_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>>::__do_get_unsigned<unsigned long>(std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>, std::__ndk1::ios_base&, unsigned int&, unsigned long&) const
-std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>> std::__ndk1::num_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>>::__do_get_unsigned<unsigned short>(std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char>>, std::__ndk1::ios_base&, unsigned int&, unsigned short&) const
-std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>> std::__ndk1::num_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>>::__do_get_floating_point<double>(std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>, std::__ndk1::ios_base&, unsigned int&, double&) const
-std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>> std::__ndk1::num_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>>::__do_get_floating_point<float>(std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>, std::__ndk1::ios_base&, unsigned int&, float&) const
-std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>> std::__ndk1::num_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>>::__do_get_floating_point<long double>(std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>, std::__ndk1::ios_base&, unsigned int&, long double&) const
-std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>> std::__ndk1::num_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>>::__do_get_signed<long long>(std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>, std::__ndk1::ios_base&, unsigned int&, long long&) const
-std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>> std::__ndk1::num_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>>::__do_get_signed<long>(std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>, std::__ndk1::ios_base&, unsigned int&, long&) const
-std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>> std::__ndk1::num_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>>::__do_get_unsigned<unsigned int>(std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>, std::__ndk1::ios_base&, unsigned int&, unsigned int&) const
-std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>> std::__ndk1::num_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>>::__do_get_unsigned<unsigned long long>(std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>, std::__ndk1::ios_base&, unsigned int&, unsigned long long&) const
-std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>> std::__ndk1::num_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>>::__do_get_unsigned<unsigned long>(std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>, std::__ndk1::ios_base&, unsigned int&, unsigned long&) const
-std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>> std::__ndk1::num_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>>::__do_get_unsigned<unsigned short>(std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t>>, std::__ndk1::ios_base&, unsigned int&, unsigned short&) const
 std::__ndk1::istrstream::~istrstream()
 std::__ndk1::locale::__global()
 std::__ndk1::locale::__install_ctor(std::__ndk1::locale const&, std::__ndk1::locale::facet*, long)
@@ -1713,7 +1984,6 @@ std::__ndk1::locale::facet::~facet()
 std::__ndk1::locale::global(std::__ndk1::locale const&)
 std::__ndk1::locale::has_facet(std::__ndk1::locale::id&) const
 std::__ndk1::locale::id::__get()
-std::__ndk1::locale::id::__init()
 std::__ndk1::locale::id::__next_id
 std::__ndk1::locale::locale()
 std::__ndk1::locale::locale(char const*)
@@ -1732,8 +2002,6 @@ std::__ndk1::locale::operator==(std::__ndk1::locale const&) const
 std::__ndk1::locale::time
 std::__ndk1::locale::use_facet(std::__ndk1::locale::id&) const
 std::__ndk1::locale::~locale()
-std::__ndk1::mersenne_twister_engine<unsigned int, 32u, 624u, 397u, 31u, 2567483615u, 11u, 4294967295u, 7u, 2636928640u, 15u, 4022730752u, 18u, 1812433253u>::operator()()
-std::__ndk1::mersenne_twister_engine<unsigned int, 32u, 624u, 397u, 31u, 2567483615u, 11u, 4294967295u, 7u, 2636928640u, 15u, 4022730752u, 18u, 1812433253u>::seed(unsigned int)
 std::__ndk1::messages<char>::do_close(int) const
 std::__ndk1::messages<char>::do_get(int, int, int, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&) const
 std::__ndk1::messages<char>::do_open(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::locale const&) const
@@ -1912,9 +2180,6 @@ std::__ndk1::numpunct_byname<wchar_t>::numpunct_byname(char const*, unsigned int
 std::__ndk1::numpunct_byname<wchar_t>::numpunct_byname(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)
 std::__ndk1::numpunct_byname<wchar_t>::~numpunct_byname()
 std::__ndk1::ostrstream::~ostrstream()
-std::__ndk1::pair<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, std::__ndk1::__fs::filesystem::PathPartKind>& std::__ndk1::vector<std::__ndk1::pair<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, std::__ndk1::__fs::filesystem::PathPartKind>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, std::__ndk1::__fs::filesystem::PathPartKind>>>::emplace_back<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>&, std::__ndk1::__fs::filesystem::PathPartKind&>(std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>&, std::__ndk1::__fs::filesystem::PathPartKind&)
-std::__ndk1::pair<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>>::pair<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>> const&, char const (&) [1], false>(std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>> const&, char const (&) [1])
-std::__ndk1::piecewise_construct
 std::__ndk1::placeholders::_1
 std::__ndk1::placeholders::_10
 std::__ndk1::placeholders::_2
@@ -1925,6 +2190,26 @@ std::__ndk1::placeholders::_6
 std::__ndk1::placeholders::_7
 std::__ndk1::placeholders::_8
 std::__ndk1::placeholders::_9
+std::__ndk1::pmr::get_default_resource()
+std::__ndk1::pmr::memory_resource::~memory_resource()
+std::__ndk1::pmr::monotonic_buffer_resource::__chunk_footer::__try_allocate_from_chunk(unsigned int, unsigned int)
+std::__ndk1::pmr::monotonic_buffer_resource::__initial_descriptor::__try_allocate_from_chunk(unsigned int, unsigned int)
+std::__ndk1::pmr::monotonic_buffer_resource::do_allocate(unsigned int, unsigned int)
+std::__ndk1::pmr::new_delete_resource()
+std::__ndk1::pmr::null_memory_resource()
+std::__ndk1::pmr::set_default_resource(std::__ndk1::pmr::memory_resource*)
+std::__ndk1::pmr::synchronized_pool_resource::do_is_equal(std::__ndk1::pmr::memory_resource const&) const
+std::__ndk1::pmr::unsynchronized_pool_resource::__adhoc_pool::__do_allocate(std::__ndk1::pmr::memory_resource*, unsigned int, unsigned int)
+std::__ndk1::pmr::unsynchronized_pool_resource::__adhoc_pool::__do_deallocate(std::__ndk1::pmr::memory_resource*, void*, unsigned int, unsigned int)
+std::__ndk1::pmr::unsynchronized_pool_resource::__adhoc_pool::__release_ptr(std::__ndk1::pmr::memory_resource*)
+std::__ndk1::pmr::unsynchronized_pool_resource::__log2_pool_block_size(int) const
+std::__ndk1::pmr::unsynchronized_pool_resource::__pool_block_size(int) const
+std::__ndk1::pmr::unsynchronized_pool_resource::__pool_index(unsigned int, unsigned int) const
+std::__ndk1::pmr::unsynchronized_pool_resource::do_allocate(unsigned int, unsigned int)
+std::__ndk1::pmr::unsynchronized_pool_resource::do_deallocate(void*, unsigned int, unsigned int)
+std::__ndk1::pmr::unsynchronized_pool_resource::options() const
+std::__ndk1::pmr::unsynchronized_pool_resource::release()
+std::__ndk1::pmr::unsynchronized_pool_resource::unsynchronized_pool_resource(std::__ndk1::pmr::pool_options const&, std::__ndk1::pmr::memory_resource*)
 std::__ndk1::promise<void>::get_future()
 std::__ndk1::promise<void>::promise()
 std::__ndk1::promise<void>::set_exception(std::exception_ptr)
@@ -1994,7 +2279,6 @@ std::__ndk1::strstreambuf::swap(std::__ndk1::strstreambuf&)
 std::__ndk1::strstreambuf::underflow()
 std::__ndk1::strstreambuf::~strstreambuf()
 std::__ndk1::system_category()
-std::__ndk1::system_error::__init(std::__ndk1::error_code const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)
 std::__ndk1::system_error::system_error(int, std::__ndk1::error_category const&)
 std::__ndk1::system_error::system_error(int, std::__ndk1::error_category const&, char const*)
 std::__ndk1::system_error::system_error(int, std::__ndk1::error_category const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
@@ -2066,6 +2350,15 @@ std::__ndk1::timed_mutex::timed_mutex()
 std::__ndk1::timed_mutex::try_lock()
 std::__ndk1::timed_mutex::unlock()
 std::__ndk1::timed_mutex::~timed_mutex()
+std::__ndk1::to_chars(char*, char*, double)
+std::__ndk1::to_chars(char*, char*, double, std::__ndk1::chars_format)
+std::__ndk1::to_chars(char*, char*, double, std::__ndk1::chars_format, int)
+std::__ndk1::to_chars(char*, char*, float)
+std::__ndk1::to_chars(char*, char*, float, std::__ndk1::chars_format)
+std::__ndk1::to_chars(char*, char*, float, std::__ndk1::chars_format, int)
+std::__ndk1::to_chars(char*, char*, long double)
+std::__ndk1::to_chars(char*, char*, long double, std::__ndk1::chars_format)
+std::__ndk1::to_chars(char*, char*, long double, std::__ndk1::chars_format, int)
 std::__ndk1::to_string(double)
 std::__ndk1::to_string(float)
 std::__ndk1::to_string(int)
@@ -2084,27 +2377,20 @@ std::__ndk1::to_wstring(long)
 std::__ndk1::to_wstring(unsigned int)
 std::__ndk1::to_wstring(unsigned long long)
 std::__ndk1::to_wstring(unsigned long)
-std::__ndk1::try_to_lock
 std::__ndk1::undeclare_no_pointers(char*, unsigned int)
-std::__ndk1::unique_lock<std::__ndk1::mutex>::unlock()
 std::__ndk1::valarray<unsigned int>::resize(unsigned int, unsigned int)
 std::__ndk1::valarray<unsigned int>::valarray(unsigned int)
 std::__ndk1::valarray<unsigned int>::~valarray()
-std::__ndk1::vector<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, std::__ndk1::allocator<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>>>::__swap_out_circular_buffer(std::__ndk1::__split_buffer<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, std::__ndk1::allocator<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>>&>&)
-std::__ndk1::vector<std::__ndk1::pair<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, std::__ndk1::__fs::filesystem::PathPartKind>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, std::__ndk1::__fs::filesystem::PathPartKind>>>::__swap_out_circular_buffer(std::__ndk1::__split_buffer<std::__ndk1::pair<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, std::__ndk1::__fs::filesystem::PathPartKind>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, std::__ndk1::__fs::filesystem::PathPartKind>>&>&)
-std::__ndk1::vector<std::__ndk1::pair<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, std::__ndk1::__fs::filesystem::PathPartKind>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, std::__ndk1::__fs::filesystem::PathPartKind>>>::reserve(unsigned int)
 std::__ndk1::wcerr
 std::__ndk1::wcin
 std::__ndk1::wclog
 std::__ndk1::wcout
 std::__throw_bad_alloc()
-std::allocator
 std::bad_alloc
 std::bad_alloc::bad_alloc()
 std::bad_alloc::what() const
 std::bad_alloc::~bad_alloc()
 std::bad_any_cast::what() const
-std::bad_any_cast::~bad_any_cast()
 std::bad_array_new_length::bad_array_new_length()
 std::bad_array_new_length::what() const
 std::bad_array_new_length::~bad_array_new_length()
@@ -2122,12 +2408,6 @@ std::bad_typeid::bad_typeid()
 std::bad_typeid::what() const
 std::bad_typeid::~bad_typeid()
 std::bad_variant_access::what() const
-std::bad_variant_access::~bad_variant_access()
-std::basic_iostream<char, std::char_traits<char> >
-std::basic_istream<char, std::char_traits<char> >
-std::basic_ostream<char, std::char_traits<char> >
-std::basic_string
-std::basic_string<char, std::char_traits<char>, std::allocator<char> >
 std::current_exception()
 std::domain_error::~domain_error()
 std::exception
@@ -2138,13 +2418,10 @@ std::exception_ptr::operator=(std::exception_ptr const&)
 std::exception_ptr::~exception_ptr()
 std::experimental::bad_optional_access::~bad_optional_access()
 std::experimental::fundamentals_v1::bad_any_cast::what() const
-std::experimental::fundamentals_v1::bad_any_cast::~bad_any_cast()
 std::get_new_handler()
 std::get_terminate()
 std::get_unexpected()
 std::invalid_argument::~invalid_argument()
-std::iostream
-std::istream
 std::length_error::~length_error()
 std::logic_error::logic_error(char const*)
 std::logic_error::logic_error(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
@@ -2157,7 +2434,6 @@ std::nested_exception::rethrow_nested() const
 std::nested_exception::~nested_exception()
 std::nothrow
 std::nullptr_t
-std::ostream
 std::out_of_range::~out_of_range()
 std::overflow_error::~overflow_error()
 std::range_error::~range_error()
@@ -2171,69 +2447,68 @@ std::runtime_error::~runtime_error()
 std::set_new_handler(void (*)())
 std::set_terminate(void (*)())
 std::set_unexpected(void (*)())
-std::string
 std::terminate()
 std::type_info::~type_info()
 std::uncaught_exception()
 std::uncaught_exceptions()
 std::underflow_error::~underflow_error()
 std::unexpected()
-stod
-stof
-stoi
-stol
-stold
-stoll
-stoul
-stoull
 strcmp
-strcoll
+strcoll_l
 strerror_r
-strftime
-string
+strftime_l
 string literal
 string_view::substr
 strlen
-strncpy
-strstr
 strtod
-strtoimax
+strtof
 strtol
+strtold
+strtold_l
 strtoll
+strtoll_l
 strtoul
 strtoull
-strtoumax
+strtoull_l
 struct
-strxfrm
+strxfrm_l
+swprintf
 symlink
 syscall
 sysconf
+syslog
 system
+t(y2
+t>UY
+tC7Ddw
+tHbP?
+tYfe
 temp_directory_path
+template parameter object for 
 template<
 terminate_handler unexpectedly returned
 terminate_handler unexpectedly threw an exception
 terminating
-terminating with %s exception of type %s
-terminating with %s exception of type %s: %s
-terminating with %s foreign exception
+terminating due to %s exception of type %s
+terminating due to %s exception of type %s: %s
+terminating due to %s foreign exception
 the specified attribute path is invalid
+this
 thread-local initialization routine for 
 thread-local wrapper routine for 
 thread::detach failed
 thread::join failed
 three
 throw
-throw 
-throw(
 tilde
 time_get_byname failed to construct for 
 time_put_byname failed to construct for 
-towlower
-towupper
+towlower_l
+towupper_l
 true
 truncate
-typeid (
+tuH:
+typeid 
 typeinfo for 
 typeinfo for __cxxabiv1::__array_type_info
 typeinfo for __cxxabiv1::__class_type_info
@@ -2295,7 +2570,6 @@ typeinfo for signed char
 typeinfo for signed char const*
 typeinfo for signed char*
 typeinfo for std::__ndk1::__assoc_sub_state
-typeinfo for std::__ndk1::__c_node
 typeinfo for std::__ndk1::__codecvt_utf16<char16_t, false>
 typeinfo for std::__ndk1::__codecvt_utf16<char16_t, true>
 typeinfo for std::__ndk1::__codecvt_utf16<char32_t, false>
@@ -2331,24 +2605,36 @@ typeinfo for std::__ndk1::__time_get_storage<wchar_t>
 typeinfo for std::__ndk1::__time_put
 typeinfo for std::__ndk1::__widen_from_utf8<16u>
 typeinfo for std::__ndk1::__widen_from_utf8<32u>
+typeinfo for std::__ndk1::bad_function_call
 typeinfo for std::__ndk1::bad_weak_ptr
+typeinfo for std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char>>
+typeinfo for std::__ndk1::basic_ifstream<char, std::__ndk1::char_traits<char>>
 typeinfo for std::__ndk1::basic_ios<char, std::__ndk1::char_traits<char>>
 typeinfo for std::__ndk1::basic_ios<wchar_t, std::__ndk1::char_traits<wchar_t>>
 typeinfo for std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>
 typeinfo for std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>
 typeinfo for std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t>>
+typeinfo for std::__ndk1::basic_istringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
+typeinfo for std::__ndk1::basic_ofstream<char, std::__ndk1::char_traits<char>>
 typeinfo for std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>
 typeinfo for std::__ndk1::basic_ostream<wchar_t, std::__ndk1::char_traits<wchar_t>>
+typeinfo for std::__ndk1::basic_ostringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 typeinfo for std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>
 typeinfo for std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t>>
+typeinfo for std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
+typeinfo for std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 typeinfo for std::__ndk1::codecvt<char, char, mbstate_t>
 typeinfo for std::__ndk1::codecvt<char16_t, char, mbstate_t>
+typeinfo for std::__ndk1::codecvt<char16_t, char8_t, mbstate_t>
 typeinfo for std::__ndk1::codecvt<char32_t, char, mbstate_t>
+typeinfo for std::__ndk1::codecvt<char32_t, char8_t, mbstate_t>
 typeinfo for std::__ndk1::codecvt<wchar_t, char, mbstate_t>
 typeinfo for std::__ndk1::codecvt_base
 typeinfo for std::__ndk1::codecvt_byname<char, char, mbstate_t>
 typeinfo for std::__ndk1::codecvt_byname<char16_t, char, mbstate_t>
+typeinfo for std::__ndk1::codecvt_byname<char16_t, char8_t, mbstate_t>
 typeinfo for std::__ndk1::codecvt_byname<char32_t, char, mbstate_t>
+typeinfo for std::__ndk1::codecvt_byname<char32_t, char8_t, mbstate_t>
 typeinfo for std::__ndk1::codecvt_byname<wchar_t, char, mbstate_t>
 typeinfo for std::__ndk1::collate<char>
 typeinfo for std::__ndk1::collate<wchar_t>
@@ -2392,6 +2678,12 @@ typeinfo for std::__ndk1::numpunct<wchar_t>
 typeinfo for std::__ndk1::numpunct_byname<char>
 typeinfo for std::__ndk1::numpunct_byname<wchar_t>
 typeinfo for std::__ndk1::ostrstream
+typeinfo for std::__ndk1::pmr::__new_delete_memory_resource_imp
+typeinfo for std::__ndk1::pmr::__null_memory_resource_imp
+typeinfo for std::__ndk1::pmr::memory_resource
+typeinfo for std::__ndk1::pmr::monotonic_buffer_resource
+typeinfo for std::__ndk1::pmr::synchronized_pool_resource
+typeinfo for std::__ndk1::pmr::unsynchronized_pool_resource
 typeinfo for std::__ndk1::regex_error
 typeinfo for std::__ndk1::strstream
 typeinfo for std::__ndk1::strstreambuf
@@ -2515,7 +2807,6 @@ typeinfo name for signed char
 typeinfo name for signed char const*
 typeinfo name for signed char*
 typeinfo name for std::__ndk1::__assoc_sub_state
-typeinfo name for std::__ndk1::__c_node
 typeinfo name for std::__ndk1::__codecvt_utf16<char16_t, false>
 typeinfo name for std::__ndk1::__codecvt_utf16<char16_t, true>
 typeinfo name for std::__ndk1::__codecvt_utf16<char32_t, false>
@@ -2551,24 +2842,36 @@ typeinfo name for std::__ndk1::__time_get_storage<wchar_t>
 typeinfo name for std::__ndk1::__time_put
 typeinfo name for std::__ndk1::__widen_from_utf8<16u>
 typeinfo name for std::__ndk1::__widen_from_utf8<32u>
+typeinfo name for std::__ndk1::bad_function_call
 typeinfo name for std::__ndk1::bad_weak_ptr
+typeinfo name for std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char>>
+typeinfo name for std::__ndk1::basic_ifstream<char, std::__ndk1::char_traits<char>>
 typeinfo name for std::__ndk1::basic_ios<char, std::__ndk1::char_traits<char>>
 typeinfo name for std::__ndk1::basic_ios<wchar_t, std::__ndk1::char_traits<wchar_t>>
 typeinfo name for std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>
 typeinfo name for std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>
 typeinfo name for std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t>>
+typeinfo name for std::__ndk1::basic_istringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
+typeinfo name for std::__ndk1::basic_ofstream<char, std::__ndk1::char_traits<char>>
 typeinfo name for std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>
 typeinfo name for std::__ndk1::basic_ostream<wchar_t, std::__ndk1::char_traits<wchar_t>>
+typeinfo name for std::__ndk1::basic_ostringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 typeinfo name for std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>
 typeinfo name for std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t>>
+typeinfo name for std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
+typeinfo name for std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 typeinfo name for std::__ndk1::codecvt<char, char, mbstate_t>
 typeinfo name for std::__ndk1::codecvt<char16_t, char, mbstate_t>
+typeinfo name for std::__ndk1::codecvt<char16_t, char8_t, mbstate_t>
 typeinfo name for std::__ndk1::codecvt<char32_t, char, mbstate_t>
+typeinfo name for std::__ndk1::codecvt<char32_t, char8_t, mbstate_t>
 typeinfo name for std::__ndk1::codecvt<wchar_t, char, mbstate_t>
 typeinfo name for std::__ndk1::codecvt_base
 typeinfo name for std::__ndk1::codecvt_byname<char, char, mbstate_t>
 typeinfo name for std::__ndk1::codecvt_byname<char16_t, char, mbstate_t>
+typeinfo name for std::__ndk1::codecvt_byname<char16_t, char8_t, mbstate_t>
 typeinfo name for std::__ndk1::codecvt_byname<char32_t, char, mbstate_t>
+typeinfo name for std::__ndk1::codecvt_byname<char32_t, char8_t, mbstate_t>
 typeinfo name for std::__ndk1::codecvt_byname<wchar_t, char, mbstate_t>
 typeinfo name for std::__ndk1::collate<char>
 typeinfo name for std::__ndk1::collate<wchar_t>
@@ -2612,6 +2915,12 @@ typeinfo name for std::__ndk1::numpunct<wchar_t>
 typeinfo name for std::__ndk1::numpunct_byname<char>
 typeinfo name for std::__ndk1::numpunct_byname<wchar_t>
 typeinfo name for std::__ndk1::ostrstream
+typeinfo name for std::__ndk1::pmr::__new_delete_memory_resource_imp
+typeinfo name for std::__ndk1::pmr::__null_memory_resource_imp
+typeinfo name for std::__ndk1::pmr::memory_resource
+typeinfo name for std::__ndk1::pmr::monotonic_buffer_resource
+typeinfo name for std::__ndk1::pmr::synchronized_pool_resource
+typeinfo name for std::__ndk1::pmr::unsynchronized_pool_resource
 typeinfo name for std::__ndk1::regex_error
 typeinfo name for std::__ndk1::strstream
 typeinfo name for std::__ndk1::strstreambuf
@@ -2675,52 +2984,23 @@ typeinfo name for wchar_t
 typeinfo name for wchar_t const*
 typeinfo name for wchar_t*
 typename 
-u8__uuidoft
-u8__uuidofz
+u]gE
+uintptr_t __cxxabiv1::readEncodedPointer(const uint8_t **, uint8_t, uintptr_t)
 uncaught
 underscore
 unexpected
 unexpected_handler unexpectedly returned
 ungetc
+ungetwc
 union
 unique_lock::unlock: not locked
 unknown personality routine
 unknown register
+unlinkat
+unsigned 
 unsigned __int128
 unsigned char
 unsigned int
-unsigned int const* std::__ndk1::__lower_bound<std::__ndk1::__less<unsigned int, unsigned int>&, unsigned int const*, unsigned int>(unsigned int const*, unsigned int const*, unsigned int const&, std::__ndk1::__less<unsigned int, unsigned int>&)
-unsigned int std::__ndk1::__sort3<std::__ndk1::__less<char, char>&, char*>(char*, char*, char*, std::__ndk1::__less<char, char>&)
-unsigned int std::__ndk1::__sort3<std::__ndk1::__less<double, double>&, double*>(double*, double*, double*, std::__ndk1::__less<double, double>&)
-unsigned int std::__ndk1::__sort3<std::__ndk1::__less<float, float>&, float*>(float*, float*, float*, std::__ndk1::__less<float, float>&)
-unsigned int std::__ndk1::__sort3<std::__ndk1::__less<int, int>&, int*>(int*, int*, int*, std::__ndk1::__less<int, int>&)
-unsigned int std::__ndk1::__sort3<std::__ndk1::__less<long double, long double>&, long double*>(long double*, long double*, long double*, std::__ndk1::__less<long double, long double>&)
-unsigned int std::__ndk1::__sort3<std::__ndk1::__less<long long, long long>&, long long*>(long long*, long long*, long long*, std::__ndk1::__less<long long, long long>&)
-unsigned int std::__ndk1::__sort3<std::__ndk1::__less<long, long>&, long*>(long*, long*, long*, std::__ndk1::__less<long, long>&)
-unsigned int std::__ndk1::__sort3<std::__ndk1::__less<short, short>&, short*>(short*, short*, short*, std::__ndk1::__less<short, short>&)
-unsigned int std::__ndk1::__sort3<std::__ndk1::__less<signed char, signed char>&, signed char*>(signed char*, signed char*, signed char*, std::__ndk1::__less<signed char, signed char>&)
-unsigned int std::__ndk1::__sort3<std::__ndk1::__less<unsigned char, unsigned char>&, unsigned char*>(unsigned char*, unsigned char*, unsigned char*, std::__ndk1::__less<unsigned char, unsigned char>&)
-unsigned int std::__ndk1::__sort3<std::__ndk1::__less<unsigned int, unsigned int>&, unsigned int*>(unsigned int*, unsigned int*, unsigned int*, std::__ndk1::__less<unsigned int, unsigned int>&)
-unsigned int std::__ndk1::__sort3<std::__ndk1::__less<unsigned long long, unsigned long long>&, unsigned long long*>(unsigned long long*, unsigned long long*, unsigned long long*, std::__ndk1::__less<unsigned long long, unsigned long long>&)
-unsigned int std::__ndk1::__sort3<std::__ndk1::__less<unsigned long, unsigned long>&, unsigned long*>(unsigned long*, unsigned long*, unsigned long*, std::__ndk1::__less<unsigned long, unsigned long>&)
-unsigned int std::__ndk1::__sort3<std::__ndk1::__less<unsigned short, unsigned short>&, unsigned short*>(unsigned short*, unsigned short*, unsigned short*, std::__ndk1::__less<unsigned short, unsigned short>&)
-unsigned int std::__ndk1::__sort3<std::__ndk1::__less<wchar_t, wchar_t>&, wchar_t*>(wchar_t*, wchar_t*, wchar_t*, std::__ndk1::__less<wchar_t, wchar_t>&)
-unsigned int std::__ndk1::__sort4<std::__ndk1::__less<char, char>&, char*>(char*, char*, char*, char*, std::__ndk1::__less<char, char>&)
-unsigned int std::__ndk1::__sort4<std::__ndk1::__less<double, double>&, double*>(double*, double*, double*, double*, std::__ndk1::__less<double, double>&)
-unsigned int std::__ndk1::__sort4<std::__ndk1::__less<float, float>&, float*>(float*, float*, float*, float*, std::__ndk1::__less<float, float>&)
-unsigned int std::__ndk1::__sort4<std::__ndk1::__less<int, int>&, int*>(int*, int*, int*, int*, std::__ndk1::__less<int, int>&)
-unsigned int std::__ndk1::__sort4<std::__ndk1::__less<long double, long double>&, long double*>(long double*, long double*, long double*, long double*, std::__ndk1::__less<long double, long double>&)
-unsigned int std::__ndk1::__sort4<std::__ndk1::__less<long long, long long>&, long long*>(long long*, long long*, long long*, long long*, std::__ndk1::__less<long long, long long>&)
-unsigned int std::__ndk1::__sort4<std::__ndk1::__less<long, long>&, long*>(long*, long*, long*, long*, std::__ndk1::__less<long, long>&)
-unsigned int std::__ndk1::__sort4<std::__ndk1::__less<short, short>&, short*>(short*, short*, short*, short*, std::__ndk1::__less<short, short>&)
-unsigned int std::__ndk1::__sort4<std::__ndk1::__less<signed char, signed char>&, signed char*>(signed char*, signed char*, signed char*, signed char*, std::__ndk1::__less<signed char, signed char>&)
-unsigned int std::__ndk1::__sort4<std::__ndk1::__less<unsigned char, unsigned char>&, unsigned char*>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, std::__ndk1::__less<unsigned char, unsigned char>&)
-unsigned int std::__ndk1::__sort4<std::__ndk1::__less<unsigned int, unsigned int>&, unsigned int*>(unsigned int*, unsigned int*, unsigned int*, unsigned int*, std::__ndk1::__less<unsigned int, unsigned int>&)
-unsigned int std::__ndk1::__sort4<std::__ndk1::__less<unsigned long long, unsigned long long>&, unsigned long long*>(unsigned long long*, unsigned long long*, unsigned long long*, unsigned long long*, std::__ndk1::__less<unsigned long long, unsigned long long>&)
-unsigned int std::__ndk1::__sort4<std::__ndk1::__less<unsigned long, unsigned long>&, unsigned long*>(unsigned long*, unsigned long*, unsigned long*, unsigned long*, std::__ndk1::__less<unsigned long, unsigned long>&)
-unsigned int std::__ndk1::__sort4<std::__ndk1::__less<unsigned short, unsigned short>&, unsigned short*>(unsigned short*, unsigned short*, unsigned short*, unsigned short*, std::__ndk1::__less<unsigned short, unsigned short>&)
-unsigned int std::__ndk1::__sort4<std::__ndk1::__less<wchar_t, wchar_t>&, wchar_t*>(wchar_t*, wchar_t*, wchar_t*, wchar_t*, std::__ndk1::__less<wchar_t, wchar_t>&)
-unsigned int std::__ndk1::__sort5<std::__ndk1::__less<long double, long double>&, long double*>(long double*, long double*, long double*, long double*, long double*, std::__ndk1::__less<long double, long double>&)
 unsigned long
 unsigned long long
 unsigned short
@@ -2733,7 +3013,14 @@ unsupported locale for standard input
 unsupported register class
 unwind_phase2
 upper
+uselocale
 utimensat
+uu<Q\r
+v5`a
+v@M4
+vH7B
+vH7Bf
+v]h4
 vasprintf
 vector
 vertical-line
@@ -2749,28 +3036,7 @@ virtual thunk to std::__ndk1::istrstream::~istrstream()
 virtual thunk to std::__ndk1::ostrstream::~ostrstream()
 virtual thunk to std::__ndk1::strstream::~strstream()
 void
-void std::__ndk1::__fs::filesystem::_PathCVT<char>::__append_source<char [1]>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&, char const (&) [1])
-void std::__ndk1::__fs::filesystem::_PathCVT<char>::__append_source<char [2]>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&, char const (&) [2])
-void std::__ndk1::__fs::filesystem::_PathCVT<char>::__append_source<char [3]>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&, char const (&) [3])
-void std::__ndk1::__fs::filesystem::_PathCVT<char>::__append_source<char const*>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&, char const* const&)
-void std::__ndk1::__fs::filesystem::_PathCVT<char>::__append_source<char*>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&, char* const&)
-void std::__ndk1::__fs::filesystem::_PathCVT<char>::__append_source<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
-void std::__ndk1::__fs::filesystem::_PathCVT<char>::__append_source<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&, std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>> const&)
-void std::__ndk1::__insertion_sort_3<std::__ndk1::__less<char, char>&, char*>(char*, char*, std::__ndk1::__less<char, char>&)
-void std::__ndk1::__insertion_sort_3<std::__ndk1::__less<double, double>&, double*>(double*, double*, std::__ndk1::__less<double, double>&)
-void std::__ndk1::__insertion_sort_3<std::__ndk1::__less<float, float>&, float*>(float*, float*, std::__ndk1::__less<float, float>&)
-void std::__ndk1::__insertion_sort_3<std::__ndk1::__less<int, int>&, int*>(int*, int*, std::__ndk1::__less<int, int>&)
-void std::__ndk1::__insertion_sort_3<std::__ndk1::__less<long double, long double>&, long double*>(long double*, long double*, std::__ndk1::__less<long double, long double>&)
-void std::__ndk1::__insertion_sort_3<std::__ndk1::__less<long long, long long>&, long long*>(long long*, long long*, std::__ndk1::__less<long long, long long>&)
-void std::__ndk1::__insertion_sort_3<std::__ndk1::__less<long, long>&, long*>(long*, long*, std::__ndk1::__less<long, long>&)
-void std::__ndk1::__insertion_sort_3<std::__ndk1::__less<short, short>&, short*>(short*, short*, std::__ndk1::__less<short, short>&)
-void std::__ndk1::__insertion_sort_3<std::__ndk1::__less<signed char, signed char>&, signed char*>(signed char*, signed char*, std::__ndk1::__less<signed char, signed char>&)
-void std::__ndk1::__insertion_sort_3<std::__ndk1::__less<unsigned char, unsigned char>&, unsigned char*>(unsigned char*, unsigned char*, std::__ndk1::__less<unsigned char, unsigned char>&)
-void std::__ndk1::__insertion_sort_3<std::__ndk1::__less<unsigned int, unsigned int>&, unsigned int*>(unsigned int*, unsigned int*, std::__ndk1::__less<unsigned int, unsigned int>&)
-void std::__ndk1::__insertion_sort_3<std::__ndk1::__less<unsigned long long, unsigned long long>&, unsigned long long*>(unsigned long long*, unsigned long long*, std::__ndk1::__less<unsigned long long, unsigned long long>&)
-void std::__ndk1::__insertion_sort_3<std::__ndk1::__less<unsigned long, unsigned long>&, unsigned long*>(unsigned long*, unsigned long*, std::__ndk1::__less<unsigned long, unsigned long>&)
-void std::__ndk1::__insertion_sort_3<std::__ndk1::__less<unsigned short, unsigned short>&, unsigned short*>(unsigned short*, unsigned short*, std::__ndk1::__less<unsigned short, unsigned short>&)
-void std::__ndk1::__insertion_sort_3<std::__ndk1::__less<wchar_t, wchar_t>&, wchar_t*>(wchar_t*, wchar_t*, std::__ndk1::__less<wchar_t, wchar_t>&)
+void __cxxabiv1::scan_eh_tab(scan_results &, _Unwind_Action, bool, _Unwind_Control_Block *, _Unwind_Context *)
 void std::__ndk1::__sort<std::__ndk1::__less<char, char>&, char*>(char*, char*, std::__ndk1::__less<char, char>&)
 void std::__ndk1::__sort<std::__ndk1::__less<double, double>&, double*>(double*, double*, std::__ndk1::__less<double, double>&)
 void std::__ndk1::__sort<std::__ndk1::__less<float, float>&, float*>(float*, float*, std::__ndk1::__less<float, float>&)
@@ -2786,8 +3052,6 @@ void std::__ndk1::__sort<std::__ndk1::__less<unsigned long long, unsigned long l
 void std::__ndk1::__sort<std::__ndk1::__less<unsigned long, unsigned long>&, unsigned long*>(unsigned long*, unsigned long*, std::__ndk1::__less<unsigned long, unsigned long>&)
 void std::__ndk1::__sort<std::__ndk1::__less<unsigned short, unsigned short>&, unsigned short*>(unsigned short*, unsigned short*, std::__ndk1::__less<unsigned short, unsigned short>&)
 void std::__ndk1::__sort<std::__ndk1::__less<wchar_t, wchar_t>&, wchar_t*>(wchar_t*, wchar_t*, std::__ndk1::__less<wchar_t, wchar_t>&)
-void std::__ndk1::vector<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, std::__ndk1::allocator<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>>>::__push_back_slow_path<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>>(std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>&&)
-void std::__ndk1::vector<std::__ndk1::pair<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, std::__ndk1::__fs::filesystem::PathPartKind>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>, std::__ndk1::__fs::filesystem::PathPartKind>>>::__emplace_back_slow_path<std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>&, std::__ndk1::__fs::filesystem::PathPartKind&>(std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>&, std::__ndk1::__fs::filesystem::PathPartKind&)
 vsnprintf
 vsscanf
 vtable for 
@@ -2803,7 +3067,6 @@ vtable for __cxxabiv1::__shim_type_info
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
 vtable for std::__ndk1::__assoc_sub_state
-vtable for std::__ndk1::__c_node
 vtable for std::__ndk1::__codecvt_utf16<char16_t, false>
 vtable for std::__ndk1::__codecvt_utf16<char16_t, true>
 vtable for std::__ndk1::__codecvt_utf16<char32_t, false>
@@ -2823,23 +3086,35 @@ vtable for std::__ndk1::__shared_count
 vtable for std::__ndk1::__shared_weak_count
 vtable for std::__ndk1::__widen_from_utf8<16u>
 vtable for std::__ndk1::__widen_from_utf8<32u>
+vtable for std::__ndk1::bad_function_call
 vtable for std::__ndk1::bad_weak_ptr
+vtable for std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char>>
+vtable for std::__ndk1::basic_ifstream<char, std::__ndk1::char_traits<char>>
 vtable for std::__ndk1::basic_ios<char, std::__ndk1::char_traits<char>>
 vtable for std::__ndk1::basic_ios<wchar_t, std::__ndk1::char_traits<wchar_t>>
 vtable for std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>
 vtable for std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>
 vtable for std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t>>
+vtable for std::__ndk1::basic_istringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
+vtable for std::__ndk1::basic_ofstream<char, std::__ndk1::char_traits<char>>
 vtable for std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>
 vtable for std::__ndk1::basic_ostream<wchar_t, std::__ndk1::char_traits<wchar_t>>
+vtable for std::__ndk1::basic_ostringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 vtable for std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>
 vtable for std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t>>
+vtable for std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
+vtable for std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 vtable for std::__ndk1::codecvt<char, char, mbstate_t>
 vtable for std::__ndk1::codecvt<char16_t, char, mbstate_t>
+vtable for std::__ndk1::codecvt<char16_t, char8_t, mbstate_t>
 vtable for std::__ndk1::codecvt<char32_t, char, mbstate_t>
+vtable for std::__ndk1::codecvt<char32_t, char8_t, mbstate_t>
 vtable for std::__ndk1::codecvt<wchar_t, char, mbstate_t>
 vtable for std::__ndk1::codecvt_byname<char, char, mbstate_t>
 vtable for std::__ndk1::codecvt_byname<char16_t, char, mbstate_t>
+vtable for std::__ndk1::codecvt_byname<char16_t, char8_t, mbstate_t>
 vtable for std::__ndk1::codecvt_byname<char32_t, char, mbstate_t>
+vtable for std::__ndk1::codecvt_byname<char32_t, char8_t, mbstate_t>
 vtable for std::__ndk1::codecvt_byname<wchar_t, char, mbstate_t>
 vtable for std::__ndk1::collate<char>
 vtable for std::__ndk1::collate<wchar_t>
@@ -2880,6 +3155,12 @@ vtable for std::__ndk1::numpunct<wchar_t>
 vtable for std::__ndk1::numpunct_byname<char>
 vtable for std::__ndk1::numpunct_byname<wchar_t>
 vtable for std::__ndk1::ostrstream
+vtable for std::__ndk1::pmr::__new_delete_memory_resource_imp
+vtable for std::__ndk1::pmr::__null_memory_resource_imp
+vtable for std::__ndk1::pmr::memory_resource
+vtable for std::__ndk1::pmr::monotonic_buffer_resource
+vtable for std::__ndk1::pmr::synchronized_pool_resource
+vtable for std::__ndk1::pmr::unsynchronized_pool_resource
 vtable for std::__ndk1::regex_error
 vtable for std::__ndk1::strstream
 vtable for std::__ndk1::strstreambuf
@@ -2914,14 +3195,63 @@ vtable for std::range_error
 vtable for std::runtime_error
 vtable for std::type_info
 vtable for std::underflow_error
+w+be
+w+bxe
+w+xe
+w33H$
+w33d
+wVw0
+wbxe
 wchar_t
-wchar_t const* std::__ndk1::__find_end<bool (*)(wchar_t, wchar_t) noexcept, wchar_t const*, wchar_t const*>(wchar_t const*, wchar_t const*, wchar_t const*, wchar_t const*, bool (*)(wchar_t, wchar_t) noexcept, std::__ndk1::random_access_iterator_tag, std::__ndk1::random_access_iterator_tag)
-wchar_t const* std::__ndk1::__search_substring<wchar_t, std::__ndk1::char_traits<wchar_t>>(wchar_t const*, wchar_t const*, wchar_t const*, wchar_t const*)
-wcscoll
-wcsxfrm
+wcrtomb
+wcscoll_l
+wcslen
+wcsnrtombs
+wcstod
+wcstof
+wcstol
+wcstold
+wcstoll
+wcstoul
+wcstoull
+wcsxfrm_l
 wctob
 weakly_canonical
+wmemchr
+wmemcmp
+wqMR
+wqM~
+wunQ
+wy9q
+xDfS
 xdigit
-yptn
+xg^Jp5|
+xxj81
+y#FD
+yLzw\n
+yptnk
+ytR>
+z3\Gc0
+zX:[2
+zXP4
+zXP4;
 zero
-{[xh3
+zo!T7
+zq.0
+{Xb4z
+{Xb4z:
+{zel#|67
+|1T8x
+|1T8xBO
+|1T8xBO`\n4
+}4PU
+}HL6
+}Nws/
+}m9h
+}m9hR'
+}m9hR'>M.
+~d81
+~tfn
+~yjS$
+~yjS6/
+~yjS6/1

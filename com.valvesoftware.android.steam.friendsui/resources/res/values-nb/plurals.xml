@@ -8,4 +8,8 @@
         <item quantity="one">Spol %d sekund bakover</item>
         <item quantity="other">Spol %d sekunder bakover</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d nytt varsel</item>
+        <item quantity="other">%d nye varsler</item>
+    </plurals>
 </resources>

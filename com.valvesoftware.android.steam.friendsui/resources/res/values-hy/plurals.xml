@@ -8,4 +8,8 @@
         <item quantity="one">%d վայրկյան հետ տալ</item>
         <item quantity="other">%d վայրկյան հետ տալ</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d նոր ծանուցում</item>
+        <item quantity="other">%d նոր ծանուցում</item>
+    </plurals>
 </resources>

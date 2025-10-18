@@ -8,4 +8,8 @@
         <item quantity="one">Spóla til baka um %d sekúndu</item>
         <item quantity="other">Spóla til baka um %d sekúndur</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d ný tilkynning</item>
+        <item quantity="other">%d nýjar tilkynningar</item>
+    </plurals>
 </resources>

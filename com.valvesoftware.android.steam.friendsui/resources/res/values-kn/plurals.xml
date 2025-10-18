@@ -8,4 +8,8 @@
         <item quantity="one">%d ಸೆಕೆಂಡ್‌ಗಳಷ್ಟು ರಿವೈಂಡ್ ಮಾಡಿ</item>
         <item quantity="other">%d ಸೆಕೆಂಡ್‌ಗಳಷ್ಟು ರಿವೈಂಡ್ ಮಾಡಿ</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d ಹೊಸ ನೋಟಿಫಿಕೇಶನ್‍ಗಳು</item>
+        <item quantity="other">%d ಹೊಸ ನೋಟಿಫಿಕೇಶನ್‍ಗಳು</item>
+    </plurals>
 </resources>

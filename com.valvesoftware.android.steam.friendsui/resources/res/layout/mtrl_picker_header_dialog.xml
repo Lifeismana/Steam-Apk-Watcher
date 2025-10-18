@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/mtrl_calendar_header_height">
+    android:layout_height="wrap_content">
     <LinearLayout
         android:layout_gravity="top"
         android:orientation="horizontal"
         android:id="@+id/mtrl_picker_header"
         android:paddingLeft="@dimen/mtrl_calendar_header_content_padding"
         android:paddingRight="@dimen/mtrl_calendar_header_content_padding"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/mtrl_calendar_header_height"
         android:baselineAligned="false"
         android:paddingStart="@dimen/mtrl_calendar_header_content_padding"
         android:paddingEnd="@dimen/mtrl_calendar_header_content_padding"
@@ -17,6 +15,8 @@
         <FrameLayout
             android:id="@+id/mtrl_picker_header_title_and_selection"
             android:paddingLeft="@dimen/mtrl_calendar_header_text_padding"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

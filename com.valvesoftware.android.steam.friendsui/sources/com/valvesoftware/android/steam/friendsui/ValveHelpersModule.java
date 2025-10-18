@@ -12,7 +12,6 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.modules.network.ForwardingCookieHandler;
-import expo.modules.imagepicker.MediaTypes;
 import java.io.File;
 import java.io.IOException;
 import java.net.URI;
@@ -20,18 +19,18 @@ import java.net.URISyntaxException;
 import java.util.Collections;
 import java.util.HashMap;
 
-/* loaded from: classes2.dex */
+/* loaded from: classes3.dex */
 public class ValveHelpersModule extends ReactContextBaseJavaModule {
     private ForwardingCookieHandler m_CookieHandler;
-
-    @Override // com.facebook.react.bridge.NativeModule
-    public String getName() {
-        return "ValveHelpers";
-    }
 
     public ValveHelpersModule(ReactApplicationContext reactApplicationContext) {
         super(reactApplicationContext);
         this.m_CookieHandler = new ForwardingCookieHandler(reactApplicationContext);
+    }
+
+    @Override // com.facebook.react.bridge.NativeModule
+    public String getName() {
+        return "ValveHelpers";
     }
 
     @ReactMethod
@@ -55,7 +54,7 @@ public class ValveHelpersModule extends ReactContextBaseJavaModule {
             return;
         }
         Uri uriForFile = FileProvider.getUriForFile(currentActivity, "com.valvesoftware.android.steam.friendsui.provider", new File(str2));
-        Intent type = new Intent("android.intent.action.SEND").setType(MediaTypes.ImageAllMimeType);
+        Intent type = new Intent("android.intent.action.SEND").setType("image/*");
         type.putExtra("android.intent.extra.STREAM", uriForFile);
         type.putExtra("android.intent.extra.TEXT", str);
         currentActivity.startActivity(Intent.createChooser(type, str3));

@@ -2,7 +2,7 @@
 (Landroid/graphics/Bitmap;IIII)V
 (Landroid/graphics/Bitmap;IIZ)V
 (Landroid/graphics/Bitmap;Z)V
-Android (6454773 based on r365631c2) clang version 9.0.8 (https://android.googlesource.com/toolchain/llvm-project 98c855489587874b2a325e7a516b99d838599c6f) (based on LLVM 9.0.8svn)
+Android (12285214, +pgo, +bolt, +lto, +mlgo, based on r522817b) clang version 18.0.2 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
 AndroidBitmap_getInfo
 AndroidBitmap_lockPixels
 AndroidBitmap_unlockPixels
@@ -24,6 +24,7 @@ Invalid circle center coordinates!
 Invalid internal state!
 JNI_OnLoad
 LIBC
+Linker: LLD 18.0.2
 Rounding#addRoundedCorners: Bitmap dimensions too large
 Rounding#addRoundedCorners: Failed to get Bitmap info
 Rounding#addRoundedCorners: Failed to lock Bitmap pixels
@@ -40,19 +41,14 @@ Rounding#toCircleWithOptionalBorder: Failed to lock Bitmap pixels
 Rounding#toCircleWithOptionalBorder: Failed to unlock Bitmap pixels
 Rounding#toCircleWithOptionalBorder: Unexpected bitmap format
 __android_log_print
-__bss_start
 __cxa_atexit
 __cxa_finalize
 __stack_chk_fail
-__stack_chk_guard
-_edata
-_end
 ceil
 com/facebook/imagepipeline/nativecode/NativeBlurFilter
 com/facebook/imagepipeline/nativecode/NativeRoundingFilter
 could not find RuntimeException class
 free
-ik6%F
 java/lang/RuntimeException
 libc.so
 libdl.so

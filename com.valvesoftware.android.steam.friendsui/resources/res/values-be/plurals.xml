@@ -12,4 +12,10 @@
         <item quantity="many">Пераматаць назад на %d секунд</item>
         <item quantity="other">Пераматаць назад на %d секунды</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d новае апавяшчэнне</item>
+        <item quantity="few">%d новыя апавяшчэнні</item>
+        <item quantity="many">%d новых апавяшчэнняў</item>
+        <item quantity="other">%d новага апавяшчэння</item>
+    </plurals>
 </resources>

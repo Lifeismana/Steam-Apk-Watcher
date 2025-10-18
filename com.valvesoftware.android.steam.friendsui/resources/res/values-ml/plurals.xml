@@ -8,4 +8,8 @@
         <item quantity="one">%d സെക്കൻഡ് പിന്നോട്ട് നീക്കുക</item>
         <item quantity="other">%d സെക്കൻഡ് പിന്നോട്ട് നീക്കുക</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d പുതിയ അറിയിപ്പ്</item>
+        <item quantity="other">%d പുതിയ അറിയിപ്പുകൾ</item>
+    </plurals>
 </resources>

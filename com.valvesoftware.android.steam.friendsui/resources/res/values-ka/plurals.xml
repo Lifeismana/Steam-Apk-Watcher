@@ -8,4 +8,8 @@
         <item quantity="one">უკან გადახვევა %d წამით</item>
         <item quantity="other">უკან გადახვევა %d წამით</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d ახალი შეტყობინება</item>
+        <item quantity="other">%d ახალი შეტყობინება</item>
+    </plurals>
 </resources>

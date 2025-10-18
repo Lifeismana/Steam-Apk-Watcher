@@ -10,4 +10,9 @@
         <item quantity="one">Attīt atpakaļ par %d sekundi</item>
         <item quantity="other">Attīt atpakaļ par %d sekundēm</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="zero">%d jaunu paziņojumu</item>
+        <item quantity="one">%d jauns paziņojums</item>
+        <item quantity="other">%d jauni paziņojumi</item>
+    </plurals>
 </resources>

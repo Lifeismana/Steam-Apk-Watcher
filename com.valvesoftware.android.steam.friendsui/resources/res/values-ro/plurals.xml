@@ -10,4 +10,9 @@
         <item quantity="few">Derulează înapoi cu %d secunde</item>
         <item quantity="other">Derulează înapoi cu %d de secunde</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d notificare nouă</item>
+        <item quantity="few">%d notificări noi</item>
+        <item quantity="other">%d de notificări noi</item>
+    </plurals>
 </resources>

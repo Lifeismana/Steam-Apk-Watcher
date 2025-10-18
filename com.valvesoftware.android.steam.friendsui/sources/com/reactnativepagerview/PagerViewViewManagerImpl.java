@@ -1,6 +1,8 @@
 package com.reactnativepagerview;
 
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewParent;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 import com.facebook.react.uimanager.PixelUtil;
@@ -9,7 +11,7 @@ import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
 /* compiled from: PagerViewViewManagerImpl.kt */
-@Metadata(m534d1 = {"\u0000<\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0011\bÆ\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J \u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\b2\b\u0010\t\u001a\u0004\u0018\u00010\n2\u0006\u0010\u000b\u001a\u00020\fJ\u0016\u0010\r\u001a\u00020\n2\u0006\u0010\u000e\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\fJ\u000e\u0010\u000f\u001a\u00020\f2\u0006\u0010\u000e\u001a\u00020\bJ\u000e\u0010\u0010\u001a\u00020\u00112\u0006\u0010\u0012\u001a\u00020\bJ\u0006\u0010\u0013\u001a\u00020\u0014J\u0010\u0010\u0015\u001a\u00020\u00062\u0006\u0010\u0012\u001a\u00020\nH\u0002J\u000e\u0010\u0016\u001a\u00020\u00062\u0006\u0010\u000e\u001a\u00020\bJ\u0016\u0010\u0017\u001a\u00020\u00062\u0006\u0010\u000e\u001a\u00020\b2\u0006\u0010\u0012\u001a\u00020\nJ\u0016\u0010\u0018\u001a\u00020\u00062\u0006\u0010\u000e\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\fJ\u001e\u0010\u0019\u001a\u00020\u00062\u0006\u0010\u0012\u001a\u00020\u00112\u0006\u0010\u001a\u001a\u00020\f2\u0006\u0010\u001b\u001a\u00020\u0014J\u0016\u0010\u001c\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\b2\u0006\u0010\u001d\u001a\u00020\fJ\u0016\u0010\u001e\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\b2\u0006\u0010\u001d\u001a\u00020\u0004J\u0016\u0010\u001f\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\b2\u0006\u0010\u001d\u001a\u00020\fJ\u0016\u0010 \u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\b2\u0006\u0010\u001d\u001a\u00020\u0004J\u0016\u0010!\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\b2\u0006\u0010\u001d\u001a\u00020\u0004J\u0016\u0010\"\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\b2\u0006\u0010#\u001a\u00020\fJ\u0016\u0010$\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\b2\u0006\u0010\u001d\u001a\u00020\u0014R\u000e\u0010\u0003\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000¨\u0006%"}, m535d2 = {"Lcom/reactnativepagerview/PagerViewViewManagerImpl;", "", "()V", "NAME", "", "addView", "", "host", "Lcom/reactnativepagerview/NestedScrollableHost;", "child", "Landroid/view/View;", "index", "", "getChildAt", "parent", "getChildCount", "getViewPager", "Landroidx/viewpager2/widget/ViewPager2;", "view", "needsCustomLayoutForChildren", "", "refreshViewChildrenLayout", "removeAllViews", "removeView", "removeViewAt", "setCurrentItem", "selectedTab", "scrollSmooth", "setInitialPage", "value", "setLayoutDirection", "setOffscreenPageLimit", "setOrientation", "setOverScrollMode", "setPageMargin", ViewProps.MARGIN, "setScrollEnabled", "react-native-pager-view_release"}, m536k = 1, m537mv = {1, 8, 0}, m539xi = 48)
+@Metadata(m693d1 = {"\u0000:\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0013\bÆ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u000e\u0010\u0006\u001a\u00020\u00072\u0006\u0010\b\u001a\u00020\tJ\u001e\u0010\n\u001a\u00020\u000b2\u0006\u0010\b\u001a\u00020\u00072\u0006\u0010\f\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\u000fJ \u0010\u0010\u001a\u00020\u000b2\u0006\u0010\u0011\u001a\u00020\t2\b\u0010\u0012\u001a\u0004\u0018\u00010\u00132\u0006\u0010\u0014\u001a\u00020\rJ\u000e\u0010\u0015\u001a\u00020\r2\u0006\u0010\u0016\u001a\u00020\tJ\u0016\u0010\u0017\u001a\u00020\u00132\u0006\u0010\u0016\u001a\u00020\t2\u0006\u0010\u0014\u001a\u00020\rJ\u0016\u0010\u0018\u001a\u00020\u000b2\u0006\u0010\u0016\u001a\u00020\t2\u0006\u0010\b\u001a\u00020\u0013J\u000e\u0010\u0019\u001a\u00020\u000b2\u0006\u0010\u0016\u001a\u00020\tJ\u0016\u0010\u001a\u001a\u00020\u000b2\u0006\u0010\u0016\u001a\u00020\t2\u0006\u0010\u0014\u001a\u00020\rJ\u0006\u0010\u001b\u001a\u00020\u000fJ\u0016\u0010\u001c\u001a\u00020\u000b2\u0006\u0010\u0011\u001a\u00020\t2\u0006\u0010\u001d\u001a\u00020\u000fJ\u0016\u0010\u001e\u001a\u00020\u000b2\u0006\u0010\u0011\u001a\u00020\t2\u0006\u0010\u001d\u001a\u00020\u0005J\u0016\u0010\u001f\u001a\u00020\u000b2\u0006\u0010\u0011\u001a\u00020\t2\u0006\u0010\u001d\u001a\u00020\rJ\u0016\u0010 \u001a\u00020\u000b2\u0006\u0010\u0011\u001a\u00020\t2\u0006\u0010\u001d\u001a\u00020\u0005J\u0016\u0010!\u001a\u00020\u000b2\u0006\u0010\u0011\u001a\u00020\t2\u0006\u0010\u001d\u001a\u00020\rJ\u0016\u0010\"\u001a\u00020\u000b2\u0006\u0010\u0011\u001a\u00020\t2\u0006\u0010\u001d\u001a\u00020\u0005J\u0016\u0010#\u001a\u00020\u000b2\u0006\u0010\u0011\u001a\u00020\t2\u0006\u0010$\u001a\u00020\rJ\u0010\u0010%\u001a\u00020\u000b2\u0006\u0010\b\u001a\u00020\u0013H\u0002R\u000e\u0010\u0004\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000¨\u0006&"}, m694d2 = {"Lcom/reactnativepagerview/PagerViewViewManagerImpl;", "", "<init>", "()V", "NAME", "", "getViewPager", "Landroidx/viewpager2/widget/ViewPager2;", "view", "Lcom/reactnativepagerview/NestedScrollableHost;", "setCurrentItem", "", "selectedTab", "", "scrollSmooth", "", "addView", "host", "child", "Landroid/view/View;", "index", "getChildCount", "parent", "getChildAt", "removeView", "removeAllViews", "removeViewAt", "needsCustomLayoutForChildren", "setScrollEnabled", "value", "setLayoutDirection", "setInitialPage", "setOrientation", "setOffscreenPageLimit", "setOverScrollMode", "setPageMargin", ViewProps.MARGIN, "refreshViewChildrenLayout", "react-native-pager-view_release"}, m695k = 1, m696mv = {2, 0, 0}, m698xi = 48)
 /* loaded from: classes2.dex */
 public final class PagerViewViewManagerImpl {
     public static final PagerViewViewManagerImpl INSTANCE = new PagerViewViewManagerImpl();
@@ -100,6 +102,14 @@ public final class PagerViewViewManagerImpl {
         Intrinsics.checkNotNullParameter(parent, "parent");
         ViewPager2 viewPager = getViewPager(parent);
         ViewPagerAdapter viewPagerAdapter = (ViewPagerAdapter) viewPager.getAdapter();
+        View childAt = viewPagerAdapter != null ? viewPagerAdapter.getChildAt(index) : null;
+        if (childAt != null && childAt.getParent() != null) {
+            ViewParent parent2 = childAt.getParent();
+            ViewGroup viewGroup = parent2 instanceof ViewGroup ? (ViewGroup) parent2 : null;
+            if (viewGroup != null) {
+                viewGroup.removeView(childAt);
+            }
+        }
         if (viewPagerAdapter != null) {
             viewPagerAdapter.removeChildAt(index);
         }
@@ -127,19 +137,13 @@ public final class PagerViewViewManagerImpl {
         ViewPager2 viewPager = getViewPager(host);
         if (host.getInitialIndex() == null) {
             host.setInitialIndex(Integer.valueOf(value));
-            viewPager.post(new Runnable() { // from class: com.reactnativepagerview.PagerViewViewManagerImpl$$ExternalSyntheticLambda0
+            viewPager.post(new Runnable() { // from class: com.reactnativepagerview.PagerViewViewManagerImpl$$ExternalSyntheticLambda2
                 @Override // java.lang.Runnable
                 public final void run() {
-                    PagerViewViewManagerImpl.setInitialPage$lambda$0(NestedScrollableHost.this);
+                    NestedScrollableHost.this.setDidSetInitialIndex(true);
                 }
             });
         }
-    }
-
-    /* JADX INFO: Access modifiers changed from: private */
-    public static final void setInitialPage$lambda$0(NestedScrollableHost host) {
-        Intrinsics.checkNotNullParameter(host, "$host");
-        host.setDidSetInitialIndex(true);
     }
 
     public final void setOrientation(NestedScrollableHost host, String value) {
@@ -170,7 +174,7 @@ public final class PagerViewViewManagerImpl {
         Intrinsics.checkNotNullParameter(host, "host");
         final ViewPager2 viewPager = getViewPager(host);
         final int pixelFromDIP = (int) PixelUtil.toPixelFromDIP(margin);
-        viewPager.setPageTransformer(new ViewPager2.PageTransformer() { // from class: com.reactnativepagerview.PagerViewViewManagerImpl$$ExternalSyntheticLambda1
+        viewPager.setPageTransformer(new ViewPager2.PageTransformer() { // from class: com.reactnativepagerview.PagerViewViewManagerImpl$$ExternalSyntheticLambda0
             @Override // androidx.viewpager2.widget.ViewPager2.PageTransformer
             public final void transformPage(View view, float f) {
                 PagerViewViewManagerImpl.setPageMargin$lambda$1(pixelFromDIP, viewPager, view, f);
@@ -179,12 +183,11 @@ public final class PagerViewViewManagerImpl {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static final void setPageMargin$lambda$1(int i, ViewPager2 pager, View page, float f) {
-        Intrinsics.checkNotNullParameter(pager, "$pager");
+    public static final void setPageMargin$lambda$1(int i, ViewPager2 viewPager2, View page, float f) {
         Intrinsics.checkNotNullParameter(page, "page");
         float f2 = i * f;
-        if (pager.getOrientation() == 0) {
-            if (pager.getLayoutDirection() == 1) {
+        if (viewPager2.getOrientation() == 0) {
+            if (viewPager2.getLayoutDirection() == 1) {
                 f2 = -f2;
             }
             page.setTranslationX(f2);
@@ -194,7 +197,7 @@ public final class PagerViewViewManagerImpl {
     }
 
     private final void refreshViewChildrenLayout(final View view) {
-        view.post(new Runnable() { // from class: com.reactnativepagerview.PagerViewViewManagerImpl$$ExternalSyntheticLambda2
+        view.post(new Runnable() { // from class: com.reactnativepagerview.PagerViewViewManagerImpl$$ExternalSyntheticLambda1
             @Override // java.lang.Runnable
             public final void run() {
                 PagerViewViewManagerImpl.refreshViewChildrenLayout$lambda$2(view);
@@ -204,7 +207,6 @@ public final class PagerViewViewManagerImpl {
 
     /* JADX INFO: Access modifiers changed from: private */
     public static final void refreshViewChildrenLayout$lambda$2(View view) {
-        Intrinsics.checkNotNullParameter(view, "$view");
         view.measure(View.MeasureSpec.makeMeasureSpec(view.getWidth(), 1073741824), View.MeasureSpec.makeMeasureSpec(view.getHeight(), 1073741824));
         view.layout(view.getLeft(), view.getTop(), view.getRight(), view.getBottom());
     }

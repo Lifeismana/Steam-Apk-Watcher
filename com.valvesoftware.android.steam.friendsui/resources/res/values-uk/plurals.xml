@@ -12,4 +12,10 @@
         <item quantity="many">Перемотати назад на %d секунд</item>
         <item quantity="other">Перемотати назад на %d секунди</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d нове сповіщення</item>
+        <item quantity="few">%d нові сповіщення</item>
+        <item quantity="many">%d нових сповіщень</item>
+        <item quantity="other">%d нового сповіщення</item>
+    </plurals>
 </resources>

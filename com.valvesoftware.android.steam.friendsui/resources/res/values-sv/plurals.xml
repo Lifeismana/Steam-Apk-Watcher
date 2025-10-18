@@ -8,4 +8,8 @@
         <item quantity="one">Spola tillbaka %d sekund</item>
         <item quantity="other">Spola tillbaka %d sekunder</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d ny avisering</item>
+        <item quantity="other">%d nya aviseringar</item>
+    </plurals>
 </resources>

@@ -12,4 +12,9 @@
         <item quantity="many">הרצה %d שניות אחורה</item>
         <item quantity="other">הרצה %d שניות אחורה</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d התראות חדשות</item>
+        <item quantity="two">%d התראות חדשות</item>
+        <item quantity="other">%d התראות חדשות</item>
+    </plurals>
 </resources>

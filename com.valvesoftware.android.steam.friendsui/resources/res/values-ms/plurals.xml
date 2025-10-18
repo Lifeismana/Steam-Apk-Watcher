@@ -8,4 +8,8 @@
         <item quantity="one">Mandir %d saat</item>
         <item quantity="other">Mandir %d saat</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d pemberitahuan baharu</item>
+        <item quantity="other">%d pemberitahuan baharu</item>
+    </plurals>
 </resources>

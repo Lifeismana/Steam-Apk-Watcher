@@ -8,4 +8,8 @@
         <item quantity="one">Spoel %d sekonde terug</item>
         <item quantity="other">Spoel %d sekondes terug</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d nuwe kennisgewing</item>
+        <item quantity="other">%d nuwe kennisgewings</item>
+    </plurals>
 </resources>

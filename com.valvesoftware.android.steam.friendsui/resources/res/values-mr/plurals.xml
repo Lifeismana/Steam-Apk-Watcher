@@ -8,4 +8,8 @@
         <item quantity="one">%d सेकंद रिवाइंड करा</item>
         <item quantity="other">%d सेकंद रिवाइंड करा</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d नवीन सूचना</item>
+        <item quantity="other">%d नवीन सूचना</item>
+    </plurals>
 </resources>

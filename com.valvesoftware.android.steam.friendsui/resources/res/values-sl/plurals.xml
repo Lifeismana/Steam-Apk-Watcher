@@ -12,4 +12,10 @@
         <item quantity="few">Premik nazaj za %d sekunde</item>
         <item quantity="other">Premik nazaj za %d sekund</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d novo obvestilo</item>
+        <item quantity="two">%d novi obvestili</item>
+        <item quantity="few">%d nova obvestila</item>
+        <item quantity="other">%d novih obvestil</item>
+    </plurals>
 </resources>

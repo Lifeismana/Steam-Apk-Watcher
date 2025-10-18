@@ -17,6 +17,7 @@
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="@color/dev_launcher_primary"
+            android:id="@+id/error_title"
             android:tag="DevLauncherErrorScreen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,13 +52,12 @@
         android:layout_alignParentBottom="true">
         <LinearLayout
             android:orientation="vertical"
+            android:id="@+id/error_footer_content"
             android:background="@color/dev_launcher_white"
-            android:paddingLeft="16dp"
-            android:paddingTop="16dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="16dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp">
             <Button
                 android:textSize="14sp"
                 android:textStyle="bold"

@@ -5,64 +5,89 @@ import android.content.Context;
 import android.content.res.Configuration;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
+import com.facebook.react.ReactHost;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
-import com.facebook.react.config.ReactFeatureFlags;
+import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
 import com.facebook.react.defaults.DefaultReactNativeHost;
+import com.facebook.react.soloader.OpenSourceMergedSoMapping;
 import com.facebook.soloader.SoLoader;
 import expo.modules.ApplicationLifecycleDispatcher;
 import expo.modules.ReactNativeHostWrapper;
 import java.util.ArrayList;
 import java.util.List;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
 
-/* loaded from: classes2.dex */
-public class MainApplication extends Application implements ReactApplication {
-    private final ReactNativeHost mReactNativeHost = new ReactNativeHostWrapper(this, new DefaultReactNativeHost(this) { // from class: com.valvesoftware.android.steam.friendsui.MainApplication.1
-        @Override // com.facebook.react.ReactNativeHost
-        protected String getJSMainModuleName() {
-            return "index";
-        }
+/* compiled from: MainApplication.kt */
+@Metadata(m693d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\u0018\u00002\u00020\u00012\u00020\u0002B\u0007¢\u0006\u0004\b\u0003\u0010\u0004J\b\u0010\r\u001a\u00020\u000eH\u0016J\u0010\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u0010\u001a\u00020\u0011H\u0016R\u0014\u0010\u0005\u001a\u00020\u0006X\u0096\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0014\u0010\t\u001a\u00020\n8VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b\u000b\u0010\f¨\u0006\u0012"}, m694d2 = {"Lcom/valvesoftware/android/steam/friendsui/MainApplication;", "Landroid/app/Application;", "Lcom/facebook/react/ReactApplication;", "<init>", "()V", "reactNativeHost", "Lcom/facebook/react/ReactNativeHost;", "getReactNativeHost", "()Lcom/facebook/react/ReactNativeHost;", "reactHost", "Lcom/facebook/react/ReactHost;", "getReactHost", "()Lcom/facebook/react/ReactHost;", "onCreate", "", "onConfigurationChanged", "newConfig", "Landroid/content/res/Configuration;", "app_release"}, m695k = 1, m696mv = {2, 0, 0}, m698xi = 48)
+/* loaded from: classes3.dex */
+public final class MainApplication extends Application implements ReactApplication {
+    private final ReactNativeHost reactNativeHost = new ReactNativeHostWrapper(this, new DefaultReactNativeHost(this) { // from class: com.valvesoftware.android.steam.friendsui.MainApplication$reactNativeHost$1
+        private final boolean isHermesEnabled;
+        private final boolean isNewArchEnabled;
 
         @Override // com.facebook.react.ReactNativeHost
         public boolean getUseDeveloperSupport() {
             return false;
         }
 
-        @Override // com.facebook.react.defaults.DefaultReactNativeHost
-        protected boolean isNewArchEnabled() {
-            return false;
+        {
+            super(this);
+            this.isNewArchEnabled = true;
+            this.isHermesEnabled = true;
         }
 
         @Override // com.facebook.react.ReactNativeHost
         protected List<ReactPackage> getPackages() {
             ArrayList<ReactPackage> packages = new PackageList(this).getPackages();
             packages.add(new ValveHelpersPackage());
+            Intrinsics.checkNotNull(packages);
             return packages;
+        }
+
+        @Override // com.facebook.react.ReactNativeHost
+        protected String getJSMainModuleName() {
+            return ".expo/.virtual-metro-entry";
+        }
+
+        @Override // com.facebook.react.defaults.DefaultReactNativeHost
+        /* renamed from: isNewArchEnabled, reason: from getter */
+        protected boolean getIsNewArchEnabled() {
+            return this.isNewArchEnabled;
         }
 
         @Override // com.facebook.react.defaults.DefaultReactNativeHost
         protected Boolean isHermesEnabled() {
-            return true;
+            return Boolean.valueOf(this.isHermesEnabled);
         }
     });
 
     @Override // com.facebook.react.ReactApplication
     public ReactNativeHost getReactNativeHost() {
-        return this.mReactNativeHost;
+        return this.reactNativeHost;
+    }
+
+    @Override // com.facebook.react.ReactApplication
+    public ReactHost getReactHost() {
+        ReactNativeHostWrapper.Companion companion = ReactNativeHostWrapper.INSTANCE;
+        Context applicationContext = getApplicationContext();
+        Intrinsics.checkNotNullExpressionValue(applicationContext, "getApplicationContext(...)");
+        return companion.createReactHost(applicationContext, getReactNativeHost());
     }
 
     @Override // android.app.Application
     public void onCreate() {
         super.onCreate();
-        SoLoader.init((Context) this, false);
-        ReactFeatureFlags.unstable_useRuntimeSchedulerAlways = false;
-        ReactNativeFlipper.initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
+        SoLoader.init(this, OpenSourceMergedSoMapping.INSTANCE);
+        DefaultNewArchitectureEntryPoint.load$default(false, false, false, 7, null);
         ApplicationLifecycleDispatcher.onApplicationCreate(this);
     }
 
     @Override // android.app.Application, android.content.ComponentCallbacks
-    public void onConfigurationChanged(Configuration configuration) {
-        super.onConfigurationChanged(configuration);
-        ApplicationLifecycleDispatcher.onConfigurationChanged(this, configuration);
+    public void onConfigurationChanged(Configuration newConfig) {
+        Intrinsics.checkNotNullParameter(newConfig, "newConfig");
+        super.onConfigurationChanged(newConfig);
+        ApplicationLifecycleDispatcher.onConfigurationChanged(this, newConfig);
     }
 }

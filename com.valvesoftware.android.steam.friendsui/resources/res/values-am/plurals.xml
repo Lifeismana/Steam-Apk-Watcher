@@ -8,4 +8,8 @@
         <item quantity="one">በ%d ሰከንዶች ወደኋላ ይመልሱ</item>
         <item quantity="other">በ%d ሰከንዶች ወደኋላ ይመልሱ</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d አዲስ ማሳወቂያዎች</item>
+        <item quantity="other">%d አዲስ ማሳወቂያዎች</item>
+    </plurals>
 </resources>

@@ -9,7 +9,7 @@
         android:id="@+id/mtrl_calendar_main_pane"
         android:layout_width="wrap_content"
         android:layout_height="match_parent">
-        <FrameLayout
+        <androidx.fragment.app.FragmentContainerView
             android:id="@+id/mtrl_calendar_frame"
             android:paddingLeft="@dimen/mtrl_calendar_content_padding"
             android:paddingRight="@dimen/mtrl_calendar_content_padding"

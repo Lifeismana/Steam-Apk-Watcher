@@ -8,4 +8,8 @@
         <item quantity="one">Rudisha nyuma kwa sekunde %d</item>
         <item quantity="other">Rudisha nyuma kwa sekunde %d</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">Arifa %d mpya</item>
+        <item quantity="other">Arifa %d mpya</item>
+    </plurals>
 </resources>

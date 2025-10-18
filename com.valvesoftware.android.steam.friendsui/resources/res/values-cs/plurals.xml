@@ -12,4 +12,10 @@
         <item quantity="many">Přetočit zpět o %d sekundy</item>
         <item quantity="other">Přetočit zpět o %d sekund</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d nové oznámení</item>
+        <item quantity="few">%d nová oznámení</item>
+        <item quantity="many">%d nového oznámení</item>
+        <item quantity="other">%d nových oznámení</item>
+    </plurals>
 </resources>

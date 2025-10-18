@@ -1,7 +1,8 @@
 package org.intellij.lang.annotations;
 
+@Deprecated
 /* loaded from: classes4.dex */
-public class JdkConstants {
+public final class JdkConstants {
 
     public @interface AdjustableOrientation {
     }
@@ -22,6 +23,9 @@ public class JdkConstants {
     }
 
     public @interface HorizontalAlignment {
+    }
+
+    public @interface HorizontalScrollBarPolicy {
     }
 
     public @interface InputEventMask {
@@ -46,5 +50,12 @@ public class JdkConstants {
     }
 
     public @interface TreeSelectionMode {
+    }
+
+    public @interface VerticalScrollBarPolicy {
+    }
+
+    private JdkConstants() {
+        throw new AssertionError("JdkConstants should not be instantiated");
     }
 }

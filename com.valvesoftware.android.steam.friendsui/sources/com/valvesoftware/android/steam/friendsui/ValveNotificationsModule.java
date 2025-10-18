@@ -10,7 +10,6 @@ import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.common.LifecycleState;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
-import com.google.android.exoplayer2.text.ttml.TtmlNode;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.messaging.FirebaseMessaging;
@@ -21,7 +20,7 @@ import java.util.Iterator;
 import java.util.Map;
 import org.bouncycastle.i18n.MessageBundle;
 
-/* loaded from: classes2.dex */
+/* loaded from: classes3.dex */
 public class ValveNotificationsModule extends ReactContextBaseJavaModule {
     public static String MessageEventName = "NewNotification";
     public static String Name = "ValveNotifications";
@@ -63,7 +62,7 @@ public class ValveNotificationsModule extends ReactContextBaseJavaModule {
         WritableMap createMap2 = Arguments.createMap();
         Iterator<Map.Entry<String, String>> it = data.entrySet().iterator();
         if (remoteMessage.getNotification() != null) {
-            createMap2.putString(TtmlNode.TAG_BODY, remoteMessage.getNotification().getBody());
+            createMap2.putString("body", remoteMessage.getNotification().getBody());
             createMap2.putString(MessageBundle.TITLE_ENTRY, remoteMessage.getNotification().getTitle());
         }
         if (it != null) {

@@ -8,4 +8,8 @@
         <item quantity="one">ຖອຍຫຼັງ %d ວິນາທີ</item>
         <item quantity="other">ຖອຍຫຼັງ %d ວິນາທີ</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d ການແຈ້ງເຕືອນໃໝ່</item>
+        <item quantity="other">%d ການແຈ້ງເຕືອນໃໝ່</item>
+    </plurals>
 </resources>

@@ -8,4 +8,8 @@
         <item quantity="one">තත්පර %dක් ආපස්සට</item>
         <item quantity="other">තත්පර %dක් ආපස්සට</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">නව දැනුම්දීම් %dක්</item>
+        <item quantity="other">නව දැනුම්දීම් %dක්</item>
+    </plurals>
 </resources>

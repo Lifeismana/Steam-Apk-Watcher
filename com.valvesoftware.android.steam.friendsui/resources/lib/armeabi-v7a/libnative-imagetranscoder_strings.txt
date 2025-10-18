@@ -5,11 +5,15 @@
     with %d x %d thumbnail image
   Ss=%d, Se=%d, Ah=%d, Al=%d
  [enable_if:
+ at offset 
+ auto
  complex
- const
+ decltype(auto)
  imaginary
+ noexcept
+ requires 
  restrict
- vector[
+ typename 
  volatile
 $3br
 %&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
@@ -17,23 +21,22 @@ $3br
 %ld%c
 &'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
 'block-literal'
-'lambda
-'unnamed
+((ttypeEncoding == DW_EH_PE_absptr) || (ttypeEncoding == DW_EH_PE_pcrel) || (ttypeEncoding == (DW_EH_PE_pcrel | DW_EH_PE_indirect))) && "Unexpected TTypeEncoding"
 (Ljava/io/InputStream;Ljava/io/OutputStream;III)V
 ([BII)V
 (anonymous namespace)
+(base != 0) && "DW_EH_PE_datarel is invalid with a base of 0"
+, std::allocator<char>
 /TF<)VGy#WH
-/buildbot/src/android/ndk-release-r21/external/libcxx/../../external/libcxxabi/src/abort_message.cpp
-/buildbot/src/android/ndk-release-r21/external/libcxx/../../external/libunwind_llvm/src/Registers.hpp
-/buildbot/src/android/ndk-release-r21/external/libcxx/../../external/libunwind_llvm/src/Unwind-EHABI.cpp
-/buildbot/src/android/ndk-release-r21/external/libcxx/../../external/libunwind_llvm/src/UnwindCursor.hpp
 8d  15-Jan-2012
-::operator 
+::friend 
+<char, std::char_traits<char>
+> typename 
 A!;I2
 ALIGN_TYPE is wrong, please fix
 Adobe APP14 marker: version %d, flags 0x%04x 0x%04x, transform %d
 Ahd=<c]^7if1Rjg
-Android (6454773 based on r365631c2) clang version 9.0.8 (https://android.googlesource.com/toolchain/llvm-project 98c855489587874b2a325e7a516b99d838599c6f) (based on LLVM 9.0.8svn)
+Android (12285214, +pgo, +bolt, +lto, +mlgo, based on r522817b) clang version 18.0.2 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
 Application transferred too few scanlines
 Application transferred too many scanlines
 Arithmetic table 0x%02x was not defined
@@ -61,14 +64,14 @@ Cannot transcode due to multiple use of quantization table %d
 Caution: quantization tables are too coarse for baseline JPEG
 Closed temporary file %s
 Component index %d: mismatching sampling ratio %d:%d, %d:%d, %c
-Copyright (C) 1991-2017 The libjpeg-turbo Project and many others
+Copyright (C) @COPYRIGHT_YEAR@ The libjpeg-turbo Project and many others
 Corrupt JPEG data: %u extraneous bytes before marker 0x%02x
 Corrupt JPEG data: bad Huffman code
+Corrupt JPEG data: bad ICC marker
 Corrupt JPEG data: bad arithmetic code
 Corrupt JPEG data: found marker 0x%02x instead of RST%d
 Corrupt JPEG data: premature end of data segment
 Could not register JpegTranscoder methods
-Could not write scanline
 DCT coefficient out of range
 Da\">c]$8c^
 Define Arithmetic Table 0x%02x: 0x%02x
@@ -101,9 +104,11 @@ Invalid JPEG file structure: missing SOS marker
 Invalid JPEG file structure: two SOF markers
 Invalid JPEG file structure: two SOI markers
 Invalid SOS parameters for sequential JPEG
+Invalid access!
 Invalid color quantization mode change
 Invalid component ID %d in SOS
 Invalid crop request
+Invalid descriptor kind found.
 Invalid memory pool code %d
 Invalid progressive parameters Ss=%d Se=%d Ah=%d Al=%d
 Invalid progressive parameters at scan script entry %d
@@ -122,6 +127,7 @@ JSIMD_FORCENONE
 JSIMD_NOHUFFENC
 KNQ\rMO
 LIBC
+Linker: LLD 18.0.2
 Lkh9Fgc^A
 MAX_ALLOC_CHUNK is wrong, please fix
 MQC,ARD
@@ -141,21 +147,27 @@ N10__cxxabiv123__fundamental_type_infoE
 N10__cxxabiv129__pointer_to_member_type_infoE
 N12_GLOBAL__N_116itanium_demangle10AbiTagAttrE
 N12_GLOBAL__N_116itanium_demangle10BinaryExprE
+N12_GLOBAL__N_116itanium_demangle10BitIntTypeE
 N12_GLOBAL__N_116itanium_demangle10BracedExprE
 N12_GLOBAL__N_116itanium_demangle10DeleteExprE
+N12_GLOBAL__N_116itanium_demangle10LambdaExprE
 N12_GLOBAL__N_116itanium_demangle10MemberExprE
+N12_GLOBAL__N_116itanium_demangle10ModuleNameE
 N12_GLOBAL__N_116itanium_demangle10NestedNameE
 N12_GLOBAL__N_116itanium_demangle10PrefixExprE
-N12_GLOBAL__N_116itanium_demangle10UUIDOfExprE
 N12_GLOBAL__N_116itanium_demangle10VectorTypeE
+N12_GLOBAL__N_116itanium_demangle11EnumLiteralE
 N12_GLOBAL__N_116itanium_demangle11PointerTypeE
 N12_GLOBAL__N_116itanium_demangle11PostfixExprE
 N12_GLOBAL__N_116itanium_demangle11SpecialNameE
+N12_GLOBAL__N_116itanium_demangle12BinaryFPTypeE
 N12_GLOBAL__N_116itanium_demangle12CtorDtorNameE
 N12_GLOBAL__N_116itanium_demangle12EnableIfAttrE
 N12_GLOBAL__N_116itanium_demangle12FunctionTypeE
 N12_GLOBAL__N_116itanium_demangle12InitListExprE
+N12_GLOBAL__N_116itanium_demangle12ModuleEntityE
 N12_GLOBAL__N_116itanium_demangle12NoexceptSpecE
+N12_GLOBAL__N_116itanium_demangle12RequiresExprE
 N12_GLOBAL__N_116itanium_demangle12TemplateArgsE
 N12_GLOBAL__N_116itanium_demangle13EnclosingExprE
 N12_GLOBAL__N_116itanium_demangle13FunctionParamE
@@ -164,20 +176,24 @@ N12_GLOBAL__N_116itanium_demangle13ObjCProtoNameE
 N12_GLOBAL__N_116itanium_demangle13ParameterPackE
 N12_GLOBAL__N_116itanium_demangle13QualifiedNameE
 N12_GLOBAL__N_116itanium_demangle13ReferenceTypeE
+N12_GLOBAL__N_116itanium_demangle13StringLiteralE
+N12_GLOBAL__N_116itanium_demangle13SubobjectExprE
 N12_GLOBAL__N_116itanium_demangle14ConversionExprE
 N12_GLOBAL__N_116itanium_demangle14IntegerLiteralE
 N12_GLOBAL__N_116itanium_demangle15BracedRangeExprE
 N12_GLOBAL__N_116itanium_demangle15ClosureTypeNameE
 N12_GLOBAL__N_116itanium_demangle15ConditionalExprE
-N12_GLOBAL__N_116itanium_demangle15IntegerCastExprE
+N12_GLOBAL__N_116itanium_demangle15ExprRequirementE
 N12_GLOBAL__N_116itanium_demangle15LiteralOperatorE
 N12_GLOBAL__N_116itanium_demangle15PixelVectorTypeE
+N12_GLOBAL__N_116itanium_demangle15TransformedTypeE
+N12_GLOBAL__N_116itanium_demangle15TypeRequirementE
 N12_GLOBAL__N_116itanium_demangle15UnnamedTypeNameE
 N12_GLOBAL__N_116itanium_demangle16FloatLiteralImplIdEE
 N12_GLOBAL__N_116itanium_demangle16FloatLiteralImplIeEE
 N12_GLOBAL__N_116itanium_demangle16FloatLiteralImplIfEE
 N12_GLOBAL__N_116itanium_demangle16FunctionEncodingE
-N12_GLOBAL__N_116itanium_demangle16StdQualifiedNameE
+N12_GLOBAL__N_116itanium_demangle17NestedRequirementE
 N12_GLOBAL__N_116itanium_demangle17VendorExtQualTypeE
 N12_GLOBAL__N_116itanium_demangle18ArraySubscriptExprE
 N12_GLOBAL__N_116itanium_demangle19GlobalQualifiedNameE
@@ -185,16 +201,26 @@ N12_GLOBAL__N_116itanium_demangle19PointerToMemberTypeE
 N12_GLOBAL__N_116itanium_demangle19SizeofParamPackExprE
 N12_GLOBAL__N_116itanium_demangle19SpecialSubstitutionE
 N12_GLOBAL__N_116itanium_demangle20DynamicExceptionSpecE
+N12_GLOBAL__N_116itanium_demangle20MemberLikeFriendNameE
 N12_GLOBAL__N_116itanium_demangle20NameWithTemplateArgsE
 N12_GLOBAL__N_116itanium_demangle20PostfixQualifiedTypeE
 N12_GLOBAL__N_116itanium_demangle20TemplateArgumentPackE
 N12_GLOBAL__N_116itanium_demangle21CtorVtableSpecialNameE
 N12_GLOBAL__N_116itanium_demangle21StructuredBindingNameE
+N12_GLOBAL__N_116itanium_demangle21TemplateParamPackDeclE
+N12_GLOBAL__N_116itanium_demangle21TypeTemplateParamDeclE
 N12_GLOBAL__N_116itanium_demangle22ConversionOperatorTypeE
 N12_GLOBAL__N_116itanium_demangle22ElaboratedTypeSpefTypeE
 N12_GLOBAL__N_116itanium_demangle22ParameterPackExpansionE
+N12_GLOBAL__N_116itanium_demangle23ExplicitObjectParameterE
 N12_GLOBAL__N_116itanium_demangle24ForwardTemplateReferenceE
+N12_GLOBAL__N_116itanium_demangle24NonTypeTemplateParamDeclE
+N12_GLOBAL__N_116itanium_demangle25TemplateParamQualifiedArgE
+N12_GLOBAL__N_116itanium_demangle25TemplateTemplateParamDeclE
+N12_GLOBAL__N_116itanium_demangle26SyntheticTemplateParamNameE
 N12_GLOBAL__N_116itanium_demangle27ExpandedSpecialSubstitutionE
+N12_GLOBAL__N_116itanium_demangle29PointerToMemberConversionExprE
+N12_GLOBAL__N_116itanium_demangle32ConstrainedTypeTemplateParamDeclE
 N12_GLOBAL__N_116itanium_demangle4NodeE
 N12_GLOBAL__N_116itanium_demangle7NewExprE
 N12_GLOBAL__N_116itanium_demangle8BoolExprE
@@ -209,7 +235,6 @@ N12_GLOBAL__N_116itanium_demangle9DotSuffixE
 N12_GLOBAL__N_116itanium_demangle9LocalNameE
 N12_GLOBAL__N_116itanium_demangle9ThrowExprE
 Not a JPEG file: starts with 0x%02x 0x%02x
-Not implemented yet
 Obtained EMS handle %u
 Obtained XMS handle %u
 Opened temporary file %s
@@ -219,8 +244,10 @@ PKDi
 PKDn
 PKDs
 PKDu
+Popping empty vector!
 Premature end of JPEG file
 Premature end of input file
+ProcessDescriptors
 Pure virtual function called!
 Q2XXR
 Quantization table 0x%02x was not defined
@@ -231,6 +258,7 @@ Read failed on temporary file
 Read from EMS failed
 Read from XMS failed
 Requested feature was omitted at compile time
+Requested features are incompatible
 Sampling factors too large for interleaved scan
 Scan script does not transmit all data
 Seek failed on temporary file
@@ -248,6 +276,7 @@ Start Of Scan: %d components
 Start of Image
 Suspension not allowed here
 Too many color components: %d, max %d
+Type matching not implemented
 Ua9enable_ifI
 Unexpected marker 0x%02x
 Unknown APP0 marker (not JFIF), length %u
@@ -269,11 +298,9 @@ Write failed on temporary file --- out of disk space?
 Write to EMS failed
 Write to XMS failed
 Wrong JPEG library version: library is %d, caller expects %d
-Wrong pixel format for jpeg encoding
 YpU_Z
 Z@&LHA'\r:C(
 Zpm"U
-[abi:
 \tN1a
 _GLOBAL__N
 _Unwind_Resume
@@ -290,7 +317,6 @@ __aeabi_memmove
 __aeabi_memmove4
 __android_log_print
 __assert2
-__bss_start
 __cxa_allocate_dependent_exception
 __cxa_allocate_exception
 __cxa_atexit
@@ -320,41 +346,41 @@ __cxa_throw
 __cxa_uncaught_exception
 __cxa_uncaught_exceptions
 __cxa_unexpected_handler
-__cxxabiv1::__getExceptionClass(_Unwind_Control_Block const*)
-__cxxabiv1::__isOurExceptionClass(_Unwind_Control_Block const*)
-__cxxabiv1::__setExceptionClass(_Unwind_Control_Block*, unsigned long long)
 __dynamic_cast
-__errno
+__emutls_get_address
 __float128
-__gnu_Unwind_Find_exidx
 __gxx_personality_v0
 __int128
+__memcpy_chk
 __stack_chk_fail
 __stack_chk_guard
-__uuidof(
+__strlen_chk
+__uuidof
+__vsnprintf_chk
 _block_invoke
-_edata
-_end
 abort
-abort_message
-alignof (
+actions & (_UA_SEARCH_PHASE | _UA_FORCE_UNWIND)
+actions & (_UA_SEARCH_PHASE | _UA_HANDLER_FRAME | _UA_FORCE_UNWIND)
+actions & _UA_SEARCH_PHASE
+alignof 
 allocator
+android_set_abort_message
 auto
 bad_array_new_length
+basic_
 basic_iostream
 basic_istream
 basic_ostream
 basic_string
 bool
-calloc
-cannot allocate __cxa_eh_globals
-cannot create thread specific key for __cxa_get_globals()
-cannot zero out thread value for __cxa_get_globals()
+bool __cxxabiv1::exception_spec_can_catch(int64_t, const uint8_t *, uint8_t, const __shim_type_info *, void *, _Unwind_Control_Block *, uintptr_t)
 char
 char16_t
 char32_t
 char8_t
+closelog
 com/facebook/imagepipeline/nativecode/NativeJpegTranscoder
+const __shim_type_info *__cxxabiv1::get_shim_type_info(uint64_t, const uint8_t *, uint8_t, bool, _Unwind_Control_Block *, uintptr_t)
 const_cast
 construction vtable for 
 could not find InputStream
@@ -364,18 +390,15 @@ could not find RuntimeException class
 could not register JpegTranscoder methods
 covariant return thunk to 
 decimal128
-decimal16
 decimal32
 decimal64
-decltype(
+decltype
 decltype(auto)
-delete
-dladdr
+dl_unwind_find_exidx
 double
 during phase1 personality function said it would stop here, but now in phase2 it did not stop here
 dynamic_cast
 enum
-execute once failure in __cxa_get_globals_fast()
 exit
 failed to register InputStream.read
 failed to register InputStream.skip
@@ -386,51 +409,54 @@ float
 fprintf
 fputc
 free
+fwrite
 getFloatRegister
 getInfoFromEHABISection
 getRegister
 getenv
 guard variable for 
-http://ns.adobe.com/xap/1.0/
+half
 index inlined table detected but pr function requires extra words
+initializer for module 
 invocation function for block in 
-iostream
-islower
-istream
-isxdigit
 j'Vlk
-jRuntimeExceptionclass
 java/io/InputStream
 java/io/OutputStream
 java/lang/RuntimeException
+length_error was thrown in -fno-exceptions mode with message "%s"
+libc++
+libc++abi
+libc++abi: 
 libc.so
 libdl.so
-libjpeg-turbo version 1.5.3 (build 20180808)
+libjpeg-turbo version 2.1.5.1 (build 20240418)
 liblog.so
 libm.so
 libnative-imagetranscoder
 libnative-imagetranscoder.so
-libunwind: %s %s:%d - %s\n
+libunwind: %s - %s\n
 long
 long double
 long long
 longjmp
 malloc
-memalign
-midInputStreamRead
-midInputStreamSkip
-midOutputStreamWrite
-midOutputStreamWriteWithBounds
+memchr
+memcmp
+memcpy
+memset
 nativeTranscodeJpeg
 nativeTranscodeJpegWithExifOrientation
 no transformation to perform
 noexcept
-noexcept (
-noexcept(
+noexcept 
 non-virtual thunk to 
+nullptr
 objc_object
 objcproto
+openlog
+operator
 operator 
+operator co_await
 operator delete
 operator delete(void*)
 operator delete(void*, std::align_val_t)
@@ -445,6 +471,7 @@ operator delete[](void*, std::align_val_t, std::nothrow_t const&)
 operator delete[](void*, std::nothrow_t const&)
 operator delete[](void*, unsigned int)
 operator delete[](void*, unsigned int, std::align_val_t)
+operator name does not start with 'operator'
 operator new
 operator new(unsigned int)
 operator new(unsigned int, std::align_val_t)
@@ -475,6 +502,8 @@ operator--
 operator-=
 operator->
 operator->*
+operator.
+operator.*
 operator/
 operator/=
 operator<
@@ -496,17 +525,22 @@ operator|
 operator|=
 operator||
 operator~
-ostream
+out/llvm-project/libcxxabi/src/cxa_demangle.cpp
+out/llvm-project/libcxxabi/src/cxa_personality.cpp
+out/llvm-project/libcxxabi/src/demangle/ItaniumDemangle.h
+out/llvm-project/libcxxabi/src/demangle/Utility.h
+out/llvm-project/libcxxabi/src/fallback_malloc.cpp
 pixel vector[
+posix_memalign
 pthread_getspecific
 pthread_key_create
+pthread_key_delete
 pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once
 pthread_setspecific
 quality should not be greater than 100
 quality should not be lower than 1
-raise
 read
 realloc
 reference temporary for 
@@ -518,19 +552,16 @@ setFloatRegister
 setRegister
 setjmp
 short
+shrinkToSize() can't expand!
 signed char
-sizeof (
-sizeof... (
-sizeof...(
+sizeof 
+sizeof...
+sizeof... 
 skip
 snprintf
-sprintf
 sscanf
 static_cast
-std::
-std::__libcpp_tls_set failure in __cxa_get_globals()
-std::__throw_bad_alloc()
-std::allocator
+std::__ndk1::__libcpp_verbose_abort(char const*, ...)
 std::bad_alloc
 std::bad_alloc::bad_alloc()
 std::bad_alloc::what() const
@@ -549,47 +580,39 @@ std::bad_typeid
 std::bad_typeid::bad_typeid()
 std::bad_typeid::what() const
 std::bad_typeid::~bad_typeid()
-std::basic_iostream<char, std::char_traits<char> >
-std::basic_istream<char, std::char_traits<char> >
-std::basic_ostream<char, std::char_traits<char> >
-std::basic_string
-std::basic_string<char, std::char_traits<char>, std::allocator<char> >
 std::exception
 std::exception::what() const
 std::exception::~exception()
 std::get_new_handler()
 std::get_terminate()
 std::get_unexpected()
-std::iostream
-std::istream
-std::nothrow
 std::nullptr_t
-std::ostream
 std::set_new_handler(void (*)())
 std::set_terminate(void (*)())
 std::set_unexpected(void (*)())
-std::string
 std::terminate()
 std::type_info::~type_info()
 std::unexpected()
 strcmp
-string
 string literal
 strlen
+strncpy
 struct
+syslog
+template parameter object for 
+template<
 terminate_handler unexpectedly returned
 terminate_handler unexpectedly threw an exception
 terminating
-terminating with %s exception of type %s
-terminating with %s exception of type %s: %s
-terminating with %s foreign exception
+terminating due to %s exception of type %s
+terminating due to %s exception of type %s: %s
+terminating due to %s foreign exception
+this
 thread-local initialization routine for 
 thread-local wrapper routine for 
 throw
-throw 
-throw(
 true
-typeid (
+typeid 
 typeinfo for 
 typeinfo for __cxxabiv1::__array_type_info
 typeinfo for __cxxabiv1::__class_type_info
@@ -778,14 +801,15 @@ typeinfo name for void*
 typeinfo name for wchar_t
 typeinfo name for wchar_t const*
 typeinfo name for wchar_t*
-u8__uuidoft
-u8__uuidofz
+typename 
+uintptr_t __cxxabiv1::readEncodedPointer(const uint8_t **, uint8_t, uintptr_t)
 uncaught
 unexpected
 unexpected_handler unexpectedly returned
 union
 unknown personality routine
 unknown register
+unsigned 
 unsigned __int128
 unsigned char
 unsigned int
@@ -796,9 +820,11 @@ unsupported arm register
 unsupported register class
 unwind_phase2
 vasprintf
+vector
 vfprintf
 virtual thunk to 
 void
+void __cxxabiv1::scan_eh_tab(scan_results &, _Unwind_Action, bool, _Unwind_Control_Block *, _Unwind_Context *)
 vtable for 
 vtable for __cxxabiv1::__array_type_info
 vtable for __cxxabiv1::__class_type_info
@@ -823,3 +849,4 @@ write
 wrong exif orientation
 wrong rotation angle
 wrong scale denominator
+yptnk

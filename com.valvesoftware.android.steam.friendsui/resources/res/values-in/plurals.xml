@@ -8,4 +8,8 @@
         <item quantity="one">Mundur %d detik</item>
         <item quantity="other">Mundur %d detik</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d notifikasi baru</item>
+        <item quantity="other">%d notifikasi baru</item>
+    </plurals>
 </resources>

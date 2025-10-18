@@ -44,6 +44,8 @@
     <drawable name="exo_styled_controls_subtitle_off">@drawable/exo_ic_subtitle_off</drawable>
     <drawable name="exo_styled_controls_subtitle_on">@drawable/exo_ic_subtitle_on</drawable>
     <drawable name="exo_styled_controls_vr">@drawable/exo_icon_vr</drawable>
+    <drawable name="material_ic_keyboard_arrow_next_black_24dp">@drawable/material_ic_keyboard_arrow_right_black_24dp</drawable>
+    <drawable name="material_ic_keyboard_arrow_previous_black_24dp">@drawable/material_ic_keyboard_arrow_left_black_24dp</drawable>
     <drawable name="notification_template_icon_bg">#3333b5e5</drawable>
     <drawable name="notification_template_icon_low_bg">#0cffffff</drawable>
 </resources>

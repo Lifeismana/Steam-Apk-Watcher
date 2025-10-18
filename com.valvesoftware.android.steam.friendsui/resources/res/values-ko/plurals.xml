@@ -8,4 +8,8 @@
         <item quantity="one">%d초 되감기</item>
         <item quantity="other">%d초 되감기</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">새 알림 %d개</item>
+        <item quantity="other">새 알림 %d개</item>
+    </plurals>
 </resources>

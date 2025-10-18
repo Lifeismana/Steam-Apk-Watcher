@@ -8,4 +8,8 @@
         <item quantity="one">Siirry taaksepäin %d sekunti</item>
         <item quantity="other">Siirry taaksepäin %d sekuntia</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d uusi ilmoitus</item>
+        <item quantity="other">%d uutta ilmoitusta</item>
+    </plurals>
 </resources>

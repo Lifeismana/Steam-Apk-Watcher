@@ -16,6 +16,6 @@ public class ColorMatrixImageFiltersPackage implements ReactPackage {
 
     @Override // com.facebook.react.ReactPackage
     public List<ViewManager> createViewManagers(ReactApplicationContext reactApplicationContext) {
-        return Collections.singletonList(new ColorMatrixImageFilterManager());
+        return Collections.singletonList(new ColorMatrixImageFilterManager(reactApplicationContext));
     }
 }

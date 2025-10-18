@@ -10,4 +10,9 @@
         <item quantity="few">Premotajte %d sekunde unazad</item>
         <item quantity="other">Premotajte %d sekundi unazad</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d novo obaveštenje</item>
+        <item quantity="few">%d nova obaveštenja</item>
+        <item quantity="other">%d novih obaveštenja</item>
+    </plurals>
 </resources>

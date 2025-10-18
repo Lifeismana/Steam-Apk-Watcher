@@ -1,7 +1,7 @@
                                                                                 
           \t
- Buffer size 
- and has protection mode(s): 
+ !"#$%&'()*+,-./0123@@@@@
+ 71/J
  but got 
  bytes
  bytes but got 
@@ -9,11 +9,15 @@
  eKK
  expected
  frames
+ has been modified
+ in the catch clause in strict mode
  is configurable or non-existent
  is not a Proxy trap function
  is not a function
  is not a function (it is 
+ is not a valid identifier codepoint
  is not a valid identifier start
+ is not an object
  is not extensible (getOwnPropertyDescriptor target)
  is not undefined or Object (Proxy getOwnPropertyDescriptor)
  is out of bounds [0, 
@@ -22,10 +26,10 @@
  ownKeys trap result is not an Object
  properties
  property '
- starts with: 
  to BigInt
  to BigInt.toString
  to bigint
+ was deleted
  which has only a getter
 " was not declared in 
 " was set multiple times in the object definition.
@@ -36,15 +40,16 @@
 %02d:%02d:%02d.%03dZ
 %04d-%02d-%02d
 %c%02d%02d
-%llx-%llx %4s
 %s %s %02d %0.4d
 %s, %02d %s %0.4d 
 ' doesn't exist
+' has already been declared
 ' is already defined
 ' is already present
 ' is not a loop label
 ' is not configurable
 ' is not defined
+' previously defined here.
 ' which has only a getter
 '...' not allowed in this context
 ': <unknown exception>
@@ -80,10 +85,11 @@
 () { [native code] }
 ()Ljava/lang/String;
 ()Ljava/util/Map;
+(@RUNNING_CRITICAL
 (D)Ljava/lang/Double;
 (D)Ljava/lang/String;
 (D)Ljava/util/List;
-(InternalProperty0)(InternalProperty1)(InternalProperty2)(InternalProperty3)(InternalProperty4)(InternalProperty5)(InternalProperty6)(InternalPropertyNamedPropForUnitTestOnly)(InternalPropertyCapturedError)(InternalPropertyIntlNativeType)(InternalPropertyNativeState)(InternalPropertyArrayBufferExternalFinalizer), anonymousundefinednullnumberbigintstringdefaultbooleansymbolobjectfunctiontoStringdescriptiontoLocaleStringhasOwnPropertyhasOwnisPrototypeOfpropertyIsEnumerablevalueOftruefalseNaN0Infinity+Infinity-InfinityprintevalquitparseIntparseFloatisNaNisFiniteescapeunescapedecodeURIdecodeURIComponentencodeURIencodeURIComponentprototypeconstructorObjectvaluewritableenumerableconfigurablegetsetgetPrototypeOfsetPrototypeOfgetOwnPropertyDescriptorgetOwnPropertyDescriptorsgetOwnPropertyNamesgetOwnPropertySymbolssealfreezefromEntriescreatedefinePropertydefinePropertiespreventExtensionsisisSealedisFrozenisExtensiblekeyslength__proto____defineGetter____defineSetter____lookupGetter____lookupSetter__assignrawglobalThisBigIntasIntNasUintNStringfromCharCodefromCodePointcharAtcharCodeAtcodePointAtconcatendsWithslicestartsWithsubstringtoLowerCasetoLocaleLowerCasetoUpperCasetoLocaleUpperCasesubstrtrimtrimLefttrimRightindexOflastIndexOflocaleComparematchmatchAllnormalizepadEndpadStartrepeatreplacereplaceAllsearchsplittrimStarttrimEndFunctioncalleecallerargumentscallapplybindgcnamedisplayNamemessagecausestackStacktrace too longcaptureStackTraceprepareStackTraceErrorAggregateErrorEvalErrorRangeErrorReferenceErrorSyntaxErrorTypeErrorURIErrorTimeoutErrorQuitErrorerrorsCallSitegetColumnNumbergetBytecodeAddressgetEvalOrigingetFileNamegetFunctiongetFunctionNamegetLineNumbergetMethodNamegetPromiseIndexgetThisgetTypeNameisAsyncisConstructorisEvalisPromiseAllisToplevelArrayArray IteratorisArrayatjoinpushpopreverseshiftsortspliceunshifteverysomeforEachmapfilterreducereduceRightfindfindIndexfindLastfindLastIndexincludessubarrayflatflatMapArrayBufferbyteLengthisViewbufferbyteOffsetcopyWithinentriesTypedArrayBYTES_PER_ELEMENTfromofInt8ArrayInt16ArrayInt32ArrayUint8ArrayUint8ClampedArrayUint16ArrayUint32ArrayFloat32ArrayFloat64ArrayBigInt64ArrayBigUint64ArrayDataViewgetInt8setInt8getInt16setInt16getInt32setInt32getUint8setUint8getUint16setUint16getUint32setUint32getFloat32setFloat32getFloat64setFloat64getBigInt64setBigInt64getBigUint64setBigUint64fillSetSet IteratorMapMap IteratoraddcleardeletehassizevaluesnextdonereturnNumberMAX_VALUEMIN_VALUENEGATIVE_INFINITYPOSITIVE_INFINITYEPSILONMAX_SAFE_INTEGERMIN_SAFE_INTEGERtoFixedtoExponentialtoPrecisionisIntegerisSafeIntegerBooleanString IteratorRegExp String IteratorDateUTCparsenowtoISOStringtoUTCStringtoGMTStringtoLocaleDateStringtoLocaleTimeStringtoJSONgetTimegetFullYeargetYeargetMonthgetDategetDaygetHoursgetMinutesgetSecondsgetMillisecondsgetUTCFullYeargetUTCMonthgetUTCDategetUTCDaygetUTCHoursgetUTCMinutesgetUTCSecondsgetUTCMillisecondsgetTimezoneOffsetsetTimesetFullYearsetYearsetMonthsetDatesetHourssetMinutessetSecondssetMillisecondssetUTCFullYearsetUTCMonthsetUTCDatesetUTCHourssetUTCMinutessetUTCSecondssetUTCMillisecondstoDateStringtoTimeStringInvalid DateRegExpexectestindexinputflagssourceglobalgroupsignoreCasemultilineunicodestickydotAlllastIndex$1$2$3$4$5$6$7$8$9$`leftContext$'rightContext$_$&lastMatch$+lastParenMathELN10LN2LOG2ELOG10EPISQRT1_2SQRT2absacosacoshasinasinhatanatanhatan2cbrtceilclz32coscoshexpexpm1floorhypotloglog10log1plog2truncfroundmaxminimulpowrandomroundsignsinsinhsqrttantanhJSONstringifyWeakMapWeakSetWeakRefderefSymbolforkeyForhasInstanceisConcatSpreadableiteratortoPrimitivetoStringTagGeneratorthrowGeneratorFunctionAsyncFunctionProxyReflectconstructdeletePropertyownKeysproxyproxy traprevocablerevokeHermesInternaldetachArrayBuffercreateHeapSnapshothasPromiseuseEngineQueueenqueueJobdrainJobsgetEpiloguesgetWeakSizesilentSetPrototypeOfgetInstrumentedStatsgetRuntimePropertiesttiReachedttrcReachedreturn thisgetTemplateObjectensureObjectgetMethodthrowTypeErrorgeneratorSetDelegatedcopyDataPropertiescopyRestArgsarraySpreadexportAllexponentiationOperatorinitRegexNamedGroupsgetFunctionLocationgetOriginalNativeErrorConstructorisNativelineNumbercolumnNumbersegmentIDvirtualOffsetfileNamesetPromiseRejectionTrackingHookenablePromiseRejectionTrackerspawnAsyncrequirerequireFastcontextexports./?default[object Undefined][object Null][object global][Symbol.hasInstance][Symbol.iterator][Symbol.toPrimitive][Symbol.toStringTag][Symbol.match][Symbol.matchAll][Symbol.search][Symbol.replace][Symbol.split]CollatorIntl.CollatorDateTimeFormatIntl.DateTimeFormatNumberFormatIntl.NumberFormatIntlcompareformatformatToPartsgetCanonicalLocalesresolvedOptionssupportedLocalesOf[object Object][object DecoratedObject][object Error][object CallSite][object Arguments][object Array][object ArrayBuffer][object DataView][object Int8Array][object Int16Array][object Int32Array][object Uint8Array][object Uint8ClampedArray][object Uint16Array][object Uint32Array][object Float32Array][object Float64Array][object BigInt64Array][object BigUint64Array][object Array Iterator][object Set][object Map][object Set Iterator][object Map Iterator][object WeakMap][object WeakSet][object WeakRef][object Boolean][object String][object Number][object Symbol][object String Iterator][object JSON][object Math][object Date][object RegExp][object RegExp String Iterator][object RequireContext][object Generator][object Proxy][object BigInt][object CallableProxy][object Function]nativePerformanceNownativeLoggingHooknativeQPLMarkerPointjsEnginenativeCallSyncHooknativeFlushQueueImmediatenativeTraceBeginSectionnativeTraceEndSectionnativeTraceBeginAsyncSectionnativeTraceEndAsyncSectionnativeTraceCounternativeModuleProxynativeGetThreadCpuTimeMillisnativeQPLTimestampnativeQPLMarkerStartnativeQPLMarkerEndnativeQPLMarkerNotenativeQPLMarkerTagnativeQPLMarkerAnnotatenativeGetThreadMajorPageFaults__jsiExecutorDescriptionnativeTraceIsTracingSymbol.hasInstanceSymbol.iteratorSymbol.isConcatSpreadableSymbol.toPrimitiveSymbol.toStringTagSymbol.matchSymbol.matchAllSymbol.searchSymbol.replaceSymbol.split
+(InternalProperty0)(InternalProperty1)(InternalProperty2)(InternalProperty3)(InternalProperty4)(InternalProperty5)(InternalProperty6)(InternalPropertyNamedPropForUnitTestOnly)(InternalPropertyCapturedError)(InternalPropertyIntlNativeType)(InternalPropertyNativeState)(InternalPropertyArrayBufferExternalFinalizer)(InternalPropertyExternalMemoryPressure)(InternalPropertyTextEncoderType), anonymousundefinednullnumberbigintstringdefaultbooleansymbolobjectfunctiontoStringdescriptiontoLocaleStringhasOwnPropertyhasOwnisPrototypeOfpropertyIsEnumerablevalueOftruefalseNaN0Infinity+Infinity-InfinityprintevalquitparseIntparseFloatisNaNisFiniteescapeunescapeatobbtoadecodeURIdecodeURIComponentencodeURIencodeURIComponentprototypeconstructorObjectvaluewritableenumerableconfigurablegetsetgetPrototypeOfsetPrototypeOfgetOwnPropertyDescriptorgetOwnPropertyDescriptorsgetOwnPropertyNamesgetOwnPropertySymbolssealfreezefromEntriescreatedefinePropertydefinePropertiespreventExtensionsisisSealedisFrozenisExtensiblekeyslength__proto____defineGetter____defineSetter____lookupGetter____lookupSetter__assignrawglobalThisBigIntasIntNasUintNStringfromCharCodefromCodePointcharAtcharCodeAtcodePointAtconcatendsWithslicestartsWithsubstringtoLowerCasetoLocaleLowerCasetoUpperCasetoLocaleUpperCasesubstrtrimtrimLefttrimRightindexOflastIndexOflocaleComparematchmatchAllnormalizepadEndpadStartrepeatreplacereplaceAllsearchsplittrimStarttrimEndFunctioncalleecallerargumentscallapplybindgcnamedisplayNamemessagecausestackStacktrace too longcaptureStackTraceprepareStackTraceErrorAggregateErrorEvalErrorRangeErrorReferenceErrorSyntaxErrorTypeErrorURIErrorTimeoutErrorQuitErrorerrorsCallSitegetColumnNumbergetBytecodeAddressgetEvalOrigingetFileNamegetFunctiongetFunctionNamegetLineNumbergetMethodNamegetPromiseIndexgetThisgetTypeNameisAsyncisConstructorisEvalisPromiseAllisToplevelArrayArray IteratorisArrayatjoinpushpopreverseshiftsortspliceunshifteverysomeforEachmapfilterreducereduceRightfindfindIndexfindLastfindLastIndexincludessubarrayflatflatMaptoReversedtoSplicedwithArrayBufferbyteLengthisViewbufferbyteOffsetcopyWithinentriesTypedArrayBYTES_PER_ELEMENTfromofInt8ArrayInt16ArrayInt32ArrayUint8ArrayUint8ClampedArrayUint16ArrayUint32ArrayFloat32ArrayFloat64ArrayBigInt64ArrayBigUint64ArrayDataViewgetInt8setInt8getInt16setInt16getInt32setInt32getUint8setUint8getUint16setUint16getUint32setUint32getFloat32setFloat32getFloat64setFloat64getBigInt64setBigInt64getBigUint64setBigUint64fillSetSet IteratorMapMap IteratoraddcleardeletehassizevaluesnextdonereturnNumberMAX_VALUEMIN_VALUENEGATIVE_INFINITYPOSITIVE_INFINITYEPSILONMAX_SAFE_INTEGERMIN_SAFE_INTEGERtoFixedtoExponentialtoPrecisionisIntegerisSafeIntegerBooleanString IteratorRegExp String IteratorDateUTCparsenowtoISOStringtoUTCStringtoGMTStringtoLocaleDateStringtoLocaleTimeStringtoJSONgetTimegetFullYeargetYeargetMonthgetDategetDaygetHoursgetMinutesgetSecondsgetMillisecondsgetUTCFullYeargetUTCMonthgetUTCDategetUTCDaygetUTCHoursgetUTCMinutesgetUTCSecondsgetUTCMillisecondsgetTimezoneOffsetsetTimesetFullYearsetYearsetMonthsetDatesetHourssetMinutessetSecondssetMillisecondssetUTCFullYearsetUTCMonthsetUTCDatesetUTCHourssetUTCMinutessetUTCSecondssetUTCMillisecondstoDateStringtoTimeStringInvalid DateRegExpexectestindexinputflagssourceglobalgroupsignoreCasemultilineunicodestickydotAllindiceshasIndiceslastIndex$1$2$3$4$5$6$7$8$9$`leftContext$'rightContext$_$&lastMatch$+lastParenMathELN10LN2LOG2ELOG10EPISQRT1_2SQRT2absacosacoshasinasinhatanatanhatan2cbrtceilclz32coscoshexpexpm1floorhypotloglog10log1plog2truncfroundmaxminimulpowrandomroundsignsinsinhsqrttantanhJSONstringifyWeakMapWeakSetWeakRefderefSymbolforkeyForhasInstanceisConcatSpreadableiteratortoPrimitivetoStringTagGeneratorthrowGeneratorFunctionAsyncFunctionProxyReflectconstructdeletePropertyownKeysproxyproxy traprevocablerevokeHermesInternaldetachArrayBuffercreateHeapSnapshothasPromisehasES6ClassuseEngineQueueenqueueJobdrainJobsgetEpiloguesgetWeakSizesilentSetPrototypeOfgetInstrumentedStatsgetRuntimePropertiesttiReachedttrcReachedreturn thisgetTemplateObjectensureObjectgetMethodthrowTypeErrorgeneratorSetDelegatedcopyDataPropertiescopyRestArgsarraySpreadexportAllexponentiationOperatorinitRegexNamedGroupsgetFunctionLocationgetOriginalNativeErrorConstructorisNativelineNumbercolumnNumbersegmentIDvirtualOffsetfileNamesetPromiseRejectionTrackingHookenablePromiseRejectionTrackerspawnAsyncrequirerequireFastcontextexports./?default[object Undefined][object Null][object global][Symbol.hasInstance][Symbol.iterator][Symbol.toPrimitive][Symbol.toStringTag][Symbol.match][Symbol.matchAll][Symbol.search][Symbol.replace][Symbol.split]TextEncoderencodeencodeIntoreadwrittenencodingutf-8CollatorIntl.CollatorDateTimeFormatIntl.DateTimeFormatNumberFormatIntl.NumberFormatIntlcompareformatformatToPartsgetCanonicalLocalesresolvedOptionssupportedLocalesOf[object Object][object DecoratedObject][object Error][object CallSite][object Arguments][object Array][object ArrayBuffer][object DataView][object Int8Array][object Int16Array][object Int32Array][object Uint8Array][object Uint8ClampedArray][object Uint16Array][object Uint32Array][object Float32Array][object Float64Array][object BigInt64Array][object BigUint64Array][object Array Iterator][object Set][object Map][object Set Iterator][object Map Iterator][object WeakMap][object WeakSet][object WeakRef][object Boolean][object String][object Number][object Symbol][object String Iterator][object JSON][object Math][object Date][object RegExp][object RegExp String Iterator][object RequireContext][object Generator][object Proxy][object BigInt][object CallableProxy][object Function]nativePerformanceNownativeLoggingHooknativeQPLMarkerPointjsEnginenativeCallSyncHooknativeFlushQueueImmediatenativeTraceBeginSectionnativeTraceEndSectionnativeTraceBeginAsyncSectionnativeTraceEndAsyncSectionnativeTraceCounternativeModuleProxynativeGetThreadCpuTimeMillisnativeQPLTimestampnativeQPLMarkerStartnativeQPLMarkerEndnativeQPLMarkerNotenativeQPLMarkerTagnativeQPLMarkerAnnotatenativeGetThreadMajorPageFaults__jsiExecutorDescriptionnativeTraceIsTracingSymbol.hasInstanceSymbol.iteratorSymbol.isConcatSpreadableSymbol.toPrimitiveSymbol.toStringTagSymbol.matchSymbol.matchAllSymbol.searchSymbol.replaceSymbol.split
 (Ljava/lang/Iterable;)V
 (Ljava/lang/Object;)Z
 (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -106,23 +112,18 @@
 *** BEFORE Function pass
 *** BEFORE Module pass
 , category = 
-, globals = [
 , max elements = 
 , message = 
 -/,2./+,*--,-*--...84.///6001123
 .nE0
 /dev/urandom
-/proc/self/maps
 /proc/self/smaps
 /proc/self/statm
-/root/react-native/packages/react-native/ReactAndroid/hermes-engine/.cxx/MinSizeRel/1h352kp3/x86_64/lib/InternalBytecode/InternalBytecode.js
 /samplingDoneSem
-0000000000000000.
+0000000000000000
 0123456789ABCDEF
 0123456789abcdefghijklmnopqrstuvwxyz
 8y/9e
-9Zf6
-:HeapSegment:
 :jMZ
 <<Exception occurred getting the value>>
 <<deleted>>
@@ -139,12 +140,14 @@
 <none>
 <stdin>
 <unknown>
+?General_Categorys
 ?anon_
 ?default
 ?fffff
-?mbI
-?sourceMappingURL\n
+?too many errors 
 @handler
+@mbI
+@sourceMappingURL
 @target
 @wKA
 A TypedArray function was called on a detached TypedArray
@@ -153,6 +156,7 @@ A negative value cannot be an index
 A test set a limit for virtual memory that was exceeded
 A1<cO
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>@@@?456789:;<=@@@@@@@
 AaCoc
 Accessing bytecode from a lazy module
 Accessing debug info from a lazy module
@@ -164,13 +168,13 @@ AggregateErrorConstructor
 AggregateErrorPrototype
 AllocArrayInst
 AllocObjectInst
-AllocObjectLiteralInst
 AllocStackInst
 Allocated bytes
 Allocation failed
 Allocation occurred that was larger than a heap segment
+Amount is too large.
 An accessibility modifier cannot be used with a private identifier
-Android (7714059, based on r416183c1) clang version 12.0.8 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee)
+Android (12285214, +pgo, +bolt, +lto, +mlgo, based on r522817b) clang version 18.0.2 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
 Argument to HermesInternal.enqueueJob must be callable
 Argument to HermesInternal.getFunctionLocation must be callable
 Array
@@ -186,12 +190,15 @@ Array.prototype.reduce() requires a callable argument
 Array.prototype.reduce() requires an initial value with empty array
 Array.prototype.reduce() requires an intial value with empty array
 Array.prototype.splice result out of space
+Array.prototype.toSpliced result out of space
 Array.prototype.unshift result out of space
+ArrayBuffer is detached.
 ArrayBuffer() called in function context instead of constructor
 ArrayIteratorPrototype.next requires that 'this' be an Array Iterator
 AsInt32Inst
 AsNumberInst
 AsNumericInst
+Assignment to constant variable
 At least three arguments expected
 Attempting to override read-only builtin method '
 BigInt is not a constructor
@@ -216,6 +223,7 @@ Bytecode Version
 Bytecode checksum verification failed
 Bytecode does not contain any functions
 CIE ID is not zero
+CIE start does not match
 CIE version is not 1 or 3
 COMPACT
 CallBuiltinInst
@@ -260,7 +268,7 @@ Cannot delete property '
 Cannot destructure 'undefined' or 'null'.
 Cannot determine default value of object
 Cannot dump profiler symbols out if Hermes wasn't built with hermes.profiler=EXTERN
-Cannot execute a bytecode compiled with -fstatic-builtins when builtin functions are overriden.
+Cannot execute a bytecode compiled with -fstatic-builtins: 
 Cannot execute a bytecode having async functions when Promise is disabled.
 Cannot fill a detached TypedArray
 Cannot initialize Runtime storage.
@@ -272,6 +280,8 @@ Cannot modify external buffer.
 Cannot perform heap sampling if Hermes isn't built with  memory instrumentation.
 Cannot perform heap sampling if Hermes isn't built with memory instrumentation.
 Cannot set a value into a detached ArrayBuffer
+Cannot set external memory on Proxy
+Cannot set prototype of immutable prototype object
 Cannot split with detached ArrayBuffers
 Cannot track heap object stack traces if Hermes isn't built with memory instrumentation.
 Cannot use detachArrayBuffer on something which is not an ArrayBuffer foo
@@ -288,7 +298,7 @@ CoerceThisNSInst
 CommonJS Modules
 CompareBranchInst
 Compiling JS failed: 
-Compiling JS failed: %s, %s
+Compiling JS failed: %s
 CondBranchInst
 ConstructInst
 Constructor Map requires 'new'
@@ -297,12 +307,14 @@ Constructor calls may not contain an optional chain
 Constructor must be an object if it is not undefined
 Contiguous storage allocation failed.
 CopyableVector capacity integer overflow
+Could not enqueue microtask because they are disabled in this runtime
 Could not find class %s.
 Could not get callable method from object
 CreateArguments used for a non-Instruction.
 CreateArgumentsInst
 CreateFunctionInst
 CreateGeneratorInst
+CreateInnerScopeInst
 CreateRegExpInst
 CreateScopeInst
 Cs\fzH)
@@ -345,9 +357,11 @@ Date.prototype.toLocaleString() called on non-Date object
 Date.prototype.toString() called on non-Date object
 Date[Symbol.toPrimitive]() argument must be a string
 Date[Symbol.toPrimitive]() must be called on an object
+Debugger Enabled
 DebuggerInst
 Decimals with leading zeros are not allowed in strict mode
 DedupReifyArguments
+Default_Ignorable_Code_PointChanges_When_NFKC_CasefoldedNoncharacter_Code_PointLogical_Order_ExceptionChanges_When_UppercasedChanges_When_TitlecasedChanges_When_LowercasedChanges_When_CasemappedChanges_When_CasefoldedNyiakeng_Puachue_HmongInscriptional_ParthianInscriptional_PahlaviExtended_PictographicConnector_PunctuationAnatolian_HieroglyphsTerminal_PunctuationMeroitic_HieroglyphsIDS_Trinary_OperatorEgyptian_HieroglyphsPattern_White_SpaceParagraph_SeparatorKhitan_Small_ScriptInitial_PunctuationIDS_Binary_OperatorEmoji_Modifier_BaseCanadian_AboriginalVariation_SelectorRegional_IndicatorEmoji_PresentationCaucasian_AlbanianUnified_IdeographSentence_TerminalOther_PunctuationOld_South_ArabianOld_North_ArabianFinal_PunctuationClose_PunctuationZanabazar_SquareUppercase_LetterTitlecase_LetterOpen_PunctuationMeroitic_CursiveLowercase_LetterImperial_AramaicDash_PunctuationSpace_SeparatorPsalter_PahlaviNonspacing_MarkModifier_SymbolModifier_LetterHanifi_RohingyaGrapheme_ExtendEmoji_ComponentCurrency_SymbolASCII_Hex_DigitQuotation_MarkPattern_SyntaxLine_SeparatorEnclosing_MarkDecimal_NumberCombining_MarkCase_IgnorableOld_HungarianMende_KikakuiMasaram_GondiLetter_NumberGunjala_GondiGrapheme_BaseBidi_MirroredXID_ContinueSyloti_NagriSpacing_MarkSora_SompengPahawh_HmongOther_SymbolOther_NumberOther_LetterMeetei_MayekJoin_ControlCypro_MinoanCased_LetterBidi_ControlWarang_CitiSoft_DottedSignWritingPrivate_UsePau_Cin_HauOld_SogdianOld_PersianNew_Tai_LueNandinagariNag_MundariMedefaidrinMath_SymbolIdeographicDives_AkuruUnassignedSaurashtraPhoenicianOld_UyghurOld_TurkicOld_PermicOld_ItalicManichaeanKharoshthiGlagoliticDevanagariDeprecatedChorasmianAlphabeticXID_StartSurrogateSundaneseSamaritanPalmyreneNabataeanMongolianMalayalamKhudawadiInheritedDiacriticCuneiformBhaiksukiBassa_VahVithkuqiUgariticTifinaghTai_VietTai_ThamTagbanwaPhags_PaOl_ChikiMahajaniLinear_BLinear_AKayah_LiKatakanaJavaneseHiraganaGurmukhiGujaratiGeorgianExtenderEthiopicDuployanCyrillicCherokeeBugineseBopomofoBalineseAssignedArmenianUnknownTirhutaTibetanTagalogSoyomboSinhalaSiddhamShavianSharadaRadicalPat_SynOsmanyaMyanmarMultaniMarchenMandaicMakasarKannadaHanunooGranthaGr_BaseExtPictElymaicElbasanDeseretCypriotBrailleBengaliAvestanYezidiWanchoWSpaceThaanaTeluguTangutTangsaTai_LeSyriacRejangPat_WSLydianLycianLepchaKhojkiKaithiHebrewHatranHangulGr_ExtGothicFormatCopticCommonChakmaCarianBrahmiArabicspacepunctdigitcntrlUIdeoTamilTakriSTermRunicQMarkOsageOriyaOghamNushuNCharLimbuLatinKhmerGreekEPresECompEBaseDograCWKCFBuhidBatakBamumAdlamZzzzZyyyZinhZanbYiiiXsuxXpeoXIDSXIDCWchoVaiiTotoTnsaTibtThaiTglgTfngTavtTamlTaluTaleSyrcSogoSindShrdShawSgnwSarbSamrRunrRohgRjngQaaiQaacPrtiPlrdPhnxPhlpPhliPaucOugrOsgeOryaOrkhOlckOgamNshuNkooNewaNbatNarbNagmMymrMteiMrooMlymMiaoMercMedfMahjLisuLinbLinaLatnLaooLanaKthiKndaKitsKhmrKawiKanaKaliIDSTIDSBHmnpHmngHluwHanoGuruGujrGrekGonmGongEModDsrtDiakCyrlCprtCpmnChrsChamCansCakmCWCMCWCFBuhdBhksBatkAvstArmnArmiAhomAghbAdlmAHexLOECWUCWTCWLAnyZsZpZlVSSkSDRIPfPdPcNlNdMnMcLtLmLlLCDICsCnCfCc
 Delete trap target called, but target property is non-configurable
 DeletePropertyInst
 Destructuring in catch parameters is currently unsupported
@@ -372,7 +386,6 @@ Error parsing source map:
 Error parsing source map: %s
 Error running internal bytecode: 
 Error.prototype.toString called on incompatible receiver 
-Error.stack getter called with an invalid receiver
 ErrorConstructor
 ErrorPrototype
 Escaped value too large
@@ -390,11 +403,13 @@ Expect ':' after the key in JSON object
 Expect a string key in JSON object
 Expected a source map object
 Exponent must be positive
+External memory is too high.
 Extra eval() arguments are ignored
 FDE has zero length
 FDE is really a CIE
 Failed to allocate Identifier: IdentifierTable is full
 Failed to allocate register stack
+Failed to convert from UTF-16 to UTF-8
 Failed to execute an invalid regular expression object.
 Failed to initialize the young gen
 Failed to parse source map mappings
@@ -408,10 +423,13 @@ Float32ArrayConstructor
 Float32ArrayPrototype
 Float64ArrayConstructor
 Float64ArrayPrototype
+Found invalid character when converting to base64
+Found invalid character when decoding base64 string
 FuncCallNOpts
 Function declaration not allowed as body of labeled statement
 Function is not a constructor
 FunctionID
+Functions in if statements cannot be generator/async
 GC Old Gen (Direct)
 GC Young Gen
 GC stats:\n
@@ -430,6 +448,7 @@ HBCConstructInst
 HBCCreateEnvironmentInst
 HBCCreateFunctionInst
 HBCCreateGeneratorInst
+HBCCreateInnerEnvironmentInst
 HBCCreateThisInst
 HBCGetArgumentsLengthInst
 HBCGetArgumentsPropByValInst
@@ -467,6 +486,7 @@ HermesBuiltin.silentSetPrototypeOf
 HermesBuiltin.spawnAsync
 HermesBuiltin.throwTypeError
 HermesDouble
+HermesES6Internal
 HermesEmpty
 HermesGC
 HermesGCOOMDetailBasic
@@ -482,13 +502,14 @@ Hermes_ArrayStorage_overflow
 HoistStartGenerator
 IO failure on output stream: 
 IR verification failed
+Identifier '
 Illegal access to ArrayBuffer
 ImplicitMovInst
+In strict mode, functions cannot be declared in if statements
 Included from 
 Incomplete escape
 Incorrect magic number
 Incorrect object type
-Infinity
 InsertProfilePoint
 Int16ArrayConstructor
 Int16ArrayPrototype
@@ -507,6 +528,7 @@ Intl.NumberFormat.prototype.formatToParts
 Intl.NumberFormat.prototype.resolvedOptions
 Invalid 'declare' in class method
 Invalid 'declare' with initializer
+Invalid ES6 class member
 Invalid Literal Kind
 Invalid RegExp: 
 Invalid RegExp: Invalid flags
@@ -516,7 +538,9 @@ Invalid UTF-8 lead byte 0x
 Invalid argument
 Invalid argument to stringToBigInt
 Invalid array length
+Invalid binary operator
 Invalid capture group name
+Invalid dateStyle option
 Invalid error ID passed to getOriginalNativeErrorConstructor
 Invalid escape
 Invalid exported name
@@ -531,18 +555,19 @@ Invalid property descriptor. Can't set both accessor and value.
 Invalid property descriptor. Can't set both accessor and writable.
 Invalid property descriptor. Getter must be a function.
 Invalid property descriptor. Setter must be a function.
+Invalid property name
 Invalid quantifier bracket
 Invalid radix 
 Invalid radix value
 Invalid regular expression: 
 Invalid time value
+Invalid timeStyle option
 Invalid use of strict mode reserved word as binding identifier
 Iterator value must be an object
 IteratorBeginInst
 IteratorCloseInst
 IteratorNextInst
 JSError: %s
-JSI rethrowing JS exception: %s
 JSON
 JSON Parse error: 
 JSON object or array expected
@@ -553,10 +578,11 @@ JSX text
 JavaScript
 Javascript execution has timed out.
 LIBC
+LIBC_N
 LLVM ERROR: 
 LLVM ERROR: out of memory\n
 LimitAllocArray
-Linker: LLD 12.0.8 (/buildbot/src/android/llvm-r416183/out/llvm-project/lld c935d99d7cf2016289302412d708641d52d2f7ee)
+Linker: LLD 18.0.2
 Ljava/lang/Object;
 LoadConstantValueNumbering
 LoadConstants
@@ -566,7 +592,6 @@ LoadPropertyInst
 LoadStackInst
 Loaded module count exceeded limit
 LowerAllocObject
-LowerAllocObjectLiteral
 LowerArgumentsArray
 LowerBuiltinCalls
 LowerCalls
@@ -640,7 +665,6 @@ N6hermes13platform_intl12_GLOBAL__N_115CollatorAndroidE
 N6hermes13platform_intl12_GLOBAL__N_119NumberFormatAndroidE
 N6hermes13platform_intl12_GLOBAL__N_121DateTimeFormatAndroidE
 N6hermes13platform_intl14DateTimeFormatE
-N6hermes13platform_intl8CollatorE
 N6hermes2vm12CrashManagerE
 N6hermes2vm15DecoratedObject10DecorationE
 N6hermes2vm15HostObjectProxyE
@@ -648,8 +672,8 @@ N6hermes2vm15NopCrashManagerE
 N6hermes2vm17GCTripwireContextE
 N6hermes2vm18JSOutOfMemoryErrorE
 N6hermes3hbc14BCProviderBaseE
-N6hermes3hbc17BCProviderFromSrcE
 N6hermes6BufferE
+N8facebook3jsi12StringBufferE
 N8facebook3jsi15InstrumentationE
 N8facebook3jsi16RuntimeDecoratorINS_6hermes17HermesRuntimeImplENS0_17ThreadSafeRuntimeEEE
 N8facebook3jsi17ThreadSafeRuntimeE
@@ -672,6 +696,7 @@ NFKD
 NSt6__ndk110__function6__baseIFN8facebook3jsi5ValueERNS3_7RuntimeERKS4_PS7_mEEE
 NSt6__ndk110__function6__baseIFvPN6hermes2vm7HadesGCERNS3_12RootAcceptorEEEE
 NSt6__ndk110__function6__baseIFvPN6hermes2vm7HadesGCERNS3_16WeakRootAcceptorEEEE
+NSt6__ndk110__function6__baseIFvRN8facebook6hermes13HermesRuntimeEEEE
 NSt6__ndk110__function6__baseIFvvEEE
 NSt6__ndk110__function6__funcIN8facebook3jsi21DecoratedHostFunctionENS_9allocatorIS4_EEFNS3_5ValueERNS3_7RuntimeERKS7_PSA_mEEE
 NSt6__ndk110__function6__funcIZN6hermes13platform_intl12_GLOBAL__N_115CollatorAndroidD1EvEUlvE_NS_9allocatorIS6_EEFvvEEE
@@ -679,17 +704,17 @@ NSt6__ndk110__function6__funcIZN6hermes13platform_intl12_GLOBAL__N_119NumberForm
 NSt6__ndk110__function6__funcIZN6hermes13platform_intl12_GLOBAL__N_121DateTimeFormatAndroidD1EvEUlvE_NS_9allocatorIS6_EEFvvEEE
 NSt6__ndk110__function6__funcIZN8facebook6hermes17HermesRuntimeImplC1ERKN6hermes2vm13RuntimeConfigEEUlPNS6_7HadesGCERNS6_12RootAcceptorEE_NS_9allocatorISE_EEFvSB_SD_EEE
 NSt6__ndk110__function6__funcIZN8facebook6hermes17HermesRuntimeImplC1ERKN6hermes2vm13RuntimeConfigEEUlPNS6_7HadesGCERNS6_16WeakRootAcceptorEE_NS_9allocatorISE_EEFvSB_SD_EEE
+NSt6__ndk110shared_ptrIN6hermes2vm12CrashManagerEE27__shared_ptr_default_deleteIS3_NS2_15NopCrashManagerEEE
 NSt6__ndk114default_deleteIKN8facebook3jsi6BufferEEE
-NSt6__ndk114default_deleteIN6hermes2vm15NopCrashManagerEEE
 NSt6__ndk114default_deleteIN6hermes3hbc14BCProviderBaseEEE
 NSt6__ndk114default_deleteIN6hermes3hbc20BCProviderFromBufferEEE
-NSt6__ndk115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 NSt6__ndk117bad_function_callE
-NSt6__ndk118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 NSt6__ndk120__shared_ptr_emplaceIKN8facebook6hermes12_GLOBAL__N_124HermesPreparedJavaScriptENS_9allocatorIS5_EEEE
+NSt6__ndk120__shared_ptr_emplaceIN8facebook3jsi12StringBufferENS_9allocatorIS3_EEEE
 NSt6__ndk120__shared_ptr_emplaceIN8facebook3jsi19DecoratedHostObjectENS_9allocatorIS3_EEEE
+NSt6__ndk120__shared_ptr_emplaceIbNS_9allocatorIbEEEE
 NSt6__ndk120__shared_ptr_pointerIPKN8facebook3jsi6BufferENS_14default_deleteIS4_EENS_9allocatorIS4_EEEE
-NSt6__ndk120__shared_ptr_pointerIPN6hermes2vm15NopCrashManagerENS_14default_deleteIS3_EENS_9allocatorIS3_EEEE
+NSt6__ndk120__shared_ptr_pointerIPN6hermes2vm15NopCrashManagerENS_10shared_ptrINS2_12CrashManagerEE27__shared_ptr_default_deleteIS6_S3_EENS_9allocatorIS3_EEEE
 NSt6__ndk120__shared_ptr_pointerIPN6hermes3hbc14BCProviderBaseENS_14default_deleteIS3_EENS_9allocatorIS3_EEEE
 NSt6__ndk120__shared_ptr_pointerIPN6hermes3hbc20BCProviderFromBufferENS_14default_deleteIS3_EENS_9allocatorIS3_EEEE
 Name is a restricted global identifier
@@ -727,9 +752,12 @@ NativeConstructor::creatorFunction<Uint16Array>
 NativeConstructor::creatorFunction<Uint32Array>
 NativeConstructor::creatorFunction<Uint8Array>
 NativeConstructor::creatorFunction<Uint8ClampedArray>
+NestedScopeCreationInst
 No digits after 
 No error
+No message
 No numeric literal following minus (-) token in value
+No stack
 Non-Map object called on Map.prototype.clear
 Non-Map object called on Map.prototype.delete
 Non-Map object called on Map.prototype.entries
@@ -753,6 +781,7 @@ Non-SetIterator object called on SetIterator.prototype.next
 Non-canonical UTF-8 encoding
 None
 Nonexistent named capture reference
+Not a valid base64 encoded string length
 Null
 Num collections
 Num compactions
@@ -795,7 +824,7 @@ Out of memory for array elements
 Out of memory for array elements.
 Out of memory for capture groups.
 Out of memory for regexp results.
-Out of space for elements in map
+P\vPb
 Parenthesized expression not closed
 Parsing source code unsupported: 
 Pattern exceeds parse limits
@@ -830,6 +859,7 @@ RangeErrorPrototype
 RecreateCheapValues
 ReferenceErrorConstructor
 ReferenceErrorPrototype
+Reflect
 RegExp function called on non-RegExp object
 RegExp getter called on non-RegExp
 RegExp.prototype.flags getter called on non-object
@@ -850,6 +880,7 @@ Runtime not registered for profiling
 RuntimeConfig maxNumRegisters too big
 SaveAndYieldInst
 ScopeCreationInst
+Script_Extension
 Second argument should be a bool
 Second argument to TypedArray.from must be callable
 SegmentID
@@ -901,11 +932,17 @@ Symbol.toPrimitive function must return a primitive
 SyntaxErrorConstructor
 SyntaxErrorPrototype
 TERM
-TRIM_MEMORY_RUNNING_CRITICAL
+TRIM_MEMORY_RUNN
 TerminatorInst
+TextEncoder must be called as a constructor
+TextEncoder.prototype.encode() called on non-TextEncoder object
+TextEncoder.prototype.encodeInto() called on a detached Uint8Array
+TextEncoder.prototype.encodeInto() called on non-TextEncoder object
+TextEncoder.prototype.encoding called on non-TextEncoder object
 The constructor needs to construct a TypedArray
 The first definition was here.
 The result of exec can only be object or null.
+The second argument should be a Uint8Array
 The src TypedArray must be attached in order to use set()
 The sum of the length of the given TypedArray and the offset cannot be greater than the length of this TypedArray
 The sum of the length of the given object and the offset cannot be greater than the length of this TypedArray
@@ -948,8 +985,11 @@ Uint8ClampedArrayConstructor
 Uint8ClampedArrayPrototype
 Unable to find module with ID: 
 Unable to find module: 
+Unable to get source location
+Unable to obtain native stack bounds
 Unary operator before ** must use parens to disambiguate
 UnaryOperatorInst
+Uncatchable exception thrown while creating error
 Underlying ArrayBuffer detached
 Underlying ArrayBuffer detached after calling copyWithin
 Unexpected end of input
@@ -965,7 +1005,6 @@ Unknown DWARF encoding for search table.
 Unreachable instruction encountered
 UnreachableInst
 VM Experiments
-VTT for std::__ndk1::basic_ifstream<char, std::__ndk1::char_traits<char>>
 VTT for std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 Value
 Value not coercible to object
@@ -987,6 +1026,7 @@ WeakSet.prototype.add can only be called on a WeakSet
 WeakSet.prototype.delete can only be called on a WeakSet
 WeakSet.prototype.has can only be called on a WeakSet
 Wrong bytecode version. Expected 
+XMOq
 Y[uc
 ZN6hermes13platform_intl12_GLOBAL__N_115CollatorAndroidD1EvEUlvE_
 ZN6hermes13platform_intl12_GLOBAL__N_119NumberFormatAndroidD1EvEUlvE_
@@ -1036,15 +1076,17 @@ ZN8facebook6hermes17HermesRuntimeImplC1ERKN6hermes2vm13RuntimeConfigEEUlPNS3_7Ha
 [root]
 [suspended]
 \n    ... skipping 
-\nPossible Unhandled Promise Rejection (id:  This means you can ignore any previous messages of the form "Possible Unhandled Promise Rejection" with id ):A promise cannot be resolved with itself.All promises were rejectedoResolveHandlerrorsetImmediateinitPromise Rejection Handled (id: valuePromise constructor's argument is not a functionSettledFulfillogErroresolveOncecatchasPromises must be constructed via newarnasync function cannot be used with Promise disabled. spawnAsync not registered.finalengthenfulfilledisplayIdgetAggregateErrorejectionCheckgetThenableglobalThisetPromiseRejectionTrackingHook_handleResolvedone_initAsyncFnoopromiseAnyspliterableToArray_mapAllSettledfromatchWhitelisteprototypecallRejectionsafeThenqueueJobjectryCallOnextimeoutReferenceErroreasonSettledRejectryCallTwonFulfilledHermesInternallSettledRangeErroraceTypeError_j_k_logged_name_onHandledapplybindclearTimeouthrowhitelistackconsolefinallyforEachonRejectedonUnhandledpushsetTimeoutslicesomestatuseEngineQueue
+\nPossible Unhandled Promise Rejection (id:  This means you can ignore any previous messages of the form "Possible Unhandled Promise Rejection" with id ):A promise cannot be resolved with itself.All promises were rejectedefinePropertyGetterOrSetterejectionCheckHandlerrorsetPromiseRejectionTrackingHookinitPromise Rejection Handled (id: valuePromise constructor's argument is not a functionSettledFulfillogErroraceforEachasPromises must be constructed via newarnasync function cannot be used with Promise disabled. spawnAsync not registered.fulfilledoDefineMethodoResolveglobalThisetPrototypeOfinalengthenumerableObjecthrowhitelistringetAggregateErroresolveOncegetThenable_handleResolvedefineClassMethodefineStaticClassPropertyGetter_initAsyncFnoopromiseAnyinitES6ClassafeThenqueueJobjectryCallOnextspliterableToArray_mapAllSettledefineClassPropertyGetterfromatchWhitelisteprototypeRangeErroreasonSettledRejectryCallTwonFulfilledHermesES6InternallSettledefineClassPropertySetterHermesInternaloggedisplayIdoneReferenceErrorTypeError_j_k_l_name_onHandledcallRejectionsetImmediateapplybindefineStaticClassMethodefineStaticClassPropertySettercatchasES6ClassetTimeoutclearTimeoutimeoutconfigurableconsolecreatefinallyfreezegetOwnPropertyDescriptoronRejectedonUnhandledpushslicesomestackstatuseEngineQueuewritable
 \t\t\t\t\n\n\n\n\v\v\f\f
 \u2028
 \u2029
 \vuu1
 ^$\.*+?()[]{}|/
+^N6hermes13platform_intl8CollatorE
 _Unwind_Resume
 _Unwind_Resume() can't return
 __android_log_vprint
+__clsExpr__
 __cxa_allocate_exception
 __cxa_atexit
 __cxa_begin_catch
@@ -1055,20 +1097,22 @@ __cxa_guard_abort
 __cxa_guard_acquire
 __cxa_guard_release
 __cxa_pure_virtual
-__cxa_rethrow
 __cxa_throw
 __defineGetter__ getter not callable
 __defineSetter__ setter not callable
+__emutls_get_address
 __errno
 __gxx_personality_v0
-__memcpy_chk
 __metadata
 __proto__
 __proto__ was set multiple times in the object definition.
+__register_atfork
 __stack_chk_fail
 __strchr_chk
 __strlen_chk
+__super__
 __vsnprintf_chk
+__write_chk
 abort
 accessing an uninitialized variable
 accessor 
@@ -1101,9 +1145,9 @@ after 'while'
 after 'with (...'
 after 'with'
 after class property
-allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 ambiguous 'let [': either a 'let' binding or a member expression
 and non-configurable
+anonFunc@
 anonymous 
 argStorage
 args
@@ -1150,9 +1194,12 @@ arrayPrototypeSome
 arrayPrototypeSort
 arrayPrototypeSplice
 arrayPrototypeToLocaleString
+arrayPrototypeToReversed
+arrayPrototypeToSpliced
 arrayPrototypeToString
 arrayPrototypeUnshift
 arrayPrototypeValues
+arrayPrototypeWith
 arrow
 arrow function
 asin
@@ -1183,16 +1230,21 @@ at end of object binding pattern '{...'
 at end of object literal '{...'
 at end of parenthesized expression
 at end of setter parameter list
+at end of static block
 at end of substition in template literal
 at start of function parameter list
 atan
 atan2
 atanh
+atob
 atoll
 avgGCCPUPause
 avgGCPause
 await
+bad_array_new_length was thrown in -fno-exceptions mode
+bad_function_call was thrown in -fno-exceptions mode
 base
+basic_string
 bigint
 bigintConstructor
 bigintPrototype
@@ -1209,9 +1261,11 @@ booleanPrototypeValueOf
 booleanValue
 bound 
 break
+btoa
 buffer
 but target property is 
 byteLength called on a non ArrayBuffer object
+call
 callFrame
 callSitePrototype
 callSitePrototypeGetBytecodeAddress
@@ -1238,7 +1292,9 @@ calloc
 callstack
 can't convert 
 can't convert string to bigint
+can't modify const value
 cannot add a new property
+cannot bind to 
 cannot change read-only property value
 cannot declare '
 cannot declare two parameters with the same name '
@@ -1252,6 +1308,7 @@ children
 cjsModules
 class
 class declaration exports are unsupported
+class static blocks are not supported
 clock_gettime
 close
 closure
@@ -1273,10 +1330,6 @@ compare
 complete marking
 concat
 const
-construction vtable for std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
-construction vtable for std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::basic_ifstream<char, std::__ndk1::char_traits<char>>
-construction vtable for std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
-construction vtable for std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 constructor
 constructor is not callable
 constructor method must not be a getter or setter
@@ -1341,12 +1394,19 @@ decodeURI
 decodeURIComponent
 default
 default class declaration exports are unsupported
+defineClass
+defineClassMethod
+defineClassPropertyGetter
+defineClassPropertySetter
 defineProperties
 defineProperty
 defineProperty proxy trap returned false
 defineProperty trap attempted to define non-configurable property for configurable property in the target
 defineProperty trap attempted to define non-configurable property for non-existent property in the target
 defineProperty trap called for non-existent property on non-extensible target
+defineStaticClassMethod
+defineStaticClassPropertyGetter
+defineStaticClassPropertySetter
 delete
 destructuring declaration cannot be initialized in for-in/for-of loop
 destucturing declaration must be initialized
@@ -1360,9 +1420,6 @@ domain
 domains
 done
 doubleValue
-dtoa_alloc_done
-dtoa_alloc_init
-dtoa_fixedpoint
 duplicate constructors in class
 duration
 during phase1 personality function said it would stop here, but now in phase2 it did not stop here
@@ -1392,6 +1449,7 @@ escape
 eval
 eval() without arguments returns undefined
 evaluateExpression
+evaluateSHUnit called on non-SH runtime
 exit
 expected ':'
 expected ']'
@@ -1411,39 +1469,20 @@ facebook::hermes::HermesRuntime::disableSamplingProfiler()
 facebook::hermes::HermesRuntime::dumpSampledTraceToFile(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 facebook::hermes::HermesRuntime::dumpSampledTraceToStream(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>&)
 facebook::hermes::HermesRuntime::enableCodeCoverageProfiler()
-facebook::hermes::HermesRuntime::enableSamplingProfiler()
-facebook::hermes::HermesRuntime::evaluateJavaScriptWithSourceMap(std::__ndk1::shared_ptr<facebook::jsi::Buffer const> const&, std::__ndk1::shared_ptr<facebook::jsi::Buffer const> const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+facebook::hermes::HermesRuntime::enableSamplingProfiler(double)
 facebook::hermes::HermesRuntime::getBytecodeEpilogue(unsigned char const*, unsigned long)
 facebook::hermes::HermesRuntime::getBytecodeVersion()
-facebook::hermes::HermesRuntime::getDebugger()
 facebook::hermes::HermesRuntime::getExecutedFunctions()
-facebook::hermes::HermesRuntime::getGCExecTrace() const
-facebook::hermes::HermesRuntime::getIOTrackingInfoJSON()
-facebook::hermes::HermesRuntime::getMockedEnvironment() const
-facebook::hermes::HermesRuntime::getObjectForID(unsigned long)
-facebook::hermes::HermesRuntime::getUniqueID(facebook::jsi::BigInt const&) const
-facebook::hermes::HermesRuntime::getUniqueID(facebook::jsi::Object const&) const
-facebook::hermes::HermesRuntime::getUniqueID(facebook::jsi::PropNameID const&) const
-facebook::hermes::HermesRuntime::getUniqueID(facebook::jsi::String const&) const
-facebook::hermes::HermesRuntime::getUniqueID(facebook::jsi::Symbol const&) const
-facebook::hermes::HermesRuntime::getUniqueID(facebook::jsi::Value const&) const
 facebook::hermes::HermesRuntime::hermesBytecodeSanityCheck(unsigned char const*, unsigned long, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>*)
 facebook::hermes::HermesRuntime::isCodeCoverageProfilerEnabled()
 facebook::hermes::HermesRuntime::isHermesBytecode(unsigned char const*, unsigned long)
-facebook::hermes::HermesRuntime::loadSegment(std::__ndk1::unique_ptr<facebook::jsi::Buffer const, std::__ndk1::default_delete<facebook::jsi::Buffer const>>, facebook::jsi::Value const&)
 facebook::hermes::HermesRuntime::prefetchHermesBytecode(unsigned char const*, unsigned long)
-facebook::hermes::HermesRuntime::registerForProfiling()
-facebook::hermes::HermesRuntime::rootsListLengthForTests() const
-facebook::hermes::HermesRuntime::sampledTraceToStreamInDevToolsFormat(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>&)
 facebook::hermes::HermesRuntime::setFatalHandler(void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&))
-facebook::hermes::HermesRuntime::setMockedEnvironment(hermes::vm::MockedEnvironment const&)
-facebook::hermes::HermesRuntime::unregisterForProfiling()
-facebook::hermes::HermesRuntime::unwatchTimeLimit()
-facebook::hermes::HermesRuntime::watchTimeLimit(unsigned int)
 facebook::hermes::HermesRuntime::~HermesRuntime()
 facebook::hermes::hardenedHermesRuntimeConfig()
 facebook::hermes::makeHermesRuntime(hermes::vm::RuntimeConfig const&)
 facebook::hermes::makeThreadSafeHermesRuntime(hermes::vm::RuntimeConfig const&)
+facebook::hermes::sampling_profiler::ProfileSampleCallStackJSFunctionFrame::ProfileSampleCallStackJSFunctionFrame(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::optional<unsigned int> const&, std::__ndk1::optional<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>> const&, std::__ndk1::optional<unsigned int> const&, std::__ndk1::optional<unsigned int> const&)
 facebook::jni::Environment::current()
 facebook::jni::JString::toStdString() const
 facebook::jni::JString::toU16String() const
@@ -1453,22 +1492,32 @@ facebook::jni::findClassStatic(char const*)
 facebook::jni::throwCppExceptionIf(bool)
 facebook::jni::throwNewJavaException(char const*, char const*)
 facebook::jni::throwPendingJniExceptionAsCppException()
+facebook::jsi::Buffer::~Buffer()
 facebook::jsi::HostObject::~HostObject()
-facebook::jsi::JSError::JSError(facebook::jsi::JSError const&)
 facebook::jsi::JSError::JSError(facebook::jsi::Runtime&, char const*)
-facebook::jsi::JSError::JSError(facebook::jsi::Runtime&, facebook::jsi::Value&&)
 facebook::jsi::JSError::JSError(facebook::jsi::Runtime&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)
+facebook::jsi::JSError::JSError(facebook::jsi::Value&&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)
 facebook::jsi::JSError::~JSError()
-facebook::jsi::JSIException::JSIException(facebook::jsi::JSIException const&)
-facebook::jsi::JSIException::~JSIException()
 facebook::jsi::JSINativeException::~JSINativeException()
 facebook::jsi::PreparedJavaScript::~PreparedJavaScript()
 facebook::jsi::Runtime::PointerValue::~PointerValue()
+facebook::jsi::Runtime::createObjectWithPrototype(facebook::jsi::Value const&)
+facebook::jsi::Runtime::createPropNameIDFromUtf16(char16_t const*, unsigned long)
+facebook::jsi::Runtime::createStringFromUtf16(char16_t const*, unsigned long)
 facebook::jsi::Runtime::createValueFromJsonUtf8(unsigned char const*, unsigned long)
+facebook::jsi::Runtime::getPropNameIdData(facebook::jsi::PropNameID const&, void*, void (*)(void*, bool, void const*, unsigned long))
+facebook::jsi::Runtime::getPrototypeOf(facebook::jsi::Object const&)
+facebook::jsi::Runtime::getStringData(facebook::jsi::String const&, void*, void (*)(void*, bool, void const*, unsigned long))
 facebook::jsi::Runtime::instrumentation()
 facebook::jsi::Runtime::popScope(facebook::jsi::Runtime::ScopeState*)
 facebook::jsi::Runtime::pushScope()
+facebook::jsi::Runtime::setPrototypeOf(facebook::jsi::Object const&, facebook::jsi::Value const&)
+facebook::jsi::Runtime::utf16(facebook::jsi::PropNameID const&)
+facebook::jsi::Runtime::utf16(facebook::jsi::String const&)
 facebook::jsi::Runtime::~Runtime()
+facebook::jsi::StringBuffer::data() const
+facebook::jsi::StringBuffer::size() const
+facebook::jsi::StringBuffer::~StringBuffer()
 facebook::jsi::Value::Value(facebook::jsi::Value&&)
 facebook::jsi::Value::~Value()
 failed to define internal native state property
@@ -1476,10 +1525,10 @@ false
 fastPackStrings
 fclose
 fflush
-fgetc
 fgets
 finalHeapSize
 finally
+first
 first 'default' clause was defined here
 first constructor definition
 first usage of name
@@ -1489,15 +1538,17 @@ flattened array exceeds length limit
 floor
 fmod
 fopen
-for RN 0.72.3
+for RN 0.79.5
 for await..of loops are currently unsupported
 for-in/for-of variable declaration may not be initialized
+forControl
+forDecl
 forInCache
+forInOf
+forced
 format
 formatToParts
 fprintf
-frame = [
-fread
 free
 freeze
 frexp
@@ -1505,9 +1556,7 @@ from
 fromCharCode
 fromEntries argument is not coercible to Object
 fscanf
-fseeko
 fstat
-ftello
 funcColumn
 funcLine
 funcNames
@@ -1529,8 +1578,6 @@ functionPrototypeSymbolHasInstance
 functionPrototypeToString
 function_end
 fwrite
-g_dtoa
-g_freedtoa
 gcKind
 general
 generator compilation is disabled
@@ -1544,8 +1591,6 @@ get
 getCanonicalLocales
 getEncodedP
 getFloatRegister
-getLength: property 'byteLength' is not a number
-getLength: property 'length' is not a number
 getOwnPropertyDescriptor
 getOwnPropertyDescriptor target is not extensible and has no property 
 getOwnPropertyDescriptor trap result is not configurable
@@ -1555,6 +1600,7 @@ getPrototypeOf
 getPrototypeOf trap result is neither Object nor Null
 getPrototypeOf trap result is not the same as non-extensible target getPrototypeOf
 getRegister
+getSHRuntime called on non-SH runtime
 getSLEB128
 getSavedRegister
 getTableEntrySize
@@ -1571,6 +1617,7 @@ gettid
 global
 globalObject
 global_
+globals = [
 hades
 hades (concurrent)
 hades-segment
@@ -1617,6 +1664,7 @@ hermesInternalGetFunctionLocation
 hermesInternalGetInstrumentedStats
 hermesInternalGetRuntimeProperties
 hermesInternalGetWeakSize
+hermesInternalHasES6Class
 hermesInternalHasPromise
 hermesInternalIsProxy
 hermesInternalSetPromiseRejectionTrackingHook
@@ -1632,7 +1680,6 @@ hermes_full_gcTime
 hermes_full_gcTimeSquares
 hermes_full_maxPause
 hermes_full_numCollections
-hermes_g_strtod
 hermes_heapSize
 hermes_mallocSizeEstimate
 hermes_numCollections
@@ -1738,12 +1785,13 @@ invalid integer literal
 invalid meta property 
 invalid numeric literal
 invalid operand in update operation
+invalid or out-of-range index
 invalid property name - must be a string, number or identifier
 invalid statement encountered.
+invalid use of 'arguments'
 invalid use of 'super' as a template literal tag
 invalid use of tagged template literal in optional chain
 involCtxSwitch
-is not a valid identifier codepoint
 is not a valid identifier start
 isArray
 isExtensible
@@ -1783,37 +1831,13 @@ java/util/Map
 jsErrorStackAccessor
 js_VMExperiments
 js_allocatedBytes
-js_bytecodeIOTime
-js_bytecodePagesAccessed
-js_bytecodePagesResident
-js_bytecodePagesResidentRuns
-js_bytecodePagesTraceHash
-js_bytecodePagesTraceSample
-js_bytecodeSize
-js_evaluateJSCPUTime
-js_evaluateJSCount
-js_evaluateJSTime
+js_externalBytes
 js_gcCPUTime
 js_gcTime
 js_heapSize
-js_hermesCPUTime
-js_hermesInvolCtxSwitches
-js_hermesThreadMajorFaults
-js_hermesThreadMinorFaults
-js_hermesTime
-js_hermesVolCtxSwitches
-js_hostFunctionCPUTime
-js_hostFunctionCount
-js_hostFunctionTime
-js_incomingFunctionCPUTime
-js_incomingFunctionCount
-js_incomingFunctionTime
 js_mallocSizeEstimate
 js_markStackOverflows
 js_numGCs
-js_pageSize
-js_threadAffinityMask
-js_threadCPU
 js_totalAllocatedBytes
 js_vaSize
 jsonParse
@@ -1825,6 +1849,7 @@ label '
 label defined here
 lastIterationEntry
 length
+length_error was thrown in -fno-exceptions mode with message "%s"
 libc++_shared.so
 libc.so
 libdl.so
@@ -1834,7 +1859,6 @@ libjsi.so
 liblog.so
 libm.so
 libunwind: %s - %s\n
-libunwind: Unsupported .eh_frame_hdr version\n
 libunwind: malformed DW_CFA_GNU_negative_offset_extended DWARF unwind, reg too big\n
 libunwind: malformed DW_CFA_def_cfa DWARF unwind, reg too big\n
 libunwind: malformed DW_CFA_def_cfa_register DWARF unwind, reg too big\n
@@ -1852,9 +1876,11 @@ libunwind: malformed DW_CFA_undefined DWARF unwind, reg too big\n
 libunwind: malformed DW_CFA_val_expression DWARF unwind, reg too big\n
 libunwind: malformed DW_CFA_val_offset DWARF unwind, reg (%lu) out of range\n\n
 libunwind: malformed DW_CFA_val_offset_sf DWARF unwind, reg too big\n
+libunwind: unsupported .eh_frame_hdr at %lx: need at least 4 bytes of data but only got %zd\n
+libunwind: unsupported .eh_frame_hdr version: %u at %lx\n
 line
 lineNumber
-localtime
+localtime_r
 location iof '['
 location of '('
 location of '?'
@@ -1935,6 +1961,7 @@ mmap
 modf
 more than one 'default' clause in 'switch'
 mprotect
+multiple
 munmap
 name
 native state unsupported on HostObject
@@ -1951,6 +1978,7 @@ new TypedArray(buffer, [byteOffset], [length]): byteOffset must be less than buf
 new TypedArray(buffer, [byteOffset], [length]): if byteOffset is specified, it must be evenly divisible by the element size
 new.target
 newTarget is not constructible
+newline not allowed after 'async' in a method definition
 next
 nextEntryInBucket
 nextIndex
@@ -1965,7 +1993,6 @@ non-terminated regular expression literal
 non-terminated string
 non-terminated template literal
 non-terminated unicode codepoint escape
-non-virtual thunk to std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>::~basic_iostream()
 normalize
 not 
 note: 
@@ -2035,6 +2062,7 @@ operator new(unsigned long, std::nothrow_t const&)
 operator new[](unsigned long)
 optimizingPackStrings
 other
+out_of_range was thrown in -fno-exceptions mode with message "%s"
 overflow past end of bytecode
 ownKeys target is non-extensible but key is missing from trap result
 ownKeys target is non-extensible but trap result keys differ from target keys
@@ -2084,7 +2112,12 @@ prototype method must not be static
 proxyConstructor
 proxyRevocable
 proxyRevocationSteps
+pthread_attr_destroy
+pthread_attr_getguardsize
+pthread_attr_getstack
+pthread_attr_init
 pthread_create
+pthread_getattr_np
 pthread_kill
 pthread_rwlock_rdlock
 pthread_rwlock_unlock
@@ -2094,7 +2127,6 @@ pthread_setspecific
 pthread_sigmask
 public
 radix out-of-range in BigInt.prototype.toString
-re-registering HermesVMs for profiling is not allowed
 read
 realloc
 received
@@ -2167,6 +2199,7 @@ runtime
 runtimeDescription
 samples
 savedContext
+scanning identifier with unicode escape as reserved word
 scope: 
 scriptId
 seal
@@ -2234,12 +2267,11 @@ start of setter declaration
 start of substitution
 startTime
 started here
-stat
 static
+static block starts here
 stats
-std::__ndk1::__basic_string_common<true>::__throw_length_error() const
-std::__ndk1::__basic_string_common<true>::__throw_out_of_range() const
 std::__ndk1::__call_once(unsigned long volatile&, void*, void (*)(void*))
+std::__ndk1::__libcpp_verbose_abort(char const*, ...)
 std::__ndk1::__next_prime(unsigned long)
 std::__ndk1::__shared_weak_count::__get_deleter(std::type_info const&) const
 std::__ndk1::__shared_weak_count::__release_weak()
@@ -2249,33 +2281,19 @@ std::__ndk1::__thread_local_data()
 std::__ndk1::__thread_struct::__thread_struct()
 std::__ndk1::__thread_struct::~__thread_struct()
 std::__ndk1::__throw_system_error(int, char const*)
-std::__ndk1::__vector_base_common<true>::__throw_length_error() const
-std::__ndk1::__vector_base_common<true>::__throw_out_of_range() const
-std::__ndk1::bad_function_call::~bad_function_call()
 std::__ndk1::basic_ios<char, std::__ndk1::char_traits<char>>::~basic_ios()
 std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>::~basic_iostream()
-std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>::~basic_istream()
 std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::operator<<(unsigned int)
 std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::sentry::sentry(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>&)
 std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::sentry::~sentry()
 std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::write(char const*, long)
-std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::~basic_ostream()
 std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::basic_streambuf()
-std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::imbue(std::__ndk1::locale const&)
-std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::setbuf(char*, long)
-std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::showmanyc()
-std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::sync()
-std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::uflow()
-std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::xsgetn(char*, long)
-std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::xsputn(char const*, long)
 std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::~basic_streambuf()
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> std::__ndk1::operator+<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>(char const*, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::__grow_by(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::append(char const*)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::append(char const*, unsigned long)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::assign(char const*)
-std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::basic_string(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
-std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::compare(unsigned long, unsigned long, char const*, unsigned long) const
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::erase(unsigned long, unsigned long)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::insert(unsigned long, char const*)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::operator=(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
@@ -2284,9 +2302,10 @@ std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::all
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::reserve(unsigned long)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::resize(unsigned long, char)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::~basic_string()
+std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::str() const
+std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::~basic_stringstream()
 std::__ndk1::chrono::steady_clock::now()
 std::__ndk1::chrono::system_clock::now()
-std::__ndk1::codecvt<char, char, mbstate_t>::id
 std::__ndk1::condition_variable::__do_timed_wait(std::__ndk1::unique_lock<std::__ndk1::mutex>&, std::__ndk1::chrono::time_point<std::__ndk1::chrono::system_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1l, 1000000000l>>>)
 std::__ndk1::condition_variable::notify_all()
 std::__ndk1::condition_variable::notify_one()
@@ -2298,8 +2317,6 @@ std::__ndk1::error_category::equivalent(int, std::__ndk1::error_condition const&
 std::__ndk1::error_category::equivalent(std::__ndk1::error_code const&, int) const
 std::__ndk1::error_category::~error_category()
 std::__ndk1::error_code::message() const
-std::__ndk1::future<void>::get()
-std::__ndk1::future<void>::~future()
 std::__ndk1::generic_category()
 std::__ndk1::ios_base::__set_badbit_and_consider_rethrow()
 std::__ndk1::ios_base::clear(unsigned int)
@@ -2310,10 +2327,6 @@ std::__ndk1::locale::~locale()
 std::__ndk1::mutex::lock()
 std::__ndk1::mutex::unlock()
 std::__ndk1::mutex::~mutex()
-std::__ndk1::promise<void>::get_future()
-std::__ndk1::promise<void>::promise()
-std::__ndk1::promise<void>::set_value()
-std::__ndk1::promise<void>::~promise()
 std::__ndk1::random_device::operator()()
 std::__ndk1::random_device::random_device(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 std::__ndk1::random_device::~random_device()
@@ -2332,6 +2345,8 @@ std::__ndk1::to_string(unsigned int)
 std::__ndk1::to_string(unsigned long)
 std::bad_alloc::bad_alloc()
 std::bad_alloc::~bad_alloc()
+std::bad_array_new_length::bad_array_new_length()
+std::bad_array_new_length::~bad_array_new_length()
 std::exception::what() const
 std::exception::~exception()
 std::length_error::~length_error()
@@ -2383,12 +2398,13 @@ stringPrototypeTrim
 stringPrototypeTrimEnd
 stringPrototypeTrimStart
 stringRaw
+string_view::substr
 stringify
 strlen
 super
 supportedLocalesOf
 survivalRatio
-suspended
+suspend
 switch
 symbol
 symbolConstructor
@@ -2415,6 +2431,11 @@ template literal end
 template literal resume
 template literal start
 template literal started here
+textEncoderConstructor
+textEncoderPrototype
+textEncoderPrototypeEncode
+textEncoderPrototypeEncodeInto
+textEncoderPrototypeEncoding
 textified callee: 
 the property "
 the variable "
@@ -2492,6 +2513,7 @@ typedArrayPrototypeSubarray
 typedArrayPrototypeSymbolToStringTag
 typedArrayPrototypeToLocaleString
 typeinfo for facebook::hermes::HermesRuntime
+typeinfo for facebook::jsi::Buffer
 typeinfo for facebook::jsi::HostObject
 typeinfo for facebook::jsi::Instrumentation
 typeinfo for facebook::jsi::JSError
@@ -2499,6 +2521,7 @@ typeinfo for facebook::jsi::JSINativeException
 typeinfo for facebook::jsi::PreparedJavaScript
 typeinfo for facebook::jsi::Runtime
 typeinfo for facebook::jsi::Runtime::PointerValue
+typeinfo for facebook::jsi::StringBuffer
 typeinfo for hermes::Buffer
 typeinfo for hermes::vm::CrashManager
 typeinfo for hermes::vm::GCTripwireContext
@@ -2506,16 +2529,16 @@ typeinfo for hermes::vm::JSOutOfMemoryError
 typeinfo for hermes::vm::NopCrashManager
 typeinfo for std::__ndk1::__function::__base<facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>
 typeinfo for std::__ndk1::__function::__base<void ()>
+typeinfo for std::__ndk1::__function::__base<void (facebook::hermes::HermesRuntime&)>
+typeinfo for std::__ndk1::__shared_ptr_emplace<bool, std::__ndk1::allocator<bool>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::jsi::StringBuffer, std::__ndk1::allocator<facebook::jsi::StringBuffer>>
+typeinfo for std::__ndk1::__shared_ptr_pointer<facebook::jsi::Buffer const*, std::__ndk1::default_delete<facebook::jsi::Buffer const>, std::__ndk1::allocator<facebook::jsi::Buffer const>>
+typeinfo for std::__ndk1::__shared_ptr_pointer<hermes::vm::NopCrashManager*, std::__ndk1::shared_ptr<hermes::vm::CrashManager>::__shared_ptr_default_delete<hermes::vm::CrashManager, hermes::vm::NopCrashManager>, std::__ndk1::allocator<hermes::vm::NopCrashManager>>
 typeinfo for std::__ndk1::__shared_weak_count
 typeinfo for std::__ndk1::bad_function_call
-typeinfo for std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>
-typeinfo for std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>
-typeinfo for std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>
-typeinfo for std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>
-typeinfo for std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
-typeinfo for std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 typeinfo for std::__ndk1::system_error
 typeinfo for std::bad_alloc
+typeinfo for std::bad_array_new_length
 typeinfo for std::exception
 typeinfo for std::length_error
 typeinfo for std::logic_error
@@ -2524,6 +2547,7 @@ typeinfo name for facebook::hermes::HermesRuntime
 typeinfo name for facebook::jsi::Instrumentation
 typeinfo name for facebook::jsi::PreparedJavaScript
 typeinfo name for facebook::jsi::Runtime::PointerValue
+typeinfo name for facebook::jsi::StringBuffer
 typeinfo name for hermes::Buffer
 typeinfo name for hermes::vm::CrashManager
 typeinfo name for hermes::vm::GCTripwireContext
@@ -2531,11 +2555,14 @@ typeinfo name for hermes::vm::JSOutOfMemoryError
 typeinfo name for hermes::vm::NopCrashManager
 typeinfo name for std::__ndk1::__function::__base<facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>
 typeinfo name for std::__ndk1::__function::__base<void ()>
+typeinfo name for std::__ndk1::__function::__base<void (facebook::hermes::HermesRuntime&)>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<bool, std::__ndk1::allocator<bool>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::jsi::StringBuffer, std::__ndk1::allocator<facebook::jsi::StringBuffer>>
+typeinfo name for std::__ndk1::__shared_ptr_pointer<facebook::jsi::Buffer const*, std::__ndk1::default_delete<facebook::jsi::Buffer const>, std::__ndk1::allocator<facebook::jsi::Buffer const>>
+typeinfo name for std::__ndk1::__shared_ptr_pointer<hermes::vm::NopCrashManager*, std::__ndk1::shared_ptr<hermes::vm::CrashManager>::__shared_ptr_default_delete<hermes::vm::CrashManager, hermes::vm::NopCrashManager>, std::__ndk1::allocator<hermes::vm::NopCrashManager>>
 typeinfo name for std::__ndk1::bad_function_call
-typeinfo name for std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
-typeinfo name for std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 typeinfo name for std::__ndk1::default_delete<facebook::jsi::Buffer const>
-typeinfo name for std::__ndk1::default_delete<hermes::vm::NopCrashManager>
+typeinfo name for std::__ndk1::shared_ptr<hermes::vm::CrashManager>::__shared_ptr_default_delete<hermes::vm::CrashManager, hermes::vm::NopCrashManager>
 typeof
 tzset
 u2028
@@ -2553,7 +2580,6 @@ unique_lock::unlock: not locked
 unknown
 unknown pointer encoding
 unknown register
-unlink
 unrecognized Unicode character \u
 unrecognized Unicode character \u0000
 unrecognized character '
@@ -2573,12 +2599,9 @@ vH7B
 value
 value is not a bigint
 valueOf
-valueStorage
 var Array;var BigInt;var Boolean;var Date;var Error;var Function;var HermesInternal;var JSON;var Map;var Math;var Number;var Object;var Proxy;var Reflect;var RegExp;var Set;var String;var Symbol;var WeakMap;var WeakSet;var Infinity;var NaN;var globalThis;var undefined;function Error() {}function AggregateError() {}function EvalError() {}function RangeError() {}function ReferenceError() {}function SyntaxError() {}function TypeError() {}function URIError() {}function ArrayBuffer() {}function DataView() {}function Int8Array() {}function Int16Array() {}function Int32Array() {}function Uint8Array() {}function Uint8ClampedArray() {}function Uint16Array() {}function Uint32Array() {}function Float32Array() {}function Float64Array() {}function BigInt64Array() {}function BigUint64Array() {}function print() {}function eval() {}function parseInt() {}function parseFloat() {}function isNaN() {}function isFinite() {}function escape()  {}function unescape()  {}function decodeURI() {}function decodeURIComponent() {}function encodeURI() {}function encodeURIComponent() {}function gc() {}
+vector
 version
-virtual thunk to std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>::~basic_iostream()
-virtual thunk to std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>::~basic_istream()
-virtual thunk to std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::~basic_ostream()
 vm_allocate_category
 void
 void facebook::jsi::Array::setValueAtIndex<facebook::jsi::String>(facebook::jsi::Runtime&, unsigned long, facebook::jsi::String&&) const
@@ -2589,17 +2612,19 @@ vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
 vtable for facebook::hermes::HermesRuntime
-vtable for facebook::jsi::JSError
-vtable for facebook::jsi::JSIException
 vtable for facebook::jsi::JSINativeException
+vtable for facebook::jsi::StringBuffer
 vtable for hermes::Buffer
 vtable for hermes::vm::CrashManager
 vtable for hermes::vm::GCTripwireContext
 vtable for hermes::vm::JSOutOfMemoryError
 vtable for hermes::vm::NopCrashManager
+vtable for std::__ndk1::__shared_ptr_emplace<bool, std::__ndk1::allocator<bool>>
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::jsi::StringBuffer, std::__ndk1::allocator<facebook::jsi::StringBuffer>>
+vtable for std::__ndk1::__shared_ptr_emplace<std::__ndk1::mutex, std::__ndk1::allocator<std::__ndk1::mutex>>
+vtable for std::__ndk1::__shared_ptr_pointer<facebook::jsi::Buffer const*, std::__ndk1::default_delete<facebook::jsi::Buffer const>, std::__ndk1::allocator<facebook::jsi::Buffer const>>
+vtable for std::__ndk1::__shared_ptr_pointer<hermes::vm::NopCrashManager*, std::__ndk1::shared_ptr<hermes::vm::CrashManager>::__shared_ptr_default_delete<hermes::vm::CrashManager, hermes::vm::NopCrashManager>, std::__ndk1::allocator<hermes::vm::NopCrashManager>>
 vtable for std::__ndk1::bad_function_call
-vtable for std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char>>
-vtable for std::__ndk1::basic_ifstream<char, std::__ndk1::char_traits<char>>
 vtable for std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 vtable for std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 vtable for std::length_error
@@ -2622,7 +2647,7 @@ weakSetPrototypeHas
 weight
 while
 with
-write
+wrapperBlock
 x_facebook_sources
 xmm0
 xmm1
@@ -2640,6 +2665,9 @@ xmm6
 xmm7
 xmm8
 xmm9
+y errors emitted
 yield
 yield* delegate must have a .throw() method
 young
+{data/time}Style and explicit format components shouldn't be used together
+|b|EcE|

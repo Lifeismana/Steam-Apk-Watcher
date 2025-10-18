@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="crop_image_activity_no_permissions">Cancelling, required permissions are not granted</string>
-    <string name="crop_image_activity_title" />
     <string name="crop_image_menu_crop">Обрезать</string>
     <string name="ic_flip_24">Отразить</string>
     <string name="ic_flip_24_horizontally">Отразить по горизонтали</string>

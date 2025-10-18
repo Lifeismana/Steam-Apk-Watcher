@@ -10,7 +10,7 @@ import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
 
 @Deprecated
-/* loaded from: classes2.dex */
+/* loaded from: classes3.dex */
 public class RenderScriptBlur implements BlurAlgorithm {
     private final ScriptIntrinsicBlur blurScript;
     private Allocation outAllocation;

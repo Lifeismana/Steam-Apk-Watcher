@@ -17,8 +17,6 @@
         android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/design_snackbar_extra_spacing_horizontal"
         android:minWidth="48dp"
-        android:layout_marginStart="@dimen/design_snackbar_extra_spacing_horizontal"
         style="?attr/snackbarButtonStyle"/>
 </view>

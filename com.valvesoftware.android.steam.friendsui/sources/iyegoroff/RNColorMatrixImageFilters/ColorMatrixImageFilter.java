@@ -29,7 +29,7 @@ public class ColorMatrixImageFilter extends ReactViewGroup {
         invalidate();
     }
 
-    @Override // android.view.View
+    @Override // com.facebook.react.views.view.ReactViewGroup, android.view.View
     public void draw(Canvas canvas) {
         boolean z;
         int i = 0;

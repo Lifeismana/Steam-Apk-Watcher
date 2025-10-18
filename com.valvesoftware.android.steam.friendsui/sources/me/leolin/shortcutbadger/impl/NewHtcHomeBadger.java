@@ -39,10 +39,9 @@ public class NewHtcHomeBadger implements Badger {
             z2 = true;
         } catch (ShortcutBadgeException unused2) {
         }
-        if (z || z2) {
-            return;
+        if (!z && !z2) {
+            throw new ShortcutBadgeException("unable to resolve intent: " + intent2.toString());
         }
-        throw new ShortcutBadgeException("unable to resolve intent: " + intent2.toString());
     }
 
     @Override // me.leolin.shortcutbadger.Badger

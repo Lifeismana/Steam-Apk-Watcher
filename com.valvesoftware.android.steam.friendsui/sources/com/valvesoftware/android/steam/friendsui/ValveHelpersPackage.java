@@ -7,13 +7,11 @@ import com.facebook.react.uimanager.ViewManager;
 import java.util.ArrayList;
 import java.util.List;
 
-/* loaded from: classes2.dex */
+/* loaded from: classes3.dex */
 public class ValveHelpersPackage implements ReactPackage {
     @Override // com.facebook.react.ReactPackage
     public List<ViewManager> createViewManagers(ReactApplicationContext reactApplicationContext) {
-        ArrayList arrayList = new ArrayList();
-        arrayList.add(new ValveAnimatedImageManager());
-        return arrayList;
+        return new ArrayList();
     }
 
     @Override // com.facebook.react.ReactPackage

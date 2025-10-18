@@ -7,7 +7,7 @@
         android:fillAfter="true"
         android:startOffset="0"
         android:fromAlpha="1"
-        android:toAlpha="0"
+        android:toAlpha="1"
         android:fillEnabled="true"/>
     <translate
         android:interpolator="@android:interpolator/fast_out_extra_slow_in"

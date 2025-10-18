@@ -8,4 +8,8 @@
         <item quantity="one">ខា​ថយក្រោយ %d វិនាទី</item>
         <item quantity="other">ខា​ថយក្រោយ %d វិនាទី</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">ការជូនដំណឹងថ្មី %d</item>
+        <item quantity="other">ការជូនដំណឹងថ្មី %d</item>
+    </plurals>
 </resources>

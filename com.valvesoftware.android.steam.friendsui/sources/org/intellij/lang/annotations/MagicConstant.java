@@ -11,11 +11,11 @@ import java.lang.annotation.Target;
 public @interface MagicConstant {
     long[] flags() default {};
 
-    Class flagsFromClass() default void.class;
+    Class<?> flagsFromClass() default void.class;
 
     long[] intValues() default {};
 
     String[] stringValues() default {};
 
-    Class valuesFromClass() default void.class;
+    Class<?> valuesFromClass() default void.class;
 }

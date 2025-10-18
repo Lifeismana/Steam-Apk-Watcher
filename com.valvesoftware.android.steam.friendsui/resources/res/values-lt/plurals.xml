@@ -12,4 +12,10 @@
         <item quantity="many">Atsukti atgal %d sekundės</item>
         <item quantity="other">Atsukti atgal %d sekundžių</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d naujas pranešimas</item>
+        <item quantity="few">%d nauji pranešimai</item>
+        <item quantity="many">%d naujo pranešimo</item>
+        <item quantity="other">%d naujų pranešimų</item>
+    </plurals>
 </resources>
