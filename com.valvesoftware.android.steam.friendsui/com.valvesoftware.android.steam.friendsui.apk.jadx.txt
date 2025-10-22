@@ -1,6 +1,6 @@
-876ce64e2226276e5f2561e3940a313b  com.valvesoftware.android.steam.friendsui/com.valvesoftware.android.steam.friendsui.apk
-8a12759c598225026d08ad75c4721437  com.valvesoftware.android.steam.friendsui/com.valvesoftware.android.steam.friendsui.apk.jadx.txt
-925e5fe092177ab73d0aeaf7dd1fa57b  com.valvesoftware.android.steam.friendsui/resources/AndroidManifest.xml
+a4861b7330b0467a44304c015ad1acff  com.valvesoftware.android.steam.friendsui/com.valvesoftware.android.steam.friendsui.apk
+80848029471904b0ec458f8eb6ecedd3  com.valvesoftware.android.steam.friendsui/com.valvesoftware.android.steam.friendsui.apk.jadx.txt
+b1963cb7c2ce39ae57323a09549f1789  com.valvesoftware.android.steam.friendsui/resources/AndroidManifest.xml
 3cb790d46c744d1047d5ac8feedfbc3c  com.valvesoftware.android.steam.friendsui/resources/DebugProbesKt.bin
 31d057d6dbaccf5b0a117e0e54c62ba3  com.valvesoftware.android.steam.friendsui/resources/META-INF/androidx.activity_activity-ktx.version
 31d057d6dbaccf5b0a117e0e54c62ba3  com.valvesoftware.android.steam.friendsui/resources/META-INF/androidx.activity_activity.version
@@ -79,15 +79,15 @@ c151b065c2051b4be2b815674202bbfd  com.valvesoftware.android.steam.friendsui/reso
 44a6dfb4905ef523a3cec7667eb4e009  com.valvesoftware.android.steam.friendsui/resources/META-INF/services/kotlinx.coroutines.internal.MainDispatcherFactory
 6e4c205b0514417cb06c7b2e2cb37738  com.valvesoftware.android.steam.friendsui/resources/META-INF/version-control-info.textproto
 320c25e09c22e3bfdb5e40c5b6207138  com.valvesoftware.android.steam.friendsui/resources/assets/app.config
-0713ce88abf6f83350789208ddc7780f  com.valvesoftware.android.steam.friendsui/resources/assets/app.manifest
-7b85d7a5244512140672ce2f8196c11b  com.valvesoftware.android.steam.friendsui/resources/assets/dexopt/baseline.prof
+adec0bb0ffcb0175d03e80f43f0b8197  com.valvesoftware.android.steam.friendsui/resources/assets/app.manifest
+bc4e498d9cc98b656a537caf882dfd07  com.valvesoftware.android.steam.friendsui/resources/assets/dexopt/baseline.prof
 c0fac1d65bac7514ad1e53ddef334cc2  com.valvesoftware.android.steam.friendsui/resources/assets/dexopt/baseline.profm
 9bb8a4e8e57a30fd879303104826fe82  com.valvesoftware.android.steam.friendsui/resources/assets/expo-root.pem
-212bc8b2a54e78c14d5c94981b245efe  com.valvesoftware.android.steam.friendsui/resources/assets/index.android.bundle
+f77e57cfcf3040cdc6f81b3619c936f0  com.valvesoftware.android.steam.friendsui/resources/assets/index.android.bundle
 ccee924b4b82128c0508ac8f182c03d1  com.valvesoftware.android.steam.friendsui/resources/assets/shell-app-manifest.json
 83d55daf30c1e409371ad72a699f657a  com.valvesoftware.android.steam.friendsui/resources/classes.dex
 4ccd62aa1729e60bdc9407917d908183  com.valvesoftware.android.steam.friendsui/resources/classes2.dex
-0aeab417d64ac9070ea88931cbddcd66  com.valvesoftware.android.steam.friendsui/resources/classes3.dex
+ed5c3cedf66e453a7524a972c407e99f  com.valvesoftware.android.steam.friendsui/resources/classes3.dex
 88d5723d999e221637b0902bf176597c  com.valvesoftware.android.steam.friendsui/resources/classes4.dex
 43c613395de1f9005eb4f52b249720b7  com.valvesoftware.android.steam.friendsui/resources/client_analytics.proto
 7f592b075e5fcfbb028e501769ae0fb1  com.valvesoftware.android.steam.friendsui/resources/firebase-annotations.properties
@@ -4594,7 +4594,7 @@ c698089acc004bb1768dd10b87e0e292  com.valvesoftware.android.steam.friendsui/sour
 9069d797e86db093f1db6c6f2bc50773  com.valvesoftware.android.steam.friendsui/sources/com/facebook/imagepipeline/listener/RequestListener2.java
 38b6446c1e720ba8ce4e865dd700caf4  com.valvesoftware.android.steam.friendsui/sources/com/facebook/imagepipeline/listener/RequestLoggingListener.java
 79d16757fd960e93f8600ca9fb4ed357  com.valvesoftware.android.steam.friendsui/sources/com/facebook/imagepipeline/memory/AshmemMemoryChunk.java
-f7a67b3c10f516b75464f17ffcbda396  com.valvesoftware.android.steam.friendsui/sources/com/facebook/imagepipeline/memory/AshmemMemoryChunkPool.java
+537504113061827664639ba97894889c  com.valvesoftware.android.steam.friendsui/sources/com/facebook/imagepipeline/memory/AshmemMemoryChunkPool.java
 5b90bef815c56a3955768916b5d41718  com.valvesoftware.android.steam.friendsui/sources/com/facebook/imagepipeline/memory/BasePool.java
 11c7dc56b8757e6ebd67e572f1eb8676  com.valvesoftware.android.steam.friendsui/sources/com/facebook/imagepipeline/memory/BitmapCounter.java
 faa9b15d98bcfa7f6a8425371ee45d4e  com.valvesoftware.android.steam.friendsui/sources/com/facebook/imagepipeline/memory/BitmapCounterConfig.java
@@ -4606,7 +4606,7 @@ d4126a267c17921e3f8bd7132d33862f  com.valvesoftware.android.steam.friendsui/sour
 38ffbaa1af087f54320a3627cf575a2c  com.valvesoftware.android.steam.friendsui/sources/com/facebook/imagepipeline/memory/BucketMap.java
 5040853910feed5e865e3bae13084850  com.valvesoftware.android.steam.friendsui/sources/com/facebook/imagepipeline/memory/BucketsBitmapPool.java
 5ca3fa819747a293d744bc82f52bec43  com.valvesoftware.android.steam.friendsui/sources/com/facebook/imagepipeline/memory/BufferMemoryChunk.java
-d7ec6650550d9529f340e05549f93a4f  com.valvesoftware.android.steam.friendsui/sources/com/facebook/imagepipeline/memory/BufferMemoryChunkPool.java
+d23fa924b18949e2417e2d14b76a72e0  com.valvesoftware.android.steam.friendsui/sources/com/facebook/imagepipeline/memory/BufferMemoryChunkPool.java
 832974d375200d1f99d22b57aa33d488  com.valvesoftware.android.steam.friendsui/sources/com/facebook/imagepipeline/memory/DefaultBitmapPoolParams.java
 2aa1ce3dbcb6ceca056506de591bf45d  com.valvesoftware.android.steam.friendsui/sources/com/facebook/imagepipeline/memory/DefaultByteArrayPoolParams.java
 a48112713c68a36bec8e59417c6d0795  com.valvesoftware.android.steam.friendsui/sources/com/facebook/imagepipeline/memory/DefaultFlexByteArrayPoolParams.java
@@ -9186,7 +9186,7 @@ f4cb5f4bf404a93166965b4c6151927c  com.valvesoftware.android.steam.friendsui/sour
 da85d0929f564b0d8c0620eb94bcf41c  com.valvesoftware.android.steam.friendsui/sources/com/th3rdwave/safeareacontext/SafeAreaViewShadowNode.java
 1b636fd4e167551a5dc38636bbcdfacd  com.valvesoftware.android.steam.friendsui/sources/com/th3rdwave/safeareacontext/SerializationUtilsKt.java
 d6ab0fbeec3320c9cab46dcb98ae08d7  com.valvesoftware.android.steam.friendsui/sources/com/th3rdwave/safeareacontext/UIManagerHelperCompatKt.java
-1adb81fd4140b67db67c737ab4453f1d  com.valvesoftware.android.steam.friendsui/sources/com/valvesoftware/android/steam/friendsui/BuildConfig.java
+c9c5b0fe561553f512b31583bf39064e  com.valvesoftware.android.steam.friendsui/sources/com/valvesoftware/android/steam/friendsui/BuildConfig.java
 1959f6985d6b169fa3b4c7a038f4eebe  com.valvesoftware.android.steam.friendsui/sources/com/valvesoftware/android/steam/friendsui/C2306R.java
 383cf79f8a06837bef7053ef71a97875  com.valvesoftware.android.steam.friendsui/sources/com/valvesoftware/android/steam/friendsui/MainActivity.java
 45b0a21f228b874fdfb5c61c030650ed  com.valvesoftware.android.steam.friendsui/sources/com/valvesoftware/android/steam/friendsui/MainApplication.java

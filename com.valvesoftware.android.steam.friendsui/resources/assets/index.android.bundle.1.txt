@@ -12296,6 +12296,7 @@ SetMemberListVirtualized
 SetMemberRoleState
 SetMembers
 SetMiniProfileBackground
+SetMobileAppVisible
 SetMobileFriendNotificationSetting
 SetMobilePreferences
 SetMutualFriends
@@ -22474,6 +22475,7 @@ m_bMemberListCollapsedOverride
 m_bMemberListVirtualized
 m_bMemberSearchActive
 m_bMessageBlockIsOnlyEmotes
+m_bMobileAppVisible
 m_bModifiable
 m_bMoreAvailable
 m_bMounted

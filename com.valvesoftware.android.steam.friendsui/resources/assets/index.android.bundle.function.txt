@@ -5376,6 +5376,7 @@ SetMemberListVirtualized
 SetMemberRoleState
 SetMembers
 SetMiniProfileBackground
+SetMobileAppVisible
 SetMobileFriendNotificationSetting
 SetMobilePreferences
 SetMutualFriends
