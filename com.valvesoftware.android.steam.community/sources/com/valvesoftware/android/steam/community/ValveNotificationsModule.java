@@ -20,7 +20,7 @@ import java.util.Iterator;
 import java.util.Map;
 import org.bouncycastle.i18n.MessageBundle;
 
-/* loaded from: classes4.dex */
+/* loaded from: classes3.dex */
 public class ValveNotificationsModule extends ReactContextBaseJavaModule {
     public static String MessageEventName = "NewNotification";
     public static String Name = "ValveNotifications";
@@ -60,14 +60,14 @@ public class ValveNotificationsModule extends ReactContextBaseJavaModule {
         RemoteMessage remoteMessage = (RemoteMessage) pair.first;
         Map<String, String> data = remoteMessage.getData();
         WritableMap createMap2 = Arguments.createMap();
-        Iterator<Map.Entry<String, String>> it = data.entrySet().iterator();
+        Iterator<Map.Entry<String, String>> it2 = data.entrySet().iterator();
         if (remoteMessage.getNotification() != null) {
             createMap2.putString("body", remoteMessage.getNotification().getBody());
             createMap2.putString(MessageBundle.TITLE_ENTRY, remoteMessage.getNotification().getTitle());
         }
-        if (it != null) {
-            while (it.hasNext()) {
-                Map.Entry<String, String> next = it.next();
+        if (it2 != null) {
+            while (it2.hasNext()) {
+                Map.Entry<String, String> next = it2.next();
                 createMap2.putString(next.getKey(), next.getValue());
             }
         }
@@ -99,9 +99,9 @@ public class ValveNotificationsModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void getInitialNotifications(Promise promise) {
         WritableArray createArray = Arguments.createArray();
-        Iterator it = ValveNotificationsHelper.getInstance().getPendingNotifications().iterator();
-        while (it.hasNext()) {
-            createArray.pushMap(serializeMessageToWritableMap((Pair) it.next()));
+        Iterator it2 = ValveNotificationsHelper.getInstance().getPendingNotifications().iterator();
+        while (it2.hasNext()) {
+            createArray.pushMap(serializeMessageToWritableMap((Pair) it2.next()));
         }
         ValveNotificationsHelper.getInstance().clearPendingNotifications();
         promise.resolve(createArray);

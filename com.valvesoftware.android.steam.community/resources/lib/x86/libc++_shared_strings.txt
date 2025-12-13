@@ -1,10 +1,12 @@
+                000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdefghijklmnopqrstuvwxyz
  Ejs%
  P>Gg
  P>GkD
+ auto
  complex
+ decltype(auto)
  imaginary
 !a9X
-!empty()
 "Mw^r
 "P3gy
 "Vfy
@@ -25,7 +27,6 @@ $Jlr
 'block-literal'
 'wnGz$
 (anonymous namespace)
-(anonymous namespace)::itanium_demangle::AbstractManglingParser<(anonymous namespace)::itanium_demangle::ManglingParser<(anonymous namespace)::DefaultAllocator>, (anonymous namespace)::DefaultAllocator>::ScopedTemplateParamList::~ScopedTemplateParamList() [Derived = (anonymous namespace)::itanium_demangle::ManglingParser<(anonymous namespace)::DefaultAllocator>, Alloc = (anonymous namespace)::DefaultAllocator]
 (base != 0) && "DW_EH_PE_datarel is invalid with a base of 0"
 (ytR>
 (ytR>u
@@ -45,9 +46,8 @@ $Jlr
 .wN\v9
 />tsF
 /Mz8
-/NSt6__ndk14__fs10filesystem16filesystem_errorE
+/NSt6__ndk117bad_function_callE
 /data/local/tmp
-000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdefghijklmnopqrstuvwxyz
 0123456789abcdefABCDEFxX+-pPiInN
 0WW 
 12\nw\v3
@@ -103,8 +103,8 @@ $Jlr
 @iZb
 An empty regex is not allowed in the POSIX grammar.
 An invalid regex grammar has been requested.
-Android (11349228, +pgo, +bolt, +lto, -mlgo, based on r487747e) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)
-Android (9352603, based on r450784d1) clang version 14.0.7 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
+Android (11695104, +pgo, +bolt, +lto, +mlgo, based on r522817) clang version 18.0.1 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
+Android (12285214, +pgo, +bolt, +lto, +mlgo, based on r522817b) clang version 18.0.2 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
 AyIv
 B9[N
 B?\t^gmjp*
@@ -124,7 +124,6 @@ CIE ID is not zero
 CIE start does not match
 CIE version is not 1 or 3
 Can't binary search on variable length encoded data.
-CurrentPosition
 D0=0\v
 D4/LN
 DBU\r
@@ -156,7 +155,6 @@ FAau
 FDE has zero length
 FDE is really a CIE
 Fd"U
-FromPosition <= Names.size()
 HVkN
 HX\tCA
 Hahx'
@@ -164,8 +162,7 @@ Haz[~i
 I28>
 IMbP?i
 IRe0
-Index < size() && "Invalid access!"
-Index <= size() && "dropBack() can't expand!"
+Invalid access!
 Iq|o
 JKvP[
 J_7`3
@@ -178,9 +175,7 @@ Kw4;
 L'knN
 L8]q
 LIBC
-Last != First && "Calling back() on empty vector!"
-Last != First && "Popping empty vector!"
-Linker: LLD 17.0.2
+Linker: LLD 18.0.2
 LnL\r
 L{6P
 L{6T
@@ -227,6 +222,7 @@ N12_GLOBAL__N_116itanium_demangle12FunctionTypeE
 N12_GLOBAL__N_116itanium_demangle12InitListExprE
 N12_GLOBAL__N_116itanium_demangle12ModuleEntityE
 N12_GLOBAL__N_116itanium_demangle12NoexceptSpecE
+N12_GLOBAL__N_116itanium_demangle12RequiresExprE
 N12_GLOBAL__N_116itanium_demangle12TemplateArgsE
 N12_GLOBAL__N_116itanium_demangle13EnclosingExprE
 N12_GLOBAL__N_116itanium_demangle13FunctionParamE
@@ -242,13 +238,17 @@ N12_GLOBAL__N_116itanium_demangle14IntegerLiteralE
 N12_GLOBAL__N_116itanium_demangle15BracedRangeExprE
 N12_GLOBAL__N_116itanium_demangle15ClosureTypeNameE
 N12_GLOBAL__N_116itanium_demangle15ConditionalExprE
+N12_GLOBAL__N_116itanium_demangle15ExprRequirementE
 N12_GLOBAL__N_116itanium_demangle15LiteralOperatorE
 N12_GLOBAL__N_116itanium_demangle15PixelVectorTypeE
+N12_GLOBAL__N_116itanium_demangle15TransformedTypeE
+N12_GLOBAL__N_116itanium_demangle15TypeRequirementE
 N12_GLOBAL__N_116itanium_demangle15UnnamedTypeNameE
 N12_GLOBAL__N_116itanium_demangle16FloatLiteralImplIdEE
 N12_GLOBAL__N_116itanium_demangle16FloatLiteralImplIeEE
 N12_GLOBAL__N_116itanium_demangle16FloatLiteralImplIfEE
 N12_GLOBAL__N_116itanium_demangle16FunctionEncodingE
+N12_GLOBAL__N_116itanium_demangle17NestedRequirementE
 N12_GLOBAL__N_116itanium_demangle17VendorExtQualTypeE
 N12_GLOBAL__N_116itanium_demangle18ArraySubscriptExprE
 N12_GLOBAL__N_116itanium_demangle19GlobalQualifiedNameE
@@ -256,6 +256,7 @@ N12_GLOBAL__N_116itanium_demangle19PointerToMemberTypeE
 N12_GLOBAL__N_116itanium_demangle19SizeofParamPackExprE
 N12_GLOBAL__N_116itanium_demangle19SpecialSubstitutionE
 N12_GLOBAL__N_116itanium_demangle20DynamicExceptionSpecE
+N12_GLOBAL__N_116itanium_demangle20MemberLikeFriendNameE
 N12_GLOBAL__N_116itanium_demangle20NameWithTemplateArgsE
 N12_GLOBAL__N_116itanium_demangle20PostfixQualifiedTypeE
 N12_GLOBAL__N_116itanium_demangle20TemplateArgumentPackE
@@ -266,12 +267,15 @@ N12_GLOBAL__N_116itanium_demangle21TypeTemplateParamDeclE
 N12_GLOBAL__N_116itanium_demangle22ConversionOperatorTypeE
 N12_GLOBAL__N_116itanium_demangle22ElaboratedTypeSpefTypeE
 N12_GLOBAL__N_116itanium_demangle22ParameterPackExpansionE
+N12_GLOBAL__N_116itanium_demangle23ExplicitObjectParameterE
 N12_GLOBAL__N_116itanium_demangle24ForwardTemplateReferenceE
 N12_GLOBAL__N_116itanium_demangle24NonTypeTemplateParamDeclE
+N12_GLOBAL__N_116itanium_demangle25TemplateParamQualifiedArgE
 N12_GLOBAL__N_116itanium_demangle25TemplateTemplateParamDeclE
 N12_GLOBAL__N_116itanium_demangle26SyntheticTemplateParamNameE
 N12_GLOBAL__N_116itanium_demangle27ExpandedSpecialSubstitutionE
 N12_GLOBAL__N_116itanium_demangle29PointerToMemberConversionExprE
+N12_GLOBAL__N_116itanium_demangle32ConstrainedTypeTemplateParamDeclE
 N12_GLOBAL__N_116itanium_demangle4NodeE
 N12_GLOBAL__N_116itanium_demangle7NewExprE
 N12_GLOBAL__N_116itanium_demangle8BoolExprE
@@ -362,7 +366,6 @@ NSt6__ndk116__narrow_to_utf8ILj32EEE
 NSt6__ndk117__assoc_sub_stateE
 NSt6__ndk117__widen_from_utf8ILj16EEE
 NSt6__ndk117__widen_from_utf8ILj32EEE
-NSt6__ndk117bad_function_callE
 NSt6__ndk117moneypunct_bynameIcLb0EEE
 NSt6__ndk117moneypunct_bynameIcLb1EEE
 NSt6__ndk117moneypunct_bynameIwLb0EEE
@@ -391,6 +394,7 @@ NSt6__ndk13pmr26__null_memory_resource_impE
 NSt6__ndk13pmr26synchronized_pool_resourceE
 NSt6__ndk13pmr28unsynchronized_pool_resourceE
 NSt6__ndk13pmr32__new_delete_memory_resource_impE
+NSt6__ndk14__fs10filesystem16filesystem_errorE
 NSt6__ndk15ctypeIcEE
 NSt6__ndk15ctypeIwEE
 NSt6__ndk16locale5__impE
@@ -433,7 +437,6 @@ Nl!C5
 Nl!C\r
 Nl9?
 Nnu\n
-NodeArray (anonymous namespace)::itanium_demangle::AbstractManglingParser<(anonymous namespace)::itanium_demangle::ManglingParser<(anonymous namespace)::DefaultAllocator>, (anonymous namespace)::DefaultAllocator>::popTrailingNodeArray(size_t) [Derived = (anonymous namespace)::itanium_demangle::ManglingParser<(anonymous namespace)::DefaultAllocator>, Alloc = (anonymous namespace)::DefaultAllocator]
 Ny\vs
 Ny~G
 O-h7
@@ -452,18 +455,15 @@ PKDi
 PKDn
 PKDs
 PKDu
-Parser->TemplateParams.size() >= OldNumTemplateParamLists
-Parser.ForwardTemplateRefs.empty()
+Popping empty vector!
 Pure virtual function called!
 R-Np
 R-Np/
 R5qhi5
 RJqn
 RX1e
-Res.startsWith("operator") && "operator name does not start with 'operator'"
 Rv87e
 STv.N
-SV.startsWith("basic_")
 SgQY
 Sp^z0h
 St10bad_typeid
@@ -486,9 +486,6 @@ St8bad_cast
 St9bad_alloc
 St9exception
 St9type_info
-StringView (anonymous namespace)::itanium_demangle::AbstractManglingParser<(anonymous namespace)::itanium_demangle::ManglingParser<(anonymous namespace)::DefaultAllocator>, (anonymous namespace)::DefaultAllocator>::OperatorInfo::getSymbol() const [Derived = (anonymous namespace)::itanium_demangle::ManglingParser<(anonymous namespace)::DefaultAllocator>, Alloc = (anonymous namespace)::DefaultAllocator]
-T &(anonymous namespace)::itanium_demangle::PODSmallVector<(anonymous namespace)::itanium_demangle::PODSmallVector<(anonymous namespace)::itanium_demangle::Node *, 8> *, 4>::back() [T = (anonymous namespace)::itanium_demangle::PODSmallVector<(anonymous namespace)::itanium_demangle::Node *, 8> *, N = 4]
-T &(anonymous namespace)::itanium_demangle::PODSmallVector<const (anonymous namespace)::itanium_demangle::Node *, 8>::operator[](size_t) [T = const (anonymous namespace)::itanium_demangle::Node *, N = 8]
 T%L9
 T3K'
 TEMP
@@ -605,7 +602,7 @@ __cxa_get_globals
 __cxa_get_globals_fast
 __cxa_guard_abort
 __cxa_guard_acquire
-__cxa_guard_acquire detected recursive initialization
+__cxa_guard_acquire detected recursive initialization: do you have a function-local static variable whose initialization depends on that function?
 __cxa_guard_release
 __cxa_increment_exception_refcount
 __cxa_new_handler
@@ -638,7 +635,6 @@ __gxx_personality_v0
 __int128
 __next_prime overflow
 __thread_specific_ptr construction failed
-__uuidof
 _block_invoke
 `tQl
 `tQl3
@@ -678,7 +674,6 @@ bad_array_new_length
 bad_optional_access
 bad_variant_access
 bad_weak_ptr
-basic_
 basic_iostream
 basic_istream
 basic_ostream
@@ -686,21 +681,6 @@ basic_string
 blank
 bnMG
 bool
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<char, char>&, char*>(char*, char*, std::__ndk1::__less<char, char>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<double, double>&, double*>(double*, double*, std::__ndk1::__less<double, double>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<float, float>&, float*>(float*, float*, std::__ndk1::__less<float, float>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<int, int>&, int*>(int*, int*, std::__ndk1::__less<int, int>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<long double, long double>&, long double*>(long double*, long double*, std::__ndk1::__less<long double, long double>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<long long, long long>&, long long*>(long long*, long long*, std::__ndk1::__less<long long, long long>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<long, long>&, long*>(long*, long*, std::__ndk1::__less<long, long>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<short, short>&, short*>(short*, short*, std::__ndk1::__less<short, short>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<signed char, signed char>&, signed char*>(signed char*, signed char*, std::__ndk1::__less<signed char, signed char>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<unsigned char, unsigned char>&, unsigned char*>(unsigned char*, unsigned char*, std::__ndk1::__less<unsigned char, unsigned char>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<unsigned int, unsigned int>&, unsigned int*>(unsigned int*, unsigned int*, std::__ndk1::__less<unsigned int, unsigned int>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<unsigned long long, unsigned long long>&, unsigned long long*>(unsigned long long*, unsigned long long*, std::__ndk1::__less<unsigned long long, unsigned long long>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<unsigned long, unsigned long>&, unsigned long*>(unsigned long*, unsigned long*, std::__ndk1::__less<unsigned long, unsigned long>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<unsigned short, unsigned short>&, unsigned short*>(unsigned short*, unsigned short*, std::__ndk1::__less<unsigned short, unsigned short>&)
-bool std::__ndk1::__insertion_sort_incomplete<std::__ndk1::__less<wchar_t, wchar_t>&, wchar_t*>(wchar_t*, wchar_t*, std::__ndk1::__less<wchar_t, wchar_t>&)
 bpV'
 btowc
 bzo<
@@ -709,9 +689,6 @@ cannot access path "%s"
 canonical
 carriage-return
 char
-char (anonymous namespace)::itanium_demangle::OutputBuffer::back() const
-char (anonymous namespace)::itanium_demangle::StringView::back() const
-char *__cxxabiv1::__cxa_demangle(const char *, char *, size_t *, int *)
 char16_t
 char32_t
 char8_t
@@ -816,6 +793,7 @@ form-feed
 four
 fprintf
 fputc
+fputwc
 fread
 free
 freelocale
@@ -840,6 +818,7 @@ getULEB128
 getc
 getcwd
 getenv
+getwc
 gffffff
 gfkM=
 graph
@@ -864,9 +843,6 @@ ioctl
 ios_base::clear
 iostream
 is_empty
-isdigit_l
-islower_l
-isupper_l
 iswalpha_l
 iswblank_l
 iswcntrl_l
@@ -877,7 +853,6 @@ iswpunct_l
 iswspace_l
 iswupper_l
 iswxdigit_l
-isxdigit_l
 isy{
 j+"Mw^r
 jA+cT
@@ -923,6 +898,7 @@ libunwind: malformed DW_CFA_undefined DWARF unwind, reg too big\n
 libunwind: malformed DW_CFA_val_expression DWARF unwind, reg too big\n
 libunwind: malformed DW_CFA_val_offset DWARF unwind, reg (%llu) out of range\n\n
 libunwind: malformed DW_CFA_val_offset_sf DWARF unwind, reg too big\n
+libunwind: unsupported .eh_frame_hdr at %llx: need at least 4 bytes of data but only got %zd\n
 libunwind: unsupported .eh_frame_hdr version: %u at %llx\n
 link
 locale constructed with null
@@ -996,6 +972,7 @@ operator delete[](void*, std::align_val_t, std::nothrow_t const&)
 operator delete[](void*, std::nothrow_t const&)
 operator delete[](void*, unsigned int)
 operator delete[](void*, unsigned int, std::align_val_t)
+operator name does not start with 'operator'
 operator new
 operator new(unsigned int)
 operator new(unsigned int, std::align_val_t)
@@ -1051,7 +1028,6 @@ operator~
 out/llvm-project/libcxxabi/src/cxa_demangle.cpp
 out/llvm-project/libcxxabi/src/cxa_personality.cpp
 out/llvm-project/libcxxabi/src/demangle/ItaniumDemangle.h
-out/llvm-project/libcxxabi/src/demangle/StringView.h
 out/llvm-project/libcxxabi/src/demangle/Utility.h
 out/llvm-project/libcxxabi/src/fallback_malloc.cpp
 pH_q
@@ -1122,8 +1098,6 @@ recursive_mutex lock failed
 recursive_timed_mutex lock limit reached
 reference temporary for 
 reinterpret_cast
-reinterpret_cast<size_t>(p + 1) % RequiredAlignment == 0
-reinterpret_cast<size_t>(ptr) % RequiredAlignment == 0
 remove
 remove_all
 rename
@@ -1142,6 +1116,7 @@ setRegister
 setlocale
 seven
 short
+shrinkToSize() can't expand!
 signed char
 sizeof 
 sizeof... 
@@ -1327,6 +1302,7 @@ std::__ndk1::__fs::filesystem::recursive_directory_iterator::options() const
 std::__ndk1::__fs::filesystem::recursive_directory_iterator::recursive_directory_iterator(std::__ndk1::__fs::filesystem::path const&, std::__ndk1::__fs::filesystem::directory_options, std::__ndk1::error_code*)
 std::__ndk1::__get_classname(char const*, bool)
 std::__ndk1::__get_collation_name(char const*)
+std::__ndk1::__get_ostream_file(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>&)
 std::__ndk1::__get_sp_mut(void const*)
 std::__ndk1::__itoa::__u32toa(unsigned int, char*)
 std::__ndk1::__itoa::__u64toa(unsigned long long, char*)
@@ -1432,9 +1408,7 @@ std::__ndk1::__vector_base_common<true>::__throw_length_error() const
 std::__ndk1::__vector_base_common<true>::__throw_out_of_range() const
 std::__ndk1::__widen_from_utf8<16u>::~__widen_from_utf8()
 std::__ndk1::__widen_from_utf8<32u>::~__widen_from_utf8()
-std::__ndk1::adopt_lock
 std::__ndk1::align(unsigned int, unsigned int, void*&, unsigned int&)
-std::__ndk1::allocator_arg
 std::__ndk1::bad_function_call::~bad_function_call()
 std::__ndk1::bad_weak_ptr::what() const
 std::__ndk1::bad_weak_ptr::~bad_weak_ptr()
@@ -1940,7 +1914,6 @@ std::__ndk1::ctype_byname<wchar_t>::do_widen(char) const
 std::__ndk1::ctype_byname<wchar_t>::~ctype_byname()
 std::__ndk1::declare_no_pointers(char*, unsigned int)
 std::__ndk1::declare_reachable(void*)
-std::__ndk1::defer_lock
 std::__ndk1::error_category::default_error_condition(int) const
 std::__ndk1::error_category::equivalent(int, std::__ndk1::error_condition const&) const
 std::__ndk1::error_category::equivalent(std::__ndk1::error_code const&, int) const
@@ -2019,7 +1992,6 @@ std::__ndk1::locale::facet::~facet()
 std::__ndk1::locale::global(std::__ndk1::locale const&)
 std::__ndk1::locale::has_facet(std::__ndk1::locale::id&) const
 std::__ndk1::locale::id::__get()
-std::__ndk1::locale::id::__init()
 std::__ndk1::locale::id::__next_id
 std::__ndk1::locale::locale()
 std::__ndk1::locale::locale(char const*)
@@ -2216,7 +2188,6 @@ std::__ndk1::numpunct_byname<wchar_t>::numpunct_byname(char const*, unsigned int
 std::__ndk1::numpunct_byname<wchar_t>::numpunct_byname(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)
 std::__ndk1::numpunct_byname<wchar_t>::~numpunct_byname()
 std::__ndk1::ostrstream::~ostrstream()
-std::__ndk1::piecewise_construct
 std::__ndk1::placeholders::_1
 std::__ndk1::placeholders::_10
 std::__ndk1::placeholders::_2
@@ -2316,7 +2287,6 @@ std::__ndk1::strstreambuf::swap(std::__ndk1::strstreambuf&)
 std::__ndk1::strstreambuf::underflow()
 std::__ndk1::strstreambuf::~strstreambuf()
 std::__ndk1::system_category()
-std::__ndk1::system_error::__init(std::__ndk1::error_code const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)
 std::__ndk1::system_error::system_error(int, std::__ndk1::error_category const&)
 std::__ndk1::system_error::system_error(int, std::__ndk1::error_category const&, char const*)
 std::__ndk1::system_error::system_error(int, std::__ndk1::error_category const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
@@ -2415,7 +2385,6 @@ std::__ndk1::to_wstring(long)
 std::__ndk1::to_wstring(unsigned int)
 std::__ndk1::to_wstring(unsigned long long)
 std::__ndk1::to_wstring(unsigned long)
-std::__ndk1::try_to_lock
 std::__ndk1::undeclare_no_pointers(char*, unsigned int)
 std::__ndk1::valarray<unsigned int>::resize(unsigned int, unsigned int)
 std::__ndk1::valarray<unsigned int>::valarray(unsigned int)
@@ -2499,10 +2468,10 @@ strftime_l
 string literal
 string_view::substr
 strlen
-strncmp
 strtod
 strtof
 strtol
+strtold
 strtold_l
 strtoll
 strtoll_l
@@ -2541,8 +2510,6 @@ throw
 tilde
 time_get_byname failed to construct for 
 time_put_byname failed to construct for 
-tolower_l
-toupper_l
 towlower_l
 towupper_l
 true
@@ -3032,6 +2999,7 @@ underscore
 unexpected
 unexpected_handler unexpectedly returned
 ungetc
+ungetwc
 union
 unique_lock::unlock: not locked
 unknown pointer encoding
@@ -3040,7 +3008,6 @@ unlinkat
 unsigned __int128
 unsigned char
 unsigned int
-unsigned int std::__ndk1::__sort5<std::__ndk1::__less<long double, long double>&, long double*>(long double*, long double*, long double*, long double*, long double*, std::__ndk1::__less<long double, long double>&)
 unsigned long
 unsigned long long
 unsigned short
@@ -3066,7 +3033,6 @@ vector
 vertical-line
 vertical-tab
 vfprintf
-virtual StringView (anonymous namespace)::itanium_demangle::SpecialSubstitution::getBaseName() const
 virtual thunk to 
 virtual thunk to std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>::~basic_iostream()
 virtual thunk to std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>::~basic_istream()
@@ -3077,10 +3043,6 @@ virtual thunk to std::__ndk1::istrstream::~istrstream()
 virtual thunk to std::__ndk1::ostrstream::~ostrstream()
 virtual thunk to std::__ndk1::strstream::~strstream()
 void
-void (anonymous namespace)::itanium_demangle::PODSmallVector<(anonymous namespace)::itanium_demangle::ForwardTemplateReference *, 4>::dropBack(size_t) [T = (anonymous namespace)::itanium_demangle::ForwardTemplateReference *, N = 4]
-void (anonymous namespace)::itanium_demangle::PODSmallVector<(anonymous namespace)::itanium_demangle::Node *, 32>::dropBack(size_t) [T = (anonymous namespace)::itanium_demangle::Node *, N = 32]
-void (anonymous namespace)::itanium_demangle::PODSmallVector<(anonymous namespace)::itanium_demangle::PODSmallVector<(anonymous namespace)::itanium_demangle::Node *, 8> *, 4>::pop_back() [T = (anonymous namespace)::itanium_demangle::PODSmallVector<(anonymous namespace)::itanium_demangle::Node *, 8> *, N = 4]
-void *(anonymous namespace)::fallback_malloc(size_t)
 void __cxxabiv1::scan_eh_tab(scan_results &, _Unwind_Action, bool, _Unwind_Exception *, _Unwind_Context *)
 void std::__ndk1::__sort<std::__ndk1::__less<char, char>&, char*>(char*, char*, std::__ndk1::__less<char, char>&)
 void std::__ndk1::__sort<std::__ndk1::__less<double, double>&, double*>(double*, double*, std::__ndk1::__less<double, double>&)
@@ -3241,9 +3203,12 @@ vtable for std::runtime_error
 vtable for std::type_info
 vtable for std::underflow_error
 w+be
+w+bxe
+w+xe
 w33H$
 w33d
 wVw0
+wbxe
 wchar_t
 wcrtomb
 wcscoll_l
@@ -3252,6 +3217,7 @@ wcsnrtombs
 wcstod
 wcstof
 wcstol
+wcstold
 wcstoll
 wcstoul
 wcstoull
@@ -3270,7 +3236,7 @@ xg^Jp5|
 xxj81
 y#FD
 yLzw\n
-yptn
+yptnk
 ytR>
 z3\Gc0
 zX:[2

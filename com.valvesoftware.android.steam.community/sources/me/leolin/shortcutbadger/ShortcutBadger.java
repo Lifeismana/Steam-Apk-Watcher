@@ -139,16 +139,16 @@ public final class ShortcutBadger {
         sComponentName = launchIntentForPackage.getComponent();
         Intent intent = new Intent("android.intent.action.MAIN");
         intent.addCategory("android.intent.category.HOME");
-        Iterator<ResolveInfo> it = context.getPackageManager().queryIntentActivities(intent, 65536).iterator();
-        while (it.hasNext()) {
-            String str = it.next().activityInfo.packageName;
-            Iterator<Class<? extends Badger>> it2 = BADGERS.iterator();
+        Iterator<ResolveInfo> it2 = context.getPackageManager().queryIntentActivities(intent, 65536).iterator();
+        while (it2.hasNext()) {
+            String str = it2.next().activityInfo.packageName;
+            Iterator<Class<? extends Badger>> it3 = BADGERS.iterator();
             while (true) {
-                if (!it2.hasNext()) {
+                if (!it3.hasNext()) {
                     break;
                 }
                 try {
-                    badger = it2.next().newInstance();
+                    badger = it3.next().newInstance();
                 } catch (Exception unused) {
                     badger = null;
                 }

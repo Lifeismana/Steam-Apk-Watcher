@@ -7,8 +7,8 @@
     </item>
     <item android:gravity="bottom">
         <shape>
-            <size android:height="1dp"/>
-            <solid android:color="?attr/colorSurfaceVariant"/>
+            <size android:height="@dimen/m3_comp_divider_thickness"/>
+            <solid android:color="?attr/colorOutlineVariant"/>
         </shape>
     </item>
 </layer-list>

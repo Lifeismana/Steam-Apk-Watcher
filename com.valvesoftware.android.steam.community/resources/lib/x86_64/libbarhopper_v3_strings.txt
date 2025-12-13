@@ -1,19 +1,20 @@
     @ 0x%08x (%s)\n
   peak heap usage: 
   samples: 
-  time/run: 
+  time per run: 
  !"#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
  !"#$$$$$$\n\v\f\r
- !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  #types=
+ (copy to device)
+ (copy to host)
  (from 
  (inside=
  (stacktrace:\n
  (unknown) 
  ... (message truncated)\n
  000000000000
- INT32, INT64 and quantized UINT8 now, got %d.
  a protocol buffer. Use the 'bytes' type if you intend to send raw bytes. 
+ and 
  average threads used: 
  batches
  but must be at least 
@@ -62,6 +63,7 @@
 !"#$%&'()*+,-./:;<=>?@[\]^_
 !88Hp
 !IsDynamicTensor(body_output)
+!IsDynamicTensor(output)
 !IsEmptyDetectionModel() && !IsEmptyDecoderModel()
 !Xepa
 !model_file.empty()
@@ -79,17 +81,21 @@ $v?4cv?
 %.15g:%.15g
 %.17g:%.17g
 %I:%M:%S %p
-%a %b %d %H:%M:%S %Y
 %c0000 00:00:%02d.%06d %7d 
 %lld
 %s failed to acquire mutex
 %s failed to broadcast
 %s failed to release mutex
+%s shape (%d) must be equal to input shape (%d) in STRIDED_SLICE node #%d
 %s:%d %s != %s (%d != %d)
 %s:%d %s != %s (%s != %s)
 %s:%d %s not near %s (%f != %f)
 %s:%d %s was not true.
 %s:%d Type %s is unsupported by op %s.
+%s:%d unhandled reduction body case.\n
+%s:%d unsupported kernel data type (TfliteType: %d a.k.a %s).
+%s:%d unsupported reduction body builtin code: %d.\n
+%s:%d unsupported reduction body.\n
 %s:%d: %s condition not satisfied:   [ %s %s %s ]   with values   [ %s %s %s ].\n
 %s:%d: %s condition not satisfied: %s\n
 %s@ %*p  %s\n
@@ -98,19 +104,27 @@ $v?4cv?
 ' is defined as one type and declared as another
 ' specified for flag '
 ' to invalid value 
-'.39SXb
+'%s' attribute of 'stablehlo.reduce_window' does not have the expected size (%llu != %llu).
+'.3JPUot~
 'ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
 '[isUO
+'stablehlo.pad' operation parameter array sizes are not consistent.
+'window_dimensions' attribute is not optional for 'stablehlo.reduce_window' and cannot be empty.
+(%a %b %d %H:%M:%S %Y
 (*image_ptr)->imageData
 (1. / 128.)
+(Data Type: %s) currently not supported.\n
+(Index Type: %s) currently not supported.\n
+(Index Type: %s, Data Type: %s) currently not supported.\n
 (NumElements(params) == 0 && NumElements(indices) == 0) || NumElements(params) > 0
 ([BLjava/lang/String;)V
 (affine_quantization->scale->size == 1 || affine_quantization->scale->size == channels_out)
+(bias == nullptr) || bias->type == params->quantized_bias_type
 (bias->type == kTfLiteInt32) || (bias->type == kTfLiteInt64)
 (bias->type == kTfLiteInt64) || (bias->type == kTfLiteInt32)
 (cannot determine missing fields for lite message)
 (enum value %d)
-(filter->type == kTfLiteInt8)
+(filter->type == kTfLiteInt8 || (filter->type == kTfLiteInt4 && input->type == kTfLiteInt16))
 (indices.DimensionsCount() >= 1) && (updates.DimensionsCount() >= 1) && (shape_shape.DimensionsCount() == 1)
 (input_resource_id_tensor->type == kTfLiteResource || input_resource_id_tensor->type == kTfLiteInt32)
 (input_to_forget_weights->type == kTfLiteFloat32) || (input_to_forget_weights->type == kTfLiteInt8) || (input_to_forget_weights->type == kTfLiteUInt8)
@@ -131,6 +145,8 @@ $v?4cv?
 (params->key_dtype == kTfLiteInt64 && params->value_dtype == kTfLiteString) || (params->key_dtype == kTfLiteString && params->value_dtype == kTfLiteInt64)
 (scaled_width <= input_width_) && (scaled_height <= input_height_)
 (start >= limit && delta < 0) || (start <= limit && delta > 0)
+(std::is_same_v<PaddingIntegerType, int32_t>)
+(std::is_same_v<PaddingIntegerType, int64_t>)
 (unknown)
 ) in dimension 
 ): string form of default value '
@@ -163,36 +179,29 @@ $v?4cv?
 ./photos/vision/barhopper/mobile/image/luminance.h
 ./third_party/absl/time/internal/get_current_time_posix.inc
 ./third_party/protobuf/arena.h
-./third_party/protobuf/arena_cleanup.h
 ./third_party/protobuf/extension_set_inl.h
 ./third_party/protobuf/lazy_field.h
 ./third_party/protobuf/parse_context.h
 ./third_party/ruy/ruy/kernel_common.h
 ./third_party/tensorflow/lite/experimental/resource/static_hashtable.h
+./third_party/tensorflow/lite/kernels/control_flow_common.h
 ./util/coding/nth-derivative.h
 ./util/geometry/s2closest_edge_query_base.h
 ./util/geometry/s2closest_point_query_base.h
-./util/geometry/s2shape_index.h
-./util/gtl/compact_array.h
 ./util/gtl/densehashtable.h
 ./util/gtl/hashtable_common.h
 ./util/gtl/lockfree_hashtable_internal.h
 ./util/task/status_builder.h
 .bin
-//depot/branches/mlkit.android_release_branch/536407635.1/google3
+//depot/branches/mlkit.android_release_branch/659763987.1/google3
 //java/com/google/android/libraries/barhopper/jni:libbarhopper_v3.so
-/config/data/tzdata/
-/data/misc/zoneinfo/current/tzdata
-/data/tzdata/
+/dev/urandom
 /google/src/cloud/buildrabbit-username/buildrabbit-client/google3
-/pkg/data/tzdata/
 /proc/cpuinfo
 /sys/devices/system/cpu/cpu0/tsc_freq_khz
 /sys/devices/system/cpu/kernel_max
 /sys/devices/system/cpu/possible
 /sys/devices/system/cpu/present
-/system/usr/share/zoneinfo/tzdata
-/usr/share/zoneinfo
 0 <= axis && axis < NumDimensions(input)
 0 <= batch_dims && batch_dims < NumDimensions(input)
 0.000000
@@ -201,7 +210,6 @@ $v?4cv?
 00000
 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f404142434445464748494a4b4c4d4e4f505152535455565758595a5b5c5d5e5f606162636465666768696a6b6c6d6e6f707172737475767778797a7b7c7d7e7f808182838485868788898a8b8c8d8e8f909192939495969798999a9b9c9d9e9fa0a1a2a3a4a5a6a7a8a9aaabacadaeafb0b1b2b3b4b5b6b7b8b9babbbcbdbebfc0c1c2c3c4c5c6c7c8c9cacbcccdcecfd0d1d2d3d4d5d6d7d8d9dadbdcdddedfe0e1e2e3e4e5e6e7e8e9eaebecedeeeff0f1f2f3f4f5f6f7f8f9fafbfcfdfeff
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899NSt6__ndk112system_errorE
 00P`
 0123
 0123456789
@@ -214,14 +222,13 @@ $v?4cv?
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ-. *$/+%
 0123456789abcdef
 0123456789abcdefABCDEFxX+-pPiInN
-0123456789abcdefO
 0P`0
+0d5dafd8-d08f-4093-bdbd-4e47f0fe3330
 1.0 / 32768
 1.f / 256
 1.f / 32768
 11S2CellUnion
 11Sb
-11WImageViewCIhLi1EE
 12CordByteSink
 12S2LatLngRect
 12S2ShapeIndex
@@ -229,34 +236,33 @@ $v?4cv?
 13WImageBufferCIfLi2ENSt6__ndk19allocatorIcEEE
 14S2CellIterator
 16.0 / 256
-1685466572
 16S2DistanceTargetI13S2MinDistanceE
+1722929131
 18S2LegacyValidQueryI19MutableS2ShapeIndexE
 18S2ShapeIndexRegionI19MutableS2ShapeIndexE
 19MutableS2ShapeIndex
 19S2CellRangeIteratorIN12S2ShapeIndex8IteratorEE
 1Sb1
-1f27973a-0be0-48a0-96df-05f76e7cf9b5
 21S2ValidationQueryBaseI19MutableS2ShapeIndexE
 22Vd::Nt\n\n
 23S2MinDistanceEdgeTarget
+24S2MinDistancePointTarget
 29S2ClosestPointQueryEdgeTarget
 2Jbz
 2Vd2:Nt:\n
 3"ii
 30S2ClosestPointQueryPointTarget
+333?
 33Uf
-3Gt 
-3Gt 4S
-3JCy7o
 4 * activation_depth
 44\h
 4\h4
-5'V 62
-536407635
-536433581
+5)BL?
 55_jWW
 5S2Cap
+5txs.O*X
+659763987
+659779404
 6Nf~
 6S2Cell
 6S2Loop
@@ -272,7 +278,9 @@ $v?4cv?
 8>qe4
 8Hp8
 8S2Region
+8txs.txs.txs.txs.
 9Kr9J
+9O*X
 9S2Polygon
 : Object "
 : edges snapped=
@@ -284,7 +292,6 @@ $v?4cv?
 ;\n9\n2\n0\n-\n5\n!\n
 ;d22Vt::N
 <G#O3
-<TEMP MSG>
 <Unknown severity>
 <init>
 <nullptr>
@@ -294,16 +301,14 @@ $v?4cv?
 =jGK
 >H{1S
 >N9barhopper13deep_learning21BarcodeDetectorClientE
-?333?
-?Default
-?JCy7JCy7JCy7JCy7S
-?UUUUUU
+>~3a*~3a*~3a*~3a*
 ?es-8R
-@24S2MinDistancePointTarget
+?ffF@
+?fff?
 @@@@@@@@@@@@@@@@
 @@@@@@@@@hHHHH@@@@@@@@@@@@@@@@@@(
 @@@A@D@E@P@Q@T@U@
-@a2U0*
+A null cache key was provided.
 A4)i
 A@AAADAEAPAQATAUA
 AAMVA
@@ -319,7 +324,6 @@ ANEURALNETWORKS_DEAD_OBJECT
 ANEURALNETWORKS_INCOMPLETE
 ANEURALNETWORKS_MISSED_DEADLINE_PERSISTENT
 ANEURALNETWORKS_MISSED_DEADLINE_TRANSIENT
-ANEURALNETWORKS_NO_ERROR
 ANEURALNETWORKS_OP_FAILED
 ANEURALNETWORKS_OUTPUT_INSUFFICIENT_SIZE
 ANEURALNETWORKS_OUT_OF_MEMORY
@@ -396,6 +400,7 @@ ANeuralNetworks_getDeviceCount
 ANeuralNetworks_getRuntimeFeatureLevel
 ARG_MAX
 ARG_MIN
+ARMNNCORE_MLDELEGATE_NONEEDGETPUEDGETPU_CORALGPUHEXAGONMTK_NEURONNNAPIXNNPACK
 ASSIGN_VARIABLE
 ASharedMemory_create
 ATAN2
@@ -403,7 +408,6 @@ ATrace_beginSection
 ATrace_endSection
 ATrace_isEnabled
 AVERAGE_POOL_2D
-Abort at %s:%d: %s\n
 Abs (NC, F16)
 Abs (NC, F32)
 AbslStatusStackTracePayload
@@ -414,26 +418,32 @@ Add (ND, QS8)
 Add (ND, QU8)
 AddN only supports FLOAT32|INT32 now, got %s.
 AddNodeWithParameters is disallowed when graph is immutable.
+Affine
+AllGtThanZero(base_dilations)
+AllGtThanZero(window_dilations)
+AllGtThanZero(window_dimensions)
+AllGtThanZero(window_strides)
 AllocateTensors
 AllocateTensors failed, recreating interpreter without delegation and retrying.
 AllocateTensors() called on inconsistent model.
 AllocateTensors() failed
-America/Los_Angeles
 An OK status is not a valid constructor argument to StatusOr<T>
 AndroidBitmap_getInfo
 AndroidBitmap_lockPixels
 AndroidBitmap_unlockPixels
+Append buffer to cache file
 Applying the constraints on 
 April
 ArgMax Pooling (NHWC, F32)
 Asked to mmap '%d' bytes from fd '%d' at offset '%d'. This is over the length of file '%d'.
-Assert %s
 Attempt to reschedule without a slot (inside PBR?).
 Attempt to set flag '
 Attempted to call ANeuralNetworksCompilation_create from NNAPI delegate that is constructed from a support library
 Attempting to fetch value instead of handling error 
 Attempting to resize a fixed-size tensor.
+Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#%d is a dynamic-sized tensor).
 AudioSpectrogram
+Aug 6 2024 00:25:31
 August
 AutoRegress(recognition_options, result)
 AutoRegressInference()
@@ -442,11 +452,14 @@ Average Pooling (NHWC, F16)
 Average Pooling (NHWC, F32)
 Average Pooling (NHWC, QU8)
 Axis Type '%s' is not supported by reverse.
+AztecReader_Decode
 BATCH_MATMUL
 BATCH_TO_SPACE_ND
+BBox
 BEGIN:VCALENDAR
 BEGIN:VCARD
 BEGIN:VEVENT
+BFLOAT16
 BIDIRECTIONAL_SEQUENCE_LSTM
 BIDIRECTIONAL_SEQUENCE_RNN
 BITCAST
@@ -470,23 +483,31 @@ BUCKETIZE
 Bankers Rounding (NC, F16)
 Bankers Rounding (NC, F32)
 Barcode detection model is empty.
+BarcodeRecognizer_Recognize
+BarhopperDecoding
+BarhopperV3::Recognize
+Batch Matrix Multiply (NC, F16)
 Batch Matrix Multiply (NC, F32)
+Batch Matrix Multiply (NC, QD8, F32, QC8W)
 BatchMatMul_scratch_buffer
 Before pass 0: sites=
 Begin pipeline
 Begin realization
 Big5
+Binarizer type cannot be UNSPECIFIED.
 Bitmap format is not ARGB_8888
 BitwiseXor currently only supports 8-bit/16-bit/32-bit integer/unsigned integer, got %s
-Blaze, release blaze-2023.05.17-4 (mainline @532568271)
+Blaze, release blaze-2024.07.30-1 (mainline @657367657)
+Body subgraph not found for stablehlo.reduce_window: %d.
 Buffer argument 
 Buffer has a non-null device_interface but device is 0.\n
 Buffer has a non-zero device but no device interface.\n
 Buffer has both host and device dirty bits set.\n
+Buffer list
 Buffer pointer passed to 
 BuildAutoRegressorModel()
 BuildFeatureExtractorModel()
-Built on May 30 2023 10:11:19 (1685466572)
+Built on Aug 6 2024 00:25:31 (1722929131)
 CALL
 CALL_ONCE
 CANCELLED
@@ -499,14 +520,12 @@ CIE version is not 1 or 3
 COMPLEX128
 COMPLEX64
 COMPLEX_ABS
-CONCATENATE
 CONCATENATION
 CONCAT_EMBEDDINGS
 CONVERSION_METADATA
 CONV_2D
 CONV_3D
 CONV_3D_TRANSPOSE
-CORE_MLDELEGATE_NONEEDGETPUEDGETPU_CORALGPUHEXAGONNNAPIXNNPACK
 CUMSUM
 CUSTOM
 Call to DecrementUsageCounter() not preceded by IncrementUsageCounter()
@@ -516,7 +535,11 @@ Can't
 Can't binary search on variable length encoded data.
 Can't happen
 Cannot allow dynamic tensors due to previous delegation, resetting to original execution plan.
-Cannot evenly split dimension %d, which is %d, into %d
+Cannot append data to an unstarted builder.
+Cannot change the path of a cache that has already been loaded.
+Cannot get the address of a buffer in a non finalized cache.
+Cannot insert a buffer in a finalized cache.
+Cannot reserve space in a finalized cache.
 Cast
 Ceil
 Ceiling (NC, F16)
@@ -527,12 +550,14 @@ Chain %d of shape %d has neighboring edges that don't connect.
 Chain %d of shape %d isn't closed
 Channel Shuffle (NC, X32)
 Channel Shuffle (NC, X8)
+Channelwise quantized tensor #%d in node #%d has invalid quantization parameters
 Check %s failed: %s
 Check (v & (kMuWait | kMuWrWait)) != kMuWrWait failed: %s: Mutex corrupt: waiting writer with no waiters: %p
 Check (v & (kMuWriter | kMuReader)) != (kMuWriter | kMuReader) failed: %s: Mutex corrupt: both reader and writer lock held: %p
 Check absl::ParseFlag(env, &value, &err) failed: 
 Check absl::ParseFlag(val, &dflt, &err) failed: 
 Check failed: 
+Check the '%s' attribute.
 CheckHangDetectionSupport(acceleration_)
 CheckedLog2(cell_state->params.scale, &cell_scale)
 CheckedLog2(output->params.scale, &output_scale_log2_rounded)
@@ -546,10 +571,12 @@ Cn77Y
 Compilation
 Compilation caching: directory '
 Compilation info: getSessionId=%d getErrorCode=%d getCompilationTimeNanos=%lu getNnApiVersion=%ld getDeviceIds=%s getModelArchHash=%x getInputDataClass=%d getOutputDataClass=%d isCachingEnabled=%s isControlFlowUser=%s
+Computation subgraph not found for stablehlo.scatter.
 Condition tensor has unsupported type: '%s'.
 Constant Pad (ND, X16)
 Constant Pad (ND, X32)
 Constant Pad (ND, X8)
+Constant buffer %d specified an out of range offset.\n
 Constrained size: 
 Constraint violated: 
 Consume
@@ -557,11 +584,15 @@ Conv2D HWC2CHW
 Conv_hwcn_weights
 Conv_row_sums
 Convert (NC, F16, F32)
+Convert (NC, F16, QD8)
 Convert (NC, F32, F16)
+Convert (NC, F32, QD8)
+Convert (NC, F32, QP8)
 Convert (NC, F32, QS8)
 Convert (NC, F32, QU8)
 Convert (NC, QS16, QS8)
 Convert (NC, QS8)
+Convert (NC, QS8, F16)
 Convert (NC, QS8, F32)
 Convert (NC, QU8)
 Convert (NC, QU8, F32)
@@ -570,38 +601,48 @@ Convolution (NCHW, F32)
 Convolution (NHWC, F16)
 Convolution (NHWC, F32)
 Convolution (NHWC, QC8)
+Convolution (NHWC, QD8, F16, QC8W)
+Convolution (NHWC, QD8, F32, QC8W)
 Convolution (NHWC, QS8)
 Convolution (NHWC, QU8)
 Convolution2DTransposeBias
 Copy (NC, X16)
 Copy (NC, X32)
 Copy (NC, X8)
+Copy Sign (NC, F32)
 Cordz disabled: not global symbol compliant
 CoreML
-Corrupted cleanup tag: 
 Could not close fd: %s, error: %s
 Could not create 
+Could not determine how many input dimensions to use for input_channels: %s node #%d
 Could not find next edge in edge chain
 Could not find the specified NNAPI accelerator: %s. Must be one of: {%s}.
 Could not flock %s: %s
+Could not fstat %s: %s
 Could not fsync: %s, error: %s
+Could not get 'stablehlo.composite' operation parameters.
+Could not get 'stablehlo.pad' operation parameters.
+Could not get 'stablehlo.reduce_window' operation parameters.
 Could not open '%s'.
+Could not open file ('%s'): %s.
 Could not save delegated nodes
 Couldn't get node and registration info for op: %d\n
-Couldn't retrieve cell, possible data corruption?
+CreateOutputBwImage
 Created 
 Created TensorFlow Lite XNNPACK delegate for CPU.
 Created TensorFlow Lite delegate for NNAPI.
+Crop_
+Crop_OnedDecode
 Current data type %s is not supported.
-Current does not support more than 1 axis.
 Currently BatchMatMul doesn't support type: %s
 Currently SegmentSum doesn't support type: %s
 Currently Unique doesn't support type: %s
 Currently UnsortedSegment doesn't support data type: %s
 Currently only hybrid, int8 and int16 quantization are supported.\n
+Custom Option Offset for opcode_index %d is out of bound\n
 Custom allocation is too small for tensor idx: %d
 Cyrix
-C~3a*~3a*~3a*~3a*pppppppp
+D3)BL?)BL?)BL?)BL?)BL?)BL?)BL?)BL?
 D@DADDDEDPDQDTDUD
 DATA_LOSS
 DD9.
@@ -614,6 +655,7 @@ DEPTH_TO_SPACE
 DEQUANTIZE
 DESCRIPTION
 DIFFERENCE
+DILATE
 DM&P
 DTEND
 DTSTART
@@ -628,13 +670,17 @@ DW_OP_fbreg not implemented
 DW_OP_piece not implemented
 DYNAMIC_UPDATE_SLICE
 D\v.9B
+DataMatrixReader_Decode
 December
 DecodeBarcode( &locations[0], anchor_x, anchor_y, layer.anchor_width(j), layer.anchor_height(j), scale, &detection)
 DecodeThresholdedBarcodes(barcodes, 1 / scale)
+Deconvolution (NC, QS8, QC8W)
 Deconvolution (NHWC, F16)
 Deconvolution (NHWC, F32)
+Deconvolution (NHWC, QD8, F32, QC8W)
 Deconvolution (NHWC, QS8)
 Deconvolution (NHWC, QU8)
+Default
 Dense shape type %d not supported.
 Densify_output
 Depth To Space (NCHW2NHWC, X16)
@@ -645,8 +691,11 @@ Depth To Space (NHWC, X8)
 Depth() == image->depth
 Depth() == image_->depth
 DetectBarcodes(pixels, width, height, bytes_per_line, scale, &thresholded_barcodes)
+Detection
 Did not get tensors in subgraph %d.\n
 Didn't find op for builtin opcode '%s' version '%d'. An older version of this builtin might be supported. Are you using an old TFLite binary with a newer model?\n
+DilationContext::kNumInputTensors
+DilationContext::kNumOutputTensors
 Dimension are too large and result in overflow. 
 Disabling acceleration because of possible previous crashes
 Div only supports FLOAT32, INT32 and quantized UINT8 now, got %d.
@@ -660,6 +709,7 @@ Duplicate log sinks are not supported
 Dynamic Fully Connected (NC, F16)
 Dynamic Fully Connected (NC, F32)
 DynamicUpdateSlice only currently supports 1-bit/8-bit/32-bit/64-bit integer or float type, got %d.
+DynamicUpdateSlice only currently supports int32 or int64 indices type, got %d.
 E@EAEDEEEPEQETEUE
 ELU (NC, F16)
 ELU (NC, F32)
@@ -686,14 +736,14 @@ End consume
 End pipeline
 End produce
 End realization
+Enqueue failed
 Enqueue to empty list failed
 Enqueue to list failed
 Error reading %s: %s
 Error: 
-Etc/GMT
-Etc/Unknown
 Execution
 Execution info: getSessionId=%d getErrorCode=%d getNnApiVersion=%ld getModelArchHash=%x getDeviceIds=%s getInputDataClass=%d getOutputDataClass=%d isCachingEnabled=%s isControlFlowUsed=%s getExecutionMode=%d getRuntimeExecutionTimeNanos=%lu getDriverExecutionTimeNanos=%lu getHardwareExecutionTimeNanos=%lu
+Exp (NC, F32)
 Expected all input edges to have siblings, but some were missing
 Expected sorted boundaries
 ExternalCpuBackendContext isn't properly initialized during TFLite interpreter initialization.
@@ -712,12 +762,22 @@ FLOOR
 FLOOR_DIV
 FLOOR_MOD
 FNSt6__ndk110unique_ptrIN6tflite9delegates11NnapiPluginENS_14default_deleteIS3_EEEERKNS1_14TFLiteSettingsEE
+FNSt6__ndk110unique_ptrIN6tflite9delegates23DelegatePluginInterfaceENS_14default_deleteIS3_EEEERKNS1_14TFLiteSettingsEE
 FNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEN4absl11string_viewEE
 FNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEvE
 FULLY_CONNECTED
 Failed generating seed-material for URBG.
 Failed to add NN API tensor: type %s is not supported.
 Failed to apply the default TensorFlow Lite delegate indexed at %zu.
+Failed to build auto regressor model from buffer.
+Failed to build auto regressor model from file.
+Failed to build detector model from buffer.
+Failed to build detector model from file.
+Failed to build feature extractor model from buffer.
+Failed to build feature extractor model from file.
+Failed to build interpreter, status = 
+Failed to build model from `model_buffer_`.
+Failed to create interpreter.
 Failed to get Bitmap info
 Failed to get crossed vertex index.
 Failed to get file size of '%s'.
@@ -725,16 +785,14 @@ Failed to open for writing: %s
 Failed to read real-time clock.
 Failed to rename to %s, error: %s
 Failed to write data to: %s, error: %s
-Falling back to critical %s zoneinfo data
 FbN4absl11string_viewEE
 FeatureExtractorInference()
 February
 File %s couldn't be opened for reading: %s
-Fill dimensions must be >= 0
+Fill dimensions must be >= 0 got %d
 Fill only currently supports int32, int64 for input 0, got %d.
 Fill only currently supports int8, int16, int32, int64, float32, bool, string for input 1, got %d.
 Filter data type %s currently not supported.
-Fixed/UTC
 Flag 
 Flag '
 Flex
@@ -743,18 +801,32 @@ Floor (NC, F32)
 Forcing crash because 
 Found NMS op with invalid num inputs: %d
 Found builtin operator %s with custom options.\n
+Found serialized data for model %s (%d B) at %s
 Found too many dimensions in the input array of operation '%s'.\n
 Friday
 Fu?*gu?u
 Fully Connected (NC, F16)
 Fully Connected (NC, F32)
+Fully Connected (NC, F32, QC4W)
+Fully Connected (NC, F32, QC8W)
+Fully Connected (NC, QD8, F16, QB4W)
+Fully Connected (NC, QD8, F16, QC4W)
+Fully Connected (NC, QD8, F16, QC8W)
+Fully Connected (NC, QD8, F32, QB4W)
+Fully Connected (NC, QD8, F32, QC4W)
+Fully Connected (NC, QD8, F32, QC8W)
+Fully Connected (NC, QP8, F32, QC4W)
 Fully Connected (NC, QS8)
+Fully Connected (NC, QS8, QC8W)
 Fully Connected (NC, QU8)
+Fully Connected: Mismatch between number of bias elements %d and number of output channels %d at node %d
 Futex operation failed with error %d\n
 FvP14TfLiteDelegateE
 GATHER
 GATHER_ND
+GB18030
 GELU
+GELU (NC, F32)
 GEMM
 GOOGLE_ALSOLOGTOSTDERR
 GOOGLE_LOGTOSTDERR
@@ -762,6 +834,7 @@ GOOGLE_STDERRTHRESHOLD
 GREATER
 GREATER_EQUAL
 G\rSJUUUUUU#?
+GetSizeOfType(context, input_tensor->type, &element_size) == kTfLiteOk
 GetTensorShape(data).Dims(0)
 GetTensorShape(segment_ids).Dims(0)
 Getting list of available devices
@@ -769,6 +842,7 @@ Given edges do not form loops (indegree != outdegree)
 Given shapes, %s and %s, are not broadcastable.
 Given shapes, %s, %s and %s, are not broadcastable.
 Given undirected edges do not form loops
+Global Average Pooling
 Global Average Pooling (NCW, F16)
 Global Average Pooling (NCW, F32)
 Global Average Pooling (NWC, F16)
@@ -778,8 +852,10 @@ Global Average Pooling (NWC, QU8)
 Global Sum Pooling (NWC, F16)
 Global Sum Pooling (NWC, F32)
 GraphEdgeClipper::GetCrossedVertexIndex called with 
+GrayBuffer_Resize
 Group convolution currently not supported for hybrid kernel.
 Growing hashtable overflows size_type
+H3U&,t=
 HARD_SWISH
 HASHTABLE
 HASHTABLE_FIND
@@ -788,6 +864,7 @@ HASHTABLE_LOOKUP
 HASHTABLE_SIZE
 HL_NUMTHREADS
 HL_NUM_THREADS
+HL_PROFILER_SORT
 HL_TRACE_FILE
 HOME
 HardSwish (NC, F16)
@@ -797,6 +874,7 @@ HaveSameShapes(input0, input)
 HaveSameShapes(input1, input)
 HaveSameShapes(input_x, input_y)
 HaveSameShapes(key_tensor, value_tensor)
+HaveSameShapes(output_key, initial_state)
 Hexagon
 Hp88
 Hygon
@@ -824,6 +902,7 @@ ISO8859_8
 ISO8859_9
 If half_pixel_centers is True, align_corners must be False.
 Illegal value '
+Image_BuildRotatedRleImage
 Inconsistent loop orientations detected
 Index has geometry with invalid vertex touches.
 Index innermost dimension length must be <= params rank.
@@ -834,11 +913,18 @@ Indices must be at least a vector.
 Indices of type '%s' are not supported by gather_nd.
 Indices of type '%s' are not supported by scatter_nd.
 Inference()
+Init(acceleration::Acceleration::default_instance(), options.binarizer_options(), BarcodeDetectorClientOptions(options.detector_options())) is OK
+Init(compute_settings, binarizer_options, std::move(detector_options)) is OK
 InitializeTfliteInterpreterAndDelegate()
 InitializeTfliteRuntime()
 InitializeWithFallback already called
 Initialized TensorFlow Lite runtime.
+Input array not provided for operation '%s'.\n
+Input buffer input_y
+Input buffer is null.
+Input buffer rgb
 Input buffer src_y
+Input buffer transform_matrix_
 Input tensor %d lacks data
 Input type %s with Output type %s is not currently supported.
 Intel
@@ -848,10 +934,11 @@ Invalid
 Invalid %dD input tensor (must be a 1D tensor).
 Invalid GOOGLE_STDERRTHRESHOLD value: 
 Invalid S2BooleanOperation::OpType
-Invalid axis: 
+Invalid axis: %d
 Invalid begin and size.
+Invalid call to CheckTypeAndMergeFrom between types 
 Invalid devices enum: 
-Invalid nesting: loop %d should %scontain loop %d
+Invalid input tensor dimensions.
 Invalid number of threads
 Invalid quantized and sparse fully-connected format.
 Invalid sigma value for soft NMS: %f
@@ -866,10 +953,15 @@ Invoke
 Invoke called on model that is not consistent.
 Invoke called on model that is not ready.
 IsConstantTensor(op_context.input)
+IsConstantTensor(window_dilations_tensor)
+IsConstantTensor(window_dimensions_tensor)
+IsConstantTensor(window_strides_tensor)
 IsPowerOfTwo(fft_length_data[0])
 IsPowerOfTwo(fft_length_data[1])
 IsQuantized(output_tensor.type)
 IsValid()
+JCy7
+JCy7JCy7JCy7JCy7
 January
 Java_com_google_android_libraries_barhopper_BarhopperV3_closeNative
 Java_com_google_android_libraries_barhopper_BarhopperV3_createNative
@@ -881,6 +973,7 @@ Java_com_google_android_libraries_barhopper_BarhopperV3_recognizeStridedBufferNa
 Java_com_google_android_libraries_barhopper_BarhopperV3_recognizeStridedNative
 July
 June
+K)BL?)BL?)BL?)BL?
 Kr99
 L&&jl66Z~??A
 L2_NORMALIZATION
@@ -899,21 +992,26 @@ LOG_SOFTMAX
 LSH_PROJECTION
 LSTM
 Lazy parsing failed for 
+Lcom/google/android/libraries/barhopper/MultiScaleDecodingOptions;
+Lcom/google/android/libraries/barhopper/MultiScaleDetectionOptions;
 Lcom/google/android/libraries/barhopper/OnedRecognitionOptions;
 Leaky ReLU (NC, F16)
 Leaky ReLU (NC, F32)
 Leaky ReLU (NC, QS8)
 Leaky ReLU (NC, QU8)
+LoS'
 Load
+LocalBlockBinarizer
+LocalBlockBinarizer_Binarize
 Lock
 Lock blocking 
 Lock returning 
+Log (NC, F32)
 Logical ops only support bool type.
 Loop %d edge %d crosses loop %d edge %d
 Loop %d edge %d has duplicate near loop %d edge %d
 Loop %d: %s
-Loop %d: empty loops are not allowed
-Loop %d: full loop appears in non-full polygon
+Loop %d: Vertex %d is not unit length
 Loop %d: invalid loop depth (%d)
 LowLevelAlloc arithmetic overflow
 Lstm_bw_row_sums
@@ -953,7 +1051,7 @@ MaxPoolingWithArgmax2D
 MaxUnpooling2D
 Maximum (ND, F16)
 Maximum (ND, F32)
-May 30 2023 10:11:19
+Mean
 Mean (ND, F16)
 Mean (ND, F32)
 Memory limit exceeded (tracked usage %d bytes, limit %d bytes)
@@ -963,26 +1061,38 @@ Minimum (ND, F16)
 Minimum (ND, F32)
 Mismatch: %f is quantized to %d with (%f, %d). abs(%f - %f) = %f > %f (tolerance) range percentage %f.\n
 Mismatching quantization scale across the %dth input (%f) and the output (%f) for CONCATENATE operator #%d
+Mismatching quantization scale across the input (%f) and the output (%f) for RESHAPE operator #%d
 Mismatching quantization zero point across the %dth input (%d) and the output (%d) for CONCATENATE operator #%d
+Mismatching quantization zero point across the input (%d) and the output (%d) for RESHAPE operator #%d
 Missing exported method name for SignatureDef
 Missing max tensor size for tensor#%d. When a vendor plugin is supplied, max tensor size is required for all dynamic output tensors.
 Missing registration for opcode_index %d\n
 Mixed dimensional geometry is invalid for legacy semantics.
+MlBinarizer
+MlBinarizer::RunInference
+MlBinarizer_Binarize
+MlBinarizer_FillInputBufferWithResize
+MlBinarizer_FillInputBufferWithoutResize
 Mmap of '%d' at offset '%d' failed with error '%d'.
+Model data is empty.
 Model provided has model identifier '%c%c%c%c', should be '%s'\n
 Model provided is schema version %d not equal to supported version %d.\n
+Model provided must have at least 7 bytes to hold identifier.\n
 Models with dynamic dimensions and vendor plugin is not supported before NNAPI 1.2 (API level 29).
 ModifyGraphWithDelegate
 ModifyGraphWithDelegate model namespace: %s model id: %s accelerator name: %s
 Monday
-Mul only supports FLOAT32, COMPLEX32, INT8, INT16,
+Mul only supports FLOAT32, COMPLEX32, INT8, INT16, INT32, INT64 and quantized UINT8 now, got %d.
 Multipliers of type '%s' are not supported by tile.
 Multiply (ND, F16)
 Multiply (ND, F32)
 Multiply (ND, QS8)
 Multiply (ND, QU8)
+Multiply (ND, S32)
 Mutex Enqueue failure
 Mutex queue changed beneath us
+Mutex::Fer while waiting on Condition
+Mutex::Fer with pending CondVar queueing
 N10__cxxabiv116__shim_type_infoE
 N10__cxxabiv117__class_type_infoE
 N10__cxxabiv117__pbase_type_infoE
@@ -998,8 +1108,6 @@ N12S2PointIndexIiE8IteratorE
 N12S2ShapeIndex12IteratorBaseE
 N12S2ShapeIndex8IteratorE
 N12_GLOBAL__N_117EdgeClippingLayerE
-N12_GLOBAL__N_117MemZoneInfoSourceE
-N12_GLOBAL__N_122CriticalZoneInfoSourceE
 N12_GLOBAL__N_123VertexIdEdgeVectorShapeE
 N12acceleration11CPUSettingsE
 N12acceleration12AccelerationE
@@ -1018,17 +1126,19 @@ N12acceleration17InferenceToUseForE
 N12acceleration17WatchdogInterfaceE
 N12acceleration19GPUDelegateSettingsE
 N12acceleration21CoralDelegateSettingsE
+N12acceleration21GoogleEdgeTpuSettingsE
 N12acceleration21HangDetectionSettingsE
 N12acceleration21MinibenchmarkSettingsE
 N12acceleration21NNAPIDelegateSettingsE
 N12acceleration22CoreMLDelegateSettingsE
 N12acceleration23EdgeTpuDelegateSettingsE
 N12acceleration23HexagonDelegateSettingsE
-N12acceleration24TfLiteInterpreterWrapperE
 N12acceleration25EdgeTpuDelegateDeviceSpecE
+N12acceleration26CompilationCachingSettingsE
 N12acceleration28StableDelegateLoaderSettingsE
 N12acceleration34EdgeTpuDelegateInactivePowerConfigE
 N12acceleration6ThreadE
+N12acceleration7regular24TfLiteInterpreterWrapperE
 N12acceleration8WatchdogE
 N13photos_vision10PersonNameE
 N13photos_vision5PhoneE
@@ -1062,11 +1172,6 @@ N4absl13cord_internal11CordzHandleE
 N4absl13cord_internal9CordzInfoE
 N4absl13time_internal4cctz10TimeZoneIfE
 N4absl13time_internal4cctz12TimeZoneInfoE
-N4absl13time_internal4cctz12TimeZoneLibCE
-N4absl13time_internal4cctz12_GLOBAL__N_118FileZoneInfoSourceE
-N4absl13time_internal4cctz12_GLOBAL__N_121AndroidZoneInfoSourceE
-N4absl13time_internal4cctz12_GLOBAL__N_121FuchsiaZoneInfoSourceE
-N4absl13time_internal4cctz14ZoneInfoSourceE
 N4absl14flags_internal18FlagStateInterfaceE
 N4absl14flags_internal8FlagImplE
 N4absl14flags_internal9FlagStateE
@@ -1110,6 +1215,7 @@ N6tflite8resource8internal15StaticHashtableINSt6__ndk112basic_stringIcNS3_11char
 N6tflite8resource8internal15StaticHashtableIlNSt6__ndk112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEEEE
 N6tflite9GraphInfoE
 N6tflite9delegates11NnapiPluginE
+N6tflite9delegates13XNNPackPluginE
 N6tflite9delegates20GraphPartitionHelperE
 N6tflite9delegates23DelegatePluginInterfaceE
 N6tflite9delegates24FP16GraphPartitionHelperE
@@ -1120,12 +1226,22 @@ N7strings8ByteSinkE
 N9S2Builder12SnapFunctionE
 N9S2Builder5LayerE
 N9S2Polygon5ShapeE
+N9barhopper11MlBinarizerE
 N9barhopper13deep_learning11AnchorLayerE
 N9barhopper13deep_learning12AnchorLayersE
+N9barhopper13deep_learning16BinarizerOptionsE
 N9barhopper13deep_learning17OnedDecoderClientE
 N9barhopper13deep_learning18BarhopperV3OptionsE
 N9barhopper13deep_learning24OnedDecoderClientOptionsE
 N9barhopper13deep_learning28BarcodeDetectorClientOptionsE
+N9barhopper18EncodingsConverterE
+N9barhopper20JniEncodingConverterE
+N9barhopper23BinarizerCreationOptionE
+N9barhopper24Utf8PassthroughConverterE
+N9barhopper25MlBinarizerCreationOptionE
+N9barhopper27OneDBinarizerCreationOptionE
+N9barhopper33LocalBlockBinarizerCreationOptionE
+N9barhopper9BinarizerE
 NAME1
 NAME2
 NN API Delegate: Can't get an equivalent TF Lite type for provided NN API type: %d.\n
@@ -1145,16 +1261,13 @@ NOTYPE
 NOT_EQUAL
 NOT_FOUND
 NSt6__ndk110__function6__baseIFN4absl6StatusEPN6tflite4impl11InterpreterEEEE
-NSt6__ndk110__function6__baseIFN4absl6StatusERKN12acceleration28InterpreterCreationResourcesEPNS_10unique_ptrIN6tflite4impl11InterpreterENS_14default_deleteISB_EEEEEEE
+NSt6__ndk110__function6__baseIFN4absl6StatusERKN12acceleration7regular28InterpreterCreationResourcesEPNS_10unique_ptrIN6tflite4impl11InterpreterENS_14default_deleteISC_EEEEEEE
 NSt6__ndk110__function6__baseIFNS_10unique_ptrI14TfLiteDelegatePFvPS3_EEEP13TfLiteContextEEE
-NSt6__ndk110__function6__baseIFNS_10unique_ptrIN4absl13time_internal4cctz14ZoneInfoSourceENS_14default_deleteIS6_EEEERKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEE
 NSt6__ndk110__function6__baseIFNS_10unique_ptrIN6tflite9delegates23DelegatePluginInterfaceENS_14default_deleteIS5_EEEERKNS3_14TFLiteSettingsEEEE
 NSt6__ndk110__function6__baseIFNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEN4absl11string_viewEEEE
 NSt6__ndk110__function6__baseIFNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEvEEE
 NSt6__ndk110__function6__baseIFbN4absl11string_viewEEEE
 NSt6__ndk110__function6__baseIFbP13TfLiteContextP10TfLiteNodeP18TfLiteRegistrationPNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEE
-NSt6__ndk110__function6__baseIFbP7S2ShapeEEE
-NSt6__ndk110__function6__baseIFbP7S2ShapeRK7S2PointEEE
 NSt6__ndk110__function6__baseIFbRK16S2ShapeIndexCellEEE
 NSt6__ndk110__function6__baseIFbRKN11s2shapeutil9ShapeEdgeEEEE
 NSt6__ndk110__function6__baseIFbRKN11s2shapeutil9ShapeEdgeES5_bEEE
@@ -1164,34 +1277,32 @@ NSt6__ndk110__function6__baseIFvN12acceleration17WatchdogInterface13CallbackStat
 NSt6__ndk110__function6__baseIFvP14TfLiteDelegateEEE
 NSt6__ndk110__function6__baseIFvvEEE
 NSt6__ndk110__function6__funcIPFNS_10unique_ptrIN6tflite9delegates11NnapiPluginENS_14default_deleteIS5_EEEERKNS3_14TFLiteSettingsEENS_9allocatorISD_EEFNS2_INS4_23DelegatePluginInterfaceENS6_ISG_EEEESB_EEE
+NSt6__ndk110__function6__funcIPFNS_10unique_ptrIN6tflite9delegates23DelegatePluginInterfaceENS_14default_deleteIS5_EEEERKNS3_14TFLiteSettingsEENS_9allocatorISD_EESC_EE
 NSt6__ndk110__function6__funcIPFNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEN4absl11string_viewEENS5_ISB_EESA_EE
 NSt6__ndk110__function6__funcIPFNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEvENS5_IS9_EES8_EE
 NSt6__ndk110__function6__funcIPFbN4absl11string_viewEENS_9allocatorIS5_EES4_EE
 NSt6__ndk110__function6__funcIPFvP14TfLiteDelegateENS_9allocatorIS5_EES4_EE
-NSt6__ndk110__function6__funcIZN11s2shapeutil12_GLOBAL__N_112IndexCrosser21VisitSubcellCrossingsERK16S2ShapeIndexCell8S2CellIdE3$_1NS_9allocatorIS9_EEFbS7_EEE
 NSt6__ndk110__function6__funcIZN11s2shapeutil20FindSelfIntersectionERK12S2ShapeIndexP7S2ErrorE3$_0NS_9allocatorIS8_EEFbRKNS2_9ShapeEdgeESD_bEEE
 NSt6__ndk110__function6__funcIZN12acceleration18ScopedHangDetectorC1EPNS2_17WatchdogInterfaceERKNS2_12AccelerationENS3_5StageEPNS2_12StartedEventEE3$_0NS_9allocatorISC_EEFvNS4_13CallbackStateEEEE
 NSt6__ndk110__function6__funcIZN12acceleration8Watchdog3RunEvEUlNS2_17WatchdogInterface13CallbackStateEE_NS_9allocatorIS6_EEFvS5_EEE
 NSt6__ndk110__function6__funcIZN12acceleration8Watchdog4StopEvEUlNS2_17WatchdogInterface13CallbackStateEE_NS_9allocatorIS6_EEFvS5_EEE
 NSt6__ndk110__function6__funcIZN14EigenForTFLite15ThreadPoolTemplINS2_20StlThreadEnvironmentEEC1EibS4_EUlvE_NS_9allocatorIS6_EEFvvEEE
-NSt6__ndk110__function6__funcIZN18S2BooleanOperation4Impl17GetIndexCrossingsEiE3$_1NS_9allocatorIS4_EEFbRKN11s2shapeutil9ShapeEdgeESA_bEEE
+NSt6__ndk110__function6__funcIZN18S2BooleanOperation4Impl18InitIndexCrossingsEiE3$_0NS_9allocatorIS4_EEFbRKN11s2shapeutil9ShapeEdgeESA_bEEE
 NSt6__ndk110__function6__funcIZN18S2BooleanOperation4Impl20ProcessIncidentEdgesERKN11s2shapeutil9ShapeEdgeEP20S2ContainsPointQueryI12S2ShapeIndexEPNS3_17CrossingProcessorEE3$_0NS_9allocatorISE_EEFbS7_EEE
-NSt6__ndk110__function6__funcIZN18S2BooleanOperation4Impl7DoBuildEP7S2ErrorE3$_3NS_9allocatorIS6_EEFbRKN9S2Builder5GraphES5_EEE
-NSt6__ndk110__function6__funcIZN22S2ClosestEdgeQueryBaseI13S2MinDistanceE24FindClosestEdgesInternalEP16S2DistanceTargetIS3_ERKNS4_7OptionsEEUlP7S2ShapeRK7S2PointE_NS_9allocatorISG_EEFbSC_SF_EEE
-NSt6__ndk110__function6__funcIZN24S2MinDistancePointTarget21VisitContainingShapesERK12S2ShapeIndexRKNS_8functionIFbP7S2ShapeRK7S2PointEEEE3$_0NS_9allocatorISG_EEFbS8_EEE
+NSt6__ndk110__function6__funcIZN18S2BooleanOperation4Impl7DoBuildEP7S2ErrorE3$_0NS_9allocatorIS6_EEFbRKN9S2Builder5GraphES5_EEE
 NSt6__ndk110__function6__funcIZN3ruy12_GLOBAL__N_127DetectRuntimeSupportedPathsENS2_4PathEPNS2_7CpuInfoEE3$_0NS_9allocatorIS7_EEFbvEEE
 NSt6__ndk110__function6__funcIZN3ruy12_GLOBAL__N_127DetectRuntimeSupportedPathsENS2_4PathEPNS2_7CpuInfoEE3$_1NS_9allocatorIS7_EEFbvEEE
 NSt6__ndk110__function6__funcIZN3ruy12_GLOBAL__N_127DetectRuntimeSupportedPathsENS2_4PathEPNS2_7CpuInfoEE3$_2NS_9allocatorIS7_EEFbvEEE
 NSt6__ndk110__function6__funcIZN3ruy15BlockingCounter4WaitENS_6chrono8durationIxNS_5ratioILl1ELl1000000000EEEEEE3$_0NS_9allocatorIS9_EEFbvEEE
 NSt6__ndk110__function6__funcIZN3ruy6Thread25GetNewStateOtherThanReadyEvEUlvE_NS_9allocatorIS4_EEFbvEEE
-NSt6__ndk110__function6__funcIZN4absl13time_internal4cctz12TimeZoneInfo4LoadERKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEE3$_1NS9_ISE_EEFNS_10unique_ptrINS4_14ZoneInfoSourceENS_14default_deleteISH_EEEESD_EEE
 NSt6__ndk110__function6__funcIZN6tflite3ops7builtin17BuiltinOpResolverC1EvE3$_0NS_9allocatorIS6_EEFNS_10unique_ptrI14TfLiteDelegatePFvPSA_EEEP13TfLiteContextEEE
 NSt6__ndk110__function6__funcIZN6tflite4impl11Interpreter27ModifyGraphWithDelegateImplI14TfLiteDelegatePFvPS6_EEE12TfLiteStatusONS_10unique_ptrIT_T0_EEEUlS7_E_NS_9allocatorISG_EES8_EE
-NSt6__ndk110__function6__funcIZN6tfliteL38GetSupportedOpsWithFp16WeightRemappingEP13TfLiteContextibiE4$_20NS_9allocatorIS5_EEFbS4_P10TfLiteNodeP18TfLiteRegistrationPNS_12basic_stringIcNS_11char_traitsIcEENS6_IcEEEEEEE
+NSt6__ndk110__function6__funcIZN6tfliteL38GetSupportedOpsWithFp16WeightRemappingEP13TfLiteContextibiE3$_0NS_9allocatorIS5_EEFbS4_P10TfLiteNodeP18TfLiteRegistrationPNS_12basic_stringIcNS_11char_traitsIcEENS6_IcEEEEEEE
 NSt6__ndk110__function6__funcIZN9S2Builder13IsFullPolygonEbE3$_0NS_9allocatorIS3_EEFbRKNS2_5GraphEP7S2ErrorEEE
-NSt6__ndk110__function6__funcIZN9S2Builder16AddEdgeCrossingsERK19MutableS2ShapeIndexE3$_4NS_9allocatorIS6_EEFbRKN11s2shapeutil9ShapeEdgeESC_bEEE
-NSt6__ndk110__function6__funcIZN9barhopper13deep_learning21BarcodeDetectorClient12SetInputDimsEiiE3$_2NS_9allocatorIS5_EEFN4absl6StatusEPN6tflite4impl11InterpreterEEEE
-NSt6__ndk110__function6__funcIZN9barhopper13deep_learning21BarcodeDetectorClient38InitializeTfliteInterpreterAndDelegateEvE3$_0NS_9allocatorIS5_EEFN4absl6StatusERKN12acceleration28InterpreterCreationResourcesEPNS_10unique_ptrIN6tflite4impl11InterpreterENS_14default_deleteISH_EEEEEEE
+NSt6__ndk110__function6__funcIZN9S2Builder16AddEdgeCrossingsERK19MutableS2ShapeIndexE3$_1NS_9allocatorIS6_EEFbRKN11s2shapeutil9ShapeEdgeESC_bEEE
+NSt6__ndk110__function6__funcIZN9barhopper11MlBinarizer4InitERKNS2_25MlBinarizerCreationOptionEE3$_0NS_9allocatorIS7_EEFN4absl6StatusERKN12acceleration7regular28InterpreterCreationResourcesEPNS_10unique_ptrIN6tflite4impl11InterpreterENS_14default_deleteISK_EEEEEEE
+NSt6__ndk110__function6__funcIZN9barhopper13deep_learning21BarcodeDetectorClient12SetInputDimsEiiE3$_0NS_9allocatorIS5_EEFN4absl6StatusEPN6tflite4impl11InterpreterEEEE
+NSt6__ndk110__function6__funcIZN9barhopper13deep_learning21BarcodeDetectorClient38InitializeTfliteInterpreterAndDelegateEvE3$_0NS_9allocatorIS5_EEFN4absl6StatusERKN12acceleration7regular28InterpreterCreationResourcesEPNS_10unique_ptrIN6tflite4impl11InterpreterENS_14default_deleteISI_EEEEEEE
 NSt6__ndk110__stdinbufIcEE
 NSt6__ndk110__stdinbufIwEE
 NSt6__ndk110__time_putE
@@ -1201,6 +1312,7 @@ NSt6__ndk110moneypunctIcLb0EEE
 NSt6__ndk110moneypunctIcLb1EEE
 NSt6__ndk110moneypunctIwLb0EEE
 NSt6__ndk110moneypunctIwLb1EEE
+NSt6__ndk110shared_ptrIN6tflite8internal14OperatorsCacheEE27__shared_ptr_default_deleteIS3_S3_EE
 NSt6__ndk111__money_getIcEE
 NSt6__ndk111__money_getIwEE
 NSt6__ndk111__money_putIcEE
@@ -1210,7 +1322,7 @@ NSt6__ndk111__stdoutbufIwEE
 NSt6__ndk112__do_messageE
 NSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 NSt6__ndk112codecvt_baseE
-NSt6__ndk113basic_filebufIcNS_11char_traitsIcEEEE
+NSt6__ndk112system_errorE
 NSt6__ndk113basic_istreamIcNS_11char_traitsIcEEEE
 NSt6__ndk113basic_istreamIwNS_11char_traitsIwEEEE
 NSt6__ndk113basic_ostreamIcNS_11char_traitsIcEEEE
@@ -1219,23 +1331,25 @@ NSt6__ndk113messages_baseE
 NSt6__ndk114__num_get_baseE
 NSt6__ndk114__num_put_baseE
 NSt6__ndk114__shared_countE
-NSt6__ndk114basic_ifstreamIcNS_11char_traitsIcEEEE
 NSt6__ndk114error_categoryE
 NSt6__ndk115basic_streambufIcNS_11char_traitsIcEEEE
 NSt6__ndk115basic_streambufIwNS_11char_traitsIwEEEE
 NSt6__ndk115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 NSt6__ndk119__iostream_categoryE
+NSt6__ndk119__shared_weak_countE
 NSt6__ndk119basic_ostringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE
+NSt6__ndk120__shared_ptr_pointerIPN6tflite8internal14OperatorsCacheENS_10shared_ptrIS3_E27__shared_ptr_default_deleteIS3_S3_EENS_9allocatorIS3_EEEE
 NSt6__ndk120__time_get_c_storageIcEE
 NSt6__ndk120__time_get_c_storageIwEE
-NSt6__ndk121__basic_string_commonILb1EEE
 NSt6__ndk123__system_error_categoryE
 NSt6__ndk124__generic_error_categoryE
 NSt6__ndk15ctypeIcEE
 NSt6__ndk15ctypeIwEE
 NSt6__ndk16locale5__impE
 NSt6__ndk16locale5facetE
+NSt6__ndk17codecvtIDiDu9mbstate_tEE
 NSt6__ndk17codecvtIDic9mbstate_tEE
+NSt6__ndk17codecvtIDsDu9mbstate_tEE
 NSt6__ndk17codecvtIDsc9mbstate_tEE
 NSt6__ndk17codecvtIcc9mbstate_tEE
 NSt6__ndk17codecvtIwc9mbstate_tEE
@@ -1268,6 +1382,7 @@ NSt6__ndk19money_putIwNS_19ostreambuf_iteratorIwNS_11char_traitsIwEEEEEE
 NSt6__ndk19time_baseE
 NULL SignatureDef inputs for exported method %s
 NULL SignatureDef outputs for exported method %s
+NUMPY
 Neg only currently supports int64, int32, and float32, got %d.
 Negate (NC, F16)
 Negate (NC, F32)
@@ -1276,9 +1391,11 @@ NexGen
 Nnapi
 NnapiPlugin
 No buffers in the model.\n
+No serialized data found: %s
 No subgraph in the model.\n
 No valid LSTM builtin options exist
 Node number %d (%s) %s.
+Non-contiguous `axes` not supported
 Non-empty, non-full loops must have at least 3 vertices
 Non-persistent memory is not available.
 Non-primitive types can't be packed.
@@ -1289,8 +1406,6 @@ Null delegate.
 Null output pointer passed to InterpreterBuilder.
 Null params passed
 Null pointer passed in as model.
-NumDimensions(&input_tensor)
-NumDimensions(&output_tensor)
 NumDimensions(axis)
 NumDimensions(begin)
 NumDimensions(bias)
@@ -1306,8 +1421,10 @@ NumDimensions(ids)
 NumDimensions(indices)
 NumDimensions(indices) < 3
 NumDimensions(indices) >= 0
+NumDimensions(initial_state)
 NumDimensions(input)
 NumDimensions(input) <= 4
+NumDimensions(input) <= 8
 NumDimensions(input) >= 1
 NumDimensions(input) >= 2
 NumDimensions(input) >= NumElements(axis)
@@ -1413,9 +1530,12 @@ October
 Oh44\Q
 One or more duplicate polygon edges detected
 Oned barcode decoder model is empty.
+OnedBinarizer
+OnedBinarizer_Binarize
+OnedReader_Decode
 Only 1D, 2D, 3D and 4D tensors supported for int16 input with int16 output, got %dD.
 Only float32 and int8 is supported currently, got %s.
-Only float32 and uint8 and int8 are supported currently, got %d.
+Only float32 and uint8 and int8 are supported currently, got %s.
 Only float32, int8 and uint8 supported currently, got %s.
 Only float32, int8, int16 and uint8 is supported currently, got %s.
 Only float32, uint8 and int8 are supported currently, got %s.
@@ -1427,10 +1547,16 @@ Only float32, uint8, int8, int32 and bool are supported currently, got %s.
 Only float32, uint8_t, Int8_t, Int16_t are supported currently, got %s.
 Only int32 and int64 are supported currently, got %s.
 Only int8_t and int16_t outputs are supported with int8_t inputs currently, got %s.
+Only one kernel allowed withing the stablehlo region. (%zu) kernels found.\n
+Only one kernel is allowed within stablehlo.reduce_window body. (%zu) kernels found.\n
 Only uint8_t and int16_t outputs are supported with uint8_t inputs currently, got %s.
+Only update, Add, Multiply, Maximum and Minimum operations are currently supported for stablehlo.scatter.
 Op builtin_code out of range: %d. Are you using old TFLite binary with newer model?
 Operator with CUSTOM builtin_code has no custom_code.\n
+Output buffer convert
 Output buffer dst_y
+Output buffer is null.
+Output buffer output_y_
 Output index type %s is currently not supported by TopK.
 Output shape is %s, not int32.
 Output type is %d, requires float.
@@ -1443,6 +1569,7 @@ PADV2
 PASSWORD
 PERMISSION_DENIED
 PFNSt6__ndk110unique_ptrIN6tflite9delegates11NnapiPluginENS_14default_deleteIS3_EEEERKNS1_14TFLiteSettingsEE
+PFNSt6__ndk110unique_ptrIN6tflite9delegates23DelegatePluginInterfaceENS_14default_deleteIS3_EEEERKNS1_14TFLiteSettingsEE
 PFNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEN4absl11string_viewEE
 PFNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEvE
 PFbN4absl11string_viewEE
@@ -1454,34 +1581,41 @@ PRELU
 PReLU (NC, F16)
 PReLU (NC, F32)
 P`00
+Padding type %s is currently not supported by Pad.
 Parameter 
 Params must be at least a vector.
 Params of type '%s' are not supported by gather_nd.
 Params type '%s' are not supported by gather_nd.
 Pass 
 Pass 0: edges snapped=
+Path wasn't provided to weight cache provider.
+Pdf417Reader_Decode
 PerThread can't tolerate using page frame 1 in a stack
-PerformNms(oned_barcodes, true, &nms_oned_barcodes)
-PerformNms(thresholded_barcodes, false, &nms_result)
-PerformNms(thresholded_barcodes, false, result)
-PerformNms(twod_barcodes, false, result)
+PerformNms(oned_barcodes, true, sorting_break_tie_with_area_score, &nms_oned_barcodes)
+PerformNms(thresholded_barcodes, area_score_override, sorting_break_tie_with_area_score, &nms_result)
+PerformNms(thresholded_barcodes, area_score_override, sorting_break_tie_with_area_score, result)
+PerformNms(twod_barcodes, false, sorting_break_tie_with_area_score, result)
+Perspective
 Pixelwise Average Pooling
 Plugin
 Plugin did not create 
 Pop: 
 Positions of type '%s' are not supported by gather.
-PrepareToModify shouldn't be called on OK status.
 Printer buffer allocation failed.\n
 Produce
 Product of extents for buffer 
+Provided kernel in the stablehlo scatter region is not yet supported.
 Pure virtual function called!
 Push: 
 Q@QAQDQEQPQQQTQUQ
 QUANTIZE
+QrcodeReader_Decode
 Quantization parameters has non-null scale but null zero_point.
 QuantizationParam has %d zero_point values and %d scale values. Must have same number.
 Quantized FullyConnected expects output data type uint8, int8 or int16
 Quantized and sparse fully-connected format supports symmetric weight quantization only.
+Quantized tensor #%d in node #%d has invalid quantization parameters
+R30_RC01
 R;Mv;
 RANDOM_STANDARD_NORMAL
 RANDOM_UNIFORM
@@ -1495,6 +1629,7 @@ REDUCE_ANY
 REDUCE_MAX
 REDUCE_MIN
 REDUCE_PROD
+REDUCE_WINDOW
 RELU
 RELU6
 RELU_0_TO_1
@@ -1526,8 +1661,15 @@ ReaderTryLock failed
 ReaderTryLock succeeded 
 ReaderUnlock 
 RealTimeClock should never be destroyed
+Reciprocal Square Root (NC, F16)
+Reciprocal Square Root (NC, F32)
+RecognizeInternalOnedDecode
+RecognizeInternal_Affine
+RecognizeInternal_Bbox
+RecognizeInternal_Perspective
 Registered diagnostics callbacks in NNAPI SL driverSL_ANeuralNetworksDiagnostic_registerCallbacks.
 Registration failed.\n
+RemoveDuplicateBarcodes
 Removing 
 Replacing %d out of %d node(s) with delegate (%s) node, yielding %zu partitions for the whole graph.
 Requested HANG_DETECTION_ABANDON_THREAD for compilation, which is not (yet) supported
@@ -1543,14 +1685,18 @@ Resize Bilinear (NHWC, F32)
 Resize Bilinear (NHWC, S8)
 Resize Bilinear (NHWC, U8)
 ResizeInputTensor is disallowed when graph is immutable.
+ResizeInputTensor was given a NULL shape.
 ResourceVariable
 Restore saved value of 
 Restored original execution plan after delegate application failure.
 Returning all edges (max_results/max_distance not set)
 Returning all points (max_results/max_distance/region not set)
+RgbaToLuminance
 RightShift currently only supports 8-bit/16-bit/32-bit integer/unsigned integer, got %s
 Rise
 Rnn_row_sums
+RoPE (NTHC, F16)
+RoPE (NTHC, F32)
 Rsqrt
 S2Polyline: 
 SCATTER_ND
@@ -1609,6 +1755,49 @@ SQUARED_DIFFERENCE
 SQUEEZE
 SSE, 12x4, depth 2
 SSID
+STABLEHLO_ABS
+STABLEHLO_ADD
+STABLEHLO_AND
+STABLEHLO_BROADCAST_IN_DIM
+STABLEHLO_CLAMP
+STABLEHLO_COMPARE
+STABLEHLO_COMPOSITE
+STABLEHLO_CONCATENATE
+STABLEHLO_CONVERT
+STABLEHLO_CONVOLUTION
+STABLEHLO_COSINE
+STABLEHLO_CUSTOM_CALL
+STABLEHLO_DIVIDE
+STABLEHLO_DOT_GENERAL
+STABLEHLO_DYNAMIC_SLICE
+STABLEHLO_DYNAMIC_UPDATE_SLICE
+STABLEHLO_EXPONENTIAL
+STABLEHLO_FLOOR
+STABLEHLO_GATHER
+STABLEHLO_IOTA
+STABLEHLO_LOG
+STABLEHLO_LOGISTIC
+STABLEHLO_MAXIMUM
+STABLEHLO_MINIMUM
+STABLEHLO_MULTIPLY
+STABLEHLO_NEGATE
+STABLEHLO_OR
+STABLEHLO_PAD
+STABLEHLO_POWER
+STABLEHLO_REDUCE
+STABLEHLO_REDUCE_WINDOW
+STABLEHLO_REMAINDER
+STABLEHLO_RESHAPE
+STABLEHLO_RNG_BIT_GENERATOR
+STABLEHLO_RSQRT
+STABLEHLO_SCATTER
+STABLEHLO_SELECT
+STABLEHLO_SLICE
+STABLEHLO_SORT
+STABLEHLO_SUBTRACT
+STABLEHLO_TANH
+STABLEHLO_TRANSPOSE
+STABLEHLO_WHILE
 STATUS
 STRIDED_SLICE
 STRING
@@ -1618,6 +1807,8 @@ SVDF
 SYMMETRIC DIFFERENCE
 Saturday
 Sb11?*
+Scaled Dot-Product Attention (NHTC, F16)
+Scaled Dot-Product Attention (NHTC, F32)
 Searching for target device
 Select TensorFlow op(s), included in the given model, is(are) not supported by this interpreter. Make sure you apply/link the Flex delegate before inference. For the Android, it can be resolved by adding "org.tensorflow:tensorflow-lite-select-tf-ops" dependency. See instructions: https://www.tensorflow.org/lite/guide/ops_select
 September
@@ -1637,13 +1828,15 @@ Shape %d has one or more edges contained in another shape.
 Shape %d has one or more edges with interior on the right.
 Shape %d has too many empty chains
 Shape %d: chain %d, edge %d is degenerate
-Should never be called
 Sigmoid (NC, F16)
 Sigmoid (NC, F32)
 Sigmoid (NC, QS8)
 Sigmoid (NC, QU8)
 Signal on 
+Signal wakeup
 SignalAll on 
+SignalAll wakeup
+SignedVertexCrossing called with 4 distinct vertices
 SizeOfDimension(bias, 0)
 SizeOfDimension(dense_shape, 0)
 SizeOfDimension(filter, 0)
@@ -1653,6 +1846,7 @@ SizeOfDimension(hash, 1) <= 32
 SizeOfDimension(ids, 0)
 SizeOfDimension(indices, 0)
 SizeOfDimension(indices, 1)
+SizeOfDimension(initial_state, 0)
 SizeOfDimension(input, 0)
 SizeOfDimension(input, 0) >= 1
 SizeOfDimension(input, 1)
@@ -1666,6 +1860,7 @@ SizeOfDimension(input_scores, 0)
 SizeOfDimension(key, 0)
 SizeOfDimension(op_context->paddings, 0)
 SizeOfDimension(op_context->paddings, 1)
+SizeOfDimension(output, 0)
 SizeOfDimension(padding_matrix, 0)
 SizeOfDimension(seq_lengths_tensor, 0)
 SizeOfDimension(start_indices, 0) == NumDimensions(operand)
@@ -1700,10 +1895,11 @@ SquaredDifference only supports FLOAT32 and INT32 now, got %d.
 St11logic_error
 St12length_error
 St12out_of_range
-St13bad_exception
 St13runtime_error
 St14overflow_error
 St16invalid_argument
+St20bad_array_new_length
+St8bad_cast
 St9bad_alloc
 St9exception
 St9type_info
@@ -1723,6 +1919,8 @@ Svdf_row_sums
 T0.S
 T@TATDTETPTQTTTUT
 TANH
+TERM
+TEZCodeReader_Decode
 TFL3
 TFLite_Detection_PostProcess
 TILE
@@ -1731,8 +1929,6 @@ TOPK_V2
 TRANSPOSE
 TRANSPOSE_CONV
 TYPE
-TZDIR
-TZif2
 T`00P
 Tanh (NC, F16)
 Tanh (NC, F32)
@@ -1745,8 +1941,10 @@ Tensor %d is both input %d and output %d\n
 Tensor %d is invalidly specified in schema.\n
 Tensor %d specifies out of range buffer %d (only %d buffers).\n
 Tensor at index %d was optional but was expected\n
+Tensor index corresponds to a non existing tensor.
 TfLiteNnapiDelegate
 TfLiteXNNPackDelegate
+TfLiteXNNPackDelegateOptions::handle_variable_ops is deprecated and will be removed in the future. Use TfLiteXNNPackDelegateOptions::flags with TFLITE_XNNPACK_DELEGATE_FLAG_VARIABLE_OPERATORS mask
 The %dth dimension has unknown type: %d.
 The %dth sparse dimension has invalid parameters.
 The 0th entry of the model buffer must be an empty buffer.
@@ -1757,6 +1955,8 @@ The extents for buffer
 The function is forbidden if not calling in delegate.
 The host pointer of 
 The internal state of a LSTM cell must have a power-of-two scale.
+The model allocation is null/empty
+The model is not a valid Flatbuffer buffer
 The only case of quantized LstmCell currently supported is with StateIntegerBits==4
 The size_splits contains more than one -1.
 The size_splits must sum to the dimension of value along axis.
@@ -1767,8 +1967,10 @@ This could also occur as the result of the job being killed
 Thursday
 Total allocation for buffer 
 Transmeta
+Transpose
 Transpose (ND, X16)
 Transpose (ND, X32)
+Transpose (ND, X64)
 Transpose (ND, X8)
 Truncation (NC, F16)
 Truncation (NC, F32)
@@ -1812,7 +2014,7 @@ Type '%s' is not supported currently.
 Type '%s' not currently supported.
 Type not currently supported.
 U(xP(
-U@UAUDUEUPUQUTUUU
+U@UAUDUEUPUQUTUUUNSt6__ndk110__function6__funcIZN11s2shapeutil12_GLOBAL__N_112IndexCrosser21VisitSubcellCrossingsERK16S2ShapeIndexCell8S2CellIdE3$_0NS_9allocatorIS9_EEFbS7_EEE
 UINT16
 UINT32
 UINT64
@@ -1825,15 +2027,20 @@ UNIMPLEMENTED
 UNION
 UNIQUE
 UNKNOWN
+UNKNOWN (code=
 UNPACK
 UNSORTED_SEGMENT_MAX
 UNSORTED_SEGMENT_MIN
 UNSORTED_SEGMENT_PROD
 UNSORTED_SEGMENT_SUM
 US-ASCII
-UTC0
 UTF-16BE
+UTF-16LE
+UTF-32BE
+UTF-32LE
+UTF-8
 UUUU
+UUUUUU
 UUxP((z
 Unable to get graph execution plan.
 Unable to get graph execution plan.\n
@@ -1844,11 +2051,13 @@ Unhandled LSTM kernel type: %d
 Unhandled fully-connected weights format
 Unhandled fully-connected weights format.
 Unique index output array can only be Int32 or In64, requested: %s
+Unknown
 Unknown DWARF encoding for search table.
 Unknown NNAPI error code: 
 Unknown OpType
+Unknown RNG algorithm: %d
+Unknown constant buffer passed to HashCacheKey.
 Unknown data type: %d
-Unknown encoding
 Unknown error %d
 Unknown index output data type: %d
 Unknown index output data type: %s
@@ -1858,13 +2067,14 @@ Unknown shape output data type: %d
 Unknown status (%d) after applying the default TensorFlow Lite delegate indexed at %zu.
 Unknown type
 UnknownCustomOp
+UnknownErrorSpace
 UnknownOp
 Unlock
 Unlock 
 UnlockSlow is confused
 Unpooling (NHWC, X32)
 Unsupported N: 
-Unsupported ReduceType: %d
+Unsupported approximate Gelu.
 Unsupported combination of data types for LstmCell
 Unsupported combination of input and output types in Div.
 Unsupported combination of input and output types in Mul.
@@ -1873,16 +2083,18 @@ Unsupported data type %s.
 Unsupported data type: %d
 Unsupported datatype for atan2 output: %s
 Unsupported datatype for sign output: %s
-Unsupported input type, ComplexAbs op only supports complex input, but got: 
-Unsupported input type, Imag op only supports complex input, but got: 
-Unsupported input type, Real op only supports complex input, but got: 
+Unsupported input type, ComplexAbs op only supports complex input, but got: %s
+Unsupported input type, Imag op only supports complex input, but got: %s
+Unsupported input type, Real op only supports complex input, but got: %s
 Unsupported input type, cumsum only supports int32 & float32.
+Unsupported output data type: %s
 Unsupported output datatype for %s op: %s
 Unsupported output datatype for Multinomial op: %s
 Unsupported quantized data type: %d
 Unsupported sparse fully-connected weight format.
 Unsupported type of pad value for pad_v2\n
 Unsupported version %d of FullyConnected.
+Unwait
 Updates of type '%s' are not supported by scatter_nd.
 Using mini benchmark results
 VARIANT
@@ -1905,53 +2117,79 @@ WImageDataUtil::InitImageHeader(width, height, C, WImage<T>::Depth(), &header_)
 WORK
 WPA/WPA2
 WPA2
+Wait
 Wait on 
 Wait unblocked 
 Wednesday
 Weight type %s (%d) not supported for filter.
 Where op requires condition w/ rank > 0
+Writing header
 Wrong indices dimensions %d, should be less than 3.
 X,,t4
 XNNPack
+XNNPack delegate failed to finalize cache.
+XNNPack delegate failed to get external value shape
+XNNPack delegate failed to get resize output tensor
+XNNPack delegate failed to reshape external value
+XNNPack delegate failed to reshape runtime
+XNNPack weight cache build for '%s' started.
+XNNPack weight cache could neither be loaded from or saved to '%s'. Check that this location is readable and writable.
+XNNPack weight cache loaded from '%s'.
+XNNPack weight cache: a null cache key was provided.
+XNNPack weight cache: buffer list validation failed.
+XNNPack weight cache: cache file ('%s') header cannot hold XNNPack's build identifier: %s.
+XNNPack weight cache: cache file ('%s') is not open for writing: %s.
+XNNPack weight cache: could not access file stats to get size ('%s'): %s.
+XNNPack weight cache: could not get packed weights from flatbuffer.
+XNNPack weight cache: could not mmap file (%s): %s.
+XNNPack weight cache: could not open file to mmap ('%s'): %s.
+XNNPack weight cache: file path wasn't set. Cannot finalize the cache.
+XNNPack weight cache: file write incomplete (%s). %s: %s.
+XNNPack weight cache: invalid cache file size.
+XNNPack weight cache: invalid offset for buffer list descriptor.
+XNNPack weight cache: invalid size for buffer list descriptor.
+XNNPack weight cache: written to '%s'.
+XNNPackPlugin
 Yn77
 ZEROS_LIKE
-ZN11s2shapeutil12_GLOBAL__N_112IndexCrosser21VisitSubcellCrossingsERK16S2ShapeIndexCell8S2CellIdE3$_1
+ZN11s2shapeutil12_GLOBAL__N_112IndexCrosser21VisitSubcellCrossingsERK16S2ShapeIndexCell8S2CellIdE3$_0
 ZN11s2shapeutil20FindSelfIntersectionERK12S2ShapeIndexP7S2ErrorE3$_0
 ZN12acceleration18ScopedHangDetectorC1EPNS_17WatchdogInterfaceERKNS_12AccelerationENS0_5StageEPNS_12StartedEventEE3$_0
 ZN12acceleration8Watchdog3RunEvEUlNS_17WatchdogInterface13CallbackStateEE_
 ZN12acceleration8Watchdog4StopEvEUlNS_17WatchdogInterface13CallbackStateEE_
 ZN14EigenForTFLite15ThreadPoolTemplINS_20StlThreadEnvironmentEEC1EibS1_EUlvE_
-ZN18S2BooleanOperation4Impl17GetIndexCrossingsEiE3$_1
+ZN18S2BooleanOperation4Impl18InitIndexCrossingsEiE3$_0
 ZN18S2BooleanOperation4Impl20ProcessIncidentEdgesERKN11s2shapeutil9ShapeEdgeEP20S2ContainsPointQueryI12S2ShapeIndexEPNS0_17CrossingProcessorEE3$_0
-ZN18S2BooleanOperation4Impl7DoBuildEP7S2ErrorE3$_3
-ZN22S2ClosestEdgeQueryBaseI13S2MinDistanceE24FindClosestEdgesInternalEP16S2DistanceTargetIS0_ERKNS1_7OptionsEEUlP7S2ShapeRK7S2PointE_
-ZN24S2MinDistancePointTarget21VisitContainingShapesERK12S2ShapeIndexRKNSt6__ndk18functionIFbP7S2ShapeRK7S2PointEEEE3$_0
+ZN18S2BooleanOperation4Impl7DoBuildEP7S2ErrorE3$_0
 ZN3ruy12_GLOBAL__N_127DetectRuntimeSupportedPathsENS_4PathEPNS_7CpuInfoEE3$_0
 ZN3ruy12_GLOBAL__N_127DetectRuntimeSupportedPathsENS_4PathEPNS_7CpuInfoEE3$_1
 ZN3ruy12_GLOBAL__N_127DetectRuntimeSupportedPathsENS_4PathEPNS_7CpuInfoEE3$_2
 ZN3ruy15BlockingCounter4WaitENSt6__ndk16chrono8durationIxNS1_5ratioILl1ELl1000000000EEEEEE3$_0
 ZN3ruy6Thread25GetNewStateOtherThanReadyEvEUlvE_
-ZN4absl13time_internal4cctz12TimeZoneInfo4LoadERKNSt6__ndk112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEEE3$_1
 ZN6tflite3ops7builtin17BuiltinOpResolverC1EvE3$_0
 ZN6tflite4impl11Interpreter27ModifyGraphWithDelegateImplI14TfLiteDelegatePFvPS3_EEE12TfLiteStatusONSt6__ndk110unique_ptrIT_T0_EEEUlS4_E_
-ZN6tfliteL38GetSupportedOpsWithFp16WeightRemappingEP13TfLiteContextibiE4$_20
+ZN6tfliteL38GetSupportedOpsWithFp16WeightRemappingEP13TfLiteContextibiE3$_0
 ZN9S2Builder13IsFullPolygonEbE3$_0
-ZN9S2Builder16AddEdgeCrossingsERK19MutableS2ShapeIndexE3$_4
-ZN9barhopper13deep_learning21BarcodeDetectorClient12SetInputDimsEiiE3$_2
+ZN9S2Builder16AddEdgeCrossingsERK19MutableS2ShapeIndexE3$_1
+ZN9barhopper11MlBinarizer4InitERKNS_25MlBinarizerCreationOptionEE3$_0
+ZN9barhopper13deep_learning21BarcodeDetectorClient12SetInputDimsEiiE3$_0
 ZN9barhopper13deep_learning21BarcodeDetectorClient38InitializeTfliteInterpreterAndDelegateEvE3$_0
+ZZZZZZZZZZZZZZZZ
 ZerosLike only currently supports int64, int32, and float32, got %d.
 [%s : %d] RAW: 
+[90m
+[LatencyLog]%s,%.2f\n
 \h44
+\n*\nA\nX\nj\n|\n
 \n=== Source Location Trace: ===
-\nPST8PDT,M3.2.0,M11.1.0\n
 \nl\ni\nU\nS\nP\n[\n
 \nt\nr\n]\nX\n`\nJ\nI\nG\nE\n
 \n|\ng\nf\nd\nb\n!
-\t \t2\tD\tV\th\tw\t
+\r"\r2\rD\rV\rh\r
 \t$$$$$$$\n\v\f\r
-\v-\v@\vT\vh\v}\v
 ]xEc
 _5h01?
+_BinarizeAndDecode
 _Unwind_Resume
 _Unwind_Resume() can't return
 _\nM\nK\nB\nA\n?\nD\n
@@ -1963,26 +2201,23 @@ __cxa_atexit
 __cxa_finalize
 __cxa_guard_abort
 __cxa_guard_acquire
-__cxa_guard_acquire detected recursive initialization
+__cxa_guard_acquire detected recursive initialization: do you have a function-local static variable whose initialization depends on that function?
 __cxa_guard_release
 __errno
 __gcov_dump
 __gcov_flush
 __next_prime overflow
-__open_2
-__read_chk
 __stack_chk_fail
 __start_malloc_hook
+__start_pb_defaults
 __stop_malloc_hook
-__strlen_chk
+__stop_pb_defaults
 __system_property_get
 __thread_specific_ptr construction failed
-__vsnprintf_chk
-_dnodes
 _exit
 _main.
 _plugin target?
-a+be
+a2U0*
 a5_j5W
 aa_j55
 abort
@@ -1990,37 +2225,22 @@ absl
 absl::leak_check_internal::DoIgnoreLeak(void const*)
 absl::string_view::substr
 acceleration
-acceleration.Acceleration
-acceleration.CPUSettings
-acceleration.CoralDelegateSettings
-acceleration.CoreMLDelegateSettings
-acceleration.EdgeTpuDelegateDeviceSpec
-acceleration.EdgeTpuDelegateInactivePowerConfig
-acceleration.EdgeTpuDelegateSettings
-acceleration.FallbackSettings
-acceleration.GPUDelegateSettings
-acceleration.HangDetectionSettings
-acceleration.HexagonDelegateSettings
-acceleration.InferenceToUseFor
-acceleration.MinibenchmarkSettings
-acceleration.ModelIdentifier
-acceleration.NNAPIDelegateSettings
-acceleration.StableDelegateLoaderSettings
-acceleration.TFLiteSettings
-acceleration.XNNPackSettings
+access
 accum_dim_lhs
 accum_dim_rhs
 acos
+acosf
 activation_depth
 adding operand
 adding operation
+affine
 affine_quantization
 affine_quantization->scale
 affine_quantization->scale->size
 affine_quantization->zero_point->data[i]
-alignment <= arena_alignment_
+affine_transform_halide
+alignment <= underlying_buffer_.GetAlignment()
 allocation failure
-allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 alpha->type
 android_set_abort_message
 arena != nullptr
@@ -2033,7 +2253,9 @@ associating NNAPI execution state output to a memory object
 atan
 atan2
 atan2f
+atanf
 atoi
+atten_mask.dims->data[atten_mask.dims->size - 1]
 auto_regressor_interpreter_ != nullptr
 auto_regressor_interpreter_->Invoke() == kTfLiteOk
 aux_input->dims->data[0] didn't equal input->dims->data[0]
@@ -2043,15 +2265,16 @@ aux_input->dims->data[2] didn't equal fw_aux_input_weights->dims->data[1]
 aux_inputs_weights_all_or_none
 aux_inputs_weights_or_none
 avail() >= N
+axes[i] >= 0 && axes[i] < rank
 axis < (input_tensor.dims->size - 1)
 axis < input_rank
 axis < input_tensor.dims->size
-axis < t0->dims->size
+axis < t0->dims->size || (t0->dims->size == 0 && axis == 0)
 axis <= input_dims.size
 axis >= 0
-axis >= 0 && axis < rank
 axis->type
 axis->type == kTfLiteInt32 || axis->type == kTfLiteInt64
+axis_tensor->type
 axis_value < NumDimensions(input)
 axis_value < NumDimensions(op_context.input)
 axis_value >= 0
@@ -2061,43 +2284,43 @@ bad arena pointer in Next()
 bad magic number in AddToFreelist()
 bad magic number in Next()
 bad skip in DequeueAllWakeable
+bad_array_new_length
+bad_array_new_length was thrown in -fno-exceptions mode
+bad_function_call was thrown in -fno-exceptions mode
+bad_optional_access was thrown in -fno-exceptions mode
 bad_type_code
+bad_variant_access was thrown in -fno-exceptions mode
 barcode.corner_point.size() == 4
 barcodeFormats
+barcode_recognizer_ != nullptr
+barcodes != nullptr
 barcodes != nullptr && luminance.data != nullptr
-barhopper.deep_learning.AnchorLayer
-barhopper.deep_learning.AnchorLayers
-barhopper.deep_learning.BarcodeDetectorClientOptions
-barhopper.deep_learning.BarhopperV3Options
-barhopper.deep_learning.OnedDecoderClientOptions
 barhopper::deep_learning::OnedDecoderClient is created successfully.
 base/per_thread.cc
 base/scheduling/downcalls.cc
-base/time/zone_info_source.cc
 base::HasDuplicateGlobalSymbolsInternal()
+base_dilations
 basic_string
-batch size %d in output tensor #%d in FULLY_CONNECTED operator does not match batch size %d in reshaped input tensor #%d
 batch_dim < NumDimensions(input)
 batch_dim >= 0
 batch_dims <= NumDimensions(positions)
 batch_dims <= axis
 batch_size
 batch_size != 0
+bbox
+begin %d must be greater than or equal to zero in STRIDED_SLICE node #%d
 begin %ld must be greater than 0 in SLICE node #%d
-begin %ld must be less than input dimension %d in SLICE node #%d
-begin %zu must be less than input dimension %d in STRIDED_SLICE node #%d
-begin + size (%ld + %ld) must not be greater than input dimension %d in SLICE node #%d
 begin index %zu must be less than end index %zu for STRIDED_SLICE node #%d
 begin->type == kTfLiteInt32 || begin->type == kTfLiteInt64
+begin_tensor
 begins.size()
-bf16
 bfloat
 bias->dims->data[0]
 bias->dims->size
 bias->params.zero_point
 bias->type
-binarizerOptions
-blaze-out/android-x86_64-opt-ST-ecd6a952af73/bin/java/com/google/android/libraries/barhopper/jni/libbarhopper_v3.so
+binarizer_
+blaze-out/x86_64-opt-android-ST-fc5b266d4b46/bin/java/com/google/android/libraries/barhopper/jni/libbarhopper_v3.so
 block not big enough for even one level
 block size (%d) in SPACE_TO_DEPTH node #%d must be greater > 1
 block_shape[dim] != 0
@@ -2108,6 +2331,9 @@ body_subgraph->inputs().size()
 body_subgraph->outputs().size()
 boundaries array not provided for operation 'bucketize'.\n
 bsearch
+buf_ <= limit_
+buffer copies to device
+buffer copies to host
 build-secure-info:source-uri
 bw_activation_state != nullptr
 bw_aux_input_to_input_weights->dims->data[0]
@@ -2128,7 +2354,6 @@ bw_recurrent_to_output_weights->dims->size
 bw_recurrent_to_output_weights->type
 bw_recurrent_weights->dims->data[1]
 by Borg (especially if the error was sporadic).
-bytes
 bytes != nullptr
 cAlvi
 calloc
@@ -2152,13 +2377,13 @@ cell_to_input_weights->type
 cell_to_output_weights->dims->data[0]
 cell_to_output_weights->dims->size
 cell_to_output_weights->type
-changelist 536433581 with baseline 536407635 in a mint client based on //depot/branches/mlkit.android_release_branch/536407635.1/google3
+changelist 659779404 with baseline 659763987 in a mint client based on //depot/branches/mlkit.android_release_branch/659763987.1/google3
 channels_in != 0
 cifg_weights_all_or_none == true
 client->InitializeTfliteRuntime(options)
 client->InitializeTfliteRuntime(std::move(options))
 clock_gettime
-clock_gettime() failed
+clock_gettime() failed: (
 clock_gettime(CLOCK_MONOTONIC) failed
 clock_gettime(CLOCK_REALTIME, &ts) == 0
 close
@@ -2174,9 +2399,10 @@ code39UseExtendedMode
 code93MinCodeLength
 code93MinConsistentLines
 col2im shape is %s, not int32.
+color
 cols
 committed_
-compact_array size cannot exceed 
+compact_array size exceeded
 completing NNAPI compilation
 cond->type
 cond_output->dims->data[0]
@@ -2189,8 +2415,12 @@ condition untrue on return from LockSlow
 condition_variable wait failed
 condition_variable::wait: mutex not locked
 configuring NNAPI caching
+convert
+convert.min.0
+convert.min.1
+convert.stride.0
 cosf
-could not find variable with global id %zu in context %p for local tensor %d
+could not find variable with global id %u in context %p for local tensor %d
 count >= 0
 cp437
 creating NNAPI burst
@@ -2198,16 +2428,28 @@ creating NNAPI compilation
 creating NNAPI execution
 creating NNAPI model
 creating NNAPI model for given devices
-crit:
 crops[i] >= 0
 csdiouxXfFeEgGaAnpv
 ctx->num_threads_strategy()
+ctx.dilations_tensor->data.i32[i] >= 1
+ctx.dilations_tensor->dims != nullptr
+ctx.dilations_tensor->dims->data[0]
+ctx.dilations_tensor->dims->size
+ctx.dilations_tensor->type
+ctx.input_tensor->dims != nullptr
+ctx.input_tensor->dims->size
+ctx.input_tensor->dims->size <= kMaxDilateDims
+ctx.input_tensor->dims->size > 0
+ctx.input_tensor->type
+ctx.output_tensor->type
+ctx.padding_value_tensor->type
 current >= 0 && current < input_num_dims
 current >= 0 && current < input_num_dims && input_dims->data[current] == 1
 current_scores_index <= output_scores_size_
 current_scores_index == output_scores_size_
 current_segment_id
 data != nullptr
+data == other_data
 data->axis >= 0
 data->dims->data[0]
 data->dims->data[i]
@@ -2225,23 +2467,33 @@ data_type == kTfLiteFloat32 || data_type == kTfLiteUInt8 || data_type == kTfLite
 dct_coefficient_count
 dealloc_node_[tensor] == kNodeNotAssigned
 debug.tflite.trace
+decoded_at_scale
 decoded_boxes->type
+decoded_by_binarizer
+decoded_with_decoder
+decoded_with_transform
 decoder->Decode(rotated_luminance.data, options, &decoder_result) is OK
+decomposition_subgraph->inputs().size()
+decomposition_subgraph->outputs().size()
 default_value->type
 default_value_tensor->type
 defined; maybe you forgot to link the library containing this class, 
 delegate->CopyFromBufferHandle != nullptr
 delegate_
+delegate_context_switch_count_ >= 0
+delegate_context_switch_count_ >= 1
 delegate_plugin_
 delta == 0 || delta == 1
 delta->type
 depth multiplier %d is incompatible with number of output channels %d in node #%d
 detected illegal recursion in Mutex code
 detected illegal recursion into Mutex code
+detection
 detection_boxes->type
 detections_per_class
 detector_client_->Detect(luminance.data, luminance.width, luminance.height, luminance.row_stride, options, &detector_result) is OK
 dfatal
+dilated_tensor != nullptr
 dims
 direction_logits != nullptr
 dl_iterate_phdr
@@ -2250,9 +2502,11 @@ dlerror
 dlopen
 dlsym
 dst != nullptr
+dst_tensor->allocation_type
 dst_tensor_indices.size()
 dst_y
 dst_y.min.0
+dst_y.min.1
 dst_y.stride.0
 dtype
 dtype == kTfLiteInt32 || dtype == kTfLiteInt64
@@ -2261,10 +2515,13 @@ e == found
 e*CM
 ean13UpcaMinConsistentLines
 ean8MinConsistentLines
+edge_padding_high
+edge_padding_low
 element not in freelist
 enableQrAlignmentGrid
 enableUseKeypointAsFinderPattern
-end %zu must be less than or equals to input dimension %d in STRIDED_SLICE node #%d
+end %d must be greater than or equal to zero in STRIDED_SLICE node #%d
+end_tensor
 enqueue_after->skip == nullptr || MuEquivalentWaiter(enqueue_after, s)
 ensure_allowed()
 erfcf
@@ -2272,39 +2529,44 @@ error
 error != nullptr
 evaluateExpression
 event_has_ended_
+existing_oned_binarizers.find(option_case) == existing_oned_binarizers.end()
+existing_twod_binarizers.find(option_case) == existing_twod_binarizers.end()
 exit
 expected_outputs_count
 expected_type
 expf
 expm1f
+extraScales
 extractor_interpreter_ != nullptr
 extractor_interpreter_->Invoke() == kTfLiteOk
 f->header.arena == arena
 f->header.magic == Magic(kMagicAllocated, &f->header)
 f33U
 fC\tcQ
-failed to associate variable tensors with tensor %d: only kTfLiteFloat32 variable tensors are supported
+failed to associate variable tensors with tensor %d: only kTfLiteFloat32, kTfLiteInt8, or kTfLiteUint8 variable tensors are supported
 failed to create XNNPACK Value for tensor %d
 failed to create XNNPACK runtime
 failed to create XNNPACK subgraph
 failed to define tensor for variable global id %d
 failed to delegate %s node #%d
+failed to delegate %s node #%d. Unsupported number of dimensions %d for tensor #%d, must be at least 2
+failed to delegate %s node #%d. adj_x is not supported
+failed to delegate %s node #%d. unexpected number of quantizations scales (expected %d or 1, got %d)
 failed to delegate CUSTOM(%s) node #%d
 failed to get XNNPACK profile information.
 failed to invoke
 failed to invoke XNNPACK runtime
 failed to prepare
 failed to setup XNNPACK runtime
+failed to update filter tensor %s node #%d
 false
 fatal
 fclose
-fff?
 fflush
 fft2d memory allocation error\n
 fft_length_data[0]
 fft_length_data[1] / 2 + 1
 fft_length_shape.Dims(0)
-file:
 fileno
 filter height %d does not match stride height %d in node #%d
 filter width %d does not match stride width %d in node #%d
@@ -2317,12 +2579,13 @@ filter->type
 filter->type != kTfLiteInt4
 filter->type == data_type || data_type == kTfLiteInt16 || filter->type == kTfLiteInt4
 filter->type == kTfLiteInt8 || filter->type == kTfLiteInt4
+filter->type == kTfLiteUInt8
 filter_input_channel > 0
 filterbank_channel_count
 final_dim_size % block_shape[dim]
 finalizing the model
 firebase-ml-android-sdk-releaser
-firebase-ml-android-sdk-releaser@oqei5.prod.google.com:/google/src/cloud/buildrabbit-username/buildrabbit-client/google3
+firebase-ml-android-sdk-releaser@oouc14.prod.google.com:/google/src/cloud/buildrabbit-username/buildrabbit-client/google3
 first_corner <= 1
 float
 flock
@@ -2335,19 +2598,16 @@ forget_layer_norm_coefficients != nullptr
 forget_layer_norm_coefficients->dims->data[0]
 forget_layer_norm_coefficients->dims->size
 forget_layer_norm_coefficients->type
-fp16
-fp32
 fprintf
 fputc
+fputwc
 fread
 free
 freelocale
 frexp
-fseek
-fseeko
 fstat
 fsync
-ftello
+funcs
 fw_activation_state != nullptr
 fw_aux_input_to_input_weights->dims->data[0]
 fw_aux_input_weights->dims->data[0] didn't equal fw_num_units
@@ -2385,10 +2645,11 @@ getenv
 getpagesize
 getting number of NNAPI devices
 getuid
-global id mismatch for tensor %d, expected %zu, found %zu at VAR_HANDLE node %d
-gmtime_r
-googlefile:/google_src/files/536433581/depot/branches/mlkit.android_release_branch/536407635.1/OVERLAY_READONLY/google3
+getwc
+global id mismatch for tensor %d, expected %u, found %u at VAR_HANDLE node %d
+googlefile:/google_src/files/659779404/depot/branches/mlkit.android_release_branch/659763987.1/OVERLAY_READONLY/google3
 gray_resize_halide
+groups of zero is not supported by CONV_2D operator #%d
 gyr,@
 h->skip == nullptr
 h_scale
@@ -2435,8 +2696,9 @@ indices_has_only_positive_elements
 info
 init_subgraph->inputs().size()
 init_subgraph->outputs().size()
+init_value_tensor->type
+initial_state->type
 input edge 
-input->bytes
 input->dims->data[1]
 input->dims->data[2]
 input->dims->data[4]
@@ -2474,6 +2736,7 @@ input_anchors->type
 input_box_encodings->dims->data[0]
 input_box_encodings->dims->data[2] >= kNumCoordBox
 input_boxes->type
+input_buffer_ != nullptr
 input_channel % filter_input_channel
 input_channels
 input_class_predictions->dims->data[0]
@@ -2507,9 +2770,20 @@ input_scores->type
 input_shape->data[axis]
 input_sigma->type
 input_size != 0
+input_tensor->dims != nullptr
+input_tensor->dims->size <= kMaxReduceWindowRank
+input_tensor->dims->size > 0
 input_tensor->params.scale
 input_tensor->params.zero_point
 input_tensor->type
+input_tensor->type == output_tensor->type
+input_tensor->type == padding_value_tensor->type
+input_tensor1->dims->data[idx]
+input_tensor1->dims->size
+input_tensor1->type
+input_tensor2->dims->data[idx]
+input_tensor2->dims->size
+input_tensor2->type
 input_to_cell_weights->dims->data[0]
 input_to_cell_weights->dims->data[1]
 input_to_cell_weights->dims->size
@@ -2529,7 +2803,7 @@ input_to_output_weights->type
 input_type
 input_type == kTfLiteFloat32 || input_type == kTfLiteUInt8 || input_type == kTfLiteInt16 || input_type == kTfLiteInt32 || input_type == kTfLiteInt64 || input_type == kTfLiteInt8
 input_type == kTfLiteFloat32 || input_type == kTfLiteUInt8 || input_type == kTfLiteInt8 || input_type == kTfLiteInt16
-input_type == kTfLiteFloat32 || input_type == kTfLiteUInt8 || input_type == kTfLiteInt8 || input_type == kTfLiteInt16 || input_type == kTfLiteInt32
+input_type == kTfLiteFloat32 || input_type == kTfLiteUInt8 || input_type == kTfLiteInt8 || input_type == kTfLiteInt16 || input_type == kTfLiteInt32 || input_type == kTfLiteInt64
 input_type == kTfLiteFloat32 || input_type == kTfLiteUInt8 || input_type == kTfLiteInt8 || input_type == kTfLiteInt16 || input_type == kTfLiteInt32 || input_type == kTfLiteInt64 || input_type == kTfLiteBool || input_type == kTfLiteUInt32
 input_wav->type
 input_weights->dims->data[0]
@@ -2537,18 +2811,23 @@ input_weights->dims->data[1]
 input_weights->type
 input_width
 input_x->type
+input_y
 input_y->type
 input_y->type == kTfLiteFloat32 || input_y->type == kTfLiteFloat64
+input_y.stride.0
 inputs
 intelligence/mobile_acceleration/support_library/analytics_adaptor.cc
 intelligence/mobile_acceleration/support_library/proto_to_flatbuffer.cc
 intelligence/mobile_acceleration/support_library/scoped_hang_detector.cc
 intelligence/mobile_acceleration/support_library/tflite_wrapper.cc
 intelligence/mobile_acceleration/support_library/watchdog.cc
+interior_padding
 intermediate->quantization.type != kTfLiteNoQuantization
 interpreter != nullptr
 interpreter_ != nullptr
+interpreter_->AllocateTensors() == TfLiteStatus::kTfLiteOk
 interpreter_->AllocateTensors() == kTfLiteOk
+interpreter_->Invoke() == TfLiteStatus::kTfLiteOk
 interpreter_->Invoke() == kTfLiteOk
 interpreter_->ResizeInputTensor( interpreter_->inputs()[0], {1, input_height_, input_width_, input_depth_}) == kTfLiteOk
 interpreter_.ResizeAndAllocateTensorsWithFallback( absl::StrFormat("%d:%d:%d", input_height_, input_width_, input_depth_), [this](Interpreter* interpreter) -> absl::Status { RET_CHECK_EQ(interpreter_->ResizeInputTensor( interpreter_->inputs()[0], {1, input_height_, input_width_, input_depth_}), kTfLiteOk); RET_CHECK_EQ(interpreter_->AllocateTensors(), kTfLiteOk); return absl::OkStatus(); })
@@ -2556,12 +2835,10 @@ interpreter_.get() != nullptr
 interpreter_builder(interpreter_out) == kTfLiteOk
 invalid allocation type in tensor #%d in %s node #%d: expected static read-only tensor
 invalid allocation type in tensor #%d in node #%d: expected non-dynamic tensor
-invalid allocation type in tensor #%d in node #%d: expected static or persistent read-only tensor
 invalid block size (%d) in DEPTH_TO_SPACE node #%d
 invalid depth multiplier %d in node #%d
 invalid dilation height factor %d in node #%d
 invalid dilation width factor %d in node #%d
-invalid dimension #%d (%d) in tensor #%d
 invalid filter height %d in %s node #%d
 invalid filter height %d in node #%d
 invalid filter width %d in %s node #%d
@@ -2582,11 +2859,7 @@ iostream
 is_integer ? kTfLiteInt16 : input_to_forget_weights->type
 is_optional_bias_float
 is_optional_bias_int
-isdigit_l
-islower_l
-isupper_l
 iswlower_l
-isxdigit_l
 item != objects_.end()
 itfMinCodeLength
 itfMinConsistentLines
@@ -2597,6 +2870,8 @@ java/lang/IllegalArgumentException
 java/lang/String
 kBatchSize
 kMaxDim
+kNumInputTensors
+kNumOutputTensors
 kStateInvokable
 kTfLiteActNone
 kTfLiteActRelu
@@ -2614,8 +2889,12 @@ kTfLiteInt8
 kTfLiteMmapRo
 kTfLiteResource
 kTfLiteString
+kTfLiteUInt64
 kTfLiteUInt8
 key->type
+key_proj.dims->data[1]
+key_proj.dims->data[key_proj.dims->size - 1]
+key_proj.dims->size
 key_type_
 keys->type
 klogdebugfatal
@@ -2625,14 +2904,16 @@ ldexp
 left_
 len > size()
 length > 0
+length_error was thrown in -fno-exceptions mode with message "%s"
 level >= 1
 lhs_data->params.zero_point
 lhs_data->type == kTfLiteFloat32 || lhs_data->type == kTfLiteInt8 || lhs_data->type == kTfLiteInt16
 libandroid.so
 libbarhopper_v3.so
+libc++
 libc++abi
+libc++abi: 
 libc.so
-libc:
 libcutils.so
 libdl.so
 libjnigraphics.so
@@ -2640,7 +2921,6 @@ liblog.so
 libm.so
 libneuralnetworks.so
 libunwind: %s - %s\n
-libunwind: Unsupported .eh_frame_hdr version\n
 libunwind: malformed DW_CFA_GNU_negative_offset_extended DWARF unwind, reg too big\n
 libunwind: malformed DW_CFA_def_cfa DWARF unwind, reg too big\n
 libunwind: malformed DW_CFA_def_cfa_register DWARF unwind, reg too big\n
@@ -2658,10 +2938,10 @@ libunwind: malformed DW_CFA_undefined DWARF unwind, reg too big\n
 libunwind: malformed DW_CFA_val_expression DWARF unwind, reg too big\n
 libunwind: malformed DW_CFA_val_offset DWARF unwind, reg (%lu) out of range\n\n
 libunwind: malformed DW_CFA_val_offset_sf DWARF unwind, reg too big\n
+libunwind: unsupported .eh_frame_hdr at %lx: need at least 4 bytes of data but only got %zd\n
+libunwind: unsupported .eh_frame_hdr version: %u at %lx\n
 limit->type
 locale not supported
-localtime
-localtime_r
 locations_size * num_classes_ == output_scores_sizes_[i] * code_size_
 log1p
 log2
@@ -2672,11 +2952,15 @@ lookup != nullptr
 lookup->type
 lookup_rank
 lower_frequency_limit
+lseek
+luminance.data != nullptr
+madvise
 magnitude_squared
 making execution reusable
 malformed freelist
 malformed uleb128 expression
 malloc
+map::at:  key not found
 market://
 max_classes_per_detection
 max_detections
@@ -2687,7 +2971,6 @@ mbrtowc
 mbsnrtowcs
 mbsrtowcs
 mbtowc
-mem:
 memalign
 memchr
 memcmp
@@ -2700,35 +2983,31 @@ mfcc_output.size()
 min_buckets: doubling of 
 min_bytes <= std::numeric_limits<size_t>::max() - SerialArena::kBlockHeaderSize
 min_capacity >= 1
-mismatch between dimension %d of variable tensor id %d: expected %d, got %d
+minimumDetectedDimension
+mismatch between dimension %zu of variable tensor id %d: expected %d, got %d
 mismatch between existing type of variable tensor id %d: expected %d, got %d
-mismatch in axis dimension %d (%d != %d) in output and inputtensors of CONCATENATE operator #%d
 mismatch in shape dimension %d (%d != %d) in input and output tensors of %s operator #%d
-mismatch in shape dimension %d (%d != %d) in input and output tensors of FULLY_CONNECTED operator #%d
-mismatch in split dimension %d (%d != %d) in output %d and inputtensors of SPLIT operator #%d
+mismatching number of quantization parameters %d and outer dimension %d for INT32 tensor %d in XNNPACK delegate
 mismatching number of quantization parameters %d and outer dimension %d for INT8 tensor %d in XNNPACK delegate
+mismatching number of scale (%d) and zero point (%d) quantization parameters for %s tensor %d in XNNPACK delegate
 mismatching number of scale (%d) and zero point (%d) quantization parameters for INT32 tensor %d in XNNPACK delegate
-mismatching number of scale (%d) and zero point (%d) quantization parameters for INT8 tensor %d in XNNPACK delegate
+missing scale quantization parameters for %s tensor %d in XNNPACK delegate
 missing scale quantization parameters for INT32 tensor %d in XNNPACK delegate
-missing scale quantization parameters for INT8 tensor %d in XNNPACK delegate
 missing scale quantization parameters for UINT8 tensor %d in XNNPACK delegate
 missing scale quantization parameters in tensor #%d in node #%d
+missing zero point quantization parameters for %s tensor %d in XNNPACK delegate
 missing zero point quantization parameters for INT32 tensor %d in XNNPACK delegate
-missing zero point quantization parameters for INT8 tensor %d in XNNPACK delegate
 missing zero point quantization parameters for UINT8 tensor %d in XNNPACK delegate
-mktime
-mlkit.android_20230530_R26_RC00
 mmap
 mmap error: %d
 model_control_dependencies
 money_get error
-mremap
 mul_params.multiplier_exponent_perchannel()
+multiScaleDecodingOptions
+multiScaleDetectionOptions
 munmap
 must pass a valid arena
 mutex lock failed
-mvG 
-mvG n
 n_batch * n_bw_cell
 n_batch * n_bw_output
 n_batch * n_cell
@@ -2740,6 +3019,7 @@ n_cell
 n_fw_cell
 n_input
 n_output
+name
 nanf
 nanosleep
 narrow_range FakeQuant is not currently supported at runtime. narrow_range is only meant to be applied to weights, not activations
@@ -2751,6 +3031,7 @@ next->header.magic == Magic(kMagicUnallocated, &next->header)
 next_execution_plan_index_to_prepare_ >= execution_plan_index
 next_free_key < kPerThreadSlots
 nextafter
+nextafterf
 nms_iou_threshold
 nms_score_threshold
 nnapi error: requires android sdk version to be at least %d\n
@@ -2777,10 +3058,12 @@ node->intermediates->size
 node->outputs->size
 node->outputs->size == kOutputNum
 node_index >= 0
+non-zero end mask not supported in STRIDED_SLICE node #%d
 none
-not 
+not waiting when should be
 nothing in arena to free
 nullptr
+num_axes <= 8
 num_batches
 num_boxes
 num_channels
@@ -2818,16 +3101,15 @@ num_tensors >= allocs_.size()
 num_threads should be >= 0 or just -1 to let TFLite runtime set the value.
 num_threads should be >=0 or just -1 to let TFLite runtime set the value.
 num_units
-number of channels %d in output tensor #%d does not match output channels %d in filter tensor #%d
 number of dimensions %d must be less than %d in SLICE node #%d
 number of dimensions %d must be less than %d in STRIDED_SLICE node #%d
-number of elements in input tensor #%d in FULLY_CONNECTED operator is not divisible by input channels (%d)
-oV) p
+odml.scaled_dot_product_attention
 old_h == nullptr || h->maybe_unlocking
 old_h->skip == nullptr
+oned
 onedRecognitionOptions
 only integers, absl::LogSeverity enumerators, and DFATAL are accepted
-only resource types of kTFLiteFloat32 supported
+oouc14.prod.google.com
 op_context->block_shape->dims->data[0]
 op_context->crops->dims->data[0]
 op_context->crops->dims->data[1]
@@ -2853,6 +3135,7 @@ op_context.input->params.zero_point
 op_context.input->sparsity != nullptr
 op_context.input->type
 op_context.input->type != kTfLiteString
+op_context.input->type == kTfLiteInt4 || op_context.input->type == kTfLiteUInt8 || op_context.input->type == kTfLiteInt8 || op_context.input->type == kTfLiteInt16 || op_context.input->type == kTfLiteFloat16
 op_context.input->type == kTfLiteUInt8 || op_context.input->type == kTfLiteInt8 || op_context.input->type == kTfLiteInt16 || op_context.input->type == kTfLiteFloat16
 op_context.input1->type
 op_context.input2->type
@@ -2872,7 +3155,6 @@ op_context.shape1->type == kTfLiteInt32 || op_context.shape1->type == kTfLiteInt
 op_context.shape2->type
 op_context.strides->type
 op_data != nullptr
-op_data->body_has_dynamic_output_tensors
 op_data->body_subgraph_index < subgraphs->size()
 op_data->cond_subgraph_index != op_data->body_subgraph_index
 op_data->cond_subgraph_index < subgraphs->size()
@@ -2884,6 +3166,7 @@ op_data->then_subgraph_index < subgraphs->size()
 op_params.input1_offset
 op_params.input2_offset
 op_params.output_offset
+op_state->subgraph_index < subgraphs->size()
 open
 openlog
 operand->type
@@ -2891,15 +3174,16 @@ operand_tensor.allocation_type
 optimized_integer_ops::AveragePool(op_params, GetTensorShape(input), GetTensorData<int8_t>(input), GetTensorShape(output), GetTensorData<int8_t>(output))
 optimized_ops::AveragePool(op_params, GetTensorShape(input), GetTensorData<float>(input), GetTensorShape(output), GetTensorData<float>(output))
 optimized_ops::AveragePool(op_params, GetTensorShape(input), GetTensorData<uint8_t>(input), GetTensorShape(output), GetTensorData<uint8_t>(output))
+optimized_ops::QuantizedMeanOrSum( GetTensorData<T>(op_context.input), op_context.input->params.zero_point, op_context.input->params.scale, op_context.input->dims->data, op_context.input->dims->size, GetTensorData<T>(op_context.output), op_context.output->params.zero_point, op_context.output->params.scale, op_context.output->dims->data, op_context.output->dims->size, GetTensorData<int>(op_context.axis), num_axis, op_context.params->keep_dims, GetTensorData<int>(temp_index), GetTensorData<int>(resolved_axis), GetTensorData<int32_t>(temp_sum), compute_sum)
 optimized_ops::QuantizedReduceProd<T>( GetTensorData<T>(input), input->params.zero_point, GetTensorShape(input), GetTensorData<T>(output), output->params.zero_point, GetTensorShape(output), GetTensorData<int>(op_context->axis), num_axis, GetTensorData<int>(resolved_axis), GetTensorData<int>(normalized_dims), GetTensorData<int32>(temp_prod), data->multiplier, data->shift)
 optimized_ops::ReduceGeneric<T>( GetTensorData<T>(input), input->dims->data, input->dims->size, GetTensorData<T>(op_context->output), op_context->output->dims->data, op_context->output->dims->size, GetTensorData<int>(op_context->axis), num_axis, GetTensorData<int>(resolved_axis), GetTensorData<int>(normalized_dims), reduce_type)
-options_.extra_scales_size() == 0
-oqei5.prod.google.com
+option_case != BinarizerCreationOption::OPTIONS_NOT_SET
 or BUILD rule of the library is missing "alwayslink = 1"? 
+out/llvm-project/libcxxabi/src/fallback_malloc.cpp
+out_of_range was thrown in -fno-exceptions mode with message "%s"
 output smaller than effective kernel dimensions unsupported with VALID padding in TRANSPOSE_CONV node #%d: effective kernel size %dx%d (HxW), output %dx%d
 output type %d is not supported, requires float|uint8|int32 types.
 output type %s is not supported.
-output->bytes
 output->params.scale
 output->params.scale == 1. / 256
 output->params.scale == 1. / 32768
@@ -2908,19 +3192,23 @@ output->params.zero_point == 0
 output->quantization.type
 output->quantization.type != kTfLiteNoQuantization
 output->type
+output->type == kTfLiteFloat32
 output->type == kTfLiteFloat32 || output->type == kTfLiteUInt8 || output->type == kTfLiteInt8
+output->type == kTfLiteInt32 || output->type == kTfLiteInt64 || output->type == kTfLiteUInt32 || output->type == kTfLiteUInt64
 output->type == kTfLiteInt8 || output->type == kTfLiteInt16
 output->type == kTfLiteInt8 || output->type == kTfLiteInt16 || output->type == kTfLiteInt32
 output->type == kTfLiteUInt8 || output->type == kTfLiteInt8
 output->type == kTfLiteUInt8 || output->type == kTfLiteInt8 || output->type == kTfLiteInt16
 outputUnrecognizedBarcodes
 output_batch_size % block_shape[dim]
+output_buffer != nullptr
 output_channels * block_size * block_size
 output_flat_size
 output_gate_bias->dims->data[0]
 output_gate_bias->dims->size
 output_gate_bias->type
 output_height * block_size
+output_key->type
 output_layer_norm_coefficients != nullptr
 output_layer_norm_coefficients->dims->data[0]
 output_layer_norm_coefficients->dims->size
@@ -2952,9 +3240,14 @@ output_type_size / input_type_size
 output_values->type
 output_width
 output_width * block_size
+output_y_
+output_y_.min.0
+output_y_.stride.0
 outputs
 p88H
-pZZZZZZZZZZZZZZZZ
+padded_tensor != nullptr
+padding
+padding for flatbuffer offset
 params
 params->activation
 params->activation == kTfLiteActNone || params->activation == kTfLiteActRelu || params->activation == kTfLiteActReluN1To1 || params->activation == kTfLiteActRelu6
@@ -2969,39 +3262,30 @@ params->multiplier_fixedpoint
 params->output_height
 params->output_multiplier_exponent <= 0
 params->proj_clip >= 0
+params->quantized_bias_type == kTfLiteInt32 || params->quantized_bias_type == kTfLiteInt64
 params->spectrogram->ComputeSquaredMagnitudeSpectrogram( input_for_channel, &spectrogram_output)
 params->spectrogram->Initialize(params->window_size, params->stride)
 params->stride_height > 0
 params->stride_width > 0
 parse
 parsing
-payload_size != 0
 peephole_weights_all_or_none == true
 per_channel_quantization_size
-perror
+permute_k.size()
+permute_q.size()
+permute_v.size()
+perspective
+photos/vision/barhopper/deep_learning/binarizer/binarizer_factory.cc
+photos/vision/barhopper/deep_learning/binarizer/ml_binarizer.cc
+photos/vision/barhopper/deep_learning/binarizer/ordered_binarizers.cc
 photos/vision/barhopper/deep_learning/decoder/oned_decoder_client.cc
 photos/vision/barhopper/deep_learning/detector/barcode_detector_client.cc
+photos/vision/barhopper/deep_learning/mobile/barcode_recognizer.cc
 photos/vision/barhopper/deep_learning/mobile/barhopper_v3.cc
 photos/vision/barhopper/deep_learning/mobile/convert_to_proto.cc
-photos_vision.Address
-photos_vision.PersonName
-photos_vision.Phone
-photos_vision_barhopper.Barcode
-photos_vision_barhopper.BarhopperResponse
-photos_vision_barhopper.BoardingPass
-photos_vision_barhopper.CalendarDateTime
-photos_vision_barhopper.CalendarEvent
-photos_vision_barhopper.ContactInfo
-photos_vision_barhopper.DriverLicense
-photos_vision_barhopper.Email
-photos_vision_barhopper.FlightSegment
-photos_vision_barhopper.GeoPoint
-photos_vision_barhopper.Point
-photos_vision_barhopper.Sms
-photos_vision_barhopper.UrlBookmark
-photos_vision_barhopper.WiFi
 pixels != nullptr
 plain
+points_size >= 4
 pos < num_strings
 pos > size()
 positions->dims->data[i]
@@ -3031,7 +3315,6 @@ pthread_cond_init
 pthread_cond_signal
 pthread_cond_wait
 pthread_create
-pthread_equal
 pthread_getschedparam
 pthread_getschedparam failed: %d
 pthread_getspecific
@@ -3056,10 +3339,27 @@ pw not w's predecessor
 pw->next == w
 pw->skip == nullptr
 pzKj
-q6\v ro
+qparams->quantized_dimension == 0
+qparams->scale != nullptr
+qparams->scale->size == row_size
+qparams->zero_point != nullptr
+qparams->zero_point->data[0] == 0
+qparams->zero_point->size == row_size
+qrEnableFourthCornerApproximation
+qr_decoding_failed_with_angle
+qr_decoding_failed_with_aspect_ratio
+qr_decoding_success_with_angle
+qr_decoding_success_with_aspect_ratio
+qr_detection_failed_with_angle
+qr_detection_failed_with_aspect_ratio
+qr_finder_patterns
+qr_grid_sampling
 qsort
 quantized_dimension must be in range [0, %d). Was %d.
-r+be
+query_dim->size
+query_proj.dims->data[2] % key_proj.dims->data[2]
+query_proj.dims->data[query_proj.dims->size - 1]
+query_proj.dims->size
 r3ap?#>
 r99K
 random_device failed to open 
@@ -3092,18 +3392,22 @@ recurrent_weights->dims->data[1]
 recurrent_weights->type
 reduced_precision_support
 reference_integer_ops::AveragePool(op_params, GetTensorShape(input), GetTensorData<int16_t>(input), GetTensorShape(output), GetTensorData<int16_t>(output))
-reference_ops::QuantizedMeanOrSum( GetTensorData<int8_t>(op_context.input), op_context.input->params.zero_point, op_context.input->dims->data, op_context.input->dims->size, GetTensorData<int8_t>(op_context.output), op_data->multiplier, op_data->shift, op_context.output->params.zero_point, op_context.output->dims->data, op_context.output->dims->size, GetTensorData<int>(op_context.axis), num_axis, op_context.params->keep_dims, GetTensorData<int>(temp_index), GetTensorData<int>(resolved_axis), GetTensorData<int32_t>(temp_sum), true)
 reference_ops::QuantizedMeanOrSum( GetTensorData<integer_type>(input), input->params.zero_point, input->dims->data, input->dims->size, GetTensorData<integer_type>(output), data->multiplier, data->shift, output->params.zero_point, output->dims->data, output->dims->size, GetTensorData<int>(op_context.axis), num_axis, op_context.params->keep_dims, GetTensorData<int>(temp_index), GetTensorData<int>(resolved_axis), GetTensorData<int32_t>(temp_sum), false)
-reference_ops::QuantizedMeanOrSum( GetTensorData<uint8_t>(op_context.input), op_context.input->params.zero_point, op_context.input->dims->data, op_context.input->dims->size, GetTensorData<uint8_t>(op_context.output), op_data->multiplier, op_data->shift, op_context.output->params.zero_point, op_context.output->dims->data, op_context.output->dims->size, GetTensorData<int>(op_context.axis), num_axis, op_context.params->keep_dims, GetTensorData<int>(temp_index), GetTensorData<int>(resolved_axis), GetTensorData<int32_t>(temp_sum), true)
-reference_ops::ReduceGeneric<T>( GetTensorData<T>(input), input->dims->data, input->dims->size, GetTensorData<T>(op_context->output), op_context->output->dims->data, op_context->output->dims->size, GetTensorData<int>(op_context->axis), num_axis, op_context->params->keep_dims, GetTensorData<int>(temp_index), GetTensorData<int>(resolved_axis), init_value, reducer)
 reinterpret_cast<char *>(prev) + prev->header.size < reinterpret_cast<char *>(next)
 remainder
 rename
-required_bytes
+required_bytes <= bytes
 res || t.has_timeout()
+rescale_factor > 0.0f
 reshape
 resource_handle_tensor->type
-revision.txt
+rgb.extent.2
+rgb.min.0
+rgb.min.1
+rgb.min.2
+rgb.stride.0
+rgb.stride.2
+rgb_gray_halide
 rhs_data->params.zero_point
 rhs_data->type == kTfLiteFloat32 || rhs_data->type == kTfLiteInt8 || rhs_data->type == kTfLiteInt16
 rhs_dim
@@ -3115,9 +3419,11 @@ s->header.arena == arena
 s->waitp != nullptr || s->suppress_fatal_errors
 s->waitp == nullptr || s->waitp == waitp || s->suppress_fatal_errors
 sb11S*
+scale
 scale_diff / output_scale <= 0.02
 scale_x
 scale_y
+scales.size() >= 1
 scaling_factor_size >= num_batches_to_quantize
 scatter_nd index out of bounds
 sched_yield
@@ -3153,9 +3459,7 @@ sigfillset
 sincos
 sincosf
 sinf
-size %ld does not match output shape %d at dimension %d in SLICE node #%d
-size %ld must be less than or equals to input dimension %d in SLICE node #%d
-size %ld must be positive or -1 in SLICE node #%d
+size %ld must be positive in SLICE node #%d
 size - chunk_size <= kSlopBytes
 size will exceed max_size
 size->dims->data[0]
@@ -3165,6 +3469,7 @@ size_data[0] > 0
 size_data[1] > 0
 size_splits only support type int32|int64.
 sizes.size()
+skipProcessingIfBarcodeFound
 slow release
 snap_level >= 0
 snprintf
@@ -3173,35 +3478,38 @@ spatial_dims_num
 spectrogram_output.empty() || (spectrogram_output[0].size() == output_width)
 spectrogram_output.size()
 spectrogram_row.size()
-split_dim < NumDimensions(&input_tensor)
-split_dim >= 0
 split_params->num_splits
 split_size > 0
 sqrtl
 squeeze
-src_subgraph
 src_tensor_indices.size()
 src_y
 src_y.min.0
 src_y.min.1
 src_y.stride.0
 sscanf
-start_indices->type
+stablehlo.pad
+stablehlo.reduce_window
+stablehlo_gather
+stablehlo_scatter
+start_indices->type == kTfLiteInt32 || start_indices->type == kTfLiteInt64
 starting async computation
 state != nullptr
 state->quantization.type != kTfLiteNoQuantization
 state_
 state_ == Idle
-static_cast<int64_t>(new_size) <= static_cast<int64_t>( (std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(old_rep->elements[0]))
+state_dim_0_size == 2 || state_dim_0_size == 3
+static_cast<int64_t>(new_capacity) <= static_cast<int64_t>( (std::numeric_limits<size_t>::max() - kRepHeaderSize) / ptr_size)
 static_cast<size_t>(count) <= size_ - available_
 static_cast<size_t>(count) <= target_->size()
 static_cast<size_t>(node_index) < nodes_size
+static_cast<size_t>(subgraph_index) < subgraphs_->size()
 status == kTfLiteOk
 std: %f, mean: %f, max_diff: %f (scale: %f, zero_point: %d).\n
 std::apply(optimized_ops::Mean<T, U>, args)
-std::apply(reference_ops::Mean<T, U>, args)
 std::bad_alloc
-std::bad_exception
+std::bad_cast
+stoi
 strchr
 strcmp
 strerror
@@ -3209,12 +3517,14 @@ strerror_r
 stretch_dim
 strftime_l
 stride
-stride at dimension %d, %d, must be 1in STRIDED_SLICE node #%d
+stride at dimension %zu, %d, must be 1in STRIDED_SLICE node #%d
+stride_tensor
 strides larger than effective kernel dimensions unsupported in TRANSPOSE_CONV node #%d: kernel size %dx%d (HxW), strides %dx%d
 string rep not handled: 
 strlen
 strncmp
 strncpy
+strstr
 strtod
 strtof
 strtol
@@ -3223,9 +3533,7 @@ strtoll_l
 strtoull_l
 subgraph->inputs().size()
 subgraph->outputs().size()
-subgraph_input->bytes
-subgraph_input->type
-subgraph_output->bytes
+subgraph_index >= 0
 syscall
 sysconf
 syslog
@@ -3242,8 +3550,9 @@ t->type
 t0->dims->data[d]
 t0->dims->size
 tanhf
-target_ != NULL
+target_ != nullptr
 tensor->delegate == nullptr || tensor->delegate == delegate
+tensor->quantization.type
 tensor.allocation_type
 tensor.data.raw != nullptr
 tensor_at_index->allocation_type
@@ -3260,11 +3569,11 @@ tflite::NumOutputs(node)
 tflite::UseGemmlowpOnX86()
 third_party/absl/base/internal/low_level_alloc.cc
 third_party/absl/base/internal/malloc_hook.cc
+third_party/absl/base/internal/sysinfo.cc
 third_party/absl/base/internal/throw_delegate.cc
 third_party/absl/flags/internal/flag.cc
 third_party/absl/log/flags.cc
 third_party/absl/log/internal/log_sink_set.cc
-third_party/absl/status/status.cc
 third_party/absl/status/statusor.cc
 third_party/absl/strings/bytestream.cc
 third_party/absl/strings/internal/cord_rep_btree.cc
@@ -3281,12 +3590,12 @@ third_party/halide/halide/src/runtime/tracing.cpp:131 halide_abort_if_false() fa
 third_party/halide/halide/src/runtime/tracing.cpp:238 halide_abort_if_false() failed: print_bits <= 64 && "Tracing bad type"\n
 third_party/halide/halide/src/runtime/tracing.cpp:307 halide_abort_if_false() failed: print_bits >= 16 && "Tracing a bad type"\n
 third_party/halide/halide/src/runtime/tracing.cpp:371 halide_abort_if_false() failed: file && "Failed to open trace file\n"\n
-third_party/highway/hwy/aligned_allocator.cc
 third_party/openssl/boringssl/src/crypto/fipsmodule/bn/add.c
 third_party/openssl/boringssl/src/crypto/fipsmodule/bn/bn.c
 third_party/openssl/boringssl/src/crypto/fipsmodule/bn/ctx.c
 third_party/openssl/boringssl/src/crypto/fipsmodule/bn/shift.c
 third_party/openssl/boringssl/src/crypto/mem.c
+third_party/openssl/boringssl/src/crypto/stack/stack.c
 third_party/protobuf/arena.cc
 third_party/protobuf/generated_message_tctable_lite.cc
 third_party/protobuf/io/zero_copy_stream.cc
@@ -3336,6 +3645,7 @@ third_party/tensorflow/lite/kernels/depth_to_space.cc
 third_party/tensorflow/lite/kernels/depthwise_conv.cc
 third_party/tensorflow/lite/kernels/dequantize.cc
 third_party/tensorflow/lite/kernels/detection_postprocess.cc
+third_party/tensorflow/lite/kernels/dilate.cc
 third_party/tensorflow/lite/kernels/div.cc
 third_party/tensorflow/lite/kernels/dynamic_update_slice.cc
 third_party/tensorflow/lite/kernels/elementwise.cc
@@ -3352,6 +3662,7 @@ third_party/tensorflow/lite/kernels/floor.cc
 third_party/tensorflow/lite/kernels/floor_div.cc
 third_party/tensorflow/lite/kernels/floor_mod.cc
 third_party/tensorflow/lite/kernels/fully_connected.cc
+third_party/tensorflow/lite/kernels/fully_connected.cc Unsupported filter quantization zero-point value.
 third_party/tensorflow/lite/kernels/gather.cc
 third_party/tensorflow/lite/kernels/gather_nd.cc
 third_party/tensorflow/lite/kernels/hashtable.cc
@@ -3378,6 +3689,7 @@ third_party/tensorflow/lite/kernels/numeric_verify.cc
 third_party/tensorflow/lite/kernels/one_hot.cc
 third_party/tensorflow/lite/kernels/pack.cc
 third_party/tensorflow/lite/kernels/pad.cc
+third_party/tensorflow/lite/kernels/pad.cc INT64 padding overflow. Only support value between INT32_MIN and INT32_MAX.
 third_party/tensorflow/lite/kernels/pad.cc Pad value has to be greater than equal to 0.
 third_party/tensorflow/lite/kernels/pooling.cc
 third_party/tensorflow/lite/kernels/pow.cc
@@ -3387,7 +3699,6 @@ third_party/tensorflow/lite/kernels/range.cc
 third_party/tensorflow/lite/kernels/rank.cc
 third_party/tensorflow/lite/kernels/read_variable.cc
 third_party/tensorflow/lite/kernels/reduce.cc
-third_party/tensorflow/lite/kernels/reduce.cc Invalid axis index.
 third_party/tensorflow/lite/kernels/reshape.cc
 third_party/tensorflow/lite/kernels/resize_bilinear.cc
 third_party/tensorflow/lite/kernels/resize_nearest_neighbor.cc
@@ -3395,6 +3706,7 @@ third_party/tensorflow/lite/kernels/reverse.cc
 third_party/tensorflow/lite/kernels/reverse_sequence.cc
 third_party/tensorflow/lite/kernels/rfft2d.cc
 third_party/tensorflow/lite/kernels/right_shift.cc
+third_party/tensorflow/lite/kernels/rng_bit_generator.cc
 third_party/tensorflow/lite/kernels/round.cc
 third_party/tensorflow/lite/kernels/scatter_nd.cc
 third_party/tensorflow/lite/kernels/segment_sum.cc
@@ -3412,6 +3724,14 @@ third_party/tensorflow/lite/kernels/split.cc Not an even split
 third_party/tensorflow/lite/kernels/split_v.cc
 third_party/tensorflow/lite/kernels/squared_difference.cc
 third_party/tensorflow/lite/kernels/squeeze.cc
+third_party/tensorflow/lite/kernels/stablehlo_composite.cc
+third_party/tensorflow/lite/kernels/stablehlo_elementwise.cc
+third_party/tensorflow/lite/kernels/stablehlo_gather.cc
+third_party/tensorflow/lite/kernels/stablehlo_pad.cc
+third_party/tensorflow/lite/kernels/stablehlo_reduce_window.cc
+third_party/tensorflow/lite/kernels/stablehlo_reduce_window.cc The element size cannot be contained in an int64_t value.
+third_party/tensorflow/lite/kernels/stablehlo_reduce_window.cc The padding specification of stablehlo.reduce_window gives an empty tensor.
+third_party/tensorflow/lite/kernels/stablehlo_scatter.cc
 third_party/tensorflow/lite/kernels/strided_slice.cc
 third_party/tensorflow/lite/kernels/strided_slice.cc StridedSlice op only supports 1D-5D input arrays.
 third_party/tensorflow/lite/kernels/strided_slice.cc StridedSlice op only supports up to 5D output including added axis.
@@ -3439,9 +3759,7 @@ third_party/tensorflow/lite/simple_memory_arena.cc
 third_party/tensorflow/lite/util.cc
 third_party/tensorflow/lite/util.cc BytesRequired number of bytes overflowed.\n
 third_party/tensorflow/lite/util.cc BytesRequired number of elements overflowed.\n
-this->AwaitCommon(cond, KernelTimeout::Never())
 this->LockSlowWithDeadline(how, cond, KernelTimeout::Never(), flags)
-this_subgraph
 thread constructor failed
 thread should hold at least a read lock on Mutex %p %s
 thread::join failed
@@ -3454,6 +3772,8 @@ too few levels in Next()
 too many PerThread keys in use
 top_k->type == kTfLiteInt32 || top_k->type == kTfLiteInt16
 total_depth
+transform_matrix_
+transform_matrix_.stride.0
 transpose convolution kernel input channel dimension (%d) doesn't match filter input channel (%d) in node #%d
 transpose convolution kernel output channel dimension (%d) doesn't match output shape channel dimension (%d) in node #%d: 4 dimensions expected
 tree->height() <= CordRepBtree::kMaxHeight
@@ -3461,27 +3781,28 @@ true
 true_dimensions <= kMaxDimensions
 truncated sleb128 expression
 truncated uleb128 expression
+txs.txs.txs.txs.txs.txs.txs.txs.
 type.googleapis.com/util.ErrorSpacePayload
 type.googleapis.com/util.MessageSetPayload
-tzdata
+u>UUUU
 u?:zu??Xu?y;u?
 uint
-underlying_buffer_size_ >= (alloc.offset + alloc.size)
+underlying_buffer_.GetSize() >= (alloc.offset + alloc.size)
 unexpected allocation type (%d) in tensor %d in node %d (%d)
-unexpected buffer size for densified data, expected %lld.\n
+unexpected buffer size for densified data, expected %zu.\n
 unexpected datatype (%s) in tensor %d in node %d
 unexpected empty wake list
 unexpected non-unit (%d) shape dimension #%d in shape tensor #%d in %s node #%d: expected %d leading dimensions of the %dD tensor to be 1
 unexpected null data pointer in external tensor %d
 unexpected number of columns (%d) in padding tensor #%d in node #%d: 2 columns expected
 unexpected number of dimensions %d in the output shape in node %d
-unexpected number of inputs (%d != %d) in node #%d
+unexpected number of inputs (%d != %d) in node %s #%d
+unexpected number of inputs (%d) in %d node %d
 unexpected number of inputs (%d) in %s node #%d
-unexpected number of inputs (%d) in %s node %d
 unexpected number of inputs (%d) in node #%d: either one or two inputs expected
 unexpected number of outputs (%d != %d) in %s node #%d
+unexpected number of outputs (%d) in %d node %d
 unexpected number of outputs (%d) in %s node #%d
-unexpected number of outputs (%d) in %s node %d
 unexpected number of outputs (%d) in node #%d: one output expected
 unexpected number of rows (%d) in padding tensor #%d in node #%d: %d rows expected
 unexpected number of shape dimensions %d in tensor #%d
@@ -3492,14 +3813,15 @@ unexpected number of shape dimensions (%d) in tensor #%d in %s node #%d: expecte
 unexpected op registration %d at node %d
 unexpected resource tensor when XNNPACK delegate is not configured to handle variable operations
 unexpected value %d of shape dimension #%d in tensor #%d in %s node #%d: expected 1 for non-channel dimensions
-unexpected_handler unexpectedly returned
 ungetc
+ungetwc
 unknown
 unknown pointer encoding
 unknown register
 unknown_model_id
 unknown_namespace
 unordered freelist
+unordered_map::at: key not found
 unspecified
 unspecified generic_category error
 unspecified iostream_category error
@@ -3509,6 +3831,9 @@ unsupported DEPTHWISE_CONV_2D node #%d without bias
 unsupported MEAN reduction along %d axes in node %d
 unsupported MEAN reduction along non-spatial axes %d and %d in node %d
 unsupported MEAN reduction along non-spatial axis %d in node %d
+unsupported SUM reduction along %d axes in node %d
+unsupported SUM reduction along non-spatial axes %d and %d in node %d
+unsupported SUM reduction along non-spatial axis %d in node %d
 unsupported alpha %g in LEAKY_RELU node #%d
 unsupported beta value %.7f in SOFTMAX node #%d
 unsupported combination of input type (%s) and output type (%s) in QUANTIZE node #%d
@@ -3524,6 +3849,7 @@ unsupported input-product-to-output scale in %s, node #%d
 unsupported input-to-output scale in %s node #%d
 unsupported input-to-output scale in QUANTIZE node #%d
 unsupported locale for standard input
+unsupported mixed types in ADD operator #%d
 unsupported mixed types in CONV_2D operator #%d
 unsupported mixed types in DEPTHWISE_CONV_2D operator #%d
 unsupported mixed types in FULLY_CONNECTED operator #%d
@@ -3535,23 +3861,25 @@ unsupported number of output shape dimensions (%d) in node #%d: 4 dimensions exp
 unsupported number of shape dimensions (%d) in tensor #%d in %s node #%d: %d dimensions expected
 unsupported number of shape dimensions (%d) in tensor #%d in %s node #%d: at least %d dimensions expected
 unsupported number of shape dimensions (%d) in tensor #%d in %s node #%d: at most %d dimensions expected
+unsupported odd number of inputs channels (%d) in FULLY_CONNECTED operator #%d
+unsupported per-tensor quantization scale parameter for %s tensor %d in XNNPACK delegate
 unsupported pooling with 1x1 filter and %dx%d stride in %s node #%d
 unsupported positive input-to-output scale %g in LEAKY_RELU node #%d
+unsupported quantization type %d for %s tensor %d in XNNPACK delegate
 unsupported quantization type %d for INT32 tensor %d in XNNPACK delegate
-unsupported quantization type %d for INT8 tensor %d in XNNPACK delegate
 unsupported quantization type %d for UINT8 tensor %d in XNNPACK delegate
 unsupported quantization type %d in tensor #%d in node #%d
 unsupported quantized dimension %d for INT32 tensor %d in XNNPACK delegate
 unsupported quantized dimension %d in tensor #%d in node #%d
 unsupported restore location for register
 unsupported scale value (%f) for UINT8 tensor %d in XNNPACK delegate
-unsupported scale value (%f) in channel %d for INT8 tensor %d in XNNPACK delegate
+unsupported scale value (%f) in channel %d for %s tensor %d in XNNPACK delegate
 unsupported type %s in tensor #%d in node #%d
 unsupported width stride %d exceeding filter width %d in %s node #%d
 unsupported x86_64 register
 unsupported zero-point value %d for INT32 tensor %d in XNNPACK delegate
+unsupported zero-point value %d in channel %d of %s tensor %d in XNNPACK delegate
 unsupported zero-point value %d in channel %d of INT32 tensor %d in XNNPACK delegate
-unsupported zero-point value %d in channel %d of INT8 tensor %d in XNNPACK delegate
 unsupported zero-point value (%d) for INT8 tensor %d in XNNPACK delegate
 unsupported zero-point value (%d) for UINT8 tensor %d in XNNPACK delegate
 unused_out_depth
@@ -3564,6 +3892,7 @@ updates.DimensionsCount() - outer_dims
 updates.Dims(i + outer_dims)
 updates.Dims(i)
 upper_frequency_limit
+useHalideAffineCrop
 useQrMobilenetV3
 use_regular_nms
 uselocale
@@ -3584,7 +3913,11 @@ v\ns\nW\nV\nT\nR\n
 value->params.scale
 value->params.zero_point
 value->type
+value->type == kTfLiteUInt8 || value->type == kTfLiteInt8 || value->type == kTfLiteInt4
 value.size() <= kInt32MaxSize
+value_proj.dims->data[1]
+value_proj.dims->data[value_proj.dims->size - 1]
+value_proj.dims->size
 value_type_
 values->type
 values->type == kTfLiteInt32 || values->type == kTfLiteInt64 || values->type == kTfLiteInt8 || values->type == kTfLiteUInt8 || values->type == kTfLiteFloat32
@@ -3596,7 +3929,9 @@ vector
 vfprintf
 vsnprintf
 vsscanf
-w+be
+w->waitp->cond == nullptr
+w->waitp->cv_word == nullptr
+w11WImageViewCIhLi1EE
 w?6b
 w\nu\nB
 w_scale
@@ -3607,6 +3942,7 @@ waitp != nullptr
 waitp == nullptr || waitp->thread->waitp == nullptr || waitp->thread->suppress_fatal_errors
 waitp->thread->waitp == nullptr
 waitp->thread->waitp == nullptr || waitp->thread->suppress_fatal_errors
+waitp.thread->waitp != nullptr
 wake_list != kPerThreadSynchNull
 warning
 wcrtomb
@@ -3615,6 +3951,7 @@ wcsnrtombs
 weight_shape.DimensionsCount()
 weights->dims->data[0]
 weights->dims->data[1]
+weights->dims->data[affine_quantization->quantized_dimension]
 weights->dims->size
 weights->quantization.type
 weights->type
@@ -3622,21 +3959,24 @@ weights_feature->dims->data[1]
 weights_feature->quantization.type != kTfLiteNoQuantization
 weights_time->dims->data[0]
 weights_time->quantization.type != kTfLiteNoQuantization
+width <= row_stride
 width >= 0 && height >= 0
 width: 
-width_ <= row_stride_
+window_dilations
+window_dilations_tensor->type
+window_dimensions
+window_dimensions_tensor->type
 window_size
+window_strides
+window_strides_tensor->type
 windows-1250
 windows-1251
 windows-1252
 windows-1256
 with no support for device to host copies.
-wmemcpy
-wmemmove
-wmemset
+wmemchr
 write
 www.
-wwwwwwww
 x-iso-8859-11
 x86-64-android-c_plus_plus_name_mangling-no_runtime
 x86_64-linux-android-llvm-libcxx-x86_64
@@ -3657,10 +3997,51 @@ xmm6
 xmm7
 xmm8
 xmm9
+xnn_define_add2(subgraph, default_out_min, default_out_max, atten_mask_id, fc_out_id, padded_logits_id, 0)
+xnn_define_batch_matrix_multiply( subgraph, padded_logits_reshape_id, v_reshape_id, bmm2_reshape_id, XNN_FLAG_TRANSPOSE_B)
+xnn_define_batch_matrix_multiply( subgraph, permute_q_out_id, permute_k_out_id, fc_out_id, XNN_FLAG_TRANSPOSE_B)
+xnn_define_batch_matrix_multiply( subgraph, probs_id, permute_v_out_id, fc2_out_id, XNN_FLAG_TRANSPOSE_B)
+xnn_define_batch_matrix_multiply(subgraph, q_reshape_id, k_reshape_id, bmm_reshape_id, XNN_FLAG_TRANSPOSE_B)
+xnn_define_clamp(subgraph, scale_const, scale_const, scale_orig_id, scale_out_id, 0)
+xnn_define_fully_connected( subgraph, default_out_min, default_out_max, permute_q_out_id, reshape_dims_k_out_id, XNN_INVALID_VALUE_ID, fc_out_id, 0)
+xnn_define_fully_connected( subgraph, default_out_min, default_out_max, probs_id, reshape_dims_v_out_id, XNN_INVALID_VALUE_ID, fc2_out_id, 0)
+xnn_define_multiply2(subgraph, default_out_min, default_out_max, query_proj_id, scale_out_id, multiply_out_id, 0)
+xnn_define_softmax(subgraph, padded_logits_id, probs_id, 0)
+xnn_define_static_reshape( subgraph, bmm2_reshape_dims.size(), bmm2_reshape_dims.data(), bmm2_reshape_id, fc2_out_id, 0)
+xnn_define_static_reshape( subgraph, padded_logits_reshape_dims.size(), padded_logits_reshape_dims.data(), probs_id, padded_logits_reshape_id, 0)
+xnn_define_static_reshape(subgraph, bmm_reshape_dims.size(), bmm_reshape_dims.data(), bmm_reshape_id, fc_out_id, 0)
+xnn_define_static_reshape(subgraph, k_reshape_dims.size(), k_reshape_dims.data(), permute_k_out_id, k_reshape_id, 0)
+xnn_define_static_reshape(subgraph, q_reshape_dims.size(), q_reshape_dims.data(), permute_q_out_id, q_reshape_id, 0)
+xnn_define_static_reshape(subgraph, reshape_dims_k.size(), reshape_dims_k.data(), permute_k_out_id, reshape_dims_k_out_id, 0)
+xnn_define_static_reshape(subgraph, reshape_dims_v.size(), reshape_dims_v.data(), permute_v_out_id, reshape_dims_v_out_id, 0)
+xnn_define_static_reshape(subgraph, v_reshape_dims.size(), v_reshape_dims.data(), permute_v_out_id, v_reshape_id, 0)
+xnn_define_static_transpose( subgraph, permute_k.size(), permute_k.data(), key_proj_id, permute_k_out_id, 0)
+xnn_define_static_transpose( subgraph, permute_q.size(), permute_q.data(), multiply_out_id, permute_q_out_id, 0)
+xnn_define_static_transpose( subgraph, permute_v.size(), permute_v.data(), value_proj_id, permute_v_out_id, 0)
+xnn_define_tensor_value( subgraph, xnn_datatype_fp32, 0, nullptr, nullptr, XNN_INVALID_VALUE_ID, 0, &bmm2_reshape_id)
+xnn_define_tensor_value( subgraph, xnn_datatype_fp32, 0, nullptr, nullptr, XNN_INVALID_VALUE_ID, 0, &bmm_reshape_id)
+xnn_define_tensor_value( subgraph, xnn_datatype_fp32, 0, nullptr, nullptr, XNN_INVALID_VALUE_ID, 0, &padded_logits_reshape_id)
+xnn_define_tensor_value( subgraph, xnn_datatype_fp32, 0, nullptr, nullptr, XNN_INVALID_VALUE_ID, 0, &reshape_dims_k_out_id)
+xnn_define_tensor_value( subgraph, xnn_datatype_fp32, 0, nullptr, nullptr, XNN_INVALID_VALUE_ID, 0, &reshape_dims_v_out_id)
+xnn_define_tensor_value(subgraph, xnn_datatype_fp32, 0, nullptr, &query_proj.dims->data[3], XNN_INVALID_VALUE_ID, 0, &scale_orig_id)
+xnn_define_tensor_value(subgraph, xnn_datatype_fp32, 0, nullptr, nullptr, XNN_INVALID_VALUE_ID, 0, &fc2_out_id)
+xnn_define_tensor_value(subgraph, xnn_datatype_fp32, 0, nullptr, nullptr, XNN_INVALID_VALUE_ID, 0, &fc_out_id)
+xnn_define_tensor_value(subgraph, xnn_datatype_fp32, 0, nullptr, nullptr, XNN_INVALID_VALUE_ID, 0, &k_reshape_id)
+xnn_define_tensor_value(subgraph, xnn_datatype_fp32, 0, nullptr, nullptr, XNN_INVALID_VALUE_ID, 0, &multiply_out_id)
+xnn_define_tensor_value(subgraph, xnn_datatype_fp32, 0, nullptr, nullptr, XNN_INVALID_VALUE_ID, 0, &padded_logits_id)
+xnn_define_tensor_value(subgraph, xnn_datatype_fp32, 0, nullptr, nullptr, XNN_INVALID_VALUE_ID, 0, &permute_k_out_id)
+xnn_define_tensor_value(subgraph, xnn_datatype_fp32, 0, nullptr, nullptr, XNN_INVALID_VALUE_ID, 0, &permute_q_out_id)
+xnn_define_tensor_value(subgraph, xnn_datatype_fp32, 0, nullptr, nullptr, XNN_INVALID_VALUE_ID, 0, &permute_v_out_id)
+xnn_define_tensor_value(subgraph, xnn_datatype_fp32, 0, nullptr, nullptr, XNN_INVALID_VALUE_ID, 0, &probs_id)
+xnn_define_tensor_value(subgraph, xnn_datatype_fp32, 0, nullptr, nullptr, XNN_INVALID_VALUE_ID, 0, &q_reshape_id)
+xnn_define_tensor_value(subgraph, xnn_datatype_fp32, 0, nullptr, nullptr, XNN_INVALID_VALUE_ID, 0, &scale_out_id)
+xnn_define_tensor_value(subgraph, xnn_datatype_fp32, 0, nullptr, nullptr, XNN_INVALID_VALUE_ID, 0, &v_reshape_id)
+xnn_define_tensor_value(subgraph, xnn_datatype_fp32, 0, nullptr, scale_param, XNN_INVALID_VALUE_ID, 0, &scale_out_id)
+xnn_status_success
+xterm
 xxoJ%%r\..$8
 y?j9z?
 yV$qk.
 y_scale
-zoneinfo/tzif2/
 {"typeNumber": "
 ~~~~~~~~~~~~~~~~

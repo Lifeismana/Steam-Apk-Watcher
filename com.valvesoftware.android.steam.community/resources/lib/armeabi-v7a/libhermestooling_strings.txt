@@ -1,10 +1,11 @@
-(Ljava/lang/Object;Z)Lcom/facebook/jni/HybridData;
 (Ljava/lang/String;)V
+(Z)Lcom/facebook/jni/HybridData;
 (ZLjava/lang/String;)Lcom/facebook/jni/HybridData;
 (ZLjava/lang/String;J)Lcom/facebook/jni/HybridData;
+(garbage collector)
 /__w/react-native/react-native/packages/react-native/ReactAndroid/src/main/jni/react/hermes/reactexecutor/OnLoad.cpp
 About to register %zu actual methods.\n
-Android (10552028, +pgo, +bolt, +lto, -mlgo, based on r487747d) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)
+Android (12285214, +pgo, +bolt, +lto, +mlgo, based on r522817b) clang version 18.0.2 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
 Entering merged library JNI_OnLoad.\n
 Error
 FvRKNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEjE
@@ -19,7 +20,7 @@ LIBC
 Lcom/facebook/hermes/reactexecutor/HermesExecutor;
 Lcom/facebook/jni/HybridData$Destructor;
 Lcom/facebook/react/runtime/hermes/HermesInstance;
-Linker: LLD 17.0.2
+Linker: LLD 18.0.2
 N8facebook3jni11HybridClassINS_5react15JHermesInstanceENS2_17JJSRuntimeFactoryEEE
 N8facebook3jni11HybridClassINS_5react17JJSRuntimeFactoryENS0_6detail15BaseHybridClassEEE
 N8facebook3jni11HybridClassINS_5react20HermesExecutorHolderENS2_24JavaScriptExecutorHolderEEE
@@ -58,7 +59,6 @@ NSt6__ndk114default_deleteIN8facebook3jsi7RuntimeEEE
 NSt6__ndk114default_deleteIN8facebook5react21HermesExecutorFactoryEEE
 NSt6__ndk114default_deleteIN8facebook6hermes13HermesRuntimeEEE
 NSt6__ndk117bad_function_callE
-NSt6__ndk120__shared_ptr_emplaceIKN8facebook5react23ReactNativeConfigHolderENS_9allocatorIS4_EEEE
 NSt6__ndk120__shared_ptr_emplaceIN8facebook3jsi19DecoratedHostObjectENS_9allocatorIS3_EEEE
 NSt6__ndk120__shared_ptr_emplaceIN8facebook5react12_GLOBAL__N_116DecoratedRuntimeENS_9allocatorIS4_EEEE
 NSt6__ndk120__shared_ptr_pointerIPN6hermes2vm15NopCrashManagerENS_10shared_ptrINS2_12CrashManagerEE27__shared_ptr_default_deleteIS6_S3_EENS_9allocatorIS3_EEEE
@@ -71,6 +71,7 @@ PFvRN8facebook3jsi7RuntimeEE
 Preparing %zu pre-merged libs (including stub)\n
 Preparing to register %s.  onload_func: %p\n
 RNBridgeless
+Unknown Hermes stack frame kind
 ZL29pre_merge_original_JNI_OnLoadP7_JavaVMPvE3$_0
 __android_log_assert
 __android_log_print
@@ -90,7 +91,6 @@ __register_atfork
 __stack_chk_fail
 __stack_chk_guard
 __strlen_chk
-_ctype_
 abort
 basic_string
 calloc
@@ -102,7 +102,6 @@ enable
 facebook::hermes::HermesRuntime::disableSamplingProfiler()
 facebook::hermes::HermesRuntime::dumpSampledTraceToFile(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 facebook::hermes::HermesRuntime::enableSamplingProfiler(double)
-facebook::hermes::HermesRuntime::registerForProfiling()
 facebook::hermes::HermesRuntime::setFatalHandler(void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&))
 facebook::hermes::makeHermesRuntime(hermes::vm::RuntimeConfig const&)
 facebook::jni::Environment::current()
@@ -116,16 +115,15 @@ facebook::jni::base_owned_ref<facebook::jni::JClass, facebook::jni::LocalReferen
 facebook::jni::base_owned_ref<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator>::~base_owned_ref()
 facebook::jni::base_owned_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator>::~base_owned_ref()
 facebook::jni::basic_strong_ref<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator> facebook::jni::HybridClass<facebook::react::HermesExecutorHolder, facebook::react::JavaScriptExecutorHolder>::makeCxxInstance<std::__ndk1::unique_ptr<facebook::react::HermesExecutorFactory, std::__ndk1::default_delete<facebook::react::HermesExecutorFactory>>>(std::__ndk1::unique_ptr<facebook::react::HermesExecutorFactory, std::__ndk1::default_delete<facebook::react::HermesExecutorFactory>>&&)
-facebook::jni::basic_strong_ref<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator> facebook::jni::HybridClass<facebook::react::JHermesInstance, facebook::react::JJSRuntimeFactory>::makeCxxInstance<std::__ndk1::shared_ptr<facebook::react::ReactNativeConfig const>&, bool&>(std::__ndk1::shared_ptr<facebook::react::ReactNativeConfig const>&, bool&)
 facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::detail::HybridData>(facebook::jni::detail::HybridData const*)
 facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridDestructor, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> facebook::jni::detail::getHolder<facebook::jni::detail::HybridData>(facebook::jni::detail::HybridData const*)::holderField
+facebook::jni::detail::FunctionWrapper<facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> (*)(facebook::jni::alias_ref<_jclass*>, bool), _jclass*, facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator>, bool>::call(_JNIEnv*, _jobject*, unsigned char, facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> (*)(facebook::jni::alias_ref<_jclass*>, bool))
 facebook::jni::detail::FunctionWrapper<facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> (*)(facebook::jni::alias_ref<_jclass*>, bool, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>), _jclass*, facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator>, bool, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>::call(_JNIEnv*, _jobject*, unsigned char, _jstring*, facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> (*)(facebook::jni::alias_ref<_jclass*>, bool, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>))
 facebook::jni::detail::FunctionWrapper<facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> (*)(facebook::jni::alias_ref<_jclass*>, bool, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, long long), _jclass*, facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator>, bool, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, long long>::call(_JNIEnv*, _jobject*, unsigned char, _jstring*, long long, facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> (*)(facebook::jni::alias_ref<_jclass*>, bool, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, long long))
-facebook::jni::detail::FunctionWrapper<facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> (*)(facebook::jni::alias_ref<_jclass*>, facebook::jni::alias_ref<_jobject*>, bool), _jclass*, facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator>, facebook::jni::alias_ref<_jobject*>, bool>::call(_JNIEnv*, _jobject*, _jobject*, unsigned char, facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> (*)(facebook::jni::alias_ref<_jclass*>, facebook::jni::alias_ref<_jobject*>, bool))
 facebook::jni::detail::FunctionWrapper<void (*)(facebook::jni::alias_ref<_jclass*>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>), _jclass*, void, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>::call(_JNIEnv*, _jobject*, _jstring*, void (*)(facebook::jni::alias_ref<_jclass*>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>))
+facebook::jni::detail::FunctionWrapperWithJniEntryPoint<facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> (*)(facebook::jni::alias_ref<_jclass*>, bool), &facebook::react::JHermesInstance::initHybrid(facebook::jni::alias_ref<_jclass*>, bool), _jclass*, facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator>, bool>::call(_JNIEnv*, _jobject*, unsigned char)
 facebook::jni::detail::FunctionWrapperWithJniEntryPoint<facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> (*)(facebook::jni::alias_ref<_jclass*>, bool, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>), &facebook::react::HermesExecutorHolder::initHybridDefaultConfig(facebook::jni::alias_ref<_jclass*>, bool, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>), _jclass*, facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator>, bool, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>::call(_JNIEnv*, _jobject*, unsigned char, _jstring*)
 facebook::jni::detail::FunctionWrapperWithJniEntryPoint<facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> (*)(facebook::jni::alias_ref<_jclass*>, bool, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, long long), &facebook::react::HermesExecutorHolder::initHybrid(facebook::jni::alias_ref<_jclass*>, bool, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, long long), _jclass*, facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator>, bool, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, long long>::call(_JNIEnv*, _jobject*, unsigned char, _jstring*, long long)
-facebook::jni::detail::FunctionWrapperWithJniEntryPoint<facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator> (*)(facebook::jni::alias_ref<_jclass*>, facebook::jni::alias_ref<_jobject*>, bool), &facebook::react::JHermesInstance::initHybrid(facebook::jni::alias_ref<_jclass*>, facebook::jni::alias_ref<_jobject*>, bool), _jclass*, facebook::jni::basic_strong_ref<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*, facebook::jni::LocalReferenceAllocator>, facebook::jni::alias_ref<_jobject*>, bool>::call(_JNIEnv*, _jobject*, _jobject*, unsigned char)
 facebook::jni::detail::FunctionWrapperWithJniEntryPoint<void (*)(facebook::jni::alias_ref<_jclass*>), &facebook::jsi::jni::HermesSamplingProfiler::enable(facebook::jni::alias_ref<_jclass*>), _jclass*, void>::call(_JNIEnv*, _jobject*)
 facebook::jni::detail::FunctionWrapperWithJniEntryPoint<void (*)(facebook::jni::alias_ref<_jclass*>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>), &facebook::jsi::jni::HermesSamplingProfiler::dumpSampledTraceToFile(facebook::jni::alias_ref<_jclass*>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>), _jclass*, void, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>::call(_JNIEnv*, _jobject*, _jstring*)
 facebook::jni::detail::HybridData::create()
@@ -135,7 +133,7 @@ facebook::jni::detail::JniEnvCacher::~JniEnvCacher()
 facebook::jni::detail::getDestructorField(facebook::jni::basic_strong_ref<facebook::jni::JClass, facebook::jni::LocalReferenceAllocator> const&)
 facebook::jni::findClassLocal(char const*)
 facebook::jni::initialize(_JavaVM*, std::__ndk1::function<void ()>&&)
-facebook::jni::jmethod_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject* (_jobject*, unsigned char)>::kDescriptor
+facebook::jni::jmethod_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject* (unsigned char)>::kDescriptor
 facebook::jni::jmethod_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject* (unsigned char, _jstring*)>::kDescriptor
 facebook::jni::jmethod_traits<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject* (unsigned char, _jstring*, long long)>::kDescriptor
 facebook::jni::jmethod_traits<void ()>::kDescriptor
@@ -184,15 +182,16 @@ facebook::react::HermesExecutorFactory::~HermesExecutorFactory()
 facebook::react::HermesExecutorHolder::initHybrid(facebook::jni::alias_ref<_jclass*>, bool, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, long long)
 facebook::react::HermesExecutorHolder::initHybridDefaultConfig(facebook::jni::alias_ref<_jclass*>, bool, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)
 facebook::react::HermesExecutorHolder::~HermesExecutorHolder()
-facebook::react::HermesInstance::createJSRuntime(std::__ndk1::shared_ptr<facebook::react::ReactNativeConfig const>, std::__ndk1::shared_ptr<hermes::vm::CrashManager>, std::__ndk1::shared_ptr<facebook::react::MessageQueueThread>, bool)
+facebook::react::HermesInstance::createJSRuntime(std::__ndk1::shared_ptr<hermes::vm::CrashManager>, std::__ndk1::shared_ptr<facebook::react::MessageQueueThread>, bool)
 facebook::react::HermesJSRuntime::getRuntime()
 facebook::react::HermesJSRuntime::getRuntimeTargetDelegate()
 facebook::react::HermesJSRuntime::unstable_initializeOnJsThread()
 facebook::react::HermesJSRuntime::~HermesJSRuntime()
 facebook::react::JHermesInstance::createJSRuntime(std::__ndk1::shared_ptr<facebook::react::MessageQueueThread>)
-facebook::react::JHermesInstance::initHybrid(facebook::jni::alias_ref<_jclass*>, facebook::jni::alias_ref<_jobject*>, bool)
+facebook::react::JHermesInstance::initHybrid(facebook::jni::alias_ref<_jclass*>, bool)
 facebook::react::JHermesInstance::registerNatives()
 facebook::react::JHermesInstance::~JHermesInstance()
+facebook::react::JJSRuntimeFactory::~JJSRuntimeFactory()
 facebook::react::JReactMarker::setLogPerfMarkerIfNeeded()
 facebook::react::JSExecutor::destroy()
 facebook::react::JSIExecutor::JSIExecutor(std::__ndk1::shared_ptr<facebook::jsi::Runtime>, std::__ndk1::shared_ptr<facebook::react::ExecutorDelegate>, std::__ndk1::function<void (std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)> const&, std::__ndk1::function<void (facebook::jsi::Runtime&)>)
@@ -212,24 +211,36 @@ facebook::react::JSIExecutor::setGlobalVariable(std::__ndk1::basic_string<char, 
 facebook::react::JSIExecutor::~JSIExecutor()
 facebook::react::JSRuntime::~JSRuntime()
 facebook::react::JavaScriptExecutorHolder::~JavaScriptExecutorHolder()
-facebook::react::ReactNativeFeatureFlags::enableMicrotasks()
+facebook::react::ReactNativeFeatureFlags::enableBridgelessArchitecture()
 facebook::react::bindNativeLogger(facebook::jsi::Runtime&, std::__ndk1::function<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)>)
 facebook::react::jsinspector_modern::ConsoleMessage::~ConsoleMessage()
 facebook::react::jsinspector_modern::FallbackRuntimeTargetDelegate::FallbackRuntimeTargetDelegate(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)
 facebook::react::jsinspector_modern::FallbackRuntimeTargetDelegate::addConsoleMessage(facebook::jsi::Runtime&, facebook::react::jsinspector_modern::ConsoleMessage)
 facebook::react::jsinspector_modern::FallbackRuntimeTargetDelegate::captureStackTrace(facebook::jsi::Runtime&, unsigned int)
+facebook::react::jsinspector_modern::FallbackRuntimeTargetDelegate::collectSamplingProfile()
 facebook::react::jsinspector_modern::FallbackRuntimeTargetDelegate::createAgentDelegate(std::__ndk1::function<void (std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>)>, facebook::react::jsinspector_modern::SessionState&, std::__ndk1::unique_ptr<facebook::react::jsinspector_modern::RuntimeAgentDelegate::ExportedState, std::__ndk1::default_delete<facebook::react::jsinspector_modern::RuntimeAgentDelegate::ExportedState>>, facebook::react::jsinspector_modern::ExecutionContextDescription const&, std::__ndk1::function<void (std::__ndk1::function<void (facebook::jsi::Runtime&)>&&)>)
+facebook::react::jsinspector_modern::FallbackRuntimeTargetDelegate::disableSamplingProfiler()
+facebook::react::jsinspector_modern::FallbackRuntimeTargetDelegate::enableSamplingProfiler()
 facebook::react::jsinspector_modern::FallbackRuntimeTargetDelegate::supportsConsole() const
 facebook::react::jsinspector_modern::FallbackRuntimeTargetDelegate::~FallbackRuntimeTargetDelegate()
+facebook::react::jsinspector_modern::HermesRuntimeTargetDelegate& std::__ndk1::optional<facebook::react::jsinspector_modern::HermesRuntimeTargetDelegate>::emplace[abi:ne180000]<std::__ndk1::shared_ptr<facebook::hermes::HermesRuntime>&, void>(std::__ndk1::shared_ptr<facebook::hermes::HermesRuntime>&)
 facebook::react::jsinspector_modern::HermesRuntimeTargetDelegate::HermesRuntimeTargetDelegate(std::__ndk1::shared_ptr<facebook::hermes::HermesRuntime>)
 facebook::react::jsinspector_modern::HermesRuntimeTargetDelegate::Impl::~Impl()
 facebook::react::jsinspector_modern::HermesRuntimeTargetDelegate::addConsoleMessage(facebook::jsi::Runtime&, facebook::react::jsinspector_modern::ConsoleMessage)
 facebook::react::jsinspector_modern::HermesRuntimeTargetDelegate::captureStackTrace(facebook::jsi::Runtime&, unsigned int)
+facebook::react::jsinspector_modern::HermesRuntimeTargetDelegate::collectSamplingProfile()
 facebook::react::jsinspector_modern::HermesRuntimeTargetDelegate::createAgentDelegate(std::__ndk1::function<void (std::__ndk1::basic_string_view<char, std::__ndk1::char_traits<char>>)>, facebook::react::jsinspector_modern::SessionState&, std::__ndk1::unique_ptr<facebook::react::jsinspector_modern::RuntimeAgentDelegate::ExportedState, std::__ndk1::default_delete<facebook::react::jsinspector_modern::RuntimeAgentDelegate::ExportedState>>, facebook::react::jsinspector_modern::ExecutionContextDescription const&, std::__ndk1::function<void (std::__ndk1::function<void (facebook::jsi::Runtime&)>&&)>)
+facebook::react::jsinspector_modern::HermesRuntimeTargetDelegate::disableSamplingProfiler()
+facebook::react::jsinspector_modern::HermesRuntimeTargetDelegate::enableSamplingProfiler()
 facebook::react::jsinspector_modern::HermesRuntimeTargetDelegate::supportsConsole() const
 facebook::react::jsinspector_modern::HermesRuntimeTargetDelegate::~HermesRuntimeTargetDelegate()
 facebook::react::jsinspector_modern::InspectorFlags::getFuseboxEnabled() const
 facebook::react::jsinspector_modern::InspectorFlags::getInstance()
+facebook::react::jsinspector_modern::tracing::HermesRuntimeSamplingProfileSerializer::serializeToTracingSamplingProfile(facebook::hermes::sampling_profiler::Profile const&)
+facebook::react::jsinspector_modern::tracing::RuntimeSamplingProfile::Sample* std::__ndk1::vector<facebook::react::jsinspector_modern::tracing::RuntimeSamplingProfile::Sample, std::__ndk1::allocator<facebook::react::jsinspector_modern::tracing::RuntimeSamplingProfile::Sample>>::__push_back_slow_path<facebook::react::jsinspector_modern::tracing::RuntimeSamplingProfile::Sample>(facebook::react::jsinspector_modern::tracing::RuntimeSamplingProfile::Sample&&)
+facebook::react::jsinspector_modern::tracing::RuntimeSamplingProfile::Sample::~Sample()
+facebook::react::jsinspector_modern::tracing::RuntimeSamplingProfile::SampleCallStackFrame* std::__ndk1::vector<facebook::react::jsinspector_modern::tracing::RuntimeSamplingProfile::SampleCallStackFrame, std::__ndk1::allocator<facebook::react::jsinspector_modern::tracing::RuntimeSamplingProfile::SampleCallStackFrame>>::__push_back_slow_path<facebook::react::jsinspector_modern::tracing::RuntimeSamplingProfile::SampleCallStackFrame>(facebook::react::jsinspector_modern::tracing::RuntimeSamplingProfile::SampleCallStackFrame&&)
+facebook::react::jsinspector_modern::tracing::RuntimeSamplingProfile::SampleCallStackFrame::~SampleCallStackFrame()
 facebook::react::reactAndroidLoggingHook(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)
 free
 google::LogMessage::LogMessage(char const*, int, int)
@@ -248,7 +259,6 @@ hermes::vm::RuntimeConfig::RuntimeConfig()
 hermes::vm::RuntimeConfig::~RuntimeConfig()
 initHybrid
 initHybridDefaultConfig
-ios_hermes:vm_experiment_flags
 jni_lib_merge
 jni_lib_merge-stub
 jsEngine
@@ -267,6 +277,7 @@ liblog.so
 libm.so
 libreactnative.so
 mDestructor
+memcpy
 memmove
 memset
 non-virtual thunk to facebook::jsi::RuntimeDecorator<facebook::jsi::Runtime, facebook::jsi::Runtime>::collectGarbage(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)
@@ -287,80 +298,37 @@ operator delete(void*)
 operator new(unsigned int)
 prototype
 std::__ndk1::__call_once(unsigned long volatile&, void*, void (*)(void*))
-std::__ndk1::__function::__func<facebook::jsi::DecoratedHostFunction, std::__ndk1::allocator<facebook::jsi::DecoratedHostFunction>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>::__clone() const
-std::__ndk1::__function::__func<facebook::jsi::DecoratedHostFunction, std::__ndk1::allocator<facebook::jsi::DecoratedHostFunction>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>::__clone(std::__ndk1::__function::__base<facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>*) const
-std::__ndk1::__function::__func<facebook::jsi::DecoratedHostFunction, std::__ndk1::allocator<facebook::jsi::DecoratedHostFunction>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>::destroy()
-std::__ndk1::__function::__func<facebook::jsi::DecoratedHostFunction, std::__ndk1::allocator<facebook::jsi::DecoratedHostFunction>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>::destroy_deallocate()
-std::__ndk1::__function::__func<facebook::jsi::DecoratedHostFunction, std::__ndk1::allocator<facebook::jsi::DecoratedHostFunction>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>::operator()(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*&&, unsigned int&&)
-std::__ndk1::__function::__func<facebook::jsi::DecoratedHostFunction, std::__ndk1::allocator<facebook::jsi::DecoratedHostFunction>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>::target(std::type_info const&) const
-std::__ndk1::__function::__func<facebook::jsi::DecoratedHostFunction, std::__ndk1::allocator<facebook::jsi::DecoratedHostFunction>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>::target_type() const
 std::__ndk1::__function::__func<facebook::jsi::DecoratedHostFunction, std::__ndk1::allocator<facebook::jsi::DecoratedHostFunction>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>::~__func()
-std::__ndk1::__function::__func<void (*)(facebook::jsi::Runtime&), std::__ndk1::allocator<void (*)(facebook::jsi::Runtime&)>, void (facebook::jsi::Runtime&)>::__clone() const
-std::__ndk1::__function::__func<void (*)(facebook::jsi::Runtime&), std::__ndk1::allocator<void (*)(facebook::jsi::Runtime&)>, void (facebook::jsi::Runtime&)>::__clone(std::__ndk1::__function::__base<void (facebook::jsi::Runtime&)>*) const
-std::__ndk1::__function::__func<void (*)(facebook::jsi::Runtime&), std::__ndk1::allocator<void (*)(facebook::jsi::Runtime&)>, void (facebook::jsi::Runtime&)>::destroy()
-std::__ndk1::__function::__func<void (*)(facebook::jsi::Runtime&), std::__ndk1::allocator<void (*)(facebook::jsi::Runtime&)>, void (facebook::jsi::Runtime&)>::destroy_deallocate()
-std::__ndk1::__function::__func<void (*)(facebook::jsi::Runtime&), std::__ndk1::allocator<void (*)(facebook::jsi::Runtime&)>, void (facebook::jsi::Runtime&)>::operator()(facebook::jsi::Runtime&)
-std::__ndk1::__function::__func<void (*)(facebook::jsi::Runtime&), std::__ndk1::allocator<void (*)(facebook::jsi::Runtime&)>, void (facebook::jsi::Runtime&)>::target(std::type_info const&) const
-std::__ndk1::__function::__func<void (*)(facebook::jsi::Runtime&), std::__ndk1::allocator<void (*)(facebook::jsi::Runtime&)>, void (facebook::jsi::Runtime&)>::target_type() const
 std::__ndk1::__function::__func<void (*)(facebook::jsi::Runtime&), std::__ndk1::allocator<void (*)(facebook::jsi::Runtime&)>, void (facebook::jsi::Runtime&)>::~__func()
-std::__ndk1::__function::__func<void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int), std::__ndk1::allocator<void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)>, void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)>::__clone() const
-std::__ndk1::__function::__func<void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int), std::__ndk1::allocator<void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)>, void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)>::__clone(std::__ndk1::__function::__base<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)>*) const
-std::__ndk1::__function::__func<void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int), std::__ndk1::allocator<void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)>, void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)>::destroy()
-std::__ndk1::__function::__func<void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int), std::__ndk1::allocator<void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)>, void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)>::destroy_deallocate()
-std::__ndk1::__function::__func<void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int), std::__ndk1::allocator<void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)>, void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)>::operator()(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int&&)
-std::__ndk1::__function::__func<void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int), std::__ndk1::allocator<void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)>, void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)>::target(std::type_info const&) const
-std::__ndk1::__function::__func<void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int), std::__ndk1::allocator<void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)>, void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)>::target_type() const
 std::__ndk1::__function::__func<void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int), std::__ndk1::allocator<void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)>, void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)>::~__func()
-std::__ndk1::__function::__func<void (*)(std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>), std::__ndk1::allocator<void (*)(std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)>, void (std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)>::__clone() const
-std::__ndk1::__function::__func<void (*)(std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>), std::__ndk1::allocator<void (*)(std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)>, void (std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)>::__clone(std::__ndk1::__function::__base<void (std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)>*) const
-std::__ndk1::__function::__func<void (*)(std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>), std::__ndk1::allocator<void (*)(std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)>, void (std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)>::destroy()
-std::__ndk1::__function::__func<void (*)(std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>), std::__ndk1::allocator<void (*)(std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)>, void (std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)>::destroy_deallocate()
-std::__ndk1::__function::__func<void (*)(std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>), std::__ndk1::allocator<void (*)(std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)>, void (std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)>::operator()(std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>&&)
-std::__ndk1::__function::__func<void (*)(std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>), std::__ndk1::allocator<void (*)(std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)>, void (std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)>::target(std::type_info const&) const
-std::__ndk1::__function::__func<void (*)(std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>), std::__ndk1::allocator<void (*)(std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)>, void (std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)>::target_type() const
 std::__ndk1::__function::__func<void (*)(std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>), std::__ndk1::allocator<void (*)(std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)>, void (std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)>::~__func()
-std::__ndk1::__shared_ptr_emplace<facebook::jsi::DecoratedHostObject, std::__ndk1::allocator<facebook::jsi::DecoratedHostObject>>::__on_zero_shared()
-std::__ndk1::__shared_ptr_emplace<facebook::jsi::DecoratedHostObject, std::__ndk1::allocator<facebook::jsi::DecoratedHostObject>>::__on_zero_shared_weak()
 std::__ndk1::__shared_ptr_emplace<facebook::jsi::DecoratedHostObject, std::__ndk1::allocator<facebook::jsi::DecoratedHostObject>>::~__shared_ptr_emplace()
-std::__ndk1::__shared_ptr_emplace<facebook::react::ReactNativeConfigHolder const, std::__ndk1::allocator<facebook::react::ReactNativeConfigHolder const>>::__on_zero_shared()
-std::__ndk1::__shared_ptr_emplace<facebook::react::ReactNativeConfigHolder const, std::__ndk1::allocator<facebook::react::ReactNativeConfigHolder const>>::__on_zero_shared_weak()
-std::__ndk1::__shared_ptr_emplace<facebook::react::ReactNativeConfigHolder const, std::__ndk1::allocator<facebook::react::ReactNativeConfigHolder const>>::~__shared_ptr_emplace()
-std::__ndk1::__shared_ptr_pointer<facebook::hermes::HermesRuntime*, std::__ndk1::default_delete<facebook::hermes::HermesRuntime>, std::__ndk1::allocator<facebook::hermes::HermesRuntime>>::__get_deleter(std::type_info const&) const
-std::__ndk1::__shared_ptr_pointer<facebook::hermes::HermesRuntime*, std::__ndk1::default_delete<facebook::hermes::HermesRuntime>, std::__ndk1::allocator<facebook::hermes::HermesRuntime>>::__on_zero_shared()
-std::__ndk1::__shared_ptr_pointer<facebook::hermes::HermesRuntime*, std::__ndk1::default_delete<facebook::hermes::HermesRuntime>, std::__ndk1::allocator<facebook::hermes::HermesRuntime>>::__on_zero_shared_weak()
 std::__ndk1::__shared_ptr_pointer<facebook::hermes::HermesRuntime*, std::__ndk1::default_delete<facebook::hermes::HermesRuntime>, std::__ndk1::allocator<facebook::hermes::HermesRuntime>>::~__shared_ptr_pointer()
-std::__ndk1::__shared_ptr_pointer<facebook::jsi::Runtime*, std::__ndk1::default_delete<facebook::jsi::Runtime>, std::__ndk1::allocator<facebook::jsi::Runtime>>::__get_deleter(std::type_info const&) const
-std::__ndk1::__shared_ptr_pointer<facebook::jsi::Runtime*, std::__ndk1::default_delete<facebook::jsi::Runtime>, std::__ndk1::allocator<facebook::jsi::Runtime>>::__on_zero_shared()
-std::__ndk1::__shared_ptr_pointer<facebook::jsi::Runtime*, std::__ndk1::default_delete<facebook::jsi::Runtime>, std::__ndk1::allocator<facebook::jsi::Runtime>>::__on_zero_shared_weak()
 std::__ndk1::__shared_ptr_pointer<facebook::jsi::Runtime*, std::__ndk1::default_delete<facebook::jsi::Runtime>, std::__ndk1::allocator<facebook::jsi::Runtime>>::~__shared_ptr_pointer()
-std::__ndk1::__shared_ptr_pointer<facebook::react::HermesExecutorFactory*, std::__ndk1::default_delete<facebook::react::HermesExecutorFactory>, std::__ndk1::allocator<facebook::react::HermesExecutorFactory>>::__get_deleter(std::type_info const&) const
-std::__ndk1::__shared_ptr_pointer<facebook::react::HermesExecutorFactory*, std::__ndk1::default_delete<facebook::react::HermesExecutorFactory>, std::__ndk1::allocator<facebook::react::HermesExecutorFactory>>::__on_zero_shared()
-std::__ndk1::__shared_ptr_pointer<facebook::react::HermesExecutorFactory*, std::__ndk1::default_delete<facebook::react::HermesExecutorFactory>, std::__ndk1::allocator<facebook::react::HermesExecutorFactory>>::__on_zero_shared_weak()
 std::__ndk1::__shared_ptr_pointer<facebook::react::HermesExecutorFactory*, std::__ndk1::default_delete<facebook::react::HermesExecutorFactory>, std::__ndk1::allocator<facebook::react::HermesExecutorFactory>>::~__shared_ptr_pointer()
-std::__ndk1::__shared_ptr_pointer<hermes::vm::NopCrashManager*, std::__ndk1::shared_ptr<hermes::vm::CrashManager>::__shared_ptr_default_delete<hermes::vm::CrashManager, hermes::vm::NopCrashManager>, std::__ndk1::allocator<hermes::vm::NopCrashManager>>::__get_deleter(std::type_info const&) const
-std::__ndk1::__shared_ptr_pointer<hermes::vm::NopCrashManager*, std::__ndk1::shared_ptr<hermes::vm::CrashManager>::__shared_ptr_default_delete<hermes::vm::CrashManager, hermes::vm::NopCrashManager>, std::__ndk1::allocator<hermes::vm::NopCrashManager>>::__on_zero_shared()
-std::__ndk1::__shared_ptr_pointer<hermes::vm::NopCrashManager*, std::__ndk1::shared_ptr<hermes::vm::CrashManager>::__shared_ptr_default_delete<hermes::vm::CrashManager, hermes::vm::NopCrashManager>, std::__ndk1::allocator<hermes::vm::NopCrashManager>>::__on_zero_shared_weak()
 std::__ndk1::__shared_ptr_pointer<hermes::vm::NopCrashManager*, std::__ndk1::shared_ptr<hermes::vm::CrashManager>::__shared_ptr_default_delete<hermes::vm::CrashManager, hermes::vm::NopCrashManager>, std::__ndk1::allocator<hermes::vm::NopCrashManager>>::~__shared_ptr_pointer()
 std::__ndk1::__shared_weak_count::__get_deleter(std::type_info const&) const
 std::__ndk1::__shared_weak_count::__release_weak()
 std::__ndk1::__shared_weak_count::~__shared_weak_count()
-std::__ndk1::allocator<facebook::react::ReactNativeConfigHolder const> std::__ndk1::__shared_ptr_emplace<facebook::react::ReactNativeConfigHolder const, std::__ndk1::allocator<facebook::react::ReactNativeConfigHolder const>>::__shared_ptr_emplace[abi:v170000]<facebook::jni::alias_ref<_jobject*>&>(facebook::jni::alias_ref<_jobject*>&)
-std::__ndk1::bad_function_call::~bad_function_call()
 std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::sentry::sentry(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>&)
 std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::sentry::~sentry()
-std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::operator=(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>& std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::__assign_no_alias<false>(char const*, unsigned int)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>& std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::__assign_no_alias<true>(char const*, unsigned int)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::__init_copy_ctor_external(char const*, unsigned int)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::~basic_string()
 std::__ndk1::ctype<char>::id
 std::__ndk1::ios_base::__set_badbit_and_consider_rethrow()
 std::__ndk1::ios_base::clear(unsigned int)
 std::__ndk1::ios_base::getloc() const
 std::__ndk1::locale::use_facet(std::__ndk1::locale::id&) const
 std::__ndk1::locale::~locale()
-std::bad_alloc::bad_alloc()
-std::bad_alloc::~bad_alloc()
+std::bad_array_new_length::bad_array_new_length()
+std::bad_array_new_length::~bad_array_new_length()
 std::exception::what() const
 std::exception::~exception()
 std::length_error::~length_error()
 std::logic_error::logic_error(char const*)
+std::logic_error::~logic_error()
 std::terminate()
 strdup
 strlen
@@ -400,16 +368,16 @@ typeinfo for std::__ndk1::__function::__func<void (*)(facebook::jsi::Runtime&), 
 typeinfo for std::__ndk1::__function::__func<void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int), std::__ndk1::allocator<void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)>, void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)>
 typeinfo for std::__ndk1::__function::__func<void (*)(std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>), std::__ndk1::allocator<void (*)(std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)>, void (std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)>
 typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::jsi::DecoratedHostObject, std::__ndk1::allocator<facebook::jsi::DecoratedHostObject>>
-typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::ReactNativeConfigHolder const, std::__ndk1::allocator<facebook::react::ReactNativeConfigHolder const>>
 typeinfo for std::__ndk1::__shared_ptr_pointer<facebook::hermes::HermesRuntime*, std::__ndk1::default_delete<facebook::hermes::HermesRuntime>, std::__ndk1::allocator<facebook::hermes::HermesRuntime>>
 typeinfo for std::__ndk1::__shared_ptr_pointer<facebook::jsi::Runtime*, std::__ndk1::default_delete<facebook::jsi::Runtime>, std::__ndk1::allocator<facebook::jsi::Runtime>>
 typeinfo for std::__ndk1::__shared_ptr_pointer<facebook::react::HermesExecutorFactory*, std::__ndk1::default_delete<facebook::react::HermesExecutorFactory>, std::__ndk1::allocator<facebook::react::HermesExecutorFactory>>
 typeinfo for std::__ndk1::__shared_ptr_pointer<hermes::vm::NopCrashManager*, std::__ndk1::shared_ptr<hermes::vm::CrashManager>::__shared_ptr_default_delete<hermes::vm::CrashManager, hermes::vm::NopCrashManager>, std::__ndk1::allocator<hermes::vm::NopCrashManager>>
 typeinfo for std::__ndk1::__shared_weak_count
 typeinfo for std::__ndk1::bad_function_call
-typeinfo for std::bad_alloc
+typeinfo for std::bad_array_new_length
 typeinfo for std::exception
 typeinfo for std::length_error
+typeinfo for std::logic_error
 typeinfo for void (*)(facebook::jsi::Runtime&)
 typeinfo for void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)
 typeinfo for void (*)(std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)
@@ -447,7 +415,6 @@ typeinfo name for std::__ndk1::__function::__func<void (*)(facebook::jsi::Runtim
 typeinfo name for std::__ndk1::__function::__func<void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int), std::__ndk1::allocator<void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)>, void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)>
 typeinfo name for std::__ndk1::__function::__func<void (*)(std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>), std::__ndk1::allocator<void (*)(std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)>, void (std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)>
 typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::jsi::DecoratedHostObject, std::__ndk1::allocator<facebook::jsi::DecoratedHostObject>>
-typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::ReactNativeConfigHolder const, std::__ndk1::allocator<facebook::react::ReactNativeConfigHolder const>>
 typeinfo name for std::__ndk1::__shared_ptr_pointer<facebook::hermes::HermesRuntime*, std::__ndk1::default_delete<facebook::hermes::HermesRuntime>, std::__ndk1::allocator<facebook::hermes::HermesRuntime>>
 typeinfo name for std::__ndk1::__shared_ptr_pointer<facebook::jsi::Runtime*, std::__ndk1::default_delete<facebook::jsi::Runtime>, std::__ndk1::allocator<facebook::jsi::Runtime>>
 typeinfo name for std::__ndk1::__shared_ptr_pointer<facebook::react::HermesExecutorFactory*, std::__ndk1::default_delete<facebook::react::HermesExecutorFactory>, std::__ndk1::allocator<facebook::react::HermesExecutorFactory>>
@@ -463,9 +430,9 @@ typeinfo name for void (*)(std::__ndk1::function<void ()> const&, std::__ndk1::f
 typeinfo name for void (facebook::jsi::Runtime&)
 typeinfo name for void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)
 typeinfo name for void (std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)
+vector
 void facebook::jni::detail::setNativePointer<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator>(facebook::jni::basic_strong_ref<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator>, std::__ndk1::unique_ptr<facebook::jni::detail::BaseHybridClass, std::__ndk1::default_delete<facebook::jni::detail::BaseHybridClass>>)
 void facebook::jsi::Object::setProperty<char const (&) [7]>(facebook::jsi::Runtime&, char const*, char const (&) [7]) const
-void std::__ndk1::__optional_storage_base<facebook::react::jsinspector_modern::HermesRuntimeTargetDelegate, false>::__construct[abi:v170000]<std::__ndk1::shared_ptr<facebook::hermes::HermesRuntime>&>(std::__ndk1::shared_ptr<facebook::hermes::HermesRuntime>&)
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__function_type_info
 vtable for __cxxabiv1::__pointer_type_info
@@ -481,7 +448,6 @@ vtable for facebook::react::JSExecutor
 vtable for facebook::react::JSIExecutor
 vtable for facebook::react::JSRuntime
 vtable for facebook::react::JavaScriptExecutorHolder
-vtable for facebook::react::ReactNativeConfigHolder
 vtable for facebook::react::jsinspector_modern::FallbackRuntimeTargetDelegate
 vtable for facebook::react::jsinspector_modern::HermesRuntimeTargetDelegate
 vtable for facebook::react::jsinspector_modern::HermesRuntimeTargetDelegate::Impl
@@ -491,7 +457,6 @@ vtable for std::__ndk1::__function::__func<void (*)(facebook::jsi::Runtime&), st
 vtable for std::__ndk1::__function::__func<void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int), std::__ndk1::allocator<void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)>, void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, unsigned int)>
 vtable for std::__ndk1::__function::__func<void (*)(std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>), std::__ndk1::allocator<void (*)(std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)>, void (std::__ndk1::function<void ()> const&, std::__ndk1::function<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> ()>)>
 vtable for std::__ndk1::__shared_ptr_emplace<facebook::jsi::DecoratedHostObject, std::__ndk1::allocator<facebook::jsi::DecoratedHostObject>>
-vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::ReactNativeConfigHolder const, std::__ndk1::allocator<facebook::react::ReactNativeConfigHolder const>>
 vtable for std::__ndk1::__shared_ptr_pointer<facebook::hermes::HermesRuntime*, std::__ndk1::default_delete<facebook::hermes::HermesRuntime>, std::__ndk1::allocator<facebook::hermes::HermesRuntime>>
 vtable for std::__ndk1::__shared_ptr_pointer<facebook::jsi::Runtime*, std::__ndk1::default_delete<facebook::jsi::Runtime>, std::__ndk1::allocator<facebook::jsi::Runtime>>
 vtable for std::__ndk1::__shared_ptr_pointer<facebook::react::HermesExecutorFactory*, std::__ndk1::default_delete<facebook::react::HermesExecutorFactory>, std::__ndk1::allocator<facebook::react::HermesExecutorFactory>>

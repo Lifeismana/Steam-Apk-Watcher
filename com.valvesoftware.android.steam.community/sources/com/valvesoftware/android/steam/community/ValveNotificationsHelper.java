@@ -5,7 +5,7 @@ import com.google.firebase.messaging.RemoteMessage;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-/* loaded from: classes4.dex */
+/* loaded from: classes3.dex */
 public class ValveNotificationsHelper {
     private static ValveNotificationsHelper sm_instance = new ValveNotificationsHelper();
     private HashMap<String, RemoteMessage> m_mapNotifications = new HashMap<>();

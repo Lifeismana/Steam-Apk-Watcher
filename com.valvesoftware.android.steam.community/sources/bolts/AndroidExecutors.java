@@ -9,7 +9,7 @@ import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-/* loaded from: classes2.dex */
+/* loaded from: classes.dex */
 final class AndroidExecutors {
     static final int CORE_POOL_SIZE;
     private static final int CPU_COUNT;

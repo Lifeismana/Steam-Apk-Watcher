@@ -1,27 +1,34 @@
  [enable_if:
+ at offset 
+ auto
  complex
- const
+ decltype(auto)
  imaginary
+ noexcept
+ requires 
  restrict
- vector[
+ typename 
  volatile
 %LaL
 'block-literal'
-'lambda
-'unnamed
+((ttypeEncoding == DW_EH_PE_absptr) || (ttypeEncoding == DW_EH_PE_pcrel) || (ttypeEncoding == (DW_EH_PE_pcrel | DW_EH_PE_indirect))) && "Unexpected TTypeEncoding"
 (Lcom/github/penfeizhou/animation/gif/io/GifReader;[II[IIIIZ[B)V
 ([BII)I
 (anonymous namespace)
-/Volumes/Android/buildbot/src/android/ndk-r25-release/toolchain/llvm-project/libcxx/../../../toolchain/llvm-project/libcxxabi/src/abort_message.cpp
-::operator 
+(base != 0) && "DW_EH_PE_datarel is invalid with a base of 0"
+, std::allocator<char>
+::friend 
+<char, std::char_traits<char>
 > typename 
-Android (8490178, based on r450784d) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
+Android (12027248, +pgo, +bolt, +lto, +mlgo, based on r522817) clang version 18.0.1 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
+Android (12027248, +pgo, -bolt, +lto, -mlgo, based on r522817) clang version 18.0.1 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
 Deleted virtual function called!
+Invalid access!
 Invalid descriptor kind found.
 JNI_OnLoad
 JavaReader_OnLoad(_JNIEnv*)
 LIBC
-Linker: LLD 14.0.6
+Linker: LLD 18.0.1
 N10__cxxabiv116__enum_type_infoE
 N10__cxxabiv116__shim_type_infoE
 N10__cxxabiv117__array_type_infoE
@@ -35,22 +42,27 @@ N10__cxxabiv123__fundamental_type_infoE
 N10__cxxabiv129__pointer_to_member_type_infoE
 N12_GLOBAL__N_116itanium_demangle10AbiTagAttrE
 N12_GLOBAL__N_116itanium_demangle10BinaryExprE
+N12_GLOBAL__N_116itanium_demangle10BitIntTypeE
 N12_GLOBAL__N_116itanium_demangle10BracedExprE
 N12_GLOBAL__N_116itanium_demangle10DeleteExprE
 N12_GLOBAL__N_116itanium_demangle10LambdaExprE
 N12_GLOBAL__N_116itanium_demangle10MemberExprE
+N12_GLOBAL__N_116itanium_demangle10ModuleNameE
 N12_GLOBAL__N_116itanium_demangle10NestedNameE
 N12_GLOBAL__N_116itanium_demangle10PrefixExprE
-N12_GLOBAL__N_116itanium_demangle10UUIDOfExprE
 N12_GLOBAL__N_116itanium_demangle10VectorTypeE
+N12_GLOBAL__N_116itanium_demangle11EnumLiteralE
 N12_GLOBAL__N_116itanium_demangle11PointerTypeE
 N12_GLOBAL__N_116itanium_demangle11PostfixExprE
 N12_GLOBAL__N_116itanium_demangle11SpecialNameE
+N12_GLOBAL__N_116itanium_demangle12BinaryFPTypeE
 N12_GLOBAL__N_116itanium_demangle12CtorDtorNameE
 N12_GLOBAL__N_116itanium_demangle12EnableIfAttrE
 N12_GLOBAL__N_116itanium_demangle12FunctionTypeE
 N12_GLOBAL__N_116itanium_demangle12InitListExprE
+N12_GLOBAL__N_116itanium_demangle12ModuleEntityE
 N12_GLOBAL__N_116itanium_demangle12NoexceptSpecE
+N12_GLOBAL__N_116itanium_demangle12RequiresExprE
 N12_GLOBAL__N_116itanium_demangle12TemplateArgsE
 N12_GLOBAL__N_116itanium_demangle13EnclosingExprE
 N12_GLOBAL__N_116itanium_demangle13FunctionParamE
@@ -60,20 +72,23 @@ N12_GLOBAL__N_116itanium_demangle13ParameterPackE
 N12_GLOBAL__N_116itanium_demangle13QualifiedNameE
 N12_GLOBAL__N_116itanium_demangle13ReferenceTypeE
 N12_GLOBAL__N_116itanium_demangle13StringLiteralE
+N12_GLOBAL__N_116itanium_demangle13SubobjectExprE
 N12_GLOBAL__N_116itanium_demangle14ConversionExprE
 N12_GLOBAL__N_116itanium_demangle14IntegerLiteralE
 N12_GLOBAL__N_116itanium_demangle15BracedRangeExprE
 N12_GLOBAL__N_116itanium_demangle15ClosureTypeNameE
 N12_GLOBAL__N_116itanium_demangle15ConditionalExprE
-N12_GLOBAL__N_116itanium_demangle15IntegerCastExprE
+N12_GLOBAL__N_116itanium_demangle15ExprRequirementE
 N12_GLOBAL__N_116itanium_demangle15LiteralOperatorE
 N12_GLOBAL__N_116itanium_demangle15PixelVectorTypeE
+N12_GLOBAL__N_116itanium_demangle15TransformedTypeE
+N12_GLOBAL__N_116itanium_demangle15TypeRequirementE
 N12_GLOBAL__N_116itanium_demangle15UnnamedTypeNameE
 N12_GLOBAL__N_116itanium_demangle16FloatLiteralImplIdEE
 N12_GLOBAL__N_116itanium_demangle16FloatLiteralImplIeEE
 N12_GLOBAL__N_116itanium_demangle16FloatLiteralImplIfEE
 N12_GLOBAL__N_116itanium_demangle16FunctionEncodingE
-N12_GLOBAL__N_116itanium_demangle16StdQualifiedNameE
+N12_GLOBAL__N_116itanium_demangle17NestedRequirementE
 N12_GLOBAL__N_116itanium_demangle17VendorExtQualTypeE
 N12_GLOBAL__N_116itanium_demangle18ArraySubscriptExprE
 N12_GLOBAL__N_116itanium_demangle19GlobalQualifiedNameE
@@ -81,6 +96,7 @@ N12_GLOBAL__N_116itanium_demangle19PointerToMemberTypeE
 N12_GLOBAL__N_116itanium_demangle19SizeofParamPackExprE
 N12_GLOBAL__N_116itanium_demangle19SpecialSubstitutionE
 N12_GLOBAL__N_116itanium_demangle20DynamicExceptionSpecE
+N12_GLOBAL__N_116itanium_demangle20MemberLikeFriendNameE
 N12_GLOBAL__N_116itanium_demangle20NameWithTemplateArgsE
 N12_GLOBAL__N_116itanium_demangle20PostfixQualifiedTypeE
 N12_GLOBAL__N_116itanium_demangle20TemplateArgumentPackE
@@ -91,11 +107,15 @@ N12_GLOBAL__N_116itanium_demangle21TypeTemplateParamDeclE
 N12_GLOBAL__N_116itanium_demangle22ConversionOperatorTypeE
 N12_GLOBAL__N_116itanium_demangle22ElaboratedTypeSpefTypeE
 N12_GLOBAL__N_116itanium_demangle22ParameterPackExpansionE
+N12_GLOBAL__N_116itanium_demangle23ExplicitObjectParameterE
 N12_GLOBAL__N_116itanium_demangle24ForwardTemplateReferenceE
 N12_GLOBAL__N_116itanium_demangle24NonTypeTemplateParamDeclE
+N12_GLOBAL__N_116itanium_demangle25TemplateParamQualifiedArgE
 N12_GLOBAL__N_116itanium_demangle25TemplateTemplateParamDeclE
 N12_GLOBAL__N_116itanium_demangle26SyntheticTemplateParamNameE
 N12_GLOBAL__N_116itanium_demangle27ExpandedSpecialSubstitutionE
+N12_GLOBAL__N_116itanium_demangle29PointerToMemberConversionExprE
+N12_GLOBAL__N_116itanium_demangle32ConstrainedTypeTemplateParamDeclE
 N12_GLOBAL__N_116itanium_demangle4NodeE
 N12_GLOBAL__N_116itanium_demangle7NewExprE
 N12_GLOBAL__N_116itanium_demangle8BoolExprE
@@ -114,6 +134,7 @@ PKDi
 PKDn
 PKDs
 PKDu
+Popping empty vector!
 ProcessDescriptors
 Pure virtual function called!
 Reader::peek()
@@ -138,7 +159,6 @@ Type matching not implemented
 Ua9enable_ifI
 Unknown ARM float register
 VTT for 
-[abi:
 _GLOBAL__N
 _JNIEnv::CallByteMethod(_jobject*, _jmethodID*, ...)
 _JNIEnv::CallIntMethod(_jobject*, _jmethodID*, ...)
@@ -184,38 +204,40 @@ __gxx_personality_v0
 __int128
 __stack_chk_fail
 __stack_chk_guard
-__strlen_chk
-__uuidof(
-__vsnprintf_chk
+__uuidof
 _block_invoke
 abort
-abort_message
-alignof (
+actions & (_UA_SEARCH_PHASE | _UA_FORCE_UNWIND)
+actions & (_UA_SEARCH_PHASE | _UA_HANDLER_FRAME | _UA_FORCE_UNWIND)
+actions & _UA_SEARCH_PHASE
+alignof 
 allocator
-allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
+android_set_abort_message
 auto
 bad_array_new_length
+basic_
 basic_iostream
 basic_istream
 basic_ostream
 basic_string
 bool
+bool __cxxabiv1::exception_spec_can_catch(int64_t, const uint8_t *, uint8_t, const __shim_type_info *, void *, _Unwind_Control_Block *, uintptr_t)
 char
 char16_t
 char32_t
 char8_t
+closelog
 com/github/penfeizhou/animation/gif/decode/GifFrame
 com/github/penfeizhou/animation/io/Reader
+const __shim_type_info *__cxxabiv1::get_shim_type_info(uint64_t, const uint8_t *, uint8_t, bool, _Unwind_Control_Block *, uintptr_t)
 const_cast
 construction vtable for 
 covariant return thunk to 
 decimal128
-decimal16
 decimal32
 decimal64
-decltype(
+decltype
 decltype(auto)
-delete
 dl_unwind_find_exidx
 double
 during phase1 personality function said it would stop here, but now in phase2 it did not stop here
@@ -227,16 +249,19 @@ float
 fprintf
 fputc
 free
+fwrite
 getFloatRegister
 getInfoFromEHABISection
 getRegister
 guard variable for 
+half
 index inlined table detected but pr function requires extra words
+initializer for module 
 invocation function for block in 
-iostream
-istream
 jniRegisterNativeMethods(_JNIEnv*, char const*, JNINativeMethod const*, int)
 libanimation-decoder-gif.so
+libc++abi
+libc++abi: 
 libc.so
 libdl.so
 liblog.so
@@ -247,17 +272,20 @@ long double
 long long
 malloc
 memchr
+memcmp
 memcpy
 memmove
 memset
 noexcept
-noexcept (
-noexcept(
+noexcept 
 non-virtual thunk to 
 nullptr
 objc_object
 objcproto
+openlog
+operator
 operator 
+operator co_await
 operator delete
 operator delete(void*)
 operator delete(void*, std::align_val_t)
@@ -272,6 +300,7 @@ operator delete[](void*, std::align_val_t, std::nothrow_t const&)
 operator delete[](void*, std::nothrow_t const&)
 operator delete[](void*, unsigned int)
 operator delete[](void*, unsigned int, std::align_val_t)
+operator name does not start with 'operator'
 operator new
 operator new(unsigned int)
 operator new(unsigned int, std::align_val_t)
@@ -302,6 +331,8 @@ operator--
 operator-=
 operator->
 operator->*
+operator.
+operator.*
 operator/
 operator/=
 operator<
@@ -323,7 +354,11 @@ operator|
 operator|=
 operator||
 operator~
-ostream
+out/llvm-project/libcxxabi/src/cxa_demangle.cpp
+out/llvm-project/libcxxabi/src/cxa_personality.cpp
+out/llvm-project/libcxxabi/src/demangle/ItaniumDemangle.h
+out/llvm-project/libcxxabi/src/demangle/Utility.h
+out/llvm-project/libcxxabi/src/fallback_malloc.cpp
 peek
 pixel vector[
 posix_memalign
@@ -342,16 +377,14 @@ reinterpret_cast
 setFloatRegister
 setRegister
 short
+shrinkToSize() can't expand!
 signed char
-sizeof (
-sizeof... (
-sizeof...(
+sizeof 
+sizeof...
+sizeof... 
+snprintf
 static_cast
-std::
-std::__ndk1::__vector_base_common<true>::__throw_length_error() const
-std::__ndk1::__vector_base_common<true>::__throw_out_of_range() const
-std::__throw_bad_alloc()
-std::allocator
+std::__ndk1::__throw_runtime_error(char const*)
 std::bad_alloc
 std::bad_alloc::bad_alloc()
 std::bad_alloc::what() const
@@ -370,11 +403,6 @@ std::bad_typeid
 std::bad_typeid::bad_typeid()
 std::bad_typeid::what() const
 std::bad_typeid::~bad_typeid()
-std::basic_iostream<char, std::char_traits<char> >
-std::basic_istream<char, std::char_traits<char> >
-std::basic_ostream<char, std::char_traits<char> >
-std::basic_string
-std::basic_string<char, std::char_traits<char>, std::allocator<char> >
 std::domain_error::~domain_error()
 std::exception
 std::exception::what() const
@@ -383,8 +411,6 @@ std::get_new_handler()
 std::get_terminate()
 std::get_unexpected()
 std::invalid_argument::~invalid_argument()
-std::iostream
-std::istream
 std::length_error::~length_error()
 std::logic_error::logic_error(char const*)
 std::logic_error::logic_error(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
@@ -392,9 +418,7 @@ std::logic_error::logic_error(std::logic_error const&)
 std::logic_error::operator=(std::logic_error const&)
 std::logic_error::what() const
 std::logic_error::~logic_error()
-std::nothrow
 std::nullptr_t
-std::ostream
 std::out_of_range::~out_of_range()
 std::overflow_error::~overflow_error()
 std::range_error::~range_error()
@@ -407,30 +431,29 @@ std::runtime_error::~runtime_error()
 std::set_new_handler(void (*)())
 std::set_terminate(void (*)())
 std::set_unexpected(void (*)())
-std::string
 std::terminate()
 std::type_info::~type_info()
 std::underflow_error::~underflow_error()
 std::unexpected()
 strcmp
-string
 string literal
 strlen
 struct
+syslog
+template parameter object for 
 template<
 terminate_handler unexpectedly returned
 terminate_handler unexpectedly threw an exception
 terminating
-terminating with %s exception of type %s
-terminating with %s exception of type %s: %s
-terminating with %s foreign exception
+terminating due to %s exception of type %s
+terminating due to %s exception of type %s: %s
+terminating due to %s foreign exception
+this
 thread-local initialization routine for 
 thread-local wrapper routine for 
 throw
-throw 
-throw(
 true
-typeid (
+typeid 
 typeinfo for 
 typeinfo for __cxxabiv1::__array_type_info
 typeinfo for __cxxabiv1::__class_type_info
@@ -638,8 +661,7 @@ typeinfo name for wchar_t
 typeinfo name for wchar_t const*
 typeinfo name for wchar_t*
 typename 
-u8__uuidoft
-u8__uuidofz
+uintptr_t __cxxabiv1::readEncodedPointer(const uint8_t **, uint8_t, uintptr_t)
 uncaught
 uncompressLZW
 uncompressLZW(_JNIEnv*, _jobject*, _jobject*, _jintArray*, int, _jintArray*, int, int, int, unsigned char, _jbyteArray*)
@@ -648,6 +670,7 @@ unexpected_handler unexpectedly returned
 union
 unknown personality routine
 unknown register
+unsigned 
 unsigned __int128
 unsigned char
 unsigned int
@@ -662,6 +685,7 @@ vector
 vfprintf
 virtual thunk to 
 void
+void __cxxabiv1::scan_eh_tab(scan_results &, _Unwind_Action, bool, _Unwind_Control_Block *, _Unwind_Context *)
 vtable for 
 vtable for __cxxabiv1::__array_type_info
 vtable for __cxxabiv1::__class_type_info
@@ -691,4 +715,4 @@ vtable for std::runtime_error
 vtable for std::type_info
 vtable for std::underflow_error
 wchar_t
-yptn
+yptnk

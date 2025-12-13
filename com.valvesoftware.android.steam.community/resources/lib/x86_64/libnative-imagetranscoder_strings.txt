@@ -5,7 +5,9 @@
     with %d x %d thumbnail image
   Ss=%d, Se=%d, Ah=%d, Al=%d
  !"#$%&'()*+,-./
+ auto
  complex
+ decltype(auto)
  imaginary
 $3br
 %&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
@@ -16,13 +18,17 @@ $3br
 (Ljava/io/InputStream;Ljava/io/OutputStream;III)V
 ([BII)V
 (anonymous namespace)
-0123456789:;<=>?
+(base != 0) && "DW_EH_PE_datarel is invalid with a base of 0"
+, std::allocator<char>
+0123456789:;<=>?`abcdefghijklmno
+5?Tb
 8d  15-Jan-2012
+<char, std::char_traits<char>
 @ABCDEFGHIJKLMNO
 A!;I2
 ALIGN_TYPE is wrong, please fix
 Adobe APP14 marker: version %d, flags 0x%04x 0x%04x, transform %d
-Android (9352603, based on r450784d1) clang version 14.0.7 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
+Android (12285214, +pgo, +bolt, +lto, +mlgo, based on r522817b) clang version 18.0.2 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
 Application transferred too few scanlines
 Application transferred too many scanlines
 Arithmetic table 0x%02x was not defined
@@ -103,6 +109,7 @@ Invalid JPEG file structure: missing SOS marker
 Invalid JPEG file structure: two SOF markers
 Invalid JPEG file structure: two SOI markers
 Invalid SOS parameters for sequential JPEG
+Invalid access!
 Invalid color quantization mode change
 Invalid component ID %d in SOS
 Invalid crop request
@@ -121,7 +128,7 @@ JPEG parameter struct mismatch: library thinks size is %u, caller expects %u
 JPEGMEM
 KNQ\r
 LIBC
-Linker: LLD 14.0.7
+Linker: LLD 18.0.2
 MAX_ALLOC_CHUNK is wrong, please fix
 Maximum supported image dimension is %u pixels
 Miscellaneous marker 0x%02x, length %u
@@ -139,22 +146,27 @@ N10__cxxabiv123__fundamental_type_infoE
 N10__cxxabiv129__pointer_to_member_type_infoE
 N12_GLOBAL__N_116itanium_demangle10AbiTagAttrE
 N12_GLOBAL__N_116itanium_demangle10BinaryExprE
+N12_GLOBAL__N_116itanium_demangle10BitIntTypeE
 N12_GLOBAL__N_116itanium_demangle10BracedExprE
 N12_GLOBAL__N_116itanium_demangle10DeleteExprE
 N12_GLOBAL__N_116itanium_demangle10LambdaExprE
 N12_GLOBAL__N_116itanium_demangle10MemberExprE
+N12_GLOBAL__N_116itanium_demangle10ModuleNameE
 N12_GLOBAL__N_116itanium_demangle10NestedNameE
 N12_GLOBAL__N_116itanium_demangle10PrefixExprE
-N12_GLOBAL__N_116itanium_demangle10UUIDOfExprE
 N12_GLOBAL__N_116itanium_demangle10VectorTypeE
+N12_GLOBAL__N_116itanium_demangle11EnumLiteralE
 N12_GLOBAL__N_116itanium_demangle11PointerTypeE
 N12_GLOBAL__N_116itanium_demangle11PostfixExprE
 N12_GLOBAL__N_116itanium_demangle11SpecialNameE
+N12_GLOBAL__N_116itanium_demangle12BinaryFPTypeE
 N12_GLOBAL__N_116itanium_demangle12CtorDtorNameE
 N12_GLOBAL__N_116itanium_demangle12EnableIfAttrE
 N12_GLOBAL__N_116itanium_demangle12FunctionTypeE
 N12_GLOBAL__N_116itanium_demangle12InitListExprE
+N12_GLOBAL__N_116itanium_demangle12ModuleEntityE
 N12_GLOBAL__N_116itanium_demangle12NoexceptSpecE
+N12_GLOBAL__N_116itanium_demangle12RequiresExprE
 N12_GLOBAL__N_116itanium_demangle12TemplateArgsE
 N12_GLOBAL__N_116itanium_demangle13EnclosingExprE
 N12_GLOBAL__N_116itanium_demangle13FunctionParamE
@@ -164,20 +176,23 @@ N12_GLOBAL__N_116itanium_demangle13ParameterPackE
 N12_GLOBAL__N_116itanium_demangle13QualifiedNameE
 N12_GLOBAL__N_116itanium_demangle13ReferenceTypeE
 N12_GLOBAL__N_116itanium_demangle13StringLiteralE
+N12_GLOBAL__N_116itanium_demangle13SubobjectExprE
 N12_GLOBAL__N_116itanium_demangle14ConversionExprE
 N12_GLOBAL__N_116itanium_demangle14IntegerLiteralE
 N12_GLOBAL__N_116itanium_demangle15BracedRangeExprE
 N12_GLOBAL__N_116itanium_demangle15ClosureTypeNameE
 N12_GLOBAL__N_116itanium_demangle15ConditionalExprE
-N12_GLOBAL__N_116itanium_demangle15IntegerCastExprE
+N12_GLOBAL__N_116itanium_demangle15ExprRequirementE
 N12_GLOBAL__N_116itanium_demangle15LiteralOperatorE
 N12_GLOBAL__N_116itanium_demangle15PixelVectorTypeE
+N12_GLOBAL__N_116itanium_demangle15TransformedTypeE
+N12_GLOBAL__N_116itanium_demangle15TypeRequirementE
 N12_GLOBAL__N_116itanium_demangle15UnnamedTypeNameE
 N12_GLOBAL__N_116itanium_demangle16FloatLiteralImplIdEE
 N12_GLOBAL__N_116itanium_demangle16FloatLiteralImplIfEE
 N12_GLOBAL__N_116itanium_demangle16FloatLiteralImplIgEE
 N12_GLOBAL__N_116itanium_demangle16FunctionEncodingE
-N12_GLOBAL__N_116itanium_demangle16StdQualifiedNameE
+N12_GLOBAL__N_116itanium_demangle17NestedRequirementE
 N12_GLOBAL__N_116itanium_demangle17VendorExtQualTypeE
 N12_GLOBAL__N_116itanium_demangle18ArraySubscriptExprE
 N12_GLOBAL__N_116itanium_demangle19GlobalQualifiedNameE
@@ -185,6 +200,7 @@ N12_GLOBAL__N_116itanium_demangle19PointerToMemberTypeE
 N12_GLOBAL__N_116itanium_demangle19SizeofParamPackExprE
 N12_GLOBAL__N_116itanium_demangle19SpecialSubstitutionE
 N12_GLOBAL__N_116itanium_demangle20DynamicExceptionSpecE
+N12_GLOBAL__N_116itanium_demangle20MemberLikeFriendNameE
 N12_GLOBAL__N_116itanium_demangle20NameWithTemplateArgsE
 N12_GLOBAL__N_116itanium_demangle20PostfixQualifiedTypeE
 N12_GLOBAL__N_116itanium_demangle20TemplateArgumentPackE
@@ -195,11 +211,15 @@ N12_GLOBAL__N_116itanium_demangle21TypeTemplateParamDeclE
 N12_GLOBAL__N_116itanium_demangle22ConversionOperatorTypeE
 N12_GLOBAL__N_116itanium_demangle22ElaboratedTypeSpefTypeE
 N12_GLOBAL__N_116itanium_demangle22ParameterPackExpansionE
+N12_GLOBAL__N_116itanium_demangle23ExplicitObjectParameterE
 N12_GLOBAL__N_116itanium_demangle24ForwardTemplateReferenceE
 N12_GLOBAL__N_116itanium_demangle24NonTypeTemplateParamDeclE
+N12_GLOBAL__N_116itanium_demangle25TemplateParamQualifiedArgE
 N12_GLOBAL__N_116itanium_demangle25TemplateTemplateParamDeclE
 N12_GLOBAL__N_116itanium_demangle26SyntheticTemplateParamNameE
 N12_GLOBAL__N_116itanium_demangle27ExpandedSpecialSubstitutionE
+N12_GLOBAL__N_116itanium_demangle29PointerToMemberConversionExprE
+N12_GLOBAL__N_116itanium_demangle32ConstrainedTypeTemplateParamDeclE
 N12_GLOBAL__N_116itanium_demangle4NodeE
 N12_GLOBAL__N_116itanium_demangle7NewExprE
 N12_GLOBAL__N_116itanium_demangle8BoolExprE
@@ -224,6 +244,7 @@ PKDn
 PKDs
 PKDu
 PQRSTUVWXYZ[\]^_
+Popping empty vector!
 Premature end of JPEG file
 Premature end of input file
 Pure virtual function called!
@@ -243,16 +264,7 @@ Seek failed on temporary file
 Selected %d colors for quantization
 Smoothing not supported with nonstandard sampling ratios
 St10bad_typeid
-St11logic_error
-St11range_error
-St12domain_error
-St12length_error
-St12out_of_range
 St13bad_exception
-St13runtime_error
-St14overflow_error
-St15underflow_error
-St16invalid_argument
 St20bad_array_new_length
 St8bad_cast
 St9bad_alloc
@@ -283,9 +295,11 @@ Write to EMS failed
 Write to XMS failed
 Wrong JPEG library version: library is %d, caller expects %d
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
+_Unwind_Reason_Code __cxxabiv1::__gxx_personality_v0(int, _Unwind_Action, uint64_t, _Unwind_Exception *, _Unwind_Context *)
 _Unwind_Resume
 _Unwind_Resume() can't return
 __android_log_print
+__assert2
 __cxa_allocate_dependent_exception
 __cxa_allocate_exception
 __cxa_atexit
@@ -318,13 +332,15 @@ __emutls_get_address
 __float128
 __gxx_personality_v0
 __int128
-__memmove_chk
 __stack_chk_fail
 __strlen_chk
 __vsnprintf_chk
-`abcdefghijklmno
 abort
-alignof (
+actions & (_UA_SEARCH_PHASE | _UA_FORCE_UNWIND)
+actions & (_UA_SEARCH_PHASE | _UA_HANDLER_FRAME | _UA_FORCE_UNWIND)
+actions & _UA_CLEANUP_PHASE
+actions & _UA_SEARCH_PHASE
+alignof 
 allocator
 android_set_abort_message
 auto
@@ -349,10 +365,9 @@ could not find RuntimeException class
 could not register JpegTranscoder methods
 covariant return thunk to 
 decimal128
-decimal16
 decimal32
 decimal64
-decltype(
+decltype
 decltype(auto)
 dl_iterate_phdr
 double
@@ -382,15 +397,18 @@ getTableEntrySize
 getULEB128
 getenv
 guard variable for 
+half
 if1R
+initializer for module 
 invocation function for block in 
-iostream
-istream
 java/io/InputStream
 java/io/OutputStream
 java/lang/RuntimeException
 kh9F
+length_error was thrown in -fno-exceptions mode with message "%s"
+libc++
 libc++abi
+libc++abi: 
 libc.so
 libdl.so
 libjpeg-turbo version 2.1.5.1 (build 20240418)
@@ -399,7 +417,6 @@ libm.so
 libnative-imagetranscoder
 libnative-imagetranscoder.so
 libunwind: %s - %s\n
-libunwind: Unsupported .eh_frame_hdr version\n
 libunwind: malformed DW_CFA_GNU_negative_offset_extended DWARF unwind, reg too big\n
 libunwind: malformed DW_CFA_def_cfa DWARF unwind, reg too big\n
 libunwind: malformed DW_CFA_def_cfa_register DWARF unwind, reg too big\n
@@ -417,6 +434,8 @@ libunwind: malformed DW_CFA_undefined DWARF unwind, reg too big\n
 libunwind: malformed DW_CFA_val_expression DWARF unwind, reg too big\n
 libunwind: malformed DW_CFA_val_offset DWARF unwind, reg (%lu) out of range\n\n
 libunwind: malformed DW_CFA_val_offset_sf DWARF unwind, reg too big\n
+libunwind: unsupported .eh_frame_hdr at %lx: need at least 4 bytes of data but only got %zd\n
+libunwind: unsupported .eh_frame_hdr version: %u at %lx\n
 long
 long double
 long long
@@ -432,12 +451,13 @@ nativeTranscodeJpegWithExifOrientation
 no transformation to perform
 no x86_64 float registers
 noexcept
-noexcept (
+noexcept 
 non-virtual thunk to 
 nullptr
-objc_object
 okOP
 openlog
+operator
+operator co_await
 operator delete
 operator delete(void*)
 operator delete(void*, std::align_val_t)
@@ -452,6 +472,7 @@ operator delete[](void*, std::align_val_t, std::nothrow_t const&)
 operator delete[](void*, std::nothrow_t const&)
 operator delete[](void*, unsigned long)
 operator delete[](void*, unsigned long, std::align_val_t)
+operator name does not start with 'operator'
 operator new
 operator new(unsigned long)
 operator new(unsigned long, std::align_val_t)
@@ -481,6 +502,8 @@ operator--
 operator-=
 operator->
 operator->*
+operator.
+operator.*
 operator/
 operator/=
 operator<
@@ -502,7 +525,11 @@ operator|
 operator|=
 operator||
 operator~
-ostream
+out/llvm-project/libcxxabi/src/cxa_demangle.cpp
+out/llvm-project/libcxxabi/src/cxa_personality.cpp
+out/llvm-project/libcxxabi/src/demangle/ItaniumDemangle.h
+out/llvm-project/libcxxabi/src/demangle/Utility.h
+out/llvm-project/libcxxabi/src/fallback_malloc.cpp
 pm"U
 posix_memalign
 pqrstuvwxyz{|}~
@@ -522,6 +549,7 @@ read
 realloc
 reference temporary for 
 reinterpret_cast
+results.reason == _URC_HANDLER_FOUND
 sAmTb
 scale numerator cannot be greater than 16
 scale numerator cannot be lower than 1
@@ -529,15 +557,15 @@ setFloatRegister
 setRegister
 setjmp
 short
+shrinkToSize() can't expand!
 signed char
-sizeof (
-sizeof... (
+sizeof 
+sizeof... 
 skip
+snprintf
 sscanf
 static_cast
-std::__ndk1::__vector_base_common<true>::__throw_length_error() const
-std::__ndk1::__vector_base_common<true>::__throw_out_of_range() const
-std::__throw_bad_alloc()
+std::__ndk1::__libcpp_verbose_abort(char const*, ...)
 std::bad_alloc
 std::bad_alloc::bad_alloc()
 std::bad_alloc::what() const
@@ -556,64 +584,40 @@ std::bad_typeid
 std::bad_typeid::bad_typeid()
 std::bad_typeid::what() const
 std::bad_typeid::~bad_typeid()
-std::basic_iostream<char, std::char_traits<char> >
-std::basic_istream<char, std::char_traits<char> >
-std::basic_ostream<char, std::char_traits<char> >
-std::basic_string
-std::basic_string<char, std::char_traits<char>, std::allocator<char> >
-std::domain_error::~domain_error()
 std::exception
 std::exception::what() const
 std::exception::~exception()
 std::get_new_handler()
 std::get_terminate()
 std::get_unexpected()
-std::invalid_argument::~invalid_argument()
-std::length_error::~length_error()
-std::logic_error::logic_error(char const*)
-std::logic_error::logic_error(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
-std::logic_error::logic_error(std::logic_error const&)
-std::logic_error::operator=(std::logic_error const&)
-std::logic_error::what() const
-std::logic_error::~logic_error()
-std::nothrow
 std::nullptr_t
-std::out_of_range::~out_of_range()
-std::overflow_error::~overflow_error()
-std::range_error::~range_error()
-std::runtime_error::operator=(std::runtime_error const&)
-std::runtime_error::runtime_error(char const*)
-std::runtime_error::runtime_error(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
-std::runtime_error::runtime_error(std::runtime_error const&)
-std::runtime_error::what() const
-std::runtime_error::~runtime_error()
 std::set_new_handler(void (*)())
 std::set_terminate(void (*)())
 std::set_unexpected(void (*)())
 std::terminate()
 std::type_info::~type_info()
-std::underflow_error::~underflow_error()
 std::unexpected()
 strcmp
-string
 string literal
 strlen
 strncpy
 struct
 syslog
+template parameter object for 
 terminate_handler unexpectedly returned
 terminate_handler unexpectedly threw an exception
 terminating
-terminating with %s exception of type %s
-terminating with %s exception of type %s: %s
-terminating with %s foreign exception
+terminating due to %s exception of type %s
+terminating due to %s exception of type %s: %s
+terminating due to %s foreign exception
+this
 thread-local initialization routine for 
 thread-local wrapper routine for 
 throw
 true
 truncated sleb128 expression
 truncated uleb128 expression
-typeid (
+typeid 
 typeinfo for 
 typeinfo for __cxxabiv1::__array_type_info
 typeinfo for __cxxabiv1::__class_type_info
@@ -676,20 +680,11 @@ typeinfo for std::bad_array_new_length
 typeinfo for std::bad_cast
 typeinfo for std::bad_exception
 typeinfo for std::bad_typeid
-typeinfo for std::domain_error
 typeinfo for std::exception
-typeinfo for std::invalid_argument
-typeinfo for std::length_error
-typeinfo for std::logic_error
 typeinfo for std::nullptr_t
 typeinfo for std::nullptr_t const*
 typeinfo for std::nullptr_t*
-typeinfo for std::out_of_range
-typeinfo for std::overflow_error
-typeinfo for std::range_error
-typeinfo for std::runtime_error
 typeinfo for std::type_info
-typeinfo for std::underflow_error
 typeinfo for unsigned __int128
 typeinfo for unsigned __int128 const*
 typeinfo for unsigned __int128*
@@ -776,20 +771,11 @@ typeinfo name for std::bad_array_new_length
 typeinfo name for std::bad_cast
 typeinfo name for std::bad_exception
 typeinfo name for std::bad_typeid
-typeinfo name for std::domain_error
 typeinfo name for std::exception
-typeinfo name for std::invalid_argument
-typeinfo name for std::length_error
-typeinfo name for std::logic_error
 typeinfo name for std::nullptr_t
 typeinfo name for std::nullptr_t const*
 typeinfo name for std::nullptr_t*
-typeinfo name for std::out_of_range
-typeinfo name for std::overflow_error
-typeinfo name for std::range_error
-typeinfo name for std::runtime_error
 typeinfo name for std::type_info
-typeinfo name for std::underflow_error
 typeinfo name for unsigned __int128
 typeinfo name for unsigned __int128 const*
 typeinfo name for unsigned __int128*
@@ -814,6 +800,7 @@ typeinfo name for void*
 typeinfo name for wchar_t
 typeinfo name for wchar_t const*
 typeinfo name for wchar_t*
+uintptr_t __cxxabiv1::readEncodedPointer(const uint8_t **, uint8_t, uintptr_t)
 uncaught
 unexpected
 unexpected_handler unexpectedly returned
@@ -834,6 +821,7 @@ vector
 vfprintf
 virtual thunk to 
 void
+void __cxxabiv1::scan_eh_tab(scan_results &, _Unwind_Action, bool, _Unwind_Exception *, _Unwind_Context *)
 vtable for 
 vtable for __cxxabiv1::__array_type_info
 vtable for __cxxabiv1::__class_type_info
@@ -851,17 +839,8 @@ vtable for std::bad_array_new_length
 vtable for std::bad_cast
 vtable for std::bad_exception
 vtable for std::bad_typeid
-vtable for std::domain_error
 vtable for std::exception
-vtable for std::invalid_argument
-vtable for std::length_error
-vtable for std::logic_error
-vtable for std::out_of_range
-vtable for std::overflow_error
-vtable for std::range_error
-vtable for std::runtime_error
 vtable for std::type_info
-vtable for std::underflow_error
 wchar_t
 write
 wrong exif orientation
@@ -883,4 +862,4 @@ xmm6
 xmm7
 xmm8
 xmm9
-yptn
+yptnk

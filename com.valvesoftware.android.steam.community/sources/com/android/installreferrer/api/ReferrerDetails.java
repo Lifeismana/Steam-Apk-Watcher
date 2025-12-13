@@ -2,7 +2,7 @@ package com.android.installreferrer.api;
 
 import android.os.Bundle;
 
-/* loaded from: classes2.dex */
+/* loaded from: classes.dex */
 public class ReferrerDetails {
     private static final String KEY_GOOGLE_PLAY_INSTANT = "google_play_instant";
     private static final String KEY_INSTALL_BEGIN_TIMESTAMP = "install_begin_timestamp_seconds";

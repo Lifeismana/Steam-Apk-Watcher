@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 
 @Target({ElementType.FIELD, ElementType.PARAMETER, ElementType.LOCAL_VARIABLE, ElementType.ANNOTATION_TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.SOURCE)
-/* loaded from: classes5.dex */
+/* loaded from: classes4.dex */
 public @interface MagicConstant {
     long[] flags() default {};
 

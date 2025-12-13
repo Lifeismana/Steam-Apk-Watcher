@@ -9,6 +9,6 @@ import java.lang.annotation.Target;
 @Target({ElementType.METHOD})
 @Documented
 @Retention(RetentionPolicy.CLASS)
-/* loaded from: classes5.dex */
+/* loaded from: classes4.dex */
 public @interface MustBeInvokedByOverriders {
 }

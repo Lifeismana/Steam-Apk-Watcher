@@ -10,7 +10,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
-/* loaded from: classes2.dex */
+/* loaded from: classes.dex */
 public class CancellationTokenSource implements Closeable {
     private boolean cancellationRequested;
     private boolean closed;
@@ -87,9 +87,9 @@ public class CancellationTokenSource implements Closeable {
                 return;
             }
             cancelScheduledCancellation();
-            Iterator<CancellationTokenRegistration> it = this.registrations.iterator();
-            while (it.hasNext()) {
-                it.next().close();
+            Iterator<CancellationTokenRegistration> it2 = this.registrations.iterator();
+            while (it2.hasNext()) {
+                it2.next().close();
             }
             this.registrations.clear();
             this.closed = true;
@@ -127,9 +127,9 @@ public class CancellationTokenSource implements Closeable {
     }
 
     private void notifyListeners(List<CancellationTokenRegistration> list) {
-        Iterator<CancellationTokenRegistration> it = list.iterator();
-        while (it.hasNext()) {
-            it.next().runAction();
+        Iterator<CancellationTokenRegistration> it2 = list.iterator();
+        while (it2.hasNext()) {
+            it2.next().runAction();
         }
     }
 

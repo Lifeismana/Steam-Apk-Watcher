@@ -2,7 +2,7 @@ package bolts;
 
 import bolts.Task;
 
-/* loaded from: classes2.dex */
+/* loaded from: classes.dex */
 class UnobservedErrorNotifier {
     private Task<?> task;
 

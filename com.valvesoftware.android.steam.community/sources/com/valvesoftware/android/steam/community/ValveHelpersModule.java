@@ -38,7 +38,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/* loaded from: classes4.dex */
+/* loaded from: classes3.dex */
 public class ValveHelpersModule extends ReactContextBaseJavaModule {
     private static final String s_strSteamGuardStateFilenameBase = "Steamguard-";
     private ForwardingCookieHandler m_CookieHandler;
@@ -147,9 +147,9 @@ public class ValveHelpersModule extends ReactContextBaseJavaModule {
     public void ReadOldSteamGuardStates(Promise promise) {
         String optString;
         WritableArray createArray = Arguments.createArray();
-        Iterator<String> it = GetOldSteamGuardStateFilenames().iterator();
-        while (it.hasNext()) {
-            JSONObject LoadJSONFromFile = LoadJSONFromFile(it.next());
+        Iterator<String> it2 = GetOldSteamGuardStateFilenames().iterator();
+        while (it2.hasNext()) {
+            JSONObject LoadJSONFromFile = LoadJSONFromFile(it2.next());
             if (LoadJSONFromFile != null && (optString = LoadJSONFromFile.optString("steamid")) != null) {
                 try {
                     if (!optString.isEmpty()) {
@@ -230,10 +230,10 @@ public class ValveHelpersModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void EraseOldSteamGuardStates(Promise promise) {
         ReactApplicationContext reactApplicationContext = getReactApplicationContext();
-        Iterator<String> it = GetOldSteamGuardStateFilenames().iterator();
+        Iterator<String> it2 = GetOldSteamGuardStateFilenames().iterator();
         boolean z = false;
-        while (it.hasNext()) {
-            if (!reactApplicationContext.deleteFile(it.next())) {
+        while (it2.hasNext()) {
+            if (!reactApplicationContext.deleteFile(it2.next())) {
                 z = true;
             }
         }

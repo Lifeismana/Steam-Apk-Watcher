@@ -1,6 +1,6 @@
                                                                                 
           \t
- !"#$%&'()*+,-./0123@@@@@3C
+ !"#$%&'()*+,-./0123@@@@@
  71/J
  but got 
  bytes
@@ -52,7 +52,6 @@
 ' is not defined
 ' previously defined here.
 ' which has only a getter
-'%ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>@@@?456789:;<=@@@@@@@
 '...' not allowed in this context
 ': <unknown exception>
 ':' expected in property initialization
@@ -118,17 +117,13 @@
 -/,2./+,*--,-*--...84.///6001123
 -Infinity
 .nE0
-/UU7
 /dev/urandom
 /proc/self/smaps
 /proc/self/statm
 /samplingDoneSem
 0123456789ABCDEF
 0123456789abcdefghijklmnopqrstuvwxyz
-176gggggggggD
 55\f\f\f\f\f\f\f\f\f52\f\f\f\f\f
-59U;D.e
-6?IS
 8y/9e
 :HeapSegment:
 :jMZ
@@ -147,19 +142,20 @@
 <none>
 <stdin>
 <unknown>
->>.>2>>>%,#
 ?anon_
 ?default
 ?fffff
-?mbI
+@ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>@@@?456789:;<=@@@@@@@
 @handler
 @target
 @wKA
+@wKA;
 A TypedArray function was called on a detached TypedArray
 A TypedArray function was called on a non TypedArray
 A negative value cannot be an index
 A test set a limit for virtual memory that was exceeded
 A1<cO
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 Accessing bytecode from a lazy module
 Accessing debug info from a lazy module
 Accessing debug offsets from a lazy module
@@ -176,7 +172,7 @@ Allocation failed
 Allocation occurred that was larger than a heap segment
 Amount is too large.
 An accessibility modifier cannot be used with a private identifier
-Android (10552028, +pgo, +bolt, +lto, -mlgo, based on r487747d) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)
+Android (12285214, +pgo, +bolt, +lto, +mlgo, based on r522817b) clang version 18.0.2 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
 Argument to HermesInternal.enqueueJob must be callable
 Argument to HermesInternal.getFunctionLocation must be callable
 Array
@@ -388,7 +384,6 @@ Error parsing source map:
 Error parsing source map: %s
 Error running internal bytecode: 
 Error.prototype.toString called on incompatible receiver 
-Error.stack getter called with an invalid receiver
 ErrorConstructor
 ErrorPrototype
 Escaped value too large
@@ -437,7 +432,6 @@ GC Old Gen (Direct)
 GC Young Gen
 GC stats:\n
 G\f6
-General_Category
 Generator functions may not be called on executing generators
 Generator functions must be called on generators
 Generator inner functions may not be called directly by user code
@@ -587,7 +581,7 @@ LIBC_N
 LLVM ERROR: 
 LLVM ERROR: out of memory\n
 LimitAllocArray
-Linker: LLD 17.0.2
+Linker: LLD 18.0.2
 Ljava/lang/Object;
 LoadConstantValueNumbering
 LoadConstants
@@ -677,6 +671,7 @@ N6hermes2vm15NopCrashManagerE
 N6hermes2vm17GCTripwireContextE
 N6hermes2vm18JSOutOfMemoryErrorE
 N6hermes3hbc14BCProviderBaseE
+N6hermes6BufferE
 N8facebook3jsi12StringBufferE
 N8facebook3jsi15InstrumentationE
 N8facebook3jsi16RuntimeDecoratorINS_6hermes17HermesRuntimeImplENS0_17ThreadSafeRuntimeEEE
@@ -712,12 +707,11 @@ NSt6__ndk110shared_ptrIN6hermes2vm12CrashManagerEE27__shared_ptr_default_deleteI
 NSt6__ndk114default_deleteIKN8facebook3jsi6BufferEEE
 NSt6__ndk114default_deleteIN6hermes3hbc14BCProviderBaseEEE
 NSt6__ndk114default_deleteIN6hermes3hbc20BCProviderFromBufferEEE
-NSt6__ndk115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 NSt6__ndk117bad_function_callE
-NSt6__ndk118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 NSt6__ndk120__shared_ptr_emplaceIKN8facebook6hermes12_GLOBAL__N_124HermesPreparedJavaScriptENS_9allocatorIS5_EEEE
 NSt6__ndk120__shared_ptr_emplaceIN8facebook3jsi12StringBufferENS_9allocatorIS3_EEEE
 NSt6__ndk120__shared_ptr_emplaceIN8facebook3jsi19DecoratedHostObjectENS_9allocatorIS3_EEEE
+NSt6__ndk120__shared_ptr_emplaceIbNS_9allocatorIbEEEE
 NSt6__ndk120__shared_ptr_pointerIPKN8facebook3jsi6BufferENS_14default_deleteIS4_EENS_9allocatorIS4_EEEE
 NSt6__ndk120__shared_ptr_pointerIPN6hermes2vm15NopCrashManagerENS_10shared_ptrINS2_12CrashManagerEE27__shared_ptr_default_deleteIS6_S3_EENS_9allocatorIS3_EEEE
 NSt6__ndk120__shared_ptr_pointerIPN6hermes3hbc14BCProviderBaseENS_14default_deleteIS3_EENS_9allocatorIS3_EEEE
@@ -829,7 +823,6 @@ Out of memory for array elements
 Out of memory for array elements.
 Out of memory for capture groups.
 Out of memory for regexp results.
-PV]jj
 P\vPb
 Parenthesized expression not closed
 Parsing source code unsupported: 
@@ -859,6 +852,8 @@ QuitErrorConstructor
 QuitErrorPrototype
 R#JI
 REb[
+RI@h
+RRJJ
 Ran out of object IDs
 RangeErrorConstructor
 RangeErrorPrototype
@@ -886,8 +881,6 @@ Runtime not registered for profiling
 RuntimeConfig maxNumRegisters too big
 SaveAndYieldInst
 ScopeCreationInst
-Script
-Script_Extensions
 Second argument should be a bool
 Second argument to TypedArray.from must be callable
 SegmentID
@@ -979,6 +972,7 @@ TypedArray detached during iteration
 TypedArray is abstract, it cannot be constructed
 TypedArray sort argument must be callable
 TypedArray.prototype.set called on a detached TypedArray
+UCq.e
 URIErrorConstructor
 URIErrorPrototype
 Uint16ArrayConstructor
@@ -992,6 +986,7 @@ Uint8ClampedArrayPrototype
 Unable to find module with ID: 
 Unable to find module: 
 Unable to get source location
+Unable to obtain native stack bounds
 Unary operator before ** must use parens to disambiguate
 UnaryOperatorInst
 Uncatchable exception thrown while creating error
@@ -1010,7 +1005,6 @@ Unknown DWARF encoding for search table.
 Unreachable instruction encountered
 UnreachableInst
 VM Experiments
-VTT for std::__ndk1::basic_ifstream<char, std::__ndk1::char_traits<char>>
 VTT for std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 Value
 Value not coercible to object
@@ -1039,6 +1033,7 @@ ZN6hermes13platform_intl12_GLOBAL__N_119NumberFormatAndroidD1EvEUlvE_
 ZN6hermes13platform_intl12_GLOBAL__N_121DateTimeFormatAndroidD1EvEUlvE_
 ZN8facebook6hermes17HermesRuntimeImplC1ERKN6hermes2vm13RuntimeConfigEEUlPNS3_7HadesGCERNS3_12RootAcceptorEE_
 ZN8facebook6hermes17HermesRuntimeImplC1ERKN6hermes2vm13RuntimeConfigEEUlPNS3_7HadesGCERNS3_16WeakRootAcceptorEE_
+Zx~l`
 [%.20s] reason = %.150s (%d from category: %.50s), numCollections = %u, heapSize = %lu, allocated = %lu, va = %lu, external = %lu
 [0;1;30m
 [0;1;31m
@@ -1081,18 +1076,14 @@ ZN8facebook6hermes17HermesRuntimeImplC1ERKN6hermes2vm13RuntimeConfigEEUlPNS3_7Ha
 [object 
 [root]
 [suspended]
-\fddd
 \n    ... skipping 
 \nPossible Unhandled Promise Rejection (id:  This means you can ignore any previous messages of the form "Possible Unhandled Promise Rejection" with id ):A promise cannot be resolved with itself.All promises were rejectedefinePropertyGetterOrSetterejectionCheckHandlerrorsetPromiseRejectionTrackingHookinitPromise Rejection Handled (id: valuePromise constructor's argument is not a functionSettledFulfillogErroraceforEachasPromises must be constructed via newarnasync function cannot be used with Promise disabled. spawnAsync not registered.fulfilledoDefineMethodoResolveglobalThisetPrototypeOfinalengthenumerableObjecthrowhitelistringetAggregateErroresolveOncegetThenable_handleResolvedefineClassMethodefineStaticClassPropertyGetter_initAsyncFnoopromiseAnyinitES6ClassafeThenqueueJobjectryCallOnextspliterableToArray_mapAllSettledefineClassPropertyGetterfromatchWhitelisteprototypeRangeErroreasonSettledRejectryCallTwonFulfilledHermesES6InternallSettledefineClassPropertySetterHermesInternaloggedisplayIdoneReferenceErrorTypeError_j_k_l_name_onHandledcallRejectionsetImmediateapplybindefineStaticClassMethodefineStaticClassPropertySettercatchasES6ClassetTimeoutclearTimeoutimeoutconfigurableconsolecreatefinallyfreezegetOwnPropertyDescriptoronRejectedonUnhandledpushslicesomestackstatuseEngineQueuewritable
-\rL9yy
 \t\t\t\t\n\n\n\n\v\v\f\f
 \u2028
 \u2029
 \vuu1
-]ffffk
 ^$\.*+?()[]{}|/
 ^N6hermes13platform_intl8CollatorE
-^r5T
 _Unwind_Resume
 _Unwind_Resume() can't return
 __android_log_vprint
@@ -1107,10 +1098,10 @@ __cxa_guard_abort
 __cxa_guard_acquire
 __cxa_guard_release
 __cxa_pure_virtual
-__cxa_rethrow
 __cxa_throw
 __defineGetter__ getter not callable
 __defineSetter__ setter not callable
+__emutls_get_address
 __errno
 __gxx_personality_v0
 __memcpy_chk
@@ -1242,6 +1233,7 @@ at end of object binding pattern '{...'
 at end of object literal '{...'
 at end of parenthesized expression
 at end of setter parameter list
+at end of static block
 at end of substition in template literal
 at start of function parameter list
 atan
@@ -1252,9 +1244,10 @@ atoll
 avgGCCPUPause
 avgGCPause
 await
+bad_array_new_length was thrown in -fno-exceptions mode
+bad_function_call was thrown in -fno-exceptions mode
 base
 basic_string
-bbEE
 bigint
 bigintConstructor
 bigintPrototype
@@ -1314,11 +1307,11 @@ category
 cause
 cbrt
 ceil
-cfil
 children
 cjsModules
 class
 class declaration exports are unsupported
+class static blocks are not supported
 clock_gettime
 close
 closure
@@ -1340,10 +1333,6 @@ compare
 complete marking
 concat
 const
-construction vtable for std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
-construction vtable for std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::basic_ifstream<char, std::__ndk1::char_traits<char>>
-construction vtable for std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
-construction vtable for std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 constructor
 constructor is not callable
 constructor method must not be a getter or setter
@@ -1438,7 +1427,6 @@ duplicate constructors in class
 duration
 during phase1 personality function said it would stop here, but now in phase2 it did not stop here
 e[ZwJ
-eiii
 elements
 else
 empty
@@ -1464,6 +1452,7 @@ escape
 eval
 eval() without arguments returns undefined
 evaluateExpression
+evaluateSHUnit called on non-SH runtime
 exit
 expected ':'
 expected ']'
@@ -1479,44 +1468,25 @@ exportAll() source argument must be non-Proxy object
 expression expected after ','
 extends
 exynos9810
-facebook::hermes::HermesRuntime::asyncTriggerTimeout()
 facebook::hermes::HermesRuntime::disableCodeCoverageProfiler()
 facebook::hermes::HermesRuntime::disableSamplingProfiler()
 facebook::hermes::HermesRuntime::dumpSampledTraceToFile(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 facebook::hermes::HermesRuntime::dumpSampledTraceToStream(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>&)
 facebook::hermes::HermesRuntime::enableCodeCoverageProfiler()
 facebook::hermes::HermesRuntime::enableSamplingProfiler(double)
-facebook::hermes::HermesRuntime::evaluateJavaScriptWithSourceMap(std::__ndk1::shared_ptr<facebook::jsi::Buffer const> const&, std::__ndk1::shared_ptr<facebook::jsi::Buffer const> const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 facebook::hermes::HermesRuntime::getBytecodeEpilogue(unsigned char const*, unsigned long)
 facebook::hermes::HermesRuntime::getBytecodeVersion()
-facebook::hermes::HermesRuntime::getDebugger()
 facebook::hermes::HermesRuntime::getExecutedFunctions()
-facebook::hermes::HermesRuntime::getGCExecTrace() const
-facebook::hermes::HermesRuntime::getIOTrackingInfoJSON()
-facebook::hermes::HermesRuntime::getObjectForID(unsigned long)
-facebook::hermes::HermesRuntime::getUniqueID(facebook::jsi::BigInt const&) const
-facebook::hermes::HermesRuntime::getUniqueID(facebook::jsi::Object const&) const
-facebook::hermes::HermesRuntime::getUniqueID(facebook::jsi::PropNameID const&) const
-facebook::hermes::HermesRuntime::getUniqueID(facebook::jsi::String const&) const
-facebook::hermes::HermesRuntime::getUniqueID(facebook::jsi::Symbol const&) const
-facebook::hermes::HermesRuntime::getUniqueID(facebook::jsi::Value const&) const
-facebook::hermes::HermesRuntime::getVMRuntimeUnsafe() const
 facebook::hermes::HermesRuntime::hermesBytecodeSanityCheck(unsigned char const*, unsigned long, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>*)
 facebook::hermes::HermesRuntime::isCodeCoverageProfilerEnabled()
 facebook::hermes::HermesRuntime::isHermesBytecode(unsigned char const*, unsigned long)
-facebook::hermes::HermesRuntime::loadSegment(std::__ndk1::unique_ptr<facebook::jsi::Buffer const, std::__ndk1::default_delete<facebook::jsi::Buffer const>>, facebook::jsi::Value const&)
 facebook::hermes::HermesRuntime::prefetchHermesBytecode(unsigned char const*, unsigned long)
-facebook::hermes::HermesRuntime::registerForProfiling()
-facebook::hermes::HermesRuntime::rootsListLengthForTests() const
-facebook::hermes::HermesRuntime::sampledTraceToStreamInDevToolsFormat(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>&)
 facebook::hermes::HermesRuntime::setFatalHandler(void (*)(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&))
-facebook::hermes::HermesRuntime::unregisterForProfiling()
-facebook::hermes::HermesRuntime::unwatchTimeLimit()
-facebook::hermes::HermesRuntime::watchTimeLimit(unsigned int)
 facebook::hermes::HermesRuntime::~HermesRuntime()
 facebook::hermes::hardenedHermesRuntimeConfig()
 facebook::hermes::makeHermesRuntime(hermes::vm::RuntimeConfig const&)
 facebook::hermes::makeThreadSafeHermesRuntime(hermes::vm::RuntimeConfig const&)
+facebook::hermes::sampling_profiler::ProfileSampleCallStackJSFunctionFrame::ProfileSampleCallStackJSFunctionFrame(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, std::__ndk1::optional<unsigned int> const&, std::__ndk1::optional<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>> const&, std::__ndk1::optional<unsigned int> const&, std::__ndk1::optional<unsigned int> const&)
 facebook::jni::Environment::current()
 facebook::jni::JString::toStdString() const
 facebook::jni::JString::toU16String() const
@@ -1528,15 +1498,26 @@ facebook::jni::throwNewJavaException(char const*, char const*)
 facebook::jni::throwPendingJniExceptionAsCppException()
 facebook::jsi::Buffer::~Buffer()
 facebook::jsi::HostObject::~HostObject()
+facebook::jsi::JSError::JSError(facebook::jsi::Runtime&, char const*)
+facebook::jsi::JSError::JSError(facebook::jsi::Runtime&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)
 facebook::jsi::JSError::JSError(facebook::jsi::Value&&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)
 facebook::jsi::JSError::~JSError()
 facebook::jsi::JSINativeException::~JSINativeException()
 facebook::jsi::PreparedJavaScript::~PreparedJavaScript()
 facebook::jsi::Runtime::PointerValue::~PointerValue()
+facebook::jsi::Runtime::createObjectWithPrototype(facebook::jsi::Value const&)
+facebook::jsi::Runtime::createPropNameIDFromUtf16(char16_t const*, unsigned long)
+facebook::jsi::Runtime::createStringFromUtf16(char16_t const*, unsigned long)
 facebook::jsi::Runtime::createValueFromJsonUtf8(unsigned char const*, unsigned long)
+facebook::jsi::Runtime::getPropNameIdData(facebook::jsi::PropNameID const&, void*, void (*)(void*, bool, void const*, unsigned long))
+facebook::jsi::Runtime::getPrototypeOf(facebook::jsi::Object const&)
+facebook::jsi::Runtime::getStringData(facebook::jsi::String const&, void*, void (*)(void*, bool, void const*, unsigned long))
 facebook::jsi::Runtime::instrumentation()
 facebook::jsi::Runtime::popScope(facebook::jsi::Runtime::ScopeState*)
 facebook::jsi::Runtime::pushScope()
+facebook::jsi::Runtime::setPrototypeOf(facebook::jsi::Object const&, facebook::jsi::Value const&)
+facebook::jsi::Runtime::utf16(facebook::jsi::PropNameID const&)
+facebook::jsi::Runtime::utf16(facebook::jsi::String const&)
 facebook::jsi::Runtime::~Runtime()
 facebook::jsi::StringBuffer::data() const
 facebook::jsi::StringBuffer::size() const
@@ -1547,7 +1528,6 @@ failed to define internal native state property
 false
 fastPackStrings
 fclose
-fff-f%)1f5
 fflush
 fgets
 finalHeapSize
@@ -1562,7 +1542,7 @@ flattened array exceeds length limit
 floor
 fmod
 fopen
-for RN 0.76.9
+for RN 0.79.5
 for await..of loops are currently unsupported
 for-in/for-of variable declaration may not be initialized
 forControl
@@ -1573,7 +1553,6 @@ forced
 format
 formatToParts
 fprintf
-fread
 free
 freeze
 frexp
@@ -1581,9 +1560,7 @@ from
 fromCharCode
 fromEntries argument is not coercible to Object
 fscanf
-fseeko
 fstat
-ftello
 funcColumn
 funcLine
 funcNames
@@ -1626,6 +1603,7 @@ getPrototypeOf
 getPrototypeOf trap result is neither Object nor Null
 getPrototypeOf trap result is not the same as non-extensible target getPrototypeOf
 getRegister
+getSHRuntime called on non-SH runtime
 getSLEB128
 getSavedFloatRegister
 getSavedRegister
@@ -1815,6 +1793,7 @@ invalid operand in update operation
 invalid or out-of-range index
 invalid property name - must be a string, number or identifier
 invalid statement encountered.
+invalid use of 'arguments'
 invalid use of 'super' as a template literal tag
 invalid use of tagged template literal in optional chain
 involCtxSwitch
@@ -1874,9 +1853,8 @@ keys
 label '
 label defined here
 lastIterationEntry
-ldpxh
-ldpxh~|
 length
+length_error was thrown in -fno-exceptions mode with message "%s"
 libc++_shared.so
 libc.so
 libdl.so
@@ -1901,6 +1879,7 @@ libunwind: malformed DW_CFA_undefined DWARF unwind, reg too big\n
 libunwind: malformed DW_CFA_val_expression DWARF unwind, reg too big\n
 libunwind: malformed DW_CFA_val_offset DWARF unwind, reg (%lu) out of range\n\n
 libunwind: malformed DW_CFA_val_offset_sf DWARF unwind, reg too big\n
+libunwind: unsupported .eh_frame_hdr at %lx: need at least 4 bytes of data but only got %zd\n
 libunwind: unsupported .eh_frame_hdr version: %u at %lx\n
 line
 lineNumber
@@ -1985,6 +1964,7 @@ mmap
 modf
 more than one 'default' clause in 'switch'
 mprotect
+multiple
 munmap
 name
 native state unsupported on HostObject
@@ -2001,11 +1981,14 @@ new TypedArray(buffer, [byteOffset], [length]): byteOffset must be less than buf
 new TypedArray(buffer, [byteOffset], [length]): if byteOffset is specified, it must be evenly divisible by the element size
 new.target
 newTarget is not constructible
+newline not allowed after 'async' in a method definition
 next
 nextEntryInBucket
 nextIndex
 nextIterationEntry
 nextafter
+nfinity
+nfr~V
 no n suffix in decimal
 no n suffix in non-decimal
 nodes
@@ -2014,7 +1997,6 @@ non-terminated regular expression literal
 non-terminated string
 non-terminated template literal
 non-terminated unicode codepoint escape
-non-virtual thunk to std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>::~basic_iostream()
 normalize
 not 
 note: 
@@ -2073,6 +2055,7 @@ objectPrototypeValueOf
 objectSeal
 objectSetPrototypeOf
 objectValues
+ocr3-
 octals not allowed in strict mode
 offset
 old gen start
@@ -2083,8 +2066,8 @@ operator new(unsigned long)
 operator new(unsigned long, std::nothrow_t const&)
 operator new[](unsigned long)
 optimizingPackStrings
-or$u
 other
+out_of_range was thrown in -fno-exceptions mode with message "%s"
 overflow past end of bytecode
 ownKeys target is non-extensible but key is missing from trap result
 ownKeys target is non-extensible but trap result keys differ from target keys
@@ -2135,6 +2118,7 @@ proxyConstructor
 proxyRevocable
 proxyRevocationSteps
 pthread_attr_destroy
+pthread_attr_getguardsize
 pthread_attr_getstack
 pthread_attr_init
 pthread_create
@@ -2147,7 +2131,6 @@ pthread_self
 pthread_setspecific
 pthread_sigmask
 public
-qqq=q5A9q
 radix out-of-range in BigInt.prototype.toString
 read
 realloc
@@ -2290,8 +2273,10 @@ start of substitution
 startTime
 started here
 static
+static block starts here
 stats
 std::__ndk1::__call_once(unsigned long volatile&, void*, void (*)(void*))
+std::__ndk1::__libcpp_verbose_abort(char const*, ...)
 std::__ndk1::__next_prime(unsigned long)
 std::__ndk1::__shared_weak_count::__get_deleter(std::type_info const&) const
 std::__ndk1::__shared_weak_count::__release_weak()
@@ -2301,30 +2286,19 @@ std::__ndk1::__thread_local_data()
 std::__ndk1::__thread_struct::__thread_struct()
 std::__ndk1::__thread_struct::~__thread_struct()
 std::__ndk1::__throw_system_error(int, char const*)
-std::__ndk1::bad_function_call::~bad_function_call()
 std::__ndk1::basic_ios<char, std::__ndk1::char_traits<char>>::~basic_ios()
 std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>::~basic_iostream()
-std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>::~basic_istream()
 std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::operator<<(unsigned int)
 std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::sentry::sentry(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>&)
 std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::sentry::~sentry()
 std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::write(char const*, long)
-std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::~basic_ostream()
 std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::basic_streambuf()
-std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::imbue(std::__ndk1::locale const&)
-std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::setbuf(char*, long)
-std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::showmanyc()
-std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::sync()
-std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::uflow()
-std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::xsgetn(char*, long)
-std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::xsputn(char const*, long)
 std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::~basic_streambuf()
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> std::__ndk1::operator+<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>(char const*, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::__grow_by(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::append(char const*)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::append(char const*, unsigned long)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::assign(char const*)
-std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::basic_string(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::erase(unsigned long, unsigned long)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::insert(unsigned long, char const*)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::operator=(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
@@ -2333,9 +2307,10 @@ std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::all
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::reserve(unsigned long)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::resize(unsigned long, char)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::~basic_string()
+std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::str() const
+std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::~basic_stringstream()
 std::__ndk1::chrono::steady_clock::now()
 std::__ndk1::chrono::system_clock::now()
-std::__ndk1::codecvt<char, char, mbstate_t>::id
 std::__ndk1::condition_variable::__do_timed_wait(std::__ndk1::unique_lock<std::__ndk1::mutex>&, std::__ndk1::chrono::time_point<std::__ndk1::chrono::system_clock, std::__ndk1::chrono::duration<long long, std::__ndk1::ratio<1l, 1000000000l>>>)
 std::__ndk1::condition_variable::notify_all()
 std::__ndk1::condition_variable::notify_one()
@@ -2358,7 +2333,6 @@ std::__ndk1::mutex::lock()
 std::__ndk1::mutex::unlock()
 std::__ndk1::mutex::~mutex()
 std::__ndk1::random_device::operator()()
-std::__ndk1::random_device::random_device()
 std::__ndk1::random_device::random_device(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 std::__ndk1::random_device::~random_device()
 std::__ndk1::recursive_mutex::lock()
@@ -2429,13 +2403,14 @@ stringPrototypeTrim
 stringPrototypeTrimEnd
 stringPrototypeTrimStart
 stringRaw
+string_view::substr
 stringify
 strlen
 strncmp
 super
 supportedLocalesOf
 survivalRatio
-suspended
+suspend
 switch
 symbol
 symbolConstructor
@@ -2562,14 +2537,12 @@ typeinfo for hermes::vm::NopCrashManager
 typeinfo for std::__ndk1::__function::__base<facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>
 typeinfo for std::__ndk1::__function::__base<void ()>
 typeinfo for std::__ndk1::__function::__base<void (facebook::hermes::HermesRuntime&)>
+typeinfo for std::__ndk1::__shared_ptr_emplace<bool, std::__ndk1::allocator<bool>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::jsi::StringBuffer, std::__ndk1::allocator<facebook::jsi::StringBuffer>>
+typeinfo for std::__ndk1::__shared_ptr_pointer<facebook::jsi::Buffer const*, std::__ndk1::default_delete<facebook::jsi::Buffer const>, std::__ndk1::allocator<facebook::jsi::Buffer const>>
+typeinfo for std::__ndk1::__shared_ptr_pointer<hermes::vm::NopCrashManager*, std::__ndk1::shared_ptr<hermes::vm::CrashManager>::__shared_ptr_default_delete<hermes::vm::CrashManager, hermes::vm::NopCrashManager>, std::__ndk1::allocator<hermes::vm::NopCrashManager>>
 typeinfo for std::__ndk1::__shared_weak_count
 typeinfo for std::__ndk1::bad_function_call
-typeinfo for std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>
-typeinfo for std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>
-typeinfo for std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>
-typeinfo for std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>
-typeinfo for std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
-typeinfo for std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 typeinfo for std::__ndk1::system_error
 typeinfo for std::bad_alloc
 typeinfo for std::bad_array_new_length
@@ -2590,17 +2563,17 @@ typeinfo name for hermes::vm::NopCrashManager
 typeinfo name for std::__ndk1::__function::__base<facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)>
 typeinfo name for std::__ndk1::__function::__base<void ()>
 typeinfo name for std::__ndk1::__function::__base<void (facebook::hermes::HermesRuntime&)>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<bool, std::__ndk1::allocator<bool>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::jsi::StringBuffer, std::__ndk1::allocator<facebook::jsi::StringBuffer>>
+typeinfo name for std::__ndk1::__shared_ptr_pointer<facebook::jsi::Buffer const*, std::__ndk1::default_delete<facebook::jsi::Buffer const>, std::__ndk1::allocator<facebook::jsi::Buffer const>>
+typeinfo name for std::__ndk1::__shared_ptr_pointer<hermes::vm::NopCrashManager*, std::__ndk1::shared_ptr<hermes::vm::CrashManager>::__shared_ptr_default_delete<hermes::vm::CrashManager, hermes::vm::NopCrashManager>, std::__ndk1::allocator<hermes::vm::NopCrashManager>>
 typeinfo name for std::__ndk1::bad_function_call
-typeinfo name for std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
-typeinfo name for std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 typeinfo name for std::__ndk1::default_delete<facebook::jsi::Buffer const>
 typeinfo name for std::__ndk1::shared_ptr<hermes::vm::CrashManager>::__shared_ptr_default_delete<hermes::vm::CrashManager, hermes::vm::NopCrashManager>
 typeof
 tzset
 u2028
 u2029
-uXd\f
-unN6hermes6BufferE
 undefined
 unescape
 unexpected 'await' in for loop without 'of'
@@ -2637,9 +2610,6 @@ valueOf
 var Array;var BigInt;var Boolean;var Date;var Error;var Function;var HermesInternal;var JSON;var Map;var Math;var Number;var Object;var Proxy;var Reflect;var RegExp;var Set;var String;var Symbol;var WeakMap;var WeakSet;var Infinity;var NaN;var globalThis;var undefined;function Error() {}function AggregateError() {}function EvalError() {}function RangeError() {}function ReferenceError() {}function SyntaxError() {}function TypeError() {}function URIError() {}function ArrayBuffer() {}function DataView() {}function Int8Array() {}function Int16Array() {}function Int32Array() {}function Uint8Array() {}function Uint8ClampedArray() {}function Uint16Array() {}function Uint32Array() {}function Float32Array() {}function Float64Array() {}function BigInt64Array() {}function BigUint64Array() {}function print() {}function eval() {}function parseInt() {}function parseFloat() {}function isNaN() {}function isFinite() {}function escape()  {}function unescape()  {}function decodeURI() {}function decodeURIComponent() {}function encodeURI() {}function encodeURIComponent() {}function gc() {}
 vector
 version
-virtual thunk to std::__ndk1::basic_iostream<char, std::__ndk1::char_traits<char>>::~basic_iostream()
-virtual thunk to std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>::~basic_istream()
-virtual thunk to std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::~basic_ostream()
 vm_allocate_category
 void
 void facebook::jsi::Array::setValueAtIndex<facebook::jsi::String>(facebook::jsi::Runtime&, unsigned long, facebook::jsi::String&&) const
@@ -2657,9 +2627,12 @@ vtable for hermes::vm::CrashManager
 vtable for hermes::vm::GCTripwireContext
 vtable for hermes::vm::JSOutOfMemoryError
 vtable for hermes::vm::NopCrashManager
+vtable for std::__ndk1::__shared_ptr_emplace<bool, std::__ndk1::allocator<bool>>
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::jsi::StringBuffer, std::__ndk1::allocator<facebook::jsi::StringBuffer>>
+vtable for std::__ndk1::__shared_ptr_emplace<std::__ndk1::mutex, std::__ndk1::allocator<std::__ndk1::mutex>>
+vtable for std::__ndk1::__shared_ptr_pointer<facebook::jsi::Buffer const*, std::__ndk1::default_delete<facebook::jsi::Buffer const>, std::__ndk1::allocator<facebook::jsi::Buffer const>>
+vtable for std::__ndk1::__shared_ptr_pointer<hermes::vm::NopCrashManager*, std::__ndk1::shared_ptr<hermes::vm::CrashManager>::__shared_ptr_default_delete<hermes::vm::CrashManager, hermes::vm::NopCrashManager>, std::__ndk1::allocator<hermes::vm::NopCrashManager>>
 vtable for std::__ndk1::bad_function_call
-vtable for std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char>>
-vtable for std::__ndk1::basic_ifstream<char, std::__ndk1::char_traits<char>>
 vtable for std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 vtable for std::__ndk1::basic_stringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 vtable for std::length_error
@@ -2687,6 +2660,6 @@ x_facebook_sources
 yield
 yield* delegate must have a .throw() method
 young
+zZ6J
 {data/time}Style and explicit format components shouldn't be used together
 |b|EcE|
-~~~+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/

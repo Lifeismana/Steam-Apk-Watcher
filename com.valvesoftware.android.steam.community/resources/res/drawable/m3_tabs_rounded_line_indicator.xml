@@ -10,7 +10,7 @@
                 android:topRightRadius="3dp"
                 android:bottomLeftRadius="0dp"
                 android:bottomRightRadius="0dp"/>
-            <size android:height="3dp"/>
+            <size android:height="@dimen/m3_comp_primary_navigation_tab_active_indicator_height"/>
         </shape>
     </item>
 </layer-list>

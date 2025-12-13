@@ -4,16 +4,17 @@
 (Ljava/lang/Integer;Z)V
 24RNSScreenRemovalListener
 <init>
-Android (11349228, +pgo, +bolt, +lto, -mlgo, based on r487747e) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)
+Android (12285214, +pgo, +bolt, +lto, +mlgo, based on r522817b) clang version 18.0.2 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
 FN8facebook3jsi5ValueERNS0_7RuntimeERKS1_PS4_jE
 JNI_OnLoad
 JNI_OnUnload
 Java_com_swmansion_rnscreens_ScreensModule_nativeInstall
+Java_com_swmansion_rnscreens_ScreensModule_nativeUninstall
 LIBC
 Lcom/facebook/jni/HybridData$Destructor;
 Lcom/facebook/jni/HybridData;
 Lcom/swmansion/rnscreens/NativeProxy;
-Linker: LLD 17.0.2
+Linker: LLD 18.0.2
 N8facebook3jni11HybridClassIN9rnscreens11NativeProxyENS0_6detail15BaseHybridClassEEE
 N8facebook3jni6detail15BaseHybridClassE
 N8facebook5react24MountingOverrideDelegateE
@@ -38,10 +39,10 @@ NSt6__ndk117bad_function_callE
 NSt6__ndk120__shared_ptr_emplaceI24RNSScreenRemovalListenerNS_9allocatorIS1_EEEE
 NSt6__ndk120__shared_ptr_emplaceIN9RNScreens20RNScreensTurboModuleENS_9allocatorIS2_EEEE
 PFN8facebook3jsi5ValueERNS0_7RuntimeERKS1_PS4_jE
+RNSScreen
 RNSScreenRemovalListener::pullTransaction(int, long long, facebook::react::TransactionTelemetry const&, std::__ndk1::vector<facebook::react::ShadowViewMutation, std::__ndk1::allocator<facebook::react::ShadowViewMutation>>) const
 RNSScreenRemovalListener::shouldOverridePullTransaction() const
 RNSScreenRemovalListener::~RNSScreenRemovalListener()
-RNSScreenStack
 RNScreens::RNScreensTurboModule::MODULE_NAME
 RNScreens::RNScreensTurboModule::RNScreensTurboModule(std::__ndk1::function<std::__ndk1::array<int, 2u> (int)>, std::__ndk1::function<void (int, double)>, std::__ndk1::function<void (int, bool)>, std::__ndk1::function<void (int)>)
 RNScreens::RNScreensTurboModule::disableSwipeBackForTopScreen(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)
@@ -97,6 +98,7 @@ facebook::jni::HybridClass<rnscreens::NativeProxy, facebook::jni::detail::BaseHy
 facebook::jni::HybridClass<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>::makeHybridData(std::__ndk1::unique_ptr<rnscreens::NativeProxy, std::__ndk1::default_delete<rnscreens::NativeProxy>>)
 facebook::jni::HybridClass<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>::registerHybrid(std::initializer_list<JNINativeMethod>)
 facebook::jni::JField<facebook::jni::detail::JTypeFor<facebook::jni::detail::HybridData, facebook::jni::JObject, void>::_javaobject*> facebook::jni::detectHybrid<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>(facebook::jni::alias_ref<_jclass*>)
+facebook::jni::JMethod<void (int)> facebook::jni::JClass::getMethod<void (int)>(char const*) const
 facebook::jni::JObject::getClass() const
 facebook::jni::JavaClass<facebook::jni::HybridClass<rnscreens::NativeProxy, facebook::jni::detail::BaseHybridClass>::JavaPart, facebook::jni::JObject, void>::javaClassStatic()::cls
 facebook::jni::JavaClass<facebook::jni::detail::HybridClassBase, facebook::jni::JObject, void>::javaClassStatic()::cls
@@ -144,7 +146,7 @@ facebook::jsi::Value::Value(facebook::jsi::Runtime&, facebook::jsi::Value const&
 facebook::jsi::Value::Value(facebook::jsi::Value&&)
 facebook::jsi::Value::asNumber() const
 facebook::jsi::Value::~Value()
-facebook::react::Binding::getScheduler()
+facebook::react::FabricUIManagerBinding::getScheduler()
 facebook::react::JFabricUIManager::getBinding()
 facebook::react::MountingCoordinator::setMountingOverrideDelegate(std::__ndk1::weak_ptr<facebook::react::MountingOverrideDelegate const>) const
 facebook::react::MountingTransaction::MountingTransaction(int, long long, std::__ndk1::vector<facebook::react::ShadowViewMutation, std::__ndk1::allocator<facebook::react::ShadowViewMutation>>&&, facebook::react::TransactionTelemetry)
@@ -187,28 +189,12 @@ rnscreens::NativeProxy::nativeAddMutationsListener(facebook::jni::alias_ref<face
 rnscreens::NativeProxy::registerNatives()
 rnscreens::NativeProxy::~NativeProxy()
 startTransition
-std::__ndk1::__function::__func<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int), std::__ndk1::allocator<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>::__clone() const
-std::__ndk1::__function::__func<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int), std::__ndk1::allocator<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>::__clone(std::__ndk1::__function::__base<facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>*) const
-std::__ndk1::__function::__func<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int), std::__ndk1::allocator<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>::destroy()
-std::__ndk1::__function::__func<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int), std::__ndk1::allocator<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>::destroy_deallocate()
-std::__ndk1::__function::__func<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int), std::__ndk1::allocator<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>::operator()(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*&&, unsigned int&&)
-std::__ndk1::__function::__func<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int), std::__ndk1::allocator<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>::target(std::type_info const&) const
-std::__ndk1::__function::__func<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int), std::__ndk1::allocator<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>::target_type() const
 std::__ndk1::__function::__func<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int), std::__ndk1::allocator<facebook::jsi::Value (*)(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>, facebook::jsi::Value (facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned int)>::~__func()
-std::__ndk1::__shared_ptr_emplace<RNSScreenRemovalListener, std::__ndk1::allocator<RNSScreenRemovalListener>>::__on_zero_shared()
-std::__ndk1::__shared_ptr_emplace<RNSScreenRemovalListener, std::__ndk1::allocator<RNSScreenRemovalListener>>::__on_zero_shared_weak()
 std::__ndk1::__shared_ptr_emplace<RNSScreenRemovalListener, std::__ndk1::allocator<RNSScreenRemovalListener>>::~__shared_ptr_emplace()
-std::__ndk1::__shared_ptr_emplace<RNScreens::RNScreensTurboModule, std::__ndk1::allocator<RNScreens::RNScreensTurboModule>>::__on_zero_shared()
-std::__ndk1::__shared_ptr_emplace<RNScreens::RNScreensTurboModule, std::__ndk1::allocator<RNScreens::RNScreensTurboModule>>::__on_zero_shared_weak()
 std::__ndk1::__shared_ptr_emplace<RNScreens::RNScreensTurboModule, std::__ndk1::allocator<RNScreens::RNScreensTurboModule>>::~__shared_ptr_emplace()
 std::__ndk1::__shared_weak_count::__get_deleter(std::type_info const&) const
 std::__ndk1::__shared_weak_count::__release_weak()
 std::__ndk1::__shared_weak_count::~__shared_weak_count()
-std::__ndk1::bad_function_call::~bad_function_call()
-std::__ndk1::function<std::__ndk1::array<int, 2u> (int)>::~function()
-std::__ndk1::function<void (int)>::~function()
-std::__ndk1::function<void (int, bool)>::~function()
-std::__ndk1::function<void (int, double)>::~function()
 std::bad_alloc::bad_alloc()
 std::bad_alloc::~bad_alloc()
 std::bad_array_new_length::bad_array_new_length()
@@ -273,7 +259,6 @@ vector
 void facebook::jni::detail::setNativePointer<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator>(facebook::jni::basic_strong_ref<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator>, std::__ndk1::unique_ptr<facebook::jni::detail::BaseHybridClass, std::__ndk1::default_delete<facebook::jni::detail::BaseHybridClass>>)
 void facebook::jsi::Object::setProperty<facebook::jsi::Object>(facebook::jsi::Runtime&, char const*, facebook::jsi::Object&&) const
 void facebook::jsi::Object::setProperty<facebook::jsi::Value&>(facebook::jsi::Runtime&, char const*, facebook::jsi::Value&) const
-void std::__ndk1::vector<facebook::jsi::PropNameID, std::__ndk1::allocator<facebook::jsi::PropNameID>>::__push_back_slow_path<facebook::jsi::PropNameID>(facebook::jsi::PropNameID&&)
 vtable for RNSScreenRemovalListener
 vtable for RNScreens::RNScreensTurboModule
 vtable for __cxxabiv1::__class_type_info

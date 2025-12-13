@@ -3,5 +3,5 @@
     <item
         android:state_selected="true"
         android:color="?attr/colorPrimaryContainer"/>
-    <item android:color="?attr/colorSurfaceVariant"/>
+    <item android:color="?attr/colorSurfaceContainerHighest"/>
 </selector>

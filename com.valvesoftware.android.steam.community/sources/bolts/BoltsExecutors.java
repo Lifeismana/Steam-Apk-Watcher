@@ -6,7 +6,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 
-/* loaded from: classes2.dex */
+/* loaded from: classes.dex */
 final class BoltsExecutors {
     private static final BoltsExecutors INSTANCE = new BoltsExecutors();
     private final ExecutorService background;

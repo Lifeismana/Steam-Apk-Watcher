@@ -1,4 +1,4 @@
-Android (11349228, +pgo, +bolt, +lto, -mlgo, based on r487747e) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)
+Android (12285214, +pgo, +bolt, +lto, +mlgo, based on r522817b) clang version 18.0.2 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
 CIE ID is not zero
 CIE start does not match
 CIE version is not 1 or 3
@@ -15,15 +15,16 @@ FDE has zero length
 FDE is really a CIE
 Java_com_swmansion_gesturehandler_react_RNGestureHandlerModule_decorateRuntime
 LIBC
-Linker: LLD 17.0.2
+Linker: LLD 18.0.2
 NSt6__ndk110__function6__baseIFN8facebook3jsi5ValueERNS3_7RuntimeERKS4_PS7_jEEE
 NSt6__ndk110__function6__funcIZ15decorateRuntimeRN8facebook3jsi7RuntimeEE3$_0NS_9allocatorIS6_EEFNS3_5ValueES5_RKS9_PSA_jEEE
+Paragraph
+Text
 Unknown DWARF encoding for search table.
 Z15decorateRuntimeRN8facebook3jsi7RuntimeEE3$_0
 _Unwind_Resume
 _Unwind_Resume() can't return
 __cxa_atexit
-__cxa_begin_catch
 __cxa_finalize
 __gxx_personality_v0
 __register_atfork
@@ -34,6 +35,7 @@ dl_iterate_phdr
 during phase1 personality function said it would stop here, but now in phase2 it did not stop here
 evaluateExpression
 facebook::jsi::Value::~Value()
+facebook::react::ShadowNode::getComponentName() const
 facebook::react::ShadowNode::getTraits() const
 fflush
 fprintf
@@ -46,7 +48,7 @@ getSLEB128
 getSavedRegister
 getTableEntrySize
 getULEB128
-isFormsStackingContext
+isViewFlatteningDisabled
 libc++_shared.so
 libc.so
 libdl.so
@@ -72,6 +74,7 @@ libunwind: malformed DW_CFA_undefined DWARF unwind, reg too big\n
 libunwind: malformed DW_CFA_val_expression DWARF unwind, reg too big\n
 libunwind: malformed DW_CFA_val_offset DWARF unwind, reg (%llu) out of range\n\n
 libunwind: malformed DW_CFA_val_offset_sf DWARF unwind, reg too big\n
+libunwind: unsupported .eh_frame_hdr at %llx: need at least 4 bytes of data but only got %zd\n
 libunwind: unsupported .eh_frame_hdr version: %u at %llx\n
 malformed uleb128 expression
 malloc
@@ -85,7 +88,7 @@ pthread_rwlock_wrlock
 setFloatRegister
 setRegister
 std::__ndk1::__shared_weak_count::__release_weak()
-std::terminate()
+strcmp
 strlen
 truncated sleb128 expression
 truncated uleb128 expression

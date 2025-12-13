@@ -4,5 +4,5 @@
         android:state_enabled="false"
         android:color="?attr/colorOnSurfaceInverse"
         android:alpha="@dimen/material_emphasis_disabled"/>
-    <item android:color="?attr/colorSurfaceVariant"/>
+    <item android:color="?attr/colorSurfaceContainerHighest"/>
 </selector>

@@ -34,7 +34,6 @@
 /proc/self/fd/1
 /proc/self/fd/2
 /tmp
-0000
 000102030405060708090A0B0C0D0E0F101112131415161718191A1B1C1D1E1F202122232425262728292A2B2C2D2E2F303132333435363738393A3B3C3D3E3F404142434445464748494A4B4C4D4E4F505152535455565758595A5B5C5D5E5F606162636465666768696A6B6C6D6E6F707172737475767778797A7B7C7D7E7F808182838485868788898A8B8C8D8E8F909192939495969798999A9B9C9D9E9FA0A1A2A3A4A5A6A7A8A9AAABACADAEAFB0B1B2B3B4B5B6B7B8B9BABBBCBDBEBFC0C1C2C3C4C5C6C7C8C9CACBCCCDCECFD0D1D2D3D4D5D6D7D8D9DADBDCDDDEDFE0E1E2E3E4E5E6E7E8E9EAEBECEDEEEFF0F1F2F3F4F5F6F7F8F9FAFBFCFDFEFF
 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f404142434445464748494a4b4c4d4e4f505152535455565758595a5b5c5d5e5f606162636465666768696a6b6c6d6e6f707172737475767778797a7b7c7d7e7f808182838485868788898a8b8c8d8e8f909192939495969798999a9b9c9d9e9fa0a1a2a3a4a5a6a7a8a9aaabacadaeafb0b1b2b3b4b5b6b7b8b9babbbcbdbebfc0c1c2c3c4c5c6c7c8c9cacbcccdcecfd0d1d2d3d4d5d6d7d8d9dadbdcdddedfe0e1e2e3e4e5e6e7e8e9eaebecedeeeff0f1f2f3f4f5f6f7f8f9fafbfcfdfeff000102030405060708090A0B0C0D0E0F101112131415161718191A1B1C1D1E1F202122232425262728292A2B2C2D2E2F303132333435363738393A3B3C3D3E3F404142434445464748494A4B4C4D4E4F505152535455565758595A5B5C5D5E5F606162636465666768696A6B6C6D6E6F707172737475767778797A7B7C7D7E7F808182838485868788898A8B8C8D8E8F909192939495969798999A9B9C9D9E9FA0A1A2A3A4A5A6A7A8A9AAABACADAEAFB0B1B2B3B4B5B6B7B8B9BABBBCBDBEBFC0C1C2C3C4C5C6C7C8C9CACBCCCDCECFD0D1D2D3D4D5D6D7D8D9DADBDCDDDEDFE0E1E2E3E4E5E6E7E8E9EAEBECEDEEEFF0F1F2F3F4F5F6F7F8F9FAFBFCFDFEFF00000100200300400500600701001101201301401501601702002102202302402502602703003103203303403503603704004104204304404504604705005105205305405505605706006106206306406506606707007107207307407507607710010110210310410510610711011111211311411511611712012112212312412512612713013113213313413513613714014114214314414514614715015115215315415515615716016116216316416516616717017117217317417517617720020120220320420520620721021121221321421521621722022122222322422522622723023123223323423523623724024124224324424524624725025125225325425525625726026126226326426526626727027127227327427527627730030130230330430530630731031131231331431531631732032132232332432532632733033133233333433533633734034134234334434534634735035135235335435535635736036136236336436536636737037137237337437537637740040140240340440540640741041141241341441541641742042142242342442542642743043143243343443543643744044144244344444544644745045145245345445545645746046146246346446546646747047147247347447547647750050150250350450550650751051151251351451551651752052152252352452552652753053153253353453553653754054154254354454554654755055155255355455555655756056156256356456556656757057157257357457557657760060160260360460560660761061161261361461561661762062162262362462562662763063163263363463563663764064164264364464564664765065165265365465565665766066166266366466566666767067167267367467567667770070170270370470570670771071171271371471571671772072172272372472572672773073173273373473573673774074174274374474574674775075175275375475575675776076176276376476576676777077177277377477577677700000000000000010000001000000011000001000000010100000110000001110000100000001001000010100000101100001100000011010000111000001111000100000001000100010010000100110001010000010101000101100001011100011000000110010001101000011011000111000001110100011110000111110010000000100001001000100010001100100100001001010010011000100111001010000010100100101010001010110010110000101101001011100010111100110000001100010011001000110011001101000011010100110110001101110011100000111001001110100011101100111100001111010011111000111111010000000100000101000010010000110100010001000101010001100100011101001000010010010100101001001011010011000100110101001110010011110101000001010001010100100101001101010100010101010101011001010111010110000101100101011010010110110101110001011101010111100101111101100000011000010110001001100011011001000110010101100110011001110110100001101001011010100110101101101100011011010110111001101111011100000111000101110010011100110111010001110101011101100111011101111000011110010111101001111011011111000111110101111110011111111000000010000001100000101000001110000100100001011000011010000111100010001000100110001010100010111000110010001101100011101000111110010000100100011001001010010011100101001001010110010110100101111001100010011001100110101001101110011100100111011001111010011111101000001010000110100010101000111010010010100101101001101010011110101000101010011010101010101011101011001010110110101110101011111011000010110001101100101011001110110100101101011011011010110111101110001011100110111010101110111011110010111101101111101011111111000000110000011100001011000011110001001100010111000110110001111100100011001001110010101100101111001100110011011100111011001111110100001101000111010010110100111101010011010101110101101101011111011000110110011101101011011011110111001101110111011110110111111110000011100001111000101110001111100100111001011110011011100111111010001110100111101010111010111110110011101101111011101110111111110000111100011111001011110011111101001111010111110110111101111111100011111001111110101111101111111100111111011111111011111111
 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f404142434445464748494a4b4c4d4e4f505152535455565758595a5b5c5d5e5f606162636465666768696a6b6c6d6e6f707172737475767778797a7b7c7d7e7f808182838485868788898a8b8c8d8e8f909192939495969798999a9b9c9d9e9fa0a1a2a3a4a5a6a7a8a9aaabacadaeafb0b1b2b3b4b5b6b7b8b9babbbcbdbebfc0c1c2c3c4c5c6c7c8c9cacbcccdcecfd0d1d2d3d4d5d6d7d8d9dadbdcdddedfe0e1e2e3e4e5e6e7e8e9eaebecedeeeff0f1f2f3f4f5f6f7f8f9fafbfcfdfeff0001020304050607101112131415161720212223242526273031323334353637404142434445464750515253545556576061626364656667707172737475767700010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
@@ -63,9 +62,10 @@
 <g9;c
 <unknown>
 =9tau
+?0000
 @aQY
 A]DG
-Android (10552028, +pgo, +bolt, +lto, -mlgo, based on r487747d) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)
+Android (12285214, +pgo, +bolt, +lto, +mlgo, based on r522817b) clang version 18.0.2 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
 C5yr
 CHECK_STRCASEEQ failed: 
 CHECK_STRCASENE failed: 
@@ -280,6 +280,10 @@ Integer overflow when parsing bool (must be 0 or 1)
 Invalid escape sequence in JSON pointer string
 Invalid leading character
 Invalid value for bool
+IsSomeString folly::to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, char [2], char const*, char [3], long long, 0>(is_same const&)
+IsSomeString folly::to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, folly::Range<char const*>, folly::Range<char const*>, folly::Range<char const*>, 0>(is_same const&)
+IsSomeString folly::to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, folly::Range<char const*>, folly::Range<char const*>, folly::Range<char const*>, char const*, unsigned int, 0>(is_same const&)
+IsSomeString folly::to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, long long, 0>(is_same const&)
 JIxX
 JS BigInts are not convertible to dynamic
 JS Functions are not convertible to dynamic
@@ -288,11 +292,12 @@ JSON
 L(knN
 LIBC
 LIBC_N
-Linker: LLD 17.0.2
+Linker: LLD 18.0.2
 Log file created at: 
 Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu 
 Loss of precision during arithmetic conversion
 Lossy truncation in BigInt64::asInt64
+Lossy truncation in BigInt64::asUint64
 MFUL
 MallocExtension_Internal_GetNumericProperty
 N5folly12BadFormatArgE
@@ -320,8 +325,6 @@ N8facebook3jsi18JSINativeExceptionE
 N8facebook3jsi6BufferE
 N8facebook3jsi7JSErrorE
 N8facebook3jsi7RuntimeE
-NSt6__ndk115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE
-NSt6__ndk119basic_ostringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 NSt6__ndk120__shared_ptr_emplaceIN8facebook3jsi5ValueENS_9allocatorIS3_EEEE
 NdP#
 Negative overflow during arithmetic conversion
@@ -330,7 +333,7 @@ No digits found in input string
 Non-digit character found
 Non-whitespace character found after end of conversion
 OInH&
-OLossy truncation in BigInt64::asUint64
+Object
 Object is 
 Overflow during arithmetic conversion
 Overflow during conversion
@@ -397,9 +400,10 @@ ZN8facebook3jsi7Runtime15instrumentationEvE17NoInstrumentation
 ^p8G
 _Unwind_Resume
 _Unwind_Resume() can't return
-_ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC2B7v170000IDnEEPKc
+_ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC2B8ne180000ILi0EEEPKc
 _ZZN5folly2toIdEENSt6__ndk19enable_ifIXntsr3std7is_sameINS_5RangeIPKcEET_EE5valueES7_E4typeES6_ENKUlNS_14ConversionCodeEE0_clESA_
 _ZZN5folly2toIdEENSt6__ndk19enable_ifIXntsr3std7is_sameINS_5RangeIPKcEET_EE5valueES7_E4typeES6_ENKUlNS_14ConversionCodeEE_clESA_
+_ZZN5folly2toIdxEENSt6__ndk19enable_ifIXsr6detail14IsArithToArithIT_T0_EE5valueES3_E4typeERKS4_ENKUlNS_14ConversionCodeEE_clES9_
 _ZZN5folly2toIiEENSt6__ndk19enable_ifIXntsr3std7is_sameINS_5RangeIPKcEET_EE5valueES7_E4typeES6_ENKUlNS_14ConversionCodeEE0_clESA_
 _ZZN5folly2toIiEENSt6__ndk19enable_ifIXntsr3std7is_sameINS_5RangeIPKcEET_EE5valueES7_E4typeES6_ENKUlNS_14ConversionCodeEE_clESA_
 _ZZN5folly2toIxEENSt6__ndk19enable_ifIXntsr3std7is_sameINS_5RangeIPKcEET_EE5valueES7_E4typeES6_ENKUlNS_14ConversionCodeEE0_clESA_
@@ -443,7 +447,7 @@ argument index out of range, max=
 array
 array index is not numeric
 array/object/string
-auto folly::detail::callWithKeyAndPairArgs<folly::dynamic, folly::dynamic, std::__ndk1::pair<std::__ndk1::__hash_map_iterator<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, void*>*>>, bool> folly::f14::detail::F14BasicMap<folly::dynamic, folly::dynamic, folly::detail::DynamicHasher, folly::detail::DynamicKeyEqual, std::__ndk1::allocator<std::__ndk1::pair<folly::dynamic const, folly::dynamic>>>::emplace<folly::dynamic const&, std::nullptr_t>(folly::dynamic const&, std::nullptr_t&&)::'lambda'(auto&, auto&&), folly::dynamic, folly::dynamic const&, std::nullptr_t&&, 0>(std::__ndk1::pair<std::__ndk1::__hash_map_iterator<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, void*>*>>, bool> folly::f14::detail::F14BasicMap<folly::dynamic, folly::dynamic, folly::detail::DynamicHasher, folly::detail::DynamicKeyEqual, std::__ndk1::allocator<std::__ndk1::pair<folly::dynamic const, folly::dynamic>>>::emplace<folly::dynamic const&, std::nullptr_t>(folly::dynamic const&, std::nullptr_t&&)::'lambda'(auto&, auto&&)&&, folly::dynamic const&, std::__ndk1::tuple<folly::dynamic const&>&&, std::__ndk1::tuple<std::nullptr_t&&>&&)
+auto folly::detail::callWithKeyAndPairArgs<folly::dynamic, folly::dynamic, std::__ndk1::pair<std::__ndk1::__hash_map_iterator<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, void*>*>>, bool> folly::f14::detail::F14BasicMap<folly::dynamic, folly::dynamic, folly::detail::DynamicHasher, folly::detail::DynamicKeyEqual, std::__ndk1::allocator<std::__ndk1::pair<folly::dynamic const, folly::dynamic>>>::emplace<folly::dynamic const&, std::nullptr_t>(folly::dynamic const&, std::nullptr_t&&)::'lambda'(auto&, auto&&), folly::dynamic, folly::dynamic const&, std::nullptr_t&&, 0>(std::__ndk1::pair<std::__ndk1::__hash_map_iterator<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, void*>*>>, bool> folly::f14::detail::F14BasicMap<folly::dynamic, folly::dynamic, folly::detail::DynamicHasher, folly::detail::DynamicKeyEqual, std::__ndk1::allocator<std::__ndk1::pair<folly::dynamic const, folly::dynamic>>>::emplace<folly::dynamic const&, std::nullptr_t>(folly::dynamic const&, std::nullptr_t&&)::'lambda'(auto&, auto&&)&&, folly::dynamic const&, std::__ndk1::tuple<std::__ndk1::pair<folly::dynamic const, folly::dynamic>>&&, folly::dynamic const&<folly::dynamic const&>&&)
 bad expected access
 base prefix ('#') specifier only allowed on integers
 base prefix not allowed with '
@@ -462,14 +466,15 @@ close
 closelog
 code=
 construction vtable for std::__ndk1::basic_ostream<char, google::LogMessage::LogStream::char_traits<char>>-in-google::LogMessage::LogStream
-construction vtable for std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>-in-std::__ndk1::basic_ostringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 couldn't find key {} in dynamic object
+create
 cygwin
 d4[I
 dallocx
 de2?/
 dl_iterate_phdr
 double
+double folly::dynamic::asImpl<double>() const
 double_conversion::Bignum::AddBignum(double_conversion::Bignum const&)
 double_conversion::Bignum::AddUInt64(unsigned long long)
 double_conversion::Bignum::Align(double_conversion::Bignum const&)
@@ -519,6 +524,7 @@ double_conversion::Strtod(double_conversion::Vector<char const>, int)
 double_conversion::Strtof(double_conversion::Vector<char const>, int)
 during phase1 personality function said it would stop here, but now in phase2 it did not stop here
 dynamic field width argument must be integral
+eval
 evaluateExpression
 extra characters in format string
 fLB::FLAGS_alsologtostderr
@@ -601,10 +607,19 @@ facebook::jsi::Object::getPropertyAsFunction(facebook::jsi::Runtime&, char const
 facebook::jsi::Object::getPropertyAsObject(facebook::jsi::Runtime&, char const*) const
 facebook::jsi::Pointer::operator=(facebook::jsi::Pointer&&)
 facebook::jsi::PreparedJavaScript::~PreparedJavaScript()
+facebook::jsi::Runtime::createObjectWithPrototype(facebook::jsi::Value const&)
+facebook::jsi::Runtime::createPropNameIDFromUtf16(char16_t const*, unsigned int)
+facebook::jsi::Runtime::createStringFromUtf16(char16_t const*, unsigned int)
 facebook::jsi::Runtime::createValueFromJsonUtf8(unsigned char const*, unsigned int)
+facebook::jsi::Runtime::getPropNameIdData(facebook::jsi::PropNameID const&, void*, void (*)(void*, bool, void const*, unsigned int))
+facebook::jsi::Runtime::getPrototypeOf(facebook::jsi::Object const&)
+facebook::jsi::Runtime::getStringData(facebook::jsi::String const&, void*, void (*)(void*, bool, void const*, unsigned int))
 facebook::jsi::Runtime::instrumentation()
 facebook::jsi::Runtime::popScope(facebook::jsi::Runtime::ScopeState*)
 facebook::jsi::Runtime::pushScope()
+facebook::jsi::Runtime::setPrototypeOf(facebook::jsi::Object const&, facebook::jsi::Value const&)
+facebook::jsi::Runtime::utf16(facebook::jsi::PropNameID const&)
+facebook::jsi::Runtime::utf16(facebook::jsi::String const&)
 facebook::jsi::Runtime::~Runtime()
 facebook::jsi::Value::Value(facebook::jsi::Runtime&, facebook::jsi::Value const&)
 facebook::jsi::Value::Value(facebook::jsi::Value&&)
@@ -621,7 +636,7 @@ facebook::jsi::Value::asSymbol(facebook::jsi::Runtime&) const &
 facebook::jsi::Value::strictEquals(facebook::jsi::Runtime&, facebook::jsi::Value const&, facebook::jsi::Value const&)
 facebook::jsi::Value::toString(facebook::jsi::Runtime&) const
 facebook::jsi::Value::~Value()
-facebook::jsi::dynamicFromValue(facebook::jsi::Runtime&, facebook::jsi::Value const&, std::__ndk1::function<bool (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)>)
+facebook::jsi::dynamicFromValue(facebook::jsi::Runtime&, facebook::jsi::Value const&, std::__ndk1::function<bool (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)> const&)
 facebook::jsi::valueFromDynamic(facebook::jsi::Runtime&, folly::dynamic const&)
 false
 fast_float::adjusted_mantissa fast_float::negative_digit_comp<double>(fast_float::bigint&, fast_float::adjusted_mantissa, int)
@@ -664,12 +679,8 @@ folly::ConversionError::~ConversionError()
 folly::Expected<char, folly::ConversionCode> folly::detail::digits_to<char>(char const*, char const*)
 folly::Expected<char, folly::ConversionCode> folly::detail::str_to_integral<char>(folly::Range<char const*>*)
 folly::Expected<double, folly::ConversionCode> folly::detail::str_to_floating<double>(folly::Range<char const*>*)
-folly::Expected<double, folly::ConversionCode> folly::detail::str_to_floating_double_conversion<double>(folly::Range<char const*>*)
-folly::Expected<double, folly::ConversionCode> folly::detail::str_to_floating_double_conversion<double>(folly::Range<char const*>*)::conv
 folly::Expected<double, folly::ConversionCode> folly::detail::str_to_floating_fast_float_from_chars<double>(folly::Range<char const*>*)
 folly::Expected<float, folly::ConversionCode> folly::detail::str_to_floating<float>(folly::Range<char const*>*)
-folly::Expected<float, folly::ConversionCode> folly::detail::str_to_floating_double_conversion<float>(folly::Range<char const*>*)
-folly::Expected<float, folly::ConversionCode> folly::detail::str_to_floating_double_conversion<float>(folly::Range<char const*>*)::conv
 folly::Expected<float, folly::ConversionCode> folly::detail::str_to_floating_fast_float_from_chars<float>(folly::Range<char const*>*)
 folly::Expected<int, folly::ConversionCode> folly::detail::digits_to<int>(char const*, char const*)
 folly::Expected<int, folly::ConversionCode> folly::detail::str_to_integral<int>(folly::Range<char const*>*)
@@ -825,6 +836,7 @@ getEncodedP
 getFloatRegister
 getPropertyAsFunction: property '
 getPropertyAsObject: property '
+getPrototypeOf
 getRegister
 getSLEB128
 getSavedRegister
@@ -956,8 +968,6 @@ google::glog_internal_namespace_::is_default_thread()
 google::kLogSiteUninitialized
 google::operator<<(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>&, google::PRIVATE_Counter const&)
 google::posix_strerror_r(int, char*, unsigned int)
-guard variable for folly::Expected<double, folly::ConversionCode> folly::detail::str_to_floating_double_conversion<double>(folly::Range<char const*>*)::conv
-guard variable for folly::Expected<float, folly::ConversionCode> folly::detail::str_to_floating_double_conversion<float>(folly::Range<char const*>*)::conv
 guard variable for folly::detail::FastStaticBool<folly::detail::usingJEMallocOrTCMalloc()::Initializer>::get(std::__ndk1::memory_order)::rv
 guard variable for folly::detail::FastStaticBool<folly::usingJEMalloc()::Initializer>::get(std::__ndk1::memory_order)::rv
 guard variable for folly::detail::FastStaticBool<folly::usingTCMalloc()::Initializer>::get(std::__ndk1::memory_order)::rv
@@ -1002,6 +1012,7 @@ libunwind: malformed DW_CFA_undefined DWARF unwind, reg too big\n
 libunwind: malformed DW_CFA_val_expression DWARF unwind, reg too big\n
 libunwind: malformed DW_CFA_val_offset DWARF unwind, reg (%llu) out of range\n\n
 libunwind: malformed DW_CFA_val_offset_sf DWARF unwind, reg too big\n
+libunwind: unsupported .eh_frame_hdr at %llx: need at least 4 bytes of data but only got %zd\n
 libunwind: unsupported .eh_frame_hdr version: %u at %llx\n
 linux
 localtime_r
@@ -1061,6 +1072,7 @@ screen
 screen-256color
 sdallocx
 setFloatRegister
+setPrototypeOf
 setRegister
 severity < NUM_SEVERITIES
 severity >= 0
@@ -1070,12 +1082,7 @@ sscanf
 stack
 stat
 std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, void*>*> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, std::__ndk1::__unordered_map_hasher<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicHasher, folly::detail::DynamicKeyEqual, true>, std::__ndk1::__unordered_map_equal<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicKeyEqual, folly::detail::DynamicHasher, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>>>::__emplace_multi<std::__ndk1::pair<folly::dynamic const, folly::dynamic> const&>(std::__ndk1::pair<folly::dynamic const, folly::dynamic> const&)
-std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, std::__ndk1::__unordered_map_hasher<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicHasher, folly::detail::DynamicKeyEqual, true>, std::__ndk1::__unordered_map_equal<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicKeyEqual, folly::detail::DynamicHasher, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>>>::__deallocate_node(std::__ndk1::__hash_node_base<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, void*>*>*)
-std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, std::__ndk1::__unordered_map_hasher<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicHasher, folly::detail::DynamicKeyEqual, true>, std::__ndk1::__unordered_map_equal<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicKeyEqual, folly::detail::DynamicHasher, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>>>::__move_assign(std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, std::__ndk1::__unordered_map_hasher<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicHasher, folly::detail::DynamicKeyEqual, true>, std::__ndk1::__unordered_map_equal<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicKeyEqual, folly::detail::DynamicHasher, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>>>&, std::__ndk1::integral_constant<bool, true>)
-std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, std::__ndk1::__unordered_map_hasher<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicHasher, folly::detail::DynamicKeyEqual, true>, std::__ndk1::__unordered_map_equal<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicKeyEqual, folly::detail::DynamicHasher, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>>>::~__hash_table()
 std::__ndk1::__next_prime(unsigned int)
-std::__ndk1::__shared_ptr_emplace<facebook::jsi::Value, std::__ndk1::allocator<facebook::jsi::Value>>::__on_zero_shared()
-std::__ndk1::__shared_ptr_emplace<facebook::jsi::Value, std::__ndk1::allocator<facebook::jsi::Value>>::__on_zero_shared_weak()
 std::__ndk1::__shared_ptr_emplace<facebook::jsi::Value, std::__ndk1::allocator<facebook::jsi::Value>>::~__shared_ptr_emplace()
 std::__ndk1::__shared_weak_count::__get_deleter(std::type_info const&) const
 std::__ndk1::__shared_weak_count::__release_weak()
@@ -1110,37 +1117,29 @@ std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>::~basic_strea
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> folly::dynamic::asImpl<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>() const
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> folly::sformat<folly::Range<char const*>&>(folly::Range<char const*>, folly::Range<char const*>&)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> folly::sformat<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>(folly::Range<char const*>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&&)
-std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> folly::to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, char [2], char const*, char [3], long long, 0>(char const (&) [2], char const* const&, char const (&) [3], long long const&)
-std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> folly::to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, folly::Range<char const*>, folly::Range<char const*>, folly::Range<char const*>, 0>(folly::Range<char const*> const&, folly::Range<char const*> const&, folly::Range<char const*> const&)
-std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> folly::to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, folly::Range<char const*>, folly::Range<char const*>, folly::Range<char const*>, char const*, unsigned int, 0>(folly::Range<char const*> const&, folly::Range<char const*> const&, folly::Range<char const*> const&, char const* const&, unsigned int const&)
-std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> folly::to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, long long, 0>(long long const&)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>* google::MakeCheckOpString<int, int>(int const&, int const&, char const*)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>* std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__push_back_slow_path<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>* std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__push_back_slow_path<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&&)
+std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::__init_copy_ctor_external(char const*, unsigned int)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::append(char const*)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::append(char const*, unsigned int)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::append(unsigned int, char)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::assign(char const*)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::assign(char const*, unsigned int)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::at(unsigned int) const
-std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::basic_string(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::insert(unsigned int, char const*)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::operator=(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::push_back(char)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::reserve(unsigned int)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::resize(unsigned int, char)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::~basic_string()
-std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::overflow(int)
-std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::pbackfail(int)
-std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::seekoff(long long, std::__ndk1::ios_base::seekdir, unsigned int)
+std::__ndk1::basic_string<char16_t, std::__ndk1::char_traits<char16_t>, std::__ndk1::allocator<char16_t>>::push_back(char16_t)
 std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::str() const
-std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::str(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
-std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::underflow()
-std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::~basic_stringbuf()
 std::__ndk1::ctype<char>::id
 std::__ndk1::enable_if<!std::is_convertible<folly::dynamic const&, folly::Range<char const*>>::value && std::is_convertible<is_convertible, folly::dynamic>::value, folly::dynamic::const_item_iterator>::type folly::dynamic::find<folly::dynamic const&>(is_convertible&&) const
 std::__ndk1::enable_if<IsSomeString<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>::value && !std::is_same<folly::Range<char const*>, double>::value, char const*>::type folly::to<double, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>(IsSomeString const&)
 std::__ndk1::enable_if<IsSomeString<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>::value && !std::is_same<folly::Range<char const*>, long long>::value, char const*>::type folly::to<long long, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>(IsSomeString const&)
 std::__ndk1::enable_if<IsSomeString<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>::value && std::is_floating_point<double>::value, IsSomeString>::type folly::to<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, double>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)
-std::__ndk1::enable_if<detail::IsArithToArith<double, long long>::value, IsArithToArith>::type folly::to<double, long long>(double const&)
 std::__ndk1::enable_if<is_integral_v<double> && std::is_floating_point<long long>::value || std::is_floating_point<double>::value && is_integral_v<is_floating_point>, folly::Expected<is_floating_point, folly::ConversionCode>>::type folly::detail::convertTo<long long, double>(double const&)
 std::__ndk1::enable_if<is_integral_v<long long> && std::is_floating_point<double>::value || std::is_floating_point<long long>::value && is_integral_v<is_floating_point>, folly::Expected<is_floating_point, folly::ConversionCode>>::type folly::detail::convertTo<double, long long>(long long const&)
 std::__ndk1::ios_base::__set_badbit_and_consider_rethrow()
@@ -1153,22 +1152,19 @@ std::__ndk1::pair<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__n
 std::__ndk1::pair<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, void*>*>, bool> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, std::__ndk1::__unordered_map_hasher<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicHasher, folly::detail::DynamicKeyEqual, true>, std::__ndk1::__unordered_map_equal<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicKeyEqual, folly::detail::DynamicHasher, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>>>::__emplace_unique_impl<std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&>, std::__ndk1::tuple<>>(std::__ndk1::piecewise_construct_t const&, std::__ndk1::tuple<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&>&&, std::__ndk1::tuple<>&&)
 std::__ndk1::pair<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, void*>*>, bool> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, std::__ndk1::__unordered_map_hasher<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicHasher, folly::detail::DynamicKeyEqual, true>, std::__ndk1::__unordered_map_equal<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicKeyEqual, folly::detail::DynamicHasher, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>>>::__emplace_unique_key_args<folly::dynamic, folly::dynamic const&, std::nullptr_t>(folly::dynamic const&, folly::dynamic const&, std::nullptr_t&&)
 std::__ndk1::pair<std::__ndk1::__hash_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, void*>*>, bool> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, std::__ndk1::__unordered_map_hasher<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicHasher, folly::detail::DynamicKeyEqual, true>, std::__ndk1::__unordered_map_equal<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicKeyEqual, folly::detail::DynamicHasher, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>>>::__emplace_unique_key_args<folly::dynamic, std::__ndk1::pair<folly::dynamic const, folly::dynamic> const&>(folly::dynamic const&, std::__ndk1::pair<folly::dynamic const, folly::dynamic> const&)
+std::__ndk1::piecewise_construct
 std::__ndk1::unique_ptr<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, void*>, std::__ndk1::__hash_node_destructor<std::__ndk1::allocator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, void*>>>> std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, std::__ndk1::__unordered_map_hasher<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicHasher, folly::detail::DynamicKeyEqual, true>, std::__ndk1::__unordered_map_equal<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicKeyEqual, folly::detail::DynamicHasher, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>>>::__construct_node<folly::Range<char const*>&, std::nullptr_t>(folly::Range<char const*>&, std::nullptr_t&&)
-std::__ndk1::unordered_map<folly::dynamic, folly::dynamic, folly::detail::DynamicHasher, folly::detail::DynamicKeyEqual, std::__ndk1::allocator<std::__ndk1::pair<folly::dynamic const, folly::dynamic>>>::unordered_map(std::__ndk1::unordered_map<folly::dynamic, folly::dynamic, folly::detail::DynamicHasher, folly::detail::DynamicKeyEqual, std::__ndk1::allocator<std::__ndk1::pair<folly::dynamic const, folly::dynamic>>> const&)
 std::bad_alloc::bad_alloc()
 std::bad_alloc::~bad_alloc()
 std::bad_array_new_length::bad_array_new_length()
 std::bad_array_new_length::~bad_array_new_length()
 std::exception::~exception()
-std::invalid_argument::invalid_argument(std::invalid_argument const&)
 std::invalid_argument::~invalid_argument()
-std::length_error::length_error(std::length_error const&)
 std::length_error::~length_error()
 std::logic_error::logic_error(char const*)
 std::logic_error::logic_error(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
 std::logic_error::logic_error(std::logic_error const&)
 std::logic_error::what() const
-std::out_of_range::out_of_range(std::out_of_range const&)
 std::out_of_range::~out_of_range()
 std::range_error::~range_error()
 std::runtime_error::runtime_error(char const*)
@@ -1225,9 +1221,7 @@ typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::jsi::Value, std::__ndk1
 typeinfo for std::__ndk1::__shared_weak_count
 typeinfo for std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>
 typeinfo for std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>
-typeinfo for std::__ndk1::basic_ostringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 typeinfo for std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char>>
-typeinfo for std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 typeinfo for std::bad_alloc
 typeinfo for std::bad_array_new_length
 typeinfo for std::exception
@@ -1259,8 +1253,6 @@ typeinfo name for google::LogSink
 typeinfo name for google::base::Logger
 typeinfo name for google::base_logging::LogStreamBuf
 typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::jsi::Value, std::__ndk1::allocator<facebook::jsi::Value>>
-typeinfo name for std::__ndk1::basic_ostringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
-typeinfo name for std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>
 uRDZZ
 uZF)
 uname
@@ -1283,8 +1275,6 @@ vector
 virtual thunk to google::LogMessage::LogStream::~LogStream()
 virtual thunk to std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char>>::~basic_istream()
 virtual thunk to std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>::~basic_ostream()
-virtual thunk to std::__ndk1::basic_ostringstream<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::~basic_ostringstream()
-void facebook::jsi::Object::setProperty<facebook::jsi::String>(facebook::jsi::Runtime&, char const*, facebook::jsi::String&&) const
 void fast_float::parse_mantissa<char>(fast_float::bigint&, fast_float::parsed_number_string_t<char>&, unsigned int, unsigned int&)
 void folly::BaseFormatterImpl<folly::Formatter<false, folly::Range<char const*>&>, false, std::__ndk1::integer_sequence<unsigned int, 0u>, folly::Range<char const*>&>::operator()<folly::detail::BaseFormatterAppendToString<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>(folly::detail::BaseFormatterAppendToString<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>&) const::funs
 void folly::BaseFormatterImpl<folly::Formatter<false, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, char const*, char const*>, false, std::__ndk1::integer_sequence<unsigned int, 0u, 1u, 2u>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, char const*, char const*>::operator()<folly::detail::BaseFormatterAppendToString<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>(folly::detail::BaseFormatterAppendToString<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>&) const::funs
@@ -1353,18 +1343,17 @@ void folly::throw_exception<std::invalid_argument>(std::invalid_argument&&)
 void folly::throw_exception<std::length_error>(std::length_error&&)
 void folly::throw_exception<std::out_of_range>(std::out_of_range&&)
 void folly::throw_exception<std::runtime_error>(std::runtime_error&&)
-void folly::toAppendFit<folly::Range<char const*>, folly::Range<char const*>, folly::Range<char const*>, char const*, char, char const*, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>*, 0>(folly::Range<char const*> const&, folly::Range<char const*> const&, folly::Range<char const*> const&, char const* const&, char const&, char const* const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>* const&)
-void folly::toAppendFit<folly::Range<char const*>, folly::Range<char const*>, folly::Range<char const*>, char const*, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>*, 0>(folly::Range<char const*> const&, folly::Range<char const*> const&, folly::Range<char const*> const&, char const* const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>* const&)
+void folly::toAppendFit<folly::Range<char const*>, folly::Range<char const*>, folly::Range<char const*>, char const*, char, char const*, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>*, 0>(__type_pack_element const&)
+void folly::toAppendFit<folly::Range<char const*>, folly::Range<char const*>, folly::Range<char const*>, char const*, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>*, 0>(__type_pack_element const&)
 void google::MakeCheckOpValueString<char>(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>*, char const&)
 void google::MakeCheckOpValueString<signed char>(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>*, signed char const&)
 void google::MakeCheckOpValueString<unsigned char>(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char>>*, unsigned char const&)
 void std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, std::__ndk1::__unordered_map_hasher<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicHasher, folly::detail::DynamicKeyEqual, true>, std::__ndk1::__unordered_map_equal<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicKeyEqual, folly::detail::DynamicHasher, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>>>::__assign_multi<std::__ndk1::__hash_const_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, void*>*>>(std::__ndk1::__hash_const_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, void*>*>, std::__ndk1::__hash_const_iterator<std::__ndk1::__hash_node<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, void*>*>)
 void std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, std::__ndk1::__unordered_map_hasher<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicHasher, folly::detail::DynamicKeyEqual, true>, std::__ndk1::__unordered_map_equal<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicKeyEqual, folly::detail::DynamicHasher, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>>>::__do_rehash<false>(unsigned int)
 void std::__ndk1::__hash_table<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, std::__ndk1::__unordered_map_hasher<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicHasher, folly::detail::DynamicKeyEqual, true>, std::__ndk1::__unordered_map_equal<folly::dynamic, std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>, folly::detail::DynamicKeyEqual, folly::detail::DynamicHasher, true>, std::__ndk1::allocator<std::__ndk1::__hash_value_type<folly::dynamic, folly::dynamic>>>::__do_rehash<true>(unsigned int)
-void std::__ndk1::vector<folly::dynamic, std::__ndk1::allocator<folly::dynamic>>::assign<folly::dynamic*, 0>(folly::dynamic*, folly::dynamic*)
-void std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__push_back_slow_path<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)
-void std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__push_back_slow_path<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&&)
-void std::__ndk1::vector<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::jsi::Value>, std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::jsi::Value>>>::__emplace_back_slow_path<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, facebook::jsi::Value>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>&&, facebook::jsi::Value&&)
+void std::__ndk1::vector<folly::dynamic, std::__ndk1::allocator<folly::dynamic>>::__assign_with_size[abi:ne180000]<folly::dynamic*, folly::dynamic*>(folly::dynamic*, folly::dynamic*, int)
+void std::__ndk1::vector<folly::dynamic, std::__ndk1::allocator<folly::dynamic>>::__init_with_size[abi:ne180000]<folly::dynamic*, folly::dynamic*>(folly::dynamic*, folly::dynamic*, unsigned int)
+void std::__ndk1::vector<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::allocator<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>>::__init_with_size[abi:ne180000]<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>*, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>*>(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>*, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>*, unsigned int)
 vsnprintf
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info

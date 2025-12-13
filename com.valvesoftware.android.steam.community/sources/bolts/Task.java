@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
-/* loaded from: classes2.dex */
+/* loaded from: classes.dex */
 public class Task<TResult> {
     private static volatile UnobservedExceptionHandler unobservedExceptionHandler;
     private boolean cancelled;
@@ -263,9 +263,9 @@ public class Task<TResult> {
         }
         final bolts.TaskCompletionSource taskCompletionSource = new bolts.TaskCompletionSource();
         final AtomicBoolean atomicBoolean = new AtomicBoolean(false);
-        Iterator<? extends Task<TResult>> it = collection.iterator();
-        while (it.hasNext()) {
-            it.next().continueWith(new Continuation<TResult, Void>() { // from class: bolts.Task.5
+        Iterator<? extends Task<TResult>> it2 = collection.iterator();
+        while (it2.hasNext()) {
+            it2.next().continueWith(new Continuation<TResult, Void>() { // from class: bolts.Task.5
                 @Override // bolts.Continuation
                 public Void then(Task<TResult> task) {
                     if (atomicBoolean.compareAndSet(false, true)) {
@@ -286,9 +286,9 @@ public class Task<TResult> {
         }
         final bolts.TaskCompletionSource taskCompletionSource = new bolts.TaskCompletionSource();
         final AtomicBoolean atomicBoolean = new AtomicBoolean(false);
-        Iterator<? extends Task<?>> it = collection.iterator();
-        while (it.hasNext()) {
-            it.next().continueWith(new Continuation<Object, Void>() { // from class: bolts.Task.6
+        Iterator<? extends Task<?>> it2 = collection.iterator();
+        while (it2.hasNext()) {
+            it2.next().continueWith(new Continuation<Object, Void>() { // from class: bolts.Task.6
                 @Override // bolts.Continuation
                 public Void then(Task<Object> task) {
                     if (atomicBoolean.compareAndSet(false, true)) {
@@ -311,9 +311,9 @@ public class Task<TResult> {
                     return Collections.emptyList();
                 }
                 ArrayList arrayList = new ArrayList();
-                Iterator it = collection.iterator();
-                while (it.hasNext()) {
-                    arrayList.add(((Task) it.next()).getResult());
+                Iterator it2 = collection.iterator();
+                while (it2.hasNext()) {
+                    arrayList.add(((Task) it2.next()).getResult());
                 }
                 return arrayList;
             }
@@ -329,9 +329,9 @@ public class Task<TResult> {
         final Object obj = new Object();
         final AtomicInteger atomicInteger = new AtomicInteger(collection.size());
         final AtomicBoolean atomicBoolean = new AtomicBoolean(false);
-        Iterator<? extends Task<?>> it = collection.iterator();
-        while (it.hasNext()) {
-            it.next().continueWith(new Continuation<Object, Void>() { // from class: bolts.Task.8
+        Iterator<? extends Task<?>> it2 = collection.iterator();
+        while (it2.hasNext()) {
+            it2.next().continueWith(new Continuation<Object, Void>() { // from class: bolts.Task.8
                 @Override // bolts.Continuation
                 public Void then(Task<Object> task) {
                     if (task.isFaulted()) {
@@ -595,10 +595,10 @@ public class Task<TResult> {
 
     private void runContinuations() {
         synchronized (this.lock) {
-            Iterator<Continuation<TResult, Void>> it = this.continuations.iterator();
-            while (it.hasNext()) {
+            Iterator<Continuation<TResult, Void>> it2 = this.continuations.iterator();
+            while (it2.hasNext()) {
                 try {
-                    it.next().then(this);
+                    it2.next().then(this);
                 } catch (RuntimeException e) {
                     throw e;
                 } catch (Exception e2) {

@@ -37,7 +37,9 @@
             android:duplicateParentState="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:maxLines="1"/>
+            android:maxLines="1"
+            android:paddingStart="@dimen/m3_navigation_rail_label_padding_horizontal"
+            android:paddingEnd="@dimen/m3_navigation_rail_label_padding_horizontal"/>
         <TextView
             android:textSize="@dimen/mtrl_navigation_rail_active_text_size"
             android:ellipsize="end"
@@ -46,6 +48,8 @@
             android:duplicateParentState="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:maxLines="1"/>
+            android:maxLines="1"
+            android:paddingStart="@dimen/m3_navigation_rail_label_padding_horizontal"
+            android:paddingEnd="@dimen/m3_navigation_rail_label_padding_horizontal"/>
     </com.google.android.material.internal.BaselineLayout>
 </merge>

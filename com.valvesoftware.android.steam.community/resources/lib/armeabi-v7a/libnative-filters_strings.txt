@@ -2,7 +2,7 @@
 (Landroid/graphics/Bitmap;IIII)V
 (Landroid/graphics/Bitmap;IIZ)V
 (Landroid/graphics/Bitmap;Z)V
-Android (9352603, based on r450784d1) clang version 14.0.7 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
+Android (12285214, +pgo, +bolt, +lto, +mlgo, based on r522817b) clang version 18.0.2 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
 AndroidBitmap_getInfo
 AndroidBitmap_lockPixels
 AndroidBitmap_unlockPixels
@@ -24,7 +24,7 @@ Invalid circle center coordinates!
 Invalid internal state!
 JNI_OnLoad
 LIBC
-Linker: LLD 14.0.7
+Linker: LLD 18.0.2
 Rounding#addRoundedCorners: Bitmap dimensions too large
 Rounding#addRoundedCorners: Failed to get Bitmap info
 Rounding#addRoundedCorners: Failed to lock Bitmap pixels

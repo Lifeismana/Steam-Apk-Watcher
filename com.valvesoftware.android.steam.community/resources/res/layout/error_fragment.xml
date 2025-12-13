@@ -17,6 +17,7 @@
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="@color/dev_launcher_primary"
+            android:id="@+id/error_title"
             android:tag="DevLauncherErrorScreen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,6 +52,7 @@
         android:layout_alignParentBottom="true">
         <LinearLayout
             android:orientation="vertical"
+            android:id="@+id/error_footer_content"
             android:background="@color/dev_launcher_white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

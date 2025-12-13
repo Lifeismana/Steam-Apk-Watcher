@@ -1,7 +1,7 @@
 ()Lcom/facebook/jni/HybridData;
 (I)Lexpo/modules/av/player/PlayerData;
 (JLcom/facebook/react/turbomodule/core/CallInvokerHolderImpl;)V
-Android (11349228, +pgo, +bolt, +lto, -mlgo, based on r487747e) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)
+Android (12285214, +pgo, -bolt, +lto, -mlgo, based on r522817b) clang version 18.0.2 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
 CallInvokerHolder is null
 Disabling Sample Buffer Callback...
 Enabling Sample Buffer Callback...
@@ -13,7 +13,7 @@ Lcom/facebook/jni/HybridData$Destructor;
 Lcom/facebook/jni/HybridData;
 Lexpo/modules/av/AVManager;
 Lexpo/modules/av/player/PlayerData;
-Linker: LLD 17.0.2
+Linker: LLD 18.0.2
 N4expo2av10JAVManagerE
 N4expo2av11JPlayerDataE
 N8facebook3jni11HybridClassIN4expo2av10JAVManagerENS0_6detail15BaseHybridClassEEE
@@ -41,7 +41,7 @@ ZZN4expo2av10JAVManager18installJSIBindingsExN8facebook3jni9alias_refIPNS3_6deta
 ZZZN4expo2av10JAVManager18installJSIBindingsExN8facebook3jni9alias_refIPNS3_6detail8JTypeForINS3_11HybridClassINS2_5react17CallInvokerHolderENS5_15BaseHybridClassEE8JavaPartENS3_7JObjectEvE11_javaobjectEEEENK3$_0clERNS2_3jsi7RuntimeERKNSJ_5ValueEPSN_jENKUlNS4_INS3_15JPrimitiveArrayIP11_jbyteArrayEEEEdE_clESU_dEUlvE_
 _JNIEnv::CallObjectMethod(_jobject*, _jmethodID*, ...)
 _JNIEnv::CallVoidMethod(_jobject*, _jmethodID*, ...)
-_ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC2B7v170000IDnEEPKc
+_ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC2B8ne180000ILi0EEEPKc
 __EXAV_setOnAudioSampleReceivedCallback
 __android_log_write
 __cxa_allocate_exception
@@ -190,16 +190,11 @@ operator delete(void*)
 operator new(unsigned int)
 sampleBufferCallback
 setEnableSampleBufferCallback
-std::__ndk1::__shared_ptr_emplace<facebook::jsi::Function, std::__ndk1::allocator<facebook::jsi::Function>>::__on_zero_shared()
-std::__ndk1::__shared_ptr_emplace<facebook::jsi::Function, std::__ndk1::allocator<facebook::jsi::Function>>::__on_zero_shared_weak()
 std::__ndk1::__shared_ptr_emplace<facebook::jsi::Function, std::__ndk1::allocator<facebook::jsi::Function>>::~__shared_ptr_emplace()
-std::__ndk1::__shared_ptr_emplace<facebook::jsi::Object, std::__ndk1::allocator<facebook::jsi::Object>>::__on_zero_shared()
-std::__ndk1::__shared_ptr_emplace<facebook::jsi::Object, std::__ndk1::allocator<facebook::jsi::Object>>::__on_zero_shared_weak()
 std::__ndk1::__shared_ptr_emplace<facebook::jsi::Object, std::__ndk1::allocator<facebook::jsi::Object>>::~__shared_ptr_emplace()
 std::__ndk1::__shared_weak_count::__get_deleter(std::type_info const&) const
 std::__ndk1::__shared_weak_count::__release_weak()
 std::__ndk1::__shared_weak_count::~__shared_weak_count()
-std::__ndk1::bad_function_call::~bad_function_call()
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::append(char const*, unsigned int)
 std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>::insert(unsigned int, char const*, unsigned int)
 std::__ndk1::to_string(double)
@@ -245,7 +240,6 @@ vector
 void facebook::jni::detail::setNativePointer<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator>(facebook::jni::basic_strong_ref<facebook::jni::detail::HybridData, facebook::jni::LocalReferenceAllocator>, std::__ndk1::unique_ptr<facebook::jni::detail::BaseHybridClass, std::__ndk1::default_delete<facebook::jni::detail::BaseHybridClass>>)
 void facebook::jsi::Object::setProperty<facebook::jsi::Array&>(facebook::jsi::Runtime&, char const*, facebook::jsi::Array&) const
 void facebook::jsi::Object::setProperty<facebook::jsi::Function>(facebook::jsi::Runtime&, char const*, facebook::jsi::Function&&) const
-void facebook::jsi::Object::setProperty<facebook::jsi::Value>(facebook::jsi::Runtime&, char const*, facebook::jsi::Value&&) const
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info
 vtable for expo::av::JAVManager

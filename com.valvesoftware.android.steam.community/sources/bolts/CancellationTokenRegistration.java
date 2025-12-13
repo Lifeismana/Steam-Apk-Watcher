@@ -2,7 +2,7 @@ package bolts;
 
 import java.io.Closeable;
 
-/* loaded from: classes2.dex */
+/* loaded from: classes.dex */
 public class CancellationTokenRegistration implements Closeable {
     private Runnable action;
     private boolean closed;

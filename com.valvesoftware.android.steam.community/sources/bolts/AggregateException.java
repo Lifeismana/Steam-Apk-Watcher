@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-/* loaded from: classes2.dex */
+/* loaded from: classes.dex */
 public class AggregateException extends Exception {
     private static final String DEFAULT_MESSAGE = "There were multiple errors.";
     private static final long serialVersionUID = 1;

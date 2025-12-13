@@ -14,7 +14,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.List;
 
-/* loaded from: classes2.dex */
+/* loaded from: classes.dex */
 class InstallReferrerClientImpl extends InstallReferrerClient {
     private static final int PLAY_STORE_MIN_APP_VER = 80837300;
     private static final String SERVICE_ACTION_NAME = "com.google.android.finsky.BIND_GET_INSTALL_REFERRER_SERVICE";
@@ -47,7 +47,7 @@ class InstallReferrerClientImpl extends InstallReferrerClient {
         @Override // android.content.ServiceConnection
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
             InstallReferrerCommons.logVerbose(InstallReferrerClientImpl.TAG, "Install Referrer service connected.");
-            InstallReferrerClientImpl.this.service = IGetInstallReferrerService.Stub.m632b(iBinder);
+            InstallReferrerClientImpl.this.service = IGetInstallReferrerService.Stub.m630b(iBinder);
             InstallReferrerClientImpl.this.clientState = 2;
             this.mListener.onInstallReferrerSetupFinished(0);
         }
@@ -88,7 +88,7 @@ class InstallReferrerClientImpl extends InstallReferrerClient {
         Bundle bundle = new Bundle();
         bundle.putString("package_name", this.mApplicationContext.getPackageName());
         try {
-            return new ReferrerDetails(this.service.mo631c(bundle));
+            return new ReferrerDetails(this.service.mo629c(bundle));
         } catch (RemoteException e) {
             InstallReferrerCommons.logWarn(TAG, "RemoteException getting install referrer information");
             this.clientState = 0;
