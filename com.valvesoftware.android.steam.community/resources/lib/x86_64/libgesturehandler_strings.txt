@@ -19,6 +19,7 @@ Linker: LLD 18.0.2
 NSt6__ndk110__function6__baseIFN8facebook3jsi5ValueERNS3_7RuntimeERKS4_PS7_mEEE
 NSt6__ndk110__function6__funcIZ15decorateRuntimeRN8facebook3jsi7RuntimeEE3$_0NS_9allocatorIS6_EEFNS3_5ValueES5_RKS9_PSA_mEEE
 Paragraph
+Rlc_
 Text
 Unknown DWARF encoding for search table.
 Z15decorateRuntimeRN8facebook3jsi7RuntimeEE3$_0

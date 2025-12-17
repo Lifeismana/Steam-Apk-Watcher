@@ -196,7 +196,6 @@ initHybrid
 java.lang.NullPointerException
 java/lang/Integer
 java/lang/NullPointerException
-k2r2
 libandroid.so
 libc++_shared.so
 libc.so

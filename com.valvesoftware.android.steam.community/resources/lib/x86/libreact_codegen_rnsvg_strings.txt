@@ -5,7 +5,7 @@
 (Ljava/lang/Double;Lcom/facebook/react/bridge/ReadableMap;)Z
 (Ljava/lang/Double;Lcom/facebook/react/bridge/ReadableMap;Lcom/facebook/react/bridge/Callback;)V
 (Ljava/lang/String;Lcom/facebook/react/bridge/Promise;)V
-/home/buildbot/.gradle/caches/8.13/transforms/9f980b73ca2455e805df4fc64bafa9b2/transformed/react-android-0.79.5-release/prefab/modules/reactnative/include/react/renderer/core/propsConversions.h
+/home/buildbot/.gradle/caches/8.13/transforms/22c48ebb167e75800297167b14a58693/transformed/react-android-0.79.6-release/prefab/modules/reactnative/include/react/renderer/core/propsConversions.h
 ?N8facebook5react32NativeSvgRenderableModuleSpecJSIE
 ?NSt6__ndk120__shared_ptr_emplaceIN8facebook5react22ConcreteViewShadowNodeIXadsoKcL_ZNS2_32RNSVGSvgViewAndroidComponentNameEEEENS2_24RNSVGSvgViewAndroidPropsENS2_31RNSVGSvgViewAndroidEventEmitterENS2_24RNSVGSvgViewAndroidStateELb0EEENS_9allocatorIS8_EEEE
 @@RenderableModule
@@ -234,6 +234,7 @@ __stack_chk_fail
 __strlen_chk
 abort
 accessible
+al'g
 align
 alignmentBaseline
 arithmetic

@@ -3087,6 +3087,7 @@ _JNIEnv::CallDoubleMethod(_jobject*, _jmethodID*, ...)
 _JNIEnv::CallFloatMethod(_jobject*, _jmethodID*, ...)
 _JNIEnv::CallIntMethod(_jobject*, _jmethodID*, ...)
 _JNIEnv::CallObjectMethod(_jobject*, _jmethodID*, ...)
+_JNIEnv::CallStaticLongMethod(_jclass*, _jmethodID*, ...)
 _JNIEnv::CallStaticObjectMethod(_jclass*, _jmethodID*, ...)
 _JNIEnv::CallStaticVoidMethod(_jclass*, _jmethodID*, ...)
 _Unwind_Resume
@@ -3565,6 +3566,7 @@ com/facebook/react/uimanager/UIConstantsProviderBinding
 com/facebook/react/uimanager/UIConstantsProviderBinding$ConstantsForViewManagerProvider
 com/facebook/react/uimanager/UIConstantsProviderBinding$ConstantsProvider
 com/facebook/react/uimanager/UIConstantsProviderBinding$DefaultEventTypesProvider
+com/facebook/react/views/modal/ReactModalHostView
 com/facebook/yoga/YogaLogLevel
 com/facebook/yoga/YogaNative
 combobox
@@ -4316,6 +4318,7 @@ facebook::jni::JStaticMethod<facebook::jni::detail::JTypeFor<facebook::jni::JBoo
 facebook::jni::JStaticMethod<facebook::jni::detail::JTypeFor<facebook::jni::JDouble, facebook::jni::JObject, void>::_javaobject* (double)> facebook::jni::JClass::getStaticMethod<facebook::jni::detail::JTypeFor<facebook::jni::JDouble, facebook::jni::JObject, void>::_javaobject* (double)>(char const*) const
 facebook::jni::JStaticMethod<facebook::jni::detail::JTypeFor<facebook::jni::JFloat, facebook::jni::JObject, void>::_javaobject* (float)> facebook::jni::JClass::getStaticMethod<facebook::jni::detail::JTypeFor<facebook::jni::JFloat, facebook::jni::JObject, void>::_javaobject* (float)>(char const*) const
 facebook::jni::JStaticMethod<facebook::jni::detail::JTypeFor<facebook::jni::JInteger, facebook::jni::JObject, void>::_javaobject* (int)> facebook::jni::JClass::getStaticMethod<facebook::jni::detail::JTypeFor<facebook::jni::JInteger, facebook::jni::JObject, void>::_javaobject* (int)>(char const*) const
+facebook::jni::JStaticMethod<long long ()> facebook::jni::JClass::getStaticMethod<long long ()>(char const*) const
 facebook::jni::JStaticMethod<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)> facebook::jni::JClass::getStaticMethod<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)>(char const*) const
 facebook::jni::JStaticMethod<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)> facebook::jni::JClass::getStaticMethod<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)>(char const*) const
 facebook::jni::JStaticMethod<void (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>)>::operator()(facebook::jni::alias_ref<_jclass*>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>) const
@@ -4437,6 +4440,8 @@ facebook::jni::JavaClass<facebook::react::JReactHostImpl, facebook::jni::JObject
 facebook::jni::JavaClass<facebook::react::JReactHostImpl, facebook::jni::JObject, void>::javaClassStatic()::cls
 facebook::jni::JavaClass<facebook::react::JReactMarker, facebook::jni::JObject, void>::javaClassStatic()
 facebook::jni::JavaClass<facebook::react::JReactMarker, facebook::jni::JObject, void>::javaClassStatic()::cls
+facebook::jni::JavaClass<facebook::react::JReactModalHostView, facebook::jni::JObject, void>::javaClassStatic()
+facebook::jni::JavaClass<facebook::react::JReactModalHostView, facebook::jni::JObject, void>::javaClassStatic()::cls
 facebook::jni::JavaClass<facebook::react::JReactSoftExceptionLogger, facebook::jni::JObject, void>::javaClassStatic()
 facebook::jni::JavaClass<facebook::react::JReactSoftExceptionLogger, facebook::jni::JObject, void>::javaClassStatic()::cls
 facebook::jni::JavaClass<facebook::react::JRemoteConnection, facebook::jni::JObject, void>::javaClassStatic()
@@ -5406,6 +5411,7 @@ facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::react::JRe
 facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::react::JReactExceptionManager, facebook::jni::JObject, void>::_javaobject*>::kBaseName
 facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::react::JReactHostImpl, facebook::jni::JObject, void>::_javaobject*>::kBaseName
 facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::react::JReactMarker, facebook::jni::JObject, void>::_javaobject*>::kBaseName
+facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::react::JReactModalHostView, facebook::jni::JObject, void>::_javaobject*>::kBaseName
 facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::react::JReactNativeFeatureFlagsCxxInterop, facebook::jni::JObject, void>::_javaobject*>::kBaseName
 facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::react::JReactSoftExceptionLogger, facebook::jni::JObject, void>::_javaobject*>::kBaseName
 facebook::jni::jtype_traits<facebook::jni::detail::JTypeFor<facebook::react::JReflectMethod, facebook::jni::JObject, void>::_javaobject*>::kDescriptor
@@ -6633,6 +6639,8 @@ facebook::react::JReactMarker::logPerfMarkerWithInstanceKey(facebook::react::Rea
 facebook::react::JReactMarker::nativeLogMarker(facebook::jni::alias_ref<_jclass*>, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>, long long)
 facebook::react::JReactMarker::registerNatives()
 facebook::react::JReactMarker::setLogPerfMarkerIfNeeded()
+facebook::react::JReactModalHostView::getDisplayMetrics()
+facebook::react::JReactModalHostView::getDisplayMetrics()::method
 facebook::react::JReactNativeFeatureFlagsCxxInterop::commonTestFlag(facebook::jni::alias_ref<facebook::react::JReactNativeFeatureFlagsCxxInterop>)
 facebook::react::JReactNativeFeatureFlagsCxxInterop::dangerouslyForceOverride(facebook::jni::alias_ref<facebook::react::JReactNativeFeatureFlagsCxxInterop>, facebook::jni::alias_ref<_jobject*>)
 facebook::react::JReactNativeFeatureFlagsCxxInterop::dangerouslyReset(facebook::jni::alias_ref<facebook::react::JReactNativeFeatureFlagsCxxInterop>)
@@ -6945,6 +6953,7 @@ facebook::react::ModalHostViewEventEmitter::~ModalHostViewEventEmitter()
 facebook::react::ModalHostViewPresentationStyle facebook::react::convertRawProp<facebook::react::ModalHostViewPresentationStyle, facebook::react::ModalHostViewPresentationStyle>(facebook::react::PropsParserContext const&, facebook::react::RawProps const&, char const*, facebook::react::ModalHostViewPresentationStyle const&, facebook::react::ModalHostViewPresentationStyle const&, char const*, char const*)
 facebook::react::ModalHostViewProps::ModalHostViewProps(facebook::react::PropsParserContext const&, facebook::react::ModalHostViewProps const&, facebook::react::RawProps const&)
 facebook::react::ModalHostViewProps::~ModalHostViewProps()
+facebook::react::ModalHostViewScreenSize()
 facebook::react::ModalHostViewShadowNode::~ModalHostViewShadowNode()
 facebook::react::ModalHostViewState::getDynamic() const
 facebook::react::ModalHostViewSupportedOrientationsMaskWrapped facebook::react::convertRawProp<facebook::react::ModalHostViewSupportedOrientationsMaskWrapped, facebook::react::ModalHostViewSupportedOrientationsMaskWrapped>(facebook::react::PropsParserContext const&, facebook::react::RawProps const&, char const*, facebook::react::ModalHostViewSupportedOrientationsMaskWrapped const&, facebook::react::ModalHostViewSupportedOrientationsMaskWrapped const&, char const*, char const*)
@@ -9509,6 +9518,7 @@ getRuntimeScheduler
 getSLEB128
 getSavedRegister
 getScheduledLocalNotifications
+getScreenDisplayMetricsWithoutInsets
 getScrollPosition
 getSimpleMemoryInfo
 getSizeWithHeaders
@@ -9782,6 +9792,7 @@ guard variable for facebook::jni::JavaClass<facebook::react::JReactCxxErrorHandl
 guard variable for facebook::jni::JavaClass<facebook::react::JReactExceptionManager, facebook::jni::JObject, void>::javaClassStatic()::cls
 guard variable for facebook::jni::JavaClass<facebook::react::JReactHostImpl, facebook::jni::JObject, void>::javaClassStatic()::cls
 guard variable for facebook::jni::JavaClass<facebook::react::JReactMarker, facebook::jni::JObject, void>::javaClassStatic()::cls
+guard variable for facebook::jni::JavaClass<facebook::react::JReactModalHostView, facebook::jni::JObject, void>::javaClassStatic()::cls
 guard variable for facebook::jni::JavaClass<facebook::react::JReactSoftExceptionLogger, facebook::jni::JObject, void>::javaClassStatic()::cls
 guard variable for facebook::jni::JavaClass<facebook::react::JRemoteConnection, facebook::jni::JObject, void>::javaClassStatic()::cls
 guard variable for facebook::jni::JavaClass<facebook::react::JTurboModuleWithJSIBindings, facebook::jni::JObject, void>::javaClassStatic()::cls
@@ -9891,6 +9902,7 @@ guard variable for facebook::react::DefaultEventTypesProvider::getDefaultEventTy
 guard variable for facebook::react::JReactHostImpl::getHostMetadata() const::method
 guard variable for facebook::react::JReactHostImpl::reload(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&)::method
 guard variable for facebook::react::JReactHostImpl::setPausedInDebuggerMessage(std::__ndk1::optional<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>>>)::method
+guard variable for facebook::react::JReactModalHostView::getDisplayMetrics()::method
 guard variable for facebook::react::JavaModuleWrapper::getMethodDescriptors()::getMethods
 guard variable for facebook::react::JavaModuleWrapper::getModule()::getModule
 guard variable for facebook::react::ReactNativeFeatureFlagsProviderHolder::commonTestFlag()::method

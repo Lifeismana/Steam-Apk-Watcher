@@ -1538,7 +1538,7 @@ flattened array exceeds length limit
 floor
 fmod
 fopen
-for RN 0.79.5
+for RN 0.79.6
 for await..of loops are currently unsupported
 for-in/for-of variable declaration may not be initialized
 forControl

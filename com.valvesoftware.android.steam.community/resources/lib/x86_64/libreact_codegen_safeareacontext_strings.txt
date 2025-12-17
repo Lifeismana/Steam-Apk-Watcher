@@ -1,5 +1,5 @@
 ()Ljava/util/Map;
-/home/buildbot/.gradle/caches/8.13/transforms/9f980b73ca2455e805df4fc64bafa9b2/transformed/react-android-0.79.5-release/prefab/modules/reactnative/include/react/renderer/core/propsConversions.h
+/home/buildbot/.gradle/caches/8.13/transforms/22c48ebb167e75800297167b14a58693/transformed/react-android-0.79.6-release/prefab/modules/reactnative/include/react/renderer/core/propsConversions.h
 ?NSt6__ndk120__shared_ptr_emplaceIN8facebook5react22ConcreteViewShadowNodeIXadsoKcL_ZNS2_32RNCSafeAreaProviderComponentNameEEEENS2_24RNCSafeAreaProviderPropsENS2_31RNCSafeAreaProviderEventEmitterENS2_24RNCSafeAreaProviderStateELb0EEENS_9allocatorIS8_EEEE
 Android (12285214, +pgo, +bolt, +lto, +mlgo, based on r522817b) clang version 18.0.2 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
 CIE ID is not zero
