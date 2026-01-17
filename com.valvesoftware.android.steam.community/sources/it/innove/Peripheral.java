@@ -107,22 +107,22 @@ public class Peripheral extends BluetoothGattCallback {
     }
 
     private void sendConnectionEvent(BluetoothDevice bluetoothDevice, int i) {
-        WritableMap createMap = Arguments.createMap();
-        createMap.putString("peripheral", bluetoothDevice.getAddress());
+        WritableMap writableMapCreateMap = Arguments.createMap();
+        writableMapCreateMap.putString("peripheral", bluetoothDevice.getAddress());
         if (i != -1) {
-            createMap.putInt("status", i);
+            writableMapCreateMap.putInt("status", i);
         }
-        this.bleManager.emitOnConnectPeripheral(createMap);
+        this.bleManager.emitOnConnectPeripheral(writableMapCreateMap);
         Log.d(BleManager.LOG_TAG, "Peripheral connected:" + bluetoothDevice.getAddress());
     }
 
     private void sendDisconnectionEvent(BluetoothDevice bluetoothDevice, int i) {
-        WritableMap createMap = Arguments.createMap();
-        createMap.putString("peripheral", bluetoothDevice.getAddress());
+        WritableMap writableMapCreateMap = Arguments.createMap();
+        writableMapCreateMap.putString("peripheral", bluetoothDevice.getAddress());
         if (i != -1) {
-            createMap.putInt("status", i);
+            writableMapCreateMap.putInt("status", i);
         }
-        this.bleManager.emitOnDisconnectPeripheral(createMap);
+        this.bleManager.emitOnDisconnectPeripheral(writableMapCreateMap);
         Log.d(BleManager.LOG_TAG, "Peripheral disconnected:" + bluetoothDevice.getAddress());
     }
 
@@ -130,7 +130,7 @@ public class Peripheral extends BluetoothGattCallback {
         this.mainHandler.post(new Runnable() { // from class: it.innove.Peripheral$$ExternalSyntheticLambda0
             @Override // java.lang.Runnable
             public final void run() {
-                Peripheral.this.lambda$connect$0(callback, readableMap, activity);
+                this.f$0.lambda$connect$0(callback, readableMap, activity);
             }
         });
     }
@@ -162,7 +162,7 @@ public class Peripheral extends BluetoothGattCallback {
         this.mainHandler.post(new Runnable() { // from class: it.innove.Peripheral$$ExternalSyntheticLambda15
             @Override // java.lang.Runnable
             public final void run() {
-                Peripheral.this.lambda$disconnect$1(z, callback);
+                this.f$0.lambda$disconnect$1(z, callback);
             }
         });
     }
@@ -195,82 +195,82 @@ public class Peripheral extends BluetoothGattCallback {
     }
 
     public WritableMap asWritableMap() {
-        WritableMap createMap = Arguments.createMap();
-        WritableMap createMap2 = Arguments.createMap();
+        WritableMap writableMapCreateMap = Arguments.createMap();
+        WritableMap writableMapCreateMap2 = Arguments.createMap();
         try {
-            createMap.putString("name", this.device.getName());
-            createMap.putString("id", this.device.getAddress());
-            createMap.putInt("rssi", this.advertisingRSSI);
+            writableMapCreateMap.putString("name", this.device.getName());
+            writableMapCreateMap.putString("id", this.device.getAddress());
+            writableMapCreateMap.putInt("rssi", this.advertisingRSSI);
             String name = this.device.getName();
             if (name != null) {
-                createMap2.putString("localName", name);
+                writableMapCreateMap2.putString("localName", name);
             }
-            createMap2.putMap(Constants.MessagePayloadKeys.RAW_DATA, byteArrayToWritableMap(this.advertisingDataBytes));
-            createMap2.putBoolean("isConnectable", true);
-            createMap.putMap("advertising", createMap2);
+            writableMapCreateMap2.putMap(Constants.MessagePayloadKeys.RAW_DATA, byteArrayToWritableMap(this.advertisingDataBytes));
+            writableMapCreateMap2.putBoolean("isConnectable", true);
+            writableMapCreateMap.putMap("advertising", writableMapCreateMap2);
         } catch (Exception e) {
             Log.e(BleManager.LOG_TAG, "Unexpected error on asWritableMap", e);
         }
-        return createMap;
+        return writableMapCreateMap;
     }
 
     public WritableMap asWritableMap(BluetoothGatt bluetoothGatt) {
         Iterator<BluetoothGattService> it2;
-        WritableMap asWritableMap = asWritableMap();
-        WritableArray createArray = Arguments.createArray();
-        WritableArray createArray2 = Arguments.createArray();
+        WritableMap writableMapAsWritableMap = asWritableMap();
+        WritableArray writableArrayCreateArray = Arguments.createArray();
+        WritableArray writableArrayCreateArray2 = Arguments.createArray();
         if (this.connected && bluetoothGatt != null) {
             Iterator<BluetoothGattService> it3 = bluetoothGatt.getServices().iterator();
             while (it3.hasNext()) {
                 BluetoothGattService next = it3.next();
-                WritableMap createMap = Arguments.createMap();
-                createMap.putString(InstallationId.LEGACY_PREFERENCES_UUID_KEY, UUIDHelper.uuidToString(next.getUuid()));
+                WritableMap writableMapCreateMap = Arguments.createMap();
+                writableMapCreateMap.putString(InstallationId.LEGACY_PREFERENCES_UUID_KEY, UUIDHelper.uuidToString(next.getUuid()));
                 for (BluetoothGattCharacteristic bluetoothGattCharacteristic : next.getCharacteristics()) {
-                    WritableMap createMap2 = Arguments.createMap();
-                    createMap2.putString(NotificationCompat.CATEGORY_SERVICE, UUIDHelper.uuidToString(next.getUuid()));
-                    createMap2.putString("characteristic", UUIDHelper.uuidToString(bluetoothGattCharacteristic.getUuid()));
-                    createMap2.putMap("properties", Helper.decodeProperties(bluetoothGattCharacteristic));
+                    WritableMap writableMapCreateMap2 = Arguments.createMap();
+                    writableMapCreateMap2.putString(NotificationCompat.CATEGORY_SERVICE, UUIDHelper.uuidToString(next.getUuid()));
+                    writableMapCreateMap2.putString("characteristic", UUIDHelper.uuidToString(bluetoothGattCharacteristic.getUuid()));
+                    writableMapCreateMap2.putMap("properties", Helper.decodeProperties(bluetoothGattCharacteristic));
                     if (bluetoothGattCharacteristic.getPermissions() > 0) {
-                        createMap2.putMap("permissions", Helper.decodePermissions(bluetoothGattCharacteristic));
+                        writableMapCreateMap2.putMap("permissions", Helper.decodePermissions(bluetoothGattCharacteristic));
                     }
-                    WritableArray createArray3 = Arguments.createArray();
+                    WritableArray writableArrayCreateArray3 = Arguments.createArray();
                     for (BluetoothGattDescriptor bluetoothGattDescriptor : bluetoothGattCharacteristic.getDescriptors()) {
-                        WritableMap createMap3 = Arguments.createMap();
-                        createMap3.putString(InstallationId.LEGACY_PREFERENCES_UUID_KEY, UUIDHelper.uuidToString(bluetoothGattDescriptor.getUuid()));
+                        WritableMap writableMapCreateMap3 = Arguments.createMap();
+                        writableMapCreateMap3.putString(InstallationId.LEGACY_PREFERENCES_UUID_KEY, UUIDHelper.uuidToString(bluetoothGattDescriptor.getUuid()));
                         if (bluetoothGattDescriptor.getValue() != null) {
                             it2 = it3;
-                            createMap3.putString("value", Base64.encodeToString(bluetoothGattDescriptor.getValue(), 2));
+                            writableMapCreateMap3.putString("value", Base64.encodeToString(bluetoothGattDescriptor.getValue(), 2));
                         } else {
                             it2 = it3;
-                            createMap3.putString("value", null);
+                            writableMapCreateMap3.putString("value", null);
                         }
                         if (bluetoothGattDescriptor.getPermissions() > 0) {
-                            createMap3.putMap("permissions", Helper.decodePermissions(bluetoothGattDescriptor));
+                            writableMapCreateMap3.putMap("permissions", Helper.decodePermissions(bluetoothGattDescriptor));
                         }
-                        createArray3.pushMap(createMap3);
+                        writableArrayCreateArray3.pushMap(writableMapCreateMap3);
                         it3 = it2;
                     }
                     Iterator<BluetoothGattService> it4 = it3;
-                    if (createArray3.size() > 0) {
-                        createMap2.putArray("descriptors", createArray3);
+                    if (writableArrayCreateArray3.size() > 0) {
+                        writableMapCreateMap2.putArray("descriptors", writableArrayCreateArray3);
                     }
-                    createArray2.pushMap(createMap2);
+                    writableArrayCreateArray2.pushMap(writableMapCreateMap2);
                     it3 = it4;
                 }
-                createArray.pushMap(createMap);
+                writableArrayCreateArray.pushMap(writableMapCreateMap);
             }
-            asWritableMap.putArray("services", createArray);
-            asWritableMap.putArray("characteristics", createArray2);
+            writableMapAsWritableMap.putArray("services", writableArrayCreateArray);
+            writableMapAsWritableMap.putArray("characteristics", writableArrayCreateArray2);
         }
-        return asWritableMap;
+        return writableMapAsWritableMap;
     }
 
     static WritableMap byteArrayToWritableMap(byte[] bArr) throws JSONException {
-        WritableMap createMap = Arguments.createMap();
-        createMap.putString("CDVType", "ArrayBuffer");
-        createMap.putString("data", bArr != null ? Base64.encodeToString(bArr, 2) : null);
-        createMap.putArray("bytes", bArr != null ? BleManager.bytesToWritableArray(bArr) : null);
-        return createMap;
+        WritableMap writableMapCreateMap = Arguments.createMap();
+        writableMapCreateMap.putString("CDVType", "ArrayBuffer");
+        writableMapCreateMap.putString("data", bArr != null ? Base64.encodeToString(bArr, 2) : null);
+        writableMapCreateMap.putArray("bytes", bArr != null ? BleManager.bytesToWritableArray(bArr) : null);
+        return writableMapCreateMap;
     }
 
     public boolean isConnected() {
@@ -291,7 +291,7 @@ public class Peripheral extends BluetoothGattCallback {
         this.mainHandler.post(new Runnable() { // from class: it.innove.Peripheral$$ExternalSyntheticLambda14
             @Override // java.lang.Runnable
             public final void run() {
-                Peripheral.this.lambda$onServicesDiscovered$2(bluetoothGatt, i);
+                this.f$0.lambda$onServicesDiscovered$2(bluetoothGatt, i);
             }
         });
     }
@@ -380,7 +380,7 @@ public class Peripheral extends BluetoothGattCallback {
         this.mainHandler.post(new Runnable() { // from class: it.innove.Peripheral$$ExternalSyntheticLambda2
             @Override // java.lang.Runnable
             public final void run() {
-                Peripheral.this.lambda$onConnectionStateChange$3(bluetoothGatt, i, i2);
+                this.f$0.lambda$onConnectionStateChange$3(bluetoothGatt, i, i2);
             }
         });
     }
@@ -439,28 +439,28 @@ public class Peripheral extends BluetoothGattCallback {
             super.onCharacteristicChanged(bluetoothGatt, bluetoothGattCharacteristic, bArr);
         }
         try {
-            String uuid = bluetoothGattCharacteristic.getUuid().toString();
-            String uuid2 = bluetoothGattCharacteristic.getService().getUuid().toString();
-            NotifyBufferContainer notifyBufferContainer = this.bufferedCharacteristics.get(bufferedCharacteristicsKey(uuid2, uuid));
+            String string = bluetoothGattCharacteristic.getUuid().toString();
+            String string2 = bluetoothGattCharacteristic.getService().getUuid().toString();
+            NotifyBufferContainer notifyBufferContainer = this.bufferedCharacteristics.get(bufferedCharacteristicsKey(string2, string));
             while (bArr != null) {
                 if (notifyBufferContainer != null) {
-                    byte[] put = notifyBufferContainer.put(bArr);
+                    byte[] bArrPut = notifyBufferContainer.put(bArr);
                     if (!notifyBufferContainer.isBufferFull()) {
                         return;
                     }
-                    byte[] array = notifyBufferContainer.items.array();
+                    byte[] bArrArray = notifyBufferContainer.items.array();
                     notifyBufferContainer.resetBuffer();
-                    bArr2 = put;
-                    bArr = array;
+                    bArr2 = bArrPut;
+                    bArr = bArrArray;
                 } else {
                     bArr2 = null;
                 }
-                WritableMap createMap = Arguments.createMap();
-                createMap.putString("peripheral", this.device.getAddress());
-                createMap.putString("characteristic", uuid);
-                createMap.putString(NotificationCompat.CATEGORY_SERVICE, uuid2);
-                createMap.putArray("value", BleManager.bytesToWritableArray(bArr));
-                this.bleManager.emitOnDidUpdateValueForCharacteristic(createMap);
+                WritableMap writableMapCreateMap = Arguments.createMap();
+                writableMapCreateMap.putString("peripheral", this.device.getAddress());
+                writableMapCreateMap.putString("characteristic", string);
+                writableMapCreateMap.putString(NotificationCompat.CATEGORY_SERVICE, string2);
+                writableMapCreateMap.putArray("value", BleManager.bytesToWritableArray(bArr));
+                this.bleManager.emitOnDidUpdateValueForCharacteristic(writableMapCreateMap);
                 bArr = bArr2;
             }
         } catch (Exception e) {
@@ -484,7 +484,7 @@ public class Peripheral extends BluetoothGattCallback {
         this.mainHandler.post(new Runnable() { // from class: it.innove.Peripheral$$ExternalSyntheticLambda12
             @Override // java.lang.Runnable
             public final void run() {
-                Peripheral.this.lambda$onCharacteristicRead$4(i, bluetoothGattCharacteristic, bArr);
+                this.f$0.lambda$onCharacteristicRead$4(i, bluetoothGattCharacteristic, bArr);
             }
         });
     }
@@ -501,10 +501,10 @@ public class Peripheral extends BluetoothGattCallback {
             }
             this.readCallbacks.clear();
         } else if (!this.readCallbacks.isEmpty()) {
-            byte[] copyOf = copyOf(bArr);
+            byte[] bArrCopyOf = copyOf(bArr);
             Iterator<Callback> it3 = this.readCallbacks.iterator();
             while (it3.hasNext()) {
-                it3.next().invoke(null, BleManager.bytesToWritableArray(copyOf));
+                it3.next().invoke(null, BleManager.bytesToWritableArray(bArrCopyOf));
             }
             this.readCallbacks.clear();
         }
@@ -517,7 +517,7 @@ public class Peripheral extends BluetoothGattCallback {
         this.mainHandler.post(new Runnable() { // from class: it.innove.Peripheral$$ExternalSyntheticLambda5
             @Override // java.lang.Runnable
             public final void run() {
-                Peripheral.this.lambda$onCharacteristicWrite$5(bluetoothGattCharacteristic, i);
+                this.f$0.lambda$onCharacteristicWrite$5(bluetoothGattCharacteristic, i);
             }
         });
     }
@@ -553,7 +553,7 @@ public class Peripheral extends BluetoothGattCallback {
         this.mainHandler.post(new Runnable() { // from class: it.innove.Peripheral$$ExternalSyntheticLambda9
             @Override // java.lang.Runnable
             public final void run() {
-                Peripheral.this.lambda$onDescriptorWrite$6(i);
+                this.f$0.lambda$onDescriptorWrite$6(i);
             }
         });
     }
@@ -602,7 +602,7 @@ public class Peripheral extends BluetoothGattCallback {
         this.mainHandler.post(new Runnable() { // from class: it.innove.Peripheral$$ExternalSyntheticLambda4
             @Override // java.lang.Runnable
             public final void run() {
-                Peripheral.this.lambda$onDescriptorRead$7(i, bluetoothGattDescriptor);
+                this.f$0.lambda$onDescriptorRead$7(i, bluetoothGattDescriptor);
             }
         });
     }
@@ -619,10 +619,10 @@ public class Peripheral extends BluetoothGattCallback {
             }
             this.readDescriptorCallbacks.clear();
         } else if (!this.readDescriptorCallbacks.isEmpty()) {
-            byte[] copyOf = copyOf(bluetoothGattDescriptor.getValue());
+            byte[] bArrCopyOf = copyOf(bluetoothGattDescriptor.getValue());
             Iterator<Callback> it3 = this.readDescriptorCallbacks.iterator();
             while (it3.hasNext()) {
-                it3.next().invoke(null, BleManager.bytesToWritableArray(copyOf));
+                it3.next().invoke(null, BleManager.bytesToWritableArray(bArrCopyOf));
             }
             this.readDescriptorCallbacks.clear();
         }
@@ -635,7 +635,7 @@ public class Peripheral extends BluetoothGattCallback {
         this.mainHandler.post(new Runnable() { // from class: it.innove.Peripheral$$ExternalSyntheticLambda19
             @Override // java.lang.Runnable
             public final void run() {
-                Peripheral.this.lambda$onReadRemoteRssi$8(i2, i);
+                this.f$0.lambda$onReadRemoteRssi$8(i2, i);
             }
         });
     }
@@ -671,41 +671,41 @@ public class Peripheral extends BluetoothGattCallback {
         }
     }
 
-    /* JADX WARN: Removed duplicated region for block: B:39:0x0119  */
-    /* JADX WARN: Removed duplicated region for block: B:46:? A[RETURN, SYNTHETIC] */
+    /* JADX WARN: Removed duplicated region for block: B:50:0x0119  */
+    /* JADX WARN: Removed duplicated region for block: B:66:? A[RETURN, SYNTHETIC] */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
     private void setNotify(UUID uuid, UUID uuid2, Boolean bool, Callback callback) {
         BluetoothGatt bluetoothGatt;
         byte[] bArr;
-        boolean z;
+        boolean characteristicNotification;
         if (!isConnected() || (bluetoothGatt = this.gatt) == null) {
             callback.invoke("Device is not connected", null);
             completedCommand();
             return;
         }
-        BluetoothGattCharacteristic findNotifyCharacteristic = findNotifyCharacteristic(bluetoothGatt.getService(uuid), uuid2);
-        if (findNotifyCharacteristic == null) {
+        BluetoothGattCharacteristic bluetoothGattCharacteristicFindNotifyCharacteristic = findNotifyCharacteristic(bluetoothGatt.getService(uuid), uuid2);
+        if (bluetoothGattCharacteristicFindNotifyCharacteristic == null) {
             callback.invoke("Characteristic " + uuid2 + " not found");
             completedCommand();
             return;
         }
-        if (!this.gatt.setCharacteristicNotification(findNotifyCharacteristic, bool.booleanValue())) {
+        if (!this.gatt.setCharacteristicNotification(bluetoothGattCharacteristicFindNotifyCharacteristic, bool.booleanValue())) {
             callback.invoke("Failed to register notification for " + uuid2);
             completedCommand();
             return;
         }
-        BluetoothGattDescriptor descriptor = findNotifyCharacteristic.getDescriptor(UUIDHelper.uuidFromString(CHARACTERISTIC_NOTIFICATION_CONFIG));
+        BluetoothGattDescriptor descriptor = bluetoothGattCharacteristicFindNotifyCharacteristic.getDescriptor(UUIDHelper.uuidFromString(CHARACTERISTIC_NOTIFICATION_CONFIG));
         if (descriptor == null) {
             callback.invoke("Set notification failed for " + uuid2);
             completedCommand();
             return;
         }
-        if ((findNotifyCharacteristic.getProperties() & 16) != 0) {
+        if ((bluetoothGattCharacteristicFindNotifyCharacteristic.getProperties() & 16) != 0) {
             Log.d(BleManager.LOG_TAG, "Characteristic " + uuid2 + " set NOTIFY");
             bArr = bool.booleanValue() ? BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE : BluetoothGattDescriptor.DISABLE_NOTIFICATION_VALUE;
-        } else if ((findNotifyCharacteristic.getProperties() & 32) != 0) {
+        } else if ((bluetoothGattCharacteristicFindNotifyCharacteristic.getProperties() & 32) != 0) {
             Log.d(BleManager.LOG_TAG, "Characteristic " + uuid2 + " set INDICATE");
             bArr = bool.booleanValue() ? BluetoothGattDescriptor.ENABLE_INDICATION_VALUE : BluetoothGattDescriptor.DISABLE_NOTIFICATION_VALUE;
         } else {
@@ -719,27 +719,27 @@ public class Peripheral extends BluetoothGattCallback {
             bArr = BluetoothGattDescriptor.DISABLE_NOTIFICATION_VALUE;
         }
         try {
-            z = this.gatt.setCharacteristicNotification(findNotifyCharacteristic, bool.booleanValue());
+            characteristicNotification = this.gatt.setCharacteristicNotification(bluetoothGattCharacteristicFindNotifyCharacteristic, bool.booleanValue());
         } catch (Exception e) {
             e = e;
         }
         try {
             this.registerNotifyCallbacks.addLast(callback);
             if (Build.VERSION.SDK_INT >= 33) {
-                z &= this.gatt.writeDescriptor(descriptor, bArr) == 0;
+                characteristicNotification &= this.gatt.writeDescriptor(descriptor, bArr) == 0;
             } else {
                 descriptor.setValue(bArr);
-                z &= this.gatt.writeDescriptor(descriptor);
+                characteristicNotification &= this.gatt.writeDescriptor(descriptor);
             }
         } catch (Exception e2) {
             e = e2;
-            r0 = z;
+            z = characteristicNotification;
             Log.d(BleManager.LOG_TAG, "Exception in setNotify", e);
-            z = r0;
-            if (z) {
+            characteristicNotification = z;
+            if (characteristicNotification) {
             }
         }
-        if (z) {
+        if (characteristicNotification) {
             Iterator<Callback> it2 = this.registerNotifyCallbacks.iterator();
             while (it2.hasNext()) {
                 it2.next().invoke("writeDescriptor failed for descriptor: " + descriptor.getUuid(), null);
@@ -753,7 +753,7 @@ public class Peripheral extends BluetoothGattCallback {
         if (enqueue(new Runnable() { // from class: it.innove.Peripheral$$ExternalSyntheticLambda7
             @Override // java.lang.Runnable
             public final void run() {
-                Peripheral.this.lambda$registerNotify$9(num, uuid, uuid2, callback);
+                this.f$0.lambda$registerNotify$9(num, uuid, uuid2, callback);
             }
         })) {
             return;
@@ -775,7 +775,7 @@ public class Peripheral extends BluetoothGattCallback {
         if (enqueue(new Runnable() { // from class: it.innove.Peripheral$$ExternalSyntheticLambda6
             @Override // java.lang.Runnable
             public final void run() {
-                Peripheral.this.lambda$removeNotify$10(uuid, uuid2, callback);
+                this.f$0.lambda$removeNotify$10(uuid, uuid2, callback);
             }
         })) {
             return;
@@ -786,10 +786,10 @@ public class Peripheral extends BluetoothGattCallback {
     /* JADX INFO: Access modifiers changed from: private */
     public /* synthetic */ void lambda$removeNotify$10(UUID uuid, UUID uuid2, Callback callback) {
         Log.d(BleManager.LOG_TAG, "removeNotify");
-        String bufferedCharacteristicsKey = bufferedCharacteristicsKey(uuid.toString(), uuid2.toString());
-        if (this.bufferedCharacteristics.containsKey(bufferedCharacteristicsKey)) {
-            this.bufferedCharacteristics.get(bufferedCharacteristicsKey);
-            this.bufferedCharacteristics.remove(bufferedCharacteristicsKey);
+        String strBufferedCharacteristicsKey = bufferedCharacteristicsKey(uuid.toString(), uuid2.toString());
+        if (this.bufferedCharacteristics.containsKey(strBufferedCharacteristicsKey)) {
+            this.bufferedCharacteristics.get(strBufferedCharacteristicsKey);
+            this.bufferedCharacteristics.remove(strBufferedCharacteristicsKey);
         }
         setNotify(uuid, uuid2, false, callback);
     }
@@ -818,7 +818,7 @@ public class Peripheral extends BluetoothGattCallback {
         enqueue(new Runnable() { // from class: it.innove.Peripheral$$ExternalSyntheticLambda10
             @Override // java.lang.Runnable
             public final void run() {
-                Peripheral.this.lambda$read$11(callback, uuid, uuid2);
+                this.f$0.lambda$read$11(callback, uuid, uuid2);
             }
         });
     }
@@ -831,14 +831,14 @@ public class Peripheral extends BluetoothGattCallback {
             completedCommand();
             return;
         }
-        BluetoothGattCharacteristic findReadableCharacteristic = findReadableCharacteristic(bluetoothGatt.getService(uuid), uuid2);
-        if (findReadableCharacteristic == null) {
+        BluetoothGattCharacteristic bluetoothGattCharacteristicFindReadableCharacteristic = findReadableCharacteristic(bluetoothGatt.getService(uuid), uuid2);
+        if (bluetoothGattCharacteristicFindReadableCharacteristic == null) {
             callback.invoke("Characteristic " + uuid2 + " not found.", null);
             completedCommand();
             return;
         }
         this.readCallbacks.addLast(callback);
-        if (this.gatt.readCharacteristic(findReadableCharacteristic)) {
+        if (this.gatt.readCharacteristic(bluetoothGattCharacteristicFindReadableCharacteristic)) {
             return;
         }
         Iterator<Callback> it2 = this.readCallbacks.iterator();
@@ -853,7 +853,7 @@ public class Peripheral extends BluetoothGattCallback {
         enqueue(new Runnable() { // from class: it.innove.Peripheral$$ExternalSyntheticLambda18
             @Override // java.lang.Runnable
             public final void run() {
-                Peripheral.this.lambda$readDescriptor$12(callback, uuid, uuid2, uuid3);
+                this.f$0.lambda$readDescriptor$12(callback, uuid, uuid2, uuid3);
             }
         });
     }
@@ -866,13 +866,13 @@ public class Peripheral extends BluetoothGattCallback {
             completedCommand();
             return;
         }
-        BluetoothGattCharacteristic findReadableCharacteristic = findReadableCharacteristic(bluetoothGatt.getService(uuid), uuid2);
-        if (findReadableCharacteristic == null) {
+        BluetoothGattCharacteristic bluetoothGattCharacteristicFindReadableCharacteristic = findReadableCharacteristic(bluetoothGatt.getService(uuid), uuid2);
+        if (bluetoothGattCharacteristicFindReadableCharacteristic == null) {
             callback.invoke("Characteristic " + uuid2 + " not found.", null);
             completedCommand();
             return;
         }
-        BluetoothGattDescriptor descriptor = findReadableCharacteristic.getDescriptor(uuid3);
+        BluetoothGattDescriptor descriptor = bluetoothGattCharacteristicFindReadableCharacteristic.getDescriptor(uuid3);
         if (descriptor == null) {
             callback.invoke("Read descriptor failed for " + uuid3, null);
             completedCommand();
@@ -899,7 +899,7 @@ public class Peripheral extends BluetoothGattCallback {
         enqueue(new Runnable() { // from class: it.innove.Peripheral$$ExternalSyntheticLambda11
             @Override // java.lang.Runnable
             public final void run() {
-                Peripheral.this.lambda$writeDescriptor$13(callback, uuid, uuid2, uuid3, bArr);
+                this.f$0.lambda$writeDescriptor$13(callback, uuid, uuid2, uuid3, bArr);
             }
         });
     }
@@ -907,19 +907,19 @@ public class Peripheral extends BluetoothGattCallback {
     /* JADX INFO: Access modifiers changed from: private */
     public /* synthetic */ void lambda$writeDescriptor$13(Callback callback, UUID uuid, UUID uuid2, UUID uuid3, byte[] bArr) {
         BluetoothGatt bluetoothGatt;
-        boolean writeDescriptor;
+        boolean zWriteDescriptor;
         if (!isConnected() || (bluetoothGatt = this.gatt) == null) {
             callback.invoke("Device is not connected", null);
             completedCommand();
             return;
         }
-        BluetoothGattCharacteristic findCharacteristic = findCharacteristic(bluetoothGatt.getService(uuid), uuid2);
-        if (findCharacteristic == null) {
+        BluetoothGattCharacteristic bluetoothGattCharacteristicFindCharacteristic = findCharacteristic(bluetoothGatt.getService(uuid), uuid2);
+        if (bluetoothGattCharacteristicFindCharacteristic == null) {
             callback.invoke("Characteristic " + uuid2 + " not found.");
             completedCommand();
             return;
         }
-        BluetoothGattDescriptor descriptor = findCharacteristic.getDescriptor(uuid3);
+        BluetoothGattDescriptor descriptor = bluetoothGattCharacteristicFindCharacteristic.getDescriptor(uuid3);
         if (descriptor == null) {
             callback.invoke("Read descriptor failed for " + uuid3, null);
             completedCommand();
@@ -927,12 +927,12 @@ public class Peripheral extends BluetoothGattCallback {
         }
         this.writeDescriptorCallbacks.add(callback);
         if (Build.VERSION.SDK_INT >= 33) {
-            writeDescriptor = this.gatt.writeDescriptor(descriptor, bArr) == 0;
+            zWriteDescriptor = this.gatt.writeDescriptor(descriptor, bArr) == 0;
         } else {
             descriptor.setValue(bArr);
-            writeDescriptor = this.gatt.writeDescriptor(descriptor);
+            zWriteDescriptor = this.gatt.writeDescriptor(descriptor);
         }
-        if (!writeDescriptor) {
+        if (!zWriteDescriptor) {
             Iterator<Callback> it2 = this.writeDescriptorCallbacks.iterator();
             while (it2.hasNext()) {
                 it2.next().invoke("writeDescriptor failed for descriptor: " + descriptor.getUuid(), null);
@@ -953,13 +953,13 @@ public class Peripheral extends BluetoothGattCallback {
     }
 
     private boolean enqueue(Runnable runnable) {
-        boolean add = this.commandQueue.add(runnable);
-        if (add) {
+        boolean zAdd = this.commandQueue.add(runnable);
+        if (zAdd) {
             nextCommand();
         } else {
             Log.d(BleManager.LOG_TAG, "could not enqueue command");
         }
-        return add;
+        return zAdd;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -975,8 +975,8 @@ public class Peripheral extends BluetoothGattCallback {
                 Log.d(BleManager.LOG_TAG, "Command queue busy");
                 return;
             }
-            final Runnable peek = this.commandQueue.peek();
-            if (peek == null) {
+            final Runnable runnablePeek = this.commandQueue.peek();
+            if (runnablePeek == null) {
                 Log.d(BleManager.LOG_TAG, "Command queue empty");
                 return;
             }
@@ -990,7 +990,7 @@ public class Peripheral extends BluetoothGattCallback {
                     @Override // java.lang.Runnable
                     public void run() {
                         try {
-                            peek.run();
+                            runnablePeek.run();
                         } catch (Exception unused) {
                             Log.d(BleManager.LOG_TAG, "Error, command exception");
                             Peripheral.this.completedCommand();
@@ -1005,7 +1005,7 @@ public class Peripheral extends BluetoothGattCallback {
         if (enqueue(new Runnable() { // from class: it.innove.Peripheral$$ExternalSyntheticLambda3
             @Override // java.lang.Runnable
             public final void run() {
-                Peripheral.this.lambda$readRSSI$14(callback);
+                this.f$0.lambda$readRSSI$14(callback);
             }
         })) {
             return;
@@ -1041,7 +1041,7 @@ public class Peripheral extends BluetoothGattCallback {
         enqueue(new Runnable() { // from class: it.innove.Peripheral$$ExternalSyntheticLambda17
             @Override // java.lang.Runnable
             public final void run() {
-                Peripheral.this.lambda$refreshCache$15(callback);
+                this.f$0.lambda$refreshCache$15(callback);
             }
         });
     }
@@ -1069,7 +1069,7 @@ public class Peripheral extends BluetoothGattCallback {
         enqueue(new Runnable() { // from class: it.innove.Peripheral$$ExternalSyntheticLambda13
             @Override // java.lang.Runnable
             public final void run() {
-                Peripheral.this.lambda$retrieveServices$16(callback);
+                this.f$0.lambda$retrieveServices$16(callback);
             }
         });
     }
@@ -1108,11 +1108,11 @@ public class Peripheral extends BluetoothGattCallback {
     }
 
     public boolean doWrite(final BluetoothGattCharacteristic bluetoothGattCharacteristic, byte[] bArr, final Callback callback) {
-        final byte[] copyOf = copyOf(bArr);
+        final byte[] bArrCopyOf = copyOf(bArr);
         return enqueue(new Runnable() { // from class: it.innove.Peripheral.2
             @Override // java.lang.Runnable
             public void run() {
-                bluetoothGattCharacteristic.setValue(copyOf);
+                bluetoothGattCharacteristic.setValue(bArrCopyOf);
                 if (bluetoothGattCharacteristic.getWriteType() == 2 && callback != null) {
                     Peripheral.this.writeCallbacks.addLast(callback);
                 }
@@ -1132,32 +1132,32 @@ public class Peripheral extends BluetoothGattCallback {
     public void write(final UUID uuid, final UUID uuid2, final byte[] bArr, final Integer num, final Integer num2, final Callback callback, final int i) {
         enqueue(new Runnable() { // from class: it.innove.Peripheral$$ExternalSyntheticLambda8
             @Override // java.lang.Runnable
-            public final void run() {
-                Peripheral.this.lambda$write$17(callback, uuid, uuid2, i, bArr, num, num2);
+            public final void run() throws Exception {
+                this.f$0.lambda$write$17(callback, uuid, uuid2, i, bArr, num, num2);
             }
         });
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ void lambda$write$17(Callback callback, UUID uuid, UUID uuid2, int i, byte[] bArr, Integer num, Integer num2) {
+    public /* synthetic */ void lambda$write$17(Callback callback, UUID uuid, UUID uuid2, int i, byte[] bArr, Integer num, Integer num2) throws Exception {
         BluetoothGatt bluetoothGatt;
         boolean z;
-        byte[] bArr2 = null;
+        byte[] bArrCopyOfRange = null;
         if (!isConnected() || (bluetoothGatt = this.gatt) == null) {
             callback.invoke("Device is not connected", null);
             completedCommand();
             return;
         }
-        BluetoothGattCharacteristic findWritableCharacteristic = findWritableCharacteristic(bluetoothGatt.getService(uuid), uuid2, i);
-        if (findWritableCharacteristic == null) {
+        BluetoothGattCharacteristic bluetoothGattCharacteristicFindWritableCharacteristic = findWritableCharacteristic(bluetoothGatt.getService(uuid), uuid2, i);
+        if (bluetoothGattCharacteristicFindWritableCharacteristic == null) {
             callback.invoke("Characteristic " + uuid2 + " not found.");
             completedCommand();
             return;
         }
-        findWritableCharacteristic.setWriteType(i);
+        bluetoothGattCharacteristicFindWritableCharacteristic.setWriteType(i);
         boolean z2 = true;
         if (bArr.length <= num.intValue()) {
-            if (!doWrite(findWritableCharacteristic, bArr, callback)) {
+            if (!doWrite(bluetoothGattCharacteristicFindWritableCharacteristic, bArr, callback)) {
                 callback.invoke("Write failed");
             } else if (1 == i) {
                 callback.invoke(new Object[0]);
@@ -1165,27 +1165,27 @@ public class Peripheral extends BluetoothGattCallback {
         } else {
             int length = bArr.length;
             ArrayList arrayList = new ArrayList();
-            int i2 = 0;
-            while (i2 < length && length - i2 > num.intValue()) {
-                if (i2 == 0) {
-                    bArr2 = Arrays.copyOfRange(bArr, i2, num.intValue() + i2);
+            int iIntValue = 0;
+            while (iIntValue < length && length - iIntValue > num.intValue()) {
+                if (iIntValue == 0) {
+                    bArrCopyOfRange = Arrays.copyOfRange(bArr, iIntValue, num.intValue() + iIntValue);
                 } else {
-                    arrayList.add(Arrays.copyOfRange(bArr, i2, num.intValue() + i2));
+                    arrayList.add(Arrays.copyOfRange(bArr, iIntValue, num.intValue() + iIntValue));
                 }
-                i2 += num.intValue();
+                iIntValue += num.intValue();
             }
-            if (i2 < length) {
-                arrayList.add(Arrays.copyOfRange(bArr, i2, bArr.length));
+            if (iIntValue < length) {
+                arrayList.add(Arrays.copyOfRange(bArr, iIntValue, bArr.length));
             }
             if (2 == i) {
                 this.writeQueue.addAll(arrayList);
-                if (!doWrite(findWritableCharacteristic, bArr2, callback)) {
+                if (!doWrite(bluetoothGattCharacteristicFindWritableCharacteristic, bArrCopyOfRange, callback)) {
                     this.writeQueue.clear();
                     callback.invoke("Write failed");
                 }
             } else {
                 try {
-                    if (doWrite(findWritableCharacteristic, bArr2, callback)) {
+                    if (doWrite(bluetoothGattCharacteristicFindWritableCharacteristic, bArrCopyOfRange, callback)) {
                         z = false;
                     } else {
                         callback.invoke("Write failed");
@@ -1199,7 +1199,7 @@ public class Peripheral extends BluetoothGattCallback {
                                 z2 = z;
                                 break;
                             } else {
-                                if (!doWrite(findWritableCharacteristic, (byte[]) it2.next(), callback)) {
+                                if (!doWrite(bluetoothGattCharacteristicFindWritableCharacteristic, (byte[]) it2.next(), callback)) {
                                     callback.invoke("Write failed");
                                     break;
                                 }
@@ -1222,7 +1222,7 @@ public class Peripheral extends BluetoothGattCallback {
         enqueue(new Runnable() { // from class: it.innove.Peripheral$$ExternalSyntheticLambda20
             @Override // java.lang.Runnable
             public final void run() {
-                Peripheral.this.lambda$requestConnectionPriority$18(i, callback);
+                this.f$0.lambda$requestConnectionPriority$18(i, callback);
             }
         });
     }
@@ -1242,7 +1242,7 @@ public class Peripheral extends BluetoothGattCallback {
         enqueue(new Runnable() { // from class: it.innove.Peripheral$$ExternalSyntheticLambda1
             @Override // java.lang.Runnable
             public final void run() {
-                Peripheral.this.lambda$requestMTU$19(callback, i);
+                this.f$0.lambda$requestMTU$19(callback, i);
             }
         });
     }
@@ -1277,7 +1277,7 @@ public class Peripheral extends BluetoothGattCallback {
         this.mainHandler.post(new Runnable() { // from class: it.innove.Peripheral$$ExternalSyntheticLambda16
             @Override // java.lang.Runnable
             public final void run() {
-                Peripheral.this.lambda$onMtuChanged$20(i2, i);
+                this.f$0.lambda$onMtuChanged$20(i2, i);
             }
         });
     }
@@ -1301,7 +1301,7 @@ public class Peripheral extends BluetoothGattCallback {
         completedCommand();
     }
 
-    private BluetoothGattCharacteristic findWritableCharacteristic(BluetoothGattService bluetoothGattService, UUID uuid, int i) {
+    private BluetoothGattCharacteristic findWritableCharacteristic(BluetoothGattService bluetoothGattService, UUID uuid, int i) throws Exception {
         int i2 = i == 1 ? 4 : 8;
         try {
             if (bluetoothGattService == null) {

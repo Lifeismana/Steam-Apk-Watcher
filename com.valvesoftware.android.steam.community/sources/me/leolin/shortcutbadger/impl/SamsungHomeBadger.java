@@ -25,26 +25,26 @@ public class SamsungHomeBadger implements Badger {
             this.defaultBadger.executeBadge(context, componentName, i);
             return;
         }
-        Uri parse = Uri.parse(CONTENT_URI);
+        Uri uri = Uri.parse(CONTENT_URI);
         ContentResolver contentResolver = context.getContentResolver();
-        Cursor cursor = null;
+        Cursor cursorQuery = null;
         try {
-            cursor = contentResolver.query(parse, CONTENT_PROJECTION, "package=?", new String[]{componentName.getPackageName()}, null);
-            if (cursor != null) {
+            cursorQuery = contentResolver.query(uri, CONTENT_PROJECTION, "package=?", new String[]{componentName.getPackageName()}, null);
+            if (cursorQuery != null) {
                 String className = componentName.getClassName();
                 boolean z = false;
-                while (cursor.moveToNext()) {
-                    contentResolver.update(parse, getContentValues(componentName, i, false), "_id=?", new String[]{String.valueOf(cursor.getInt(0))});
-                    if (className.equals(cursor.getString(cursor.getColumnIndex("class")))) {
+                while (cursorQuery.moveToNext()) {
+                    contentResolver.update(uri, getContentValues(componentName, i, false), "_id=?", new String[]{String.valueOf(cursorQuery.getInt(0))});
+                    if (className.equals(cursorQuery.getString(cursorQuery.getColumnIndex("class")))) {
                         z = true;
                     }
                 }
                 if (!z) {
-                    contentResolver.insert(parse, getContentValues(componentName, i, true));
+                    contentResolver.insert(uri, getContentValues(componentName, i, true));
                 }
             }
         } finally {
-            CloseHelper.close(cursor);
+            CloseHelper.close(cursorQuery);
         }
     }
 

@@ -34,9 +34,9 @@ public class BlurView extends FrameLayout {
     }
 
     private void init(AttributeSet attributeSet, int i) {
-        TypedArray obtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, C2672R.styleable.BlurView, i, 0);
-        this.overlayColor = obtainStyledAttributes.getColor(C2672R.styleable.BlurView_blurOverlayColor, 0);
-        obtainStyledAttributes.recycle();
+        TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, C2855R.styleable.BlurView, i, 0);
+        this.overlayColor = typedArrayObtainStyledAttributes.getColor(C2855R.styleable.BlurView_blurOverlayColor, 0);
+        typedArrayObtainStyledAttributes.recycle();
     }
 
     @Override // android.view.View

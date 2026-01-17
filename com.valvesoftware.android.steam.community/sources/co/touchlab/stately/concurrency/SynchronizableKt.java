@@ -9,12 +9,12 @@ import kotlin.jvm.internal.Intrinsics;
 /* loaded from: classes.dex */
 public final class SynchronizableKt {
     public static final <R> R synchronize(Object obj, Function0<? extends R> block) {
-        R invoke;
+        R rInvoke;
         Intrinsics.checkNotNullParameter(obj, "<this>");
         Intrinsics.checkNotNullParameter(block, "block");
         synchronized (obj) {
-            invoke = block.invoke();
+            rInvoke = block.invoke();
         }
-        return invoke;
+        return rInvoke;
     }
 }

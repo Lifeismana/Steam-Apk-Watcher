@@ -14,6 +14,7 @@ import com.facebook.react.soloader.OpenSourceMergedSoMapping;
 import com.facebook.soloader.SoLoader;
 import expo.modules.ApplicationLifecycleDispatcher;
 import expo.modules.ReactNativeHostWrapper;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.Metadata;
@@ -77,7 +78,7 @@ public final class MainApplication extends Application implements ReactApplicati
     }
 
     @Override // android.app.Application
-    public void onCreate() {
+    public void onCreate() throws IOException {
         super.onCreate();
         SoLoader.init(this, OpenSourceMergedSoMapping.INSTANCE);
         DefaultNewArchitectureEntryPoint.load$default(false, false, false, 7, null);

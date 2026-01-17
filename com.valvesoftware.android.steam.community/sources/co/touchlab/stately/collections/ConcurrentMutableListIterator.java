@@ -27,9 +27,9 @@ public final class ConcurrentMutableListIterator<E> extends ConcurrentMutableIte
 
     @Override // java.util.ListIterator
     public boolean hasPrevious() {
-        Boolean invoke;
+        Boolean boolInvoke;
         Object obj = this.root;
-        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableListIterator$hasPrevious$1
+        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableListIterator.hasPrevious.1
             final /* synthetic */ ConcurrentMutableListIterator<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -41,22 +41,20 @@ public final class ConcurrentMutableListIterator<E> extends ConcurrentMutableIte
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             public final Boolean invoke() {
-                ListIterator listIterator;
-                listIterator = ((ConcurrentMutableListIterator) this.this$0).del;
-                return Boolean.valueOf(listIterator.hasPrevious());
+                return Boolean.valueOf(((ConcurrentMutableListIterator) this.this$0).del.hasPrevious());
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            boolInvoke = function0.invoke();
         }
-        return invoke.booleanValue();
+        return boolInvoke.booleanValue();
     }
 
     @Override // java.util.ListIterator
     public int nextIndex() {
-        Integer invoke;
+        Integer numInvoke;
         Object obj = this.root;
-        Function0<Integer> function0 = new Function0<Integer>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableListIterator$nextIndex$1
+        Function0<Integer> function0 = new Function0<Integer>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableListIterator.nextIndex.1
             final /* synthetic */ ConcurrentMutableListIterator<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -68,22 +66,20 @@ public final class ConcurrentMutableListIterator<E> extends ConcurrentMutableIte
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             public final Integer invoke() {
-                ListIterator listIterator;
-                listIterator = ((ConcurrentMutableListIterator) this.this$0).del;
-                return Integer.valueOf(listIterator.nextIndex());
+                return Integer.valueOf(((ConcurrentMutableListIterator) this.this$0).del.nextIndex());
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            numInvoke = function0.invoke();
         }
-        return invoke.intValue();
+        return numInvoke.intValue();
     }
 
     @Override // java.util.ListIterator
     public E previous() {
-        E invoke;
+        E eInvoke;
         Object obj = this.root;
-        Function0<E> function0 = new Function0<E>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableListIterator$previous$1
+        Function0<E> function0 = new Function0<E>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableListIterator.previous.1
             final /* synthetic */ ConcurrentMutableListIterator<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -94,22 +90,20 @@ public final class ConcurrentMutableListIterator<E> extends ConcurrentMutableIte
 
             @Override // kotlin.jvm.functions.Function0
             public final E invoke() {
-                ListIterator listIterator;
-                listIterator = ((ConcurrentMutableListIterator) this.this$0).del;
-                return (E) listIterator.previous();
+                return (E) ((ConcurrentMutableListIterator) this.this$0).del.previous();
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            eInvoke = function0.invoke();
         }
-        return invoke;
+        return eInvoke;
     }
 
     @Override // java.util.ListIterator
     public int previousIndex() {
-        Integer invoke;
+        Integer numInvoke;
         Object obj = this.root;
-        Function0<Integer> function0 = new Function0<Integer>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableListIterator$previousIndex$1
+        Function0<Integer> function0 = new Function0<Integer>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableListIterator.previousIndex.1
             final /* synthetic */ ConcurrentMutableListIterator<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -121,21 +115,19 @@ public final class ConcurrentMutableListIterator<E> extends ConcurrentMutableIte
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             public final Integer invoke() {
-                ListIterator listIterator;
-                listIterator = ((ConcurrentMutableListIterator) this.this$0).del;
-                return Integer.valueOf(listIterator.previousIndex());
+                return Integer.valueOf(((ConcurrentMutableListIterator) this.this$0).del.previousIndex());
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            numInvoke = function0.invoke();
         }
-        return invoke.intValue();
+        return numInvoke.intValue();
     }
 
     @Override // java.util.ListIterator
     public void add(final E element) {
         Object obj = this.root;
-        Function0<Unit> function0 = new Function0<Unit>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableListIterator$add$1
+        Function0<Unit> function0 = new Function0<Unit>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableListIterator.add.1
             final /* synthetic */ ConcurrentMutableListIterator<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -152,9 +144,7 @@ public final class ConcurrentMutableListIterator<E> extends ConcurrentMutableIte
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
-                ListIterator listIterator;
-                listIterator = ((ConcurrentMutableListIterator) this.this$0).del;
-                listIterator.add(element);
+                ((ConcurrentMutableListIterator) this.this$0).del.add(element);
             }
         };
         synchronized (obj) {
@@ -165,7 +155,7 @@ public final class ConcurrentMutableListIterator<E> extends ConcurrentMutableIte
     @Override // java.util.ListIterator
     public void set(final E element) {
         Object obj = this.root;
-        Function0<Unit> function0 = new Function0<Unit>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableListIterator$set$1
+        Function0<Unit> function0 = new Function0<Unit>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableListIterator.set.1
             final /* synthetic */ ConcurrentMutableListIterator<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -182,9 +172,7 @@ public final class ConcurrentMutableListIterator<E> extends ConcurrentMutableIte
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
-                ListIterator listIterator;
-                listIterator = ((ConcurrentMutableListIterator) this.this$0).del;
-                listIterator.set(element);
+                ((ConcurrentMutableListIterator) this.this$0).del.set(element);
             }
         };
         synchronized (obj) {

@@ -52,9 +52,9 @@ final class BoltsExecutors {
             if (num == null) {
                 num = 0;
             }
-            int intValue = num.intValue() + 1;
-            this.executionDepth.set(Integer.valueOf(intValue));
-            return intValue;
+            int iIntValue = num.intValue() + 1;
+            this.executionDepth.set(Integer.valueOf(iIntValue));
+            return iIntValue;
         }
 
         private int decrementDepth() {
@@ -62,13 +62,13 @@ final class BoltsExecutors {
             if (num == null) {
                 num = 0;
             }
-            int intValue = num.intValue() - 1;
-            if (intValue == 0) {
+            int iIntValue = num.intValue() - 1;
+            if (iIntValue == 0) {
                 this.executionDepth.remove();
             } else {
-                this.executionDepth.set(Integer.valueOf(intValue));
+                this.executionDepth.set(Integer.valueOf(iIntValue));
             }
-            return intValue;
+            return iIntValue;
         }
 
         @Override // java.util.concurrent.Executor

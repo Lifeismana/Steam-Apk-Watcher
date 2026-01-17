@@ -35,14 +35,14 @@ public class CompanionScanner {
 
     public CompanionScanner(ReactApplicationContext reactApplicationContext, BleManager bleManager) {
         BaseActivityEventListener baseActivityEventListener = new BaseActivityEventListener() { // from class: it.innove.CompanionScanner.1
-            /* JADX WARN: Removed duplicated region for block: B:19:0x0098  */
-            /* JADX WARN: Removed duplicated region for block: B:26:0x00b6  */
+            /* JADX WARN: Removed duplicated region for block: B:26:0x0098  */
+            /* JADX WARN: Removed duplicated region for block: B:33:0x00b6  */
             @Override // com.facebook.react.bridge.BaseActivityEventListener, com.facebook.react.bridge.ActivityEventListener
             /*
                 Code decompiled incorrectly, please refer to instructions dump.
             */
             public void onActivityResult(Activity activity, int i, int i2, Intent intent) {
-                Peripheral peripheral;
+                Peripheral peripheralSavePeripheral;
                 Log.d(CompanionScanner.LOG_TAG, "onActivityResult");
                 if (i != CompanionScanner.SELECT_DEVICE_REQUEST_CODE) {
                     super.onActivityResult(activity, i, i2, intent);
@@ -53,23 +53,23 @@ public class CompanionScanner {
                     Parcelable parcelableExtra = intent.getParcelableExtra("android.companion.extra.DEVICE");
                     if (parcelableExtra != null) {
                         if (parcelableExtra instanceof BluetoothDevice) {
-                            peripheral = CompanionScanner.this.bleManager.savePeripheral((BluetoothDevice) parcelableExtra);
+                            peripheralSavePeripheral = CompanionScanner.this.bleManager.savePeripheral((BluetoothDevice) parcelableExtra);
                         } else if (parcelableExtra instanceof ScanResult) {
-                            peripheral = CompanionScanner.this.bleManager.savePeripheral(((ScanResult) parcelableExtra).getDevice());
+                            peripheralSavePeripheral = CompanionScanner.this.bleManager.savePeripheral(((ScanResult) parcelableExtra).getDevice());
                         } else {
                             Log.wtf(CompanionScanner.LOG_TAG, "Unexpected AssociationInfo device!");
-                            peripheral = null;
+                            peripheralSavePeripheral = null;
                         }
-                        if (peripheral != null && CompanionScanner.scanCallback != null) {
-                            CompanionScanner.scanCallback.invoke(null, peripheral.asWritableMap());
+                        if (peripheralSavePeripheral != null && CompanionScanner.scanCallback != null) {
+                            CompanionScanner.scanCallback.invoke(null, peripheralSavePeripheral.asWritableMap());
                             CompanionScanner.scanCallback = null;
-                            CompanionScanner.this.bleManager.emitOnCompanionPeripheral(peripheral.asWritableMap());
+                            CompanionScanner.this.bleManager.emitOnCompanionPeripheral(peripheralSavePeripheral.asWritableMap());
                         }
                         if (CompanionScanner.scanCallback != null) {
-                            CompanionScanner.scanCallback.invoke(null, peripheral != null ? peripheral.asWritableMap() : null);
+                            CompanionScanner.scanCallback.invoke(null, peripheralSavePeripheral != null ? peripheralSavePeripheral.asWritableMap() : null);
                             CompanionScanner.scanCallback = null;
                         }
-                        CompanionScanner.this.bleManager.emitOnCompanionPeripheral(peripheral != null ? peripheral.asWritableMap() : null);
+                        CompanionScanner.this.bleManager.emitOnCompanionPeripheral(peripheralSavePeripheral != null ? peripheralSavePeripheral.asWritableMap() : null);
                     }
                     CompanionScanner.scanCallback.invoke(null, null);
                     CompanionScanner.scanCallback = null;
@@ -77,10 +77,10 @@ public class CompanionScanner {
                 } else {
                     Log.d(CompanionScanner.LOG_TAG, "Non-ok activity result");
                 }
-                peripheral = null;
+                peripheralSavePeripheral = null;
                 if (CompanionScanner.scanCallback != null) {
                 }
-                CompanionScanner.this.bleManager.emitOnCompanionPeripheral(peripheral != null ? peripheral.asWritableMap() : null);
+                CompanionScanner.this.bleManager.emitOnCompanionPeripheral(peripheralSavePeripheral != null ? peripheralSavePeripheral.asWritableMap() : null);
             }
         };
         this.mActivityEventListener = baseActivityEventListener;
@@ -97,13 +97,13 @@ public class CompanionScanner {
             Log.d(LOG_TAG, "Filter service: " + parcelUuid);
             singleDevice = singleDevice.addDeviceFilter(new BluetoothLeDeviceFilter.Builder().setScanFilter(new ScanFilter.Builder().setServiceUuid(parcelUuid).build()).build());
         }
-        AssociationRequest build = singleDevice.build();
+        AssociationRequest associationRequestBuild = singleDevice.build();
         Callback callback2 = scanCallback;
         if (callback2 != null) {
             callback2.invoke("New scan called", null);
         }
         scanCallback = callback;
-        ((CompanionDeviceManager) this.bleManager.getCompanionDeviceManager()).associate(build, new CompanionDeviceManager.Callback() { // from class: it.innove.CompanionScanner.2
+        ((CompanionDeviceManager) this.bleManager.getCompanionDeviceManager()).associate(associationRequestBuild, new CompanionDeviceManager.Callback() { // from class: it.innove.CompanionScanner.2
             @Override // android.companion.CompanionDeviceManager.Callback
             public void onFailure(CharSequence charSequence) {
                 String str;
@@ -117,13 +117,13 @@ public class CompanionScanner {
                     CompanionScanner.scanCallback.invoke(str);
                     CompanionScanner.scanCallback = null;
                 }
-                WritableMap createMap = Arguments.createMap();
-                createMap.putString(Constants.IPC_BUNDLE_KEY_SEND_ERROR, charSequence.toString());
-                CompanionScanner.this.bleManager.emitOnCompanionFailure(createMap);
+                WritableMap writableMapCreateMap = Arguments.createMap();
+                writableMapCreateMap.putString(Constants.IPC_BUNDLE_KEY_SEND_ERROR, charSequence.toString());
+                CompanionScanner.this.bleManager.emitOnCompanionFailure(writableMapCreateMap);
             }
 
             @Override // android.companion.CompanionDeviceManager.Callback
-            public void onDeviceFound(IntentSender intentSender) {
+            public void onDeviceFound(IntentSender intentSender) throws IntentSender.SendIntentException {
                 Log.d(CompanionScanner.LOG_TAG, "companion device found");
                 try {
                     CompanionScanner.this.reactContext.getCurrentActivity().startIntentSenderForResult(intentSender, CompanionScanner.SELECT_DEVICE_REQUEST_CODE, null, 0, 0, 0);
@@ -134,9 +134,9 @@ public class CompanionScanner {
                         CompanionScanner.scanCallback.invoke(str);
                         CompanionScanner.scanCallback = null;
                     }
-                    WritableMap createMap = Arguments.createMap();
-                    createMap.putString(Constants.IPC_BUNDLE_KEY_SEND_ERROR, str);
-                    CompanionScanner.this.bleManager.emitOnCompanionFailure(createMap);
+                    WritableMap writableMapCreateMap = Arguments.createMap();
+                    writableMapCreateMap.putString(Constants.IPC_BUNDLE_KEY_SEND_ERROR, str);
+                    CompanionScanner.this.bleManager.emitOnCompanionFailure(writableMapCreateMap);
                 }
             }
         }, (Handler) null);

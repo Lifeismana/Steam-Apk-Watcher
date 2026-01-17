@@ -30,64 +30,64 @@ public class DefaultPeripheral extends Peripheral {
 
     @Override // it.innove.Peripheral
     public WritableMap asWritableMap() {
-        WritableMap asWritableMap = super.asWritableMap();
-        WritableMap createMap = Arguments.createMap();
+        WritableMap writableMapAsWritableMap = super.asWritableMap();
+        WritableMap writableMapCreateMap = Arguments.createMap();
         try {
-            asWritableMap.putString("name", this.device.getName());
-            asWritableMap.putString("id", this.device.getAddress());
-            asWritableMap.putInt("rssi", this.advertisingRSSI);
-            createMap.putMap(Constants.MessagePayloadKeys.RAW_DATA, byteArrayToWritableMap(this.advertisingDataBytes));
+            writableMapAsWritableMap.putString("name", this.device.getName());
+            writableMapAsWritableMap.putString("id", this.device.getAddress());
+            writableMapAsWritableMap.putInt("rssi", this.advertisingRSSI);
+            writableMapCreateMap.putMap(Constants.MessagePayloadKeys.RAW_DATA, byteArrayToWritableMap(this.advertisingDataBytes));
             ScanResult scanResult = this.scanResult;
             if (scanResult != null) {
-                createMap.putBoolean("isConnectable", scanResult.isConnectable());
+                writableMapCreateMap.putBoolean("isConnectable", scanResult.isConnectable());
             }
             ScanRecord scanRecord = this.advertisingData;
             if (scanRecord != null) {
                 String deviceName = scanRecord.getDeviceName();
                 if (deviceName != null) {
-                    createMap.putString("localName", deviceName.replace("\u0000", ""));
+                    writableMapCreateMap.putString("localName", deviceName.replace("\u0000", ""));
                 }
-                WritableArray createArray = Arguments.createArray();
+                WritableArray writableArrayCreateArray = Arguments.createArray();
                 if (this.advertisingData.getServiceUuids() != null && this.advertisingData.getServiceUuids().size() != 0) {
                     Iterator<ParcelUuid> it2 = this.advertisingData.getServiceUuids().iterator();
                     while (it2.hasNext()) {
-                        createArray.pushString(UUIDHelper.uuidToString(it2.next().getUuid()));
+                        writableArrayCreateArray.pushString(UUIDHelper.uuidToString(it2.next().getUuid()));
                     }
                 }
-                createMap.putArray("serviceUUIDs", createArray);
-                WritableMap createMap2 = Arguments.createMap();
+                writableMapCreateMap.putArray("serviceUUIDs", writableArrayCreateArray);
+                WritableMap writableMapCreateMap2 = Arguments.createMap();
                 if (this.advertisingData.getServiceData() != null) {
                     for (Map.Entry<ParcelUuid, byte[]> entry : this.advertisingData.getServiceData().entrySet()) {
                         if (entry.getValue() != null) {
-                            createMap2.putMap(UUIDHelper.uuidToString(entry.getKey().getUuid()), byteArrayToWritableMap(entry.getValue()));
+                            writableMapCreateMap2.putMap(UUIDHelper.uuidToString(entry.getKey().getUuid()), byteArrayToWritableMap(entry.getValue()));
                         }
                     }
                 }
-                createMap.putMap("serviceData", createMap2);
-                WritableMap createMap3 = Arguments.createMap();
+                writableMapCreateMap.putMap("serviceData", writableMapCreateMap2);
+                WritableMap writableMapCreateMap3 = Arguments.createMap();
                 SparseArray<byte[]> manufacturerSpecificData = this.advertisingData.getManufacturerSpecificData();
                 byte[] bArr = new byte[0];
                 if (manufacturerSpecificData != null && manufacturerSpecificData.size() > 0) {
-                    int keyAt = manufacturerSpecificData.keyAt(0);
-                    byte[] valueAt = manufacturerSpecificData.valueAt(0);
-                    createMap3.putMap(String.format("%04x", Integer.valueOf(keyAt)), byteArrayToWritableMap(valueAt));
-                    ByteBuffer allocate = ByteBuffer.allocate(4);
-                    allocate.putInt(keyAt);
-                    byte[] array = allocate.array();
-                    byte[] bArr2 = new byte[array.length + valueAt.length];
-                    System.arraycopy(array, 0, bArr2, 0, array.length);
-                    System.arraycopy(valueAt, 0, bArr2, array.length, valueAt.length);
+                    int iKeyAt = manufacturerSpecificData.keyAt(0);
+                    byte[] bArrValueAt = manufacturerSpecificData.valueAt(0);
+                    writableMapCreateMap3.putMap(String.format("%04x", Integer.valueOf(iKeyAt)), byteArrayToWritableMap(bArrValueAt));
+                    ByteBuffer byteBufferAllocate = ByteBuffer.allocate(4);
+                    byteBufferAllocate.putInt(iKeyAt);
+                    byte[] bArrArray = byteBufferAllocate.array();
+                    byte[] bArr2 = new byte[bArrArray.length + bArrValueAt.length];
+                    System.arraycopy(bArrArray, 0, bArr2, 0, bArrArray.length);
+                    System.arraycopy(bArrValueAt, 0, bArr2, bArrArray.length, bArrValueAt.length);
                     bArr = bArr2;
                 }
-                createMap.putMap("manufacturerData", createMap3);
-                createMap.putMap("manufacturerRawData", byteArrayToWritableMap(bArr));
-                createMap.putInt("txPowerLevel", this.advertisingData.getTxPowerLevel());
+                writableMapCreateMap.putMap("manufacturerData", writableMapCreateMap3);
+                writableMapCreateMap.putMap("manufacturerRawData", byteArrayToWritableMap(bArr));
+                writableMapCreateMap.putInt("txPowerLevel", this.advertisingData.getTxPowerLevel());
             }
-            asWritableMap.putMap("advertising", createMap);
+            writableMapAsWritableMap.putMap("advertising", writableMapCreateMap);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return asWritableMap;
+        return writableMapAsWritableMap;
     }
 
     public void updateData(ScanResult scanResult) {

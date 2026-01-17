@@ -311,15 +311,18 @@ N8facebook5react27ConcreteComponentDescriptorINS0_32RNCAndroidDialogPickerShadow
 N8facebook5react27ConcreteComponentDescriptorINS0_34RNCAndroidDropdownPickerShadowNodeEEE
 N8facebook5react27ConcreteComponentDescriptorINS0_36RNSScreenStackHeaderConfigShadowNodeEEE
 N8facebook5react27ConcreteComponentDescriptorINS0_37RNSScreenStackHeaderSubviewShadowNodeEEE
+N8facebook5react27NativeWorkletsModuleSpecJSIE
 N8facebook5react27RNCAndroidDialogPickerPropsE
 N8facebook5react27RNGestureHandlerButtonPropsE
 N8facebook5react27RNSScreenFooterEventEmitterE
 N8facebook5react28RNSScreenComponentDescriptorE
 N8facebook5react28RNSScreenContentWrapperPropsE
 N8facebook5react29NativeRNCWebViewModuleSpecJSIE
+N8facebook5react29NativeReanimatedModuleSpecJSIE
 N8facebook5react29RNCAndroidDropdownPickerPropsE
 N8facebook5react29RNGestureHandlerRootViewPropsE
 N8facebook5react29RNSVGImageComponentDescriptorE
+N8facebook5react30NativeWorkletsModuleCxxSpecJSIE
 N8facebook5react30RNSFullWindowOverlayShadowNodeE
 N8facebook5react30RNSScreenContainerEventEmitterE
 N8facebook5react31NativeAsyncStorageModuleSpecJSIE
@@ -327,6 +330,7 @@ N8facebook5react31RNCSafeAreaProviderEventEmitterE
 N8facebook5react31RNSScreenStackHeaderConfigPropsE
 N8facebook5react31RNSVGSvgViewAndroidEventEmitterE
 N8facebook5react32NativeRNCWebViewModuleCxxSpecJSIE
+N8facebook5react32NativeReanimatedModuleCxxSpecJSIE
 N8facebook5react32RNSFullWindowOverlayEventEmitterE
 N8facebook5react32RNSScreenStackHeaderSubviewPropsE
 N8facebook5react33RNSModalScreenComponentDescriptorE
@@ -680,10 +684,12 @@ NSt6__ndk120__shared_ptr_emplaceIN8facebook5react24RNSVGRadialGradientPropsENS_9
 NSt6__ndk120__shared_ptr_emplaceIN8facebook5react24RNSVGSvgViewAndroidPropsENS_9allocatorIS3_EEEE
 NSt6__ndk120__shared_ptr_emplaceIN8facebook5react25RNCSafeAreaViewShadowNodeENS_9allocatorIS3_EEEE
 NSt6__ndk120__shared_ptr_emplaceIN8facebook5react25RNSFullWindowOverlayPropsENS_9allocatorIS3_EEEE
+NSt6__ndk120__shared_ptr_emplaceIN8facebook5react27NativeWorkletsModuleSpecJSIENS_9allocatorIS3_EEEE
 NSt6__ndk120__shared_ptr_emplaceIN8facebook5react27RNCAndroidDialogPickerPropsENS_9allocatorIS3_EEEE
 NSt6__ndk120__shared_ptr_emplaceIN8facebook5react27RNGestureHandlerButtonPropsENS_9allocatorIS3_EEEE
 NSt6__ndk120__shared_ptr_emplaceIN8facebook5react28RNSScreenContentWrapperPropsENS_9allocatorIS3_EEEE
 NSt6__ndk120__shared_ptr_emplaceIN8facebook5react29NativeRNCWebViewModuleSpecJSIENS_9allocatorIS3_EEEE
+NSt6__ndk120__shared_ptr_emplaceIN8facebook5react29NativeReanimatedModuleSpecJSIENS_9allocatorIS3_EEEE
 NSt6__ndk120__shared_ptr_emplaceIN8facebook5react29RNCAndroidDropdownPickerPropsENS_9allocatorIS3_EEEE
 NSt6__ndk120__shared_ptr_emplaceIN8facebook5react29RNGestureHandlerRootViewPropsENS_9allocatorIS3_EEEE
 NSt6__ndk120__shared_ptr_emplaceIN8facebook5react30RNSFullWindowOverlayShadowNodeENS_9allocatorIS3_EEEE
@@ -711,6 +717,7 @@ RNGestureHandlerButton
 RNGestureHandlerModule
 RNGestureHandlerRNCWebViewModule
 RNGestureHandlerRootView
+ReanimatedModule
 Unknown DWARF encoding for search table.
 VTT for facebook::react::AndroidBlurViewProps
 VTT for facebook::react::BaseViewProps
@@ -764,6 +771,7 @@ VTT for facebook::react::RNSVGTextProps
 VTT for facebook::react::RNSVGUseProps
 VTT for facebook::react::VibrancyViewProps
 VibrancyView
+WorkletsModule
 Z10JNI_OnLoadE3$_0
 ZN8facebook5react11TurboModule6createERNS_3jsi7RuntimeERKNS2_10PropNameIDEEUlS4_RKNS2_5ValueEPS9_jE_
 ZN8facebook5react17AsyncEventEmitterIJN5folly7dynamicEEEC1EvEUlNS0_13AsyncCallbackIJS3_EEEE_
@@ -2165,6 +2173,14 @@ facebook::react::NativeRNShareCxxSpecJSI::NativeRNShareCxxSpecJSI(std::__ndk1::s
 facebook::react::NativeRNShareCxxSpecJSI::~NativeRNShareCxxSpecJSI()
 facebook::react::NativeRNShareSpecJSI::NativeRNShareSpecJSI(facebook::react::JavaTurboModule::InitParams const&)
 facebook::react::NativeRNShareSpecJSI::~NativeRNShareSpecJSI()
+facebook::react::NativeReanimatedModuleCxxSpecJSI::NativeReanimatedModuleCxxSpecJSI(std::__ndk1::shared_ptr<facebook::react::CallInvoker>)
+facebook::react::NativeReanimatedModuleCxxSpecJSI::~NativeReanimatedModuleCxxSpecJSI()
+facebook::react::NativeReanimatedModuleSpecJSI::NativeReanimatedModuleSpecJSI(facebook::react::JavaTurboModule::InitParams const&)
+facebook::react::NativeReanimatedModuleSpecJSI::~NativeReanimatedModuleSpecJSI()
+facebook::react::NativeWorkletsModuleCxxSpecJSI::NativeWorkletsModuleCxxSpecJSI(std::__ndk1::shared_ptr<facebook::react::CallInvoker>)
+facebook::react::NativeWorkletsModuleCxxSpecJSI::~NativeWorkletsModuleCxxSpecJSI()
+facebook::react::NativeWorkletsModuleSpecJSI::NativeWorkletsModuleSpecJSI(facebook::react::JavaTurboModule::InitParams const&)
+facebook::react::NativeWorkletsModuleSpecJSI::~NativeWorkletsModuleSpecJSI()
 facebook::react::Props::getDiffProps(facebook::react::Props const*) const
 facebook::react::Props::~Props()
 facebook::react::RNCAndroidDialogPickerComponentDescriptor::RNCAndroidDialogPickerComponentDescriptor(facebook::react::ComponentDescriptorParameters const&)
@@ -2588,8 +2604,12 @@ facebook::react::rncore_ModuleProvider(std::__ndk1::basic_string<char, std::__nd
 facebook::react::rngesturehandler_codegen_ModuleProvider(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, facebook::react::JavaTurboModule::InitParams const&)
 facebook::react::rngesturehandler_codegen_registerComponentDescriptorsFromCodegen(std::__ndk1::shared_ptr<facebook::react::ComponentDescriptorProviderRegistry const>)
 facebook::react::rnpicker_ModuleProvider(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, facebook::react::JavaTurboModule::InitParams const&)
+facebook::react::rnreanimated_ModuleProvider(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, facebook::react::JavaTurboModule::InitParams const&)
+facebook::react::rnreanimated_registerComponentDescriptorsFromCodegen(std::__ndk1::shared_ptr<facebook::react::ComponentDescriptorProviderRegistry const>)
 facebook::react::rnscreens_ModuleProvider(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, facebook::react::JavaTurboModule::InitParams const&)
 facebook::react::rnsvg_ModuleProvider(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, facebook::react::JavaTurboModule::InitParams const&)
+facebook::react::rnworklets_ModuleProvider(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, facebook::react::JavaTurboModule::InitParams const&)
+facebook::react::rnworklets_registerComponentDescriptorsFromCodegen(std::__ndk1::shared_ptr<facebook::react::ComponentDescriptorProviderRegistry const>)
 facebook::react::safeareacontext_ModuleProvider(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char>> const&, facebook::react::JavaTurboModule::InitParams const&)
 fflush
 flightNumber
@@ -2718,6 +2738,7 @@ injectedJavaScriptBeforeContentLoadedForMainFrameOnly
 injectedJavaScriptForMainFrameOnly
 injectedJavaScriptObject
 insets
+installTurboModule
 int facebook::react::convertRawProp<int, int>(facebook::react::PropsParserContext const&, facebook::react::RawProps const&, char const*, int const&, int const&, char const*, char const*)
 int/double/bool/string
 isFileUploadSupported
@@ -2994,6 +3015,8 @@ std::__ndk1::__shared_ptr_emplace<facebook::react::NativeBleManagerSpecJSI, std:
 std::__ndk1::__shared_ptr_emplace<facebook::react::NativeRNCWebViewModuleSpecJSI, std::__ndk1::allocator<facebook::react::NativeRNCWebViewModuleSpecJSI>>::~__shared_ptr_emplace()
 std::__ndk1::__shared_ptr_emplace<facebook::react::NativeRNGestureHandlerModuleSpecJSI, std::__ndk1::allocator<facebook::react::NativeRNGestureHandlerModuleSpecJSI>>::~__shared_ptr_emplace()
 std::__ndk1::__shared_ptr_emplace<facebook::react::NativeRNShareSpecJSI, std::__ndk1::allocator<facebook::react::NativeRNShareSpecJSI>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<facebook::react::NativeReanimatedModuleSpecJSI, std::__ndk1::allocator<facebook::react::NativeReanimatedModuleSpecJSI>>::~__shared_ptr_emplace()
+std::__ndk1::__shared_ptr_emplace<facebook::react::NativeWorkletsModuleSpecJSI, std::__ndk1::allocator<facebook::react::NativeWorkletsModuleSpecJSI>>::~__shared_ptr_emplace()
 std::__ndk1::__shared_ptr_emplace<facebook::react::RNCAndroidDialogPickerEventEmitter const, std::__ndk1::allocator<facebook::react::RNCAndroidDialogPickerEventEmitter const>>::~__shared_ptr_emplace()
 std::__ndk1::__shared_ptr_emplace<facebook::react::RNCAndroidDialogPickerMeasurementsManager, std::__ndk1::allocator<facebook::react::RNCAndroidDialogPickerMeasurementsManager>>::~__shared_ptr_emplace()
 std::__ndk1::__shared_ptr_emplace<facebook::react::RNCAndroidDialogPickerProps const, std::__ndk1::allocator<facebook::react::RNCAndroidDialogPickerProps const>>::~__shared_ptr_emplace()
@@ -3582,6 +3605,10 @@ typeinfo for facebook::react::NativeRNGestureHandlerModuleCxxSpecJSI
 typeinfo for facebook::react::NativeRNGestureHandlerModuleSpecJSI
 typeinfo for facebook::react::NativeRNShareCxxSpecJSI
 typeinfo for facebook::react::NativeRNShareSpecJSI
+typeinfo for facebook::react::NativeReanimatedModuleCxxSpecJSI
+typeinfo for facebook::react::NativeReanimatedModuleSpecJSI
+typeinfo for facebook::react::NativeWorkletsModuleCxxSpecJSI
+typeinfo for facebook::react::NativeWorkletsModuleSpecJSI
 typeinfo for facebook::react::Props
 typeinfo for facebook::react::RNCAndroidDialogPickerComponentDescriptor
 typeinfo for facebook::react::RNCAndroidDialogPickerEventEmitter
@@ -3860,6 +3887,8 @@ typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::NativeBleManager
 typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::NativeRNCWebViewModuleSpecJSI, std::__ndk1::allocator<facebook::react::NativeRNCWebViewModuleSpecJSI>>
 typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::NativeRNGestureHandlerModuleSpecJSI, std::__ndk1::allocator<facebook::react::NativeRNGestureHandlerModuleSpecJSI>>
 typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::NativeRNShareSpecJSI, std::__ndk1::allocator<facebook::react::NativeRNShareSpecJSI>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::NativeReanimatedModuleSpecJSI, std::__ndk1::allocator<facebook::react::NativeReanimatedModuleSpecJSI>>
+typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::NativeWorkletsModuleSpecJSI, std::__ndk1::allocator<facebook::react::NativeWorkletsModuleSpecJSI>>
 typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::RNCAndroidDialogPickerEventEmitter const, std::__ndk1::allocator<facebook::react::RNCAndroidDialogPickerEventEmitter const>>
 typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::RNCAndroidDialogPickerMeasurementsManager, std::__ndk1::allocator<facebook::react::RNCAndroidDialogPickerMeasurementsManager>>
 typeinfo for std::__ndk1::__shared_ptr_emplace<facebook::react::RNCAndroidDialogPickerProps const, std::__ndk1::allocator<facebook::react::RNCAndroidDialogPickerProps const>>
@@ -4268,6 +4297,10 @@ typeinfo name for facebook::react::NativeRNGestureHandlerModuleCxxSpecJSI
 typeinfo name for facebook::react::NativeRNGestureHandlerModuleSpecJSI
 typeinfo name for facebook::react::NativeRNShareCxxSpecJSI
 typeinfo name for facebook::react::NativeRNShareSpecJSI
+typeinfo name for facebook::react::NativeReanimatedModuleCxxSpecJSI
+typeinfo name for facebook::react::NativeReanimatedModuleSpecJSI
+typeinfo name for facebook::react::NativeWorkletsModuleCxxSpecJSI
+typeinfo name for facebook::react::NativeWorkletsModuleSpecJSI
 typeinfo name for facebook::react::Props
 typeinfo name for facebook::react::RNCAndroidDialogPickerComponentDescriptor
 typeinfo name for facebook::react::RNCAndroidDialogPickerEventEmitter
@@ -4544,6 +4577,8 @@ typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::NativeBleMa
 typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::NativeRNCWebViewModuleSpecJSI, std::__ndk1::allocator<facebook::react::NativeRNCWebViewModuleSpecJSI>>
 typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::NativeRNGestureHandlerModuleSpecJSI, std::__ndk1::allocator<facebook::react::NativeRNGestureHandlerModuleSpecJSI>>
 typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::NativeRNShareSpecJSI, std::__ndk1::allocator<facebook::react::NativeRNShareSpecJSI>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::NativeReanimatedModuleSpecJSI, std::__ndk1::allocator<facebook::react::NativeReanimatedModuleSpecJSI>>
+typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::NativeWorkletsModuleSpecJSI, std::__ndk1::allocator<facebook::react::NativeWorkletsModuleSpecJSI>>
 typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::RNCAndroidDialogPickerEventEmitter const, std::__ndk1::allocator<facebook::react::RNCAndroidDialogPickerEventEmitter const>>
 typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::RNCAndroidDialogPickerMeasurementsManager, std::__ndk1::allocator<facebook::react::RNCAndroidDialogPickerMeasurementsManager>>
 typeinfo name for std::__ndk1::__shared_ptr_emplace<facebook::react::RNCAndroidDialogPickerProps const, std::__ndk1::allocator<facebook::react::RNCAndroidDialogPickerProps const>>
@@ -4945,6 +4980,10 @@ vtable for facebook::react::NativeRNGestureHandlerModuleCxxSpecJSI
 vtable for facebook::react::NativeRNGestureHandlerModuleSpecJSI
 vtable for facebook::react::NativeRNShareCxxSpecJSI
 vtable for facebook::react::NativeRNShareSpecJSI
+vtable for facebook::react::NativeReanimatedModuleCxxSpecJSI
+vtable for facebook::react::NativeReanimatedModuleSpecJSI
+vtable for facebook::react::NativeWorkletsModuleCxxSpecJSI
+vtable for facebook::react::NativeWorkletsModuleSpecJSI
 vtable for facebook::react::Props
 vtable for facebook::react::RNCAndroidDialogPickerComponentDescriptor
 vtable for facebook::react::RNCAndroidDialogPickerEventEmitter
@@ -5196,6 +5235,8 @@ vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::NativeBleManagerSp
 vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::NativeRNCWebViewModuleSpecJSI, std::__ndk1::allocator<facebook::react::NativeRNCWebViewModuleSpecJSI>>
 vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::NativeRNGestureHandlerModuleSpecJSI, std::__ndk1::allocator<facebook::react::NativeRNGestureHandlerModuleSpecJSI>>
 vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::NativeRNShareSpecJSI, std::__ndk1::allocator<facebook::react::NativeRNShareSpecJSI>>
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::NativeReanimatedModuleSpecJSI, std::__ndk1::allocator<facebook::react::NativeReanimatedModuleSpecJSI>>
+vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::NativeWorkletsModuleSpecJSI, std::__ndk1::allocator<facebook::react::NativeWorkletsModuleSpecJSI>>
 vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::RNCAndroidDialogPickerEventEmitter const, std::__ndk1::allocator<facebook::react::RNCAndroidDialogPickerEventEmitter const>>
 vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::RNCAndroidDialogPickerMeasurementsManager, std::__ndk1::allocator<facebook::react::RNCAndroidDialogPickerMeasurementsManager>>
 vtable for std::__ndk1::__shared_ptr_emplace<facebook::react::RNCAndroidDialogPickerProps const, std::__ndk1::allocator<facebook::react::RNCAndroidDialogPickerProps const>>

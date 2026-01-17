@@ -25,7 +25,7 @@ public final class AtomicBoolean {
         AtomicIntKt.setValue(this.atom, boolToInt(z));
     }
 
-    public final boolean compareAndSet(boolean expected, boolean r3) {
-        return this.atom.compareAndSet(boolToInt(expected), boolToInt(r3));
+    public final boolean compareAndSet(boolean expected, boolean z) {
+        return this.atom.compareAndSet(boolToInt(expected), boolToInt(z));
     }
 }

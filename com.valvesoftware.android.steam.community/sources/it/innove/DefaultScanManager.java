@@ -60,9 +60,9 @@ public class DefaultScanManager extends ScanManager {
             @Override // android.bluetooth.le.ScanCallback
             public void onScanFailed(int i) {
                 DefaultScanManager.this.isScanning = false;
-                WritableMap createMap = Arguments.createMap();
-                createMap.putInt("status", i);
-                DefaultScanManager.this.bleManager.emitOnStopScan(createMap);
+                WritableMap writableMapCreateMap = Arguments.createMap();
+                writableMapCreateMap.putInt("status", i);
+                DefaultScanManager.this.bleManager.emitOnStopScan(writableMapCreateMap);
             }
         };
     }
@@ -161,7 +161,7 @@ public class DefaultScanManager extends ScanManager {
                 }
 
                 @Override // java.lang.Thread, java.lang.Runnable
-                public void run() {
+                public void run() throws InterruptedException {
                     try {
                         Thread.sleep(i * 1000);
                     } catch (InterruptedException unused) {
@@ -170,7 +170,7 @@ public class DefaultScanManager extends ScanManager {
                         @Override // java.lang.Runnable
                         public void run() {
                             BluetoothAdapter bluetoothAdapter = DefaultScanManager.this.getBluetoothAdapter();
-                            if (DefaultScanManager.this.scanSessionId.intValue() == C33991.this.currentScanSession) {
+                            if (DefaultScanManager.this.scanSessionId.intValue() == C38001.this.currentScanSession) {
                                 if (bluetoothAdapter.getState() == 12) {
                                     BluetoothLeScanner bluetoothLeScanner = bluetoothAdapter.getBluetoothLeScanner();
                                     if (bluetoothLeScanner != null) {
@@ -178,9 +178,9 @@ public class DefaultScanManager extends ScanManager {
                                     }
                                     DefaultScanManager.this.isScanning = false;
                                 }
-                                WritableMap createMap = Arguments.createMap();
-                                createMap.putInt("status", 10);
-                                DefaultScanManager.this.bleManager.emitOnStopScan(createMap);
+                                WritableMap writableMapCreateMap = Arguments.createMap();
+                                writableMapCreateMap.putInt("status", 10);
+                                DefaultScanManager.this.bleManager.emitOnStopScan(writableMapCreateMap);
                             }
                         }
                     });
@@ -192,16 +192,16 @@ public class DefaultScanManager extends ScanManager {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void onDiscoveredPeripheral(ScanResult scanResult) {
-        String scanResult2;
+        String string;
         ScanRecord scanRecord = scanResult.getScanRecord();
         if (scanRecord != null) {
-            scanResult2 = scanRecord.getDeviceName();
+            string = scanRecord.getDeviceName();
         } else if (ActivityCompat.checkSelfPermission(this.context, "android.permission.BLUETOOTH_CONNECT") == 0) {
-            scanResult2 = scanResult.getDevice().getName();
+            string = scanResult.getDevice().getName();
         } else {
-            scanResult2 = scanResult.toString();
+            string = scanResult.toString();
         }
-        Log.i(BleManager.LOG_TAG, "DiscoverPeripheral: " + scanResult2);
+        Log.i(BleManager.LOG_TAG, "DiscoverPeripheral: " + string);
         DefaultPeripheral defaultPeripheral = (DefaultPeripheral) this.bleManager.getPeripheral(scanResult.getDevice());
         if (defaultPeripheral == null) {
             defaultPeripheral = new DefaultPeripheral(this.bleManager, scanResult);

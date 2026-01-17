@@ -127,14 +127,14 @@ public class Task<TResult> {
     }
 
     public boolean waitForCompletion(long j, TimeUnit timeUnit) throws InterruptedException {
-        boolean isCompleted;
+        boolean zIsCompleted;
         synchronized (this.lock) {
             if (!isCompleted()) {
                 this.lock.wait(timeUnit.toMillis(j));
             }
-            isCompleted = isCompleted();
+            zIsCompleted = isCompleted();
         }
-        return isCompleted;
+        return zIsCompleted;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -176,17 +176,17 @@ public class Task<TResult> {
             return forResult(null);
         }
         final bolts.TaskCompletionSource taskCompletionSource = new bolts.TaskCompletionSource();
-        final ScheduledFuture<?> schedule = scheduledExecutorService.schedule(new Runnable() { // from class: bolts.Task.1
+        final ScheduledFuture<?> scheduledFutureSchedule = scheduledExecutorService.schedule(new Runnable() { // from class: bolts.Task.1
             @Override // java.lang.Runnable
             public void run() {
-                bolts.TaskCompletionSource.this.trySetResult(null);
+                taskCompletionSource.trySetResult(null);
             }
         }, j, TimeUnit.MILLISECONDS);
         if (cancellationToken != null) {
             cancellationToken.register(new Runnable() { // from class: bolts.Task.2
                 @Override // java.lang.Runnable
                 public void run() {
-                    schedule.cancel(true);
+                    scheduledFutureSchedule.cancel(true);
                     taskCompletionSource.trySetCancelled();
                 }
             });
@@ -229,7 +229,7 @@ public class Task<TResult> {
                 /* JADX WARN: Multi-variable type inference failed */
                 @Override // java.lang.Runnable
                 public void run() {
-                    CancellationToken cancellationToken2 = CancellationToken.this;
+                    CancellationToken cancellationToken2 = cancellationToken;
                     if (cancellationToken2 != null && cancellationToken2.isCancellationRequested()) {
                         taskCompletionSource.setCancelled();
                         return;
@@ -398,11 +398,11 @@ public class Task<TResult> {
     }
 
     public <TContinuationResult> Task<TContinuationResult> continueWith(final Continuation<TResult, TContinuationResult> continuation, final Executor executor, final CancellationToken cancellationToken) {
-        boolean isCompleted;
+        boolean zIsCompleted;
         final bolts.TaskCompletionSource taskCompletionSource = new bolts.TaskCompletionSource();
         synchronized (this.lock) {
-            isCompleted = isCompleted();
-            if (!isCompleted) {
+            zIsCompleted = isCompleted();
+            if (!zIsCompleted) {
                 this.continuations.add(new Continuation<TResult, Void>() { // from class: bolts.Task.10
                     @Override // bolts.Continuation
                     public Void then(Task<TResult> task) {
@@ -412,7 +412,7 @@ public class Task<TResult> {
                 });
             }
         }
-        if (isCompleted) {
+        if (zIsCompleted) {
             completeImmediately(taskCompletionSource, continuation, this, executor, cancellationToken);
         }
         return taskCompletionSource.getTask();
@@ -431,11 +431,11 @@ public class Task<TResult> {
     }
 
     public <TContinuationResult> Task<TContinuationResult> continueWithTask(final Continuation<TResult, Task<TContinuationResult>> continuation, final Executor executor, final CancellationToken cancellationToken) {
-        boolean isCompleted;
+        boolean zIsCompleted;
         final bolts.TaskCompletionSource taskCompletionSource = new bolts.TaskCompletionSource();
         synchronized (this.lock) {
-            isCompleted = isCompleted();
-            if (!isCompleted) {
+            zIsCompleted = isCompleted();
+            if (!zIsCompleted) {
                 this.continuations.add(new Continuation<TResult, Void>() { // from class: bolts.Task.11
                     @Override // bolts.Continuation
                     public Void then(Task<TResult> task) {
@@ -445,7 +445,7 @@ public class Task<TResult> {
                 });
             }
         }
-        if (isCompleted) {
+        if (zIsCompleted) {
             completeAfterTask(taskCompletionSource, continuation, this, executor, cancellationToken);
         }
         return taskCompletionSource.getTask();
@@ -528,7 +528,7 @@ public class Task<TResult> {
                 /* JADX WARN: Multi-variable type inference failed */
                 @Override // java.lang.Runnable
                 public void run() {
-                    CancellationToken cancellationToken2 = CancellationToken.this;
+                    CancellationToken cancellationToken2 = cancellationToken;
                     if (cancellationToken2 != null && cancellationToken2.isCancellationRequested()) {
                         taskCompletionSource.setCancelled();
                         return;
@@ -553,7 +553,7 @@ public class Task<TResult> {
             executor.execute(new Runnable() { // from class: bolts.Task.15
                 @Override // java.lang.Runnable
                 public void run() {
-                    CancellationToken cancellationToken2 = CancellationToken.this;
+                    CancellationToken cancellationToken2 = cancellationToken;
                     if (cancellationToken2 != null && cancellationToken2.isCancellationRequested()) {
                         taskCompletionSource.setCancelled();
                         return;
@@ -566,7 +566,7 @@ public class Task<TResult> {
                             task2.continueWith(new Continuation<TContinuationResult, Void>() { // from class: bolts.Task.15.1
                                 @Override // bolts.Continuation
                                 public Void then(Task<TContinuationResult> task3) {
-                                    if (CancellationToken.this != null && CancellationToken.this.isCancellationRequested()) {
+                                    if (cancellationToken != null && cancellationToken.isCancellationRequested()) {
                                         taskCompletionSource.setCancelled();
                                         return null;
                                     }

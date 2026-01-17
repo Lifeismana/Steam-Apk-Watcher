@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.pm.ResolveInfo;
 import android.os.Build;
 import android.util.Log;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -91,12 +92,12 @@ public final class ShortcutBadger {
         if (sIsBadgeCounterSupported == null) {
             synchronized (sCounterSupportedLock) {
                 if (sIsBadgeCounterSupported == null) {
-                    String str = null;
+                    String message = null;
                     for (int i = 0; i < 3; i++) {
                         try {
                             Log.i(LOG_TAG, "Checking if platform supports badge counters, attempt " + String.format("%d/%d.", Integer.valueOf(i + 1), 3));
                         } catch (Exception e) {
-                            str = e.getMessage();
+                            message = e.getMessage();
                         }
                         if (initBadger(context)) {
                             sShortcutBadger.executeBadge(context, sComponentName, 0);
@@ -104,10 +105,10 @@ public final class ShortcutBadger {
                             Log.i(LOG_TAG, "Badge counter is supported in this platform.");
                             break;
                         }
-                        str = "Failed to initialize the badge counter.";
+                        message = "Failed to initialize the badge counter.";
                     }
                     if (sIsBadgeCounterSupported == null) {
-                        Log.w(LOG_TAG, "Badge counter seems not supported for this platform: " + str);
+                        Log.w(LOG_TAG, "Badge counter seems not supported for this platform: " + message);
                         sIsBadgeCounterSupported = false;
                     }
                 }
@@ -116,7 +117,7 @@ public final class ShortcutBadger {
         return sIsBadgeCounterSupported.booleanValue();
     }
 
-    public static void applyNotification(Context context, Notification notification, int i) {
+    public static void applyNotification(Context context, Notification notification, int i) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
         if (Build.MANUFACTURER.equalsIgnoreCase("Xiaomi")) {
             try {
                 Object obj = notification.getClass().getDeclaredField("extraNotification").get(notification);
@@ -129,8 +130,8 @@ public final class ShortcutBadger {
         }
     }
 
-    private static boolean initBadger(Context context) {
-        Badger badger;
+    private static boolean initBadger(Context context) throws IllegalAccessException, InstantiationException {
+        Badger badgerNewInstance;
         Intent launchIntentForPackage = context.getPackageManager().getLaunchIntentForPackage(context.getPackageName());
         if (launchIntentForPackage == null) {
             Log.e(LOG_TAG, "Unable to find launch intent for package " + context.getPackageName());
@@ -148,12 +149,12 @@ public final class ShortcutBadger {
                     break;
                 }
                 try {
-                    badger = it3.next().newInstance();
+                    badgerNewInstance = it3.next().newInstance();
                 } catch (Exception unused) {
-                    badger = null;
+                    badgerNewInstance = null;
                 }
-                if (badger != null && badger.getSupportLaunchers().contains(str)) {
-                    sShortcutBadger = badger;
+                if (badgerNewInstance != null && badgerNewInstance.getSupportLaunchers().contains(str)) {
+                    sShortcutBadger = badgerNewInstance;
                     break;
                 }
             }

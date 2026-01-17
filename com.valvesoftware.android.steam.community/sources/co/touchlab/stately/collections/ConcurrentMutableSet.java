@@ -27,10 +27,10 @@ public final class ConcurrentMutableSet<E> extends ConcurrentMutableCollection<E
     }
 
     public final <R> R block(final Function1<? super Set<E>, ? extends R> f) {
-        R invoke;
+        R rInvoke;
         Intrinsics.checkNotNullParameter(f, "f");
         Object syncTarget$stately_concurrent_collections = getSyncTarget();
-        Function0<R> function0 = new Function0<R>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableSet$block$1
+        Function0<R> function0 = new Function0<R>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableSet.block.1
             final /* synthetic */ ConcurrentMutableSet<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -42,17 +42,15 @@ public final class ConcurrentMutableSet<E> extends ConcurrentMutableCollection<E
 
             @Override // kotlin.jvm.functions.Function0
             public final R invoke() {
-                Set set;
-                set = ((ConcurrentMutableSet) this.this$0).del;
-                MutableSetWrapper mutableSetWrapper = new MutableSetWrapper(set);
-                R invoke2 = f.invoke(mutableSetWrapper);
+                MutableSetWrapper mutableSetWrapper = new MutableSetWrapper(((ConcurrentMutableSet) this.this$0).del);
+                R rInvoke2 = f.invoke(mutableSetWrapper);
                 mutableSetWrapper.setSet$stately_concurrent_collections(new LinkedHashSet());
-                return invoke2;
+                return rInvoke2;
             }
         };
         synchronized (syncTarget$stately_concurrent_collections) {
-            invoke = function0.invoke();
+            rInvoke = function0.invoke();
         }
-        return invoke;
+        return rInvoke;
     }
 }

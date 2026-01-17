@@ -22,6 +22,7 @@ import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableMap;
 import com.google.common.base.Ascii;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -112,10 +113,10 @@ class BleManager extends NativeBleManagerSpec {
                         str2 = "turning_off";
                         break;
                 }
-                WritableMap createMap = Arguments.createMap();
-                createMap.putString("state", str2);
+                WritableMap writableMapCreateMap = Arguments.createMap();
+                writableMapCreateMap.putString("state", str2);
                 Log.d(BleManager.LOG_TAG, "state: ".concat(str2));
-                BleManager.this.emitOnDidUpdateState(createMap);
+                BleManager.this.emitOnDidUpdateState(writableMapCreateMap);
                 return;
             }
             if (action.equals("android.bluetooth.device.action.BOND_STATE_CHANGED")) {
@@ -342,9 +343,9 @@ class BleManager extends NativeBleManagerSpec {
             ScanManager scanManager = this.scanManager;
             if (scanManager != null) {
                 scanManager.stopScan(callback);
-                WritableMap createMap = Arguments.createMap();
-                createMap.putInt("status", 0);
-                emitOnStopScan(createMap);
+                WritableMap writableMapCreateMap = Arguments.createMap();
+                writableMapCreateMap.putInt("status", 0);
+                emitOnStopScan(writableMapCreateMap);
             }
         }
     }
@@ -360,14 +361,14 @@ class BleManager extends NativeBleManagerSpec {
                 return;
             }
         }
-        Peripheral retrieveOrCreatePeripheral = retrieveOrCreatePeripheral(str);
-        if (retrieveOrCreatePeripheral == null) {
+        Peripheral peripheralRetrieveOrCreatePeripheral = retrieveOrCreatePeripheral(str);
+        if (peripheralRetrieveOrCreatePeripheral == null) {
             callback.invoke("Invalid peripheral uuid");
             return;
         }
         if (this.bondRequest != null) {
             callback.invoke("Only allow one bond request at a time");
-        } else if (retrieveOrCreatePeripheral.getDevice().createBond()) {
+        } else if (peripheralRetrieveOrCreatePeripheral.getDevice().createBond()) {
             Log.d(LOG_TAG, "Request bond successful for: " + str);
             this.bondRequest = new BondRequest(str, str2, callback);
         } else {
@@ -377,15 +378,15 @@ class BleManager extends NativeBleManagerSpec {
 
     @Override // it.innove.NativeBleManagerSpec
     @ReactMethod
-    public void removeBond(String str, Callback callback) {
+    public void removeBond(String str, Callback callback) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
         Log.d(LOG_TAG, "Remove bond to: " + str);
-        Peripheral retrieveOrCreatePeripheral = retrieveOrCreatePeripheral(str);
-        if (retrieveOrCreatePeripheral == null) {
+        Peripheral peripheralRetrieveOrCreatePeripheral = retrieveOrCreatePeripheral(str);
+        if (peripheralRetrieveOrCreatePeripheral == null) {
             callback.invoke("Invalid peripheral uuid");
             return;
         }
         try {
-            retrieveOrCreatePeripheral.getDevice().getClass().getMethod("removeBond", null).invoke(retrieveOrCreatePeripheral.getDevice(), null);
+            peripheralRetrieveOrCreatePeripheral.getDevice().getClass().getMethod("removeBond", null).invoke(peripheralRetrieveOrCreatePeripheral.getDevice(), null);
             this.removeBondRequest = new BondRequest(str, callback);
         } catch (Exception e) {
             Log.d(LOG_TAG, "Error in remove bond: " + str, e);
@@ -397,11 +398,11 @@ class BleManager extends NativeBleManagerSpec {
     @ReactMethod
     public void connect(String str, ReadableMap readableMap, Callback callback) {
         Log.d(LOG_TAG, "Connect to: " + str);
-        Peripheral retrieveOrCreatePeripheral = retrieveOrCreatePeripheral(str);
-        if (retrieveOrCreatePeripheral == null) {
+        Peripheral peripheralRetrieveOrCreatePeripheral = retrieveOrCreatePeripheral(str);
+        if (peripheralRetrieveOrCreatePeripheral == null) {
             callback.invoke("Invalid peripheral uuid");
         } else {
-            retrieveOrCreatePeripheral.connect(callback, getCurrentActivity(), readableMap);
+            peripheralRetrieveOrCreatePeripheral.connect(callback, getCurrentActivity(), readableMap);
         }
     }
 
@@ -678,37 +679,36 @@ class BleManager extends NativeBleManagerSpec {
         BluetoothAdapter bluetoothAdapter = getBluetoothAdapter();
         if (!this.context.getPackageManager().hasSystemFeature("android.hardware.bluetooth_le")) {
             str = "unsupported";
-        } else {
-            if (bluetoothAdapter != null) {
-                switch (bluetoothAdapter.getState()) {
-                    case 11:
-                        str = "turning_on";
-                        break;
-                    case 12:
-                        str = "on";
-                        break;
-                    case 13:
-                        ScanManager scanManager = this.scanManager;
-                        if (scanManager != null) {
-                            scanManager.setScanning(false);
-                        }
-                        str = "turning_off";
-                        break;
-                    default:
-                        ScanManager scanManager2 = this.scanManager;
-                        if (scanManager2 != null) {
-                            scanManager2.setScanning(false);
-                            break;
-                        }
-                        break;
-                }
-            }
+        } else if (bluetoothAdapter == null) {
             str = DebugKt.DEBUG_PROPERTY_VALUE_OFF;
+        } else {
+            switch (bluetoothAdapter.getState()) {
+                case 11:
+                    str = "turning_on";
+                    break;
+                case 12:
+                    str = "on";
+                    break;
+                case 13:
+                    ScanManager scanManager = this.scanManager;
+                    if (scanManager != null) {
+                        scanManager.setScanning(false);
+                    }
+                    str = "turning_off";
+                    break;
+                default:
+                    ScanManager scanManager2 = this.scanManager;
+                    if (scanManager2 != null) {
+                        scanManager2.setScanning(false);
+                    }
+                    str = DebugKt.DEBUG_PROPERTY_VALUE_OFF;
+                    break;
+            }
         }
-        WritableMap createMap = Arguments.createMap();
-        createMap.putString("state", str);
+        WritableMap writableMapCreateMap = Arguments.createMap();
+        writableMapCreateMap.putString("state", str);
         Log.d(LOG_TAG, "state:".concat(str));
-        emitOnDidUpdateState(createMap);
+        emitOnDidUpdateState(writableMapCreateMap);
         callback.invoke(str);
     }
 
@@ -769,30 +769,30 @@ class BleManager extends NativeBleManagerSpec {
     @ReactMethod
     public void getDiscoveredPeripherals(Callback callback) {
         Log.d(LOG_TAG, "Get discovered peripherals");
-        WritableArray createArray = Arguments.createArray();
+        WritableArray writableArrayCreateArray = Arguments.createArray();
         synchronized (this.peripherals) {
             Iterator<Map.Entry<String, Peripheral>> it2 = this.peripherals.entrySet().iterator();
             while (it2.hasNext()) {
-                createArray.pushMap(it2.next().getValue().asWritableMap());
+                writableArrayCreateArray.pushMap(it2.next().getValue().asWritableMap());
             }
         }
-        callback.invoke(null, createArray);
+        callback.invoke(null, writableArrayCreateArray);
     }
 
     @Override // it.innove.NativeBleManagerSpec
     @ReactMethod
     public void getConnectedPeripherals(ReadableArray readableArray, Callback callback) {
         Log.d(LOG_TAG, "Get connected peripherals");
-        WritableArray createArray = Arguments.createArray();
+        WritableArray writableArrayCreateArray = Arguments.createArray();
         if (getBluetoothAdapter() == null) {
             Log.d(LOG_TAG, "No bluetooth support");
             callback.invoke("No bluetooth support");
         } else {
             Iterator<BluetoothDevice> it2 = getBluetoothManager().getConnectedDevices(7).iterator();
             while (it2.hasNext()) {
-                createArray.pushMap(savePeripheral(it2.next()).asWritableMap());
+                writableArrayCreateArray.pushMap(savePeripheral(it2.next()).asWritableMap());
             }
-            callback.invoke(null, createArray);
+            callback.invoke(null, writableArrayCreateArray);
         }
     }
 
@@ -812,16 +812,16 @@ class BleManager extends NativeBleManagerSpec {
     public void getBondedPeripherals(Callback callback) {
         Peripheral peripheral;
         Log.d(LOG_TAG, "Get bonded peripherals");
-        WritableArray createArray = Arguments.createArray();
+        WritableArray writableArrayCreateArray = Arguments.createArray();
         for (BluetoothDevice bluetoothDevice : getBluetoothAdapter().getBondedDevices()) {
             if (!this.forceLegacy) {
                 peripheral = new DefaultPeripheral(bluetoothDevice, this);
             } else {
                 peripheral = new Peripheral(bluetoothDevice, this);
             }
-            createArray.pushMap(peripheral.asWritableMap());
+            writableArrayCreateArray.pushMap(peripheral.asWritableMap());
         }
-        callback.invoke(null, createArray);
+        callback.invoke(null, writableArrayCreateArray);
     }
 
     @Override // it.innove.NativeBleManagerSpec
@@ -871,12 +871,12 @@ class BleManager extends NativeBleManagerSpec {
     @ReactMethod
     public void getAssociatedPeripherals(Callback callback) {
         Log.d(LOG_TAG, "Get associated peripherals");
-        WritableArray createArray = Arguments.createArray();
+        WritableArray writableArrayCreateArray = Arguments.createArray();
         Iterator<String> it2 = ((CompanionDeviceManager) getCompanionDeviceManager()).getAssociations().iterator();
         while (it2.hasNext()) {
-            createArray.pushMap(retrieveOrCreatePeripheral(it2.next()).asWritableMap());
+            writableArrayCreateArray.pushMap(retrieveOrCreatePeripheral(it2.next()).asWritableMap());
         }
-        callback.invoke(null, createArray);
+        callback.invoke(null, writableArrayCreateArray);
     }
 
     @Override // it.innove.NativeBleManagerSpec
@@ -912,11 +912,11 @@ class BleManager extends NativeBleManagerSpec {
     }
 
     public static WritableArray bytesToWritableArray(byte[] bArr) {
-        WritableArray createArray = Arguments.createArray();
+        WritableArray writableArrayCreateArray = Arguments.createArray();
         for (byte b : bArr) {
-            createArray.pushInt(b & 255);
+            writableArrayCreateArray.pushInt(b & 255);
         }
-        return createArray;
+        return writableArrayCreateArray;
     }
 
     private Peripheral retrieveOrCreatePeripheral(String str) {

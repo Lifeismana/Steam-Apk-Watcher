@@ -54,36 +54,36 @@ public class ValveHelpersModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void SetCookie(String str, String str2, String str3) throws IOException, URISyntaxException {
+    public void SetCookie(String str, String str2, String str3) throws URISyntaxException, IOException {
         URI uri = new URI(str2);
-        HashMap hashMap = new HashMap();
-        hashMap.put("Set-cookie", Collections.singletonList(str + "=" + str3 + "; path=/"));
-        this.m_CookieHandler.put(uri, hashMap);
+        HashMap map = new HashMap();
+        map.put("Set-cookie", Collections.singletonList(str + "=" + str3 + "; path=/"));
+        this.m_CookieHandler.put(uri, map);
     }
 
     @ReactMethod
-    public void ClearCookie(String str, String str2) throws IOException, URISyntaxException {
+    public void ClearCookie(String str, String str2) throws URISyntaxException, IOException {
         SetCookie(str, str2, "deleted");
     }
 
     @ReactMethod
-    public void ComputeHMAC(String str, String str2, Promise promise) {
+    public void ComputeHMAC(String str, String str2, Promise promise) throws NoSuchAlgorithmException, InvalidKeyException {
         ComputeGenericHMAC(str, str2, promise, "HmacSHA1");
     }
 
     @ReactMethod
-    public void ComputeSHA256HMAC(String str, String str2, Promise promise) {
+    public void ComputeSHA256HMAC(String str, String str2, Promise promise) throws NoSuchAlgorithmException, InvalidKeyException {
         ComputeGenericHMAC(str, str2, promise, "HmacSHA256");
     }
 
-    private void ComputeGenericHMAC(String str, String str2, Promise promise, String str3) {
+    private void ComputeGenericHMAC(String str, String str2, Promise promise, String str3) throws NoSuchAlgorithmException, InvalidKeyException {
         try {
-            byte[] decode = Base64.decode(str.getBytes("UTF-8"), 2);
+            byte[] bArrDecode = Base64.decode(str.getBytes("UTF-8"), 2);
             SecretKeySpec secretKeySpec = new SecretKeySpec(Base64.decode(str2.getBytes("UTF-8"), 2), str3);
             try {
                 Mac mac = Mac.getInstance(str3);
                 mac.init(secretKeySpec);
-                promise.resolve(Base64.encodeToString(mac.doFinal(decode), 2));
+                promise.resolve(Base64.encodeToString(mac.doFinal(bArrDecode), 2));
             } catch (InvalidKeyException e) {
                 promise.reject("HMAC Failed. Invalid Key.", e);
             } catch (NoSuchAlgorithmException e2) {
@@ -97,17 +97,17 @@ public class ValveHelpersModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void ReadOldSessionInfo(Promise promise) {
+    public void ReadOldSessionInfo(Promise promise) throws Throwable {
         try {
             File file = new File(getReactApplicationContext().getDir("cache_i", 0), "login.json");
-            JSONObject LoadJSONFromFile = LoadJSONFromFile(file.getAbsolutePath());
-            if (LoadJSONFromFile == null) {
+            JSONObject jSONObjectLoadJSONFromFile = LoadJSONFromFile(file.getAbsolutePath());
+            if (jSONObjectLoadJSONFromFile == null) {
                 promise.resolve(null);
                 return;
             }
             JSONObject jSONObject = new JSONObject("{}");
-            jSONObject.put("steamID", LoadJSONFromFile.optString("x_steamid"));
-            jSONObject.put("token", LoadJSONFromFile.optString("wgtoken_secure"));
+            jSONObject.put("steamID", jSONObjectLoadJSONFromFile.optString("x_steamid"));
+            jSONObject.put("token", jSONObjectLoadJSONFromFile.optString("wgtoken_secure"));
             promise.resolve(JSONObjectToMap(jSONObject));
             file.delete();
         } catch (JSONException e) {
@@ -130,8 +130,8 @@ public class ValveHelpersModule extends ReactContextBaseJavaModule {
     public void OpenLinkInExternalBrowser(String str, Promise promise) {
         boolean z;
         try {
-            ResolveInfo resolveActivity = getReactApplicationContext().getPackageManager().resolveActivity(new Intent("android.intent.action.VIEW", Uri.parse("http://")), 65536);
-            String str2 = (resolveActivity == null || resolveActivity.activityInfo == null || resolveActivity.activityInfo.packageName.isEmpty()) ? "com.android.chrome" : resolveActivity.activityInfo.packageName;
+            ResolveInfo resolveInfoResolveActivity = getReactApplicationContext().getPackageManager().resolveActivity(new Intent("android.intent.action.VIEW", Uri.parse("http://")), 65536);
+            String str2 = (resolveInfoResolveActivity == null || resolveInfoResolveActivity.activityInfo == null || resolveInfoResolveActivity.activityInfo.packageName.isEmpty()) ? "com.android.chrome" : resolveInfoResolveActivity.activityInfo.packageName;
             Intent intent = new Intent("android.intent.action.VIEW", Uri.parse(str));
             intent.setPackage(str2);
             intent.addFlags(268435456);
@@ -144,23 +144,23 @@ public class ValveHelpersModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void ReadOldSteamGuardStates(Promise promise) {
-        String optString;
-        WritableArray createArray = Arguments.createArray();
+    public void ReadOldSteamGuardStates(Promise promise) throws Throwable {
+        String strOptString;
+        WritableArray writableArrayCreateArray = Arguments.createArray();
         Iterator<String> it2 = GetOldSteamGuardStateFilenames().iterator();
         while (it2.hasNext()) {
-            JSONObject LoadJSONFromFile = LoadJSONFromFile(it2.next());
-            if (LoadJSONFromFile != null && (optString = LoadJSONFromFile.optString("steamid")) != null) {
+            JSONObject jSONObjectLoadJSONFromFile = LoadJSONFromFile(it2.next());
+            if (jSONObjectLoadJSONFromFile != null && (strOptString = jSONObjectLoadJSONFromFile.optString("steamid")) != null) {
                 try {
-                    if (!optString.isEmpty()) {
-                        LoadJSONFromFile.put("steamid", optString);
-                        createArray.pushMap(JSONObjectToMap(LoadJSONFromFile));
+                    if (!strOptString.isEmpty()) {
+                        jSONObjectLoadJSONFromFile.put("steamid", strOptString);
+                        writableArrayCreateArray.pushMap(JSONObjectToMap(jSONObjectLoadJSONFromFile));
                     }
                 } catch (JSONException unused) {
                 }
             }
         }
-        promise.resolve(createArray);
+        promise.resolve(writableArrayCreateArray);
     }
 
     private ArrayList<String> GetOldSteamGuardStateFilenames() {
@@ -173,23 +173,23 @@ public class ValveHelpersModule extends ReactContextBaseJavaModule {
         return arrayList;
     }
 
-    private JSONObject LoadJSONFromFile(String str) {
+    private JSONObject LoadJSONFromFile(String str) throws Throwable {
         FileInputStream fileInputStream;
-        FileInputStream fileInputStream2;
+        FileInputStream fileInputStreamOpenFileInput;
         ReactApplicationContext reactApplicationContext = getReactApplicationContext();
         try {
             File file = new File(str);
             if (file.isAbsolute()) {
-                fileInputStream2 = new FileInputStream(file);
+                fileInputStreamOpenFileInput = new FileInputStream(file);
             } else {
-                fileInputStream2 = reactApplicationContext.openFileInput(str);
+                fileInputStreamOpenFileInput = reactApplicationContext.openFileInput(str);
             }
             try {
-                byte[] bArr = new byte[fileInputStream2.available()];
-                if (fileInputStream2 != null) {
+                byte[] bArr = new byte[fileInputStreamOpenFileInput.available()];
+                if (fileInputStreamOpenFileInput != null) {
                     try {
-                        fileInputStream2.read(bArr);
-                        fileInputStream2.close();
+                        fileInputStreamOpenFileInput.read(bArr);
+                        fileInputStreamOpenFileInput.close();
                     } catch (IOException unused) {
                     }
                 }
@@ -199,16 +199,16 @@ public class ValveHelpersModule extends ReactContextBaseJavaModule {
                     return null;
                 }
             } catch (IOException unused3) {
-                if (fileInputStream2 != null) {
+                if (fileInputStreamOpenFileInput != null) {
                     try {
-                        fileInputStream2.read(null);
-                        fileInputStream2.close();
+                        fileInputStreamOpenFileInput.read(null);
+                        fileInputStreamOpenFileInput.close();
                     } catch (IOException unused4) {
                     }
                 }
                 return null;
             } catch (Throwable th) {
-                fileInputStream = fileInputStream2;
+                fileInputStream = fileInputStreamOpenFileInput;
                 th = th;
                 if (fileInputStream != null) {
                     try {
@@ -220,7 +220,7 @@ public class ValveHelpersModule extends ReactContextBaseJavaModule {
                 throw th;
             }
         } catch (IOException unused6) {
-            fileInputStream2 = null;
+            fileInputStreamOpenFileInput = null;
         } catch (Throwable th2) {
             th = th2;
             fileInputStream = null;
@@ -245,73 +245,73 @@ public class ValveHelpersModule extends ReactContextBaseJavaModule {
     }
 
     private static WritableMap JSONObjectToMap(JSONObject jSONObject) throws JSONException {
-        WritableMap createMap = Arguments.createMap();
-        Iterator<String> keys = jSONObject.keys();
-        while (keys.hasNext()) {
-            String next = keys.next();
+        WritableMap writableMapCreateMap = Arguments.createMap();
+        Iterator<String> itKeys = jSONObject.keys();
+        while (itKeys.hasNext()) {
+            String next = itKeys.next();
             Object obj = jSONObject.get(next);
             if (obj instanceof JSONObject) {
-                createMap.putMap(next, JSONObjectToMap((JSONObject) obj));
+                writableMapCreateMap.putMap(next, JSONObjectToMap((JSONObject) obj));
             } else if (obj instanceof JSONArray) {
-                createMap.putArray(next, JSONArrayToArray((JSONArray) obj));
+                writableMapCreateMap.putArray(next, JSONArrayToArray((JSONArray) obj));
             } else if (obj instanceof String) {
-                createMap.putString(next, (String) obj);
+                writableMapCreateMap.putString(next, (String) obj);
             } else if (obj instanceof Boolean) {
-                createMap.putBoolean(next, ((Boolean) obj).booleanValue());
+                writableMapCreateMap.putBoolean(next, ((Boolean) obj).booleanValue());
             } else if (obj instanceof Integer) {
-                createMap.putInt(next, ((Integer) obj).intValue());
+                writableMapCreateMap.putInt(next, ((Integer) obj).intValue());
             } else if (obj instanceof Double) {
-                createMap.putDouble(next, ((Double) obj).doubleValue());
+                writableMapCreateMap.putDouble(next, ((Double) obj).doubleValue());
             } else {
-                createMap.putString(next, obj.toString());
+                writableMapCreateMap.putString(next, obj.toString());
             }
         }
-        return createMap;
+        return writableMapCreateMap;
     }
 
     private static WritableArray JSONArrayToArray(JSONArray jSONArray) throws JSONException {
-        WritableArray createArray = Arguments.createArray();
+        WritableArray writableArrayCreateArray = Arguments.createArray();
         for (int i = 0; i < jSONArray.length(); i++) {
             Object obj = jSONArray.get(i);
             if (obj instanceof JSONObject) {
-                createArray.pushMap(JSONObjectToMap((JSONObject) obj));
+                writableArrayCreateArray.pushMap(JSONObjectToMap((JSONObject) obj));
             } else if (obj instanceof JSONArray) {
-                createArray.pushArray(JSONArrayToArray((JSONArray) obj));
+                writableArrayCreateArray.pushArray(JSONArrayToArray((JSONArray) obj));
             } else if (obj instanceof String) {
-                createArray.pushString((String) obj);
+                writableArrayCreateArray.pushString((String) obj);
             } else if (obj instanceof Boolean) {
-                createArray.pushBoolean(((Boolean) obj).booleanValue());
+                writableArrayCreateArray.pushBoolean(((Boolean) obj).booleanValue());
             } else if (obj instanceof Integer) {
-                createArray.pushInt(((Integer) obj).intValue());
+                writableArrayCreateArray.pushInt(((Integer) obj).intValue());
             } else if (obj instanceof Double) {
-                createArray.pushDouble(((Double) obj).doubleValue());
+                writableArrayCreateArray.pushDouble(((Double) obj).doubleValue());
             } else {
-                createArray.pushString(obj.toString());
+                writableArrayCreateArray.pushString(obj.toString());
             }
         }
-        return createArray;
+        return writableArrayCreateArray;
     }
 
     @ReactMethod
     public void GetUniqueDeviceIdentifier(Promise promise) {
-        String str;
+        String string;
         SharedPreferences sharedPreferences = getReactApplicationContext().getSharedPreferences("steam.uuid", 0);
-        String string = sharedPreferences.getString("uuidKey", "");
-        if (string.length() > 0) {
-            promise.resolve(string);
+        String string2 = sharedPreferences.getString("uuidKey", "");
+        if (string2.length() > 0) {
+            promise.resolve(string2);
             return;
         }
         try {
-            str = UUID.randomUUID().toString();
+            string = UUID.randomUUID().toString();
         } catch (Exception e) {
             Log.e("RandomUUID", e.toString());
-            str = null;
+            string = null;
         }
-        if (str == null) {
-            str = String.format(Locale.US, TimeModel.NUMBER_FORMAT, Long.valueOf(new GregorianCalendar().getTimeInMillis()));
+        if (string == null) {
+            string = String.format(Locale.US, TimeModel.NUMBER_FORMAT, Long.valueOf(new GregorianCalendar().getTimeInMillis()));
         }
-        String format = String.format(Locale.US, "android:%s", str);
-        sharedPreferences.edit().putString("uuidKey", format).commit();
-        promise.resolve(format);
+        String str = String.format(Locale.US, "android:%s", string);
+        sharedPreferences.edit().putString("uuidKey", str).commit();
+        promise.resolve(str);
     }
 }

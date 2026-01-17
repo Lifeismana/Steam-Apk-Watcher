@@ -30,9 +30,9 @@ public class RenderScriptBlur implements BlurAlgorithm {
     }
 
     public RenderScriptBlur(Context context) {
-        RenderScript create = RenderScript.create(context);
-        this.renderScript = create;
-        this.blurScript = ScriptIntrinsicBlur.create(create, Element.U8_4(create));
+        RenderScript renderScriptCreate = RenderScript.create(context);
+        this.renderScript = renderScriptCreate;
+        this.blurScript = ScriptIntrinsicBlur.create(renderScriptCreate, Element.U8_4(renderScriptCreate));
     }
 
     private boolean canReuseAllocation(Bitmap bitmap) {
@@ -41,21 +41,21 @@ public class RenderScriptBlur implements BlurAlgorithm {
 
     @Override // eightbitlab.com.blurview.BlurAlgorithm
     public Bitmap blur(Bitmap bitmap, float f) {
-        Allocation createFromBitmap = Allocation.createFromBitmap(this.renderScript, bitmap);
+        Allocation allocationCreateFromBitmap = Allocation.createFromBitmap(this.renderScript, bitmap);
         if (!canReuseAllocation(bitmap)) {
             Allocation allocation = this.outAllocation;
             if (allocation != null) {
                 allocation.destroy();
             }
-            this.outAllocation = Allocation.createTyped(this.renderScript, createFromBitmap.getType());
+            this.outAllocation = Allocation.createTyped(this.renderScript, allocationCreateFromBitmap.getType());
             this.lastBitmapWidth = bitmap.getWidth();
             this.lastBitmapHeight = bitmap.getHeight();
         }
         this.blurScript.setRadius(f);
-        this.blurScript.setInput(createFromBitmap);
+        this.blurScript.setInput(allocationCreateFromBitmap);
         this.blurScript.forEach(this.outAllocation);
         this.outAllocation.copyTo(bitmap);
-        createFromBitmap.destroy();
+        allocationCreateFromBitmap.destroy();
         return bitmap;
     }
 

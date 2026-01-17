@@ -7,14 +7,10 @@ import kotlin.Metadata;
 /* loaded from: classes.dex */
 public final class ArtificialStackFrames {
     public final StackTraceElement coroutineCreation() {
-        StackTraceElement artificialFrame;
-        artificialFrame = CoroutineDebuggingKt.artificialFrame(new Exception(), "_CREATION");
-        return artificialFrame;
+        return CoroutineDebuggingKt.artificialFrame(new Exception(), "_CREATION");
     }
 
     public final StackTraceElement coroutineBoundary() {
-        StackTraceElement artificialFrame;
-        artificialFrame = CoroutineDebuggingKt.artificialFrame(new Exception(), "_BOUNDARY");
-        return artificialFrame;
+        return CoroutineDebuggingKt.artificialFrame(new Exception(), "_BOUNDARY");
     }
 }

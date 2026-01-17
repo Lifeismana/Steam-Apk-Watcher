@@ -54,16 +54,16 @@ public class SonyHomeBadger implements Badger {
         if (i < 0) {
             return;
         }
-        ContentValues createContentValues = createContentValues(i, componentName);
+        ContentValues contentValuesCreateContentValues = createContentValues(i, componentName);
         if (Looper.myLooper() == Looper.getMainLooper()) {
             if (this.mQueryHandler == null) {
                 this.mQueryHandler = new AsyncQueryHandler(context.getApplicationContext().getContentResolver()) { // from class: me.leolin.shortcutbadger.impl.SonyHomeBadger.1
                 };
             }
-            insertBadgeAsync(createContentValues);
+            insertBadgeAsync(contentValuesCreateContentValues);
             return;
         }
-        insertBadgeSync(context, createContentValues);
+        insertBadgeSync(context, contentValuesCreateContentValues);
     }
 
     private void insertBadgeAsync(ContentValues contentValues) {

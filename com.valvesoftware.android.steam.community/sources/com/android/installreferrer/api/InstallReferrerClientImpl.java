@@ -122,9 +122,9 @@ class InstallReferrerClientImpl extends InstallReferrerClient {
         InstallReferrerCommons.logVerbose(TAG, "Starting install referrer service setup.");
         Intent intent = new Intent(SERVICE_ACTION_NAME);
         intent.setComponent(new ComponentName("com.android.vending", SERVICE_NAME));
-        List<ResolveInfo> queryIntentServices = this.mApplicationContext.getPackageManager().queryIntentServices(intent, 0);
-        if (queryIntentServices != null && !queryIntentServices.isEmpty()) {
-            ResolveInfo resolveInfo = queryIntentServices.get(0);
+        List<ResolveInfo> listQueryIntentServices = this.mApplicationContext.getPackageManager().queryIntentServices(intent, 0);
+        if (listQueryIntentServices != null && !listQueryIntentServices.isEmpty()) {
+            ResolveInfo resolveInfo = listQueryIntentServices.get(0);
             if (resolveInfo.serviceInfo != null) {
                 String str = resolveInfo.serviceInfo.packageName;
                 String str2 = resolveInfo.serviceInfo.name;

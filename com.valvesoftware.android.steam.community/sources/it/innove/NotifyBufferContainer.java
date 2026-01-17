@@ -19,10 +19,10 @@ public class NotifyBufferContainer {
         if (bArr.length > this.items.remaining()) {
             int length = bArr.length - this.items.remaining();
             bArr2 = new byte[length];
-            int remaining = this.items.remaining();
-            byte[] bArr3 = new byte[remaining];
-            System.arraycopy(bArr, 0, bArr3, 0, remaining);
-            System.arraycopy(bArr, remaining, bArr2, 0, length);
+            int iRemaining = this.items.remaining();
+            byte[] bArr3 = new byte[iRemaining];
+            System.arraycopy(bArr, 0, bArr3, 0, iRemaining);
+            System.arraycopy(bArr, iRemaining, bArr2, 0, length);
             bArr = bArr3;
         } else {
             bArr2 = null;

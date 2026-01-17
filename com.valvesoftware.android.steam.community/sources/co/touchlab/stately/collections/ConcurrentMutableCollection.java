@@ -51,9 +51,9 @@ public class ConcurrentMutableCollection<E> implements Collection<E>, KMutableCo
     }
 
     public int getSize() {
-        Integer invoke;
+        Integer numInvoke;
         Object obj = this.syncTarget;
-        Function0<Integer> function0 = new Function0<Integer>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableCollection$size$1
+        Function0<Integer> function0 = new Function0<Integer>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableCollection.size.1
             final /* synthetic */ ConcurrentMutableCollection<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -65,22 +65,20 @@ public class ConcurrentMutableCollection<E> implements Collection<E>, KMutableCo
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             public final Integer invoke() {
-                Collection collection;
-                collection = ((ConcurrentMutableCollection) this.this$0).del;
-                return Integer.valueOf(collection.size());
+                return Integer.valueOf(((ConcurrentMutableCollection) this.this$0).del.size());
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            numInvoke = function0.invoke();
         }
-        return invoke.intValue();
+        return numInvoke.intValue();
     }
 
     @Override // java.util.Collection
     public boolean contains(final Object element) {
-        Boolean invoke;
+        Boolean boolInvoke;
         Object obj = this.syncTarget;
-        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableCollection$contains$1
+        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableCollection.contains.1
             final /* synthetic */ ConcurrentMutableCollection<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -92,23 +90,21 @@ public class ConcurrentMutableCollection<E> implements Collection<E>, KMutableCo
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             public final Boolean invoke() {
-                Collection collection;
-                collection = ((ConcurrentMutableCollection) this.this$0).del;
-                return Boolean.valueOf(collection.contains(element));
+                return Boolean.valueOf(((ConcurrentMutableCollection) this.this$0).del.contains(element));
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            boolInvoke = function0.invoke();
         }
-        return invoke.booleanValue();
+        return boolInvoke.booleanValue();
     }
 
     @Override // java.util.Collection
     public boolean containsAll(final Collection<? extends Object> elements) {
-        Boolean invoke;
+        Boolean boolInvoke;
         Intrinsics.checkNotNullParameter(elements, "elements");
         Object obj = this.syncTarget;
-        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableCollection$containsAll$1
+        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableCollection.containsAll.1
             final /* synthetic */ ConcurrentMutableCollection<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -121,22 +117,20 @@ public class ConcurrentMutableCollection<E> implements Collection<E>, KMutableCo
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             public final Boolean invoke() {
-                Collection collection;
-                collection = ((ConcurrentMutableCollection) this.this$0).del;
-                return Boolean.valueOf(collection.containsAll(elements));
+                return Boolean.valueOf(((ConcurrentMutableCollection) this.this$0).del.containsAll(elements));
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            boolInvoke = function0.invoke();
         }
-        return invoke.booleanValue();
+        return boolInvoke.booleanValue();
     }
 
     @Override // java.util.Collection
     public boolean isEmpty() {
-        Boolean invoke;
+        Boolean boolInvoke;
         Object obj = this.syncTarget;
-        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableCollection$isEmpty$1
+        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableCollection.isEmpty.1
             final /* synthetic */ ConcurrentMutableCollection<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -148,22 +142,20 @@ public class ConcurrentMutableCollection<E> implements Collection<E>, KMutableCo
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             public final Boolean invoke() {
-                Collection collection;
-                collection = ((ConcurrentMutableCollection) this.this$0).del;
-                return Boolean.valueOf(collection.isEmpty());
+                return Boolean.valueOf(((ConcurrentMutableCollection) this.this$0).del.isEmpty());
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            boolInvoke = function0.invoke();
         }
-        return invoke.booleanValue();
+        return boolInvoke.booleanValue();
     }
 
     @Override // java.util.Collection
     public boolean add(final E element) {
-        Boolean invoke;
+        Boolean boolInvoke;
         Object obj = this.syncTarget;
-        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableCollection$add$1
+        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableCollection.add.1
             final /* synthetic */ ConcurrentMutableCollection<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -175,23 +167,21 @@ public class ConcurrentMutableCollection<E> implements Collection<E>, KMutableCo
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             public final Boolean invoke() {
-                Collection collection;
-                collection = ((ConcurrentMutableCollection) this.this$0).del;
-                return Boolean.valueOf(collection.add(element));
+                return Boolean.valueOf(((ConcurrentMutableCollection) this.this$0).del.add(element));
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            boolInvoke = function0.invoke();
         }
-        return invoke.booleanValue();
+        return boolInvoke.booleanValue();
     }
 
     @Override // java.util.Collection
     public boolean addAll(final Collection<? extends E> elements) {
-        Boolean invoke;
+        Boolean boolInvoke;
         Intrinsics.checkNotNullParameter(elements, "elements");
         Object obj = this.syncTarget;
-        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableCollection$addAll$1
+        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableCollection.addAll.1
             final /* synthetic */ ConcurrentMutableCollection<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -204,21 +194,19 @@ public class ConcurrentMutableCollection<E> implements Collection<E>, KMutableCo
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             public final Boolean invoke() {
-                Collection collection;
-                collection = ((ConcurrentMutableCollection) this.this$0).del;
-                return Boolean.valueOf(collection.addAll(elements));
+                return Boolean.valueOf(((ConcurrentMutableCollection) this.this$0).del.addAll(elements));
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            boolInvoke = function0.invoke();
         }
-        return invoke.booleanValue();
+        return boolInvoke.booleanValue();
     }
 
     @Override // java.util.Collection
     public void clear() {
         Object obj = this.syncTarget;
-        Function0<Unit> function0 = new Function0<Unit>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableCollection$clear$1
+        Function0<Unit> function0 = new Function0<Unit>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableCollection.clear.1
             final /* synthetic */ ConcurrentMutableCollection<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -235,9 +223,7 @@ public class ConcurrentMutableCollection<E> implements Collection<E>, KMutableCo
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
-                Collection collection;
-                collection = ((ConcurrentMutableCollection) this.this$0).del;
-                collection.clear();
+                ((ConcurrentMutableCollection) this.this$0).del.clear();
             }
         };
         synchronized (obj) {
@@ -247,9 +233,9 @@ public class ConcurrentMutableCollection<E> implements Collection<E>, KMutableCo
 
     @Override // java.util.Collection, java.lang.Iterable
     public Iterator<E> iterator() {
-        ConcurrentMutableIterator<E> invoke;
+        ConcurrentMutableIterator<E> concurrentMutableIteratorInvoke;
         Object obj = this.syncTarget;
-        Function0<ConcurrentMutableIterator<E>> function0 = new Function0<ConcurrentMutableIterator<E>>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableCollection$iterator$1
+        Function0<ConcurrentMutableIterator<E>> function0 = new Function0<ConcurrentMutableIterator<E>>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableCollection.iterator.1
             final /* synthetic */ ConcurrentMutableCollection<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -260,23 +246,20 @@ public class ConcurrentMutableCollection<E> implements Collection<E>, KMutableCo
 
             @Override // kotlin.jvm.functions.Function0
             public final ConcurrentMutableIterator<E> invoke() {
-                Collection collection;
-                Object syncTarget = this.this$0.getSyncTarget();
-                collection = ((ConcurrentMutableCollection) this.this$0).del;
-                return new ConcurrentMutableIterator<>(syncTarget, collection.iterator());
+                return new ConcurrentMutableIterator<>(this.this$0.getSyncTarget(), ((ConcurrentMutableCollection) this.this$0).del.iterator());
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            concurrentMutableIteratorInvoke = function0.invoke();
         }
-        return invoke;
+        return concurrentMutableIteratorInvoke;
     }
 
     @Override // java.util.Collection
     public boolean remove(final Object element) {
-        Boolean invoke;
+        Boolean boolInvoke;
         Object obj = this.syncTarget;
-        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableCollection$remove$1
+        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableCollection.remove.1
             final /* synthetic */ ConcurrentMutableCollection<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -288,23 +271,21 @@ public class ConcurrentMutableCollection<E> implements Collection<E>, KMutableCo
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             public final Boolean invoke() {
-                Collection collection;
-                collection = ((ConcurrentMutableCollection) this.this$0).del;
-                return Boolean.valueOf(collection.remove(element));
+                return Boolean.valueOf(((ConcurrentMutableCollection) this.this$0).del.remove(element));
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            boolInvoke = function0.invoke();
         }
-        return invoke.booleanValue();
+        return boolInvoke.booleanValue();
     }
 
     @Override // java.util.Collection
     public boolean removeAll(final Collection<? extends Object> elements) {
-        Boolean invoke;
+        Boolean boolInvoke;
         Intrinsics.checkNotNullParameter(elements, "elements");
         Object obj = this.syncTarget;
-        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableCollection$removeAll$1
+        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableCollection.removeAll.1
             final /* synthetic */ ConcurrentMutableCollection<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -317,23 +298,21 @@ public class ConcurrentMutableCollection<E> implements Collection<E>, KMutableCo
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             public final Boolean invoke() {
-                Collection collection;
-                collection = ((ConcurrentMutableCollection) this.this$0).del;
-                return Boolean.valueOf(collection.removeAll(elements));
+                return Boolean.valueOf(((ConcurrentMutableCollection) this.this$0).del.removeAll(elements));
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            boolInvoke = function0.invoke();
         }
-        return invoke.booleanValue();
+        return boolInvoke.booleanValue();
     }
 
     @Override // java.util.Collection
     public boolean retainAll(final Collection<? extends Object> elements) {
-        Boolean invoke;
+        Boolean boolInvoke;
         Intrinsics.checkNotNullParameter(elements, "elements");
         Object obj = this.syncTarget;
-        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableCollection$retainAll$1
+        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableCollection.retainAll.1
             final /* synthetic */ ConcurrentMutableCollection<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -346,22 +325,20 @@ public class ConcurrentMutableCollection<E> implements Collection<E>, KMutableCo
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             public final Boolean invoke() {
-                Collection collection;
-                collection = ((ConcurrentMutableCollection) this.this$0).del;
-                return Boolean.valueOf(collection.retainAll(elements));
+                return Boolean.valueOf(((ConcurrentMutableCollection) this.this$0).del.retainAll(elements));
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            boolInvoke = function0.invoke();
         }
-        return invoke.booleanValue();
+        return boolInvoke.booleanValue();
     }
 
     public final <R> R blockCollection(final Function1<? super Collection<E>, ? extends R> f) {
-        R invoke;
+        R rInvoke;
         Intrinsics.checkNotNullParameter(f, "f");
         Object obj = this.syncTarget;
-        Function0<R> function0 = new Function0<R>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableCollection$blockCollection$1
+        Function0<R> function0 = new Function0<R>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableCollection.blockCollection.1
             final /* synthetic */ ConcurrentMutableCollection<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -373,17 +350,15 @@ public class ConcurrentMutableCollection<E> implements Collection<E>, KMutableCo
 
             @Override // kotlin.jvm.functions.Function0
             public final R invoke() {
-                Collection collection;
-                collection = ((ConcurrentMutableCollection) this.this$0).del;
-                MutableCollectionWrapper mutableCollectionWrapper = new MutableCollectionWrapper(collection);
-                R invoke2 = f.invoke(mutableCollectionWrapper);
+                MutableCollectionWrapper mutableCollectionWrapper = new MutableCollectionWrapper(((ConcurrentMutableCollection) this.this$0).del);
+                R rInvoke2 = f.invoke(mutableCollectionWrapper);
                 mutableCollectionWrapper.set_coll$stately_concurrent_collections(null);
-                return invoke2;
+                return rInvoke2;
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            rInvoke = function0.invoke();
         }
-        return invoke;
+        return rInvoke;
     }
 }

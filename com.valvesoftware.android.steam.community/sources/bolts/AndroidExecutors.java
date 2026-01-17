@@ -19,10 +19,10 @@ final class AndroidExecutors {
     private final Executor uiThread = new UIThreadExecutor();
 
     static {
-        int availableProcessors = Runtime.getRuntime().availableProcessors();
-        CPU_COUNT = availableProcessors;
-        CORE_POOL_SIZE = availableProcessors + 1;
-        MAX_POOL_SIZE = (availableProcessors * 2) + 1;
+        int iAvailableProcessors = Runtime.getRuntime().availableProcessors();
+        CPU_COUNT = iAvailableProcessors;
+        CORE_POOL_SIZE = iAvailableProcessors + 1;
+        MAX_POOL_SIZE = (iAvailableProcessors * 2) + 1;
     }
 
     private AndroidExecutors() {

@@ -36,9 +36,9 @@ public final class ConcurrentMutableList<E> extends ConcurrentMutableCollection<
 
     @Override // java.util.List
     public E get(final int index) {
-        E invoke;
+        E eInvoke;
         Object syncTarget$stately_concurrent_collections = getSyncTarget();
-        Function0<E> function0 = new Function0<E>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableList$get$1
+        Function0<E> function0 = new Function0<E>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableList.get.1
             final /* synthetic */ ConcurrentMutableList<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -49,22 +49,20 @@ public final class ConcurrentMutableList<E> extends ConcurrentMutableCollection<
 
             @Override // kotlin.jvm.functions.Function0
             public final E invoke() {
-                List list;
-                list = ((ConcurrentMutableList) this.this$0).del;
-                return (E) list.get(index);
+                return (E) ((ConcurrentMutableList) this.this$0).del.get(index);
             }
         };
         synchronized (syncTarget$stately_concurrent_collections) {
-            invoke = function0.invoke();
+            eInvoke = function0.invoke();
         }
-        return invoke;
+        return eInvoke;
     }
 
     @Override // java.util.List
     public int indexOf(final Object element) {
-        Integer invoke;
+        Integer numInvoke;
         Object syncTarget$stately_concurrent_collections = getSyncTarget();
-        Function0<Integer> function0 = new Function0<Integer>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableList$indexOf$1
+        Function0<Integer> function0 = new Function0<Integer>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableList.indexOf.1
             final /* synthetic */ ConcurrentMutableList<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -76,22 +74,20 @@ public final class ConcurrentMutableList<E> extends ConcurrentMutableCollection<
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             public final Integer invoke() {
-                List list;
-                list = ((ConcurrentMutableList) this.this$0).del;
-                return Integer.valueOf(list.indexOf(element));
+                return Integer.valueOf(((ConcurrentMutableList) this.this$0).del.indexOf(element));
             }
         };
         synchronized (syncTarget$stately_concurrent_collections) {
-            invoke = function0.invoke();
+            numInvoke = function0.invoke();
         }
-        return invoke.intValue();
+        return numInvoke.intValue();
     }
 
     @Override // java.util.List
     public int lastIndexOf(final Object element) {
-        Integer invoke;
+        Integer numInvoke;
         Object syncTarget$stately_concurrent_collections = getSyncTarget();
-        Function0<Integer> function0 = new Function0<Integer>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableList$lastIndexOf$1
+        Function0<Integer> function0 = new Function0<Integer>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableList.lastIndexOf.1
             final /* synthetic */ ConcurrentMutableList<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -103,21 +99,19 @@ public final class ConcurrentMutableList<E> extends ConcurrentMutableCollection<
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             public final Integer invoke() {
-                List list;
-                list = ((ConcurrentMutableList) this.this$0).del;
-                return Integer.valueOf(list.lastIndexOf(element));
+                return Integer.valueOf(((ConcurrentMutableList) this.this$0).del.lastIndexOf(element));
             }
         };
         synchronized (syncTarget$stately_concurrent_collections) {
-            invoke = function0.invoke();
+            numInvoke = function0.invoke();
         }
-        return invoke.intValue();
+        return numInvoke.intValue();
     }
 
     @Override // java.util.List
     public void add(final int index, final E element) {
         Object syncTarget$stately_concurrent_collections = getSyncTarget();
-        Function0<Unit> function0 = new Function0<Unit>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableList$add$1
+        Function0<Unit> function0 = new Function0<Unit>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableList.add.1
             final /* synthetic */ ConcurrentMutableList<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -134,9 +128,7 @@ public final class ConcurrentMutableList<E> extends ConcurrentMutableCollection<
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
-                List list;
-                list = ((ConcurrentMutableList) this.this$0).del;
-                list.add(index, element);
+                ((ConcurrentMutableList) this.this$0).del.add(index, element);
             }
         };
         synchronized (syncTarget$stately_concurrent_collections) {
@@ -146,10 +138,10 @@ public final class ConcurrentMutableList<E> extends ConcurrentMutableCollection<
 
     @Override // java.util.List
     public boolean addAll(final int index, final Collection<? extends E> elements) {
-        Boolean invoke;
+        Boolean boolInvoke;
         Intrinsics.checkNotNullParameter(elements, "elements");
         Object syncTarget$stately_concurrent_collections = getSyncTarget();
-        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableList$addAll$1
+        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableList.addAll.1
             final /* synthetic */ ConcurrentMutableList<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -162,22 +154,20 @@ public final class ConcurrentMutableList<E> extends ConcurrentMutableCollection<
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             public final Boolean invoke() {
-                List list;
-                list = ((ConcurrentMutableList) this.this$0).del;
-                return Boolean.valueOf(list.addAll(index, elements));
+                return Boolean.valueOf(((ConcurrentMutableList) this.this$0).del.addAll(index, elements));
             }
         };
         synchronized (syncTarget$stately_concurrent_collections) {
-            invoke = function0.invoke();
+            boolInvoke = function0.invoke();
         }
-        return invoke.booleanValue();
+        return boolInvoke.booleanValue();
     }
 
     @Override // java.util.List
     public ListIterator<E> listIterator() {
-        ConcurrentMutableListIterator<E> invoke;
+        ConcurrentMutableListIterator<E> concurrentMutableListIteratorInvoke;
         Object syncTarget$stately_concurrent_collections = getSyncTarget();
-        Function0<ConcurrentMutableListIterator<E>> function0 = new Function0<ConcurrentMutableListIterator<E>>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableList$listIterator$1
+        Function0<ConcurrentMutableListIterator<E>> function0 = new Function0<ConcurrentMutableListIterator<E>>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableList.listIterator.1
             final /* synthetic */ ConcurrentMutableList<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -188,23 +178,21 @@ public final class ConcurrentMutableList<E> extends ConcurrentMutableCollection<
 
             @Override // kotlin.jvm.functions.Function0
             public final ConcurrentMutableListIterator<E> invoke() {
-                List list;
                 ConcurrentMutableList<E> concurrentMutableList = this.this$0;
-                list = ((ConcurrentMutableList) concurrentMutableList).del;
-                return new ConcurrentMutableListIterator<>(concurrentMutableList, list.listIterator());
+                return new ConcurrentMutableListIterator<>(concurrentMutableList, ((ConcurrentMutableList) concurrentMutableList).del.listIterator());
             }
         };
         synchronized (syncTarget$stately_concurrent_collections) {
-            invoke = function0.invoke();
+            concurrentMutableListIteratorInvoke = function0.invoke();
         }
-        return invoke;
+        return concurrentMutableListIteratorInvoke;
     }
 
     @Override // java.util.List
     public ListIterator<E> listIterator(final int index) {
-        ConcurrentMutableListIterator<E> invoke;
+        ConcurrentMutableListIterator<E> concurrentMutableListIteratorInvoke;
         Object syncTarget$stately_concurrent_collections = getSyncTarget();
-        Function0<ConcurrentMutableListIterator<E>> function0 = new Function0<ConcurrentMutableListIterator<E>>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableList$listIterator$2
+        Function0<ConcurrentMutableListIterator<E>> function0 = new Function0<ConcurrentMutableListIterator<E>>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableList.listIterator.2
             final /* synthetic */ ConcurrentMutableList<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -215,22 +203,20 @@ public final class ConcurrentMutableList<E> extends ConcurrentMutableCollection<
 
             @Override // kotlin.jvm.functions.Function0
             public final ConcurrentMutableListIterator<E> invoke() {
-                List list;
                 ConcurrentMutableList<E> concurrentMutableList = this.this$0;
-                list = ((ConcurrentMutableList) concurrentMutableList).del;
-                return new ConcurrentMutableListIterator<>(concurrentMutableList, list.listIterator(index));
+                return new ConcurrentMutableListIterator<>(concurrentMutableList, ((ConcurrentMutableList) concurrentMutableList).del.listIterator(index));
             }
         };
         synchronized (syncTarget$stately_concurrent_collections) {
-            invoke = function0.invoke();
+            concurrentMutableListIteratorInvoke = function0.invoke();
         }
-        return invoke;
+        return concurrentMutableListIteratorInvoke;
     }
 
     public E removeAt(final int index) {
-        E invoke;
+        E eInvoke;
         Object syncTarget$stately_concurrent_collections = getSyncTarget();
-        Function0<E> function0 = new Function0<E>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableList$removeAt$1
+        Function0<E> function0 = new Function0<E>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableList.removeAt.1
             final /* synthetic */ ConcurrentMutableList<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -241,22 +227,20 @@ public final class ConcurrentMutableList<E> extends ConcurrentMutableCollection<
 
             @Override // kotlin.jvm.functions.Function0
             public final E invoke() {
-                List list;
-                list = ((ConcurrentMutableList) this.this$0).del;
-                return (E) list.remove(index);
+                return (E) ((ConcurrentMutableList) this.this$0).del.remove(index);
             }
         };
         synchronized (syncTarget$stately_concurrent_collections) {
-            invoke = function0.invoke();
+            eInvoke = function0.invoke();
         }
-        return invoke;
+        return eInvoke;
     }
 
     @Override // java.util.List
     public E set(final int index, final E element) {
-        E invoke;
+        E eInvoke;
         Object syncTarget$stately_concurrent_collections = getSyncTarget();
-        Function0<E> function0 = new Function0<E>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableList$set$1
+        Function0<E> function0 = new Function0<E>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableList.set.1
             final /* synthetic */ ConcurrentMutableList<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -267,22 +251,20 @@ public final class ConcurrentMutableList<E> extends ConcurrentMutableCollection<
 
             @Override // kotlin.jvm.functions.Function0
             public final E invoke() {
-                List list;
-                list = ((ConcurrentMutableList) this.this$0).del;
-                return (E) list.set(index, element);
+                return (E) ((ConcurrentMutableList) this.this$0).del.set(index, element);
             }
         };
         synchronized (syncTarget$stately_concurrent_collections) {
-            invoke = function0.invoke();
+            eInvoke = function0.invoke();
         }
-        return invoke;
+        return eInvoke;
     }
 
     @Override // java.util.List
     public List<E> subList(final int fromIndex, final int toIndex) {
-        ConcurrentMutableList<E> invoke;
+        ConcurrentMutableList<E> concurrentMutableListInvoke;
         Object syncTarget$stately_concurrent_collections = getSyncTarget();
-        Function0<ConcurrentMutableList<E>> function0 = new Function0<ConcurrentMutableList<E>>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableList$subList$1
+        Function0<ConcurrentMutableList<E>> function0 = new Function0<ConcurrentMutableList<E>>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableList.subList.1
             final /* synthetic */ ConcurrentMutableList<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -293,23 +275,21 @@ public final class ConcurrentMutableList<E> extends ConcurrentMutableCollection<
 
             @Override // kotlin.jvm.functions.Function0
             public final ConcurrentMutableList<E> invoke() {
-                List list;
                 ConcurrentMutableList<E> concurrentMutableList = this.this$0;
-                list = ((ConcurrentMutableList) concurrentMutableList).del;
-                return new ConcurrentMutableList<>(concurrentMutableList, list.subList(fromIndex, toIndex));
+                return new ConcurrentMutableList<>(concurrentMutableList, ((ConcurrentMutableList) concurrentMutableList).del.subList(fromIndex, toIndex));
             }
         };
         synchronized (syncTarget$stately_concurrent_collections) {
-            invoke = function0.invoke();
+            concurrentMutableListInvoke = function0.invoke();
         }
-        return invoke;
+        return concurrentMutableListInvoke;
     }
 
     public final <R> R block(final Function1<? super List<E>, ? extends R> f) {
-        R invoke;
+        R rInvoke;
         Intrinsics.checkNotNullParameter(f, "f");
         Object syncTarget$stately_concurrent_collections = getSyncTarget();
-        Function0<R> function0 = new Function0<R>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableList$block$1
+        Function0<R> function0 = new Function0<R>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableList.block.1
             final /* synthetic */ ConcurrentMutableList<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -321,17 +301,15 @@ public final class ConcurrentMutableList<E> extends ConcurrentMutableCollection<
 
             @Override // kotlin.jvm.functions.Function0
             public final R invoke() {
-                List list;
-                list = ((ConcurrentMutableList) this.this$0).del;
-                MutableListWrapper mutableListWrapper = new MutableListWrapper(list);
-                R invoke2 = f.invoke(mutableListWrapper);
+                MutableListWrapper mutableListWrapper = new MutableListWrapper(((ConcurrentMutableList) this.this$0).del);
+                R rInvoke2 = f.invoke(mutableListWrapper);
                 mutableListWrapper.setList$stately_concurrent_collections(new ArrayList());
-                return invoke2;
+                return rInvoke2;
             }
         };
         synchronized (syncTarget$stately_concurrent_collections) {
-            invoke = function0.invoke();
+            rInvoke = function0.invoke();
         }
-        return invoke;
+        return rInvoke;
     }
 }

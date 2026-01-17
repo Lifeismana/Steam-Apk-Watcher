@@ -31,9 +31,7 @@ public final class MainActivity extends ReactActivity {
 
     @Override // com.facebook.react.ReactActivity
     protected ReactActivityDelegate createReactActivityDelegate() {
-        final String mainComponentName = getMainComponentName();
-        final boolean fabricEnabled = DefaultNewArchitectureEntryPoint.getFabricEnabled();
-        return new ReactActivityDelegateWrapper(this, true, new DefaultReactActivityDelegate(this, mainComponentName, fabricEnabled) { // from class: com.valvesoftware.android.steam.community.MainActivity$createReactActivityDelegate$1
+        return new ReactActivityDelegateWrapper(this, true, new DefaultReactActivityDelegate(this, getMainComponentName(), DefaultNewArchitectureEntryPoint.getFabricEnabled()) { // from class: com.valvesoftware.android.steam.community.MainActivity.createReactActivityDelegate.1
             {
                 MainActivity mainActivity = this;
             }

@@ -49,8 +49,8 @@ final class PreDrawBlurController implements BlurController {
             return;
         }
         this.blurView.setWillNotDraw(false);
-        SizeScaler.Size scale = sizeScaler.scale(i, i2);
-        this.internalBitmap = Bitmap.createBitmap(scale.width, scale.height, this.blurAlgorithm.getSupportedBitmapConfig());
+        SizeScaler.Size sizeScale = sizeScaler.scale(i, i2);
+        this.internalBitmap = Bitmap.createBitmap(sizeScale.width, sizeScale.height, this.blurAlgorithm.getSupportedBitmapConfig());
         this.internalCanvas = new BlurViewCanvas(this.internalBitmap);
         this.initialized = true;
         updateBlur();

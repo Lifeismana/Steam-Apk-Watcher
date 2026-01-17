@@ -13,7 +13,7 @@ public class CloseHelper {
         cursor.close();
     }
 
-    public static void closeQuietly(Closeable closeable) {
+    public static void closeQuietly(Closeable closeable) throws IOException {
         if (closeable != null) {
             try {
                 closeable.close();

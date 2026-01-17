@@ -55,24 +55,24 @@ public class ValveNotificationsModule extends ReactContextBaseJavaModule {
     }
 
     private WritableMap serializeMessageToWritableMap(Pair<RemoteMessage, ValveNotificationsHelper.ENotificationAppState> pair) {
-        WritableMap createMap = Arguments.createMap();
-        createMap.putInt("appState", ((ValveNotificationsHelper.ENotificationAppState) pair.second).getValue());
+        WritableMap writableMapCreateMap = Arguments.createMap();
+        writableMapCreateMap.putInt("appState", ((ValveNotificationsHelper.ENotificationAppState) pair.second).getValue());
         RemoteMessage remoteMessage = (RemoteMessage) pair.first;
         Map<String, String> data = remoteMessage.getData();
-        WritableMap createMap2 = Arguments.createMap();
+        WritableMap writableMapCreateMap2 = Arguments.createMap();
         Iterator<Map.Entry<String, String>> it2 = data.entrySet().iterator();
         if (remoteMessage.getNotification() != null) {
-            createMap2.putString("body", remoteMessage.getNotification().getBody());
-            createMap2.putString(MessageBundle.TITLE_ENTRY, remoteMessage.getNotification().getTitle());
+            writableMapCreateMap2.putString("body", remoteMessage.getNotification().getBody());
+            writableMapCreateMap2.putString(MessageBundle.TITLE_ENTRY, remoteMessage.getNotification().getTitle());
         }
         if (it2 != null) {
             while (it2.hasNext()) {
                 Map.Entry<String, String> next = it2.next();
-                createMap2.putString(next.getKey(), next.getValue());
+                writableMapCreateMap2.putString(next.getKey(), next.getValue());
             }
         }
-        createMap.putMap(NotificationsService.NOTIFICATION_KEY, createMap2);
-        return createMap;
+        writableMapCreateMap.putMap(NotificationsService.NOTIFICATION_KEY, writableMapCreateMap2);
+        return writableMapCreateMap;
     }
 
     private void sendMessageToJS(Pair<RemoteMessage, ValveNotificationsHelper.ENotificationAppState> pair) {
@@ -98,12 +98,12 @@ public class ValveNotificationsModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void getInitialNotifications(Promise promise) {
-        WritableArray createArray = Arguments.createArray();
+        WritableArray writableArrayCreateArray = Arguments.createArray();
         Iterator it2 = ValveNotificationsHelper.getInstance().getPendingNotifications().iterator();
         while (it2.hasNext()) {
-            createArray.pushMap(serializeMessageToWritableMap((Pair) it2.next()));
+            writableArrayCreateArray.pushMap(serializeMessageToWritableMap((Pair) it2.next()));
         }
         ValveNotificationsHelper.getInstance().clearPendingNotifications();
-        promise.resolve(createArray);
+        promise.resolve(writableArrayCreateArray);
     }
 }

@@ -8,92 +8,92 @@ import com.facebook.react.bridge.WritableMap;
 /* loaded from: classes3.dex */
 public class Helper {
     public static WritableMap decodeProperties(BluetoothGattCharacteristic bluetoothGattCharacteristic) {
-        WritableMap createMap = Arguments.createMap();
+        WritableMap writableMapCreateMap = Arguments.createMap();
         int properties = bluetoothGattCharacteristic.getProperties();
         if ((properties & 1) != 0) {
-            createMap.putString("Broadcast", "Broadcast");
+            writableMapCreateMap.putString("Broadcast", "Broadcast");
         }
         if ((properties & 2) != 0) {
-            createMap.putString("Read", "Read");
+            writableMapCreateMap.putString("Read", "Read");
         }
         if ((properties & 4) != 0) {
-            createMap.putString("WriteWithoutResponse", "WriteWithoutResponse");
+            writableMapCreateMap.putString("WriteWithoutResponse", "WriteWithoutResponse");
         }
         if ((properties & 8) != 0) {
-            createMap.putString("Write", "Write");
+            writableMapCreateMap.putString("Write", "Write");
         }
         if ((properties & 16) != 0) {
-            createMap.putString("Notify", "Notify");
+            writableMapCreateMap.putString("Notify", "Notify");
         }
         if ((properties & 32) != 0) {
-            createMap.putString("Indicate", "Indicate");
+            writableMapCreateMap.putString("Indicate", "Indicate");
         }
         if ((properties & 64) != 0) {
-            createMap.putString("AuthenticateSignedWrites", "AuthenticateSignedWrites");
+            writableMapCreateMap.putString("AuthenticateSignedWrites", "AuthenticateSignedWrites");
         }
         if ((properties & 128) != 0) {
-            createMap.putString("ExtendedProperties", "ExtendedProperties");
+            writableMapCreateMap.putString("ExtendedProperties", "ExtendedProperties");
         }
-        return createMap;
+        return writableMapCreateMap;
     }
 
     public static WritableMap decodePermissions(BluetoothGattCharacteristic bluetoothGattCharacteristic) {
-        WritableMap createMap = Arguments.createMap();
+        WritableMap writableMapCreateMap = Arguments.createMap();
         int permissions = bluetoothGattCharacteristic.getPermissions();
         if ((permissions & 1) != 0) {
-            createMap.putString("Read", "Read");
+            writableMapCreateMap.putString("Read", "Read");
         }
         if ((permissions & 16) != 0) {
-            createMap.putString("Write", "Write");
+            writableMapCreateMap.putString("Write", "Write");
         }
         if ((permissions & 2) != 0) {
-            createMap.putString("ReadEncrypted", "ReadEncrypted");
+            writableMapCreateMap.putString("ReadEncrypted", "ReadEncrypted");
         }
         if ((permissions & 32) != 0) {
-            createMap.putString("WriteEncrypted", "WriteEncrypted");
+            writableMapCreateMap.putString("WriteEncrypted", "WriteEncrypted");
         }
         if ((permissions & 4) != 0) {
-            createMap.putString("ReadEncryptedMITM", "ReadEncryptedMITM");
+            writableMapCreateMap.putString("ReadEncryptedMITM", "ReadEncryptedMITM");
         }
         if ((permissions & 64) != 0) {
-            createMap.putString("WriteEncryptedMITM", "WriteEncryptedMITM");
+            writableMapCreateMap.putString("WriteEncryptedMITM", "WriteEncryptedMITM");
         }
         if ((permissions & 128) != 0) {
-            createMap.putString("WriteSigned", "WriteSigned");
+            writableMapCreateMap.putString("WriteSigned", "WriteSigned");
         }
         if ((permissions & 256) != 0) {
-            createMap.putString("WriteSignedMITM", "WriteSignedMITM");
+            writableMapCreateMap.putString("WriteSignedMITM", "WriteSignedMITM");
         }
-        return createMap;
+        return writableMapCreateMap;
     }
 
     public static WritableMap decodePermissions(BluetoothGattDescriptor bluetoothGattDescriptor) {
-        WritableMap createMap = Arguments.createMap();
+        WritableMap writableMapCreateMap = Arguments.createMap();
         int permissions = bluetoothGattDescriptor.getPermissions();
         if ((permissions & 1) != 0) {
-            createMap.putString("Read", "Read");
+            writableMapCreateMap.putString("Read", "Read");
         }
         if ((permissions & 16) != 0) {
-            createMap.putString("Write", "Write");
+            writableMapCreateMap.putString("Write", "Write");
         }
         if ((permissions & 2) != 0) {
-            createMap.putString("ReadEncrypted", "ReadEncrypted");
+            writableMapCreateMap.putString("ReadEncrypted", "ReadEncrypted");
         }
         if ((permissions & 32) != 0) {
-            createMap.putString("WriteEncrypted", "WriteEncrypted");
+            writableMapCreateMap.putString("WriteEncrypted", "WriteEncrypted");
         }
         if ((permissions & 4) != 0) {
-            createMap.putString("ReadEncryptedMITM", "ReadEncryptedMITM");
+            writableMapCreateMap.putString("ReadEncryptedMITM", "ReadEncryptedMITM");
         }
         if ((permissions & 64) != 0) {
-            createMap.putString("WriteEncryptedMITM", "WriteEncryptedMITM");
+            writableMapCreateMap.putString("WriteEncryptedMITM", "WriteEncryptedMITM");
         }
         if ((permissions & 128) != 0) {
-            createMap.putString("WriteSigned", "WriteSigned");
+            writableMapCreateMap.putString("WriteSigned", "WriteSigned");
         }
         if ((permissions & 256) != 0) {
-            createMap.putString("WriteSignedMITM", "WriteSignedMITM");
+            writableMapCreateMap.putString("WriteSignedMITM", "WriteSignedMITM");
         }
-        return createMap;
+        return writableMapCreateMap;
     }
 }

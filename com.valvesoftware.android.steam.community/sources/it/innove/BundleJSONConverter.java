@@ -21,9 +21,9 @@ public class BundleJSONConverter {
     }
 
     static {
-        HashMap hashMap = new HashMap();
-        SETTERS = hashMap;
-        hashMap.put(Boolean.class, new Setter() { // from class: it.innove.BundleJSONConverter.1
+        HashMap map = new HashMap();
+        SETTERS = map;
+        map.put(Boolean.class, new Setter() { // from class: it.innove.BundleJSONConverter.1
             @Override // it.innove.BundleJSONConverter.Setter
             public void setOnBundle(Bundle bundle, String str, Object obj) throws JSONException {
                 bundle.putBoolean(str, ((Boolean) obj).booleanValue());
@@ -34,7 +34,7 @@ public class BundleJSONConverter {
                 jSONObject.put(str, obj);
             }
         });
-        hashMap.put(Integer.class, new Setter() { // from class: it.innove.BundleJSONConverter.2
+        map.put(Integer.class, new Setter() { // from class: it.innove.BundleJSONConverter.2
             @Override // it.innove.BundleJSONConverter.Setter
             public void setOnBundle(Bundle bundle, String str, Object obj) throws JSONException {
                 bundle.putInt(str, ((Integer) obj).intValue());
@@ -45,7 +45,7 @@ public class BundleJSONConverter {
                 jSONObject.put(str, obj);
             }
         });
-        hashMap.put(Long.class, new Setter() { // from class: it.innove.BundleJSONConverter.3
+        map.put(Long.class, new Setter() { // from class: it.innove.BundleJSONConverter.3
             @Override // it.innove.BundleJSONConverter.Setter
             public void setOnBundle(Bundle bundle, String str, Object obj) throws JSONException {
                 bundle.putLong(str, ((Long) obj).longValue());
@@ -56,7 +56,7 @@ public class BundleJSONConverter {
                 jSONObject.put(str, obj);
             }
         });
-        hashMap.put(Double.class, new Setter() { // from class: it.innove.BundleJSONConverter.4
+        map.put(Double.class, new Setter() { // from class: it.innove.BundleJSONConverter.4
             @Override // it.innove.BundleJSONConverter.Setter
             public void setOnBundle(Bundle bundle, String str, Object obj) throws JSONException {
                 bundle.putDouble(str, ((Double) obj).doubleValue());
@@ -67,7 +67,7 @@ public class BundleJSONConverter {
                 jSONObject.put(str, obj);
             }
         });
-        hashMap.put(String.class, new Setter() { // from class: it.innove.BundleJSONConverter.5
+        map.put(String.class, new Setter() { // from class: it.innove.BundleJSONConverter.5
             @Override // it.innove.BundleJSONConverter.Setter
             public void setOnBundle(Bundle bundle, String str, Object obj) throws JSONException {
                 bundle.putString(str, (String) obj);
@@ -78,7 +78,7 @@ public class BundleJSONConverter {
                 jSONObject.put(str, obj);
             }
         });
-        hashMap.put(String[].class, new Setter() { // from class: it.innove.BundleJSONConverter.6
+        map.put(String[].class, new Setter() { // from class: it.innove.BundleJSONConverter.6
             @Override // it.innove.BundleJSONConverter.Setter
             public void setOnBundle(Bundle bundle, String str, Object obj) throws JSONException {
                 throw new IllegalArgumentException("Unexpected type from JSON");
@@ -93,7 +93,7 @@ public class BundleJSONConverter {
                 jSONObject.put(str, jSONArray);
             }
         });
-        hashMap.put(JSONArray.class, new Setter() { // from class: it.innove.BundleJSONConverter.7
+        map.put(JSONArray.class, new Setter() { // from class: it.innove.BundleJSONConverter.7
             @Override // it.innove.BundleJSONConverter.Setter
             public void setOnBundle(Bundle bundle, String str, Object obj) throws JSONException {
                 JSONArray jSONArray = (JSONArray) obj;
@@ -148,9 +148,9 @@ public class BundleJSONConverter {
 
     public static Bundle convertToBundle(JSONObject jSONObject) throws JSONException {
         Bundle bundle = new Bundle();
-        Iterator<String> keys = jSONObject.keys();
-        while (keys.hasNext()) {
-            String next = keys.next();
+        Iterator<String> itKeys = jSONObject.keys();
+        while (itKeys.hasNext()) {
+            String next = itKeys.next();
             Object obj = jSONObject.get(next);
             if (obj != null && obj != JSONObject.NULL) {
                 if (obj instanceof JSONObject) {

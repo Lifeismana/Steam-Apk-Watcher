@@ -11,16 +11,16 @@ import me.leolin.shortcutbadger.impl.IntentConstants;
 /* loaded from: classes4.dex */
 public class BroadcastHelper {
     public static List<ResolveInfo> resolveBroadcast(Context context, Intent intent) {
-        List<ResolveInfo> queryBroadcastReceivers = context.getPackageManager().queryBroadcastReceivers(intent, 0);
-        return queryBroadcastReceivers != null ? queryBroadcastReceivers : Collections.emptyList();
+        List<ResolveInfo> listQueryBroadcastReceivers = context.getPackageManager().queryBroadcastReceivers(intent, 0);
+        return listQueryBroadcastReceivers != null ? listQueryBroadcastReceivers : Collections.emptyList();
     }
 
     public static void sendIntentExplicitly(Context context, Intent intent) throws ShortcutBadgeException {
-        List<ResolveInfo> resolveBroadcast = resolveBroadcast(context, intent);
-        if (resolveBroadcast.size() == 0) {
+        List<ResolveInfo> listResolveBroadcast = resolveBroadcast(context, intent);
+        if (listResolveBroadcast.size() == 0) {
             throw new ShortcutBadgeException("unable to resolve intent: " + intent.toString());
         }
-        for (ResolveInfo resolveInfo : resolveBroadcast) {
+        for (ResolveInfo resolveInfo : listResolveBroadcast) {
             Intent intent2 = new Intent(intent);
             if (resolveInfo != null) {
                 intent2.setPackage(resolveInfo.resolvePackageName);

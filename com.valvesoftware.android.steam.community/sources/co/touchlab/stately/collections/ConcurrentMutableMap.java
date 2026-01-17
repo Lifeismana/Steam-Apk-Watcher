@@ -56,9 +56,9 @@ public final class ConcurrentMutableMap<K, V> implements Map<K, V>, KMutableMap 
     }
 
     public int getSize() {
-        Integer invoke;
+        Integer numInvoke;
         Object obj = this.syncTarget;
-        Function0<Integer> function0 = new Function0<Integer>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableMap$size$1
+        Function0<Integer> function0 = new Function0<Integer>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableMap.size.1
             final /* synthetic */ ConcurrentMutableMap<K, V> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -70,19 +70,17 @@ public final class ConcurrentMutableMap<K, V> implements Map<K, V>, KMutableMap 
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             public final Integer invoke() {
-                Map map;
-                map = ((ConcurrentMutableMap) this.this$0).del;
-                return Integer.valueOf(map.size());
+                return Integer.valueOf(((ConcurrentMutableMap) this.this$0).del.size());
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            numInvoke = function0.invoke();
         }
-        return invoke.intValue();
+        return numInvoke.intValue();
     }
 
     public Set<Map.Entry<K, V>> getEntries() {
-        ConcurrentMutableSet<Map.Entry<K, V>> invoke;
+        ConcurrentMutableSet<Map.Entry<K, V>> concurrentMutableSetInvoke;
         Object obj = this.syncTarget;
         Function0<ConcurrentMutableSet<Map.Entry<K, V>>> function0 = new Function0<ConcurrentMutableSet<Map.Entry<K, V>>>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableMap$entries$1
             final /* synthetic */ ConcurrentMutableMap<K, V> this$0;
@@ -95,20 +93,18 @@ public final class ConcurrentMutableMap<K, V> implements Map<K, V>, KMutableMap 
 
             @Override // kotlin.jvm.functions.Function0
             public final ConcurrentMutableSet<Map.Entry<K, V>> invoke() {
-                Map map;
                 ConcurrentMutableMap<K, V> concurrentMutableMap = this.this$0;
-                map = ((ConcurrentMutableMap) concurrentMutableMap).del;
-                return new ConcurrentMutableSet<>(concurrentMutableMap, map.entrySet());
+                return new ConcurrentMutableSet<>(concurrentMutableMap, ((ConcurrentMutableMap) concurrentMutableMap).del.entrySet());
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            concurrentMutableSetInvoke = function0.invoke();
         }
-        return invoke;
+        return concurrentMutableSetInvoke;
     }
 
     public Set<K> getKeys() {
-        ConcurrentMutableSet<K> invoke;
+        ConcurrentMutableSet<K> concurrentMutableSetInvoke;
         Object obj = this.syncTarget;
         Function0<ConcurrentMutableSet<K>> function0 = new Function0<ConcurrentMutableSet<K>>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableMap$keys$1
             final /* synthetic */ ConcurrentMutableMap<K, V> this$0;
@@ -121,22 +117,20 @@ public final class ConcurrentMutableMap<K, V> implements Map<K, V>, KMutableMap 
 
             @Override // kotlin.jvm.functions.Function0
             public final ConcurrentMutableSet<K> invoke() {
-                Map map;
                 ConcurrentMutableMap<K, V> concurrentMutableMap = this.this$0;
-                map = ((ConcurrentMutableMap) concurrentMutableMap).del;
-                return new ConcurrentMutableSet<>(concurrentMutableMap, map.keySet());
+                return new ConcurrentMutableSet<>(concurrentMutableMap, ((ConcurrentMutableMap) concurrentMutableMap).del.keySet());
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            concurrentMutableSetInvoke = function0.invoke();
         }
-        return invoke;
+        return concurrentMutableSetInvoke;
     }
 
     public Collection<V> getValues() {
-        ConcurrentMutableCollection<V> invoke;
+        ConcurrentMutableCollection<V> concurrentMutableCollectionInvoke;
         Object obj = this.syncTarget;
-        Function0<ConcurrentMutableCollection<V>> function0 = new Function0<ConcurrentMutableCollection<V>>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableMap$values$1
+        Function0<ConcurrentMutableCollection<V>> function0 = new Function0<ConcurrentMutableCollection<V>>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableMap.values.1
             final /* synthetic */ ConcurrentMutableMap<K, V> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -147,23 +141,21 @@ public final class ConcurrentMutableMap<K, V> implements Map<K, V>, KMutableMap 
 
             @Override // kotlin.jvm.functions.Function0
             public final ConcurrentMutableCollection<V> invoke() {
-                Map map;
                 ConcurrentMutableMap<K, V> concurrentMutableMap = this.this$0;
-                map = ((ConcurrentMutableMap) concurrentMutableMap).del;
-                return new ConcurrentMutableCollection<>(concurrentMutableMap, map.values());
+                return new ConcurrentMutableCollection<>(concurrentMutableMap, ((ConcurrentMutableMap) concurrentMutableMap).del.values());
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            concurrentMutableCollectionInvoke = function0.invoke();
         }
-        return invoke;
+        return concurrentMutableCollectionInvoke;
     }
 
     @Override // java.util.Map
     public boolean containsKey(final Object key) {
-        Boolean invoke;
+        Boolean boolInvoke;
         Object obj = this.syncTarget;
-        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableMap$containsKey$1
+        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableMap.containsKey.1
             final /* synthetic */ ConcurrentMutableMap<K, V> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -175,22 +167,20 @@ public final class ConcurrentMutableMap<K, V> implements Map<K, V>, KMutableMap 
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             public final Boolean invoke() {
-                Map map;
-                map = ((ConcurrentMutableMap) this.this$0).del;
-                return Boolean.valueOf(map.containsKey(key));
+                return Boolean.valueOf(((ConcurrentMutableMap) this.this$0).del.containsKey(key));
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            boolInvoke = function0.invoke();
         }
-        return invoke.booleanValue();
+        return boolInvoke.booleanValue();
     }
 
     @Override // java.util.Map
     public boolean containsValue(final Object value) {
-        Boolean invoke;
+        Boolean boolInvoke;
         Object obj = this.syncTarget;
-        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableMap$containsValue$1
+        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableMap.containsValue.1
             final /* synthetic */ ConcurrentMutableMap<K, V> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -202,22 +192,20 @@ public final class ConcurrentMutableMap<K, V> implements Map<K, V>, KMutableMap 
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             public final Boolean invoke() {
-                Map map;
-                map = ((ConcurrentMutableMap) this.this$0).del;
-                return Boolean.valueOf(map.containsValue(value));
+                return Boolean.valueOf(((ConcurrentMutableMap) this.this$0).del.containsValue(value));
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            boolInvoke = function0.invoke();
         }
-        return invoke.booleanValue();
+        return boolInvoke.booleanValue();
     }
 
     @Override // java.util.Map
     public V get(final Object key) {
-        V invoke;
+        V vInvoke;
         Object obj = this.syncTarget;
-        Function0<V> function0 = new Function0<V>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableMap$get$1
+        Function0<V> function0 = new Function0<V>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableMap.get.1
             final /* synthetic */ ConcurrentMutableMap<K, V> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -228,22 +216,20 @@ public final class ConcurrentMutableMap<K, V> implements Map<K, V>, KMutableMap 
 
             @Override // kotlin.jvm.functions.Function0
             public final V invoke() {
-                Map map;
-                map = ((ConcurrentMutableMap) this.this$0).del;
-                return (V) map.get(key);
+                return (V) ((ConcurrentMutableMap) this.this$0).del.get(key);
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            vInvoke = function0.invoke();
         }
-        return invoke;
+        return vInvoke;
     }
 
     @Override // java.util.Map
     public boolean isEmpty() {
-        Boolean invoke;
+        Boolean boolInvoke;
         Object obj = this.syncTarget;
-        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableMap$isEmpty$1
+        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableMap.isEmpty.1
             final /* synthetic */ ConcurrentMutableMap<K, V> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -255,21 +241,19 @@ public final class ConcurrentMutableMap<K, V> implements Map<K, V>, KMutableMap 
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             public final Boolean invoke() {
-                Map map;
-                map = ((ConcurrentMutableMap) this.this$0).del;
-                return Boolean.valueOf(map.isEmpty());
+                return Boolean.valueOf(((ConcurrentMutableMap) this.this$0).del.isEmpty());
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            boolInvoke = function0.invoke();
         }
-        return invoke.booleanValue();
+        return boolInvoke.booleanValue();
     }
 
     @Override // java.util.Map
     public void clear() {
         Object obj = this.syncTarget;
-        Function0<Unit> function0 = new Function0<Unit>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableMap$clear$1
+        Function0<Unit> function0 = new Function0<Unit>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableMap.clear.1
             final /* synthetic */ ConcurrentMutableMap<K, V> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -286,9 +270,7 @@ public final class ConcurrentMutableMap<K, V> implements Map<K, V>, KMutableMap 
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
-                Map map;
-                map = ((ConcurrentMutableMap) this.this$0).del;
-                map.clear();
+                ((ConcurrentMutableMap) this.this$0).del.clear();
             }
         };
         synchronized (obj) {
@@ -297,7 +279,7 @@ public final class ConcurrentMutableMap<K, V> implements Map<K, V>, KMutableMap 
     }
 
     public final V safeComputeIfAbsent(final K key, final Function1<? super K, ? extends V> defaultValue) {
-        V invoke;
+        V vInvoke;
         Intrinsics.checkNotNullParameter(defaultValue, "defaultValue");
         Object obj = this.syncTarget;
         Function0<V> function0 = new Function0<V>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableMap$computeIfAbsent$1
@@ -312,30 +294,26 @@ public final class ConcurrentMutableMap<K, V> implements Map<K, V>, KMutableMap 
 
             @Override // kotlin.jvm.functions.Function0
             public final V invoke() {
-                Map map;
-                Map map2;
-                map = ((ConcurrentMutableMap) this.this$0).del;
-                V v = (V) map.get(key);
+                V v = (V) ((ConcurrentMutableMap) this.this$0).del.get(key);
                 if (v != null) {
                     return v;
                 }
-                V invoke2 = defaultValue.invoke(key);
-                map2 = ((ConcurrentMutableMap) this.this$0).del;
-                map2.put(key, invoke2);
-                return invoke2;
+                V vInvoke2 = defaultValue.invoke(key);
+                ((ConcurrentMutableMap) this.this$0).del.put(key, vInvoke2);
+                return vInvoke2;
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            vInvoke = function0.invoke();
         }
-        return invoke;
+        return vInvoke;
     }
 
     @Override // java.util.Map
     public V put(final K key, final V value) {
-        V invoke;
+        V vInvoke;
         Object obj = this.syncTarget;
-        Function0<V> function0 = new Function0<V>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableMap$put$1
+        Function0<V> function0 = new Function0<V>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableMap.put.1
             final /* synthetic */ ConcurrentMutableMap<K, V> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -346,22 +324,20 @@ public final class ConcurrentMutableMap<K, V> implements Map<K, V>, KMutableMap 
 
             @Override // kotlin.jvm.functions.Function0
             public final V invoke() {
-                Map map;
-                map = ((ConcurrentMutableMap) this.this$0).del;
-                return (V) map.put(key, value);
+                return (V) ((ConcurrentMutableMap) this.this$0).del.put(key, value);
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            vInvoke = function0.invoke();
         }
-        return invoke;
+        return vInvoke;
     }
 
     @Override // java.util.Map
     public void putAll(final Map<? extends K, ? extends V> from) {
         Intrinsics.checkNotNullParameter(from, "from");
         Object obj = this.syncTarget;
-        Function0<Unit> function0 = new Function0<Unit>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableMap$putAll$1
+        Function0<Unit> function0 = new Function0<Unit>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableMap.putAll.1
             final /* synthetic */ ConcurrentMutableMap<K, V> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -379,9 +355,7 @@ public final class ConcurrentMutableMap<K, V> implements Map<K, V>, KMutableMap 
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
-                Map map;
-                map = ((ConcurrentMutableMap) this.this$0).del;
-                map.putAll(from);
+                ((ConcurrentMutableMap) this.this$0).del.putAll(from);
             }
         };
         synchronized (obj) {
@@ -391,9 +365,9 @@ public final class ConcurrentMutableMap<K, V> implements Map<K, V>, KMutableMap 
 
     @Override // java.util.Map
     public V remove(final Object key) {
-        V invoke;
+        V vInvoke;
         Object obj = this.syncTarget;
-        Function0<V> function0 = new Function0<V>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableMap$remove$1
+        Function0<V> function0 = new Function0<V>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableMap.remove.1
             final /* synthetic */ ConcurrentMutableMap<K, V> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -404,22 +378,20 @@ public final class ConcurrentMutableMap<K, V> implements Map<K, V>, KMutableMap 
 
             @Override // kotlin.jvm.functions.Function0
             public final V invoke() {
-                Map map;
-                map = ((ConcurrentMutableMap) this.this$0).del;
-                return (V) map.remove(key);
+                return (V) ((ConcurrentMutableMap) this.this$0).del.remove(key);
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            vInvoke = function0.invoke();
         }
-        return invoke;
+        return vInvoke;
     }
 
     public final <R> R block(final Function1<? super Map<K, V>, ? extends R> f) {
-        R invoke;
+        R rInvoke;
         Intrinsics.checkNotNullParameter(f, "f");
         Object obj = this.syncTarget;
-        Function0<R> function0 = new Function0<R>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableMap$block$1
+        Function0<R> function0 = new Function0<R>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableMap.block.1
             final /* synthetic */ ConcurrentMutableMap<K, V> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -431,17 +403,15 @@ public final class ConcurrentMutableMap<K, V> implements Map<K, V>, KMutableMap 
 
             @Override // kotlin.jvm.functions.Function0
             public final R invoke() {
-                Map map;
-                map = ((ConcurrentMutableMap) this.this$0).del;
-                MutableMapWrapper mutableMapWrapper = new MutableMapWrapper(map);
-                R invoke2 = f.invoke(mutableMapWrapper);
+                MutableMapWrapper mutableMapWrapper = new MutableMapWrapper(((ConcurrentMutableMap) this.this$0).del);
+                R rInvoke2 = f.invoke(mutableMapWrapper);
                 mutableMapWrapper.setMap$stately_concurrent_collections(new LinkedHashMap());
-                return invoke2;
+                return rInvoke2;
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            rInvoke = function0.invoke();
         }
-        return invoke;
+        return rInvoke;
     }
 }

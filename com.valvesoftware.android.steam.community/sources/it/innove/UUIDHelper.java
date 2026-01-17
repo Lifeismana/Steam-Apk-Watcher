@@ -16,8 +16,8 @@ public class UUIDHelper {
     }
 
     public static String uuidToString(UUID uuid) {
-        String uuid2 = uuid.toString();
-        Matcher matcher = Pattern.compile("0000(.{4})-0000-1000-8000-00805f9b34fb", 2).matcher(uuid2);
-        return matcher.matches() ? matcher.group(1) : uuid2;
+        String string = uuid.toString();
+        Matcher matcher = Pattern.compile("0000(.{4})-0000-1000-8000-00805f9b34fb", 2).matcher(string);
+        return matcher.matches() ? matcher.group(1) : string;
     }
 }

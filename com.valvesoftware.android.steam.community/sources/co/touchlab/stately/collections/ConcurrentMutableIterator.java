@@ -26,9 +26,9 @@ public class ConcurrentMutableIterator<E> implements Iterator<E>, KMutableIterat
 
     @Override // java.util.Iterator
     public boolean hasNext() {
-        Boolean invoke;
+        Boolean boolInvoke;
         Object obj = this.root;
-        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableIterator$hasNext$1
+        Function0<Boolean> function0 = new Function0<Boolean>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableIterator.hasNext.1
             final /* synthetic */ ConcurrentMutableIterator<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -40,22 +40,20 @@ public class ConcurrentMutableIterator<E> implements Iterator<E>, KMutableIterat
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             public final Boolean invoke() {
-                Iterator it2;
-                it2 = ((ConcurrentMutableIterator) this.this$0).del;
-                return Boolean.valueOf(it2.hasNext());
+                return Boolean.valueOf(((ConcurrentMutableIterator) this.this$0).del.hasNext());
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            boolInvoke = function0.invoke();
         }
-        return invoke.booleanValue();
+        return boolInvoke.booleanValue();
     }
 
     @Override // java.util.Iterator
     public E next() {
-        E invoke;
+        E eInvoke;
         Object obj = this.root;
-        Function0<E> function0 = new Function0<E>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableIterator$next$1
+        Function0<E> function0 = new Function0<E>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableIterator.next.1
             final /* synthetic */ ConcurrentMutableIterator<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -66,21 +64,19 @@ public class ConcurrentMutableIterator<E> implements Iterator<E>, KMutableIterat
 
             @Override // kotlin.jvm.functions.Function0
             public final E invoke() {
-                Iterator it2;
-                it2 = ((ConcurrentMutableIterator) this.this$0).del;
-                return (E) it2.next();
+                return (E) ((ConcurrentMutableIterator) this.this$0).del.next();
             }
         };
         synchronized (obj) {
-            invoke = function0.invoke();
+            eInvoke = function0.invoke();
         }
-        return invoke;
+        return eInvoke;
     }
 
     @Override // java.util.Iterator
     public void remove() {
         Object obj = this.root;
-        Function0<Unit> function0 = new Function0<Unit>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableIterator$remove$1
+        Function0<Unit> function0 = new Function0<Unit>(this) { // from class: co.touchlab.stately.collections.ConcurrentMutableIterator.remove.1
             final /* synthetic */ ConcurrentMutableIterator<E> this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -97,9 +93,7 @@ public class ConcurrentMutableIterator<E> implements Iterator<E>, KMutableIterat
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
-                Iterator it2;
-                it2 = ((ConcurrentMutableIterator) this.this$0).del;
-                it2.remove();
+                ((ConcurrentMutableIterator) this.this$0).del.remove();
             }
         };
         synchronized (obj) {
