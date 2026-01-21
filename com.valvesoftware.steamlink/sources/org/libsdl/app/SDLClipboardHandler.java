@@ -2,6 +2,7 @@ package org.libsdl.app;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
+import android.os.Build;
 
 /* compiled from: SDLActivity.java */
 /* loaded from: classes.dex */
@@ -15,7 +16,10 @@ class SDLClipboardHandler implements ClipboardManager.OnPrimaryClipChangedListen
     }
 
     public boolean clipboardHasText() {
-        return this.mClipMgr.hasPrimaryClip();
+        if (Build.VERSION.SDK_INT >= 28) {
+            return this.mClipMgr.hasPrimaryClip();
+        }
+        return this.mClipMgr.hasText();
     }
 
     public String clipboardGetText() {
@@ -30,7 +34,15 @@ class SDLClipboardHandler implements ClipboardManager.OnPrimaryClipChangedListen
 
     public void clipboardSetText(String str) {
         this.mClipMgr.removePrimaryClipChangedListener(this);
-        this.mClipMgr.setPrimaryClip(ClipData.newPlainText(null, str));
+        if (str.isEmpty()) {
+            if (Build.VERSION.SDK_INT >= 28) {
+                this.mClipMgr.clearPrimaryClip();
+            } else {
+                this.mClipMgr.setPrimaryClip(ClipData.newPlainText(null, ""));
+            }
+        } else {
+            this.mClipMgr.setPrimaryClip(ClipData.newPlainText(null, str));
+        }
         this.mClipMgr.addPrimaryClipChangedListener(this);
     }
 

@@ -1,7 +1,7 @@
 package org.libsdl.app;
 
+import android.os.Build;
 import android.os.VibrationEffect;
-import android.os.Vibrator;
 import org.libsdl.app.SDLHapticHandler;
 
 /* compiled from: SDLControllerManager.java */
@@ -12,25 +12,22 @@ class SDLHapticHandler_API26 extends SDLHapticHandler {
 
     @Override // org.libsdl.app.SDLHapticHandler
     void run(int i, float f, int i2) {
-        VibrationEffect createOneShot;
-        SDLHapticHandler.SDLHaptic haptic = getHaptic(i);
-        if (haptic != null) {
+        SDLHapticHandler.SDLHaptic haptic;
+        if (Build.VERSION.SDK_INT >= 26 && (haptic = getHaptic(i)) != null) {
             if (f == 0.0f) {
                 stop(i);
                 return;
             }
-            int round = Math.round(f * 255.0f);
-            if (round > 255) {
-                round = 255;
+            int iRound = Math.round(f * 255.0f);
+            if (iRound > 255) {
+                iRound = 255;
             }
-            if (round < 1) {
+            if (iRound < 1) {
                 stop(i);
                 return;
             }
             try {
-                Vibrator vibrator = haptic.vib;
-                createOneShot = VibrationEffect.createOneShot(i2, round);
-                vibrator.vibrate(createOneShot);
+                haptic.vib.vibrate(VibrationEffect.createOneShot(i2, iRound));
             } catch (Exception unused) {
                 haptic.vib.vibrate(i2);
             }

@@ -13,6 +13,8 @@ import android.util.Log;
 import android.view.Display;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
+import android.view.PointerIcon;
+import android.view.ScaleGestureDetector;
 import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -22,12 +24,13 @@ import android.view.WindowManager;
 import org.libsdl.app.SDLActivity;
 
 /* loaded from: classes.dex */
-public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, View.OnApplyWindowInsetsListener, View.OnKeyListener, View.OnTouchListener, SensorEventListener {
+public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, View.OnApplyWindowInsetsListener, View.OnKeyListener, View.OnTouchListener, SensorEventListener, ScaleGestureDetector.OnScaleGestureListener {
     protected Display mDisplay;
     protected float mHeight;
     protected boolean mIsSurfaceReady;
     protected SensorManager mSensorManager;
     protected float mWidth;
+    private final ScaleGestureDetector scaleGestureDetector;
 
     @Override // android.hardware.SensorEventListener
     public void onAccuracyChanged(Sensor sensor, int i) {
@@ -36,6 +39,7 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
     protected SDLSurface(Context context) {
         super(context);
         getHolder().addCallback(this);
+        this.scaleGestureDetector = new ScaleGestureDetector(context, this);
         setFocusable(true);
         setFocusableInTouchMode(true);
         requestFocus();
@@ -83,7 +87,7 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
         SDLActivity.onNativeSurfaceDestroyed();
     }
 
-    /* JADX WARN: Removed duplicated region for block: B:15:0x0035 A[EXC_TOP_SPLITTER, SYNTHETIC] */
+    /* JADX WARN: Removed duplicated region for block: B:51:0x0035 A[EXC_TOP_SPLITTER, SYNTHETIC] */
     @Override // android.view.SurfaceHolder.Callback
     /*
         Code decompiled incorrectly, please refer to instructions dump.
@@ -157,31 +161,9 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
 
     @Override // android.view.View.OnApplyWindowInsetsListener
     public WindowInsets onApplyWindowInsets(View view, WindowInsets windowInsets) {
-        int systemBars;
-        int systemGestures;
-        int mandatorySystemGestures;
-        int tappableElement;
-        int displayCutout;
-        Insets insets;
-        int i;
-        int i2;
-        int i3;
-        int i4;
         if (Build.VERSION.SDK_INT >= 30) {
-            systemBars = WindowInsets.Type.systemBars();
-            systemGestures = WindowInsets.Type.systemGestures();
-            int i5 = systemBars | systemGestures;
-            mandatorySystemGestures = WindowInsets.Type.mandatorySystemGestures();
-            int i6 = i5 | mandatorySystemGestures;
-            tappableElement = WindowInsets.Type.tappableElement();
-            int i7 = i6 | tappableElement;
-            displayCutout = WindowInsets.Type.displayCutout();
-            insets = windowInsets.getInsets(i7 | displayCutout);
-            i = insets.left;
-            i2 = insets.right;
-            i3 = insets.top;
-            i4 = insets.bottom;
-            SDLActivity.onNativeInsetsChanged(i, i2, i3, i4);
+            Insets insets = windowInsets.getInsets(WindowInsets.Type.systemBars() | WindowInsets.Type.systemGestures() | WindowInsets.Type.mandatorySystemGestures() | WindowInsets.Type.tappableElement() | WindowInsets.Type.displayCutout());
+            SDLActivity.onNativeInsetsChanged(insets.left, insets.right, insets.top, insets.bottom);
         }
         return windowInsets;
     }
@@ -212,6 +194,7 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
         int i;
         int i2;
         int i3;
+        int i4;
         int deviceId = motionEvent.getDeviceId();
         int pointerCount = motionEvent.getPointerCount();
         int actionMasked = motionEvent.getActionMasked();
@@ -234,9 +217,10 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
                     int buttonState2 = (1 << (toolType == 2 ? 0 : 30)) | (motionEvent.getButtonState() >> 4);
                     i = actionIndex;
                     i2 = actionMasked;
-                    i3 = 6;
-                    SDLActivity.onNativePen(pointerId, buttonState2, i2, x, y, pressure);
-                    if (i2 == i3 || i2 == 5 || (actionIndex = i + 1) >= pointerCount) {
+                    i3 = 5;
+                    i4 = 6;
+                    SDLActivity.onNativePen(pointerId, SDLActivity.getMotionListener().getPenDeviceType(motionEvent.getDevice()), buttonState2, i2, x, y, pressure);
+                    if (i2 == i4 || i2 == i3 || (actionIndex = i + 1) >= pointerCount) {
                         break;
                     }
                     actionMasked = i2;
@@ -250,12 +234,14 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
             }
             i2 = actionMasked;
             i = actionIndex;
-            i3 = 6;
-            if (i2 == i3) {
+            i3 = 5;
+            i4 = 6;
+            if (i2 == i4) {
                 break;
             }
             break;
         }
+        this.scaleGestureDetector.onTouchEvent(motionEvent);
         return true;
     }
 
@@ -301,6 +287,15 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
     }
 
     @Override // android.view.View
+    public PointerIcon onResolvePointerIcon(MotionEvent motionEvent, int i) {
+        try {
+            return super.onResolvePointerIcon(motionEvent, i);
+        } catch (NullPointerException unused) {
+            return null;
+        }
+    }
+
+    @Override // android.view.View
     public boolean onCapturedPointerEvent(MotionEvent motionEvent) {
         int actionMasked = motionEvent.getActionMasked();
         int pointerCount = motionEvent.getPointerCount();
@@ -319,5 +314,22 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
             }
         }
         return false;
+    }
+
+    @Override // android.view.ScaleGestureDetector.OnScaleGestureListener
+    public boolean onScale(ScaleGestureDetector scaleGestureDetector) {
+        SDLActivity.onNativePinchUpdate(scaleGestureDetector.getScaleFactor());
+        return true;
+    }
+
+    @Override // android.view.ScaleGestureDetector.OnScaleGestureListener
+    public boolean onScaleBegin(ScaleGestureDetector scaleGestureDetector) {
+        SDLActivity.onNativePinchStart();
+        return true;
+    }
+
+    @Override // android.view.ScaleGestureDetector.OnScaleGestureListener
+    public void onScaleEnd(ScaleGestureDetector scaleGestureDetector) {
+        SDLActivity.onNativePinchEnd();
     }
 }

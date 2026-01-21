@@ -116,8 +116,8 @@ class HIDDeviceBLESteamController extends BluetoothGattCallback implements HIDDe
             BluetoothGattCharacteristic characteristic;
             BluetoothGattDescriptor descriptor;
             byte[] bArr;
-            int ordinal = this.mOp.ordinal();
-            if (ordinal == 0) {
+            int iOrdinal = this.mOp.ordinal();
+            if (iOrdinal == 0) {
                 if (!this.mGatt.readCharacteristic(getCharacteristic(this.mUuid))) {
                     Log.e(HIDDeviceBLESteamController.TAG, "Unable to read characteristic " + this.mUuid.toString());
                     this.mResult = false;
@@ -126,7 +126,7 @@ class HIDDeviceBLESteamController extends BluetoothGattCallback implements HIDDe
                 this.mResult = true;
                 return;
             }
-            if (ordinal == 1) {
+            if (iOrdinal == 1) {
                 BluetoothGattCharacteristic characteristic2 = getCharacteristic(this.mUuid);
                 characteristic2.setValue(this.mValue);
                 if (!this.mGatt.writeCharacteristic(characteristic2)) {
@@ -137,7 +137,7 @@ class HIDDeviceBLESteamController extends BluetoothGattCallback implements HIDDe
                 this.mResult = true;
                 return;
             }
-            if (ordinal != 2 || (characteristic = getCharacteristic(this.mUuid)) == null || (descriptor = characteristic.getDescriptor(UUID.fromString("00002902-0000-1000-8000-00805f9b34fb"))) == null) {
+            if (iOrdinal != 2 || (characteristic = getCharacteristic(this.mUuid)) == null || (descriptor = characteristic.getDescriptor(UUID.fromString("00002902-0000-1000-8000-00805f9b34fb"))) == null) {
                 return;
             }
             int properties = characteristic.getProperties();
@@ -204,11 +204,9 @@ class HIDDeviceBLESteamController extends BluetoothGattCallback implements HIDDe
     }
 
     private BluetoothGatt connectGatt(boolean z) {
-        BluetoothGatt connectGatt;
         if (Build.VERSION.SDK_INT >= 23) {
             try {
-                connectGatt = this.mDevice.connectGatt(this.mManager.getContext(), z, this, 2);
-                return connectGatt;
+                return this.mDevice.connectGatt(this.mManager.getContext(), z, this, 2);
             } catch (Exception unused) {
                 return this.mDevice.connectGatt(this.mManager.getContext(), z, this);
             }

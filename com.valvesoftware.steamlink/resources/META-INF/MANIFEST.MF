@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 
 Name: AndroidManifest.xml
-SHA-256-Digest: YmcUNIiO8FLO3hQq4y5EnJi0lkUdZ0j/A4OoPIXvQBU=
+SHA-256-Digest: 77VX6ex4eQwPIHHfJ7ukSyi/b6+Aou9dhaqnCx0GZUE=
 
 Name: META-INF/com/android/build/gradle/app-metadata.properties
 SHA-256-Digest: QR3MbZR/y+R1mcPumh2SFK/GhlocFPxbaUKhSuayPz0=
@@ -10,7 +10,7 @@ Name: META-INF/version-control-info.textproto
 SHA-256-Digest: ONN3r6drY2Tlv1Uc9P/sGogaRhAqAEf1I/vxSODfaSg=
 
 Name: classes.dex
-SHA-256-Digest: uJ7Xr5yoOSjLEJeI+9/1MBYVdp66RejE4Yrx/ahBpx0=
+SHA-256-Digest: v0UyELjiMEBntS1Ra1a3TxZNGFrLo2pN6XJXOgBnue8=
 
 Name: org/kde/necessitas/ministro/IMinistro.aidl
 SHA-256-Digest: tepx/qE0m3da0SVNCLM3WXMyw8lMId6KtVHMQic/8Hw=

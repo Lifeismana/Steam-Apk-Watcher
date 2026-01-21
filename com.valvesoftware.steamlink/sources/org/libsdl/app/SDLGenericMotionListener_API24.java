@@ -1,5 +1,6 @@
 package org.libsdl.app;
 
+import android.os.Build;
 import android.view.MotionEvent;
 
 /* compiled from: SDLControllerManager.java */
@@ -28,6 +29,9 @@ class SDLGenericMotionListener_API24 extends SDLGenericMotionListener_API14 {
 
     @Override // org.libsdl.app.SDLGenericMotionListener_API14
     float getEventX(MotionEvent motionEvent, int i) {
+        if (Build.VERSION.SDK_INT < 24) {
+            return 0.0f;
+        }
         if (this.mRelativeModeEnabled && motionEvent.getToolType(i) == 3) {
             return motionEvent.getAxisValue(27, i);
         }
@@ -36,6 +40,9 @@ class SDLGenericMotionListener_API24 extends SDLGenericMotionListener_API14 {
 
     @Override // org.libsdl.app.SDLGenericMotionListener_API14
     float getEventY(MotionEvent motionEvent, int i) {
+        if (Build.VERSION.SDK_INT < 24) {
+            return 0.0f;
+        }
         if (this.mRelativeModeEnabled && motionEvent.getToolType(i) == 3) {
             return motionEvent.getAxisValue(28, i);
         }

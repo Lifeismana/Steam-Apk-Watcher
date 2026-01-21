@@ -41,9 +41,9 @@ public interface IMinistroCallback extends IInterface {
             if (iBinder == null) {
                 return null;
             }
-            IInterface queryLocalInterface = iBinder.queryLocalInterface(IMinistroCallback.DESCRIPTOR);
-            if (queryLocalInterface != null && (queryLocalInterface instanceof IMinistroCallback)) {
-                return (IMinistroCallback) queryLocalInterface;
+            IInterface iInterfaceQueryLocalInterface = iBinder.queryLocalInterface(IMinistroCallback.DESCRIPTOR);
+            if (iInterfaceQueryLocalInterface != null && (iInterfaceQueryLocalInterface instanceof IMinistroCallback)) {
+                return (IMinistroCallback) iInterfaceQueryLocalInterface;
             }
             return new Proxy(iBinder);
         }
@@ -82,13 +82,13 @@ public interface IMinistroCallback extends IInterface {
 
             @Override // org.kde.necessitas.ministro.IMinistroCallback
             public void loaderReady(Bundle bundle) throws RemoteException {
-                Parcel obtain = Parcel.obtain();
+                Parcel parcelObtain = Parcel.obtain();
                 try {
-                    obtain.writeInterfaceToken(IMinistroCallback.DESCRIPTOR);
-                    _Parcel.writeTypedObject(obtain, bundle, 0);
-                    this.mRemote.transact(1, obtain, null, 1);
+                    parcelObtain.writeInterfaceToken(IMinistroCallback.DESCRIPTOR);
+                    _Parcel.writeTypedObject(parcelObtain, bundle, 0);
+                    this.mRemote.transact(1, parcelObtain, null, 1);
                 } finally {
-                    obtain.recycle();
+                    parcelObtain.recycle();
                 }
             }
         }

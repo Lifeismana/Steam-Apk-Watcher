@@ -43,9 +43,9 @@ public class ApkLibraryInstaller implements ReLinker.LibraryInstaller {
         }
     }
 
-    private ZipFileInZipEntry findAPKWithLibrary(Context context, String[] strArr, String str, ReLinkerInstance reLinkerInstance) {
-        String[] sourceDirectories = sourceDirectories(context);
-        int length = sourceDirectories.length;
+    private ZipFileInZipEntry findAPKWithLibrary(Context context, String[] strArr, String str, ReLinkerInstance reLinkerInstance) throws IOException {
+        String[] strArrSourceDirectories = sourceDirectories(context);
+        int length = strArrSourceDirectories.length;
         char c = 0;
         int i = 0;
         while (true) {
@@ -53,7 +53,7 @@ public class ApkLibraryInstaller implements ReLinker.LibraryInstaller {
             if (i >= length) {
                 return null;
             }
-            String str2 = sourceDirectories[i];
+            String str2 = strArrSourceDirectories[i];
             int i2 = 0;
             while (true) {
                 int i3 = i2 + 1;
@@ -104,13 +104,13 @@ public class ApkLibraryInstaller implements ReLinker.LibraryInstaller {
     }
 
     private String[] getSupportedABIs(Context context, String str) {
-        Pattern compile = Pattern.compile("lib" + File.separatorChar + "([^\\" + File.separatorChar + "]*)" + File.separatorChar + str);
+        Pattern patternCompile = Pattern.compile("lib" + File.separatorChar + "([^\\" + File.separatorChar + "]*)" + File.separatorChar + str);
         HashSet hashSet = new HashSet();
         for (String str2 : sourceDirectories(context)) {
             try {
-                Enumeration<? extends ZipEntry> entries = new ZipFile(new File(str2), 1).entries();
-                while (entries.hasMoreElements()) {
-                    Matcher matcher = compile.matcher(entries.nextElement().getName());
+                Enumeration<? extends ZipEntry> enumerationEntries = new ZipFile(new File(str2), 1).entries();
+                while (enumerationEntries.hasMoreElements()) {
+                    Matcher matcher = patternCompile.matcher(enumerationEntries.nextElement().getName());
                     if (matcher.matches()) {
                         hashSet.add(matcher.group(1));
                     }
@@ -121,11 +121,11 @@ public class ApkLibraryInstaller implements ReLinker.LibraryInstaller {
         return (String[]) hashSet.toArray(new String[hashSet.size()]);
     }
 
-    /* JADX WARN: Code restructure failed: missing block: B:36:0x0060, code lost:
+    /* JADX WARN: Code restructure failed: missing block: B:25:0x0060, code lost:
     
         r1.zipFile.close();
      */
-    /* JADX WARN: Code restructure failed: missing block: B:38:?, code lost:
+    /* JADX WARN: Code restructure failed: missing block: B:91:?, code lost:
     
         return;
      */
@@ -133,26 +133,26 @@ public class ApkLibraryInstaller implements ReLinker.LibraryInstaller {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public void installLibrary(Context context, String[] strArr, String str, File file, ReLinkerInstance reLinkerInstance) {
-        ZipFileInZipEntry findAPKWithLibrary;
-        String[] strArr2;
+    public void installLibrary(Context context, String[] strArr, String str, File file, ReLinkerInstance reLinkerInstance) throws Throwable {
+        ZipFileInZipEntry zipFileInZipEntryFindAPKWithLibrary;
+        String[] supportedABIs;
         FileOutputStream fileOutputStream;
         InputStream inputStream;
         ZipFileInZipEntry zipFileInZipEntry = null;
         Closeable closeable = null;
         try {
-            findAPKWithLibrary = findAPKWithLibrary(context, strArr, str, reLinkerInstance);
+            zipFileInZipEntryFindAPKWithLibrary = findAPKWithLibrary(context, strArr, str, reLinkerInstance);
         } catch (Throwable th) {
             th = th;
         }
         try {
-            if (findAPKWithLibrary == null) {
+            if (zipFileInZipEntryFindAPKWithLibrary == null) {
                 try {
-                    strArr2 = getSupportedABIs(context, str);
+                    supportedABIs = getSupportedABIs(context, str);
                 } catch (Exception e) {
-                    strArr2 = new String[]{e.toString()};
+                    supportedABIs = new String[]{e.toString()};
                 }
-                throw new MissingLibraryException(str, strArr, strArr2);
+                throw new MissingLibraryException(str, strArr, supportedABIs);
             }
             int i = 0;
             while (true) {
@@ -163,19 +163,19 @@ public class ApkLibraryInstaller implements ReLinker.LibraryInstaller {
                         try {
                             if (file.exists() || file.createNewFile()) {
                                 try {
-                                    inputStream = findAPKWithLibrary.zipFile.getInputStream(findAPKWithLibrary.zipEntry);
+                                    inputStream = zipFileInZipEntryFindAPKWithLibrary.zipFile.getInputStream(zipFileInZipEntryFindAPKWithLibrary.zipEntry);
                                     try {
                                         fileOutputStream = new FileOutputStream(file);
                                         try {
-                                            long copy = copy(inputStream, fileOutputStream);
+                                            long jCopy = copy(inputStream, fileOutputStream);
                                             fileOutputStream.getFD().sync();
-                                            if (copy == file.length()) {
+                                            if (jCopy == file.length()) {
                                                 closeSilently(inputStream);
                                                 closeSilently(fileOutputStream);
                                                 file.setReadable(true, false);
                                                 file.setExecutable(true, false);
                                                 file.setWritable(true);
-                                                if (findAPKWithLibrary == null || findAPKWithLibrary.zipFile == null) {
+                                                if (zipFileInZipEntryFindAPKWithLibrary == null || zipFileInZipEntryFindAPKWithLibrary.zipFile == null) {
                                                     return;
                                                 }
                                             }
@@ -213,7 +213,7 @@ public class ApkLibraryInstaller implements ReLinker.LibraryInstaller {
                         i = i2;
                     } else {
                         reLinkerInstance.log("FATAL! Couldn't extract the library from the APK!");
-                        if (findAPKWithLibrary == null || findAPKWithLibrary.zipFile == null) {
+                        if (zipFileInZipEntryFindAPKWithLibrary == null || zipFileInZipEntryFindAPKWithLibrary.zipFile == null) {
                             return;
                         }
                     }
@@ -223,7 +223,7 @@ public class ApkLibraryInstaller implements ReLinker.LibraryInstaller {
             }
         } catch (Throwable th5) {
             th = th5;
-            zipFileInZipEntry = findAPKWithLibrary;
+            zipFileInZipEntry = zipFileInZipEntryFindAPKWithLibrary;
             if (zipFileInZipEntry != null) {
                 try {
                     if (zipFileInZipEntry.zipFile != null) {
@@ -240,10 +240,10 @@ public class ApkLibraryInstaller implements ReLinker.LibraryInstaller {
         byte[] bArr = new byte[COPY_BUFFER_SIZE];
         long j = 0;
         while (true) {
-            int read = inputStream.read(bArr);
-            if (read != -1) {
-                outputStream.write(bArr, 0, read);
-                j += read;
+            int i = inputStream.read(bArr);
+            if (i != -1) {
+                outputStream.write(bArr, 0, i);
+                j += i;
             } else {
                 outputStream.flush();
                 return j;
@@ -251,7 +251,7 @@ public class ApkLibraryInstaller implements ReLinker.LibraryInstaller {
         }
     }
 
-    private void closeSilently(Closeable closeable) {
+    private void closeSilently(Closeable closeable) throws IOException {
         if (closeable != null) {
             try {
                 closeable.close();

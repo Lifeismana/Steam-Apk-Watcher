@@ -29,17 +29,17 @@ public class ElfParser implements Closeable, Elf {
 
     public Elf.Header parseHeader() throws IOException {
         this.channel.position(0L);
-        ByteBuffer allocate = ByteBuffer.allocate(8);
-        allocate.order(ByteOrder.LITTLE_ENDIAN);
-        if (readWord(allocate, 0L) != 1179403647) {
+        ByteBuffer byteBufferAllocate = ByteBuffer.allocate(8);
+        byteBufferAllocate.order(ByteOrder.LITTLE_ENDIAN);
+        if (readWord(byteBufferAllocate, 0L) != 1179403647) {
             throw new IllegalArgumentException("Invalid ELF Magic!");
         }
-        short readByte = readByte(allocate, 4L);
-        boolean z = readByte(allocate, 5L) == 2;
-        if (readByte == 1) {
+        short s = readByte(byteBufferAllocate, 4L);
+        boolean z = readByte(byteBufferAllocate, 5L) == 2;
+        if (s == 1) {
             return new Elf32Header(z, this);
         }
-        if (readByte == 2) {
+        if (s == 2) {
             return new Elf64Header(z, this);
         }
         throw new IllegalStateException("Invalid class type!");
@@ -50,13 +50,13 @@ public class ElfParser implements Closeable, Elf {
         long j2;
         this.channel.position(0L);
         ArrayList arrayList = new ArrayList();
-        Elf.Header parseHeader = parseHeader();
-        ByteBuffer allocate = ByteBuffer.allocate(8);
-        allocate.order(parseHeader.bigEndian ? ByteOrder.BIG_ENDIAN : ByteOrder.LITTLE_ENDIAN);
-        long j3 = parseHeader.phnum;
+        Elf.Header header = parseHeader();
+        ByteBuffer byteBufferAllocate = ByteBuffer.allocate(8);
+        byteBufferAllocate.order(header.bigEndian ? ByteOrder.BIG_ENDIAN : ByteOrder.LITTLE_ENDIAN);
+        long j3 = header.phnum;
         int i = 0;
         if (j3 == 65535) {
-            j3 = parseHeader.getSectionHeader(0).info;
+            j3 = header.getSectionHeader(0).info;
         }
         long j4 = 0;
         while (true) {
@@ -65,7 +65,7 @@ public class ElfParser implements Closeable, Elf {
                 j2 = 0;
                 break;
             }
-            Elf.ProgramHeader programHeader = parseHeader.getProgramHeader(j4);
+            Elf.ProgramHeader programHeader = header.getProgramHeader(j4);
             if (programHeader.type == 2) {
                 j2 = programHeader.offset;
                 break;
@@ -78,7 +78,7 @@ public class ElfParser implements Closeable, Elf {
         ArrayList arrayList2 = new ArrayList();
         long j5 = 0;
         while (true) {
-            Elf.DynamicStructure dynamicStructure = parseHeader.getDynamicStructure(j2, i);
+            Elf.DynamicStructure dynamicStructure = header.getDynamicStructure(j2, i);
             long j6 = j;
             if (dynamicStructure.tag == j6) {
                 arrayList2.add(Long.valueOf(dynamicStructure.val));
@@ -95,10 +95,10 @@ public class ElfParser implements Closeable, Elf {
         if (j5 == 0) {
             throw new IllegalStateException("String table offset not found!");
         }
-        long offsetFromVma = offsetFromVma(parseHeader, j3, j5);
+        long jOffsetFromVma = offsetFromVma(header, j3, j5);
         Iterator it = arrayList2.iterator();
         while (it.hasNext()) {
-            arrayList.add(readString(allocate, ((Long) it.next()).longValue() + offsetFromVma));
+            arrayList.add(readString(byteBufferAllocate, ((Long) it.next()).longValue() + jOffsetFromVma));
         }
         return arrayList;
     }
@@ -122,9 +122,9 @@ public class ElfParser implements Closeable, Elf {
         StringBuilder sb = new StringBuilder();
         while (true) {
             long j2 = 1 + j;
-            short readByte = readByte(byteBuffer, j);
-            if (readByte != 0) {
-                sb.append((char) readByte);
+            short s = readByte(byteBuffer, j);
+            if (s != 0) {
+                sb.append((char) s);
                 j = j2;
             } else {
                 return sb.toString();
@@ -157,11 +157,11 @@ public class ElfParser implements Closeable, Elf {
         byteBuffer.limit(i);
         long j2 = 0;
         while (j2 < i) {
-            int read = this.channel.read(byteBuffer, j + j2);
-            if (read == -1) {
+            int i2 = this.channel.read(byteBuffer, j + j2);
+            if (i2 == -1) {
                 throw new EOFException();
             }
-            j2 += read;
+            j2 += i2;
         }
         byteBuffer.position(0);
     }

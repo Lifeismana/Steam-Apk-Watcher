@@ -1,10 +1,11 @@
 package org.libsdl.app;
 
+import android.app.Activity;
 import android.content.Context;
 
 /* loaded from: classes.dex */
 public class SDL {
-    protected static Context mContext;
+    protected static Activity mContext;
 
     public static void setupJNI() {
         SDLActivity.nativeSetupJNI();
@@ -19,30 +20,30 @@ public class SDL {
         SDLControllerManager.initialize();
     }
 
-    public static void setContext(Context context) {
-        SDLAudioManager.setContext(context);
-        mContext = context;
+    public static void setContext(Activity activity) {
+        SDLAudioManager.setContext(activity);
+        mContext = activity;
     }
 
-    public static Context getContext() {
+    public static Activity getContext() {
         return mContext;
     }
 
-    static void loadLibrary(String str) throws UnsatisfiedLinkError, SecurityException, NullPointerException {
+    static void loadLibrary(String str) throws SecurityException, UnsatisfiedLinkError, NullPointerException {
         loadLibrary(str, mContext);
     }
 
-    static void loadLibrary(String str, Context context) throws UnsatisfiedLinkError, SecurityException, NullPointerException {
+    static void loadLibrary(String str, Context context) throws SecurityException, UnsatisfiedLinkError, NullPointerException {
         if (str == null) {
             throw new NullPointerException("No library name provided.");
         }
         try {
-            Class<?> loadClass = context.getClassLoader().loadClass("com.getkeepsafe.relinker.ReLinker");
-            Class<?> loadClass2 = context.getClassLoader().loadClass("com.getkeepsafe.relinker.ReLinker$LoadListener");
-            Class<?> loadClass3 = context.getClassLoader().loadClass("android.content.Context");
-            Class<?> loadClass4 = context.getClassLoader().loadClass("java.lang.String");
-            Object invoke = loadClass.getDeclaredMethod("force", null).invoke(null, null);
-            invoke.getClass().getDeclaredMethod("loadLibrary", loadClass3, loadClass4, loadClass4, loadClass2).invoke(invoke, context, str, null, null);
+            Class<?> clsLoadClass = context.getClassLoader().loadClass("com.getkeepsafe.relinker.ReLinker");
+            Class<?> clsLoadClass2 = context.getClassLoader().loadClass("com.getkeepsafe.relinker.ReLinker$LoadListener");
+            Class<?> clsLoadClass3 = context.getClassLoader().loadClass("android.content.Context");
+            Class<?> clsLoadClass4 = context.getClassLoader().loadClass("java.lang.String");
+            Object objInvoke = clsLoadClass.getDeclaredMethod("force", null).invoke(null, null);
+            objInvoke.getClass().getDeclaredMethod("loadLibrary", clsLoadClass3, clsLoadClass4, clsLoadClass4, clsLoadClass2).invoke(objInvoke, context, str, null, null);
         } catch (Throwable unused) {
             System.loadLibrary(str);
         }

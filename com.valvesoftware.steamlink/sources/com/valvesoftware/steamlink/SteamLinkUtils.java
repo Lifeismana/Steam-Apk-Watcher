@@ -12,38 +12,22 @@ public class SteamLinkUtils {
     public static final String TAG = "SteamLinkShell";
 
     public static boolean canDisplay4KVideo() {
-        Display.Mode mode;
-        int physicalWidth;
-        int physicalHeight;
-        Activity activity = (Activity) SDL.getContext();
-        if (Build.MODEL.startsWith("BRAVIA") && activity.getPackageManager().hasSystemFeature("com.sony.dtv.hardware.panel.qfhd")) {
+        Activity context = SDL.getContext();
+        if (Build.MODEL.startsWith("BRAVIA") && context.getPackageManager().hasSystemFeature("com.sony.dtv.hardware.panel.qfhd")) {
             return true;
         }
         if (Build.VERSION.SDK_INT < 23) {
             return false;
         }
-        mode = activity.getWindowManager().getDefaultDisplay().getMode();
-        physicalWidth = mode.getPhysicalWidth();
-        if (physicalWidth < 3840) {
-            return false;
-        }
-        physicalHeight = mode.getPhysicalHeight();
-        return physicalHeight >= 2160;
+        Display.Mode mode = context.getWindowManager().getDefaultDisplay().getMode();
+        return mode.getPhysicalWidth() >= 3840 && mode.getPhysicalHeight() >= 2160;
     }
 
-    /* JADX WARN: Code restructure failed: missing block: B:3:0x000d, code lost:
-    
-        r0 = r0.getWindowManager().getDefaultDisplay().getHdrCapabilities();
-     */
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-    */
     public static boolean canDisplayHDRVideo(boolean z, boolean z2) {
         Display.HdrCapabilities hdrCapabilities;
-        int[] supportedHdrTypes;
-        Activity activity = (Activity) SDL.getContext();
-        if (Build.VERSION.SDK_INT >= 24 && hdrCapabilities != null) {
-            supportedHdrTypes = hdrCapabilities.getSupportedHdrTypes();
+        Activity context = SDL.getContext();
+        if (Build.VERSION.SDK_INT >= 24 && (hdrCapabilities = context.getWindowManager().getDefaultDisplay().getHdrCapabilities()) != null) {
+            int[] supportedHdrTypes = hdrCapabilities.getSupportedHdrTypes();
             int length = supportedHdrTypes.length;
             int i = 0;
             while (true) {
@@ -70,15 +54,8 @@ public class SteamLinkUtils {
     }
 
     private static MediaCodecInfo getDecoderInfo(String str) {
-        boolean isAlias;
         for (MediaCodecInfo mediaCodecInfo : getCodecInfoList()) {
-            if (!mediaCodecInfo.isEncoder()) {
-                if (Build.VERSION.SDK_INT >= 29) {
-                    isAlias = mediaCodecInfo.isAlias();
-                    if (isAlias) {
-                        continue;
-                    }
-                }
+            if (!mediaCodecInfo.isEncoder() && (Build.VERSION.SDK_INT < 29 || !mediaCodecInfo.isAlias())) {
                 for (String str2 : mediaCodecInfo.getSupportedTypes()) {
                     if (str2.equalsIgnoreCase(str)) {
                         return mediaCodecInfo;

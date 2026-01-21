@@ -5,6 +5,7 @@ import android.app.PendingIntent;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.RemoteException;
 import android.os.SystemClock;
 import android.util.Log;
 import android.view.InputDevice;
@@ -70,7 +71,7 @@ public class SteamShellActivity extends QtActivity {
     }
 
     @Override // org.qtproject.qt5.android.bindings.QtActivity, android.app.Activity
-    protected void onDestroy() {
+    protected void onDestroy() throws RemoteException {
         super.onDestroy();
         stopActivity();
         HIDDeviceManager hIDDeviceManager = this.mHIDDeviceManager;
@@ -181,26 +182,26 @@ public class SteamShellActivity extends QtActivity {
         System.exit(0);
     }
 
-    public void startVRLink(String str, String str2) {
+    public void startVRLink(String str, String str2) throws InterruptedException {
         this.mStreamingInProgress = true;
         Intent intent = new Intent();
         intent.addCategory("com.oculus.intent.category.VR");
         intent.setComponent(new ComponentName("com.valvesoftware.steamlinkvr", "android.app.NativeActivity"));
-        Intent makeRestartActivityTask = Intent.makeRestartActivityTask(intent.getComponent());
-        makeRestartActivityTask.putExtra("sOriginalPackage", "com.valvesoftware.steamlinkvr");
-        makeRestartActivityTask.putExtra("sOriginalActivity", getClass().getName());
-        makeRestartActivityTask.putExtra("sNetworkTest", str2);
-        makeRestartActivityTask.putExtra("sArgs", str);
-        makeRestartActivityTask.putExtra("sNetworkTestResults", str2);
+        Intent intentMakeRestartActivityTask = Intent.makeRestartActivityTask(intent.getComponent());
+        intentMakeRestartActivityTask.putExtra("sOriginalPackage", "com.valvesoftware.steamlinkvr");
+        intentMakeRestartActivityTask.putExtra("sOriginalActivity", getClass().getName());
+        intentMakeRestartActivityTask.putExtra("sNetworkTest", str2);
+        intentMakeRestartActivityTask.putExtra("sArgs", str);
+        intentMakeRestartActivityTask.putExtra("sNetworkTestResults", str2);
         if (getPackageManager().hasSystemFeature("oculus.software.vr.app.hybrid")) {
             Log.v(TAG, "Hybrid support found. Launching activity.");
-            makeRestartActivityTask.addFlags(268435456);
-            startActivity(makeRestartActivityTask);
+            intentMakeRestartActivityTask.addFlags(268435456);
+            startActivity(intentMakeRestartActivityTask);
             return;
         }
         Log.v(TAG, "Hybrid support not found. Launching activity using legacy method.");
-        makeRestartActivityTask.addCategory("com.oculus.intent.category.VR");
-        ((AlarmManager) getSystemService("alarm")).set(3, SystemClock.elapsedRealtime(), PendingIntent.getActivity(SDL.getContext(), 354678, makeRestartActivityTask, 33554432));
+        intentMakeRestartActivityTask.addCategory("com.oculus.intent.category.VR");
+        ((AlarmManager) getSystemService("alarm")).set(3, SystemClock.elapsedRealtime(), PendingIntent.getActivity(SDL.getContext(), 354678, intentMakeRestartActivityTask, 33554432));
         try {
             Thread.sleep(10000L);
         } catch (InterruptedException e) {

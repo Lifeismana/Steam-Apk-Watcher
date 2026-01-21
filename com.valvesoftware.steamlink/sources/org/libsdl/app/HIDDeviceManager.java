@@ -121,16 +121,16 @@ public class HIDDeviceManager {
     }
 
     int getDeviceIDForIdentifier(String str) {
-        SharedPreferences.Editor edit = this.mSharedPreferences.edit();
+        SharedPreferences.Editor editorEdit = this.mSharedPreferences.edit();
         int i = this.mSharedPreferences.getInt(str, 0);
         if (i == 0) {
             i = this.mNextDeviceId;
             int i2 = i + 1;
             this.mNextDeviceId = i2;
-            edit.putInt("next_device_id", i2);
+            editorEdit.putInt("next_device_id", i2);
         }
-        edit.putInt(str, i);
-        edit.commit();
+        editorEdit.putInt(str, i);
+        editorEdit.apply();
         return i;
     }
 
@@ -210,11 +210,11 @@ public class HIDDeviceManager {
             }
         }
         for (Integer num : arrayList) {
-            int intValue = num.intValue();
+            int iIntValue = num.intValue();
             HIDDevice hIDDevice2 = this.mDevicesById.get(num);
             this.mDevicesById.remove(num);
             hIDDevice2.shutdown();
-            HIDDeviceDisconnected(intValue);
+            HIDDeviceDisconnected(iIntValue);
         }
     }
 

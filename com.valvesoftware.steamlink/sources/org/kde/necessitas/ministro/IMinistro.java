@@ -42,9 +42,9 @@ public interface IMinistro extends IInterface {
             if (iBinder == null) {
                 return null;
             }
-            IInterface queryLocalInterface = iBinder.queryLocalInterface(IMinistro.DESCRIPTOR);
-            if (queryLocalInterface != null && (queryLocalInterface instanceof IMinistro)) {
-                return (IMinistro) queryLocalInterface;
+            IInterface iInterfaceQueryLocalInterface = iBinder.queryLocalInterface(IMinistro.DESCRIPTOR);
+            if (iInterfaceQueryLocalInterface != null && (iInterfaceQueryLocalInterface instanceof IMinistro)) {
+                return (IMinistro) iInterfaceQueryLocalInterface;
             }
             return new Proxy(iBinder);
         }
@@ -84,17 +84,17 @@ public interface IMinistro extends IInterface {
 
             @Override // org.kde.necessitas.ministro.IMinistro
             public void requestLoader(IMinistroCallback iMinistroCallback, Bundle bundle) throws RemoteException {
-                Parcel obtain = Parcel.obtain();
-                Parcel obtain2 = Parcel.obtain();
+                Parcel parcelObtain = Parcel.obtain();
+                Parcel parcelObtain2 = Parcel.obtain();
                 try {
-                    obtain.writeInterfaceToken(IMinistro.DESCRIPTOR);
-                    obtain.writeStrongInterface(iMinistroCallback);
-                    _Parcel.writeTypedObject(obtain, bundle, 0);
-                    this.mRemote.transact(1, obtain, obtain2, 0);
-                    obtain2.readException();
+                    parcelObtain.writeInterfaceToken(IMinistro.DESCRIPTOR);
+                    parcelObtain.writeStrongInterface(iMinistroCallback);
+                    _Parcel.writeTypedObject(parcelObtain, bundle, 0);
+                    this.mRemote.transact(1, parcelObtain, parcelObtain2, 0);
+                    parcelObtain2.readException();
                 } finally {
-                    obtain2.recycle();
-                    obtain.recycle();
+                    parcelObtain2.recycle();
+                    parcelObtain.recycle();
                 }
             }
         }

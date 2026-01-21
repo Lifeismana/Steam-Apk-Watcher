@@ -33,16 +33,16 @@ public class VirtualHere {
     private final Messenger mMessenger = new Messenger(new IncomingHandler());
     private final ServiceConnection mConnection = new ServiceConnection() { // from class: com.valvesoftware.steamlink.VirtualHere.1
         @Override // android.content.ServiceConnection
-        public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
+        public void onServiceConnected(ComponentName componentName, IBinder iBinder) throws RemoteException {
             VirtualHere.this.mService = new Messenger(iBinder);
             try {
                 Log.v(VirtualHere.TAG, "Service connected, registering as client");
-                Message obtain = Message.obtain((Handler) null, VHDAEMON_MSGS.REGISTER_CLIENT.ordinal());
-                obtain.replyTo = VirtualHere.this.mMessenger;
-                VirtualHere.this.mService.send(obtain);
-                Message obtain2 = Message.obtain((Handler) null, VHDAEMON_MSGS.GET_DEVICE_LIST.ordinal());
-                obtain2.replyTo = VirtualHere.this.mMessenger;
-                VirtualHere.this.mService.send(obtain2);
+                Message messageObtain = Message.obtain((Handler) null, VHDAEMON_MSGS.REGISTER_CLIENT.ordinal());
+                messageObtain.replyTo = VirtualHere.this.mMessenger;
+                VirtualHere.this.mService.send(messageObtain);
+                Message messageObtain2 = Message.obtain((Handler) null, VHDAEMON_MSGS.GET_DEVICE_LIST.ordinal());
+                messageObtain2.replyTo = VirtualHere.this.mMessenger;
+                VirtualHere.this.mService.send(messageObtain2);
                 if (VirtualHere.this.mIsSharing) {
                     VirtualHere virtualHere = VirtualHere.this;
                     virtualHere.startSharing(virtualHere.mNumLicensedDevices);
@@ -105,7 +105,7 @@ public class VirtualHere {
         return sInstance;
     }
 
-    public static void release(VirtualHere virtualHere) {
+    public static void release(VirtualHere virtualHere) throws RemoteException {
         VirtualHere virtualHere2 = sInstance;
         if (virtualHere == virtualHere2) {
             int i = sInstanceRefCount - 1;
@@ -185,7 +185,7 @@ public class VirtualHere {
         this.mContext = context;
     }
 
-    private void close() {
+    private void close() throws RemoteException {
         disconnectService();
     }
 
@@ -204,22 +204,22 @@ public class VirtualHere {
         Log.v(TAG, "Connecting to service...");
         Intent intent = new Intent();
         intent.setClassName(VHDAEMON_PACKAGE, "com.virtualhere.androidserver.DaemonService");
-        boolean bindService = this.mContext.bindService(intent, this.mConnection, 1);
-        this.mIsBound = bindService;
-        if (bindService) {
+        boolean zBindService = this.mContext.bindService(intent, this.mConnection, 1);
+        this.mIsBound = zBindService;
+        if (zBindService) {
             Log.v(TAG, "Connection attempt succeeded");
         } else {
             Log.v(TAG, "Connection attempt failed");
         }
     }
 
-    private void disconnectService() {
+    private void disconnectService() throws RemoteException {
         if (isConnected()) {
             if (this.mService != null) {
                 try {
-                    Message obtain = Message.obtain((Handler) null, VHDAEMON_MSGS.UNREGISTER_CLIENT.ordinal());
-                    obtain.replyTo = this.mMessenger;
-                    this.mService.send(obtain);
+                    Message messageObtain = Message.obtain((Handler) null, VHDAEMON_MSGS.UNREGISTER_CLIENT.ordinal());
+                    messageObtain.replyTo = this.mMessenger;
+                    this.mService.send(messageObtain);
                 } catch (RemoteException unused) {
                 }
             }
@@ -231,7 +231,7 @@ public class VirtualHere {
         }
     }
 
-    public void startSharing(int i) {
+    public void startSharing(int i) throws RemoteException {
         this.mIsSharing = true;
         this.mNumLicensedDevices = i;
         if (!isConnected() || this.mService == null) {
@@ -241,23 +241,23 @@ public class VirtualHere {
             Bundle bundle = new Bundle();
             bundle.putString("client", getClass().getName());
             bundle.putString("licensed_devices", Integer.toString(this.mNumLicensedDevices));
-            Message obtain = Message.obtain((Handler) null, VHDAEMON_MSGS.SET_STEAM_LICENSE.ordinal());
-            obtain.replyTo = this.mMessenger;
-            obtain.setData(bundle);
-            this.mService.send(obtain);
+            Message messageObtain = Message.obtain((Handler) null, VHDAEMON_MSGS.SET_STEAM_LICENSE.ordinal());
+            messageObtain.replyTo = this.mMessenger;
+            messageObtain.setData(bundle);
+            this.mService.send(messageObtain);
         } catch (RemoteException unused) {
         }
     }
 
-    public void stopSharing() {
+    public void stopSharing() throws RemoteException {
         this.mIsSharing = false;
         if (!isConnected() || this.mService == null) {
             return;
         }
         try {
-            Message obtain = Message.obtain((Handler) null, VHDAEMON_MSGS.SET_STEAM_LICENSE.ordinal());
-            obtain.replyTo = this.mMessenger;
-            this.mService.send(obtain);
+            Message messageObtain = Message.obtain((Handler) null, VHDAEMON_MSGS.SET_STEAM_LICENSE.ordinal());
+            messageObtain.replyTo = this.mMessenger;
+            this.mService.send(messageObtain);
         } catch (RemoteException unused) {
         }
     }

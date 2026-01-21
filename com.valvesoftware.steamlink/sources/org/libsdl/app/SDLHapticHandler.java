@@ -40,11 +40,11 @@ class SDLHapticHandler {
     }
 
     void pollHapticDevices() {
-        boolean z;
+        boolean zHasVibrator;
         Vibrator vibrator = (Vibrator) SDL.getContext().getSystemService("vibrator");
         if (vibrator != null) {
-            z = vibrator.hasVibrator();
-            if (z && getHaptic(999999) == null) {
+            zHasVibrator = vibrator.hasVibrator();
+            if (zHasVibrator && getHaptic(999999) == null) {
                 SDLHaptic sDLHaptic = new SDLHaptic();
                 sDLHaptic.device_id = 999999;
                 sDLHaptic.name = "VIBRATOR_SERVICE";
@@ -53,13 +53,13 @@ class SDLHapticHandler {
                 SDLControllerManager.nativeAddHaptic(sDLHaptic.device_id, sDLHaptic.name);
             }
         } else {
-            z = false;
+            zHasVibrator = false;
         }
         Iterator<SDLHaptic> it = this.mHaptics.iterator();
         ArrayList arrayList = null;
         while (it.hasNext()) {
             int i = it.next().device_id;
-            if (i != 999999 || !z) {
+            if (i != 999999 || !zHasVibrator) {
                 if (arrayList == null) {
                     arrayList = new ArrayList();
                 }
@@ -69,14 +69,14 @@ class SDLHapticHandler {
         if (arrayList != null) {
             Iterator it2 = arrayList.iterator();
             while (it2.hasNext()) {
-                int intValue = ((Integer) it2.next()).intValue();
-                SDLControllerManager.nativeRemoveHaptic(intValue);
+                int iIntValue = ((Integer) it2.next()).intValue();
+                SDLControllerManager.nativeRemoveHaptic(iIntValue);
                 int i2 = 0;
                 while (true) {
                     if (i2 >= this.mHaptics.size()) {
                         break;
                     }
-                    if (this.mHaptics.get(i2).device_id == intValue) {
+                    if (this.mHaptics.get(i2).device_id == iIntValue) {
                         this.mHaptics.remove(i2);
                         break;
                     }

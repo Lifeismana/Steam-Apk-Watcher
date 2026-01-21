@@ -10,7 +10,7 @@ class SDLMain implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public void run() {
+    public void run() throws SecurityException, IllegalArgumentException {
         try {
             Process.setThreadPriority(-4);
         } catch (Exception e) {

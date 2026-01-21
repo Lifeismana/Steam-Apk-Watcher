@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.RemoteException;
 import android.util.Log;
 import android.view.Display;
 import android.view.Surface;
@@ -15,6 +16,7 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import org.libsdl.app.SDL;
@@ -59,24 +61,20 @@ public class SteamLink extends SDLActivity {
     public native void videoSurfaceDestroyed();
 
     @Override // org.libsdl.app.SDLActivity, android.app.Activity
-    protected void onCreate(Bundle bundle) {
-        int checkSelfPermission;
+    protected void onCreate(Bundle bundle) throws IllegalAccessException, NoSuchMethodException, ClassNotFoundException, SecurityException, IllegalArgumentException, InvocationTargetException {
         super.onCreate(bundle);
         setWindowStyle(true);
         if (mLayout != null && useVideoSurface()) {
             createVideoSurface();
         }
-        if (Build.VERSION.SDK_INT >= 29) {
-            checkSelfPermission = getApplication().checkSelfPermission("android.permission.WAKE_LOCK");
-            if (checkSelfPermission == 0) {
-                this.m_WiFiLock = ((WifiManager) getApplication().getSystemService("wifi")).createWifiLock(4, "Steam Link");
-            }
+        if (Build.VERSION.SDK_INT >= 29 && getApplication().checkSelfPermission("android.permission.WAKE_LOCK") == 0) {
+            this.m_WiFiLock = ((WifiManager) getApplication().getSystemService("wifi")).createWifiLock(4, "Steam Link");
         }
         this.mVirtualHere = VirtualHere.acquire(this);
     }
 
     @Override // org.libsdl.app.SDLActivity, android.app.Activity
-    protected void onDestroy() {
+    protected void onDestroy() throws InterruptedException, RemoteException {
         super.onDestroy();
         VirtualHere virtualHere = this.mVirtualHere;
         if (virtualHere != null) {
@@ -207,7 +205,7 @@ public class SteamLink extends SDLActivity {
         }
     }
 
-    public void createVideoSurface() {
+    public void createVideoSurface() throws IllegalAccessException, NoSuchMethodException, ClassNotFoundException, SecurityException, IllegalArgumentException, InvocationTargetException {
         Display defaultDisplay = ((WindowManager) getApplication().getSystemService("window")).getDefaultDisplay();
         this.m_nDisplayWidth = defaultDisplay.getWidth();
         this.m_nDisplayHeight = defaultDisplay.getHeight();

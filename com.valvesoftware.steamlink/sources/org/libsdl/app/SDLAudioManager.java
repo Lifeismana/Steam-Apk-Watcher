@@ -18,7 +18,7 @@ class SDLAudioManager {
 
     static native void nativeRemoveAudioDevice(boolean z, int i);
 
-    static native int nativeSetupJNI();
+    static native void nativeSetupJNI();
 
     static void release(Context context) {
     }
@@ -32,26 +32,15 @@ class SDLAudioManager {
             mAudioDeviceCallback = new AudioDeviceCallback() { // from class: org.libsdl.app.SDLAudioManager.1
                 @Override // android.media.AudioDeviceCallback
                 public void onAudioDevicesAdded(AudioDeviceInfo[] audioDeviceInfoArr) {
-                    boolean isSink;
-                    CharSequence productName;
-                    int id;
                     for (AudioDeviceInfo audioDeviceInfo : audioDeviceInfoArr) {
-                        isSink = audioDeviceInfo.isSink();
-                        productName = audioDeviceInfo.getProductName();
-                        String charSequence = productName.toString();
-                        id = audioDeviceInfo.getId();
-                        SDLAudioManager.nativeAddAudioDevice(isSink, charSequence, id);
+                        SDLAudioManager.nativeAddAudioDevice(audioDeviceInfo.isSink(), audioDeviceInfo.getProductName().toString(), audioDeviceInfo.getId());
                     }
                 }
 
                 @Override // android.media.AudioDeviceCallback
                 public void onAudioDevicesRemoved(AudioDeviceInfo[] audioDeviceInfoArr) {
-                    boolean isSink;
-                    int id;
                     for (AudioDeviceInfo audioDeviceInfo : audioDeviceInfoArr) {
-                        isSink = audioDeviceInfo.isSink();
-                        id = audioDeviceInfo.getId();
-                        SDLAudioManager.nativeRemoveAudioDevice(isSink, id);
+                        SDLAudioManager.nativeRemoveAudioDevice(audioDeviceInfo.isSink(), audioDeviceInfo.getId());
                     }
                 }
             };
@@ -63,15 +52,11 @@ class SDLAudioManager {
     }
 
     private static AudioDeviceInfo getInputAudioDeviceInfo(int i) {
-        AudioDeviceInfo[] devices;
-        int id;
         if (Build.VERSION.SDK_INT < 24) {
             return null;
         }
-        devices = ((AudioManager) mContext.getSystemService("audio")).getDevices(1);
-        for (AudioDeviceInfo audioDeviceInfo : devices) {
-            id = audioDeviceInfo.getId();
-            if (id == i) {
+        for (AudioDeviceInfo audioDeviceInfo : ((AudioManager) mContext.getSystemService("audio")).getDevices(1)) {
+            if (audioDeviceInfo.getId() == i) {
                 return audioDeviceInfo;
             }
         }
@@ -79,15 +64,11 @@ class SDLAudioManager {
     }
 
     private static AudioDeviceInfo getPlaybackAudioDeviceInfo(int i) {
-        AudioDeviceInfo[] devices;
-        int id;
         if (Build.VERSION.SDK_INT < 24) {
             return null;
         }
-        devices = ((AudioManager) mContext.getSystemService("audio")).getDevices(2);
-        for (AudioDeviceInfo audioDeviceInfo : devices) {
-            id = audioDeviceInfo.getId();
-            if (id == i) {
+        for (AudioDeviceInfo audioDeviceInfo : ((AudioManager) mContext.getSystemService("audio")).getDevices(2)) {
+            if (audioDeviceInfo.getId() == i) {
                 return audioDeviceInfo;
             }
         }
@@ -95,35 +76,15 @@ class SDLAudioManager {
     }
 
     static void registerAudioDeviceCallback() {
-        AudioDeviceInfo[] devices;
-        AudioDeviceInfo[] devices2;
-        boolean isSink;
-        CharSequence productName;
-        int id;
-        int type;
-        boolean isSink2;
-        CharSequence productName2;
-        int id2;
         if (Build.VERSION.SDK_INT >= 24) {
             AudioManager audioManager = (AudioManager) mContext.getSystemService("audio");
-            devices = audioManager.getDevices(2);
-            for (AudioDeviceInfo audioDeviceInfo : devices) {
-                type = audioDeviceInfo.getType();
-                if (type != 18) {
-                    isSink2 = audioDeviceInfo.isSink();
-                    productName2 = audioDeviceInfo.getProductName();
-                    String charSequence = productName2.toString();
-                    id2 = audioDeviceInfo.getId();
-                    nativeAddAudioDevice(isSink2, charSequence, id2);
+            for (AudioDeviceInfo audioDeviceInfo : audioManager.getDevices(2)) {
+                if (audioDeviceInfo.getType() != 18) {
+                    nativeAddAudioDevice(audioDeviceInfo.isSink(), audioDeviceInfo.getProductName().toString(), audioDeviceInfo.getId());
                 }
             }
-            devices2 = audioManager.getDevices(1);
-            for (AudioDeviceInfo audioDeviceInfo2 : devices2) {
-                isSink = audioDeviceInfo2.isSink();
-                productName = audioDeviceInfo2.getProductName();
-                String charSequence2 = productName.toString();
-                id = audioDeviceInfo2.getId();
-                nativeAddAudioDevice(isSink, charSequence2, id);
+            for (AudioDeviceInfo audioDeviceInfo2 : audioManager.getDevices(1)) {
+                nativeAddAudioDevice(audioDeviceInfo2.isSink(), audioDeviceInfo2.getProductName().toString(), audioDeviceInfo2.getId());
             }
             audioManager.registerAudioDeviceCallback(mAudioDeviceCallback, null);
         }
@@ -135,7 +96,7 @@ class SDLAudioManager {
         }
     }
 
-    static void audioSetThreadPriority(boolean z, int i) {
+    static void audioSetThreadPriority(boolean z, int i) throws SecurityException, IllegalArgumentException {
         try {
             if (z) {
                 Thread.currentThread().setName("SDLAudioC" + i);

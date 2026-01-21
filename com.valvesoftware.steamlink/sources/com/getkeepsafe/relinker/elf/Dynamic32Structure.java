@@ -8,10 +8,10 @@ import java.nio.ByteOrder;
 /* loaded from: classes.dex */
 public class Dynamic32Structure extends Elf.DynamicStructure {
     public Dynamic32Structure(ElfParser elfParser, Elf.Header header, long j, int i) throws IOException {
-        ByteBuffer allocate = ByteBuffer.allocate(4);
-        allocate.order(header.bigEndian ? ByteOrder.BIG_ENDIAN : ByteOrder.LITTLE_ENDIAN);
+        ByteBuffer byteBufferAllocate = ByteBuffer.allocate(4);
+        byteBufferAllocate.order(header.bigEndian ? ByteOrder.BIG_ENDIAN : ByteOrder.LITTLE_ENDIAN);
         long j2 = j + (i * 8);
-        this.tag = elfParser.readWord(allocate, j2);
-        this.val = elfParser.readWord(allocate, j2 + 4);
+        this.tag = elfParser.readWord(byteBufferAllocate, j2);
+        this.val = elfParser.readWord(byteBufferAllocate, j2 + 4);
     }
 }

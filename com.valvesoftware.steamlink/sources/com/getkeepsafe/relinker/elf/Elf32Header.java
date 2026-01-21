@@ -12,16 +12,16 @@ public class Elf32Header extends Elf.Header {
     public Elf32Header(boolean z, ElfParser elfParser) throws IOException {
         this.bigEndian = z;
         this.parser = elfParser;
-        ByteBuffer allocate = ByteBuffer.allocate(4);
-        allocate.order(z ? ByteOrder.BIG_ENDIAN : ByteOrder.LITTLE_ENDIAN);
-        this.type = elfParser.readHalf(allocate, 16L);
-        this.phoff = elfParser.readWord(allocate, 28L);
-        this.shoff = elfParser.readWord(allocate, 32L);
-        this.phentsize = elfParser.readHalf(allocate, 42L);
-        this.phnum = elfParser.readHalf(allocate, 44L);
-        this.shentsize = elfParser.readHalf(allocate, 46L);
-        this.shnum = elfParser.readHalf(allocate, 48L);
-        this.shstrndx = elfParser.readHalf(allocate, 50L);
+        ByteBuffer byteBufferAllocate = ByteBuffer.allocate(4);
+        byteBufferAllocate.order(z ? ByteOrder.BIG_ENDIAN : ByteOrder.LITTLE_ENDIAN);
+        this.type = elfParser.readHalf(byteBufferAllocate, 16L);
+        this.phoff = elfParser.readWord(byteBufferAllocate, 28L);
+        this.shoff = elfParser.readWord(byteBufferAllocate, 32L);
+        this.phentsize = elfParser.readHalf(byteBufferAllocate, 42L);
+        this.phnum = elfParser.readHalf(byteBufferAllocate, 44L);
+        this.shentsize = elfParser.readHalf(byteBufferAllocate, 46L);
+        this.shnum = elfParser.readHalf(byteBufferAllocate, 48L);
+        this.shstrndx = elfParser.readHalf(byteBufferAllocate, 50L);
     }
 
     @Override // com.getkeepsafe.relinker.elf.Elf.Header

@@ -1,11 +1,20 @@
 package org.libsdl.app;
 
+import android.view.InputDevice;
 import android.view.MotionEvent;
 import android.view.View;
 
 /* compiled from: SDLControllerManager.java */
 /* loaded from: classes.dex */
 class SDLGenericMotionListener_API14 implements View.OnGenericMotionListener {
+    protected static final int SDL_PEN_DEVICE_TYPE_DIRECT = 1;
+    protected static final int SDL_PEN_DEVICE_TYPE_INDIRECT = 2;
+    protected static final int SDL_PEN_DEVICE_TYPE_UNKNOWN = 0;
+
+    int getPenDeviceType(InputDevice inputDevice) {
+        return 0;
+    }
+
     boolean inRelativeMode() {
         return false;
     }
@@ -41,17 +50,12 @@ class SDLGenericMotionListener_API14 implements View.OnGenericMotionListener {
                     SDLActivity.onNativeMouse(0, actionMasked, motionEvent.getAxisValue(10, i), motionEvent.getAxisValue(9, i), false);
                 }
                 z = true;
-            } else {
-                if ((toolType == 2 || toolType == 4) && (actionMasked == 7 || actionMasked == 9 || actionMasked == 10)) {
-                    float x = motionEvent.getX(i);
-                    float y = motionEvent.getY(i);
-                    float pressure = motionEvent.getPressure(i);
-                    if (pressure > 1.0f) {
-                        pressure = 1.0f;
-                    }
-                    SDLActivity.onNativePen(motionEvent.getPointerId(i), (1 << (toolType == 2 ? 0 : 30)) | (motionEvent.getButtonState() >> 4), actionMasked, x, y, pressure);
-                    z = true;
-                }
+            } else if ((toolType == 2 || toolType == 4) && (actionMasked == 7 || actionMasked == 9 || actionMasked == 10)) {
+                float x = motionEvent.getX(i);
+                float y = motionEvent.getY(i);
+                float pressure = motionEvent.getPressure(i);
+                SDLActivity.onNativePen(motionEvent.getPointerId(i), getPenDeviceType(motionEvent.getDevice()), (motionEvent.getButtonState() >> 4) | (1 << (toolType == 2 ? 0 : 30)), actionMasked, x, y, pressure <= 1.0f ? pressure : 1.0f);
+                z = true;
             }
         }
         return z;

@@ -12,13 +12,13 @@ public class SDLControllerManager {
 
     static native void nativeAddHaptic(int i, String str);
 
-    static native void nativeAddJoystick(int i, String str, String str2, int i2, int i3, int i4, int i5, int i6, int i7, boolean z);
+    static native void nativeAddJoystick(int i, String str, String str2, int i2, int i3, int i4, int i5, int i6, int i7, boolean z, boolean z2);
 
     static native void nativeRemoveHaptic(int i);
 
     static native void nativeRemoveJoystick(int i);
 
-    static native int nativeSetupJNI();
+    static native void nativeSetupJNI();
 
     static native void onNativeHat(int i, int i2, int i3, int i4);
 
@@ -49,6 +49,10 @@ public class SDLControllerManager {
 
     static void pollInputDevices() {
         mJoystickHandler.pollInputDevices();
+    }
+
+    static void joystickSetLED(int i, int i2, int i3, int i4) {
+        mJoystickHandler.setLED(i, i2, i3, i4);
     }
 
     static void pollHapticDevices() {

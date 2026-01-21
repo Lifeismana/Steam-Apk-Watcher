@@ -77,40 +77,40 @@ class SDLInputConnection extends BaseInputConnection {
         if (editable == null) {
             return;
         }
-        String obj = editable.toString();
-        int min = Math.min(obj.length(), this.mCommittedText.length());
-        int i = 0;
-        while (i < min) {
-            int codePointAt = this.mCommittedText.codePointAt(i);
-            if (codePointAt != obj.codePointAt(i)) {
+        String string = editable.toString();
+        int iMin = Math.min(string.length(), this.mCommittedText.length());
+        int iCharCount = 0;
+        while (iCharCount < iMin) {
+            int iCodePointAt = this.mCommittedText.codePointAt(iCharCount);
+            if (iCodePointAt != string.codePointAt(iCharCount)) {
                 break;
             } else {
-                i += Character.charCount(codePointAt);
+                iCharCount += Character.charCount(iCodePointAt);
             }
         }
-        int i2 = i;
-        while (i2 < this.mCommittedText.length()) {
-            int codePointAt2 = this.mCommittedText.codePointAt(i2);
+        int iCharCount2 = iCharCount;
+        while (iCharCount2 < this.mCommittedText.length()) {
+            int iCodePointAt2 = this.mCommittedText.codePointAt(iCharCount2);
             nativeGenerateScancodeForUnichar('\b');
-            i2 += Character.charCount(codePointAt2);
+            iCharCount2 += Character.charCount(iCodePointAt2);
         }
-        if (i < obj.length()) {
-            String charSequence = obj.subSequence(i, obj.length()).toString();
+        if (iCharCount < string.length()) {
+            String string2 = string.subSequence(iCharCount, string.length()).toString();
             if (!SDLActivity.dispatchingKeyEvent()) {
-                int i3 = 0;
-                while (i3 < charSequence.length()) {
-                    int codePointAt3 = charSequence.codePointAt(i3);
-                    if (codePointAt3 == 10 && SDLActivity.onNativeSoftReturnKey()) {
+                int iCharCount3 = 0;
+                while (iCharCount3 < string2.length()) {
+                    int iCodePointAt3 = string2.codePointAt(iCharCount3);
+                    if (iCodePointAt3 == 10 && SDLActivity.onNativeSoftReturnKey()) {
                         return;
                     }
-                    if (codePointAt3 > 0 && codePointAt3 < 128) {
-                        nativeGenerateScancodeForUnichar((char) codePointAt3);
+                    if (iCodePointAt3 > 0 && iCodePointAt3 < 128) {
+                        nativeGenerateScancodeForUnichar((char) iCodePointAt3);
                     }
-                    i3 += Character.charCount(codePointAt3);
+                    iCharCount3 += Character.charCount(iCodePointAt3);
                 }
             }
-            nativeCommitText(charSequence, 0);
+            nativeCommitText(string2, 0);
         }
-        this.mCommittedText = obj;
+        this.mCommittedText = string;
     }
 }

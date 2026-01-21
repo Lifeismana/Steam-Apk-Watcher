@@ -6,6 +6,7 @@ import android.hardware.usb.UsbEndpoint;
 import android.hardware.usb.UsbInterface;
 import android.util.Log;
 import java.util.Arrays;
+import java.util.Locale;
 
 /* loaded from: classes.dex */
 class HIDDeviceUSB implements HIDDevice {
@@ -36,7 +37,7 @@ class HIDDeviceUSB implements HIDDevice {
     }
 
     String getIdentifier() {
-        return String.format("%s/%x/%x/%d", this.mDevice.getDeviceName(), Integer.valueOf(this.mDevice.getVendorId()), Integer.valueOf(this.mDevice.getProductId()), Integer.valueOf(this.mInterfaceIndex));
+        return String.format(Locale.ENGLISH, "%s/%x/%x/%d", this.mDevice.getDeviceName(), Integer.valueOf(this.mDevice.getVendorId()), Integer.valueOf(this.mDevice.getProductId()), Integer.valueOf(this.mInterfaceIndex));
     }
 
     @Override // org.libsdl.app.HIDDevice
@@ -56,13 +57,13 @@ class HIDDeviceUSB implements HIDDevice {
 
     @Override // org.libsdl.app.HIDDevice
     public String getSerialNumber() {
-        String str;
+        String serialNumber;
         try {
-            str = this.mDevice.getSerialNumber();
+            serialNumber = this.mDevice.getSerialNumber();
         } catch (SecurityException unused) {
-            str = null;
+            serialNumber = null;
         }
-        return str == null ? "" : str;
+        return serialNumber == null ? "" : serialNumber;
     }
 
     @Override // org.libsdl.app.HIDDevice
@@ -88,9 +89,9 @@ class HIDDeviceUSB implements HIDDevice {
 
     @Override // org.libsdl.app.HIDDevice
     public boolean open() {
-        UsbDeviceConnection openDevice = this.mManager.getUSBManager().openDevice(this.mDevice);
-        this.mConnection = openDevice;
-        if (openDevice == null) {
+        UsbDeviceConnection usbDeviceConnectionOpenDevice = this.mManager.getUSBManager().openDevice(this.mDevice);
+        this.mConnection = usbDeviceConnectionOpenDevice;
+        if (usbDeviceConnectionOpenDevice == null) {
             Log.w(TAG, "Unable to open USB device " + getDeviceName());
             return false;
         }
@@ -145,18 +146,18 @@ class HIDDeviceUSB implements HIDDevice {
                 z2 = false;
                 i2 = 0;
             }
-            int controlTransfer = usbDeviceConnection.controlTransfer(33, 9, b | 768, this.mInterface, bArr, i2, i, 1000);
-            if (controlTransfer >= 0) {
+            int iControlTransfer = usbDeviceConnection.controlTransfer(33, 9, b | 768, this.mInterface, bArr, i2, i, 1000);
+            if (iControlTransfer >= 0) {
                 return z2 ? i + 1 : i;
             }
-            Log.w(TAG, "writeFeatureReport() returned " + controlTransfer + " on device " + getDeviceName());
+            Log.w(TAG, "writeFeatureReport() returned " + iControlTransfer + " on device " + getDeviceName());
             return -1;
         }
-        int bulkTransfer = usbDeviceConnection.bulkTransfer(this.mOutputEndpoint, bArr, bArr.length, 1000);
-        if (bulkTransfer != bArr.length) {
-            Log.w(TAG, "writeOutputReport() returned " + bulkTransfer + " on device " + getDeviceName());
+        int iBulkTransfer = usbDeviceConnection.bulkTransfer(this.mOutputEndpoint, bArr, bArr.length, 1000);
+        if (iBulkTransfer != bArr.length) {
+            Log.w(TAG, "writeOutputReport() returned " + iBulkTransfer + " on device " + getDeviceName());
         }
-        return bulkTransfer;
+        return iBulkTransfer;
     }
 
     @Override // org.libsdl.app.HIDDevice
@@ -180,16 +181,16 @@ class HIDDeviceUSB implements HIDDevice {
             z2 = false;
         }
         int i3 = i2;
-        int controlTransfer = usbDeviceConnection.controlTransfer(161, 1, ((z ? 3 : 1) << 8) | b, this.mInterface, bArr, i, i3, 1000);
-        if (controlTransfer < 0) {
-            Log.w(TAG, "getFeatureReport() returned " + controlTransfer + " on device " + getDeviceName());
+        int iControlTransfer = usbDeviceConnection.controlTransfer(161, 1, ((z ? 3 : 1) << 8) | b, this.mInterface, bArr, i, i3, 1000);
+        if (iControlTransfer < 0) {
+            Log.w(TAG, "getFeatureReport() returned " + iControlTransfer + " on device " + getDeviceName());
             return false;
         }
         if (z2) {
-            controlTransfer++;
+            iControlTransfer++;
             i3++;
         }
-        this.mManager.HIDDeviceReportResponse(this.mDeviceId, controlTransfer == i3 ? bArr : Arrays.copyOfRange(bArr, 0, controlTransfer));
+        this.mManager.HIDDeviceReportResponse(this.mDeviceId, iControlTransfer == i3 ? bArr : Arrays.copyOfRange(bArr, 0, iControlTransfer));
         return true;
     }
 
@@ -234,11 +235,11 @@ class HIDDeviceUSB implements HIDDevice {
             byte[] bArr = new byte[maxPacketSize];
             while (HIDDeviceUSB.this.mRunning) {
                 try {
-                    int bulkTransfer = HIDDeviceUSB.this.mConnection.bulkTransfer(HIDDeviceUSB.this.mInputEndpoint, bArr, maxPacketSize, 1000);
-                    if (bulkTransfer > 0) {
-                        byte[] copyOfRange = bulkTransfer == maxPacketSize ? bArr : Arrays.copyOfRange(bArr, 0, bulkTransfer);
+                    int iBulkTransfer = HIDDeviceUSB.this.mConnection.bulkTransfer(HIDDeviceUSB.this.mInputEndpoint, bArr, maxPacketSize, 1000);
+                    if (iBulkTransfer > 0) {
+                        byte[] bArrCopyOfRange = iBulkTransfer == maxPacketSize ? bArr : Arrays.copyOfRange(bArr, 0, iBulkTransfer);
                         if (!HIDDeviceUSB.this.mFrozen) {
-                            HIDDeviceUSB.this.mManager.HIDDeviceInputReport(HIDDeviceUSB.this.mDeviceId, copyOfRange);
+                            HIDDeviceUSB.this.mManager.HIDDeviceInputReport(HIDDeviceUSB.this.mDeviceId, bArrCopyOfRange);
                         }
                     }
                 } catch (Exception e) {

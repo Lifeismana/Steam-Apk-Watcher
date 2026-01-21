@@ -79,7 +79,7 @@ public class ReLinkerInstance {
         } else {
             new Thread(new Runnable() { // from class: com.getkeepsafe.relinker.ReLinkerInstance.1
                 @Override // java.lang.Runnable
-                public void run() {
+                public void run() throws Throwable {
                     try {
                         ReLinkerInstance.this.loadLibraryInternal(context, str, str2);
                         loadListener.success();
@@ -94,7 +94,7 @@ public class ReLinkerInstance {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void loadLibraryInternal(Context context, String str, String str2) {
+    public void loadLibraryInternal(Context context, String str, String str2) throws Throwable {
         ReLinkerInstance reLinkerInstance;
         Context context2;
         ElfParser elfParser;
@@ -127,9 +127,9 @@ public class ReLinkerInstance {
                     try {
                         elfParser = new ElfParser(workaroundLibFile);
                         try {
-                            List<String> parseNeededDependencies = elfParser.parseNeededDependencies();
+                            List<String> neededDependencies = elfParser.parseNeededDependencies();
                             elfParser.close();
-                            Iterator<String> it = parseNeededDependencies.iterator();
+                            Iterator<String> it = neededDependencies.iterator();
                             while (it.hasNext()) {
                                 loadLibrary(context2, reLinkerInstance.libraryLoader.unmapLibraryName(it.next()));
                             }
@@ -157,27 +157,27 @@ public class ReLinkerInstance {
     }
 
     protected File getWorkaroundLibFile(Context context, String str, String str2) {
-        String mapLibraryName = this.libraryLoader.mapLibraryName(str);
+        String strMapLibraryName = this.libraryLoader.mapLibraryName(str);
         if (TextUtils.isEmpty(str2)) {
-            return new File(getWorkaroundLibDir(context), mapLibraryName);
+            return new File(getWorkaroundLibDir(context), strMapLibraryName);
         }
-        return new File(getWorkaroundLibDir(context), mapLibraryName + "." + str2);
+        return new File(getWorkaroundLibDir(context), strMapLibraryName + "." + str2);
     }
 
     protected void cleanupOldLibFiles(Context context, String str, String str2) {
         File workaroundLibDir = getWorkaroundLibDir(context);
         File workaroundLibFile = getWorkaroundLibFile(context, str, str2);
-        final String mapLibraryName = this.libraryLoader.mapLibraryName(str);
-        File[] listFiles = workaroundLibDir.listFiles(new FilenameFilter() { // from class: com.getkeepsafe.relinker.ReLinkerInstance.2
+        final String strMapLibraryName = this.libraryLoader.mapLibraryName(str);
+        File[] fileArrListFiles = workaroundLibDir.listFiles(new FilenameFilter() { // from class: com.getkeepsafe.relinker.ReLinkerInstance.2
             @Override // java.io.FilenameFilter
             public boolean accept(File file, String str3) {
-                return str3.startsWith(mapLibraryName);
+                return str3.startsWith(strMapLibraryName);
             }
         });
-        if (listFiles == null) {
+        if (fileArrListFiles == null) {
             return;
         }
-        for (File file : listFiles) {
+        for (File file : fileArrListFiles) {
             if (this.force || !file.getAbsolutePath().equals(workaroundLibFile.getAbsolutePath())) {
                 file.delete();
             }
