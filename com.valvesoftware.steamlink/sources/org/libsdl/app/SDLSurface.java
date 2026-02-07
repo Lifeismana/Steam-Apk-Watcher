@@ -215,11 +215,16 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
                         pressure = 1.0f;
                     }
                     int buttonState2 = (1 << (toolType == 2 ? 0 : 30)) | (motionEvent.getButtonState() >> 4);
-                    i = actionIndex;
+                    if ((motionEvent.getButtonState() & 4) != 0) {
+                        buttonState2 |= 8;
+                    }
+                    int i5 = actionIndex;
+                    int i6 = buttonState2;
+                    i = i5;
                     i2 = actionMasked;
                     i3 = 5;
                     i4 = 6;
-                    SDLActivity.onNativePen(pointerId, SDLActivity.getMotionListener().getPenDeviceType(motionEvent.getDevice()), buttonState2, i2, x, y, pressure);
+                    SDLActivity.onNativePen(pointerId, SDLActivity.getMotionListener().getPenDeviceType(motionEvent.getDevice()), i6, i2, x, y, pressure);
                     if (i2 == i4 || i2 == i3 || (actionIndex = i + 1) >= pointerCount) {
                         break;
                     }

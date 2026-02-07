@@ -25,9 +25,11 @@ import org.libsdl.app.SDLActivity;
 /* loaded from: classes.dex */
 public class SteamLink extends SDLActivity {
     private static final String ARGS_KEY = "args";
+    private static final String FORCE_LOW_LATENCY_KEY = "forceLowLatencyVideo";
     private static final String TAG = "SteamLink";
     VirtualHere mVirtualHere;
     WifiManager.WifiLock m_WiFiLock;
+    boolean m_bForceLowLatencyVideo;
     boolean m_bLowLatencyAudio;
     float m_flOverlayScale;
     View m_marginBottom;
@@ -71,6 +73,7 @@ public class SteamLink extends SDLActivity {
             this.m_WiFiLock = ((WifiManager) getApplication().getSystemService("wifi")).createWifiLock(4, "Steam Link");
         }
         this.mVirtualHere = VirtualHere.acquire(this);
+        this.m_bForceLowLatencyVideo = true;
     }
 
     @Override // org.libsdl.app.SDLActivity, android.app.Activity
@@ -89,6 +92,10 @@ public class SteamLink extends SDLActivity {
 
     @Override // org.libsdl.app.SDLActivity, android.app.Activity
     protected void onStart() {
+        Bundle extras = getIntent().getExtras();
+        if (extras != null && extras.containsKey(FORCE_LOW_LATENCY_KEY)) {
+            this.m_bForceLowLatencyVideo = extras.getBoolean(FORCE_LOW_LATENCY_KEY);
+        }
         super.onStart();
     }
 
@@ -446,5 +453,12 @@ public class SteamLink extends SDLActivity {
         setLowLatencyAudio(false);
         disableWiFiLock();
         SteamShellActivity.onStreamingResult(i);
+    }
+
+    public String findBestDecoder(String str) {
+        if (this.m_bForceLowLatencyVideo) {
+            return SteamLinkUtils.findBestDecoder(str);
+        }
+        return null;
     }
 }

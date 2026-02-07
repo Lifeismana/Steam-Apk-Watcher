@@ -54,7 +54,12 @@ class SDLGenericMotionListener_API14 implements View.OnGenericMotionListener {
                 float x = motionEvent.getX(i);
                 float y = motionEvent.getY(i);
                 float pressure = motionEvent.getPressure(i);
-                SDLActivity.onNativePen(motionEvent.getPointerId(i), getPenDeviceType(motionEvent.getDevice()), (motionEvent.getButtonState() >> 4) | (1 << (toolType == 2 ? 0 : 30)), actionMasked, x, y, pressure <= 1.0f ? pressure : 1.0f);
+                float f = pressure <= 1.0f ? pressure : 1.0f;
+                int buttonState = (motionEvent.getButtonState() >> 4) | (1 << (toolType == 2 ? 0 : 30));
+                if ((motionEvent.getButtonState() & 4) != 0) {
+                    buttonState |= 8;
+                }
+                SDLActivity.onNativePen(motionEvent.getPointerId(i), getPenDeviceType(motionEvent.getDevice()), buttonState, actionMasked, x, y, f);
                 z = true;
             }
         }
