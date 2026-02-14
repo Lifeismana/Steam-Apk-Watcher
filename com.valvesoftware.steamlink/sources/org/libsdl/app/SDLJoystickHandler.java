@@ -69,7 +69,7 @@ class SDLJoystickHandler {
     SDLJoystickHandler() {
     }
 
-    void pollInputDevices() {
+    synchronized void pollInputDevices() {
         boolean z;
         boolean z2;
         int[] deviceIds = InputDevice.getDeviceIds();
@@ -163,7 +163,7 @@ class SDLJoystickHandler {
         }
     }
 
-    protected SDLJoystick getJoystick(int i) {
+    protected synchronized SDLJoystick getJoystick(int i) {
         Iterator<SDLJoystick> it = this.mJoysticks.iterator();
         while (it.hasNext()) {
             SDLJoystick next = it.next();
