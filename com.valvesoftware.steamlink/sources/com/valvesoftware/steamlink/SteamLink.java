@@ -23,11 +23,13 @@ import org.libsdl.app.SDLActivity;
 /* JADX INFO: loaded from: classes.dex */
 public class SteamLink extends SDLActivity {
     private static final String ARGS_KEY = "args";
-    private static final String FORCE_LOW_LATENCY_KEY = "forceLowLatencyVideo";
+    private static final int LOW_LATENCY_MODE_DISABLED = 2;
+    private static final int LOW_LATENCY_MODE_FIND_BEST_CODEC = 1;
+    private static final String LOW_LATENCY_MODE_KEY = "lowLatencyVideoMode";
+    private static final int LOW_LATENCY_MODE_WITH_DEFAULT_CODEC = 0;
     private static final String TAG = "SteamLink";
     VirtualHere mVirtualHere;
     WifiManager.WifiLock m_WiFiLock;
-    boolean m_bForceLowLatencyVideo;
     boolean m_bLowLatencyAudio;
     float m_flOverlayScale;
     View m_marginBottom;
@@ -36,6 +38,7 @@ public class SteamLink extends SDLActivity {
     View m_marginTop;
     int m_nDisplayHeight;
     int m_nDisplayWidth;
+    int m_nLowLatencyVideoMode;
     int m_nOverlayHeight;
     int m_nOverlayWidth;
     SurfaceView m_overlaySurface;
@@ -67,11 +70,14 @@ public class SteamLink extends SDLActivity {
         if (mLayout != null && useVideoSurface()) {
             createVideoSurface();
         }
-        if (Build.VERSION.SDK_INT >= 29 && getApplication().checkSelfPermission("android.permission.WAKE_LOCK") == 0) {
-            this.m_WiFiLock = ((WifiManager) getApplication().getSystemService("wifi")).createWifiLock(4, "Steam Link");
+        this.m_nLowLatencyVideoMode = 0;
+        if (Build.VERSION.SDK_INT >= 29) {
+            this.m_nLowLatencyVideoMode = 1;
+            if (getApplication().checkSelfPermission("android.permission.WAKE_LOCK") == 0) {
+                this.m_WiFiLock = ((WifiManager) getApplication().getSystemService("wifi")).createWifiLock(4, "Steam Link");
+            }
         }
         this.mVirtualHere = VirtualHere.acquire(this);
-        this.m_bForceLowLatencyVideo = true;
     }
 
     @Override // org.libsdl.app.SDLActivity, android.app.Activity
@@ -91,8 +97,8 @@ public class SteamLink extends SDLActivity {
     @Override // org.libsdl.app.SDLActivity, android.app.Activity
     protected void onStart() {
         Bundle extras = getIntent().getExtras();
-        if (extras != null && extras.containsKey(FORCE_LOW_LATENCY_KEY)) {
-            this.m_bForceLowLatencyVideo = extras.getBoolean(FORCE_LOW_LATENCY_KEY);
+        if (extras != null && extras.containsKey(LOW_LATENCY_MODE_KEY)) {
+            this.m_nLowLatencyVideoMode = extras.getInt(LOW_LATENCY_MODE_KEY);
         }
         super.onStart();
     }
@@ -454,9 +460,18 @@ public class SteamLink extends SDLActivity {
     }
 
     public String findBestDecoder(String str) {
-        if (this.m_bForceLowLatencyVideo) {
-            return SteamLinkUtils.findBestDecoder(str);
+        if (this.m_nLowLatencyVideoMode == 1) {
+            String strFindBestDecoder = SteamLinkUtils.findBestDecoder(str);
+            if (strFindBestDecoder == null) {
+                Log.v(TAG, "Could not find good codec for " + str + ", falling back to system default");
+            }
+            return strFindBestDecoder;
         }
+        Log.v(TAG, "Using system default codec");
         return null;
+    }
+
+    public boolean shouldEnableLowLatencyOptions() {
+        return this.m_nLowLatencyVideoMode != 2;
     }
 }

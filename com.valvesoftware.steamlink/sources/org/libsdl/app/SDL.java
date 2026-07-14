@@ -5,23 +5,67 @@ import android.content.Context;
 
 /* JADX INFO: loaded from: classes.dex */
 public class SDL {
-    protected static Activity mContext;
+    public static final int SDL_INIT_AUDIO = 16;
+    public static final int SDL_INIT_CAMERA = 65536;
+    private static final int SDL_INIT_CONTROLLER = 12800;
+    public static final int SDL_INIT_EVERYTHING = 111152;
+    public static final int SDL_INIT_GAMEPAD = 8192;
+    public static final int SDL_INIT_HAPTIC = 4096;
+    public static final int SDL_INIT_JOYSTICK = 512;
+    public static final int SDL_INIT_SENSOR = 32768;
+    public static final int SDL_INIT_VIDEO = 32;
+    private static int mCompiledSubsystems = 111152;
+    protected static Activity mContext = null;
+    private static int mInitializedSubsystems = 111152;
 
     public static void setupJNI() {
+        setupJNI(SDL_INIT_EVERYTHING);
+    }
+
+    public static void setupJNI(int i) {
         SDLActivity.nativeSetupJNI();
-        SDLAudioManager.nativeSetupJNI();
-        SDLControllerManager.nativeSetupJNI();
+        int iNativeGetCompiledSubsystems = SDLActivity.nativeGetCompiledSubsystems();
+        mCompiledSubsystems = iNativeGetCompiledSubsystems;
+        mInitializedSubsystems = i & iNativeGetCompiledSubsystems;
+        if (isSubsystemCompiled(16)) {
+            SDLAudioManager.nativeSetupJNI();
+        }
+        if (isSubsystemCompiled(SDL_INIT_CONTROLLER)) {
+            SDLControllerManager.nativeSetupJNI();
+        }
     }
 
     public static void initialize() {
+        initialize(mInitializedSubsystems);
+    }
+
+    public static void initialize(int i) {
         setContext(null);
         SDLActivity.initialize();
-        SDLAudioManager.initialize();
-        SDLControllerManager.initialize();
+        if (isSubsystemCompiled(16)) {
+            SDLAudioManager.initialize();
+        }
+        if (isSubsystemCompiled(SDL_INIT_CONTROLLER)) {
+            SDLControllerManager.initialize();
+        }
+    }
+
+    static boolean isSubsystemInitialized(int i) {
+        return (i & mInitializedSubsystems) != 0;
+    }
+
+    static boolean isSubsystemCompiled(int i) {
+        return (i & mCompiledSubsystems) != 0;
+    }
+
+    static boolean isControllerManagerReady() {
+        return isSubsystemInitialized(SDL_INIT_CONTROLLER);
     }
 
     public static void setContext(Activity activity) {
-        SDLAudioManager.setContext(activity);
+        if (isSubsystemCompiled(16)) {
+            SDLAudioManager.setContext(activity);
+        }
         mContext = activity;
     }
 

@@ -2,6 +2,7 @@ package org.libsdl.app;
 
 import android.os.Build;
 import android.view.MotionEvent;
+import android.view.View;
 
 /* JADX INFO: compiled from: SDLControllerManager.java */
 /* JADX INFO: loaded from: classes.dex */
@@ -29,10 +30,13 @@ class SDLGenericMotionListener_API26 extends SDLGenericMotionListener_API24 {
         if (SDLActivity.isDeXMode() && Build.VERSION.SDK_INT < 27) {
             return false;
         }
-        if (z) {
-            SDLActivity.getContentView().requestPointerCapture();
-        } else {
-            SDLActivity.getContentView().releasePointerCapture();
+        View contentView = SDLActivity.getContentView();
+        if (contentView != null) {
+            if (z) {
+                contentView.requestPointerCapture();
+            } else {
+                contentView.releasePointerCapture();
+            }
         }
         this.mRelativeModeEnabled = z;
         return true;
@@ -40,8 +44,9 @@ class SDLGenericMotionListener_API26 extends SDLGenericMotionListener_API24 {
 
     @Override // org.libsdl.app.SDLGenericMotionListener_API14
     void reclaimRelativeMouseModeIfNeeded() {
-        if (Build.VERSION.SDK_INT >= 26 && this.mRelativeModeEnabled && !SDLActivity.isDeXMode()) {
-            SDLActivity.getContentView().requestPointerCapture();
+        View contentView;
+        if (Build.VERSION.SDK_INT >= 26 && this.mRelativeModeEnabled && !SDLActivity.isDeXMode() && (contentView = SDLActivity.getContentView()) != null) {
+            contentView.requestPointerCapture();
         }
     }
 

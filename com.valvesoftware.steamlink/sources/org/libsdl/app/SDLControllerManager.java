@@ -36,7 +36,7 @@ public class SDLControllerManager {
         if (mJoystickHandler == null) {
             mJoystickHandler = new SDLJoystickHandler();
         }
-        if (mHapticHandler == null) {
+        if (mHapticHandler == null && SDL.isSubsystemCompiled(SDL.SDL_INIT_HAPTIC)) {
             if (Build.VERSION.SDK_INT >= 31) {
                 mHapticHandler = new SDLHapticHandler_API31();
             } else if (Build.VERSION.SDK_INT >= 26) {
@@ -62,7 +62,8 @@ public class SDLControllerManager {
     }
 
     public static boolean handleJoystickMotionEvent(MotionEvent motionEvent) {
-        return mJoystickHandler.handleMotionEvent(motionEvent);
+        SDLJoystickHandler sDLJoystickHandler = mJoystickHandler;
+        return sDLJoystickHandler != null && sDLJoystickHandler.handleMotionEvent(motionEvent);
     }
 
     static void detectDevices() {
@@ -78,19 +79,31 @@ public class SDLControllerManager {
     }
 
     static void detectHapticDevices() {
-        mHapticHandler.detectHapticDevices();
+        SDLHapticHandler sDLHapticHandler = mHapticHandler;
+        if (sDLHapticHandler != null) {
+            sDLHapticHandler.detectHapticDevices();
+        }
     }
 
     static void hapticRun(int i, float f, int i2) {
-        mHapticHandler.run(i, f, i2);
+        SDLHapticHandler sDLHapticHandler = mHapticHandler;
+        if (sDLHapticHandler != null) {
+            sDLHapticHandler.run(i, f, i2);
+        }
     }
 
     static void hapticRumble(int i, float f, float f2, int i2) {
-        mHapticHandler.rumble(i, f, f2, i2);
+        SDLHapticHandler sDLHapticHandler = mHapticHandler;
+        if (sDLHapticHandler != null) {
+            sDLHapticHandler.rumble(i, f, f2, i2);
+        }
     }
 
     static void hapticStop(int i) {
-        mHapticHandler.stop(i);
+        SDLHapticHandler sDLHapticHandler = mHapticHandler;
+        if (sDLHapticHandler != null) {
+            sDLHapticHandler.stop(i);
+        }
     }
 
     public static boolean isDeviceSDLJoystick(InputDevice inputDevice) {

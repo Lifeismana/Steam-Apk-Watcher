@@ -30,6 +30,8 @@ import android.view.Surface;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.WindowInsets;
+import android.view.WindowInsetsController;
 import android.view.WindowManager;
 import android.view.inputmethod.InputConnection;
 import android.view.inputmethod.InputMethodManager;
@@ -127,6 +129,14 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     private final Runnable rehideSystemUi = new Runnable() { // from class: org.libsdl.app.SDLActivity.7
         @Override // java.lang.Runnable
         public void run() {
+            if (Build.VERSION.SDK_INT >= SDLActivity.SDL_SYSTEM_CURSOR_ROW_RESIZE) {
+                WindowInsetsController insetsController = SDLActivity.this.getWindow().getInsetsController();
+                if (insetsController != null) {
+                    insetsController.hide(WindowInsets.Type.systemBars());
+                    return;
+                }
+                return;
+            }
             SDLActivity.this.getWindow().getDecorView().setSystemUiVisibility(5894);
         }
     };
@@ -147,6 +157,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
 
     public static native void nativeFocusChanged(boolean z);
 
+    public static native int nativeGetCompiledSubsystems();
+
     public static native String nativeGetHint(String str);
 
     public static native boolean nativeGetHintBoolean(String str, boolean z);
@@ -154,6 +166,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     public static native String nativeGetVersion();
 
     public static native void nativeInitMainThread();
+
+    public static native boolean nativeIsHIDAPIEnabled();
 
     public static native void nativeLowMemory();
 
@@ -201,9 +215,9 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
 
     public static native void onNativePinchEnd();
 
-    public static native void onNativePinchStart();
+    public static native void onNativePinchStart(float f, float f2, float f3, float f4);
 
-    public static native void onNativePinchUpdate(float f);
+    public static native void onNativePinchUpdate(float f, float f2, float f3, float f4, float f5);
 
     public static native void onNativeResize();
 
@@ -225,6 +239,10 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
 
     public static boolean shouldMinimizeOnFocusLoss() {
         return false;
+    }
+
+    protected int getInitSubsystems() {
+        return SDL.SDL_INIT_EVERYTHING;
     }
 
     protected boolean onUnhandledMessage(int i, Object obj) {
@@ -315,6 +333,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     @Override // android.app.Activity
     protected void onCreate(Bundle bundle) {
         String message;
+        Intent intent;
         String path;
         Log.v(TAG, "Manufacturer: " + Build.MANUFACTURER);
         Log.v(TAG, "Device: " + Build.DEVICE);
@@ -386,21 +405,29 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
                 return;
             }
         }
-        SDL.setupJNI();
+        SDL.setupJNI(getInitSubsystems());
         SDL.initialize();
         mSingleton = this;
         SDL.setContext(this);
-        SDLControllerManager.initializeDeviceListener();
-        mClipboardHandler = new SDLClipboardHandler();
-        mHIDDeviceManager = HIDDeviceManager.acquire(this);
-        mSurface = createSDLSurface(this);
-        RelativeLayout relativeLayout = new RelativeLayout(this);
-        mLayout = relativeLayout;
-        relativeLayout.addView(mSurface);
-        nativeSetNaturalOrientation(getNaturalOrientation());
-        int currentRotation = getCurrentRotation();
-        mCurrentRotation = currentRotation;
-        onNativeRotationChanged(currentRotation);
+        if (SDL.isControllerManagerReady()) {
+            SDLControllerManager.initializeDeviceListener();
+        }
+        if (SDL.isSubsystemCompiled(32)) {
+            mClipboardHandler = new SDLClipboardHandler();
+        }
+        if (nativeIsHIDAPIEnabled()) {
+            mHIDDeviceManager = HIDDeviceManager.acquire(this);
+        }
+        if (SDL.isSubsystemInitialized(32)) {
+            mSurface = createSDLSurface(this);
+            RelativeLayout relativeLayout = new RelativeLayout(this);
+            mLayout = relativeLayout;
+            relativeLayout.addView(mSurface);
+            nativeSetNaturalOrientation(getNaturalOrientation());
+            int currentRotation = getCurrentRotation();
+            mCurrentRotation = currentRotation;
+            onNativeRotationChanged(currentRotation);
+        }
         try {
             if (Build.VERSION.SDK_INT < SDL_SYSTEM_CURSOR_ALIAS) {
                 mCurrentLocale = getContext().getResources().getConfiguration().locale;
@@ -410,16 +437,18 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         } catch (Exception unused) {
         }
         int i = getContext().getResources().getConfiguration().uiMode & 48;
-        if (i == SDL_SYSTEM_CURSOR_SE_RESIZE) {
+        if (i == 16) {
             onNativeDarkModeChanged(false);
-        } else if (i == SDL_SYSTEM_CURSOR_ZOOM_IN) {
+        } else if (i == 32) {
             onNativeDarkModeChanged(true);
         }
-        setContentView(mLayout);
-        setWindowStyle(false);
+        ViewGroup viewGroup = mLayout;
+        if (viewGroup != null) {
+            setContentView(viewGroup);
+            setWindowStyle(false);
+        }
         getWindow().getDecorView().setOnSystemUiVisibilityChangeListener(this);
-        Intent intent = getIntent();
-        if (intent == null || intent.getData() == null || (path = intent.getData().getPath()) == null) {
+        if (!SDL.isSubsystemInitialized(32) || (intent = getIntent()) == null || intent.getData() == null || (path = intent.getData().getPath()) == null) {
             return;
         }
         Log.v(TAG, "Got filename: " + path);
@@ -567,10 +596,10 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             onNativeLocaleChanged();
         }
         int i = configuration.uiMode & 48;
-        if (i == SDL_SYSTEM_CURSOR_SE_RESIZE) {
+        if (i == 16) {
             onNativeDarkModeChanged(false);
         } else {
-            if (i != SDL_SYSTEM_CURSOR_ZOOM_IN) {
+            if (i != 32) {
                 return;
             }
             onNativeDarkModeChanged(true);
@@ -677,6 +706,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     }
 
     public static void handleNativeState() {
+        boolean z;
         NativeState nativeState = mNextNativeState;
         if (nativeState == mCurrentNativeState) {
             return;
@@ -696,16 +726,28 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             mCurrentNativeState = mNextNativeState;
             return;
         }
-        if (mNextNativeState == NativeState.RESUMED && mSurface.mIsSurfaceReady) {
-            if ((mHasFocus || mHasMultiWindow) && mIsResumedCalled) {
+        if (mNextNativeState == NativeState.RESUMED) {
+            SDLSurface sDLSurface2 = mSurface;
+            if (sDLSurface2 == null) {
+                z = mIsResumedCalled;
+            } else {
+                z = sDLSurface2.mIsSurfaceReady && (mHasFocus || mHasMultiWindow) && mIsResumedCalled;
+            }
+            if (z) {
                 if (mSDLThread == null) {
                     mSDLThread = new Thread(new SDLMain(), "SDLThread");
-                    mSurface.enableSensor(1, true);
+                    SDLSurface sDLSurface3 = mSurface;
+                    if (sDLSurface3 != null) {
+                        sDLSurface3.enableSensor(1, true);
+                    }
                     mSDLThread.start();
                 } else {
                     nativeResume();
                 }
-                mSurface.handleResume();
+                SDLSurface sDLSurface4 = mSurface;
+                if (sDLSurface4 != null) {
+                    sDLSurface4.handleResume();
+                }
                 mCurrentNativeState = mNextNativeState;
             }
         }
@@ -733,61 +775,69 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
                     return;
                 }
             }
-            if (i == 2) {
-                if (!(context instanceof Activity)) {
-                    Log.e(SDLActivity.TAG, "error handling message, getContext() returned no Activity");
+            if (i != 2) {
+                if (i == 3) {
+                    if (SDLActivity.mTextEdit != null) {
+                        SDLActivity.mTextEdit.setLayoutParams(new RelativeLayout.LayoutParams(0, 0));
+                        ((InputMethodManager) context.getSystemService("input_method")).hideSoftInputFromWindow(SDLActivity.mTextEdit.getWindowToken(), 0);
+                        SDLActivity.onNativeScreenKeyboardHidden();
+                        SDLActivity.mSurface.requestFocus();
+                        return;
+                    }
                     return;
                 }
-                Window window2 = context.getWindow();
-                if (window2 != null) {
+                if (i == 5) {
+                    if (!(context instanceof Activity) || (window = context.getWindow()) == null) {
+                        return;
+                    }
                     if ((message.obj instanceof Integer) && ((Integer) message.obj).intValue() != 0) {
+                        window.addFlags(128);
+                        return;
+                    } else {
+                        window.clearFlags(128);
+                        return;
+                    }
+                }
+                if (!(context instanceof SDLActivity) || ((SDLActivity) context).onUnhandledMessage(message.arg1, message.obj)) {
+                    return;
+                }
+                Log.e(SDLActivity.TAG, "error handling message, command is " + message.arg1);
+                return;
+            }
+            if (!(context instanceof Activity)) {
+                Log.e(SDLActivity.TAG, "error handling message, getContext() returned no Activity");
+                return;
+            }
+            Window window2 = context.getWindow();
+            if (window2 != null) {
+                if ((message.obj instanceof Integer) && ((Integer) message.obj).intValue() != 0) {
+                    if (Build.VERSION.SDK_INT >= SDLActivity.SDL_SYSTEM_CURSOR_ROW_RESIZE) {
+                        window2.setDecorFitsSystemWindows(false);
+                        WindowInsetsController insetsController = window2.getInsetsController();
+                        if (insetsController != null) {
+                            insetsController.hide(WindowInsets.Type.systemBars());
+                            insetsController.setSystemBarsBehavior(2);
+                        }
+                    } else {
                         window2.getDecorView().setSystemUiVisibility(5894);
                         window2.addFlags(1024);
                         window2.clearFlags(2048);
-                        SDLActivity.mFullscreenModeActive = true;
-                    } else {
-                        window2.getDecorView().setSystemUiVisibility(256);
-                        window2.addFlags(2048);
-                        window2.clearFlags(1024);
-                        SDLActivity.mFullscreenModeActive = false;
                     }
-                    if (Build.VERSION.SDK_INT >= SDLActivity.SDL_SYSTEM_CURSOR_ROW_RESIZE) {
-                        window2.getAttributes().layoutInDisplayCutoutMode = 3;
-                    }
-                    if (Build.VERSION.SDK_INT < SDLActivity.SDL_SYSTEM_CURSOR_ROW_RESIZE || Build.VERSION.SDK_INT >= 35) {
-                        return;
-                    }
-                    SDLActivity.onNativeInsetsChanged(0, 0, 0, 0);
-                    return;
-                }
-                return;
-            }
-            if (i == 3) {
-                if (SDLActivity.mTextEdit != null) {
-                    SDLActivity.mTextEdit.setLayoutParams(new RelativeLayout.LayoutParams(0, 0));
-                    ((InputMethodManager) context.getSystemService("input_method")).hideSoftInputFromWindow(SDLActivity.mTextEdit.getWindowToken(), 0);
-                    SDLActivity.onNativeScreenKeyboardHidden();
-                    SDLActivity.mSurface.requestFocus();
-                    return;
-                }
-                return;
-            }
-            if (i == 5) {
-                if (!(context instanceof Activity) || (window = context.getWindow()) == null) {
-                    return;
-                }
-                if ((message.obj instanceof Integer) && ((Integer) message.obj).intValue() != 0) {
-                    window.addFlags(128);
-                    return;
+                    SDLActivity.mFullscreenModeActive = true;
                 } else {
-                    window.clearFlags(128);
+                    window2.getDecorView().setSystemUiVisibility(256);
+                    window2.addFlags(2048);
+                    window2.clearFlags(1024);
+                    SDLActivity.mFullscreenModeActive = false;
+                }
+                if (Build.VERSION.SDK_INT >= SDLActivity.SDL_SYSTEM_CURSOR_ROW_RESIZE) {
+                    window2.getAttributes().layoutInDisplayCutoutMode = 3;
+                }
+                if (Build.VERSION.SDK_INT < SDLActivity.SDL_SYSTEM_CURSOR_ROW_RESIZE || Build.VERSION.SDK_INT >= 35) {
                     return;
                 }
+                SDLActivity.onNativeInsetsChanged(0, 0, 0, 0);
             }
-            if (!(context instanceof SDLActivity) || ((SDLActivity) context).onUnhandledMessage(message.arg1, message.obj)) {
-                return;
-            }
-            Log.e(SDLActivity.TAG, "error handling message, command is " + message.arg1);
         }
     }
 
@@ -802,7 +852,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
                 Display defaultDisplay = ((WindowManager) getSystemService("window")).getDefaultDisplay();
                 DisplayMetrics displayMetrics = new DisplayMetrics();
                 defaultDisplay.getRealMetrics(displayMetrics);
-                if (displayMetrics.widthPixels == mSurface.getWidth() && displayMetrics.heightPixels == mSurface.getHeight()) {
+                if (mSurface != null && displayMetrics.widthPixels == mSurface.getWidth() && displayMetrics.heightPixels == mSurface.getHeight()) {
                     z = true;
                 }
                 if (((Integer) obj).intValue() == 1) {
@@ -936,6 +986,19 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         return (Build.MANUFACTURER.equals("Oculus") && Build.MODEL.startsWith("Quest")) || Build.MANUFACTURER.equals("Pico");
     }
 
+    static String getDeviceFormFactor() {
+        if (isAndroidTV()) {
+            return "tv";
+        }
+        if (isVRHeadset()) {
+            return "headset";
+        }
+        if (isTablet()) {
+            return "tablet";
+        }
+        return "phone";
+    }
+
     public static double getDiagonal() {
         DisplayMetrics displayMetrics = new DisplayMetrics();
         Activity context = getContext();
@@ -1027,6 +1090,9 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
 
         @Override // java.lang.Runnable
         public void run() {
+            if (SDLActivity.mLayout == null) {
+                return;
+            }
             RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(this.f1w, this.f0h + HEIGHT_PADDING);
             layoutParams.leftMargin = this.f2x;
             layoutParams.topMargin = this.f3y;
@@ -1048,6 +1114,9 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     }
 
     public static boolean showTextInput(int i, int i2, int i3, int i4, int i5) {
+        if (mLayout == null) {
+            return false;
+        }
         return mSingleton.commandHandler.post(new ShowTextInputTask(i, i2, i3, i4, i5));
     }
 
@@ -1066,7 +1135,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         if (source == 0 && device != null) {
             source = device.getSources();
         }
-        if (SDLControllerManager.isDeviceSDLJoystick(device)) {
+        if (SDL.isControllerManagerReady() && SDLControllerManager.isDeviceSDLJoystick(device)) {
             if (keyEvent.getAction() == 0) {
                 if (SDLControllerManager.onNativePadDown(deviceId, i, keyEvent.getScanCode())) {
                     return true;
@@ -1314,7 +1383,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
                 break;
             case 5:
             case SDL_SYSTEM_CURSOR_NW_RESIZE /* 12 */:
-            case SDL_SYSTEM_CURSOR_SE_RESIZE /* 16 */:
+            case 16:
                 i2 = 1017;
                 break;
             case SDL_SYSTEM_CURSOR_NESW_RESIZE /* 6 */:
@@ -1368,7 +1437,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             case SDL_SYSTEM_CURSOR_ALL_SCROLL /* 31 */:
                 i2 = 1013;
                 break;
-            case SDL_SYSTEM_CURSOR_ZOOM_IN /* 32 */:
+            case 32:
                 i2 = 1018;
                 break;
             case SDL_SYSTEM_CURSOR_ZOOM_OUT /* 33 */:
@@ -1481,9 +1550,12 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         }
     }
 
-    /* JADX WARN: Removed duplicated region for block: B:43:0x0094  */
-    /* JADX WARN: Removed duplicated region for block: B:49:0x00c5  */
-    /* JADX WARN: Removed duplicated region for block: B:54:0x00d0  */
+    /* JADX WARN: Removed duplicated region for block: B:43:0x0099  */
+    /* JADX WARN: Removed duplicated region for block: B:49:0x00ca  */
+    /* JADX WARN: Removed duplicated region for block: B:54:0x00d5  */
+    /* JADX WARN: Removed duplicated region for block: B:65:0x0106  */
+    /* JADX WARN: Removed duplicated region for block: B:66:0x010c  */
+    /* JADX WARN: Removed duplicated region for block: B:69:0x0113  */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1492,6 +1564,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         String str2;
         String str3;
         boolean z2;
+        String strSubstring;
         if (mSingleton == null) {
             return false;
         }
@@ -1549,6 +1622,13 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
                     if (uri != null) {
                         intent.putExtra("android.provider.extra.INITIAL_URI", uri);
                     }
+                    if (i == 1 && str != null && !str.isEmpty() && !str.endsWith("/") && !str.endsWith("\\")) {
+                        int iMax = Math.max(str.lastIndexOf(47), str.lastIndexOf(92));
+                        strSubstring = iMax < 0 ? str.substring(iMax + 1) : str;
+                        if (!strSubstring.isEmpty()) {
+                            intent.putExtra("android.intent.extra.TITLE", strSubstring);
+                        }
+                    }
                     mSingleton.startActivityForResult(intent, i2);
                     SDLFileDialogState sDLFileDialogState = new SDLFileDialogState();
                     mFileDialogState = sDLFileDialogState;
@@ -1580,6 +1660,13 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         if (i == 2) {
         }
         if (uri != null) {
+        }
+        if (i == 1) {
+            int iMax2 = Math.max(str.lastIndexOf(47), str.lastIndexOf(92));
+            if (iMax2 < 0) {
+            }
+            if (!strSubstring.isEmpty()) {
+            }
         }
     }
 

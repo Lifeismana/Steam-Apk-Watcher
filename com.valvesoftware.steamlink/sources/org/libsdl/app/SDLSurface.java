@@ -326,13 +326,13 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
 
     @Override // android.view.ScaleGestureDetector.OnScaleGestureListener
     public boolean onScale(ScaleGestureDetector scaleGestureDetector) {
-        SDLActivity.onNativePinchUpdate(scaleGestureDetector.getScaleFactor());
+        SDLActivity.onNativePinchUpdate(scaleGestureDetector.getScaleFactor(), getNormalizedX(scaleGestureDetector.getCurrentSpanX()), getNormalizedY(scaleGestureDetector.getCurrentSpanY()), getNormalizedX(scaleGestureDetector.getFocusX()), getNormalizedY(scaleGestureDetector.getFocusY()));
         return true;
     }
 
     @Override // android.view.ScaleGestureDetector.OnScaleGestureListener
     public boolean onScaleBegin(ScaleGestureDetector scaleGestureDetector) {
-        SDLActivity.onNativePinchStart();
+        SDLActivity.onNativePinchStart(getNormalizedX(scaleGestureDetector.getCurrentSpanX()), getNormalizedY(scaleGestureDetector.getCurrentSpanY()), getNormalizedX(scaleGestureDetector.getFocusX()), getNormalizedY(scaleGestureDetector.getFocusY()));
         return true;
     }
 

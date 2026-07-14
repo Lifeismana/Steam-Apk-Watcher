@@ -135,7 +135,7 @@ public class SteamShellActivity extends QtActivity {
         return super.onGenericMotionEvent(motionEvent);
     }
 
-    public void startStreaming(String[] strArr, boolean z) {
+    public void startStreaming(String[] strArr, int i) {
         Runnable runnable = new Runnable() { // from class: com.valvesoftware.steamlink.SteamShellActivity.1
             @Override // java.lang.Runnable
             public void run() {
@@ -157,7 +157,7 @@ public class SteamShellActivity extends QtActivity {
         Intent intent = new Intent();
         intent.setClassName(BuildConfig.APPLICATION_ID, "com.valvesoftware.steamlink.SteamLink");
         intent.putExtra("args", strArr);
-        intent.putExtra("forceLowLatencyVideo", z);
+        intent.putExtra("lowLatencyVideoMode", i);
         startActivity(intent);
         try {
             synchronized (this.mStreamingComplete) {

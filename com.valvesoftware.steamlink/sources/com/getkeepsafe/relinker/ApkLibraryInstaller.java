@@ -237,7 +237,7 @@ public class ApkLibraryInstaller implements ReLinker.LibraryInstaller {
     }
 
     private long copy(InputStream inputStream, OutputStream outputStream) throws IOException {
-        byte[] bArr = new byte[COPY_BUFFER_SIZE];
+        byte[] bArr = new byte[4096];
         long j = 0;
         while (true) {
             int i = inputStream.read(bArr);

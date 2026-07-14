@@ -6,6 +6,6 @@ public final class BuildConfig {
     public static final String BUILD_TYPE = "release";
     public static final boolean DEBUG = false;
     public static final String FLAVOR = "steamlink";
-    public static final int VERSION_CODE = 5000313;
-    public static final String VERSION_NAME = "1.3.31";
+    public static final int VERSION_CODE = 5000315;
+    public static final String VERSION_NAME = "1.3.32";
 }
