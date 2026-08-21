@@ -47,8 +47,12 @@ public class OPPOHomeBader implements Badger {
     }
 
     private void executeBadgeByContentProvider(Context context, int i) throws ShortcutBadgeException {
-        Bundle bundle = new Bundle();
-        bundle.putInt(INTENT_EXTRA_BADGEUPGRADE_COUNT, i);
-        context.getContentResolver().call(Uri.parse(PROVIDER_CONTENT_URI), "setAppBadgeCount", (String) null, bundle);
+        try {
+            Bundle bundle = new Bundle();
+            bundle.putInt(INTENT_EXTRA_BADGEUPGRADE_COUNT, i);
+            context.getContentResolver().call(Uri.parse(PROVIDER_CONTENT_URI), "setAppBadgeCount", (String) null, bundle);
+        } catch (Throwable unused) {
+            throw new ShortcutBadgeException("Unable to execute Badge By Content Provider");
+        }
     }
 }

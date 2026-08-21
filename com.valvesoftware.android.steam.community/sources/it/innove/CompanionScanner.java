@@ -35,14 +35,14 @@ public class CompanionScanner {
 
     public CompanionScanner(ReactApplicationContext reactApplicationContext, BleManager bleManager) {
         BaseActivityEventListener baseActivityEventListener = new BaseActivityEventListener() { // from class: it.innove.CompanionScanner.1
-            /* JADX WARN: Removed duplicated region for block: B:26:0x0098  */
-            /* JADX WARN: Removed duplicated region for block: B:33:0x00b6  */
+            /* JADX WARN: Code duplicated, block: B:26:0x0098  */
+            /* JADX WARN: Code duplicated, block: B:28:0x009e  */
+            /* JADX WARN: Code duplicated, block: B:29:0x00a3  */
+            /* JADX WARN: Code duplicated, block: B:33:0x00b6  */
             @Override // com.facebook.react.bridge.BaseActivityEventListener, com.facebook.react.bridge.ActivityEventListener
-            /*
-                Code decompiled incorrectly, please refer to instructions dump.
-            */
             public void onActivityResult(Activity activity, int i, int i2, Intent intent) {
                 Peripheral peripheralSavePeripheral;
+                WritableMap writableMapAsWritableMap;
                 Log.d(CompanionScanner.LOG_TAG, "onActivityResult");
                 if (i != CompanionScanner.SELECT_DEVICE_REQUEST_CODE) {
                     super.onActivityResult(activity, i, i2, intent);
@@ -65,20 +65,34 @@ public class CompanionScanner {
                             CompanionScanner.scanCallback = null;
                             CompanionScanner.this.bleManager.emitOnCompanionPeripheral(peripheralSavePeripheral.asWritableMap());
                         }
-                        if (CompanionScanner.scanCallback != null) {
-                            CompanionScanner.scanCallback.invoke(null, peripheralSavePeripheral != null ? peripheralSavePeripheral.asWritableMap() : null);
-                            CompanionScanner.scanCallback = null;
-                        }
-                        CompanionScanner.this.bleManager.emitOnCompanionPeripheral(peripheralSavePeripheral != null ? peripheralSavePeripheral.asWritableMap() : null);
+                    } else {
+                        CompanionScanner.scanCallback.invoke(null, null);
+                        CompanionScanner.scanCallback = null;
+                        CompanionScanner.this.bleManager.emitOnCompanionPeripheral(null);
                     }
-                    CompanionScanner.scanCallback.invoke(null, null);
-                    CompanionScanner.scanCallback = null;
-                    CompanionScanner.this.bleManager.emitOnCompanionPeripheral(null);
-                } else {
-                    Log.d(CompanionScanner.LOG_TAG, "Non-ok activity result");
+                    if (CompanionScanner.scanCallback != null) {
+                        Callback callback = CompanionScanner.scanCallback;
+                        if (peripheralSavePeripheral != null) {
+                            writableMapAsWritableMap = peripheralSavePeripheral.asWritableMap();
+                        } else {
+                            writableMapAsWritableMap = null;
+                        }
+                        callback.invoke(null, writableMapAsWritableMap);
+                        CompanionScanner.scanCallback = null;
+                    }
+                    CompanionScanner.this.bleManager.emitOnCompanionPeripheral(peripheralSavePeripheral != null ? peripheralSavePeripheral.asWritableMap() : null);
                 }
+                Log.d(CompanionScanner.LOG_TAG, "Non-ok activity result");
                 peripheralSavePeripheral = null;
                 if (CompanionScanner.scanCallback != null) {
+                    Callback callback2 = CompanionScanner.scanCallback;
+                    if (peripheralSavePeripheral != null) {
+                        writableMapAsWritableMap = peripheralSavePeripheral.asWritableMap();
+                    } else {
+                        writableMapAsWritableMap = null;
+                    }
+                    callback2.invoke(null, writableMapAsWritableMap);
+                    CompanionScanner.scanCallback = null;
                 }
                 CompanionScanner.this.bleManager.emitOnCompanionPeripheral(peripheralSavePeripheral != null ? peripheralSavePeripheral.asWritableMap() : null);
             }

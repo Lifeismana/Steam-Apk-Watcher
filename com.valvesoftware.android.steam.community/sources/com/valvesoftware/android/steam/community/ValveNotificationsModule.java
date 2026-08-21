@@ -14,7 +14,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.messaging.RemoteMessage;
-import com.valvesoftware.android.steam.community.ValveNotificationsHelper;
 import expo.modules.notifications.service.NotificationsService;
 import java.util.Iterator;
 import java.util.Map;

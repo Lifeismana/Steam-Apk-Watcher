@@ -4,6 +4,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.os.IBinder;
@@ -66,7 +67,10 @@ class InstallReferrerClientImpl extends InstallReferrerClient {
     }
 
     private boolean isPlayStoreCompatible() {
-        return this.mApplicationContext.getPackageManager().getPackageInfo("com.android.vending", 128).versionCode >= PLAY_STORE_MIN_APP_VER;
+        try {
+            return this.mApplicationContext.getPackageManager().getPackageInfo("com.android.vending", 128).versionCode >= PLAY_STORE_MIN_APP_VER;
+        } catch (PackageManager.NameNotFoundException unused) {
+        }
     }
 
     @Override // com.android.installreferrer.api.InstallReferrerClient

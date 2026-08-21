@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    android:versionCode="10470850"
-    android:versionName="3.10.9"
+    android:versionCode="10928360"
+    android:versionName="3.10.11"
     android:compileSdkVersion="35"
     android:compileSdkVersionCodename="15"
     package="com.valvesoftware.android.steam.community"

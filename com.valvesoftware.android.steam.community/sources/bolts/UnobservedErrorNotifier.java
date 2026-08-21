@@ -1,7 +1,5 @@
 package bolts;
 
-import bolts.Task;
-
 /* JADX INFO: loaded from: classes.dex */
 class UnobservedErrorNotifier {
     private Task<?> task;

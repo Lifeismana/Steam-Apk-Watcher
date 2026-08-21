@@ -143,10 +143,7 @@ public final class ShortcutBadger {
         while (it2.hasNext()) {
             String str = it2.next().activityInfo.packageName;
             Iterator<Class<? extends Badger>> it3 = BADGERS.iterator();
-            while (true) {
-                if (!it3.hasNext()) {
-                    break;
-                }
+            while (it3.hasNext()) {
                 try {
                     badgerNewInstance = it3.next().newInstance();
                 } catch (Exception unused) {

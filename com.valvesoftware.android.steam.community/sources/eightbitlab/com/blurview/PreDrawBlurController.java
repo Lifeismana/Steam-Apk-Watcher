@@ -5,7 +5,6 @@ import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
-import eightbitlab.com.blurview.SizeScaler;
 
 /* JADX INFO: loaded from: classes3.dex */
 final class PreDrawBlurController implements BlurController {
@@ -92,9 +91,10 @@ final class PreDrawBlurController implements BlurController {
             if (canvas instanceof BlurViewCanvas) {
                 return false;
             }
+            float height = this.blurView.getHeight() / this.internalBitmap.getHeight();
             float width = this.blurView.getWidth() / this.internalBitmap.getWidth();
             canvas.save();
-            canvas.scale(width, this.blurView.getHeight() / this.internalBitmap.getHeight());
+            canvas.scale(width, height);
             this.blurAlgorithm.render(canvas, this.internalBitmap);
             canvas.restore();
             int i = this.overlayColor;

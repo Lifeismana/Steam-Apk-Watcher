@@ -215,14 +215,13 @@ public class Peripheral extends BluetoothGattCallback {
     }
 
     public WritableMap asWritableMap(BluetoothGatt bluetoothGatt) {
-        Iterator<BluetoothGattService> it2;
         WritableMap writableMapAsWritableMap = asWritableMap();
         WritableArray writableArrayCreateArray = Arguments.createArray();
         WritableArray writableArrayCreateArray2 = Arguments.createArray();
         if (this.connected && bluetoothGatt != null) {
-            Iterator<BluetoothGattService> it3 = bluetoothGatt.getServices().iterator();
-            while (it3.hasNext()) {
-                BluetoothGattService next = it3.next();
+            Iterator<BluetoothGattService> it2 = bluetoothGatt.getServices().iterator();
+            while (it2.hasNext()) {
+                BluetoothGattService next = it2.next();
                 WritableMap writableMapCreateMap = Arguments.createMap();
                 writableMapCreateMap.putString(InstallationId.LEGACY_PREFERENCES_UUID_KEY, UUIDHelper.uuidToString(next.getUuid()));
                 for (BluetoothGattCharacteristic bluetoothGattCharacteristic : next.getCharacteristics()) {
@@ -238,24 +237,22 @@ public class Peripheral extends BluetoothGattCallback {
                         WritableMap writableMapCreateMap3 = Arguments.createMap();
                         writableMapCreateMap3.putString(InstallationId.LEGACY_PREFERENCES_UUID_KEY, UUIDHelper.uuidToString(bluetoothGattDescriptor.getUuid()));
                         if (bluetoothGattDescriptor.getValue() != null) {
-                            it2 = it3;
                             writableMapCreateMap3.putString("value", Base64.encodeToString(bluetoothGattDescriptor.getValue(), 2));
                         } else {
-                            it2 = it3;
                             writableMapCreateMap3.putString("value", null);
                         }
                         if (bluetoothGattDescriptor.getPermissions() > 0) {
                             writableMapCreateMap3.putMap("permissions", Helper.decodePermissions(bluetoothGattDescriptor));
                         }
                         writableArrayCreateArray3.pushMap(writableMapCreateMap3);
-                        it3 = it2;
+                        it2 = it2;
                     }
-                    Iterator<BluetoothGattService> it4 = it3;
+                    Iterator<BluetoothGattService> it3 = it2;
                     if (writableArrayCreateArray3.size() > 0) {
                         writableMapCreateMap2.putArray("descriptors", writableArrayCreateArray3);
                     }
                     writableArrayCreateArray2.pushMap(writableMapCreateMap2);
-                    it3 = it4;
+                    it2 = it3;
                 }
                 writableArrayCreateArray.pushMap(writableMapCreateMap);
             }
@@ -713,24 +710,25 @@ public class Peripheral extends BluetoothGattCallback {
         if (!bool.booleanValue()) {
             bArr = BluetoothGattDescriptor.DISABLE_NOTIFICATION_VALUE;
         }
+        boolean z = false;
         try {
             characteristicNotification = this.gatt.setCharacteristicNotification(bluetoothGattCharacteristicFindNotifyCharacteristic, bool.booleanValue());
-        } catch (Exception e) {
-            e = e;
-        }
-        try {
-            this.registerNotifyCallbacks.addLast(callback);
-            if (Build.VERSION.SDK_INT >= 33) {
-                characteristicNotification &= this.gatt.writeDescriptor(descriptor, bArr) == 0;
-            } else {
-                descriptor.setValue(bArr);
-                characteristicNotification &= this.gatt.writeDescriptor(descriptor);
+            try {
+                this.registerNotifyCallbacks.addLast(callback);
+                if (Build.VERSION.SDK_INT >= 33) {
+                    characteristicNotification &= this.gatt.writeDescriptor(descriptor, bArr) == 0;
+                } else {
+                    descriptor.setValue(bArr);
+                    characteristicNotification &= this.gatt.writeDescriptor(descriptor);
+                }
+            } catch (Exception e) {
+                e = e;
+                z = characteristicNotification;
+                Log.d(BleManager.LOG_TAG, "Exception in setNotify", e);
+                characteristicNotification = z;
             }
         } catch (Exception e2) {
             e = e2;
-            z = characteristicNotification;
-            Log.d(BleManager.LOG_TAG, "Exception in setNotify", e);
-            characteristicNotification = z;
         }
         if (characteristicNotification) {
             return;
@@ -1042,20 +1040,21 @@ public class Peripheral extends BluetoothGattCallback {
 
     /* JADX INFO: Access modifiers changed from: private */
     public /* synthetic */ void lambda$refreshCache$15(Callback callback) {
-        BluetoothGatt bluetoothGatt;
         try {
             try {
-                bluetoothGatt = this.gatt;
+                BluetoothGatt bluetoothGatt = this.gatt;
+                if (bluetoothGatt == null) {
+                    throw new Exception("gatt is null");
+                }
+                callback.invoke(null, Boolean.valueOf(((Boolean) bluetoothGatt.getClass().getMethod("refresh", new Class[0]).invoke(this.gatt, new Object[0])).booleanValue()));
+                completedCommand();
             } catch (Exception e) {
                 Log.e(ReactConstants.TAG, "An exception occured while refreshing device");
                 callback.invoke(e.getMessage());
             }
-            if (bluetoothGatt == null) {
-                throw new Exception("gatt is null");
-            }
-            callback.invoke(null, Boolean.valueOf(((Boolean) bluetoothGatt.getClass().getMethod("refresh", new Class[0]).invoke(this.gatt, new Object[0])).booleanValue()));
-        } finally {
+        } catch (Throwable th) {
             completedCommand();
+            throw th;
         }
     }
 

@@ -79,8 +79,10 @@ final class BoltsExecutors {
                 } else {
                     BoltsExecutors.background().execute(runnable);
                 }
-            } finally {
                 decrementDepth();
+            } catch (Throwable th) {
+                decrementDepth();
+                throw th;
             }
         }
     }

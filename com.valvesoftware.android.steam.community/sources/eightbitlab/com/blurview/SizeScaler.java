@@ -12,7 +12,8 @@ public class SizeScaler {
     Size scale(int i, int i2) {
         float f = i;
         int iRoundSize = roundSize(downscaleSize(f));
-        return new Size(iRoundSize, (int) Math.ceil(i2 / r4), f / iRoundSize);
+        float f2 = f / iRoundSize;
+        return new Size(iRoundSize, (int) Math.ceil(i2 / f2), f2);
     }
 
     boolean isZeroSized(int i, int i2) {
