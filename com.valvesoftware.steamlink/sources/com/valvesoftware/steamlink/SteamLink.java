@@ -366,8 +366,9 @@ public class SteamLink extends SDLActivity {
         }
         int i7 = (this.m_nDisplayWidth - i) - i5;
         int i8 = (this.m_nDisplayHeight - i2) - i6;
+        int i9 = i2 + (i8 - ((int) (this.m_nOverlayHeight * (i7 / this.m_nOverlayWidth))));
         RelativeLayout.LayoutParams layoutParams6 = new RelativeLayout.LayoutParams(i7, i8);
-        layoutParams6.setMargins(i, i2 + (i8 - ((int) (this.m_nOverlayHeight * (i7 / this.m_nOverlayWidth)))), i5, i6);
+        layoutParams6.setMargins(i, i9, i5, i6);
         this.m_overlaySurface.setLayoutParams(layoutParams6);
     }
 

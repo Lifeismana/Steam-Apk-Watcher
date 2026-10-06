@@ -2,7 +2,6 @@ package org.libsdl.app;
 
 import android.os.Build;
 import android.os.VibrationEffect;
-import org.libsdl.app.SDLHapticHandler;
 
 /* JADX INFO: compiled from: SDLControllerManager.java */
 /* JADX INFO: loaded from: classes.dex */

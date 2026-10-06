@@ -1,6 +1,5 @@
 package com.getkeepsafe.relinker.elf;
 
-import com.getkeepsafe.relinker.elf.Elf;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

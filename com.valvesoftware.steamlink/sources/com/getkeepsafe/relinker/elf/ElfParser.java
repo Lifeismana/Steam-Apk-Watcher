@@ -1,6 +1,5 @@
 package com.getkeepsafe.relinker.elf;
 
-import com.getkeepsafe.relinker.elf.Elf;
 import java.io.Closeable;
 import java.io.EOFException;
 import java.io.File;

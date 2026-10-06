@@ -171,10 +171,10 @@ public class HIDDeviceManager {
     }
 
     private boolean isXbox360Controller(UsbDevice usbDevice, UsbInterface usbInterface) {
-        int[] iArr = {121, 1103, 1118, 1133, 1390, 1699, 1848, 2047, 3695, 3853, 4152, 4553, 4779, 5168, 5227, 5426, 5604, 5678, 5769, 6473, 7085, 8406, 9414, 11298, 11720, 13623, 14295, 39046};
+        int[] iArr = {121, 849, 1103, 1118, 1133, 1390, 1699, 1848, 2047, 3695, 3853, 4152, 4341, 4553, 4617, 4779, 5168, 5227, 5426, 5604, 5678, 5769, 6473, 7085, 8406, 9414, 11298, 11720, 13623, 13905, 14295, 14680, 39046};
         if (usbInterface.getInterfaceClass() == 255 && usbInterface.getInterfaceSubclass() == 93 && (usbInterface.getInterfaceProtocol() == 1 || usbInterface.getInterfaceProtocol() == 129)) {
             int vendorId = usbDevice.getVendorId();
-            for (int i = 0; i < 28; i++) {
+            for (int i = 0; i < 33; i++) {
                 if (vendorId == iArr[i]) {
                     return true;
                 }
@@ -184,10 +184,10 @@ public class HIDDeviceManager {
     }
 
     private boolean isXboxOneController(UsbDevice usbDevice, UsbInterface usbInterface) {
-        int[] iArr = {1008, 1103, 1118, 1848, 2821, 3695, 3853, 4341, 5426, 8406, 9414, 10571, 11720, 11812, 11925, 12933, 13623, 13932};
+        int[] iArr = {849, 1008, 1103, 1118, 1848, 2821, 3695, 3853, 4341, 4617, 5426, 8406, 9414, 10571, 11720, 11812, 11925, 12933, 13623, 13905, 13932, 14680};
         if (usbInterface.getId() == 0 && usbInterface.getInterfaceClass() == 255 && usbInterface.getInterfaceSubclass() == 71 && usbInterface.getInterfaceProtocol() == 208) {
             int vendorId = usbDevice.getVendorId();
-            for (int i = 0; i < 18; i++) {
+            for (int i = 0; i < 22; i++) {
                 if (vendorId == iArr[i]) {
                     return true;
                 }
@@ -229,31 +229,29 @@ public class HIDDeviceManager {
 
     private void connectHIDDeviceUSB(UsbDevice usbDevice) {
         int i;
-        HIDDeviceManager hIDDeviceManager = this;
         synchronized (this) {
             int i2 = 0;
             int i3 = 0;
             while (i2 < usbDevice.getInterfaceCount()) {
                 UsbInterface usbInterface = usbDevice.getInterface(i2);
-                if (hIDDeviceManager.isHIDDeviceInterface(usbDevice, usbInterface)) {
+                if (isHIDDeviceInterface(usbDevice, usbInterface)) {
                     int id = 1 << usbInterface.getId();
                     if ((i3 & id) != 0) {
                         i = i2;
                     } else {
                         int i4 = i3 | id;
-                        HIDDeviceUSB hIDDeviceUSB = new HIDDeviceUSB(hIDDeviceManager, usbDevice, i2);
+                        HIDDeviceUSB hIDDeviceUSB = new HIDDeviceUSB(this, usbDevice, i2);
                         int i5 = i2;
                         int id2 = hIDDeviceUSB.getId();
-                        hIDDeviceManager.mDevicesById.put(Integer.valueOf(id2), hIDDeviceUSB);
+                        this.mDevicesById.put(Integer.valueOf(id2), hIDDeviceUSB);
                         i = i5;
-                        hIDDeviceManager.HIDDeviceConnected(id2, hIDDeviceUSB.getIdentifier(), hIDDeviceUSB.getVendorId(), hIDDeviceUSB.getProductId(), hIDDeviceUSB.getSerialNumber(), hIDDeviceUSB.getVersion(), hIDDeviceUSB.getManufacturerName(), hIDDeviceUSB.getProductName(), usbInterface.getId(), usbInterface.getInterfaceClass(), usbInterface.getInterfaceSubclass(), usbInterface.getInterfaceProtocol(), false, 0);
+                        HIDDeviceConnected(id2, hIDDeviceUSB.getIdentifier(), hIDDeviceUSB.getVendorId(), hIDDeviceUSB.getProductId(), hIDDeviceUSB.getSerialNumber(), hIDDeviceUSB.getVersion(), hIDDeviceUSB.getManufacturerName(), hIDDeviceUSB.getProductName(), usbInterface.getId(), usbInterface.getInterfaceClass(), usbInterface.getInterfaceSubclass(), usbInterface.getInterfaceProtocol(), false, 0);
                         i3 = i4;
                     }
                 } else {
                     i = i2;
                 }
                 i2 = i + 1;
-                hIDDeviceManager = this;
             }
         }
     }

@@ -17,6 +17,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.LocaleList;
+import android.os.Looper;
 import android.os.Message;
 import android.os.ParcelFileDescriptor;
 import android.util.DisplayMetrics;
@@ -41,6 +42,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.window.OnBackInvokedCallback;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Hashtable;
@@ -101,7 +103,9 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     private static final int SDL_SYSTEM_CURSOR_ZOOM_IN = 32;
     private static final int SDL_SYSTEM_CURSOR_ZOOM_OUT = 33;
     private static final String TAG = "SDL";
+    static OnBackInvokedCallback backButtonCallback;
     protected static boolean mActivityCreated;
+    static boolean mBackKeyTrapEnabled;
     public static boolean mBrokenLibraries;
     protected static SDLClipboardHandler mClipboardHandler;
     protected static Locale mCurrentLocale;
@@ -126,7 +130,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     protected static SDLDummyEdit mTextEdit;
     Handler commandHandler = new SDLCommandHandler();
     protected final int[] messageboxSelection = new int[1];
-    private final Runnable rehideSystemUi = new Runnable() { // from class: org.libsdl.app.SDLActivity.7
+    private final Runnable rehideSystemUi = new Runnable() { // from class: org.libsdl.app.SDLActivity.8
         @Override // java.lang.Runnable
         public void run() {
             if (Build.VERSION.SDK_INT >= SDLActivity.SDL_SYSTEM_CURSOR_ROW_RESIZE) {
@@ -256,6 +260,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         mActivityCreated = false;
         mFileDialogState = null;
         mDispatchingKeyEvent = false;
+        mBackKeyTrapEnabled = false;
     }
 
     public static SDLGenericMotionListener_API14 getMotionListener() {
@@ -340,6 +345,9 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         Log.v(TAG, "Model: " + Build.MODEL);
         Log.v(TAG, "onCreate()");
         super.onCreate(bundle);
+        if (Build.VERSION.SDK_INT >= SDL_SYSTEM_CURSOR_ROW_RESIZE) {
+            getWindow().setDecorFitsSystemWindows(false);
+        }
         if (mSDLMainFinished || mActivityCreated) {
             boolean zNativeAllowRecreateActivity = nativeAllowRecreateActivity();
             if (mSDLMainFinished) {
@@ -639,6 +647,36 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         super.onBackPressed();
     }
 
+    public static void setBackButtonTrapEnabled(boolean z) {
+        if (Build.VERSION.SDK_INT >= SDL_SYSTEM_CURSOR_ZOOM_OUT && z != mBackKeyTrapEnabled) {
+            if (backButtonCallback == null) {
+                backButtonCallback = new OnBackInvokedCallback() { // from class: org.libsdl.app.SDLActivity.2
+                    Handler mBackKeyHandler;
+
+                    @Override // android.window.OnBackInvokedCallback
+                    public void onBackInvoked() {
+                        if (this.mBackKeyHandler == null) {
+                            this.mBackKeyHandler = new Handler(Looper.getMainLooper());
+                        }
+                        SDLActivity.onNativeKeyDown(4);
+                        this.mBackKeyHandler.postDelayed(new Runnable() { // from class: org.libsdl.app.SDLActivity.2.1
+                            @Override // java.lang.Runnable
+                            public void run() {
+                                SDLActivity.onNativeKeyUp(4);
+                            }
+                        }, 500L);
+                    }
+                };
+            }
+            if (z) {
+                mSingleton.getOnBackInvokedDispatcher().registerOnBackInvokedCallback(0, backButtonCallback);
+            } else {
+                mSingleton.getOnBackInvokedDispatcher().unregisterOnBackInvokedCallback(backButtonCallback);
+            }
+            mBackKeyTrapEnabled = z;
+        }
+    }
+
     @Override // android.app.Activity
     protected void onActivityResult(int i, int i2, Intent intent) {
         String[] strArr;
@@ -674,7 +712,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     }
 
     public void pressBackButton() {
-        runOnUiThread(new Runnable() { // from class: org.libsdl.app.SDLActivity.2
+        runOnUiThread(new Runnable() { // from class: org.libsdl.app.SDLActivity.3
             @Override // java.lang.Runnable
             public void run() {
                 if (SDLActivity.this.isFinishing()) {
@@ -812,7 +850,6 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             if (window2 != null) {
                 if ((message.obj instanceof Integer) && ((Integer) message.obj).intValue() != 0) {
                     if (Build.VERSION.SDK_INT >= SDLActivity.SDL_SYSTEM_CURSOR_ROW_RESIZE) {
-                        window2.setDecorFitsSystemWindows(false);
                         WindowInsetsController insetsController = window2.getInsetsController();
                         if (insetsController != null) {
                             insetsController.hide(WindowInsets.Type.systemBars());
@@ -825,18 +862,22 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
                     }
                     SDLActivity.mFullscreenModeActive = true;
                 } else {
-                    window2.getDecorView().setSystemUiVisibility(256);
-                    window2.addFlags(2048);
-                    window2.clearFlags(1024);
+                    if (Build.VERSION.SDK_INT >= SDLActivity.SDL_SYSTEM_CURSOR_ROW_RESIZE) {
+                        WindowInsetsController insetsController2 = window2.getInsetsController();
+                        if (insetsController2 != null) {
+                            insetsController2.setSystemBarsBehavior(1);
+                            insetsController2.show(WindowInsets.Type.systemBars());
+                        }
+                    } else {
+                        window2.getDecorView().setSystemUiVisibility(256);
+                        window2.addFlags(2048);
+                        window2.clearFlags(1024);
+                    }
                     SDLActivity.mFullscreenModeActive = false;
                 }
                 if (Build.VERSION.SDK_INT >= SDLActivity.SDL_SYSTEM_CURSOR_ROW_RESIZE) {
                     window2.getAttributes().layoutInDisplayCutoutMode = 3;
                 }
-                if (Build.VERSION.SDK_INT < SDLActivity.SDL_SYSTEM_CURSOR_ROW_RESIZE || Build.VERSION.SDK_INT >= 35) {
-                    return;
-                }
-                SDLActivity.onNativeInsetsChanged(0, 0, 0, 0);
             }
         }
     }
@@ -887,10 +928,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         }
     }
 
-    /* JADX WARN: Removed duplicated region for block: B:62:0x008b  */
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-    */
+    /* JADX WARN: Code duplicated, block: B:62:0x008b  */
     public void setOrientationBis(int i, int i2, boolean z, String str) {
         int i3;
         int i4;
@@ -918,6 +956,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         if (z4 || z3) {
             if (!z) {
                 if (!z4 || !z3 ? !z3 : i <= i2) {
+                    i3 = i4;
                 }
                 i5 = i3;
             } else if (!z4 || !z3) {
@@ -1023,17 +1062,15 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     }
 
     public static boolean isDeXMode() {
-        Configuration configuration;
-        Class<?> cls;
         if (Build.VERSION.SDK_INT < SDL_SYSTEM_CURSOR_ALIAS) {
             return false;
         }
         try {
-            configuration = getContext().getResources().getConfiguration();
-            cls = configuration.getClass();
+            Configuration configuration = getContext().getResources().getConfiguration();
+            Class<?> cls = configuration.getClass();
+            return cls.getField("SEM_DESKTOP_MODE_ENABLED").getInt(cls) == cls.getField("semDesktopModeEnabled").getInt(configuration);
         } catch (Exception unused) {
         }
-        return cls.getField("SEM_DESKTOP_MODE_ENABLED").getInt(cls) == cls.getField("semDesktopModeEnabled").getInt(configuration);
     }
 
     public static boolean getManifestEnvironmentVariables() {
@@ -1132,6 +1169,9 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         int deviceId = keyEvent.getDeviceId();
         int source = keyEvent.getSource();
         InputDevice device = InputDevice.getDevice(deviceId);
+        if ((keyEvent.getFlags() & 1024) != 0) {
+            return true;
+        }
         if (source == 0 && device != null) {
             source = device.getSources();
         }
@@ -1195,7 +1235,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         bundle.putIntArray("buttonIds", iArr2);
         bundle.putStringArray("buttonTexts", strArr);
         bundle.putIntArray("colors", iArr3);
-        runOnUiThread(new Runnable() { // from class: org.libsdl.app.SDLActivity.3
+        runOnUiThread(new Runnable() { // from class: org.libsdl.app.SDLActivity.4
             @Override // java.lang.Runnable
             public void run() {
                 SDLActivity.this.messageboxCreateAndShow(bundle);
@@ -1231,7 +1271,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         final AlertDialog alertDialogCreate = new AlertDialog.Builder(this).create();
         alertDialogCreate.setTitle(bundle.getString("title"));
         alertDialogCreate.setCancelable(false);
-        alertDialogCreate.setOnDismissListener(new DialogInterface.OnDismissListener() { // from class: org.libsdl.app.SDLActivity.4
+        alertDialogCreate.setOnDismissListener(new DialogInterface.OnDismissListener() { // from class: org.libsdl.app.SDLActivity.5
             @Override // android.content.DialogInterface.OnDismissListener
             public void onDismiss(DialogInterface dialogInterface) {
                 synchronized (SDLActivity.this.messageboxSelection) {
@@ -1255,7 +1295,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         for (int i6 = 0; i6 < stringArray.length; i6++) {
             Button button = new Button(this);
             final int i7 = intArray3[i6];
-            button.setOnClickListener(new View.OnClickListener() { // from class: org.libsdl.app.SDLActivity.5
+            button.setOnClickListener(new View.OnClickListener() { // from class: org.libsdl.app.SDLActivity.6
                 @Override // android.view.View.OnClickListener
                 public void onClick(View view) {
                     SDLActivity.this.messageboxSelection[0] = i7;
@@ -1293,7 +1333,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             linearLayout2.setBackgroundColor(i);
         }
         alertDialogCreate.setView(linearLayout2);
-        alertDialogCreate.setOnKeyListener(new DialogInterface.OnKeyListener() { // from class: org.libsdl.app.SDLActivity.6
+        alertDialogCreate.setOnKeyListener(new DialogInterface.OnKeyListener() { // from class: org.libsdl.app.SDLActivity.7
             @Override // android.content.DialogInterface.OnKeyListener
             public boolean onKey(DialogInterface dialogInterface, int i9, KeyEvent keyEvent) {
                 Button button2 = (Button) sparseArray.get(i9);
@@ -1550,21 +1590,28 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         }
     }
 
-    /* JADX WARN: Removed duplicated region for block: B:43:0x0099  */
-    /* JADX WARN: Removed duplicated region for block: B:49:0x00ca  */
-    /* JADX WARN: Removed duplicated region for block: B:54:0x00d5  */
-    /* JADX WARN: Removed duplicated region for block: B:65:0x0106  */
-    /* JADX WARN: Removed duplicated region for block: B:66:0x010c  */
-    /* JADX WARN: Removed duplicated region for block: B:69:0x0113  */
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-    */
+    /* JADX WARN: Code duplicated, block: B:43:0x0099  */
+    /* JADX WARN: Code duplicated, block: B:45:0x00a9 A[DONT_INVERT] */
+    /* JADX WARN: Code duplicated, block: B:46:0x00ab  */
+    /* JADX WARN: Code duplicated, block: B:47:0x00bc  */
+    /* JADX WARN: Code duplicated, block: B:48:0x00c6  */
+    /* JADX WARN: Code duplicated, block: B:49:0x00ca A[DONT_INVERT] */
+    /* JADX WARN: Code duplicated, block: B:50:0x00cc  */
+    /* JADX WARN: Code duplicated, block: B:51:0x00cf  */
+    /* JADX WARN: Code duplicated, block: B:54:0x00d5  */
+    /* JADX WARN: Code duplicated, block: B:65:0x0106  */
+    /* JADX WARN: Code duplicated, block: B:66:0x010c  */
+    /* JADX WARN: Code duplicated, block: B:69:0x0113  */
     public static boolean showFileDialog(String[] strArr, boolean z, int i, String str, int i2) {
         Uri uri;
         String str2;
         String str3;
         boolean z2;
+        Intent intent;
+        int i3;
+        int iMax;
         String strSubstring;
+        int size;
         if (mSingleton == null) {
             return false;
         }
@@ -1603,45 +1650,55 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
                 if (i == 1) {
                     str3 = "android.intent.action.CREATE_DOCUMENT";
                     z2 = false;
-                    Intent intent = new Intent(str3);
-                    if (i == 2) {
-                        intent.addCategory("android.intent.category.OPENABLE");
-                        intent.putExtra("android.intent.extra.ALLOW_MULTIPLE", z2);
-                        int size = arrayList.size();
-                        if (size == 0) {
-                            intent.setType("*/*");
-                        } else if (size == 1) {
-                            intent.setType((String) arrayList.get(0));
-                        } else {
-                            intent.setType("*/*");
-                            intent.putExtra("android.intent.extra.MIME_TYPES", (String[]) arrayList.toArray(new String[0]));
-                        }
-                    } else {
-                        intent.addFlags(zNativeGetHintBoolean ? 195 : 3);
+                } else {
+                    if (i != 2) {
+                        Log.e(TAG, "Unsupported file dialog type: " + i);
+                        return false;
                     }
-                    if (uri != null) {
-                        intent.putExtra("android.provider.extra.INITIAL_URI", uri);
-                    }
-                    if (i == 1 && str != null && !str.isEmpty() && !str.endsWith("/") && !str.endsWith("\\")) {
-                        int iMax = Math.max(str.lastIndexOf(47), str.lastIndexOf(92));
-                        strSubstring = iMax < 0 ? str.substring(iMax + 1) : str;
-                        if (!strSubstring.isEmpty()) {
-                            intent.putExtra("android.intent.extra.TITLE", strSubstring);
-                        }
-                    }
-                    mSingleton.startActivityForResult(intent, i2);
-                    SDLFileDialogState sDLFileDialogState = new SDLFileDialogState();
-                    mFileDialogState = sDLFileDialogState;
-                    sDLFileDialogState.requestCode = i2;
-                    mFileDialogState.type = i;
-                    mFileDialogState.persistable = zNativeGetHintBoolean;
-                    return true;
+                    str2 = "android.intent.action.OPEN_DOCUMENT_TREE";
                 }
+                intent = new Intent(str3);
                 if (i != 2) {
-                    Log.e(TAG, "Unsupported file dialog type: " + i);
-                    return false;
+                    intent.addCategory("android.intent.category.OPENABLE");
+                    intent.putExtra("android.intent.extra.ALLOW_MULTIPLE", z2);
+                    size = arrayList.size();
+                    if (size != 0) {
+                        intent.setType("*/*");
+                    } else if (size != 1) {
+                        intent.setType((String) arrayList.get(0));
+                    } else {
+                        intent.setType("*/*");
+                        intent.putExtra("android.intent.extra.MIME_TYPES", (String[]) arrayList.toArray(new String[0]));
+                    }
+                } else {
+                    if (zNativeGetHintBoolean) {
+                        i3 = 195;
+                    } else {
+                        i3 = 3;
+                    }
+                    intent.addFlags(i3);
                 }
-                str2 = "android.intent.action.OPEN_DOCUMENT_TREE";
+                if (uri != null) {
+                    intent.putExtra("android.provider.extra.INITIAL_URI", uri);
+                }
+                if (i == 1 && str != null && !str.isEmpty() && !str.endsWith("/") && !str.endsWith("\\")) {
+                    iMax = Math.max(str.lastIndexOf(47), str.lastIndexOf(92));
+                    if (iMax >= 0) {
+                        strSubstring = str.substring(iMax + 1);
+                    } else {
+                        strSubstring = str;
+                    }
+                    if (!strSubstring.isEmpty()) {
+                        intent.putExtra("android.intent.extra.TITLE", strSubstring);
+                    }
+                }
+                mSingleton.startActivityForResult(intent, i2);
+                SDLFileDialogState sDLFileDialogState = new SDLFileDialogState();
+                mFileDialogState = sDLFileDialogState;
+                sDLFileDialogState.requestCode = i2;
+                mFileDialogState.type = i;
+                mFileDialogState.persistable = zNativeGetHintBoolean;
+                return true;
             }
             mSingleton.startActivityForResult(intent, i2);
             SDLFileDialogState sDLFileDialogState2 = new SDLFileDialogState();
@@ -1656,16 +1713,39 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         }
         str3 = str2;
         z2 = z;
-        Intent intent2 = new Intent(str3);
-        if (i == 2) {
+        intent = new Intent(str3);
+        if (i != 2) {
+            intent.addCategory("android.intent.category.OPENABLE");
+            intent.putExtra("android.intent.extra.ALLOW_MULTIPLE", z2);
+            size = arrayList.size();
+            if (size != 0) {
+                intent.setType("*/*");
+            } else if (size != 1) {
+                intent.setType((String) arrayList.get(0));
+            } else {
+                intent.setType("*/*");
+                intent.putExtra("android.intent.extra.MIME_TYPES", (String[]) arrayList.toArray(new String[0]));
+            }
+        } else {
+            if (zNativeGetHintBoolean) {
+                i3 = 195;
+            } else {
+                i3 = 3;
+            }
+            intent.addFlags(i3);
         }
         if (uri != null) {
+            intent.putExtra("android.provider.extra.INITIAL_URI", uri);
         }
         if (i == 1) {
-            int iMax2 = Math.max(str.lastIndexOf(47), str.lastIndexOf(92));
-            if (iMax2 < 0) {
+            iMax = Math.max(str.lastIndexOf(47), str.lastIndexOf(92));
+            if (iMax >= 0) {
+                strSubstring = str.substring(iMax + 1);
+            } else {
+                strSubstring = str;
             }
             if (!strSubstring.isEmpty()) {
+                intent.putExtra("android.intent.extra.TITLE", strSubstring);
             }
         }
     }

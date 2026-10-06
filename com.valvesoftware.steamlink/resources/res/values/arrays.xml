@@ -9,32 +9,33 @@
         <item>arm64-v8a;SDL3_ttf</item>
         <item>arm64-v8a;h264bitstream</item>
         <item>arm64-v8a;hevcbitstream</item>
+        <item>arm64-v8a;obuparse</item>
+        <item>arm64-v8a;pyrowave-shared</item>
         <item>arm64-v8a;shell_arm64-v8a</item>
-        <item>arm64-v8a;steamwebrtc</item>
         <item>armeabi-v7a;SDL3</item>
         <item>armeabi-v7a;SDL3_image</item>
         <item>armeabi-v7a;SDL3_mixer</item>
         <item>armeabi-v7a;SDL3_ttf</item>
         <item>armeabi-v7a;h264bitstream</item>
         <item>armeabi-v7a;hevcbitstream</item>
+        <item>armeabi-v7a;obuparse</item>
         <item>armeabi-v7a;shell_armeabi-v7a</item>
-        <item>armeabi-v7a;steamwebrtc</item>
         <item>x86;SDL3</item>
         <item>x86;SDL3_image</item>
         <item>x86;SDL3_mixer</item>
         <item>x86;SDL3_ttf</item>
         <item>x86;h264bitstream</item>
         <item>x86;hevcbitstream</item>
+        <item>x86;obuparse</item>
         <item>x86;shell_x86</item>
-        <item>x86;steamwebrtc</item>
         <item>x86_64;SDL3</item>
         <item>x86_64;SDL3_image</item>
         <item>x86_64;SDL3_mixer</item>
         <item>x86_64;SDL3_ttf</item>
         <item>x86_64;h264bitstream</item>
         <item>x86_64;hevcbitstream</item>
+        <item>x86_64;obuparse</item>
         <item>x86_64;shell_x86_64</item>
-        <item>x86_64;steamwebrtc</item>
     </array>
     <array name="load_local_libs">
         <item>arm64-v8a;libplugins_platforms_qtforandroid_arm64-v8a.so:libplugins_bearer_qandroidbearer_arm64-v8a.so:libplugins_iconengines_qsvgicon_arm64-v8a.so:libplugins_imageformats_qgif_arm64-v8a.so:libplugins_imageformats_qjpeg_arm64-v8a.so:libplugins_imageformats_qsvg_arm64-v8a.so</item>

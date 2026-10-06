@@ -20,7 +20,6 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.WindowInsets;
 import android.view.WindowManager;
-import org.libsdl.app.SDLActivity;
 
 /* JADX INFO: loaded from: classes.dex */
 public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, View.OnApplyWindowInsetsListener, View.OnKeyListener, View.OnTouchListener, SensorEventListener, ScaleGestureDetector.OnScaleGestureListener {
@@ -87,15 +86,18 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
         SDLActivity.onNativeSurfaceDestroyed();
     }
 
-    /* JADX WARN: Removed duplicated region for block: B:51:0x0035 A[EXC_TOP_SPLITTER, SYNTHETIC] */
+    /* JADX WARN: Code duplicated, block: B:33:0x00aa  */
+    /* JADX WARN: Code duplicated, block: B:35:0x00c6  */
+    /* JADX WARN: Code duplicated, block: B:41:0x00d9  */
+    /* JADX WARN: Code duplicated, block: B:43:0x00e3  */
+    /* JADX WARN: Code duplicated, block: B:51:0x0035 A[EXC_TOP_SPLITTER, SYNTHETIC] */
     @Override // android.view.SurfaceHolder.Callback
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-    */
     public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i2, int i3) {
         int i4;
         int i5;
         float f;
+        int requestedOrientation;
+        boolean z;
         Log.v("SDL", "surfaceChanged()");
         if (SDLActivity.mSingleton == null) {
             return;
@@ -119,22 +121,49 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
                 int i6 = i4;
                 int i7 = i5;
                 synchronized (SDLActivity.getContext()) {
+                    SDLActivity.getContext().notifyAll();
+                    Log.v("SDL", "Window size: " + i2 + "x" + i3);
+                    Log.v("SDL", "Device size: " + i6 + "x" + i7);
+                    SDLActivity.nativeSetScreenResolution(i2, i3, i6, i7, f, this.mDisplay.getRefreshRate());
+                    SDLActivity.onNativeResize();
+                    requestedOrientation = SDLActivity.mSingleton.getRequestedOrientation();
+                    z = requestedOrientation != 1 ? false : false;
+                    if (z) {
+                        if (((double) Math.max(this.mWidth, this.mHeight)) / ((double) Math.min(this.mWidth, this.mHeight)) < 1.2d) {
+                            Log.v("SDL", "Don't skip on such aspect-ratio. Could be a square resolution.");
+                            z = false;
+                        }
+                    }
+                    if (z) {
+                        z = false;
+                    }
+                    if (z) {
+                        Log.v("SDL", "Skip .. Surface is not ready.");
+                        this.mIsSurfaceReady = false;
+                    } else {
+                        SDLActivity.onNativeSurfaceChanged();
+                        this.mIsSurfaceReady = true;
+                        SDLActivity.mNextNativeState = SDLActivity.NativeState.RESUMED;
+                        SDLActivity.handleNativeState();
+                    }
                 }
             }
         } catch (Exception unused3) {
             i4 = i2;
         }
-        int i62 = i4;
-        int i72 = i5;
+        int i8 = i4;
+        int i9 = i5;
         synchronized (SDLActivity.getContext()) {
             SDLActivity.getContext().notifyAll();
         }
         Log.v("SDL", "Window size: " + i2 + "x" + i3);
-        Log.v("SDL", "Device size: " + i62 + "x" + i72);
-        SDLActivity.nativeSetScreenResolution(i2, i3, i62, i72, f, this.mDisplay.getRefreshRate());
+        Log.v("SDL", "Device size: " + i8 + "x" + i9);
+        SDLActivity.nativeSetScreenResolution(i2, i3, i8, i9, f, this.mDisplay.getRefreshRate());
         SDLActivity.onNativeResize();
-        int requestedOrientation = SDLActivity.mSingleton.getRequestedOrientation();
-        boolean z = requestedOrientation == 1 || requestedOrientation == 7 ? this.mWidth > this.mHeight : !(!(requestedOrientation == 0 || requestedOrientation == 6) || this.mWidth >= this.mHeight);
+        requestedOrientation = SDLActivity.mSingleton.getRequestedOrientation();
+        if (requestedOrientation != 1 || requestedOrientation == 7 ? this.mWidth > this.mHeight : !((requestedOrientation != 0 && requestedOrientation != 6) || this.mWidth >= this.mHeight)) {
+            z = true;
+        }
         if (z) {
             if (((double) Math.max(this.mWidth, this.mHeight)) / ((double) Math.min(this.mWidth, this.mHeight)) < 1.2d) {
                 Log.v("SDL", "Don't skip on such aspect-ratio. Could be a square resolution.");
@@ -231,10 +260,6 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
                     i3 = 5;
                     i4 = 6;
                     SDLActivity.onNativePen(pointerId, SDLActivity.getMotionListener().getPenDeviceType(motionEvent.getDevice()), i6, i2, x, y, pressure);
-                    if (i2 == i4 || i2 == i3 || (actionIndex = i + 1) >= pointerCount) {
-                        break;
-                    }
-                    actionMasked = i2;
                 } else {
                     int pointerId2 = motionEvent.getPointerId(actionIndex);
                     float normalizedX = getNormalizedX(motionEvent.getX(actionIndex));
@@ -242,6 +267,10 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
                     float pressure2 = motionEvent.getPressure(actionIndex);
                     SDLActivity.onNativeTouch(deviceId, pointerId2, actionMasked, normalizedX, normalizedY, pressure2 <= 1.0f ? pressure2 : 1.0f);
                 }
+                if (i2 == i4 || i2 == i3 || (actionIndex = i + 1) >= pointerCount) {
+                    break;
+                }
+                actionMasked = i2;
             }
             i2 = actionMasked;
             i = actionIndex;
@@ -305,23 +334,7 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
 
     @Override // android.view.View
     public boolean onCapturedPointerEvent(MotionEvent motionEvent) {
-        int actionMasked = motionEvent.getActionMasked();
-        int pointerCount = motionEvent.getPointerCount();
-        for (int i = 0; i < pointerCount; i++) {
-            if (actionMasked == 2 || actionMasked == 7) {
-                SDLActivity.onNativeMouse(0, actionMasked, motionEvent.getX(i), motionEvent.getY(i), true);
-                return true;
-            }
-            if (actionMasked == 8) {
-                SDLActivity.onNativeMouse(0, actionMasked, motionEvent.getAxisValue(10, i), motionEvent.getAxisValue(9, i), false);
-                return true;
-            }
-            if (actionMasked == 11 || actionMasked == 12) {
-                SDLActivity.onNativeMouse(motionEvent.getButtonState(), actionMasked != 11 ? 1 : 0, motionEvent.getX(i), motionEvent.getY(i), true);
-                return true;
-            }
-        }
-        return false;
+        return SDLActivity.getMotionListener().onGenericMotion(this, motionEvent);
     }
 
     @Override // android.view.ScaleGestureDetector.OnScaleGestureListener

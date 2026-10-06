@@ -2,7 +2,6 @@ package com.getkeepsafe.relinker;
 
 import android.content.Context;
 import android.util.Log;
-import com.getkeepsafe.relinker.ReLinker;
 import com.getkeepsafe.relinker.elf.ElfParser;
 import java.io.File;
 import java.io.FilenameFilter;

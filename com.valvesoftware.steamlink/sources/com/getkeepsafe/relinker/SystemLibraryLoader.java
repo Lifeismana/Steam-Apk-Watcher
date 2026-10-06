@@ -1,7 +1,6 @@
 package com.getkeepsafe.relinker;
 
 import android.os.Build;
-import com.getkeepsafe.relinker.ReLinker;
 
 /* JADX INFO: loaded from: classes.dex */
 final class SystemLibraryLoader implements ReLinker.LibraryLoader {

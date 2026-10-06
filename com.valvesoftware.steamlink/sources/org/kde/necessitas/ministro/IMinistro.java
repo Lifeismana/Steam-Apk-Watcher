@@ -7,7 +7,6 @@ import android.os.IInterface;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.RemoteException;
-import org.kde.necessitas.ministro.IMinistroCallback;
 
 /* JADX INFO: loaded from: classes.dex */
 public interface IMinistro extends IInterface {

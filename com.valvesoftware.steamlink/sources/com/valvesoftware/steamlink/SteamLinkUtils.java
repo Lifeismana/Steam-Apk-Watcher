@@ -25,6 +25,9 @@ public class SteamLinkUtils {
             return false;
         }
         Display.Mode mode = context.getWindowManager().getDefaultDisplay().getMode();
+        if (mode.getPhysicalHeight() > mode.getPhysicalWidth()) {
+            mode.getPhysicalHeight();
+        }
         return mode.getPhysicalWidth() >= 3840 && mode.getPhysicalHeight() >= 2160;
     }
 
@@ -32,14 +35,8 @@ public class SteamLinkUtils {
         Display.HdrCapabilities hdrCapabilities;
         Activity context = SDL.getContext();
         if (Build.VERSION.SDK_INT >= 24 && (hdrCapabilities = context.getWindowManager().getDefaultDisplay().getHdrCapabilities()) != null) {
-            int[] supportedHdrTypes = hdrCapabilities.getSupportedHdrTypes();
-            int length = supportedHdrTypes.length;
-            int i = 0;
-            while (true) {
-                if (i >= length) {
-                    break;
-                }
-                if (supportedHdrTypes[i] == 2) {
+            for (int i : hdrCapabilities.getSupportedHdrTypes()) {
+                if (i == 2) {
                     if (z && supportsHDRHEVC()) {
                         return true;
                     }
@@ -48,7 +45,6 @@ public class SteamLinkUtils {
                     }
                     return true;
                 }
-                i++;
             }
         }
         return false;
@@ -119,36 +115,29 @@ public class SteamLinkUtils {
         }
         MediaCodec mediaCodecCreateByCodecName = null;
         try {
-            try {
-                mediaCodecCreateByCodecName = MediaCodec.createByCodecName(mediaCodecInfo.getName());
-                for (String str2 : mediaCodecCreateByCodecName.getSupportedVendorParameters()) {
-                    Iterator<String> it = knownVendorLowLatencyOptions.iterator();
-                    while (it.hasNext()) {
-                        if (str2.equalsIgnoreCase(it.next())) {
-                            if (mediaCodecCreateByCodecName != null) {
-                                mediaCodecCreateByCodecName.release();
-                            }
-                            return true;
-                        }
+            mediaCodecCreateByCodecName = MediaCodec.createByCodecName(mediaCodecInfo.getName());
+            for (String str2 : mediaCodecCreateByCodecName.getSupportedVendorParameters()) {
+                Iterator<String> it = knownVendorLowLatencyOptions.iterator();
+                while (it.hasNext()) {
+                    if (str2.equalsIgnoreCase(it.next())) {
+                        return true;
                     }
                 }
-                if (mediaCodecCreateByCodecName == null) {
-                    return false;
-                }
-            } catch (Exception e2) {
-                Log.w(TAG, "Codec " + mediaCodecInfo.getName() + " threw exception on checking capabilities: " + e2.toString());
-                if (mediaCodecCreateByCodecName == null) {
-                    return false;
-                }
             }
-            mediaCodecCreateByCodecName.release();
-            return false;
-        } catch (Throwable th) {
+            if (mediaCodecCreateByCodecName == null) {
+                return false;
+            }
+        } catch (Exception e2) {
+            Log.w(TAG, "Codec " + mediaCodecInfo.getName() + " threw exception on checking capabilities: " + e2.toString());
+            if (mediaCodecCreateByCodecName == null) {
+                return false;
+            }
+        } finally {
             if (mediaCodecCreateByCodecName != null) {
                 mediaCodecCreateByCodecName.release();
             }
-            throw th;
         }
+        return false;
     }
 
     public static String findBestDecoder(String str) {
@@ -160,14 +149,10 @@ public class SteamLinkUtils {
         }
         Log.v(TAG, "Finding best decoder for " + str);
         for (MediaCodecInfo mediaCodecInfo : mediaCodecList.getCodecInfos()) {
-            if (!mediaCodecInfo.isEncoder()) {
-                if (!mediaCodecInfo.isHardwareAccelerated()) {
-                    Log.v(TAG, "Skipping " + str + " decoder " + mediaCodecInfo.getName() + " because it is not hardware-accelerated");
-                } else if (!mediaCodecInfo.isAlias()) {
-                    for (String str2 : mediaCodecInfo.getSupportedTypes()) {
-                        if (str2.equalsIgnoreCase(str)) {
-                            linkedList.add(mediaCodecInfo);
-                        }
+            if (!mediaCodecInfo.isEncoder() && mediaCodecInfo.isHardwareAccelerated() && !mediaCodecInfo.isAlias()) {
+                for (String str2 : mediaCodecInfo.getSupportedTypes()) {
+                    if (str2.equalsIgnoreCase(str)) {
+                        linkedList.add(mediaCodecInfo);
                     }
                 }
             }

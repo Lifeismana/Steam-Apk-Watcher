@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    android:versionCode="5000315"
-    android:versionName="1.3.32"
+    android:versionCode="5000318"
+    android:versionName="1.4.0"
     android:installLocation="auto"
     android:compileSdkVersion="36"
     android:compileSdkVersionCodename="16"
@@ -71,9 +71,6 @@
             android:value="0"/>
         <meta-data
             android:name="SDL_ENV.SDL_ANDROID_TRAP_BACK_BUTTON"
-            android:value="1"/>
-        <meta-data
-            android:name="SDL_ENV.SDL_ANDROID_ALLOW_RECREATE_ACTIVITY"
             android:value="1"/>
         <meta-data
             android:name="com.samsung.android.dex.launchwidth"

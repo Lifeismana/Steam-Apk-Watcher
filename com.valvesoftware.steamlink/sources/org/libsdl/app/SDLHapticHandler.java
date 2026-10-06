@@ -71,16 +71,11 @@ class SDLHapticHandler {
             while (it2.hasNext()) {
                 int iIntValue = ((Integer) it2.next()).intValue();
                 SDLControllerManager.nativeRemoveHaptic(iIntValue);
-                int i2 = 0;
-                while (true) {
-                    if (i2 >= this.mHaptics.size()) {
-                        break;
-                    }
+                for (int i2 = 0; i2 < this.mHaptics.size(); i2++) {
                     if (this.mHaptics.get(i2).device_id == iIntValue) {
                         this.mHaptics.remove(i2);
                         break;
                     }
-                    i2++;
                 }
             }
         }
