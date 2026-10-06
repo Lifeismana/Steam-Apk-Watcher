@@ -74,7 +74,7 @@ DownloadAPK()
         apkeep -a $1 -d google-play -e $GOOGLE_MAIL -o device=px_9a -t $AAS_TOKEN $1
     elif [[ "$SOURCE" == "apk-pure" || "$SOURCE" == "" ]]; then
         if [[ -n "$2" ]]; then
-            apkeep -a $1@$2 -d apk-pure $1
+            apkeep -a $1@$2 -d apk-pure -o 'acknowledge_dangers=true' $1
             for FILE in $1/*@*apk
             do
                 echo "Renaming $FILE"
@@ -84,7 +84,7 @@ DownloadAPK()
             done
             Commit_message="$1 Version $2"
         else
-            apkeep -a $1 -d apk-pure $1
+            apkeep -a $1 -d apk-pure -o 'acknowledge_dangers=true' $1
         fi
         if [[ -f $1/$1.xapk ]]; then
             unzip -o $1/$1.xapk -d $1
@@ -130,7 +130,7 @@ ProcessApp()
             # each case to handle:
             # => 1: '(keep what's inside here)'
             # => 0: '(keep what's inside here)'
-            # => [Function #12891 (keep what's here if there's something) of 
+            # => [Function #12891 (keep what's here if there's something) of
             case $line in
                 "=> 0:"*)
                     string=${line#"=> 0: "}
