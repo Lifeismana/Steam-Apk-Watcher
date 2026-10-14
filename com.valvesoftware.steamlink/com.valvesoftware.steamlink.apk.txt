@@ -1,10 +1,10 @@
-13632   88cf0d9e  AndroidManifest.xml
-1267    1ca71da7  META-INF/BNDLTOOL.RSA
-4224    1a7dd6ba  META-INF/BNDLTOOL.SF
-4097    243a1595  META-INF/MANIFEST.MF
+13632   d6ad2cd0  AndroidManifest.xml
+1267    bc7ee351  META-INF/BNDLTOOL.RSA
+4224    590125fc  META-INF/BNDLTOOL.SF
+4097    a908aac1  META-INF/MANIFEST.MF
 57      e64e0986  META-INF/com/android/build/gradle/app-metadata.properties
 46      b8ff6554  META-INF/version-control-info.textproto
-315388  d074f55e  classes.dex
+315424  53ebe810  classes.dex
 3458    b5f4725c  org/kde/necessitas/ministro/IMinistro.aidl
 3370    d2031e01  org/kde/necessitas/ministro/IMinistroCallback.aidl
 544     2cf698ae  res/layout/main.xml

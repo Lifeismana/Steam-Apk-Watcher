@@ -33,8 +33,10 @@ class SDLGenericMotionListener_API14 implements View.OnGenericMotionListener {
     SDLGenericMotionListener_API14() {
     }
 
+    /* JADX WARN: Code duplicated, block: B:19:0x004b  */
     @Override // android.view.View.OnGenericMotionListener
     public boolean onGenericMotion(View view, MotionEvent motionEvent) {
+        boolean zCheckRelativeEvent;
         if (motionEvent.getSource() == 16777232) {
             return SDLControllerManager.handleJoystickMotionEvent(motionEvent);
         }
@@ -44,22 +46,37 @@ class SDLGenericMotionListener_API14 implements View.OnGenericMotionListener {
         for (int i = 0; i < pointerCount; i++) {
             int toolType = motionEvent.getToolType(i);
             if (toolType == 3) {
-                if (actionMasked == 7) {
-                    SDLActivity.onNativeMouse(0, actionMasked, getEventX(motionEvent, i), getEventY(motionEvent, i), checkRelativeEvent(motionEvent));
+                int buttonState = motionEvent.getButtonState();
+                if (actionMasked == 2 || actionMasked == 7) {
+                    zCheckRelativeEvent = checkRelativeEvent(motionEvent);
+                    float eventX = getEventX(motionEvent, i);
+                    float eventY = getEventY(motionEvent, i);
+                    if (!zCheckRelativeEvent || (actionMasked != 11 && actionMasked != 12)) {
+                        SDLActivity.onNativeMouse(buttonState, actionMasked, eventX, eventY, zCheckRelativeEvent);
+                        z = true;
+                    }
                 } else if (actionMasked == 8) {
-                    SDLActivity.onNativeMouse(0, actionMasked, motionEvent.getAxisValue(10, i), motionEvent.getAxisValue(9, i), false);
+                    SDLActivity.onNativeMouse(buttonState, actionMasked, motionEvent.getAxisValue(10, i), motionEvent.getAxisValue(9, i), false);
+                    z = true;
+                } else if (actionMasked == 11 || actionMasked == 12) {
+                    zCheckRelativeEvent = checkRelativeEvent(motionEvent);
+                    float eventX2 = getEventX(motionEvent, i);
+                    float eventY2 = getEventY(motionEvent, i);
+                    if (!zCheckRelativeEvent) {
+                    }
+                    SDLActivity.onNativeMouse(buttonState, actionMasked, eventX2, eventY2, zCheckRelativeEvent);
+                    z = true;
                 }
-                z = true;
             } else if ((toolType == 2 || toolType == 4) && (actionMasked == 7 || actionMasked == 9 || actionMasked == 10)) {
                 float x = motionEvent.getX(i);
                 float y = motionEvent.getY(i);
                 float pressure = motionEvent.getPressure(i);
                 float f = pressure <= 1.0f ? pressure : 1.0f;
-                int buttonState = (motionEvent.getButtonState() >> 4) | (1 << (toolType == 2 ? 0 : 30));
+                int buttonState2 = (motionEvent.getButtonState() >> 4) | (1 << (toolType == 2 ? 0 : 30));
                 if ((motionEvent.getButtonState() & 4) != 0) {
-                    buttonState |= 8;
+                    buttonState2 |= 8;
                 }
-                SDLActivity.onNativePen(motionEvent.getPointerId(i), getPenDeviceType(motionEvent.getDevice()), buttonState, actionMasked, x, y, f);
+                SDLActivity.onNativePen(motionEvent.getPointerId(i), getPenDeviceType(motionEvent.getDevice()), buttonState2, actionMasked, x, y, f);
                 z = true;
             }
         }
