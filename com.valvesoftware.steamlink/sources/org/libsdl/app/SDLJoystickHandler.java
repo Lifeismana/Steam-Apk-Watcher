@@ -117,9 +117,9 @@ class SDLJoystickHandler {
                 LightsManager lightsManager = device.getLightsManager();
                 Iterator it = lightsManager.getLights().iterator();
                 while (it.hasNext()) {
-                    Light lightM11m = SDLSurface$$ExternalSyntheticApiModelOutline0.m11m(it.next());
-                    if (lightM11m.hasRgbControl()) {
-                        joystick.lights.add(lightM11m);
+                    Light lightM13m = SDLSurface$$ExternalSyntheticApiModelOutline0.m13m(it.next());
+                    if (lightM13m.hasRgbControl()) {
+                        joystick.lights.add(lightM13m);
                     }
                 }
                 if (!joystick.lights.isEmpty()) {
@@ -242,16 +242,16 @@ class SDLJoystickHandler {
         if (Build.VERSION.SDK_INT < 31 || (joystick = getJoystick(i)) == null || joystick.lights.isEmpty()) {
             return;
         }
-        LightsRequest.Builder builderM17m = SDLSurface$$ExternalSyntheticApiModelOutline0.m17m();
-        LightState lightStateBuild = SDLSurface$$ExternalSyntheticApiModelOutline0.m12m().setColor(Color.rgb(i2, i3, i4)).build();
+        LightsRequest.Builder builderM19m = SDLSurface$$ExternalSyntheticApiModelOutline0.m19m();
+        LightState lightStateBuild = SDLSurface$$ExternalSyntheticApiModelOutline0.m14m().setColor(Color.rgb(i2, i3, i4)).build();
         Iterator<Light> it = joystick.lights.iterator();
         while (it.hasNext()) {
-            Light lightM11m = SDLSurface$$ExternalSyntheticApiModelOutline0.m11m((Object) it.next());
-            if (lightM11m.hasRgbControl()) {
-                builderM17m.addLight(lightM11m, lightStateBuild);
+            Light lightM13m = SDLSurface$$ExternalSyntheticApiModelOutline0.m13m((Object) it.next());
+            if (lightM13m.hasRgbControl()) {
+                builderM19m.addLight(lightM13m, lightStateBuild);
             }
         }
-        joystick.lightsSession.requestLights(builderM17m.build());
+        joystick.lightsSession.requestLights(builderM19m.build());
     }
 
     void setSensorsEnabled(int i, boolean z) {

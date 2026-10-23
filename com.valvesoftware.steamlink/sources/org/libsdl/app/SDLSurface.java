@@ -20,13 +20,23 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.WindowInsets;
 import android.view.WindowManager;
+import java.util.function.Consumer;
 
 /* JADX INFO: loaded from: classes.dex */
 public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, View.OnApplyWindowInsetsListener, View.OnKeyListener, View.OnTouchListener, SensorEventListener, ScaleGestureDetector.OnScaleGestureListener {
+    protected static final float HDR_RAMP_REPORT_THRESHOLD = 0.1f;
+    protected static final long HDR_STABLE_DELAY_MS = 250;
+    protected float mDesiredHDRHeadroom;
     protected Display mDisplay;
+    protected boolean mHDRActive;
+    protected boolean mHDRMeasured;
+    protected boolean mHDRStable;
+    protected final Runnable mHDRStableRunnable;
+    protected Consumer<Display> mHdrSdrRatioListener;
     protected float mHeight;
     protected boolean mIsSurfaceReady;
     protected boolean mKeyboardVisible;
+    protected float mReportedHDRHeadroom;
     protected SensorManager mSensorManager;
     protected float mWidth;
     private final ScaleGestureDetector scaleGestureDetector;
@@ -37,6 +47,22 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
 
     protected SDLSurface(Context context) {
         super(context);
+        this.mDesiredHDRHeadroom = -1.0f;
+        this.mReportedHDRHeadroom = -1.0f;
+        this.mHDRStableRunnable = new Runnable() { // from class: org.libsdl.app.SDLSurface.1
+            @Override // java.lang.Runnable
+            public void run() {
+                try {
+                    if (SDLSurface.this.mDisplay.getHdrSdrRatio() <= 1.01f) {
+                        return;
+                    }
+                    SDLSurface.this.mHDRStable = true;
+                    SDLSurface.this.mHDRMeasured = true;
+                    SDLSurface.this.updateHDRHeadroom();
+                } catch (Exception unused) {
+                }
+            }
+        };
         getHolder().addCallback(this);
         this.scaleGestureDetector = new ScaleGestureDetector(context, this);
         setFocusable(true);
@@ -51,6 +77,9 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
         this.mWidth = 1.0f;
         this.mHeight = 1.0f;
         this.mIsSurfaceReady = false;
+        if (Build.VERSION.SDK_INT >= 26) {
+            setOnCapturedPointerListener(SDLActivity.getMotionListener());
+        }
     }
 
     protected void handlePause() {
@@ -74,6 +103,7 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
     @Override // android.view.SurfaceHolder.Callback
     public void surfaceCreated(SurfaceHolder surfaceHolder) {
         Log.v("SDL", "surfaceCreated()");
+        enableHDRListener(true);
         SDLActivity.onNativeSurfaceCreated();
     }
 
@@ -84,12 +114,13 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
         SDLActivity.handleNativeState();
         this.mIsSurfaceReady = false;
         SDLActivity.onNativeSurfaceDestroyed();
+        enableHDRListener(false);
     }
 
-    /* JADX WARN: Code duplicated, block: B:33:0x00aa  */
-    /* JADX WARN: Code duplicated, block: B:35:0x00c6  */
-    /* JADX WARN: Code duplicated, block: B:41:0x00d9  */
-    /* JADX WARN: Code duplicated, block: B:43:0x00e3  */
+    /* JADX WARN: Code duplicated, block: B:33:0x00ad  */
+    /* JADX WARN: Code duplicated, block: B:35:0x00c9  */
+    /* JADX WARN: Code duplicated, block: B:41:0x00dc  */
+    /* JADX WARN: Code duplicated, block: B:43:0x00e6  */
     /* JADX WARN: Code duplicated, block: B:51:0x0035 A[EXC_TOP_SPLITTER, SYNTHETIC] */
     @Override // android.view.SurfaceHolder.Callback
     public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i2, int i3) {
@@ -125,6 +156,7 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
                     Log.v("SDL", "Window size: " + i2 + "x" + i3);
                     Log.v("SDL", "Device size: " + i6 + "x" + i7);
                     SDLActivity.nativeSetScreenResolution(i2, i3, i6, i7, f, this.mDisplay.getRefreshRate());
+                    updateHDRHeadroom();
                     SDLActivity.onNativeResize();
                     requestedOrientation = SDLActivity.mSingleton.getRequestedOrientation();
                     z = requestedOrientation != 1 ? false : false;
@@ -159,6 +191,7 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
         Log.v("SDL", "Window size: " + i2 + "x" + i3);
         Log.v("SDL", "Device size: " + i8 + "x" + i9);
         SDLActivity.nativeSetScreenResolution(i2, i3, i8, i9, f, this.mDisplay.getRefreshRate());
+        updateHDRHeadroom();
         SDLActivity.onNativeResize();
         requestedOrientation = SDLActivity.mSingleton.getRequestedOrientation();
         if (requestedOrientation != 1 || requestedOrientation == 7 ? this.mWidth > this.mHeight : !((requestedOrientation != 0 && requestedOrientation != 6) || this.mWidth >= this.mHeight)) {
@@ -283,6 +316,138 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
         }
         this.scaleGestureDetector.onTouchEvent(motionEvent);
         return true;
+    }
+
+    protected float getEstimatedHDRHeadroom() {
+        float f;
+        if (Build.VERSION.SDK_INT < 35) {
+            return 1.0f;
+        }
+        try {
+            Display.HdrCapabilities hdrCapabilities = this.mDisplay.getHdrCapabilities();
+            if (hdrCapabilities == null) {
+                f = 1.0f;
+                break;
+            }
+            int[] supportedHdrTypes = hdrCapabilities.getSupportedHdrTypes();
+            int length = supportedHdrTypes.length;
+            int i = 0;
+            while (true) {
+                if (i >= length) {
+                    f = 1.0f;
+                    break;
+                }
+                if (supportedHdrTypes[i] == 2) {
+                    float desiredMaxLuminance = hdrCapabilities.getDesiredMaxLuminance();
+                    if (desiredMaxLuminance <= 203.0f) {
+                        desiredMaxLuminance = 1000.0f;
+                    }
+                    f = desiredMaxLuminance / 203.0f;
+                    break;
+                }
+                i++;
+            }
+            try {
+                if (Build.VERSION.SDK_INT >= 36 && this.mDisplay.isHdrSdrRatioAvailable()) {
+                    float highestHdrSdrRatio = this.mDisplay.getHighestHdrSdrRatio();
+                    if (highestHdrSdrRatio > 1.0f) {
+                        return f > 1.0f ? Math.min(f, highestHdrSdrRatio) : highestHdrSdrRatio;
+                    }
+                }
+                return f;
+            } catch (Exception unused) {
+                return f;
+            }
+        } catch (Exception unused2) {
+            return 1.0f;
+        }
+    }
+
+    protected void updateHDRHeadroom() {
+        float estimatedHDRHeadroom = getEstimatedHDRHeadroom();
+        if (this.mHDRActive && estimatedHDRHeadroom > 1.0f) {
+            try {
+                if (this.mDisplay.isHdrSdrRatioAvailable()) {
+                    float hdrSdrRatio = this.mDisplay.getHdrSdrRatio();
+                    if (this.mHDRMeasured) {
+                        estimatedHDRHeadroom = Math.max(hdrSdrRatio, 1.01f);
+                    } else {
+                        estimatedHDRHeadroom = Math.max(estimatedHDRHeadroom, hdrSdrRatio);
+                    }
+                }
+            } catch (Exception unused) {
+            }
+        }
+        if (this.mHDRActive && !this.mHDRStable) {
+            float f = this.mReportedHDRHeadroom;
+            if (f > 0.0f && Math.abs(estimatedHDRHeadroom - f) < this.mReportedHDRHeadroom * HDR_RAMP_REPORT_THRESHOLD) {
+                return;
+            }
+        }
+        this.mReportedHDRHeadroom = estimatedHDRHeadroom;
+        SDLActivity.nativeSetScreenHDRHeadroom(estimatedHDRHeadroom);
+    }
+
+    protected void onHDRSDRRatioChanged() {
+        if (this.mHDRActive) {
+            this.mHDRStable = false;
+            removeCallbacks(this.mHDRStableRunnable);
+            postDelayed(this.mHDRStableRunnable, HDR_STABLE_DELAY_MS);
+        }
+        updateHDRHeadroom();
+    }
+
+    protected void setDesiredHDRHeadroom(float f) {
+        if (Build.VERSION.SDK_INT < 35) {
+            return;
+        }
+        if (f > 1.0f && f <= 1.01f) {
+            f = 1.02f;
+        }
+        if (f == this.mDesiredHDRHeadroom) {
+            return;
+        }
+        this.mDesiredHDRHeadroom = f;
+        setDesiredHdrHeadroom(f);
+        boolean z = f > 1.01f;
+        if (z != this.mHDRActive) {
+            this.mHDRActive = z;
+            this.mHDRMeasured = false;
+            this.mHDRStable = false;
+            removeCallbacks(this.mHDRStableRunnable);
+            if (z) {
+                postDelayed(this.mHDRStableRunnable, HDR_STABLE_DELAY_MS);
+            }
+            updateHDRHeadroom();
+        }
+    }
+
+    protected void enableHDRListener(boolean z) {
+        if (Build.VERSION.SDK_INT < 35) {
+            return;
+        }
+        try {
+            if (z) {
+                if (this.mHdrSdrRatioListener == null && this.mDisplay.isHdrSdrRatioAvailable()) {
+                    this.mHdrSdrRatioListener = new Consumer<Display>() { // from class: org.libsdl.app.SDLSurface.2
+                        @Override // java.util.function.Consumer
+                        public void accept(Display display) {
+                            SDLSurface.this.onHDRSDRRatioChanged();
+                        }
+                    };
+                    this.mDisplay.registerHdrSdrRatioChangedListener(getContext().getMainExecutor(), this.mHdrSdrRatioListener);
+                    return;
+                }
+                return;
+            }
+            Consumer<Display> consumer = this.mHdrSdrRatioListener;
+            if (consumer != null) {
+                this.mDisplay.unregisterHdrSdrRatioChangedListener(consumer);
+                this.mHdrSdrRatioListener = null;
+            }
+            removeCallbacks(this.mHDRStableRunnable);
+        } catch (Exception unused) {
+        }
     }
 
     protected void enableSensor(int i, boolean z) {

@@ -19,6 +19,7 @@
         <item>armeabi-v7a;h264bitstream</item>
         <item>armeabi-v7a;hevcbitstream</item>
         <item>armeabi-v7a;obuparse</item>
+        <item>armeabi-v7a;pyrowave-shared</item>
         <item>armeabi-v7a;shell_armeabi-v7a</item>
         <item>x86;SDL3</item>
         <item>x86;SDL3_image</item>

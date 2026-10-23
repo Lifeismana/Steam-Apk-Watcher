@@ -22,6 +22,12 @@ class SDLGenericMotionListener_API26 extends SDLGenericMotionListener_API24 {
         return this.mRelativeModeEnabled;
     }
 
+    @Override // org.libsdl.app.SDLGenericMotionListener_API14, android.view.View.OnCapturedPointerListener
+    public boolean onCapturedPointer(View view, MotionEvent motionEvent) {
+        SDLActivity.onNativeMouse(motionEvent.getButtonState(), motionEvent.getActionMasked(), motionEvent.getX(), motionEvent.getY(), true);
+        return true;
+    }
+
     @Override // org.libsdl.app.SDLGenericMotionListener_API24, org.libsdl.app.SDLGenericMotionListener_API14
     boolean setRelativeMouseEnabled(boolean z) {
         if (Build.VERSION.SDK_INT < 26) {

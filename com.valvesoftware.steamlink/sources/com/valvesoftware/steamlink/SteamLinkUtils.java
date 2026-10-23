@@ -31,12 +31,15 @@ public class SteamLinkUtils {
         return mode.getPhysicalWidth() >= 3840 && mode.getPhysicalHeight() >= 2160;
     }
 
-    public static boolean canDisplayHDRVideo(boolean z, boolean z2) {
+    public static boolean canDisplayHDRVideo(boolean z, boolean z2, boolean z3) {
         Display.HdrCapabilities hdrCapabilities;
         Activity context = SDL.getContext();
         if (Build.VERSION.SDK_INT >= 24 && (hdrCapabilities = context.getWindowManager().getDefaultDisplay().getHdrCapabilities()) != null) {
             for (int i : hdrCapabilities.getSupportedHdrTypes()) {
                 if (i == 2) {
+                    if (z3 && Build.VERSION.SDK_INT >= 35) {
+                        return true;
+                    }
                     if (z && supportsHDRHEVC()) {
                         return true;
                     }

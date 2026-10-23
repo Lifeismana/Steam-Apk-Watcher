@@ -130,7 +130,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     protected static SDLDummyEdit mTextEdit;
     Handler commandHandler = new SDLCommandHandler();
     protected final int[] messageboxSelection = new int[1];
-    private final Runnable rehideSystemUi = new Runnable() { // from class: org.libsdl.app.SDLActivity.8
+    private final Runnable rehideSystemUi = new Runnable() { // from class: org.libsdl.app.SDLActivity.9
         @Override // java.lang.Runnable
         public void run() {
             if (Build.VERSION.SDK_INT >= SDLActivity.SDL_SYSTEM_CURSOR_ROW_RESIZE) {
@@ -188,6 +188,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     public static native void nativeSendQuit();
 
     public static native void nativeSetNaturalOrientation(int i);
+
+    public static native void nativeSetScreenHDRHeadroom(float f);
 
     public static native void nativeSetScreenResolution(int i, int i2, int i3, int i4, float f, float f2);
 
@@ -972,6 +974,20 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         mSingleton.setRequestedOrientation(i5);
     }
 
+    public static void setDesiredHDRHeadroom(final float f) {
+        SDLActivity sDLActivity;
+        if (Build.VERSION.SDK_INT >= 35 && (sDLActivity = mSingleton) != null) {
+            sDLActivity.runOnUiThread(new Runnable() { // from class: org.libsdl.app.SDLActivity.4
+                @Override // java.lang.Runnable
+                public void run() {
+                    if (SDLActivity.mSurface != null) {
+                        SDLActivity.mSurface.setDesiredHDRHeadroom(f);
+                    }
+                }
+            });
+        }
+    }
+
     public static void minimizeWindow() {
         if (mSingleton == null) {
             return;
@@ -1169,9 +1185,6 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         int deviceId = keyEvent.getDeviceId();
         int source = keyEvent.getSource();
         InputDevice device = InputDevice.getDevice(deviceId);
-        if ((keyEvent.getFlags() & 1024) != 0) {
-            return true;
-        }
         if (source == 0 && device != null) {
             source = device.getSources();
         }
@@ -1235,7 +1248,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         bundle.putIntArray("buttonIds", iArr2);
         bundle.putStringArray("buttonTexts", strArr);
         bundle.putIntArray("colors", iArr3);
-        runOnUiThread(new Runnable() { // from class: org.libsdl.app.SDLActivity.4
+        runOnUiThread(new Runnable() { // from class: org.libsdl.app.SDLActivity.5
             @Override // java.lang.Runnable
             public void run() {
                 SDLActivity.this.messageboxCreateAndShow(bundle);
@@ -1271,7 +1284,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         final AlertDialog alertDialogCreate = new AlertDialog.Builder(this).create();
         alertDialogCreate.setTitle(bundle.getString("title"));
         alertDialogCreate.setCancelable(false);
-        alertDialogCreate.setOnDismissListener(new DialogInterface.OnDismissListener() { // from class: org.libsdl.app.SDLActivity.5
+        alertDialogCreate.setOnDismissListener(new DialogInterface.OnDismissListener() { // from class: org.libsdl.app.SDLActivity.6
             @Override // android.content.DialogInterface.OnDismissListener
             public void onDismiss(DialogInterface dialogInterface) {
                 synchronized (SDLActivity.this.messageboxSelection) {
@@ -1295,7 +1308,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         for (int i6 = 0; i6 < stringArray.length; i6++) {
             Button button = new Button(this);
             final int i7 = intArray3[i6];
-            button.setOnClickListener(new View.OnClickListener() { // from class: org.libsdl.app.SDLActivity.6
+            button.setOnClickListener(new View.OnClickListener() { // from class: org.libsdl.app.SDLActivity.7
                 @Override // android.view.View.OnClickListener
                 public void onClick(View view) {
                     SDLActivity.this.messageboxSelection[0] = i7;
@@ -1333,7 +1346,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             linearLayout2.setBackgroundColor(i);
         }
         alertDialogCreate.setView(linearLayout2);
-        alertDialogCreate.setOnKeyListener(new DialogInterface.OnKeyListener() { // from class: org.libsdl.app.SDLActivity.7
+        alertDialogCreate.setOnKeyListener(new DialogInterface.OnKeyListener() { // from class: org.libsdl.app.SDLActivity.8
             @Override // android.content.DialogInterface.OnKeyListener
             public boolean onKey(DialogInterface dialogInterface, int i9, KeyEvent keyEvent) {
                 Button button2 = (Button) sparseArray.get(i9);
@@ -1397,7 +1410,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     public static boolean setCustomCursor(int i) {
         if (Build.VERSION.SDK_INT >= SDL_SYSTEM_CURSOR_ALIAS) {
             try {
-                mSurface.setPointerIcon(SDLSurface$$ExternalSyntheticApiModelOutline0.m29m((Object) mCursors.get(Integer.valueOf(i))));
+                mSurface.setPointerIcon(SDLSurface$$ExternalSyntheticApiModelOutline0.m31m((Object) mCursors.get(Integer.valueOf(i))));
                 return true;
             } catch (Exception unused) {
             }

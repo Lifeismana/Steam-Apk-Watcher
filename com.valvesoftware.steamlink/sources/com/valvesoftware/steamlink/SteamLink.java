@@ -222,7 +222,8 @@ public class SteamLink extends SDLActivity {
         this.m_nDisplayHeight = defaultDisplay.getHeight();
         SurfaceView surfaceView = new SurfaceView(getApplication());
         this.m_videoSurface = surfaceView;
-        surfaceView.getHolder().addCallback(new VideoSurfaceCallback());
+        surfaceView.setZOrderMediaOverlay(true);
+        this.m_videoSurface.getHolder().addCallback(new VideoSurfaceCallback());
         mLayout.addView(this.m_videoSurface);
         this.m_nOverlayWidth = 1280;
         this.m_nOverlayHeight = 256;
