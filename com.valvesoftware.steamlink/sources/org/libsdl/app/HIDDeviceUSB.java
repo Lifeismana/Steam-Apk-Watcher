@@ -14,15 +14,16 @@ class HIDDeviceUSB implements HIDDevice {
     protected UsbDeviceConnection mConnection;
     protected UsbDevice mDevice;
     protected int mDeviceId;
-    protected boolean mFrozen;
+    protected volatile boolean mFrozen;
     protected UsbEndpoint mInputEndpoint;
     protected InputThread mInputThread;
     protected int mInterface;
     protected int mInterfaceIndex;
     protected HIDDeviceManager mManager;
     protected UsbEndpoint mOutputEndpoint;
-    protected boolean mRunning = false;
-    protected boolean mClaimed = false;
+    protected final Object mFrozenLock = new Object();
+    protected volatile boolean mRunning = false;
+    protected volatile boolean mClaimed = false;
 
     @Override // org.libsdl.app.HIDDevice
     public int getVersion() {
@@ -131,9 +132,7 @@ class HIDDeviceUSB implements HIDDevice {
     public int writeReport(byte[] bArr, boolean z) {
         int i;
         boolean z2;
-        int i2;
-        UsbDeviceConnection usbDeviceConnection = this.mConnection;
-        if (usbDeviceConnection == null) {
+        if (this.mConnection == null) {
             Log.w(TAG, "writeReport() called with no device connection");
             return -1;
         }
@@ -145,17 +144,17 @@ class HIDDeviceUSB implements HIDDevice {
             int length = bArr.length;
             byte b = bArr[0];
             if (b == 0) {
-                i = length - 1;
+                length--;
+                i = 1;
                 z2 = true;
-                i2 = 1;
             } else {
-                i = length;
+                i = 0;
                 z2 = false;
-                i2 = 0;
             }
-            int iControlTransfer = usbDeviceConnection.controlTransfer(33, 9, b | 768, this.mInterface, bArr, i2, i, 1000);
+            int i2 = length;
+            int iControlTransfer = this.mConnection.controlTransfer(33, 9, b | 768, this.mInterface, bArr, i, i2, 1000);
             if (iControlTransfer >= 0) {
-                return z2 ? i + 1 : i;
+                return z2 ? i2 + 1 : i2;
             }
             Log.w(TAG, "writeFeatureReport() returned " + iControlTransfer + " on device " + getDeviceName());
             return -1;
@@ -165,7 +164,7 @@ class HIDDeviceUSB implements HIDDevice {
             Log.e(TAG, "Tried to write an output report to an interface with no output endpoint!");
             return -1;
         }
-        int iBulkTransfer = usbDeviceConnection.bulkTransfer(usbEndpoint, bArr, bArr.length, 1000);
+        int iBulkTransfer = this.mConnection.bulkTransfer(usbEndpoint, bArr, bArr.length, 1000);
         if (iBulkTransfer != bArr.length) {
             Log.w(TAG, "writeOutputReport() returned " + iBulkTransfer + " on device " + getDeviceName());
         }
@@ -178,9 +177,7 @@ class HIDDeviceUSB implements HIDDevice {
         boolean z2;
         int length = bArr.length;
         byte b = bArr[0];
-        int i2 = length;
-        UsbDeviceConnection usbDeviceConnection = this.mConnection;
-        if (usbDeviceConnection == null) {
+        if (this.mConnection == null) {
             Log.w(TAG, "readReport() called with no device connection");
             return false;
         }
@@ -188,24 +185,24 @@ class HIDDeviceUSB implements HIDDevice {
             return !z;
         }
         if (b == 0) {
-            i2--;
+            length--;
             i = 1;
             z2 = true;
         } else {
             i = 0;
             z2 = false;
         }
-        int i3 = i2;
-        int iControlTransfer = usbDeviceConnection.controlTransfer(161, 1, ((z ? 3 : 1) << 8) | b, this.mInterface, bArr, i, i3, 1000);
+        int i2 = length;
+        int iControlTransfer = this.mConnection.controlTransfer(161, 1, ((z ? 3 : 1) << 8) | b, this.mInterface, bArr, i, i2, 1000);
         if (iControlTransfer < 0) {
             Log.w(TAG, "getFeatureReport() returned " + iControlTransfer + " on device " + getDeviceName());
             return false;
         }
         if (z2) {
             iControlTransfer++;
-            i3++;
+            i2++;
         }
-        this.mManager.HIDDeviceReportResponse(this.mDeviceId, iControlTransfer == i3 ? bArr : Arrays.copyOfRange(bArr, 0, iControlTransfer));
+        this.mManager.HIDDeviceReportResponse(this.mDeviceId, iControlTransfer == i2 ? bArr : Arrays.copyOfRange(bArr, 0, iControlTransfer));
         return true;
     }
 
@@ -240,26 +237,37 @@ class HIDDeviceUSB implements HIDDevice {
 
     @Override // org.libsdl.app.HIDDevice
     public void setFrozen(boolean z) {
-        this.mFrozen = z;
-        if (this.mConnection == null || this.mClaimed != z) {
-            return;
+        synchronized (this.mFrozenLock) {
+            this.mFrozen = z;
+            this.mFrozenLock.notifyAll();
         }
+    }
+
+    protected void waitWhileFrozen() {
         UsbInterface usbInterface = this.mDevice.getInterface(this.mInterfaceIndex);
-        if (z) {
-            boolean zReleaseInterface = this.mConnection.releaseInterface(usbInterface);
-            this.mClaimed = !zReleaseInterface;
-            if (zReleaseInterface) {
-                return;
+        if (this.mClaimed) {
+            if (this.mConnection.releaseInterface(usbInterface)) {
+                this.mClaimed = false;
+            } else {
+                Log.e(TAG, "Tried to release claim on USB device, but failed!");
             }
-            Log.e(TAG, "Tried to release claim on USB device, but failed!");
+        }
+        synchronized (this.mFrozenLock) {
+            while (this.mRunning && this.mFrozen) {
+                try {
+                    this.mFrozenLock.wait();
+                } catch (InterruptedException unused) {
+                }
+            }
+        }
+        if (!this.mRunning || this.mClaimed) {
             return;
         }
-        boolean zClaimInterface = this.mConnection.claimInterface(usbInterface, true);
-        this.mClaimed = zClaimInterface;
-        if (zClaimInterface) {
-            return;
+        if (this.mConnection.claimInterface(usbInterface, true)) {
+            this.mClaimed = true;
+        } else {
+            Log.e(TAG, "Tried to regain claim on USB device, but failed!");
         }
-        Log.e(TAG, "Tried to regain claim on USB device, but failed!");
     }
 
     protected class InputThread extends Thread {
@@ -271,17 +279,21 @@ class HIDDeviceUSB implements HIDDevice {
             int maxPacketSize = HIDDeviceUSB.this.mInputEndpoint.getMaxPacketSize();
             byte[] bArr = new byte[maxPacketSize];
             while (HIDDeviceUSB.this.mRunning) {
-                try {
-                    int iBulkTransfer = HIDDeviceUSB.this.mConnection.bulkTransfer(HIDDeviceUSB.this.mInputEndpoint, bArr, maxPacketSize, 1000);
-                    if (iBulkTransfer > 0) {
-                        byte[] bArrCopyOfRange = iBulkTransfer == maxPacketSize ? bArr : Arrays.copyOfRange(bArr, 0, iBulkTransfer);
-                        if (!HIDDeviceUSB.this.mFrozen) {
-                            HIDDeviceUSB.this.mManager.HIDDeviceInputReport(HIDDeviceUSB.this.mDeviceId, bArrCopyOfRange);
+                if (HIDDeviceUSB.this.mFrozen) {
+                    HIDDeviceUSB.this.waitWhileFrozen();
+                } else {
+                    try {
+                        int iBulkTransfer = HIDDeviceUSB.this.mConnection.bulkTransfer(HIDDeviceUSB.this.mInputEndpoint, bArr, maxPacketSize, 1000);
+                        if (iBulkTransfer > 0) {
+                            byte[] bArrCopyOfRange = iBulkTransfer == maxPacketSize ? bArr : Arrays.copyOfRange(bArr, 0, iBulkTransfer);
+                            if (!HIDDeviceUSB.this.mFrozen) {
+                                HIDDeviceUSB.this.mManager.HIDDeviceInputReport(HIDDeviceUSB.this.mDeviceId, bArrCopyOfRange);
+                            }
                         }
+                    } catch (Exception e) {
+                        Log.v(HIDDeviceUSB.TAG, "Exception in UsbDeviceConnection bulktransfer: " + e);
+                        return;
                     }
-                } catch (Exception e) {
-                    Log.v(HIDDeviceUSB.TAG, "Exception in UsbDeviceConnection bulktransfer: " + e);
-                    return;
                 }
             }
         }

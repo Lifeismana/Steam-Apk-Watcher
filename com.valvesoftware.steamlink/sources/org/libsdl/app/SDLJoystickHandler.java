@@ -8,6 +8,9 @@ import android.hardware.lights.LightState;
 import android.hardware.lights.LightsManager;
 import android.hardware.lights.LightsRequest;
 import android.os.Build;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.SystemClock;
 import android.view.InputDevice;
 import android.view.MotionEvent;
 import java.util.ArrayList;
@@ -20,7 +23,10 @@ import java.util.List;
 /* JADX INFO: compiled from: SDLControllerManager.java */
 /* JADX INFO: loaded from: classes.dex */
 class SDLJoystickHandler {
+    private static final long INPUT_DEVICE_SETTLE_TIME_MS = 50;
+    private volatile long mLastInputDeviceChangeTime;
     private final ArrayList<SDLJoystick> mJoysticks = new ArrayList<>();
+    private final Handler mHandler = new Handler(Looper.getMainLooper());
 
     /* JADX INFO: compiled from: SDLControllerManager.java */
     static class SDLJoystick {
@@ -35,6 +41,8 @@ class SDLJoystickHandler {
         String name;
         SDLJoySensorListener sensorListener;
         SensorManager sensorManager;
+        boolean sensorsEnabled;
+        volatile boolean sensorsRequested;
 
         SDLJoystick() {
         }
@@ -74,6 +82,32 @@ class SDLJoystickHandler {
     }
 
     SDLJoystickHandler() {
+    }
+
+    private void postWhenInputDevicesSettle(final Runnable runnable) {
+        this.mHandler.post(new Runnable() { // from class: org.libsdl.app.SDLJoystickHandler.1
+            @Override // java.lang.Runnable
+            public void run() {
+                long jUptimeMillis = (SDLJoystickHandler.this.mLastInputDeviceChangeTime + SDLJoystickHandler.INPUT_DEVICE_SETTLE_TIME_MS) - SystemClock.uptimeMillis();
+                if (jUptimeMillis > 0) {
+                    SDLJoystickHandler.this.mHandler.postDelayed(this, jUptimeMillis);
+                } else {
+                    runnable.run();
+                }
+            }
+        });
+    }
+
+    void deviceChanged(final int i) {
+        this.mLastInputDeviceChangeTime = SystemClock.uptimeMillis();
+        postWhenInputDevicesSettle(new Runnable() { // from class: org.libsdl.app.SDLJoystickHandler.2
+            @Override // java.lang.Runnable
+            public void run() {
+                if (SDLControllerManager.isDeviceSDLJoystick(i)) {
+                    SDLJoystickHandler.this.deviceAdded(i);
+                }
+            }
+        });
     }
 
     synchronized void detectDevices() {
@@ -149,6 +183,7 @@ class SDLJoystickHandler {
     }
 
     void deviceRemoved(int i) {
+        this.mLastInputDeviceChangeTime = SystemClock.uptimeMillis();
         for (int i2 = 0; i2 < this.mJoysticks.size(); i2++) {
             if (this.mJoysticks.get(i2).device_id == i) {
                 SDLControllerManager.nativeRemoveJoystick(i);
@@ -259,21 +294,36 @@ class SDLJoystickHandler {
         if (Build.VERSION.SDK_INT < 31 || (joystick = getJoystick(i)) == null || joystick.sensorManager == null) {
             return;
         }
-        if (z) {
-            if (joystick.accelerometerSensor != null) {
-                SDLSensorManager.registerListener(joystick.sensorManager, joystick.sensorListener, joystick.accelerometerSensor, 1);
+        joystick.sensorsRequested = z;
+        updateSensors(i);
+    }
+
+    private void updateSensors(final int i) {
+        postWhenInputDevicesSettle(new Runnable() { // from class: org.libsdl.app.SDLJoystickHandler.3
+            @Override // java.lang.Runnable
+            public void run() {
+                SDLJoystick joystick = SDLJoystickHandler.this.getJoystick(i);
+                if (joystick == null || joystick.sensorsEnabled == joystick.sensorsRequested) {
+                    return;
+                }
+                joystick.sensorsEnabled = joystick.sensorsRequested;
+                if (joystick.sensorsEnabled) {
+                    if (joystick.accelerometerSensor != null) {
+                        SDLSensorManager.registerListener(joystick.sensorManager, joystick.sensorListener, joystick.accelerometerSensor, 1);
+                    }
+                    if (joystick.gyroscopeSensor != null) {
+                        SDLSensorManager.registerListener(joystick.sensorManager, joystick.sensorListener, joystick.gyroscopeSensor, 1);
+                        return;
+                    }
+                    return;
+                }
+                if (joystick.accelerometerSensor != null) {
+                    SDLSensorManager.unregisterListener(joystick.sensorManager, joystick.sensorListener, joystick.accelerometerSensor);
+                }
+                if (joystick.gyroscopeSensor != null) {
+                    SDLSensorManager.unregisterListener(joystick.sensorManager, joystick.sensorListener, joystick.gyroscopeSensor);
+                }
             }
-            if (joystick.gyroscopeSensor != null) {
-                SDLSensorManager.registerListener(joystick.sensorManager, joystick.sensorListener, joystick.gyroscopeSensor, 1);
-                return;
-            }
-            return;
-        }
-        if (joystick.accelerometerSensor != null) {
-            SDLSensorManager.unregisterListener(joystick.sensorManager, joystick.sensorListener, joystick.accelerometerSensor);
-        }
-        if (joystick.gyroscopeSensor != null) {
-            SDLSensorManager.unregisterListener(joystick.sensorManager, joystick.sensorListener, joystick.gyroscopeSensor);
-        }
+        });
     }
 }

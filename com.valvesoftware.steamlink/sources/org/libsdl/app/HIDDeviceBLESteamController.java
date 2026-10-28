@@ -463,7 +463,7 @@ class HIDDeviceBLESteamController extends BluetoothGattCallback implements HIDDe
     }
 
     @Override // android.bluetooth.BluetoothGattCallback
-    public void onConnectionStateChange(BluetoothGatt bluetoothGatt, int i, int i2) {
+    public void onConnectionStateChange(final BluetoothGatt bluetoothGatt, int i, int i2) {
         this.mIsReconnecting = false;
         if (i2 != 2) {
             if (i2 == 0) {
@@ -477,7 +477,10 @@ class HIDDeviceBLESteamController extends BluetoothGattCallback implements HIDDe
             this.mHandler.post(new Runnable() { // from class: org.libsdl.app.HIDDeviceBLESteamController.4
                 @Override // java.lang.Runnable
                 public void run() {
-                    HIDDeviceBLESteamController.this.mGatt.discoverServices();
+                    if (HIDDeviceBLESteamController.this.mManager == null) {
+                        return;
+                    }
+                    bluetoothGatt.discoverServices();
                 }
             });
         }

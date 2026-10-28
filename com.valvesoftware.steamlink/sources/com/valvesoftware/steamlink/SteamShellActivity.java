@@ -4,12 +4,16 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.ComponentName;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.os.SystemClock;
 import android.util.Log;
 import android.view.InputDevice;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
+import android.window.OnBackInvokedCallback;
 import org.libsdl.app.HIDDeviceManager;
 import org.libsdl.app.SDL;
 import org.libsdl.app.SDLActivity;
@@ -20,21 +24,26 @@ import org.qtproject.qt5.android.bindings.QtApplication;
 /* JADX INFO: loaded from: classes.dex */
 public class SteamShellActivity extends QtActivity {
     public static final String TAG = "SteamShell";
+    OnBackInvokedCallback backButtonCallback;
     private HIDDeviceManager mHIDDeviceManager;
     private VirtualHere mVirtualHere;
     private boolean mStreamingInProgress = false;
     private Object mStreamingComplete = new Object();
+    boolean mBackKeyTrapEnabled = false;
     protected final int[] messageboxSelection = new int[1];
 
     public int messageboxShowMessageBox(int i, String str, String str2, int[] iArr, int[] iArr2, String[] strArr, int[] iArr3) {
         return -1;
     }
 
+    native void nativeSendEscape(boolean z);
+
     @Override // org.qtproject.qt5.android.bindings.QtActivity, android.app.Activity
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         this.mHIDDeviceManager = HIDDeviceManager.acquire(this);
         this.mVirtualHere = VirtualHere.acquire(this);
+        setBackButtonTrapEnabled(true);
         startActivity();
     }
 
@@ -83,6 +92,9 @@ public class SteamShellActivity extends QtActivity {
     @Override // org.qtproject.qt5.android.bindings.QtActivity, android.app.Activity
     protected void onDestroy() {
         super.onDestroy();
+        if (!this.mStreamingInProgress) {
+            QtApplication.invokeDelegate(new Object[0]);
+        }
         stopActivity();
         HIDDeviceManager hIDDeviceManager = this.mHIDDeviceManager;
         if (hIDDeviceManager != null) {
@@ -94,10 +106,36 @@ public class SteamShellActivity extends QtActivity {
             VirtualHere.release(virtualHere);
             this.mVirtualHere = null;
         }
-        if (this.mStreamingInProgress) {
-            return;
+    }
+
+    public void setBackButtonTrapEnabled(boolean z) {
+        if (Build.VERSION.SDK_INT >= 33 && z != this.mBackKeyTrapEnabled) {
+            if (this.backButtonCallback == null) {
+                this.backButtonCallback = new OnBackInvokedCallback() { // from class: com.valvesoftware.steamlink.SteamShellActivity.1
+                    Handler mBackKeyHandler;
+
+                    @Override // android.window.OnBackInvokedCallback
+                    public void onBackInvoked() {
+                        if (this.mBackKeyHandler == null) {
+                            this.mBackKeyHandler = new Handler(Looper.getMainLooper());
+                        }
+                        SteamShellActivity.this.nativeSendEscape(true);
+                        this.mBackKeyHandler.postDelayed(new Runnable() { // from class: com.valvesoftware.steamlink.SteamShellActivity.1.1
+                            @Override // java.lang.Runnable
+                            public void run() {
+                                SteamShellActivity.this.nativeSendEscape(false);
+                            }
+                        }, 500L);
+                    }
+                };
+            }
+            if (z) {
+                getOnBackInvokedDispatcher().registerOnBackInvokedCallback(0, this.backButtonCallback);
+            } else {
+                getOnBackInvokedDispatcher().unregisterOnBackInvokedCallback(this.backButtonCallback);
+            }
+            this.mBackKeyTrapEnabled = z;
         }
-        QtApplication.invokeDelegate(new Object[0]);
     }
 
     @Override // org.qtproject.qt5.android.bindings.QtActivity, android.app.Activity, android.view.KeyEvent.Callback
@@ -136,7 +174,7 @@ public class SteamShellActivity extends QtActivity {
     }
 
     public void startStreaming(String[] strArr, int i) {
-        Runnable runnable = new Runnable() { // from class: com.valvesoftware.steamlink.SteamShellActivity.1
+        Runnable runnable = new Runnable() { // from class: com.valvesoftware.steamlink.SteamShellActivity.2
             @Override // java.lang.Runnable
             public void run() {
                 SteamShellActivity.this.stopActivity();
@@ -166,7 +204,7 @@ public class SteamShellActivity extends QtActivity {
         } catch (InterruptedException unused2) {
         }
         this.mStreamingInProgress = false;
-        Runnable runnable2 = new Runnable() { // from class: com.valvesoftware.steamlink.SteamShellActivity.2
+        Runnable runnable2 = new Runnable() { // from class: com.valvesoftware.steamlink.SteamShellActivity.3
             @Override // java.lang.Runnable
             public void run() {
                 SteamShellActivity.this.startActivity();

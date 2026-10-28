@@ -10,16 +10,12 @@ class SDLDeviceListener implements InputManager.InputDeviceListener {
 
     @Override // android.hardware.input.InputManager.InputDeviceListener
     public void onInputDeviceAdded(int i) {
-        if (SDLControllerManager.isDeviceSDLJoystick(i)) {
-            SDLControllerManager.mJoystickHandler.deviceAdded(i);
-        }
+        SDLControllerManager.mJoystickHandler.deviceChanged(i);
     }
 
     @Override // android.hardware.input.InputManager.InputDeviceListener
     public void onInputDeviceChanged(int i) {
-        if (SDLControllerManager.isDeviceSDLJoystick(i)) {
-            SDLControllerManager.mJoystickHandler.deviceAdded(i);
-        }
+        SDLControllerManager.mJoystickHandler.deviceChanged(i);
     }
 
     @Override // android.hardware.input.InputManager.InputDeviceListener

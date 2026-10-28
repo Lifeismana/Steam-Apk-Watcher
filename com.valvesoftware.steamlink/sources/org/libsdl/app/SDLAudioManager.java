@@ -12,6 +12,7 @@ import android.util.Log;
 class SDLAudioManager {
     protected static final String TAG = "SDLAudio";
     private static AudioDeviceCallback mAudioDeviceCallback;
+    private static AudioManager mAudioDeviceCallbackManager;
     protected static Context mContext;
 
     static native void nativeAddAudioDevice(boolean z, String str, int i);
@@ -52,10 +53,11 @@ class SDLAudioManager {
     }
 
     private static AudioDeviceInfo getInputAudioDeviceInfo(int i) {
-        if (Build.VERSION.SDK_INT < 24) {
+        Context context;
+        if (Build.VERSION.SDK_INT < 24 || (context = mContext) == null) {
             return null;
         }
-        for (AudioDeviceInfo audioDeviceInfo : ((AudioManager) mContext.getSystemService("audio")).getDevices(1)) {
+        for (AudioDeviceInfo audioDeviceInfo : ((AudioManager) context.getSystemService("audio")).getDevices(1)) {
             if (audioDeviceInfo.getId() == i) {
                 return audioDeviceInfo;
             }
@@ -64,10 +66,11 @@ class SDLAudioManager {
     }
 
     private static AudioDeviceInfo getPlaybackAudioDeviceInfo(int i) {
-        if (Build.VERSION.SDK_INT < 24) {
+        Context context;
+        if (Build.VERSION.SDK_INT < 24 || (context = mContext) == null) {
             return null;
         }
-        for (AudioDeviceInfo audioDeviceInfo : ((AudioManager) mContext.getSystemService("audio")).getDevices(2)) {
+        for (AudioDeviceInfo audioDeviceInfo : ((AudioManager) context.getSystemService("audio")).getDevices(2)) {
             if (audioDeviceInfo.getId() == i) {
                 return audioDeviceInfo;
             }
@@ -76,24 +79,30 @@ class SDLAudioManager {
     }
 
     static void registerAudioDeviceCallback() {
-        if (Build.VERSION.SDK_INT >= 24) {
-            AudioManager audioManager = (AudioManager) mContext.getSystemService("audio");
-            for (AudioDeviceInfo audioDeviceInfo : audioManager.getDevices(2)) {
-                if (audioDeviceInfo.getType() != 18) {
-                    nativeAddAudioDevice(audioDeviceInfo.isSink(), audioDeviceInfo.getProductName().toString(), audioDeviceInfo.getId());
-                }
-            }
-            for (AudioDeviceInfo audioDeviceInfo2 : audioManager.getDevices(1)) {
-                nativeAddAudioDevice(audioDeviceInfo2.isSink(), audioDeviceInfo2.getProductName().toString(), audioDeviceInfo2.getId());
-            }
-            audioManager.registerAudioDeviceCallback(mAudioDeviceCallback, null);
+        Context context;
+        if (Build.VERSION.SDK_INT < 24 || (context = mContext) == null) {
+            return;
         }
+        AudioManager audioManager = (AudioManager) context.getSystemService("audio");
+        for (AudioDeviceInfo audioDeviceInfo : audioManager.getDevices(2)) {
+            if (audioDeviceInfo.getType() != 18) {
+                nativeAddAudioDevice(audioDeviceInfo.isSink(), audioDeviceInfo.getProductName().toString(), audioDeviceInfo.getId());
+            }
+        }
+        for (AudioDeviceInfo audioDeviceInfo2 : audioManager.getDevices(1)) {
+            nativeAddAudioDevice(audioDeviceInfo2.isSink(), audioDeviceInfo2.getProductName().toString(), audioDeviceInfo2.getId());
+        }
+        audioManager.registerAudioDeviceCallback(mAudioDeviceCallback, null);
+        mAudioDeviceCallbackManager = audioManager;
     }
 
     static void unregisterAudioDeviceCallback() {
-        if (Build.VERSION.SDK_INT >= 24) {
-            ((AudioManager) mContext.getSystemService("audio")).unregisterAudioDeviceCallback(mAudioDeviceCallback);
+        AudioManager audioManager;
+        if (Build.VERSION.SDK_INT < 24 || (audioManager = mAudioDeviceCallbackManager) == null) {
+            return;
         }
+        audioManager.unregisterAudioDeviceCallback(mAudioDeviceCallback);
+        mAudioDeviceCallbackManager = null;
     }
 
     static void audioSetThreadPriority(boolean z, int i) {
