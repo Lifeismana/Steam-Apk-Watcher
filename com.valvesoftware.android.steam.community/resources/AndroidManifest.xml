@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    android:versionCode="10928360"
-    android:versionName="3.10.11"
-    android:compileSdkVersion="35"
-    android:compileSdkVersionCodename="15"
+    android:versionCode="11185642"
+    android:versionName="3.10.12"
+    android:compileSdkVersion="36"
+    android:compileSdkVersionCodename="16"
     package="com.valvesoftware.android.steam.community"
-    platformBuildVersionCode="35"
-    platformBuildVersionName="15">
+    platformBuildVersionCode="36"
+    platformBuildVersionName="16">
     <uses-sdk
         android:minSdkVersion="26"
-        android:targetSdkVersion="35"/>
+        android:targetSdkVersion="36"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
