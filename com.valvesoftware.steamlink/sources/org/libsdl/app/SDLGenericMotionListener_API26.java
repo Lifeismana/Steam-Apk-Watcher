@@ -6,7 +6,7 @@ import android.view.View;
 
 /* JADX INFO: compiled from: SDLControllerManager.java */
 /* JADX INFO: loaded from: classes.dex */
-class SDLGenericMotionListener_API26 extends SDLGenericMotionListener_API24 {
+class SDLGenericMotionListener_API26 extends SDLGenericMotionListener_API24 implements View.OnCapturedPointerListener {
     private boolean mRelativeModeEnabled;
 
     SDLGenericMotionListener_API26() {
@@ -22,9 +22,20 @@ class SDLGenericMotionListener_API26 extends SDLGenericMotionListener_API24 {
         return this.mRelativeModeEnabled;
     }
 
-    @Override // org.libsdl.app.SDLGenericMotionListener_API14, android.view.View.OnCapturedPointerListener
+    @Override // android.view.View.OnCapturedPointerListener
     public boolean onCapturedPointer(View view, MotionEvent motionEvent) {
-        SDLActivity.onNativeMouse(motionEvent.getButtonState(), motionEvent.getActionMasked(), motionEvent.getX(), motionEvent.getY(), true);
+        float x;
+        float y;
+        int buttonState = motionEvent.getButtonState();
+        int actionMasked = motionEvent.getActionMasked();
+        if (actionMasked == 8) {
+            x = motionEvent.getAxisValue(10);
+            y = motionEvent.getAxisValue(9);
+        } else {
+            x = motionEvent.getX();
+            y = motionEvent.getY();
+        }
+        SDLActivity.onNativeMouse(buttonState, actionMasked, x, y, true);
         return true;
     }
 

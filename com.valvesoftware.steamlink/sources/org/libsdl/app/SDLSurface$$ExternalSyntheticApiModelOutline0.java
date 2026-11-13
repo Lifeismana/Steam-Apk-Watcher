@@ -4,6 +4,7 @@ import android.hardware.lights.Light;
 import android.hardware.lights.LightState;
 import android.hardware.lights.LightsRequest;
 import android.view.PointerIcon;
+import android.view.View;
 
 /* JADX INFO: compiled from: D8$$SyntheticClass */
 /* JADX INFO: loaded from: classes.dex */
@@ -26,5 +27,10 @@ public final /* synthetic */ class SDLSurface$$ExternalSyntheticApiModelOutline0
     /* JADX INFO: renamed from: m */
     public static /* bridge */ /* synthetic */ PointerIcon m31m(Object obj) {
         return (PointerIcon) obj;
+    }
+
+    /* JADX INFO: renamed from: m */
+    public static /* bridge */ /* synthetic */ View.OnCapturedPointerListener m32m(Object obj) {
+        return (View.OnCapturedPointerListener) obj;
     }
 }

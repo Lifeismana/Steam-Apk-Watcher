@@ -419,6 +419,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         SDL.initialize();
         mSingleton = this;
         SDL.setContext(this);
+        getManifestEnvironmentVariables();
         if (SDL.isControllerManagerReady()) {
             SDLControllerManager.initializeDeviceListener();
         }

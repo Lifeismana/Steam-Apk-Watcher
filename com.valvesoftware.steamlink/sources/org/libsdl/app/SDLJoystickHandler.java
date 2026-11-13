@@ -23,7 +23,8 @@ import java.util.List;
 /* JADX INFO: compiled from: SDLControllerManager.java */
 /* JADX INFO: loaded from: classes.dex */
 class SDLJoystickHandler {
-    private static final long INPUT_DEVICE_SETTLE_TIME_MS = 50;
+    private static final String[] HID_COLLECTION_SUFFIXES = {" Consumer Control", " System Control", " Keyboard", " Mouse"};
+    private static final long INPUT_DEVICE_SETTLE_TIME_MS = 200;
     private volatile long mLastInputDeviceChangeTime;
     private final ArrayList<SDLJoystick> mJoysticks = new ArrayList<>();
     private final Handler mHandler = new Handler(Looper.getMainLooper());
@@ -130,7 +131,7 @@ class SDLJoystickHandler {
         if (joystick == null) {
             joystick = new SDLJoystick();
             joystick.device_id = i;
-            joystick.name = device.getName();
+            joystick.name = getJoystickName(device);
             joystick.desc = getJoystickDescriptor(device);
             joystick.axes = new ArrayList<>();
             joystick.hats = new ArrayList<>();
@@ -223,6 +224,18 @@ class SDLJoystickHandler {
             }
         }
         return true;
+    }
+
+    String getJoystickName(InputDevice inputDevice) {
+        String name = inputDevice.getName();
+        if ((inputDevice.getSources() & 1025) == 1025) {
+            for (String str : HID_COLLECTION_SUFFIXES) {
+                if (name.endsWith(str) && name.length() > str.length()) {
+                    return name.substring(0, name.length() - str.length());
+                }
+            }
+        }
+        return name;
     }
 
     String getJoystickDescriptor(InputDevice inputDevice) {

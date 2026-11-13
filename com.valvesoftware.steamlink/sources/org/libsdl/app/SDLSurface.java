@@ -53,12 +53,11 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
             @Override // java.lang.Runnable
             public void run() {
                 try {
-                    if (SDLSurface.this.mDisplay.getHdrSdrRatio() <= 1.01f) {
-                        return;
+                    if (Build.VERSION.SDK_INT < 34 || SDLSurface.this.mDisplay.getHdrSdrRatio() > 1.01f) {
+                        SDLSurface.this.mHDRStable = true;
+                        SDLSurface.this.mHDRMeasured = true;
+                        SDLSurface.this.updateHDRHeadroom();
                     }
-                    SDLSurface.this.mHDRStable = true;
-                    SDLSurface.this.mHDRMeasured = true;
-                    SDLSurface.this.updateHDRHeadroom();
                 } catch (Exception unused) {
                 }
             }
@@ -78,7 +77,7 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
         this.mHeight = 1.0f;
         this.mIsSurfaceReady = false;
         if (Build.VERSION.SDK_INT >= 26) {
-            setOnCapturedPointerListener(SDLActivity.getMotionListener());
+            setOnCapturedPointerListener(SDLSurface$$ExternalSyntheticApiModelOutline0.m32m((Object) SDLActivity.getMotionListener()));
         }
     }
 
@@ -367,13 +366,9 @@ public class SDLSurface extends SurfaceView implements SurfaceHolder.Callback, V
         float estimatedHDRHeadroom = getEstimatedHDRHeadroom();
         if (this.mHDRActive && estimatedHDRHeadroom > 1.0f) {
             try {
-                if (this.mDisplay.isHdrSdrRatioAvailable()) {
+                if (Build.VERSION.SDK_INT >= 34 && this.mDisplay.isHdrSdrRatioAvailable()) {
                     float hdrSdrRatio = this.mDisplay.getHdrSdrRatio();
-                    if (this.mHDRMeasured) {
-                        estimatedHDRHeadroom = Math.max(hdrSdrRatio, 1.01f);
-                    } else {
-                        estimatedHDRHeadroom = Math.max(estimatedHDRHeadroom, hdrSdrRatio);
-                    }
+                    estimatedHDRHeadroom = this.mHDRMeasured ? Math.max(hdrSdrRatio, 1.01f) : Math.max(estimatedHDRHeadroom, hdrSdrRatio);
                 }
             } catch (Exception unused) {
             }

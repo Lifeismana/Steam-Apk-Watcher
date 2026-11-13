@@ -8,7 +8,7 @@ import org.qtproject.qt5.android.EditContextView;
 
 /* JADX INFO: compiled from: SDLControllerManager.java */
 /* JADX INFO: loaded from: classes.dex */
-class SDLGenericMotionListener_API14 implements View.OnGenericMotionListener, View.OnCapturedPointerListener {
+class SDLGenericMotionListener_API14 implements View.OnGenericMotionListener {
     protected static final int SDL_PEN_DEVICE_TYPE_DIRECT = 1;
     protected static final int SDL_PEN_DEVICE_TYPE_INDIRECT = 2;
     protected static final int SDL_PEN_DEVICE_TYPE_UNKNOWN = 0;
@@ -18,11 +18,6 @@ class SDLGenericMotionListener_API14 implements View.OnGenericMotionListener, Vi
     }
 
     boolean inRelativeMode() {
-        return false;
-    }
-
-    @Override // android.view.View.OnCapturedPointerListener
-    public boolean onCapturedPointer(View view, MotionEvent motionEvent) {
         return false;
     }
 

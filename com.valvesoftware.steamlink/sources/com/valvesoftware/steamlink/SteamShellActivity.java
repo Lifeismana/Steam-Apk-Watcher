@@ -24,6 +24,8 @@ import org.qtproject.qt5.android.bindings.QtApplication;
 /* JADX INFO: loaded from: classes.dex */
 public class SteamShellActivity extends QtActivity {
     public static final String TAG = "SteamShell";
+    private static final Object sInputLock = new Object();
+    private static volatile boolean sShellRunning = false;
     OnBackInvokedCallback backButtonCallback;
     private HIDDeviceManager mHIDDeviceManager;
     private VirtualHere mVirtualHere;
@@ -50,6 +52,7 @@ public class SteamShellActivity extends QtActivity {
     protected void startActivity() {
         SDL.initialize();
         SDL.setContext(this);
+        SDLActivity.getManifestEnvironmentVariables();
         SDLControllerManager.initializeDeviceListener();
     }
 
@@ -91,9 +94,15 @@ public class SteamShellActivity extends QtActivity {
 
     @Override // org.qtproject.qt5.android.bindings.QtActivity, android.app.Activity
     protected void onDestroy() {
+        boolean z;
         super.onDestroy();
-        if (!this.mStreamingInProgress) {
+        if (this.mStreamingInProgress) {
+            z = false;
+        } else if (sShellRunning) {
             QtApplication.invokeDelegate(new Object[0]);
+            z = false;
+        } else {
+            z = true;
         }
         stopActivity();
         HIDDeviceManager hIDDeviceManager = this.mHIDDeviceManager;
@@ -105,6 +114,9 @@ public class SteamShellActivity extends QtActivity {
         if (virtualHere != null) {
             VirtualHere.release(virtualHere);
             this.mVirtualHere = null;
+        }
+        if (z) {
+            System.exit(0);
         }
     }
 
@@ -145,8 +157,12 @@ public class SteamShellActivity extends QtActivity {
         if (keyEvent.getSource() == 0 && (device = InputDevice.getDevice(deviceId)) != null) {
             device.getSources();
         }
-        if (SDLControllerManager.isDeviceSDLJoystick(deviceId) && keyEvent.getRepeatCount() == 0 && SDLControllerManager.onNativePadDown(deviceId, i, keyEvent.getScanCode())) {
-            return true;
+        if (SDLControllerManager.isDeviceSDLJoystick(deviceId) && keyEvent.getRepeatCount() == 0) {
+            synchronized (sInputLock) {
+                if (sShellRunning && SDLControllerManager.onNativePadDown(deviceId, i, keyEvent.getScanCode())) {
+                    return true;
+                }
+            }
         }
         return super.onKeyDown(i, keyEvent);
     }
@@ -158,8 +174,12 @@ public class SteamShellActivity extends QtActivity {
         if (keyEvent.getSource() == 0 && (device = InputDevice.getDevice(deviceId)) != null) {
             device.getSources();
         }
-        if (SDLControllerManager.isDeviceSDLJoystick(deviceId) && SDLControllerManager.onNativePadUp(deviceId, i, keyEvent.getScanCode())) {
-            return true;
+        if (SDLControllerManager.isDeviceSDLJoystick(deviceId)) {
+            synchronized (sInputLock) {
+                if (sShellRunning && SDLControllerManager.onNativePadUp(deviceId, i, keyEvent.getScanCode())) {
+                    return true;
+                }
+            }
         }
         return super.onKeyUp(i, keyEvent);
     }
@@ -168,7 +188,12 @@ public class SteamShellActivity extends QtActivity {
     public boolean onGenericMotionEvent(MotionEvent motionEvent) {
         int source = motionEvent.getSource();
         if (source == 513 || source == 1025 || source == 16777232) {
-            return SDLControllerManager.handleJoystickMotionEvent(motionEvent);
+            synchronized (sInputLock) {
+                if (sShellRunning) {
+                    return SDLControllerManager.handleJoystickMotionEvent(motionEvent);
+                }
+                return super.onGenericMotionEvent(motionEvent);
+            }
         }
         return super.onGenericMotionEvent(motionEvent);
     }
@@ -229,6 +254,12 @@ public class SteamShellActivity extends QtActivity {
 
     public static void onShellComplete() {
         System.exit(0);
+    }
+
+    public static void setShellRunning(boolean z) {
+        synchronized (sInputLock) {
+            sShellRunning = z;
+        }
     }
 
     public void startVRLink(String str, String str2) {
