@@ -1,6 +1,6 @@
-842502352958ebd9f2d8e95e383dbbb5  com.valvesoftware.android.steam.community/com.valvesoftware.android.steam.community.apk
-01b672753d592ddebd698dc49799ea15  com.valvesoftware.android.steam.community/com.valvesoftware.android.steam.community.apk.jadx.txt
-f0e14ca091a4f6b943c3d1bccd6256eb  com.valvesoftware.android.steam.community/resources/AndroidManifest.xml
+bd9de693235b6d54804d230c0b8c90a1  com.valvesoftware.android.steam.community/com.valvesoftware.android.steam.community.apk
+b61e3fa342070f3ef2e9c3e8395203ee  com.valvesoftware.android.steam.community/com.valvesoftware.android.steam.community.apk.jadx.txt
+b88fc0a449df06040ec9f10ea7eba7de  com.valvesoftware.android.steam.community/resources/AndroidManifest.xml
 139912756c7b0b4f9fbf7dab562f1852  com.valvesoftware.android.steam.community/resources/DebugProbesKt.bin
 709edc8586242d571564a7723b189790  com.valvesoftware.android.steam.community/resources/META-INF/androidx.activity_activity-ktx.version
 709edc8586242d571564a7723b189790  com.valvesoftware.android.steam.community/resources/META-INF/androidx.activity_activity.version
@@ -86,12 +86,12 @@ badec679d45bb7fa1a1c2725600ec0d4  com.valvesoftware.android.steam.community/reso
 c151b065c2051b4be2b815674202bbfd  com.valvesoftware.android.steam.community/resources/META-INF/services/kotlinx.coroutines.CoroutineExceptionHandler
 44a6dfb4905ef523a3cec7667eb4e009  com.valvesoftware.android.steam.community/resources/META-INF/services/kotlinx.coroutines.internal.MainDispatcherFactory
 6e4c205b0514417cb06c7b2e2cb37738  com.valvesoftware.android.steam.community/resources/META-INF/version-control-info.textproto
-ab8826b75c038292a01aa2cfb2f5482a  com.valvesoftware.android.steam.community/resources/assets/app.config
-249f0688a1f0803d42eb5a61227c6dac  com.valvesoftware.android.steam.community/resources/assets/app.manifest
-4dacf1f985af5674c45e728ad0354d73  com.valvesoftware.android.steam.community/resources/assets/dexopt/baseline.prof
+c7b6a4a1d10e6035f23d9e15b7c925a8  com.valvesoftware.android.steam.community/resources/assets/app.config
+90d552f25b5d39fe74e2a96835787c21  com.valvesoftware.android.steam.community/resources/assets/app.manifest
+df2ccc7659c26367f49610fe67e1bad4  com.valvesoftware.android.steam.community/resources/assets/dexopt/baseline.prof
 5cc1d88d19b74304e50bccb829120ab6  com.valvesoftware.android.steam.community/resources/assets/dexopt/baseline.profm
 9bb8a4e8e57a30fd879303104826fe82  com.valvesoftware.android.steam.community/resources/assets/expo-root.pem
-24b642d0010102aef5e197e737814d89  com.valvesoftware.android.steam.community/resources/assets/index.android.bundle
+2e96b68b8324ab44e0a378b72c2095df  com.valvesoftware.android.steam.community/resources/assets/index.android.bundle
 8e582df04920a34c3391404146b3d6b1  com.valvesoftware.android.steam.community/resources/assets/mlkit_barcode_models/barcode_ssd_mobilenet_v1_dmp25_quant.tflite
 8d60144f8069c12b910a3b5d3c764e81  com.valvesoftware.android.steam.community/resources/assets/mlkit_barcode_models/oned_auto_regressor_mobile.tflite
 bdfb83dee2429c447fc01e772906189d  com.valvesoftware.android.steam.community/resources/assets/mlkit_barcode_models/oned_feature_extractor_mobile.tflite
@@ -2980,7 +2980,7 @@ ee69d8dcbffa33adf2ecc2d03a75eb22  com.valvesoftware.android.steam.community/sour
 2eacf298cdeab8a50f1ca1e832d10194  com.valvesoftware.android.steam.community/sources/androidx/camera/core/internal/AutoValue_ImmutableZoomState.java
 ac7f989628955c973526c8b5ea936455  com.valvesoftware.android.steam.community/sources/androidx/camera/core/internal/ByteBufferOutputStream.java
 bfb468a452ad84537b21a36d2ffc939a  com.valvesoftware.android.steam.community/sources/androidx/camera/core/internal/CameraCaptureResultImageInfo.java
-7e847452b6feb265325e771284ba9ba4  com.valvesoftware.android.steam.community/sources/androidx/camera/core/internal/CameraUseCaseAdapter.java
+c1d7bce40baf169b96becfc6daab016c  com.valvesoftware.android.steam.community/sources/androidx/camera/core/internal/CameraUseCaseAdapter.java
 1f4adc4be535c3aa7c73201359b03a12  com.valvesoftware.android.steam.community/sources/androidx/camera/core/internal/ImmutableZoomState.java
 786a4b75289a6f2649429029fdfb264d  com.valvesoftware.android.steam.community/sources/androidx/camera/core/internal/IoConfig.java
 d7a88c41b050f5e5ccb61a905cf5f971  com.valvesoftware.android.steam.community/sources/androidx/camera/core/internal/ScreenFlashWrapper.java
@@ -4727,7 +4727,7 @@ d16ae210e3dfebca1d266bb494d61ffb  com.valvesoftware.android.steam.community/sour
 3d08828a867f3b4be4137928d5d6a94b  com.valvesoftware.android.steam.community/sources/com/bumptech/glide/annotation/compiler/GlideIndexer_5b4af161_006d_3791_b8db_e295cf764ec5.java
 d954382720ae6e08cbd752ca0f3a4176  com.valvesoftware.android.steam.community/sources/com/bumptech/glide/annotation/compiler/Index.java
 fa90e680b957324d23af509fa45f3bde  com.valvesoftware.android.steam.community/sources/com/bumptech/glide/annotation/ksp/Index.java
-d60b574f43a5da9a1ee0ea248bec5dd3  com.valvesoftware.android.steam.community/sources/com/bumptech/glide/disklrucache/DiskLruCache.java
+bdf2c073955cf2c8fc4bf1e370fcd1ce  com.valvesoftware.android.steam.community/sources/com/bumptech/glide/disklrucache/DiskLruCache.java
 7940b0830f52ccf2ed3e5f86c9d63c6d  com.valvesoftware.android.steam.community/sources/com/bumptech/glide/disklrucache/StrictLineReader.java
 94abfaf6b6fb9e99486ebd822507b31a  com.valvesoftware.android.steam.community/sources/com/bumptech/glide/disklrucache/Util.java
 cb48a6158d0b38bb5624650a7131d051  com.valvesoftware.android.steam.community/sources/com/bumptech/glide/gifdecoder/C1083R.java
@@ -5471,7 +5471,7 @@ c16b1fc9ba49e4b5feb08dc435fe1bc6  com.valvesoftware.android.steam.community/sour
 a60720c93a55121a0fb5c0d59a981d7e  com.valvesoftware.android.steam.community/sources/com/facebook/imagepipeline/core/DynamicDefaultDiskStorageFactory.java
 040e27354148dc053333ffb7c23452a9  com.valvesoftware.android.steam.community/sources/com/facebook/imagepipeline/core/ExecutorSupplier.java
 88c12bb6d1f157f8e027a2681cc7ecd0  com.valvesoftware.android.steam.community/sources/com/facebook/imagepipeline/core/FileCacheFactory.java
-7aa8b9061312119c013f1281bfc6e3d1  com.valvesoftware.android.steam.community/sources/com/facebook/imagepipeline/core/ImagePipeline.java
+c4c97b5e1fd763394f0501639dee9e4f  com.valvesoftware.android.steam.community/sources/com/facebook/imagepipeline/core/ImagePipeline.java
 de2919039f8b3fcb92093d78ee3e6a8b  com.valvesoftware.android.steam.community/sources/com/facebook/imagepipeline/core/ImagePipelineConfig.java
 11275d8819108b7dc0801ac9361e07f9  com.valvesoftware.android.steam.community/sources/com/facebook/imagepipeline/core/ImagePipelineConfigInterface.java
 31066eba63ae049429f21c47f9d75ff5  com.valvesoftware.android.steam.community/sources/com/facebook/imagepipeline/core/ImagePipelineExperiments.java
@@ -5595,7 +5595,7 @@ ac12505b0a185c6682ed6987dc219fb2  com.valvesoftware.android.steam.community/sour
 0fb29860d1ff44c03f19131fabece134  com.valvesoftware.android.steam.community/sources/com/facebook/imagepipeline/postprocessors/RoundedCornersPostprocessor.java
 59414881eae87a3fc68bb2b10f434dc2  com.valvesoftware.android.steam.community/sources/com/facebook/imagepipeline/postprocessors/TintPostProcessor.java
 e29ac8c937636c2c48c9b54dcb78c518  com.valvesoftware.android.steam.community/sources/com/facebook/imagepipeline/producers/AddImageTransformMetaDataProducer.java
-f82731d3e97fc5dd6f4fdbae39b7e234  com.valvesoftware.android.steam.community/sources/com/facebook/imagepipeline/producers/BaseConsumer.java
+e0f40e8b69ea40ba9d9ae0340ce2ed81  com.valvesoftware.android.steam.community/sources/com/facebook/imagepipeline/producers/BaseConsumer.java
 5905478f5256380330aea03c4f7dd292  com.valvesoftware.android.steam.community/sources/com/facebook/imagepipeline/producers/BaseNetworkFetcher.java
 10abdb1a7839c0b87fcba5d6c079fbe7  com.valvesoftware.android.steam.community/sources/com/facebook/imagepipeline/producers/BaseProducerContext.java
 55492eecb639ea0357753e35d49628d0  com.valvesoftware.android.steam.community/sources/com/facebook/imagepipeline/producers/BaseProducerContextCallbacks.java
@@ -6217,7 +6217,7 @@ f5d74336d0c580298508f9f315669a3d  com.valvesoftware.android.steam.community/sour
 d05e0184012983ab3199d153f1597257  com.valvesoftware.android.steam.community/sources/com/facebook/react/uimanager/MatrixMathHelper.java
 e3cf1cbc70c6c8f55354ba8bfe2c52a2  com.valvesoftware.android.steam.community/sources/com/facebook/react/uimanager/MeasureSpecAssertions.java
 1ded932cc3fa8b3ea953fb89afb92664  com.valvesoftware.android.steam.community/sources/com/facebook/react/uimanager/NativeKind.java
-2afb366740b891f89848986c12511222  com.valvesoftware.android.steam.community/sources/com/facebook/react/uimanager/NativeViewHierarchyManager.java
+4d7cc649f2c011b267adf22c88b1b839  com.valvesoftware.android.steam.community/sources/com/facebook/react/uimanager/NativeViewHierarchyManager.java
 70a579b58ab924cd7065e6ec3f829035  com.valvesoftware.android.steam.community/sources/com/facebook/react/uimanager/NativeViewHierarchyOptimizer.java
 0f4d9bde8c6232670f2df5d1646c7441  com.valvesoftware.android.steam.community/sources/com/facebook/react/uimanager/NoSuchNativeViewException.java
 8e95b9956d611cdb70d2e2aa73813ecc  com.valvesoftware.android.steam.community/sources/com/facebook/react/uimanager/OnLayoutEvent.java
@@ -6724,7 +6724,7 @@ cf787ad006d0f6a847c3d85b5b7316d8  com.valvesoftware.android.steam.community/sour
 1236a740efb772a7471c5a41a0d7ccf2  com.valvesoftware.android.steam.community/sources/com/github/penfeizhou/animation/avif/p008io/AVIFWriter.java
 4d4bf37b1ee93a0acaa63af7913b18de  com.valvesoftware.android.steam.community/sources/com/github/penfeizhou/animation/awebp/C1498R.java
 cfeb5061ad826a0ebb21a32e5464e164  com.valvesoftware.android.steam.community/sources/com/github/penfeizhou/animation/decode/Frame.java
-21f4f39ce98040316cd48b90860adf94  com.valvesoftware.android.steam.community/sources/com/github/penfeizhou/animation/decode/FrameSeqDecoder.java
+2bf1872a7e44f5e5ccf612b75468e94e  com.valvesoftware.android.steam.community/sources/com/github/penfeizhou/animation/decode/FrameSeqDecoder.java
 485576f9a4b2985b68f8c2079cdbc66e  com.valvesoftware.android.steam.community/sources/com/github/penfeizhou/animation/executor/FrameDecoderExecutor.java
 6f34d554ba0883b2d155bc36544dd9d7  com.valvesoftware.android.steam.community/sources/com/github/penfeizhou/animation/frameanimation/C1509R.java
 1927ec3cfca34b4476ed3bc1774dc378  com.valvesoftware.android.steam.community/sources/com/github/penfeizhou/animation/gif/C1510R.java
@@ -7326,7 +7326,7 @@ bf8349a91b4eb9046c0adc029e76fc52  com.valvesoftware.android.steam.community/sour
 24e63095b28c246a9fd5102f480c9ffe  com.valvesoftware.android.steam.community/sources/com/google/android/exoplayer2/offline/DownloaderFactory.java
 5c22ea166dbbc4c87737c1439fdf7086  com.valvesoftware.android.steam.community/sources/com/google/android/exoplayer2/offline/FilterableManifest.java
 897830fca78cf06600852d999e25a81e  com.valvesoftware.android.steam.community/sources/com/google/android/exoplayer2/offline/FilteringManifestParser.java
-d80c68196775f2145cc853a2a6894419  com.valvesoftware.android.steam.community/sources/com/google/android/exoplayer2/offline/ProgressiveDownloader.java
+c2427b41c18cebd1e2a0c039119c7966  com.valvesoftware.android.steam.community/sources/com/google/android/exoplayer2/offline/ProgressiveDownloader.java
 ea2220f028c74f29eef0145c86b1e0e1  com.valvesoftware.android.steam.community/sources/com/google/android/exoplayer2/offline/SegmentDownloader.java
 12a7e532e59f89464675524a8af425a3  com.valvesoftware.android.steam.community/sources/com/google/android/exoplayer2/offline/StreamKey.java
 57a8525d04fcdb169e4c0e4f5c1bf840  com.valvesoftware.android.steam.community/sources/com/google/android/exoplayer2/offline/WritableDownloadIndex.java
@@ -7393,7 +7393,7 @@ e2afb185a54ee1ae1f066e33f2766fe7  com.valvesoftware.android.steam.community/sour
 0a6a39757a022a64c2f3ec76397decbf  com.valvesoftware.android.steam.community/sources/com/google/android/exoplayer2/source/MergingMediaPeriod.java
 45ce4d4c4a261d43cb1680c60f518738  com.valvesoftware.android.steam.community/sources/com/google/android/exoplayer2/source/MergingMediaSource.java
 f387f79d6137ed4cbd88f4172dfa3cf8  com.valvesoftware.android.steam.community/sources/com/google/android/exoplayer2/source/ProgressiveMediaExtractor.java
-3b87d72aba82b42897a9e642b593771e  com.valvesoftware.android.steam.community/sources/com/google/android/exoplayer2/source/ProgressiveMediaPeriod.java
+cce6283aec61308b8fec4c3277feb447  com.valvesoftware.android.steam.community/sources/com/google/android/exoplayer2/source/ProgressiveMediaPeriod.java
 76ed212e81d3ce054bc3eb324ceccba1  com.valvesoftware.android.steam.community/sources/com/google/android/exoplayer2/source/ProgressiveMediaSource.java
 7c1c2441a9c6855470f3f113309b0656  com.valvesoftware.android.steam.community/sources/com/google/android/exoplayer2/source/SampleDataQueue.java
 f816c30c7517ce120e64877771b7ed69  com.valvesoftware.android.steam.community/sources/com/google/android/exoplayer2/source/SampleQueue.java
@@ -7814,7 +7814,7 @@ e730a133495d470c9417e637af4a8499  com.valvesoftware.android.steam.community/sour
 1e728349980f5b6e1c2f6059f98036fb  com.valvesoftware.android.steam.community/sources/com/google/android/gms/cloudmessaging/zzb.java
 d33efe3a4cb8faf4bf327c671d8d38c4  com.valvesoftware.android.steam.community/sources/com/google/android/gms/cloudmessaging/zzc.java
 0a9f226acd77721094fe73de724c6f58  com.valvesoftware.android.steam.community/sources/com/google/android/gms/cloudmessaging/zzd.java
-b1fcd300e5d40057f1e37985a38e3557  com.valvesoftware.android.steam.community/sources/com/google/android/gms/cloudmessaging/zzp.java
+ff0221aff5f2ccbf64d5356814ad2294  com.valvesoftware.android.steam.community/sources/com/google/android/gms/cloudmessaging/zzp.java
 677ca0451877276b27ae57e42c2ddbbe  com.valvesoftware.android.steam.community/sources/com/google/android/gms/cloudmessaging/zzq.java
 d740eaf79c0291c92766d0eca9d1bb3f  com.valvesoftware.android.steam.community/sources/com/google/android/gms/cloudmessaging/zzr.java
 18f429caa5b530fffa57fad3adf94a08  com.valvesoftware.android.steam.community/sources/com/google/android/gms/cloudmessaging/zzs.java
@@ -8308,7 +8308,7 @@ d4cd6f66d340e922752bc90df336221b  com.valvesoftware.android.steam.community/sour
 5f79b885fba8317e838da636677dcd10  com.valvesoftware.android.steam.community/sources/com/google/android/gms/common/zzk.java
 870731e6f9108663a735074f2d535ee2  com.valvesoftware.android.steam.community/sources/com/google/android/gms/common/zzl.java
 d365982d989f79370743fb98def2ed47  com.valvesoftware.android.steam.community/sources/com/google/android/gms/common/zzm.java
-201207c2b3763922f0790360bd7c1596  com.valvesoftware.android.steam.community/sources/com/google/android/gms/common/zzn.java
+0a53c58b6e7d6d4acaab9b4ef28903c0  com.valvesoftware.android.steam.community/sources/com/google/android/gms/common/zzn.java
 3a91dadedb23fa34d069ab81273783f1  com.valvesoftware.android.steam.community/sources/com/google/android/gms/common/zzo.java
 b40c5834d2575748862b4125cd2fbb1c  com.valvesoftware.android.steam.community/sources/com/google/android/gms/common/zzp.java
 a9dba16228e725380a4ff0d500ab035b  com.valvesoftware.android.steam.community/sources/com/google/android/gms/common/zzq.java
@@ -12674,7 +12674,7 @@ c4c53cc0a7c0e8ac5c6b4ebbcbbf9b22  com.valvesoftware.android.steam.community/sour
 cbba4fbfab174aaad815daae1fcb2cf4  com.valvesoftware.android.steam.community/sources/com/google/mlkit/common/sdkinternal/model/ModelInfoRetrieverInterop.java
 e8fbc37eb0cbf14a821ef3d9c0304ca8  com.valvesoftware.android.steam.community/sources/com/google/mlkit/common/sdkinternal/model/ModelLoader.java
 53b835e96db3a81d385c7b41fd7c3e1f  com.valvesoftware.android.steam.community/sources/com/google/mlkit/common/sdkinternal/model/ModelValidator.java
-044acb0270d8b092b75959a6ee7efca9  com.valvesoftware.android.steam.community/sources/com/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager.java
+ec29d09a2b12ba05c2a3c9b3a44a4d7d  com.valvesoftware.android.steam.community/sources/com/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager.java
 fc62080e8661b16a3e07c845b4f10eec  com.valvesoftware.android.steam.community/sources/com/google/mlkit/common/sdkinternal/model/RemoteModelFileManager.java
 c9a94b5cb566c9a7bbef23e011e34d45  com.valvesoftware.android.steam.community/sources/com/google/mlkit/common/sdkinternal/model/RemoteModelFileMover.java
 8ee3989423f734342135ebaa6db89c1d  com.valvesoftware.android.steam.community/sources/com/google/mlkit/common/sdkinternal/model/RemoteModelLoader.java
@@ -13187,7 +13187,7 @@ cf90f5e9cb3ce71af8d081d51e1e71ab  com.valvesoftware.android.steam.community/sour
 89b7b8c827132f30425a410e07eae2e4  com.valvesoftware.android.steam.community/sources/com/th3rdwave/safeareacontext/SafeAreaViewShadowNode.java
 2ae51f3c458a8ec28431215f3f39ac5d  com.valvesoftware.android.steam.community/sources/com/th3rdwave/safeareacontext/SerializationUtilsKt.java
 f7955c132da18918502755da47b9aee2  com.valvesoftware.android.steam.community/sources/com/th3rdwave/safeareacontext/UIManagerHelperCompatKt.java
-a78552763ad03614e20996b3ddd9da06  com.valvesoftware.android.steam.community/sources/com/valvesoftware/android/steam/community/BuildConfig.java
+c4e3867a47e170d98df4bb0bf61f5491  com.valvesoftware.android.steam.community/sources/com/valvesoftware/android/steam/community/BuildConfig.java
 42ef23c06f98f3b74ef796a0b041f8bb  com.valvesoftware.android.steam.community/sources/com/valvesoftware/android/steam/community/C2851R.java
 169890876a02717a480a014041a0c7ba  com.valvesoftware.android.steam.community/sources/com/valvesoftware/android/steam/community/MainActivity.java
 0a8e65d6652bf1cfb6a76b4ab52fc35b  com.valvesoftware.android.steam.community/sources/com/valvesoftware/android/steam/community/MainApplication.java
