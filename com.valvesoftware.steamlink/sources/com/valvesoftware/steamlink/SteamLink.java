@@ -1,6 +1,10 @@
 package com.valvesoftware.steamlink;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.PorterDuff;
 import android.graphics.SurfaceTexture;
 import android.media.AudioManager;
 import android.net.Uri;
@@ -30,20 +34,36 @@ public class SteamLink extends SDLActivity {
     private static final String TAG = "SteamLink";
     VirtualHere mVirtualHere;
     WifiManager.WifiLock m_WiFiLock;
+    boolean m_bCursorUpdatePending;
+    boolean m_bCursorVisible;
     boolean m_bLowLatencyAudio;
+    Bitmap m_cursorBitmap;
+    SurfaceView m_cursorSurface;
+    float m_flCursorX;
+    float m_flCursorY;
     float m_flOverlayScale;
     View m_marginBottom;
     View m_marginLeft;
     View m_marginRight;
     View m_marginTop;
+    int m_nCursorHeight;
+    int m_nCursorHotX;
+    int m_nCursorHotY;
+    int m_nCursorWidth;
     int m_nDisplayHeight;
     int m_nDisplayWidth;
     int m_nLowLatencyVideoMode;
     int m_nOverlayHeight;
     int m_nOverlayWidth;
+    int m_nVideoH;
+    int m_nVideoW;
+    int m_nVideoX;
+    int m_nVideoY;
     SurfaceView m_overlaySurface;
     SurfaceView m_videoSurface;
     SurfaceTexture m_videoTexture;
+    float m_flCursorScale = 1.0f;
+    final Object m_cursorLock = new Object();
 
     private native void freezeRendering();
 
@@ -235,6 +255,13 @@ public class SteamLink extends SDLActivity {
         holder.setFixedSize(this.m_nOverlayWidth, this.m_nOverlayHeight);
         holder.addCallback(new OverlaySurfaceCallback());
         mLayout.addView(this.m_overlaySurface);
+        SurfaceView surfaceView3 = new SurfaceView(getApplication());
+        this.m_cursorSurface = surfaceView3;
+        surfaceView3.setZOrderOnTop(true);
+        this.m_cursorSurface.getHolder().setFormat(-3);
+        this.m_cursorSurface.getHolder().addCallback(new CursorSurfaceCallback());
+        this.m_cursorSurface.setVisibility(8);
+        mLayout.addView(this.m_cursorSurface, new RelativeLayout.LayoutParams(1, 1));
         View view = new View(getApplication());
         this.m_marginLeft = view;
         view.setBackgroundColor(-16777216);
@@ -260,6 +287,7 @@ public class SteamLink extends SDLActivity {
             Method method2 = SurfaceView.class.getMethod("setPointerIcon", cls);
             method2.invoke(this.m_videoSurface, method.invoke(null, SDL.getContext(), 0));
             method2.invoke(this.m_overlaySurface, method.invoke(null, SDL.getContext(), 0));
+            method2.invoke(this.m_cursorSurface, method.invoke(null, SDL.getContext(), 0));
         } catch (Exception unused) {
         }
     }
@@ -316,6 +344,11 @@ public class SteamLink extends SDLActivity {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void updateViewRects(int i, int i2, int i3, int i4) {
+        this.m_nVideoX = i;
+        this.m_nVideoY = i2;
+        this.m_nVideoW = i3;
+        this.m_nVideoH = i4;
+        updateCursorView();
         int i5 = (this.m_nDisplayWidth - i3) - i;
         int i6 = (this.m_nDisplayHeight - i4) - i2;
         RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(i3, i4);
@@ -373,8 +406,125 @@ public class SteamLink extends SDLActivity {
         this.m_overlaySurface.setLayoutParams(layoutParams6);
     }
 
+    class CursorSurfaceCallback implements SurfaceHolder.Callback {
+        @Override // android.view.SurfaceHolder.Callback
+        public void surfaceCreated(SurfaceHolder surfaceHolder) {
+        }
+
+        @Override // android.view.SurfaceHolder.Callback
+        public void surfaceDestroyed(SurfaceHolder surfaceHolder) {
+        }
+
+        CursorSurfaceCallback() {
+        }
+
+        @Override // android.view.SurfaceHolder.Callback
+        public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i2, int i3) {
+            SteamLink.this.drawCursorSurface();
+        }
+    }
+
+    public Bitmap createCursorBitmap(int[] iArr, int i, int i2) {
+        return Bitmap.createBitmap(iArr, i, i2, Bitmap.Config.ARGB_8888);
+    }
+
+    public void setCursor(final Bitmap bitmap, final int i, final int i2) {
+        runOnUiThread(new Runnable() { // from class: com.valvesoftware.steamlink.SteamLink.3
+            @Override // java.lang.Runnable
+            public void run() {
+                SteamLink.this.m_cursorBitmap = bitmap;
+                synchronized (SteamLink.this.m_cursorLock) {
+                    SteamLink.this.m_nCursorHotX = i;
+                    SteamLink.this.m_nCursorHotY = i2;
+                }
+                if (SteamLink.this.m_cursorBitmap != null && SteamLink.this.m_cursorSurface != null) {
+                    SteamLink.this.m_cursorSurface.getHolder().setFixedSize(SteamLink.this.m_cursorBitmap.getWidth(), SteamLink.this.m_cursorBitmap.getHeight());
+                }
+                SteamLink.this.drawCursorSurface();
+                SteamLink.this.updateCursorView();
+            }
+        });
+    }
+
+    public void showCursor(final boolean z) {
+        runOnUiThread(new Runnable() { // from class: com.valvesoftware.steamlink.SteamLink.4
+            @Override // java.lang.Runnable
+            public void run() {
+                SteamLink.this.m_bCursorVisible = z;
+                if (SteamLink.this.m_cursorSurface != null) {
+                    SteamLink.this.m_cursorSurface.setVisibility(z ? 0 : 8);
+                }
+            }
+        });
+    }
+
+    public void moveCursor(float f, float f2, float f3) {
+        synchronized (this.m_cursorLock) {
+            this.m_flCursorX = f;
+            this.m_flCursorY = f2;
+            this.m_flCursorScale = f3;
+            if (this.m_bCursorUpdatePending) {
+                return;
+            }
+            this.m_bCursorUpdatePending = true;
+            runOnUiThread(new Runnable() { // from class: com.valvesoftware.steamlink.SteamLink.5
+                @Override // java.lang.Runnable
+                public void run() {
+                    SteamLink.this.updateCursorView();
+                }
+            });
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public void drawCursorSurface() {
+        Canvas canvasLockCanvas;
+        SurfaceView surfaceView = this.m_cursorSurface;
+        if (surfaceView == null || this.m_cursorBitmap == null) {
+            return;
+        }
+        SurfaceHolder holder = surfaceView.getHolder();
+        if (holder.getSurface().isValid() && (canvasLockCanvas = holder.lockCanvas()) != null) {
+            canvasLockCanvas.drawColor(0, PorterDuff.Mode.CLEAR);
+            canvasLockCanvas.drawBitmap(this.m_cursorBitmap, 0.0f, 0.0f, (Paint) null);
+            holder.unlockCanvasAndPost(canvasLockCanvas);
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public void updateCursorView() {
+        float f;
+        float f2;
+        float f3;
+        int i;
+        int i2;
+        if (this.m_cursorSurface == null) {
+            return;
+        }
+        synchronized (this.m_cursorLock) {
+            f = this.m_flCursorX;
+            f2 = this.m_flCursorY;
+            f3 = this.m_flCursorScale;
+            i = this.m_nCursorHotX;
+            i2 = this.m_nCursorHotY;
+            this.m_bCursorUpdatePending = false;
+        }
+        Bitmap bitmap = this.m_cursorBitmap;
+        if (bitmap != null) {
+            int iMax = Math.max(1, Math.round(bitmap.getWidth() * f3));
+            int iMax2 = Math.max(1, Math.round(this.m_cursorBitmap.getHeight() * f3));
+            if (iMax != this.m_nCursorWidth || iMax2 != this.m_nCursorHeight) {
+                this.m_nCursorWidth = iMax;
+                this.m_nCursorHeight = iMax2;
+                this.m_cursorSurface.setLayoutParams(new RelativeLayout.LayoutParams(iMax, iMax2));
+            }
+        }
+        this.m_cursorSurface.setTranslationX((this.m_nVideoX + (f * this.m_nVideoW)) - (i * f3));
+        this.m_cursorSurface.setTranslationY((this.m_nVideoY + (f2 * this.m_nVideoH)) - (i2 * f3));
+    }
+
     public void setVideoDisplayRect(final int i, final int i2, final int i3, final int i4) {
-        Runnable runnable = new Runnable() { // from class: com.valvesoftware.steamlink.SteamLink.3
+        Runnable runnable = new Runnable() { // from class: com.valvesoftware.steamlink.SteamLink.6
             @Override // java.lang.Runnable
             public void run() {
                 SteamLink.this.updateViewRects(i, i2, i3, i4);
@@ -399,7 +549,7 @@ public class SteamLink extends SDLActivity {
     }
 
     public void showOverlaySurface() {
-        Runnable runnable = new Runnable() { // from class: com.valvesoftware.steamlink.SteamLink.4
+        Runnable runnable = new Runnable() { // from class: com.valvesoftware.steamlink.SteamLink.7
             @Override // java.lang.Runnable
             public void run() {
                 SteamLink.this.setOverlaySurfaceVisible(true);
@@ -419,7 +569,7 @@ public class SteamLink extends SDLActivity {
     }
 
     public void hideOverlaySurface() {
-        Runnable runnable = new Runnable() { // from class: com.valvesoftware.steamlink.SteamLink.5
+        Runnable runnable = new Runnable() { // from class: com.valvesoftware.steamlink.SteamLink.8
             @Override // java.lang.Runnable
             public void run() {
                 SteamLink.this.setOverlaySurfaceVisible(false);

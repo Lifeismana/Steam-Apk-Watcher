@@ -29,6 +29,10 @@ class SDLJoystickHandler {
     private final ArrayList<SDLJoystick> mJoysticks = new ArrayList<>();
     private final Handler mHandler = new Handler(Looper.getMainLooper());
 
+    static boolean isGenericAxis(int i) {
+        return i >= 32 && i <= 47;
+    }
+
     /* JADX INFO: compiled from: SDLControllerManager.java */
     static class SDLJoystick {
         Sensor accelerometerSensor;
@@ -119,6 +123,10 @@ class SDLJoystickHandler {
         }
     }
 
+    boolean deviceIsUnnamedQuestController(InputDevice inputDevice) {
+        return Build.VERSION.SDK_INT >= 29 && Build.MANUFACTURER.equals("Oculus") && Build.MODEL.startsWith("Quest") && inputDevice.getName().startsWith("Device 0x");
+    }
+
     void deviceAdded(int i) {
         boolean z;
         boolean z2;
@@ -129,6 +137,9 @@ class SDLJoystickHandler {
         }
         SDLJoystick joystick = getJoystick(i);
         if (joystick == null) {
+            if (deviceIsUnnamedQuestController(device) && !device.isExternal() && (device.getSources() & 1025) == 0) {
+                return;
+            }
             joystick = new SDLJoystick();
             joystick.device_id = i;
             joystick.name = getJoystickName(device);
@@ -139,12 +150,15 @@ class SDLJoystickHandler {
             joystick.lights = new ArrayList<>();
             List<InputDevice.MotionRange> motionRanges = device.getMotionRanges();
             Collections.sort(motionRanges, new RangeComparator());
+            boolean zDeviceIsTVRemote = deviceIsTVRemote(device, motionRanges);
             for (InputDevice.MotionRange motionRange : motionRanges) {
-                if ((motionRange.getSource() & 16) != 0 && hashSet.add(Integer.valueOf(motionRange.getAxis()))) {
-                    if (motionRange.getAxis() == 15 || motionRange.getAxis() == 16) {
-                        joystick.hats.add(motionRange);
-                    } else {
-                        joystick.axes.add(motionRange);
+                if (!zDeviceIsTVRemote || !isGenericAxis(motionRange.getAxis())) {
+                    if ((motionRange.getSource() & 16) != 0 && hashSet.add(Integer.valueOf(motionRange.getAxis()))) {
+                        if (motionRange.getAxis() == 15 || motionRange.getAxis() == 16) {
+                            joystick.hats.add(motionRange);
+                        } else {
+                            joystick.axes.add(motionRange);
+                        }
                     }
                 }
             }
@@ -234,6 +248,9 @@ class SDLJoystickHandler {
                     return name.substring(0, name.length() - str.length());
                 }
             }
+            if (deviceIsUnnamedQuestController(inputDevice) && inputDevice.isExternal()) {
+                return "Touch Controller Gamepad Mode";
+            }
         }
         return name;
     }
@@ -249,6 +266,19 @@ class SDLJoystickHandler {
 
     int getVendorId(InputDevice inputDevice) {
         return inputDevice.getVendorId();
+    }
+
+    static boolean deviceIsTVRemote(InputDevice inputDevice, List<InputDevice.MotionRange> list) {
+        int sources = inputDevice.getSources();
+        if ((sources & 1025) == 1025 || (sources & 513) != 513) {
+            return false;
+        }
+        for (InputDevice.MotionRange motionRange : list) {
+            if ((motionRange.getSource() & 16) != 0 && !isGenericAxis(motionRange.getAxis())) {
+                return false;
+            }
+        }
+        return true;
     }
 
     int getAxisMask(List<InputDevice.MotionRange> list) {
