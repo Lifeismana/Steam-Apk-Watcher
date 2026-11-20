@@ -445377,10 +445377,20 @@ case 42:
                         };
                         r5['m_fnGetReportTags'] = r7;
                         r7 = function() { // Environment: r1
-                            r0 = global;
-                            r0 = r0.location;
-                            r0 = r0.href;
-                            return r0;
+                            _fun13017: for(var _fun13017_ip = 0; ; ) switch(_fun13017_ip) {
+case 0:
+                                r1 = global;
+                                r2 = r1.globalThis;
+                                r0 = 'location';
+                                r2 = r0 in r2;
+                                r0 = undefined;
+                                if(!r2) { _fun13017_ip = 33; continue _fun13017 }
+case 21:
+                                r1 = r1.location;
+                                r0 = r1.href;
+case 33:
+                                return r0;
+                            }
                         };
                         r5['m_fnGetURL'] = r7;
                         r5['m_bEnabled'] = r6;
@@ -595068,13 +595078,18 @@ case 46:
             _fun18395: for(var _fun18395_ip = 0; ; ) switch(_fun18395_ip) {
 case 0:
                 r2 = global;
+                r1 = r2.globalThis;
+                r0 = 'document';
+                r0 = r0 in r1;
+                if(!r0) { _fun18395_ip = 34; continue _fun18395 }
+case 19:
                 r0 = r2.document;
                 r0 = r0.cookie;
-                if(r0) { _fun18395_ip = 21; continue _fun18395 }
-case 17:
+                if(r0) { _fun18395_ip = 38; continue _fun18395 }
+case 34:
                 r0 = undefined;
                 return r0;
-case 21:
+case 38:
                 r0 = r2.document;
                 r3 = r0.cookie;
                 r1 = r3.match;
@@ -595085,15 +595100,15 @@ case 21:
                 r0 = '=([^;]*)';
                 r0 = r4 + r0;
                 r1 = r1.bind(r3)(r0);
-                if(!r1) { _fun18395_ip = 81; continue _fun18395 }
-case 71:
+                if(!r1) { _fun18395_ip = 98; continue _fun18395 }
+case 88:
                 r0 = 2;
                 r3 = r1[r0];
-                if(r3) { _fun18395_ip = 85; continue _fun18395 }
-case 81:
+                if(r3) { _fun18395_ip = 102; continue _fun18395 }
+case 98:
                 r3 = undefined;
                 return r3;
-case 85:
+case 102:
                 r2 = r2.decodeURIComponent;
                 r1 = r1[r0];
                 r0 = undefined;
@@ -609201,19 +609216,29 @@ case 548:
                     r5 = r10.bind(r5)(r9, r7);
                     return r5;
 case 633:
+                    r5 = r0.self;
+                    r7 = typeof r5;
+                    r5 = 'undefined';
+                    if(!(r7 !== r5)) { _fun18795_ip = 693; continue _fun18795 }
+case 650:
+                    r5 = r0.self;
+                    r5 = r5.origin;
+                    if(!r5) { _fun18795_ip = 693; continue _fun18795 }
+case 665:
                     r9 = r4.append;
                     r5 = r0.self;
                     r7 = r5.origin;
                     r5 = 'origin';
                     r5 = r9.bind(r4)(r5, r7);
+case 693:
                     r1 = r1.m_bJsonMode;
                     r5 = r4.append;
-                    if(r1) { _fun18795_ip = 688; continue _fun18795 }
-case 676:
+                    if(r1) { _fun18795_ip = 720; continue _fun18795 }
+case 708:
                     r1 = 'input_protobuf_encoded';
                     r1 = r5.bind(r4)(r1, r2);
-                    _fun18795_ip = 732; continue _fun18795;
-case 688:
+                    _fun18795_ip = 764; continue _fun18795;
+case 720:
                     r7 = r0.JSON;
                     r2 = r7.stringify;
                     r1 = r8.Body;
@@ -609223,7 +609248,7 @@ case 688:
                     r2 = r2.bind(r7)(r1);
                     r1 = 'input_json';
                     r1 = r5.bind(r4)(r1, r2);
-case 732:
+case 764:
                     r2 = r0.fetch;
                     r1 = r4.toString;
                     r5 = r1.bind(r4)();
@@ -680737,7 +680762,7 @@ case 184:
     r6 = r9.bind(r2)(r8, r7, r6);
     r9 = r0.__d;
     r8 = function(a0, a1, a2, a3, a4, a5, a6) { // Environment: r3
-        r1 = {'name': 'steam', 'slug': 'steam', 'scheme': 'steammobile', 'version': '3.0', 'extra': null, 'appVersion': '3.10.13'};
+        r1 = {'name': 'steam', 'slug': 'steam', 'scheme': 'steammobile', 'version': '3.0', 'extra': null, 'appVersion': '3.10.14'};
         r0 = {'bundleCompatibilityId': 14, 'bundleVersion': 25};
         r1['extra'] = r0;
         r0 = ['expo-asset', 'expo-font', 'expo-secure-store'];
