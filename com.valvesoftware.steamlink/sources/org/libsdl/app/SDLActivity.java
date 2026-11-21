@@ -1113,7 +1113,6 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
     }
 
     static class ShowTextInputTask implements Runnable {
-        static final int HEIGHT_PADDING = 15;
 
         /* JADX INFO: renamed from: h */
         public int f0h;
@@ -1137,8 +1136,8 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             if (i4 <= 0) {
                 this.f1w = 1;
             }
-            if (i5 + HEIGHT_PADDING <= 0) {
-                this.f0h = -14;
+            if (i5 <= 0) {
+                this.f0h = 1;
             }
         }
 
@@ -1147,7 +1146,7 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
             if (SDLActivity.mLayout == null) {
                 return;
             }
-            RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(this.f1w, this.f0h + HEIGHT_PADDING);
+            RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(this.f1w, this.f0h);
             layoutParams.leftMargin = this.f2x;
             layoutParams.topMargin = this.f3y;
             if (SDLActivity.mTextEdit == null) {

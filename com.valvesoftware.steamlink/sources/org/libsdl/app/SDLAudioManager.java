@@ -28,24 +28,24 @@ class SDLAudioManager {
     }
 
     static void initialize() {
-        mAudioDeviceCallback = null;
-        if (Build.VERSION.SDK_INT >= 24) {
-            mAudioDeviceCallback = new AudioDeviceCallback() { // from class: org.libsdl.app.SDLAudioManager.1
-                @Override // android.media.AudioDeviceCallback
-                public void onAudioDevicesAdded(AudioDeviceInfo[] audioDeviceInfoArr) {
-                    for (AudioDeviceInfo audioDeviceInfo : audioDeviceInfoArr) {
-                        SDLAudioManager.nativeAddAudioDevice(audioDeviceInfo.isSink(), audioDeviceInfo.getProductName().toString(), audioDeviceInfo.getId());
-                    }
-                }
-
-                @Override // android.media.AudioDeviceCallback
-                public void onAudioDevicesRemoved(AudioDeviceInfo[] audioDeviceInfoArr) {
-                    for (AudioDeviceInfo audioDeviceInfo : audioDeviceInfoArr) {
-                        SDLAudioManager.nativeRemoveAudioDevice(audioDeviceInfo.isSink(), audioDeviceInfo.getId());
-                    }
-                }
-            };
+        if (mAudioDeviceCallback != null || Build.VERSION.SDK_INT < 24) {
+            return;
         }
+        mAudioDeviceCallback = new AudioDeviceCallback() { // from class: org.libsdl.app.SDLAudioManager.1
+            @Override // android.media.AudioDeviceCallback
+            public void onAudioDevicesAdded(AudioDeviceInfo[] audioDeviceInfoArr) {
+                for (AudioDeviceInfo audioDeviceInfo : audioDeviceInfoArr) {
+                    SDLAudioManager.nativeAddAudioDevice(audioDeviceInfo.isSink(), audioDeviceInfo.getProductName().toString(), audioDeviceInfo.getId());
+                }
+            }
+
+            @Override // android.media.AudioDeviceCallback
+            public void onAudioDevicesRemoved(AudioDeviceInfo[] audioDeviceInfoArr) {
+                for (AudioDeviceInfo audioDeviceInfo : audioDeviceInfoArr) {
+                    SDLAudioManager.nativeRemoveAudioDevice(audioDeviceInfo.isSink(), audioDeviceInfo.getId());
+                }
+            }
+        };
     }
 
     static void setContext(Context context) {

@@ -50,6 +50,10 @@ public class SteamShellActivity extends QtActivity {
     }
 
     protected void startActivity() {
+        if (SteamLink.isStreamingActivityAlive()) {
+            Log.v(TAG, "Streaming activity is running, skipping SDL setup");
+            return;
+        }
         SDL.initialize();
         SDL.setContext(this);
         SDLActivity.getManifestEnvironmentVariables();

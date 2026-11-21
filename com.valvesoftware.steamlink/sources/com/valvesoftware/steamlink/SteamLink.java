@@ -83,6 +83,10 @@ public class SteamLink extends SDLActivity {
     /* JADX INFO: Access modifiers changed from: private */
     public native void videoSurfaceDestroyed();
 
+    public static boolean isStreamingActivityAlive() {
+        return mSingleton != null;
+    }
+
     @Override // org.libsdl.app.SDLActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
